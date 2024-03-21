@@ -1,0 +1,226 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+/* font-family: "Caveat", cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* Noonnu Korean Fonts */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Reset CSS */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Pretendard-Regular";
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+p {
+  margin: 0;
+  line-height: 1.5em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  min-height: 100vh;
+  margin: 0;
+  color: #555;
+}
+/* ########## Layout ########## */
+.container {
+  min-height: inherit;
+}
+/* ##### COMMON ##### */
+header nav,
+.inner {
+  width: 1280px;
+  margin: auto;
+}
+section {
+  padding: 70px 0;
+}
+section .inner > h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+/* ########## Header ########## */
+header {
+  height: 80px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+header nav {
+  height: inherit;
+}
+header nav .gnb {
+  float: right;
+  height: inherit;
+  line-height: 80px;
+}
+header nav .gnb a {
+  position: relative;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 50px;
+}
+header nav .gnb a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #00ad53;
+  transition: 0.35s ease;
+}
+header nav .gnb a:hover::after {
+  width: 100%;
+}
+/* ########## About ########## */
+#about .inner .wrapper {
+  position: relative;
+  margin-top: 50px;
+  overflow: hidden;
+  padding: 0 150px;
+}
+.about_photo {
+  float: right;
+  width: 300px;
+  height: 100%;
+}
+.about_photo img {
+  display: block;
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+}
+.about_desc {
+  position: absolute;
+  top: 50%;
+  left: 150px;
+  transform: translateY(-50%);
+  width: 420px;
+}
+.about_desc_slogan span {
+  font-family: "Caveat", cursive;
+  color: #00ad53;
+  font-size: 36px;
+}
+.about_desc_slogan p {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.6em;
+}
+.about_desc_slogan p em {
+  font-style: normal;
+  font-weight: 700;
+  color: #333;
+}
+.about_desc_info {
+  margin-top: 50px;
+}
+.about_desc_info div {
+  margin-bottom: 20px;
+}
+.about_desc_info div b {
+  display: inline-block;
+  width: 150px;
+  font-size: 24px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  color: #00ad53;
+}
+.about_desc_info div span {
+  font-size: 20px;
+  color: #777;
+}
+/* ########## Skill ########## */
+#skill {
+  background-color: #fafafa;
+}
+#skill .inner .wrapper {
+  margin-top: 100px;
+}
+.skill_items {
+  margin-top: 70px;
+  height: 200px;
+}
+.skill_item {
+  position: relative;
+  float: left;
+  width: calc(1220px / 4);
+  height: 200px;
+  border: 1px solid #ddd;
+  margin-right: 20px;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+.skill_item:last-of-type {
+  margin-right: 0;
+}
+.skill_item_icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 28px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  background-color: #d9d9d9;
+  color: #fff;
+}
+.skill_item_desc {
+  text-align: center;
+}
+.skill_item_desc h4,
+.skill_item_desc p span {
+  font-family: "Outfit", sans-serif;
+}
+.skill_item_desc h4 {
+  font-size: 24px;
+  margin-top: 5px;
+}
+.skill_item_desc p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+/* ########## Edu ########## */
+/* ########## Mobile ########## */
+/* ########## Web ########## */
+/* ########## Practical ########## */
+/* ########## Epilogue ########## */
+/* ########## Fullscreen Navigation ########## */
+.fullscreen_navi {
+}
+/* ########## Trigger ########## */
+.trigger {
+}
