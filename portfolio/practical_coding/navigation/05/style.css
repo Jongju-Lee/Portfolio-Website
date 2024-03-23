@@ -1,0 +1,102 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+/* ##### Animated Navigation ##### */
+.navi_outer {
+  position: relative;
+  height: inherit;
+}
+input[type="radio"] {
+  display: none;
+}
+nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #6c5ce7;
+  border-radius: 5px;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -1;
+}
+nav label {
+  flex: 1;
+  height: 100%;
+  line-height: 60px;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: 0.35s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #6c5ce7;
+  transition: 0.35s;
+}
+nav label:hover {
+  background-color: #cdc9ff;
+}
+nav label .bi {
+  margin-right: 4px;
+  font-size: 16px;
+}
+nav label:nth-of-type(4) .bi {
+  font-size: 14px;
+}
+nav label:nth-of-type(5) .bi {
+  font-size: 18px;
+}
+/* Radio Checked Function */
+input[id="home"]:checked ~ nav label[for="home"],
+input[id="blog"]:checked ~ nav label[for="blog"],
+input[id="event"]:checked ~ nav label[for="event"],
+input[id="help"]:checked ~ nav label[for="help"],
+input[id="about"]:checked ~ nav label[for="about"] {
+  color: #fff;
+}
+input[id="home"]:checked ~ nav .slider {
+  left: 0;
+}
+input[id="blog"]:checked ~ nav .slider {
+  left: 20%;
+}
+input[id="event"]:checked ~ nav .slider {
+  left: 40%;
+}
+input[id="help"]:checked ~ nav .slider {
+  left: 60%;
+}
+input[id="about"]:checked ~ nav .slider {
+  left: 80%;
+}
+input[id="home"]:checked ~ nav label[for="home"]:hover,
+input[id="blog"]:checked ~ nav label[for="blog"]:hover,
+input[id="event"]:checked ~ nav label[for="event"]:hover,
+input[id="help"]:checked ~ nav label[for="help"]:hover,
+input[id="about"]:checked ~ nav label[for="about"]:hover {
+  background-color: transparent;
+}

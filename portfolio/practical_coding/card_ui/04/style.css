@@ -1,0 +1,167 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Noonnu Korean Fonts */
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  background-color: #fff;
+}
+/* ########## Smart Outlet ########## */
+section {
+  margin: 50px 0;
+}
+.inner {
+  width: 1100px;
+  margin: auto;
+}
+.inner h1,
+.inner h1 :is(b, em) {
+  font-family: "GmarketSansLight";
+  font-size: 45px;
+  letter-spacing: 3px;
+}
+.inner h1 {
+  text-align: center;
+  font-weight: 300;
+}
+.inner h1 em {
+  font-style: normal;
+  color: crimson;
+  font-weight: 700;
+}
+.items_outer {
+  margin-top: 20px;
+}
+.items_outer > b {
+  font-size: 18px;
+  font-weight: 600;
+}
+.items {
+  counter-reset: count 0;
+  margin-top: 10px;
+}
+.item {
+  width: calc(1020px / 5);
+  float: left;
+}
+.item:not(:last-child) {
+  margin-right: 20px;
+}
+.item .thum {
+  position: relative;
+  width: inherit;
+  height: 340px;
+  overflow: hidden;
+}
+.item .thum::after {
+  counter-increment: count;
+  content: counter(count);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 27px;
+  border-radius: 0 0 10px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+}
+.item .thum a {
+  width: inherit;
+  height: inherit;
+}
+.item .thum a img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  transition: 0.35s;
+}
+.item:hover .thum a img {
+  transform: scale(1.05);
+}
+.item .desc {
+  position: relative;
+  margin-top: 5px;
+}
+.item .desc span {
+  display: block;
+}
+.item .desc span b {
+  color: crimson;
+  margin-right: 3px;
+}
+.item .desc span s {
+  color: #bbb;
+  margin-right: 3px;
+}
+.item .desc span:nth-of-type(2) {
+  font-weight: 500;
+  font-size: 16px;
+}
+.item .desc em {
+  font-style: normal;
+  color: #bbb;
+}
+.item .desc em::before {
+  content: attr(data-count);
+  margin-right: 5px;
+}
+.item .desc input {
+  display: none;
+}
+.item .desc label {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.item .desc label::before {
+  content: "\F417";
+  font-family: "bootstrap-icons";
+  color: #bbb;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.item .desc input[id="product_first"]:checked + label::before,
+.item .desc input[id="product_second"]:checked + label::before,
+.item .desc input[id="product_third"]:checked + label::before,
+.item .desc input[id="product_fourth"]:checked + label::before,
+.item .desc input[id="product_fifth"]:checked + label::before {
+  content: "\F415";
+  color: crimson;
+}

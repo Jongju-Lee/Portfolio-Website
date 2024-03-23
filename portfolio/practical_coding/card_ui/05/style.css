@@ -1,0 +1,161 @@
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+}
+/* ########## Profile Card ########## */
+section {
+  position: relative;
+  height: inherit;
+  background: url(./image/mesh-1430107.svg) no-repeat center center / cover;
+}
+.profile_card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #ffffff39;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.face {
+  position: relative;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+}
+.face img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.face i {
+  position: absolute;
+  bottom: 5px;
+  right: -5px;
+  color: #b6d2e4;
+  font-size: 20px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+.heading {
+  margin-top: 20px;
+  border-bottom: 1px solid #f4f4f46e;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.heading h3 span {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ccc;
+  margin-top: 3px;
+}
+.heading p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+.heading p a {
+  display: block;
+}
+.heading p a:hover {
+  text-decoration: underline;
+}
+.heading > a {
+  display: inline-block;
+  width: 200px;
+  padding: 5px 0;
+  border-radius: 20px;
+  background-color: #a1c7df;
+  color: #fff;
+  transition: 0.35s;
+  margin-top: 10px;
+}
+.heading > a:hover {
+  background-color: #508cb9;
+}
+.sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.item a i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.35s;
+}
+.item:hover a i {
+  transform: translateY(-5px);
+}
+.instagram a i {
+  background-image: linear-gradient(-45deg, #ff0844, #ffb199);
+}
+.line a i {
+  background-image: linear-gradient(to top, #9be15d, #00e3ae);
+}
+.twitter a i {
+  background-image: radial-gradient(
+    circle 248px at center,
+    #16d9e3 0%,
+    #30c7ec 47%,
+    #46aef7 100%
+  );
+}
+.item b {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+.item b::before {
+  content: attr(data-count);
+  font-size: 16px;
+  color: #fff;
+}
+.item span {
+  display: inline-block;
+  font-size: 13px;
+  color: #ccc;
+}

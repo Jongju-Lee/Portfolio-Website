@@ -1,0 +1,135 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  background-color: #fff;
+}
+/* ########## Vertical Slider ########## */
+section {
+  position: relative;
+  height: inherit;
+}
+.vertical_outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+section h1 {
+  position: relative;
+  font-weight: 500;
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+section h1::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background-color: crimson;
+}
+.vertical {
+  width: 50%;
+  margin: auto;
+  height: 400px;
+  text-align: center;
+}
+.vertical input {
+  display: none;
+}
+.tabs_wrapper {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+.tabs {
+  height: 300%;
+  transition: 0.5s;
+}
+.tab {
+  height: 33.333333%;
+  padding: 0 50px;
+}
+.tab .user_face {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  padding-top: 30px;
+}
+.tab .user_face img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.tab p {
+  padding-top: 30px;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+.tab h3 {
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 500;
+  color: #999;
+}
+.tab h3 span {
+  display: block;
+  color: rgb(255, 183, 0);
+  font-weight: 400;
+  font-size: 16px;
+}
+.btn_tab {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+}
+.btn_tab label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: 0.5s;
+}
+/* Vertical Slider Checked Function */
+input[id="tab1"]:checked ~ .tabs_wrapper .tabs {
+  transform: translateY(0);
+}
+input[id="tab2"]:checked ~ .tabs_wrapper .tabs {
+  transform: translateY(-33.333333%);
+}
+input[id="tab3"]:checked ~ .tabs_wrapper .tabs {
+  transform: translateY(-66.666666%);
+}
+input[id="tab1"]:checked ~ .btn_tab label[for="tab1"],
+input[id="tab2"]:checked ~ .btn_tab label[for="tab2"],
+input[id="tab3"]:checked ~ .btn_tab label[for="tab3"] {
+  background-color: crimson;
+  border-radius: 50%;
+}

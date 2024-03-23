@@ -1,0 +1,114 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  min-height: 100vh;
+  color: #333;
+  background-color: #f4f4f4;
+}
+/* ########## FAQ Accordion ########## */
+.accordion_outer {
+  width: 50%;
+  margin: auto;
+  padding: 70px 0;
+}
+.accordion_outer h1 {
+  text-align: center;
+  font-size: 36px;
+}
+.accordion {
+  margin-top: 30px;
+}
+.accordion input {
+  display: none;
+}
+.item {
+  background-color: #fff;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  transition: 0.35s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.item:not(:last-child) {
+  margin-bottom: 5px;
+}
+.title {
+  display: block;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.title::after {
+  content: "\f107";
+  font-family: "fontawesome";
+  float: right;
+  font-size: 30px;
+  font-weight: 300;
+}
+.desc {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.desc p {
+  font-size: 18px;
+  margin: 20px;
+  margin-top: 0;
+  font-weight: 400;
+}
+/* Accordion Open/Close Function */
+input[id="faq1"]:checked ~ .item .title[for="faq1"] + .desc,
+input[id="faq2"]:checked ~ .item .title[for="faq2"] + .desc,
+input[id="faq3"]:checked ~ .item .title[for="faq3"] + .desc,
+input[id="faq4"]:checked ~ .item .title[for="faq4"] + .desc,
+input[id="faq5"]:checked ~ .item .title[for="faq5"] + .desc,
+input[id="faq6"]:checked ~ .item .title[for="faq6"] + .desc,
+input[id="faq7"]:checked ~ .item .title[for="faq7"] + .desc {
+  height: auto;
+}
+input[id="faq1"]:checked ~ .item .title[for="faq1"]::after,
+input[id="faq2"]:checked ~ .item .title[for="faq2"]::after,
+input[id="faq3"]:checked ~ .item .title[for="faq3"]::after,
+input[id="faq4"]:checked ~ .item .title[for="faq4"]::after,
+input[id="faq5"]:checked ~ .item .title[for="faq5"]::after,
+input[id="faq6"]:checked ~ .item .title[for="faq6"]::after,
+input[id="faq7"]:checked ~ .item .title[for="faq7"]::after {
+  transform: rotate(180deg);
+}
+.item:hover,
+input[id="faq1"]:checked ~ .item_first,
+input[id="faq2"]:checked ~ .item_second,
+input[id="faq3"]:checked ~ .item_third,
+input[id="faq4"]:checked ~ .item_fourth,
+input[id="faq5"]:checked ~ .item_fifth,
+input[id="faq6"]:checked ~ .item_sixth,
+input[id="faq7"]:checked ~ .item_seventh {
+  border: 2px solid #ee48778a;
+}

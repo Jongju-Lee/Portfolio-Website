@@ -1,0 +1,129 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+p {
+  margin: 0;
+  line-height: 1.5em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+}
+.container {
+  min-height: inherit;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+}
+.tab_menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  padding: 40px 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+.tab_menu input {
+  display: none;
+}
+.tab_btns {
+  display: flex;
+}
+.tab_btns label {
+  flex: 1;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.tab_btns_indicator {
+  position: relative;
+  background-color: #efefef;
+  height: 2px;
+}
+.tab_btns_indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20%;
+  height: 4px;
+  background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-radius: 2px;
+}
+.tabs {
+  position: relative;
+  margin-top: 30px;
+  min-height: 280px;
+}
+.tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.tab h2 {
+  font-size: 35px;
+}
+.tab p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+}
+/* Tab Button Checked Function */
+input[id="home"]:checked ~ .tab_btns_outer .tab_btns label[for="home"],
+input[id="about"]:checked ~ .tab_btns_outer .tab_btns label[for="about"],
+input[id="blog"]:checked ~ .tab_btns_outer .tab_btns label[for="blog"],
+input[id="events"]:checked ~ .tab_btns_outer .tab_btns label[for="events"],
+input[id="contact"]:checked ~ .tab_btns_outer .tab_btns label[for="contact"] {
+  color: #7ed7d2;
+}
+input[id="home"]:checked ~ .tab_btns_outer .tab_btns_indicator::after {
+  left: 0;
+}
+input[id="about"]:checked ~ .tab_btns_outer .tab_btns_indicator::after {
+  left: 20%;
+}
+input[id="blog"]:checked ~ .tab_btns_outer .tab_btns_indicator::after {
+  left: 40%;
+}
+input[id="events"]:checked ~ .tab_btns_outer .tab_btns_indicator::after {
+  left: 60%;
+}
+input[id="contact"]:checked ~ .tab_btns_outer .tab_btns_indicator::after {
+  left: 80%;
+}
+input[id="home"]:checked ~ .tabs .tab_home,
+input[id="about"]:checked ~ .tabs .tab_about,
+input[id="blog"]:checked ~ .tabs .tab_blog,
+input[id="events"]:checked ~ .tabs .tab_events,
+input[id="contact"]:checked ~ .tabs .tab_contact {
+  opacity: 1;
+  visibility: visible;
+}

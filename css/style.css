@@ -123,6 +123,38 @@ header nav .gnb a:hover::after {
   bottom: -5px;
   opacity: 1;
 }
+/* ##### Slick.js Custom CSS ##### */
+/*  ##### Arrows ##### */
+.slick-prev:before,
+.slick-next:before {
+  font-family: "bootstrap-icons";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 1;
+  color: #ddd;
+  -webkit-font-smoothing: antialiased;
+}
+.slick-prev {
+  left: -50px;
+}
+.slick-prev:before {
+  content: "\F284";
+}
+.slick-next:before {
+  content: "\F285";
+}
+/* ##### Dots ##### */
+.slick-dots {
+  bottom: -40px;
+}
+.slick-dots li button:before {
+  font-size: 10px;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #00ad53;
+}
 /* ########## Section - About ########## */
 #about .inner .wrapper {
   position: relative;
@@ -180,6 +212,18 @@ header nav .gnb a:hover::after {
 .about_desc_info div span {
   font-size: 20px;
   color: #777;
+}
+/* ##### UIKit Custom CSS ##### */
+/* Light Box */
+.uk-position-bottom {
+  bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #ddd;
+}
+.uk-lightbox-button {
+  width: 120px;
+  height: 80%;
 }
 /* ########## Section - Skill ########## */
 #skill {
@@ -346,6 +390,7 @@ header nav .gnb a:hover::after {
 .mobile_desc_title h3 {
   font-family: "NPSfontExtraBold";
   font-size: 34px;
+  color: #555;
 }
 .mobile_desc_title h3 span {
   font-family: "NPSfontExtraBold";
@@ -467,7 +512,7 @@ header nav .gnb a:hover::after {
 .web_tab_btns label::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -10px;
   left: 50%;
   width: 0;
   height: 5px;
@@ -560,6 +605,59 @@ header nav .gnb a:hover::after {
   border: 1px solid transparent;
 }
 /* ########## Section - Practical ########## */
+#practical {
+  padding: 100px 0;
+  background-color: #fafafa;
+}
+#practical .inner .wrapper {
+  margin-top: 120px;
+}
+.practical_slider_outer {
+  margin-bottom: 120px;
+}
+.practical_slider_outer h3 {
+  position: relative;
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  z-index: 0;
+}
+.practical_slider_outer h3::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: #00ad53;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: -1;
+}
+.practical_slider {
+}
+.practical_slider div {
+}
+.practical_slider div:last-child {
+}
+.practical_slider a {
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin-right: 10px;
+}
+.practical_slider a:last-child {
+  margin-right: 0;
+}
+.practical_slider div a img {
+  display: block;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
 /* ########## Section - Epilogue ########## */
 /* ########## Fullscreen Navigation ########## */
 .fullscreen_navi {
@@ -587,6 +685,7 @@ header nav .gnb a:hover::after {
   font-weight: 600;
   padding: 20px 20px 20px 0;
   color: #999;
+  text-decoration: none;
   transition: 0.35s;
 }
 .fullscreen_navi_inner a:hover {
@@ -659,6 +758,4 @@ header nav .gnb a:hover::after {
   bottom: 30px;
   opacity: 1;
   visibility: visible;
-}
-.btn_top i {
 }
