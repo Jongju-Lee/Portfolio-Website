@@ -1,0 +1,76 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Outfit", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  background-color: #32465f;
+}
+/* Welcome Hover Effect */
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.welcome:hover {
+  letter-spacing: 6px;
+}
+.welcome::before,
+.welcome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #777;
+  transition: 0.5s;
+  border-radius: 3px;
+  z-index: -1;
+}
+.welcome:hover::before,
+.welcome:hover::after {
+  background-color: transparent;
+}
+.welcome:hover::before {
+  transform: rotate(45deg);
+}
+.welcome:hover::after {
+  transform: rotate(-45deg);
+}

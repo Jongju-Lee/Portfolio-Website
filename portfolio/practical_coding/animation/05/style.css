@@ -1,0 +1,88 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  background-color: #fff;
+}
+/* ########## Loading ########## */
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  padding: 10px;
+}
+.loading::before {
+  content: "\f072";
+  font-family: "fontawesome";
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  font-size: 30px;
+  animation: fly 1.5s linear infinite;
+  color: #9eb3bc;
+  z-index: 1;
+}
+.loading span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  margin: 0 4px;
+  border-radius: 50%;
+  animation: dots 1.5s linear infinite both;
+}
+.loading span:nth-child(1) {
+  animation-delay: 0;
+  background-color: #fdcb6e;
+}
+.loading span:nth-child(2) {
+  animation-delay: 0.1s;
+  background-color: #d63031;
+}
+.loading span:nth-child(3) {
+  animation-delay: 0.2s;
+  background-color: #00b894;
+}
+.loading span:nth-child(4) {
+  animation-delay: 0.3s;
+  background-color: #0984e3;
+}
+.loading span:nth-child(5) {
+  animation-delay: 0.4s;
+  background-color: #6c5ce7;
+}
+
+/* loading Animation */
+@keyframes dots {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes fly {
+  0% {
+    left: -30px;
+  }
+  100% {
+    left: 110%;
+  }
+}

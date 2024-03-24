@@ -42,7 +42,8 @@ html {
   outline: none;
   font-family: "Pretendard-Regular";
 }
-a {
+a,
+a:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -80,7 +81,7 @@ header nav,
   margin: auto;
 }
 section {
-  padding: 70px 0;
+  padding: 100px 0;
 }
 section .inner > h2 {
   font-family: "Outfit", sans-serif;
@@ -193,7 +194,7 @@ header nav .gnb a:hover::after {
 .about_desc_slogan p em {
   font-style: normal;
   font-weight: 700;
-  color: #333;
+  color: #00ad53;
 }
 .about_desc_info {
   margin-top: 50px;
@@ -223,7 +224,7 @@ header nav .gnb a:hover::after {
 }
 .uk-lightbox-button {
   width: 120px;
-  height: 80%;
+  height: 30%;
 }
 /* ########## Section - Skill ########## */
 #skill {
@@ -606,13 +607,12 @@ header nav .gnb a:hover::after {
 }
 /* ########## Section - Practical ########## */
 #practical {
-  padding: 100px 0;
   background-color: #fafafa;
 }
 #practical .inner .wrapper {
   margin-top: 120px;
 }
-.practical_slider_outer {
+.practical_slider_outer:not(:last-child) {
   margin-bottom: 120px;
 }
 .practical_slider_outer h3 {
@@ -659,6 +659,46 @@ header nav .gnb a:hover::after {
   border-radius: 5px;
 }
 /* ########## Section - Epilogue ########## */
+#epilogue .inner .wrapper {
+  margin-top: 50px;
+  overflow: hidden;
+}
+.epilogue_heading,
+.epilogue_job_strength {
+  float: left;
+  width: calc(50% - 25px);
+}
+.epilogue_heading {
+  padding: 70px;
+  padding-top: 50px;
+}
+.epilogue_heading h3 {
+  font-family: "Pretendard-Regular";
+  line-height: 1.5em;
+}
+.epilogue_heading h3 span {
+  color: #00ad53;
+  font-weight: 700;
+}
+.epilogue_heading p {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.7em;
+  color: #555;
+  font-family: "Pretendard-Light";
+}
+.epilogue_job_strength div:not(:last-child) {
+  margin-bottom: 20px;
+}
+.epilogue_job_strength div b {
+  color: #00ad53;
+}
+.epilogue_job_strength div p {
+  color: #555;
+  font-family: "Pretendard-Light";
+  margin-top: 5px;
+  font-size: 14px;
+}
 /* ########## Fullscreen Navigation ########## */
 .fullscreen_navi {
   position: fixed;

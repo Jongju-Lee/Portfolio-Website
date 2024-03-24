@@ -1,0 +1,146 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+body {
+  margin: 0;
+  height: 100vh;
+}
+/* ##### SNS LNB ##### */
+.container {
+  height: inherit;
+  background-color: #25b8f7;
+}
+input[id="share"] {
+  display: none;
+}
+.btn_share {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.btn_share::before {
+  content: "Click Here!";
+  position: absolute;
+  top: 130%;
+  left: 20px;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  opacity: 1;
+  transition: 0.35s;
+}
+.tooltip {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  width: 230px;
+  height: 60px;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.5s;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+}
+.tooltip li {
+  flex: 1;
+  font-size: 25px;
+  text-align: center;
+}
+.tooltip li a {
+  color: #25b8f7;
+  transition: 0.35s;
+}
+.tooltip li:nth-child(1) a:hover {
+  color: #0a66c2;
+}
+.tooltip li:nth-child(2) a:hover {
+  color: #1da1f2;
+}
+.tooltip li:nth-child(3) a:hover {
+  color: #e4405f;
+}
+.tooltip li:nth-child(4) a:hover {
+  color: #cd201f;
+}
+label[for="share"] {
+  position: relative;
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+}
+label[for="share"]::before,
+label[for="share"]::after {
+  position: absolute;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+  font-weight: 500;
+  transition: top 0.5s, transform 0.35s;
+  color: #25b8f7;
+}
+label[for="share"]::before {
+  content: attr(data-front);
+  top: 0;
+}
+label[for="share"]::after {
+  content: attr(data-back);
+  top: 100%;
+}
+/* Share Button Checked Function */
+input[id="share"]:checked + .btn_share .tooltip {
+  opacity: 1;
+}
+input[id="share"]:checked + .btn_share label::before {
+  top: -100%;
+}
+input[id="share"]:checked + .btn_share label::after {
+  top: 0;
+}
+input[id="share"]:checked + .btn_share::before {
+  opacity: 0;
+}

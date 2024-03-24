@@ -1,0 +1,94 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+/* ########## Gallery Accordion ########## */
+.container {
+  height: inherit;
+}
+.gallery {
+  height: inherit;
+  display: flex;
+}
+.item {
+  position: relative;
+  flex: 1;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.item:hover {
+  flex: 2;
+  filter: grayscale(1);
+}
+.item:not(:last-child) {
+  border-right: 5px solid #000;
+}
+.photo {
+  width: 100%;
+  height: 100%;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.desc {
+  position: absolute;
+  padding: 30px;
+  /* padding-top: 40px; */
+  bottom: -470px;
+  min-height: 180px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+  z-index: 10;
+}
+.desc::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 31px;
+  background-color: #000;
+  transform: rotate(5deg) translateY(20px) scale(1.4);
+  z-index: -1;
+}
+.item:hover .desc {
+  bottom: 0px;
+  transition-delay: 0.5s;
+}
+.desc h2 {
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}

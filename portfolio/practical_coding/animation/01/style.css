@@ -1,0 +1,76 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #000;
+}
+/* ##### Color Change loading ##### */
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.stroke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: ring 2s linear infinite;
+}
+@keyframes ring {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    box-shadow: 1px 5px 2px #e65c00;
+  }
+  33% {
+    transform: translate(-50%, -50%) rotate(120deg);
+    box-shadow: 1px 5px 2px #18b201;
+  }
+  66% {
+    transform: translate(-50%, -50%) rotate(240deg);
+    box-shadow: 1px 5px 2px #0456c8;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    box-shadow: 1px 5px 2px #e65c00;
+  }
+}
+.stroke::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+.loading span {
+  color: #777;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  animation: text 3s ease infinite;
+}
+@keyframes text {
+  0% {
+    color: #777;
+  }
+  50% {
+    color: #000;
+  }
+  100% {
+    color: #777;
+  }
+}

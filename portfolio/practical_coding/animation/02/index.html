@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast Notification</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="notice">
+        <h2>Please press</h2>
+        <button onclick="window.location.reload()">Button</button
+        ><span>The notification will be recreated.</span>
+      </div>
+      <div class="toast_outer">
+        <input type="checkbox" id="close" />
+        <div class="toast">
+          <div class="logo">
+            <img src="./image/logo_01.png" alt="logo_image" />
+          </div>
+          <div class="desc">
+            <b>Notification</b>
+            <p>Please press the button to confirm.</p>
+            <a href="#none">
+              <label for="close">Confirm</label>
+            </a>
+          </div>
+          <label class="btn_close" for="close">
+            <i class="xi-close-min"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+/* Reset CSS */
+* {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ##### Button SNS ##### */
+.btn_sns {
+  width: 550px;
+  padding: 35px;
+  display: flex;
+  background-color: #f7f7f7;
+  background-image: linear-gradient(180deg, #fdfbfb, #efefef);
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+.btn_sns a {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+  border: 7px solid #fff;
+  background-color: #fff;
+  margin: 0 15px;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.btn_sns a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn_sns a:nth-child(1):after {
+  background-color: #3b5999;
+}
+.btn_sns a:nth-child(2):after {
+  background-color: #55acee;
+}
+.btn_sns a:nth-child(3):after {
+  background-color: #dd4b39;
+}
+.btn_sns a:nth-child(4):after {
+  background-color: #0077b5;
+}
+.btn_sns a:nth-child(5):after {
+  background-color: #e4405f;
+}
+.btn_sns a:hover::after {
+  height: 100%;
+}
+.btn_sns a i {
+  transition: 0.5s;
+}
+.btn_sns a:hover i {
+  transform: rotateY(360deg);
+  color: #fff;
+}
