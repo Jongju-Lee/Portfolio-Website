@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMEG KOREA</title>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- WOW.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="custom.js"></script>
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="./css/responsive.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Overlay -->
+      <div class="overlay"></div>
+      <!-- Header -->
+      <header>
+        <a class="logo" href="#none">
+          <img src="./image/smeg_logo.png" alt="SMEG 로고" />
+        </a>
+        <nav>
+          <!-- LNB -->
+          <ul class="lnb">
+            <li><i class="bi bi-search"></i></li>
+            <li>
+              <i class="bi bi-headset"></i>
+              <div class="drop_down">
+                <a href="#none">공지사항</a>
+                <a href="#none">FAQ</a>
+                <a href="#none">1:1문의</a>
+                <a href="#none">A/S신청</a>
+              </div>
+            </li>
+            <li>
+              <i class="bi bi-person"></i>
+              <div class="drop_down">
+                <a href="#none">로그인</a>
+                <a href="#none">회원가입</a>
+              </div>
+            </li>
+            <li>
+              <i class="bi bi-bag"></i>
+            </li>
+          </ul>
+          <!-- GNB -->
+          <ul class="gnb">
+            <li class="gnb_product">
+              <span class="tab_title">product</span>
+            </li>
+            <li class="gnb_collection">
+              <span class="tab_title">collection</span>
+            </li>
+            <li class="gnb_smegazine">
+              <span class="tab_title">smegazine</span>
+            </li>
+          </ul>
+          <!-- Trigger -->
+          <div class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- Sitemap -->
+          <div class="sitemap">
+            <!-- Sitemap - product -->
+            <div class="sitemap_product">
+              <h3>Product</h3>
+              <div class="items">
+                <div class="item">
+                  <b>스페셜에디션</b>
+                  <a href="#none">SMEG X Veuve Clicquot</a>
+                  <a href="#none">SMEG x D&G</a>
+                  <a href="#none">SMEG x FIAT</a>
+                  <a href="#none">SMEG X PEANUTS</a>
+                  <a href="#none">SMEG X COCACOLA</a>
+                </div>
+                <div class="item">
+                  <b>대형/빌트인</b>
+                  <a href="#none">냉장고</a>
+                  <a href="#none">와인셀러</a>
+                  <a href="#none">인덕션</a>
+                  <a href="#none">오븐</a>
+                  <a href="#none">주방후드</a>
+                  <a href="#none">식기세척기</a>
+                  <a href="#none">빌트인 커피머신</a>
+                  <a href="#none">세탁기</a>
+                </div>
+              </div>
+              <div class="items">
+                <div class="item">
+                  <b>소형가전</b>
+                  <a href="#none">전기포트</a>
+                  <a href="#none">토스트기</a>
+                  <a href="#none">핸드블렌더</a>
+                  <a href="#none">핸드믹서</a>
+                  <a href="#none">믹서기</a>
+                  <a href="#none">착즙기</a>
+                  <a href="#none">반죽기</a>
+                </div>
+                <div class="item">
+                  <b>홈카페</b>
+                  <a href="#none">전자동 커피머신</a>
+                  <a href="#none">드립 커피머신</a>
+                  <a href="#none">반자동 커피머신</a>
+                  <a href="#none">밀크포머</a>
+                  <a href="#none">커피 그라인더</a>
+                  <a href="#none">원두</a>
+                </div>
+              </div>
+              <div class="items">
+                <div class="item">
+                  <b>쿡웨어</b>
+                  <a href="#none">프라이팬</a>
+                  <a href="#none">양수냄비</a>
+                  <a href="#none">전골냄비</a>
+                  <a href="#none">웍</a>
+                </div>
+                <div class="item">
+                  <b>프로페셔널(전문가용)</b>
+                  <a href="#none">오븐 60리터</a>
+                  <a href="#none">오븐 100리터</a>
+                  <a href="#none">식기세척기-언더카운터</a>
+                </div>
+              </div>
+              <div class="items">
+                <div class="item">
+                  <b>추가구성품</b>
+                  <a href="#none">주방후드 추가구성품</a>
+                  <a href="#none">핸드블렌더 추가구성품</a>
+                  <a href="#none">믹서기 추가구성품</a>
+                  <a href="#none">반죽기 추가구성품</a>
+                  <a href="#none">쿡웨어 추가구성품</a>
+                  <a href="#none">오븐 60리터 추가구성품</a>
+                  <a href="#none">오븐 100리터 추가구성품</a>
+                  <a href="#none"
+                    >식기세척기-언더카운터<span>추가구성품</span></a
+                  >
+                  <a href="#none">와인셀러 추가구성품</a>
+                  <a href="#none">토스터 추가구성품</a>
+                </div>
+                <div class="item">
+                  <b>서비스</b>
+                  <a href="#none">GIFT</a>
+                </div>
+              </div>
+            </div>
+            <!-- Sitemap - collection -->
+            <div class="sitemap_collection">
+              <h3>Collection</h3>
+              <div class="collection_items">
+                <a href="#none">50's Style</a>
+                <a href="#none">Victoria</a>
+                <a href="#none">Dolce stil Novo</a>
+                <a href="#none">Classic</a>
+                <a href="#none">Linea</a>
+                <a href="#none">SMEG X FIAT</a>
+                <a href="#none">SMEG X D&G</a>
+              </div>
+              <div class="sitemap_search">
+                <input type="text" placeholder="검색어를 입력해주세요." />
+                <img src="./image/search.svg" alt="검색 버튼" />
+              </div>
+              <div class="border_right"></div>
+            </div>
+            <!-- Sitemap - service -->
+            <div class="sitemap_service">
+              <div class="center">
+                <h3>Service Center</h3>
+                <a href="#none">공지사항</a>
+                <a href="#none">이벤트</a>
+                <a href="#none">매장안내</a>
+                <a href="#none">FAQ</a>
+                <a href="#none">A/S 신청</a>
+                <a href="#none">1:1 문의</a>
+                <a href="#none">제휴/대량구매 문의</a>
+                <a href="#none">리퍼브샵</a>
+              </div>
+              <div class="my_smeg">
+                <h3>My SMEG</h3>
+                <a href="#none">스메그 소개</a>
+                <a href="#none">SMEGazine</a>
+                <a href="#none">스메그 리뷰</a>
+                <a href="#none">쇼핑백</a>
+                <a href="#none">로그인</a>
+                <a href="#none">회원가입</a>
+                <a href="#none">개인정보 처리방침</a>
+                <a href="#none">이용약관</a>
+              </div>
+            </div>
+            <!-- Mobile Sitemap -->
+            <div class="mobile_sitemap">
+              <div class="mobile_sitemap_header">
+                <div class="mobile_input_field">
+                  <input type="text" placeholder="검색어를 입력해주세요.">
+                  <i class="bi bi-search"></i>
+                </div>
+                <div class="btns">
+                  <a class="btn_sign_in" href="#none">로그인</a>
+                  <a class="btn_sign_up" href="#none">회원가입</a>
+                </div>
+              </div>
+              <div class="mobile_sitemap_section">
+                <a class="mobile_registration" href="#none">정품등록하기</a>
+                <ul class="mobile_accordion">
+                  <li>
+                    <span class="mobile_accordion_title">PRODUCT</span>
+                    <div class="mobile_accordion_content">
+                      <a href="#none">스페셜에디션</a>
+                      <a href="#none">대형/빌트인</a>
+                      <a href="#none">소형가전</a>
+                      <a href="#none">홈카페</a>
+                      <a href="#none">쿡웨어</a>
+                      <a href="#none">프로페셔널(전문가용)</a>
+                      <a href="#none">추가구성품</a>
+                      <a href="#none">서비스</a>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="mobile_accordion_title">COLLECTION</span>
+                    <div class="mobile_accordion_content">
+                      <a href="#none">50's Style</a>
+                      <a href="#none">Victoria</a>
+                      <a href="#none">Dolce stil Novo</a>
+                      <a href="#none">Classic</a>
+                      <a href="#none">Linea</a>
+                      <a href="#none">SMEG X FIAT</a>
+                      <a href="#none">SMEG X D&G</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="mobile_accordion_title" href="#none">SMEGAZINE</a>
+                  </li>
+                  <li>
+                    <span class="mobile_accordion_title">CUSTOMER SERVICE</span>
+                    <div class="mobile_accordion_content">
+                      <a href="#none">공지사항</a>
+                      <a href="#none">이벤트</a>
+                      <a href="#none">스메그 리뷰</a>
+                      <a href="#none">매장안내</a>
+                      <a href="#none">FAQ</a>
+                      <a href="#none">A/S신청</a>
+                      <a href="#none">1:1문의</a>
+                      <a href="#none">제휴/대량구매 문의</a>
+                      <a href="#none">리퍼브샵</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="mobile_accordion_title" href="#none">스메그 소개</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Header Dropdown -->
+        <div class="header_drop_down product_drop_down">
+          <div class="inner">
+            <div class="links">
+              <a href="#none" data-count="15">스페셜 에디션</a>
+              <a href="#none" data-count="152">대형/빌트인</a>
+              <a href="#none" data-count="92">소형가전</a>
+              <a href="#none" data-count="42">홈카페</a>
+              <a href="#none" data-count="24">쿡웨어</a>
+              <a href="#none" data-count="56">프로페셔널(전문가용)</a>
+              <a href="#none" data-count="50">추가구성품</a>
+              <a href="#none" data-count="248">서비스</a>
+            </div>
+            <div class="photo">
+              <img src="./image/sample_product_img.jpg" alt="와인셀러 냉장고" />
+            </div>
+          </div>
+        </div>
+        <div class="header_drop_down collection_drop_down">
+          <div class="inner">
+            <div class="links">
+              <a href="#none">
+                <a href="#none">50's Style</a>
+                <a href="#none">Victoria</a>
+                <a href="#none">Dolce Stil Novo</a>
+                <a href="#none">Classic</a>
+                <a href="#none">Linea</a>
+                <a href="#none">SMEG X FIAT</a>
+                <a href="#none">SMEG X D&G</a>
+              </a>
+            </div>
+            <div class="photo">
+              <img src="./image/Product_3.png" alt="SMEG 냉장고" />
+            </div>
+          </div>
+        </div>
+        <div class="header_drop_down smegazine_drop_down">
+          <div class="inner">
+            <div class="items">
+              <div class="item">
+                <a href="#none">
+                  <img
+                    src="./image/2023122716500063681.png"
+                    alt="베이킹 스튜디오"
+                  />
+                </a>
+                <span class="desc"
+                  >[REVIEW] 마카롱만을 굽기 위한 오븐이라는 편견이 싹 사라졌어요
+                  (라꺄레 베이킹 스튜디오)</span
+                >
+              </div>
+              <div class="item">
+                <a href="#none">
+                  <img src="./image/2023122115081599559.jpg" alt="구겔호프" />
+                </a>
+                <span class="desc">[스메그로 오늘 뭐굽지?] EP.31 구겔호프</span>
+              </div>
+              <div class="item">
+                <a href="#none">
+                  <img src="./image/2023121210524975724.jpg" alt="피칸 플링" />
+                </a>
+                <span class="desc"
+                  >[스메그로 오늘 뭐굽지?] EP.30 피칸 플랑</span
+                >
+              </div>
+            </div>
+            <div class="items">
+              <div class="item">
+                <a href="#none">
+                  <img
+                    src="./image/2023081119064897909.png"
+                    alt="피스타치오 휘낭시에"
+                  />
+                </a>
+                <span class="desc"
+                  >[스메그로 오늘 뭐굽지?] EP.29 피스타치오 휘낭시에</span
+                >
+              </div>
+              <div class="item">
+                <a href="#none">
+                  <img src="./image/2023051817394055440.png" alt="약과 쿠키" />
+                </a>
+                <span class="desc"
+                  >[스메그로 오늘 뭐굽지?] EP.28 오븐에 구운 약과 &
+                  약과쿠키</span
+                >
+              </div>
+              <div class="item">
+                <a href="#none">
+                  <img src="./image/2023022816254267919.png" alt="소금빵" />
+                </a>
+                <span class="desc">[스메그로 오늘 뭐굽지?] EP.27 소금빵</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Section - Intro -->
+      <section class="intro">
+        <iframe
+          src="https://www.youtube.com/embed/l1MnGwC7OrQ?autoplay=1&mute=1&controls=0&loop=1&playlist=l1MnGwC7OrQ&si=AxA_MmzLNqHP7jB0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <!-- Section - Coffee -->
+      <section class="feature coffee">
+        <article class="learn_more">
+          <div class="coffee_heading">
+            <h2>전자동 커피머신</h2>
+            <p>
+              이탈리안 프리미엄 커피의 맛과 향이 그대로, 스메그 전자동 커피머신
+              출시!<br />
+              19bar의 압력으로 깊은 크레마와 향을 원터치로 즐겨보세요.
+            </p>
+            <a href="#none">제품 바로가기</a>
+          </div>
+        </article>
+        <article class="detail">
+          <div class="color">
+            <input type="radio" name="coffee" id="coffee_white" checked />
+            <input type="radio" name="coffee" id="coffee_black" />
+            <input type="radio" name="coffee" id="coffee_red" />
+            <input type="radio" name="coffee" id="coffee_taupe" />
+            <div class="coffee_machine">
+              <div class="item white">
+                <img
+                  src="./image/main_pro_item_02_01.png"
+                  alt="흰색 커피머신"
+                />
+              </div>
+              <div class="item black">
+                <img
+                  src="./image/main_pro_item_02_04.png"
+                  alt="검정색 커피머신"
+                />
+              </div>
+              <div class="item red">
+                <img
+                  src="./image/main_pro_item_02_02.png"
+                  alt="빨간색 커피머신"
+                />
+              </div>
+              <div class="item taupe">
+                <img
+                  src="./image/main_pro_item_02_03.png"
+                  alt="토페색 커피머신"
+                />
+              </div>
+            </div>
+            <h2>
+              Automatic<br />
+              Espresso Machine
+            </h2>
+            <div class="btn_colorize">
+              <label for="coffee_white"></label>
+              <label for="coffee_black"></label>
+              <label for="coffee_red"></label>
+              <label for="coffee_taupe"></label>
+            </div>
+          </div>
+          <div class="photo wow">
+            <img
+              src="./image/main_pro_item_02.png"
+              alt="흰색 커피머신 디테일샷"
+            />
+          </div>
+        </article>
+      </section>
+      <!-- Section - Mixer -->
+      <section class="feature mixer">
+        <article class="learn_more">
+          <div class="mixer_heading">
+            <h2>핸드믹서</h2>
+            <p>
+              9단계의 속도 조절과 강력한 터보 기능,<br />
+              LED 디스플레이가 적용되어 더욱 편리한 베이킹 필수품
+            </p>
+            <a href="#none">제품 바로가기</a>
+          </div>
+        </article>
+        <article class="detail">
+          <div class="color">
+            <input type="radio" name="mixer" id="mixer_cream" checked />
+            <input type="radio" name="mixer" id="mixer_white" />
+            <input type="radio" name="mixer" id="mixer_pink" />
+            <input type="radio" name="mixer" id="mixer_seagreen" />
+            <input type="radio" name="mixer" id="mixer_skyblue" />
+            <input type="radio" name="mixer" id="mixer_red" />
+            <input type="radio" name="mixer" id="mixer_black" />
+            <div class="mixer_machine">
+              <div class="item cream">
+                <img
+                  src="./image/main_item_hmf01_01.png"
+                  alt="크림색 핸드믹서"
+                />
+              </div>
+              <div class="item white">
+                <img src="./image/main_item_hmf01_02.png" alt="흰색 핸드믹서" />
+              </div>
+              <div class="item pink">
+                <img
+                  src="./image/main_item_hmf01_03.png"
+                  alt="핑크색 핸드믹서"
+                />
+              </div>
+              <div class="item seagreen">
+                <img
+                  src="./image/main_item_hmf01_04.png"
+                  alt="seagreen색 핸드믹서"
+                />
+              </div>
+              <div class="item skyblue">
+                <img
+                  src="./image/main_item_hmf01_05.png"
+                  alt="하늘색 핸드믹서"
+                />
+              </div>
+              <div class="item red">
+                <img
+                  src="./image/main_item_hmf01_06.png"
+                  alt="빨간색 핸드믹서"
+                />
+              </div>
+              <div class="item black">
+                <img
+                  src="./image/main_item_hmf01_07.png"
+                  alt="검은색 핸드믹서"
+                />
+              </div>
+            </div>
+            <h2>Hand Mixer</h2>
+            <div class="btn_colorize">
+              <label for="mixer_cream"></label>
+              <label for="mixer_white"></label>
+              <label for="mixer_pink"></label>
+              <label for="mixer_seagreen"></label>
+              <label for="mixer_skyblue"></label>
+              <label for="mixer_red"></label>
+              <label for="mixer_black"></label>
+            </div>
+          </div>
+          <div class="photo wow">
+            <img
+              src="./image/main_item_hmf01_08.png"
+              alt="크림색 핸드믹서 디테일샷"
+            />
+          </div>
+        </article>
+      </section>
+      <!-- Section - Wine Cooler -->
+      <section class="feature wine_cooler">
+        <article class="learn_more">
+          <div class="wine_cooler_heading">
+            <h2>Classic Wine Cooler</h2>
+            <p>
+              최고급 소재와 우아한 디자인, 장기 보관을 위한 우수한 온/습도 조절
+              능력, <br />
+              이탈리아의 노하우와 디테일을 반영한 스메그 와인셀러를 지금
+              만나보세요.
+            </p>
+            <a href="#none">제품 바로가기</a>
+          </div>
+        </article>
+        <article class="detail">
+          <div class="color">
+            <div class="wine_cooler_machine">
+              <div class="item">
+                <img src="./image/main_item_SCV115A_01.png" alt="와인 냉장고" />
+              </div>
+            </div>
+            <h2>Classic Wine Cooler</h2>
+          </div>
+          <div class="photo wow">
+            <img
+              src="./image/main_item_SCV115A_02.png"
+              alt="와인 냉장고 하부 컨트롤패널"
+            />
+          </div>
+        </article>
+      </section>
+      <!-- Section - News -->
+      <section class="news">
+        <div class="news_inner">
+          <div class="heading">
+            <h2>SMEG News</h2>
+            <span>스메그의 다양한 소식을 알려드립니다.</span>
+          </div>
+          <div class="banner_outer">
+            <div class="items">
+              <div class="item">
+                <a href="#none">
+                  <img
+                    src="./image/2024010519205070796.png"
+                    alt="오븐 구매후기 이벤트"
+                  />
+                </a>
+                <p>
+                  프로페셔널 오븐 터치라인 후기 이벤트<br />
+                  (01. 31 ~ 02. 29)
+                </p>
+              </div>
+              <div class="item">
+                <a href="#none">
+                  <img
+                    src="./image/2024011515501947640.jpg"
+                    alt="리니아 오븐 런칭할인"
+                  />
+                </a>
+                <p>리니아 오븐 런칭 기념 특별 할인</p>
+              </div>
+            </div>
+            <div class="items">
+              <div class="item">
+                <a href="#none">
+                  <img
+                    src="./image/2024021418465726000.jpg"
+                    alt="스메그 엠버서더 2기 모집"
+                  />
+                </a>
+                <p>스메그 엠버서더 미니 : 2기 모집(02/08 ~ 25)</p>
+              </div>
+              <div class="item">
+                <a href="#none">
+                  <img
+                    src="./image/2024020109402086575.jpg"
+                    alt="이달의 오븐 프로모션"
+                  />
+                </a>
+                <p>2월 '이달의 오븐' 프로모션</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section - Benefit -->
+      <section class="benefit">
+        <div class="benefit_inner">
+          <div class="desc">
+            <h2>정품등록 혜택</h2>
+            <p>
+              스메그를 소유하는 그 이상의 가치를 스메그 서비스를 통해
+              누려 보세요. 스메그 서비스는 회사 사정에 따라 별도
+                고지없이 변경/중단 될 수 있습니다.
+              <span>AS접수는 정품등록 없이 가능합니다.</span>
+              <span>(제품수령일 + 1 영업일 내 접수 가능)</span>
+            </p>
+          </div>
+          <div class="items">
+            <div class="item">
+              <a href="#none">
+                <img src="./image/main_bottom_icon_01.png" alt="기술지원" />
+              </a>
+              <span>기술지원</span>
+            </div>
+            <div class="item">
+              <a href="#none">
+                <img
+                  src="./image/main_bottom_icon_02.png"
+                  alt="클리닝 서비스"
+                />
+              </a>
+              <span>클리닝 서비스</span>
+            </div>
+            <div class="item">
+              <a href="#none">
+                <img src="./image/main_bottom_icon_03.png" alt="방문점검" />
+              </a>
+              <span>방문점검</span>
+            </div>
+            <div class="item">
+              <a href="#none">
+                <img src="./image/main_bottom_icon_04.png" alt="할인" />
+              </a>
+              <span>할인</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer>
+        <div class="footer_inner">
+          <div class="menu">
+            <a class="logo" href="#none">
+              <img src="./image/smeg_logo.png" alt="스메그 로고" />
+            </a>
+            <div class="links">
+              <div class="introduce">
+                <a href="#none">스메그 소개</a>
+                <a href="#none">매장 안내</a>
+                <a href="#none">FAQ</a>
+                <a href="#none">공지사항</a>
+                <a href="#none">스메그 리뷰</a>
+              </div>
+              <div class="policy">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+                <a href="#none">제휴/대량구매</a>
+              </div>
+              <div class="repair">
+                <a href="#none">1:1 문의</a>
+                <a href="#none">A/S 신청</a>
+              </div>
+            </div>
+            <div class="smeg_info">
+              <p>
+                (주)제이컬렉션<br>
+                 서울특별시 강남구 봉은사로 103길 5, 3층(삼성동,
+                성재빌딩)<br />
+                대표. 정태호 사업자등록번호. 206-86-72765 통신판매신고번호. 제
+                2018-서울강남-04317호<br />
+                개인정보보호책임자. 박주영 / smeginfo@smegkorea.com / 1588-2644
+              </p>
+              <span>Copyright Ⓒ SMEGKOREA Co., Ltd. All Right Reserved.</span>
+            </div>
+          </div>
+          <div class="inquiry">
+            <div class="repair">
+              <a href="#none">1:1 문의</a>
+              <a href="#none">A/S 신청</a>
+            </div>
+            <a class="safety" href="#none">
+              <img src="./image/es_foot.gif" alt="안전거래 알림" />
+            </a>
+            <div class="sns">
+              <a href="#none"><i class="xi-kakaotalk"></i></a>
+              <a href="#none"><i class="xi-instagram"></i></a>
+              <a href="#none"><i class="xi-facebook"></i></a>
+              <a href="#none"><i class="xi-naver"></i></a>
+              <a href="#none"><i class="xi-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Event Modal -->
+      <div class="event_modal">
+        <div class="logo">
+          <img src="./image/smeg_logo.png" alt="SMEG 로고" />
+        </div>
+        <div class="items">
+          <div class="item">
+            <img src="./image/event01.png" alt="이달의 오븐 프로모션" />
+          </div>
+          <div class="item">
+            <img src="./image/event06.png" alt="스메그 웨딩페스타" />
+          </div>
+          <div class="item">
+            <img src="./image/event02.png" alt="리니아 오븐 런칭기념 세일" />
+          </div>
+          <div class="item">
+            <img src="./image/event05.png" alt="스메그 엠버서더 2기모집" />
+          </div>
+        </div>
+        <div class="input_field">
+          <input type="checkbox" id="dont_see" />
+          <label for="dont_see">오늘 하루동안 보지 않기</label>
+        </div>
+        <span class="btn_close_event">
+          <i class="xi-close-thin"></i>
+        </span>
+        </div>
+      </div>
+      <div class="btn_top">
+        <a href="#">
+          <i class="xi-angle-up"></i>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -147,6 +147,7 @@ header nav .gnb a:hover::after {
 }
 /* ##### Dots ##### */
 .slick-dots {
+  left: -5px;
   bottom: -40px;
 }
 .slick-dots li button:before {
@@ -155,6 +156,38 @@ header nav .gnb a:hover::after {
 .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #00ad53;
+}
+/* ##### UIKit Custom CSS ##### */
+/* Light Box */
+.uk-position-bottom {
+  bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #ddd;
+}
+.uk-lightbox-button {
+  width: 120px;
+  height: 30%;
+}
+/* ##### Featherlight.js ##### */
+.featherlight .featherlight-content {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+}
+.featherlight .featherlight-inner {
+  width: 100%;
+  height: 100%;
+}
+.featherlight .featherlight-close-icon {
+  right: 17px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  background-color: #fff;
+  opacity: 0.8;
 }
 /* ########## Section - About ########## */
 #about .inner .wrapper {
@@ -214,18 +247,6 @@ header nav .gnb a:hover::after {
   font-size: 20px;
   color: #777;
 }
-/* ##### UIKit Custom CSS ##### */
-/* Light Box */
-.uk-position-bottom {
-  bottom: 10px;
-  font-size: 25px;
-  font-weight: 700;
-  color: #ddd;
-}
-.uk-lightbox-button {
-  width: 120px;
-  height: 30%;
-}
 /* ########## Section - Skill ########## */
 #skill {
   background-color: #fafafa;
@@ -246,6 +267,7 @@ header nav .gnb a:hover::after {
   margin-right: 20px;
   border-radius: 10px;
   padding: 30px 25px;
+  background-color: #fff;
 }
 .skill_item:last-of-type {
   margin-right: 0;
@@ -275,7 +297,9 @@ header nav .gnb a:hover::after {
 }
 .skill_item_desc h4 {
   font-size: 22px;
+  font-weight: 700;
   margin-top: 10px;
+  color: #555;
 }
 .skill_item_desc p {
   font-size: 16px;
@@ -499,57 +523,145 @@ header nav .gnb a:hover::after {
   display: none;
 }
 .web_tab_btns {
+  position: relative;
   width: fit-content;
+  height: fit-content;
   margin: auto;
+  height: 50px;
+}
+.web_tab_btns_indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+input[id="web1"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
+  left: 0;
+}
+input[id="web2"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
+  left: 25%;
+}
+input[id="web3"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
+  left: 50%;
+}
+input[id="web4"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
+  left: 75%;
 }
 .web_tab_btns label {
   position: relative;
-  display: inline-block;
-  font-size: 30px;
+  float: left;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 28px;
   font-family: "Outfit", sans-serif;
-  margin: 0 35px;
   cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+input[id="web1"]:checked ~ .web_tab_btns label[for="web1"],
+input[id="web2"]:checked ~ .web_tab_btns label[for="web2"],
+input[id="web3"]:checked ~ .web_tab_btns label[for="web3"],
+input[id="web4"]:checked ~ .web_tab_btns label[for="web4"] {
+}
+.web_tab_btns label::before,
+.web_tab_btns label::after {
+  content: attr(data-link);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  transition: 0.35s;
+}
+
+.web_tab_btns label::before {
+  position: absolute;
+  top: 0;
 }
 .web_tab_btns label::after {
-  content: "";
   position: absolute;
-  bottom: -10px;
-  left: 50%;
-  width: 0;
-  height: 5px;
-  background-color: #00ad53;
-  transition: 0.35s ease;
-  transform: translateX(-50%);
-  z-index: -1;
+  top: 100%;
+  color: #00ad53;
 }
+input[id="web1"]:checked ~ .web_tab_btns label[for="web1"]::before,
+input[id="web2"]:checked ~ .web_tab_btns label[for="web2"]::before,
+input[id="web3"]:checked ~ .web_tab_btns label[for="web3"]::before,
+input[id="web4"]:checked ~ .web_tab_btns label[for="web4"]::before,
+.web_tab_btns label:hover::before {
+  top: -110%;
+}
+input[id="web1"]:checked ~ .web_tab_btns label[for="web1"]::after,
+input[id="web2"]:checked ~ .web_tab_btns label[for="web2"]::after,
+input[id="web3"]:checked ~ .web_tab_btns label[for="web3"]::after,
+input[id="web4"]:checked ~ .web_tab_btns label[for="web4"]::after,
 .web_tab_btns label:hover::after {
-  width: 100%;
+  top: 0%;
 }
 .web_tab_content_outer {
-  margin-top: 50px;
+  position: relative;
+  margin-top: 70px;
+  height: 450px;
 }
 .web_tab_content {
-  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: 1s;
+}
+input[id="web1"]:checked ~ .web_tab_content_outer .web_tab_content.green,
+input[id="web2"]:checked ~ .web_tab_content_outer .web_tab_content.smeg,
+input[id="web3"]:checked ~ .web_tab_content_outer .web_tab_content.netflix,
+input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
 .web_tab_content_thum,
 .web_tab_content_desc {
   float: left;
+  width: 50%;
 }
 .web_tab_content_thum {
-  width: 700px;
-  height: 450px;
-  border-radius: 20px;
-}
-.web_tab_content_thum img {
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
-  border-radius: 20px;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: top;
+  transition-timing-function: ease-in-out;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+.web_tab_content.green .web_tab_content_thum {
+  background-image: url(../image/web_green_save_earth_thum.png);
+  transition-duration: 8s;
+}
+.web_tab_content.smeg .web_tab_content_thum {
+  background-image: url(../image/web_smeg_thum.png);
+  transition-duration: 4s;
+}
+.web_tab_content.netflix .web_tab_content_thum {
+  background-image: url(../image/web_netflix_thum.png);
+  transition-duration: 3s;
+}
+.web_tab_content.logitech .web_tab_content_thum {
+  background-image: url(../image/web_logitech_thum.png);
+  transition-duration: 2.5s;
+}
+.web_tab_content_thum:hover {
+  background-position: bottom;
+}
 .web_tab_content_desc {
-  width: 40%;
-  margin-left: 50px;
+  position: relative;
+  height: inherit;
+  padding-left: 50px;
 }
 .web_tab_content_desc .title h3 {
   font-family: "Outfit", sans-serif;
@@ -557,12 +669,14 @@ header nav .gnb a:hover::after {
   font-weight: 400;
 }
 .web_tab_content_desc .title p {
-  margin-top: 10px;
+  margin-top: 30px;
   line-height: 1.7em;
   color: #777;
 }
 .web_tab_content_desc .details {
-  margin-top: 50px;
+  position: absolute;
+  left: 50px;
+  bottom: 40px;
 }
 .web_tab_content_desc .details span {
   display: block;
@@ -574,8 +688,12 @@ header nav .gnb a:hover::after {
   color: #555;
   width: 70px;
 }
+.web_tab_content_desc .btns {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+}
 .web_tab_content_desc .btns a {
-  margin-top: 5px;
   margin-right: 5px;
   display: inline-block;
   width: 100px;

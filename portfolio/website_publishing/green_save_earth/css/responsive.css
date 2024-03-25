@@ -1,0 +1,543 @@
+/* ##### Mobile Responsive ##### */
+@media (max-width: 768px) {
+  /* ##### COMMON ##### */
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .heading h2 {
+    font-size: 30px;
+  }
+  .heading h2 span {
+    font-size: 32px;
+  }
+  /* ##### Header ##### */
+  header {
+    position: fixed;
+    padding: 0 20px;
+    height: 60px;
+  }
+  header .logo {
+    width: 60px;
+  }
+  .header_content {
+    gap: 30px;
+  }
+  .gnb {
+    display: none;
+  }
+  a.btn_header {
+    display: none;
+  }
+  /* Header - Search Modal */
+  .search_modal .input_field {
+    width: calc(100% - 60px);
+  }
+  .search_modal .input_field input {
+    font-size: 25px;
+  }
+  .search_modal_icon {
+    font-size: 35px;
+    transform: translateY(-65%);
+  }
+  .search_modal_btn_close {
+    display: none;
+  }
+  .search_modal_btn_close_mobile {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 55px;
+    color: #fff;
+    pointer-events: all;
+  }
+  /* Header - Mobile Trigger */
+  .trigger_outer {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-color: #71c100;
+    border-radius: 5px;
+    padding: 14px 10px;
+    padding-top: 12px;
+  }
+  .trigger {
+    height: 100%;
+    position: relative;
+  }
+  .trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger_outer.active .trigger span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger_outer.active .trigger span:nth-child(2) {
+    opacity: 0;
+  }
+  .trigger_outer.active .trigger span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  /* Header - Mobile Lnb */
+  .mobile_lnb_outer {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #333356;
+    color: #fff;
+    transition: 0.5s;
+  }
+  .mobile_lnb_outer.active {
+    right: 0;
+  }
+  .mobile_lnb {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    padding-top: 100px;
+  }
+  .mobile_lnb a {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    padding: 20px;
+  }
+  .mobile_lnb a:first-child {
+    color: #dbf072;
+  }
+  .mobile_lnb_outer .btn_header {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+  /* ########## Section - Intro ########## */
+  section.intro {
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    height: 60vh;
+  }
+  section.intro img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+  .intro_heading {
+    width: 100%;
+  }
+  .intro_heading h1 {
+    font-size: 40px;
+    letter-spacing: -2px;
+  }
+  .intro_heading h1 span {
+    font-size: 48px;
+  }
+  .intro_heading p {
+    padding: 0 20px;
+    margin: 20px 0;
+    font-size: 18px;
+  }
+  .intro_heading .btn_normal {
+    font-size: 15px;
+  }
+  .intro_bottom {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-height: 220px;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    line-height: 1.7em;
+  }
+  /* ########## Section - Campaign ########## */
+  section.campaign {
+    flex-direction: column-reverse;
+    padding-top: 290px;
+    padding-bottom: 70px;
+  }
+  section.campaign > * {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .campaign_photo {
+    height: 500px;
+    margin-top: 30px;
+  }
+  .campaign_photo img:nth-child(1) {
+    width: 100%;
+    top: 65%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+  }
+  .campaign_photo img:nth-child(2) {
+    max-width: 150px;
+    top: 5%;
+    left: 20px;
+    transform: rotate(-10deg);
+  }
+  .campaign_photo img:nth-child(3) {
+    max-width: 250px;
+    top: 15%;
+    right: 10px;
+    transform: rotate(-2deg);
+  }
+  .campaign_photo img:nth-child(4) {
+    max-width: 150px;
+    bottom: 30px;
+    left: 0;
+    transform: rotate(15deg);
+  }
+  .campaign_heading .detail span {
+    position: relative;
+    line-height: 1.5em;
+    padding-left: 50px;
+    margin-bottom: 20px;
+  }
+  .campaign_heading .detail span::before {
+    position: absolute;
+    font-size: 28px;
+    left: 4px;
+    top: 8px;
+  }
+  .campaign_heading .btn_normal {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+  }
+  /* ########## Section - Focus ########## */
+  section.focus {
+    padding-bottom: 80px;
+  }
+  .focus_heading {
+    width: 100%;
+  }
+  .focus_heading h2 {
+    font-size: 25px;
+    letter-spacing: -1px;
+  }
+  .focus_items {
+    flex-direction: column;
+  }
+  .focus_item_icon {
+    width: 65px;
+    height: 65px;
+    font-size: 40px;
+  }
+  .focus_item_title {
+    font-size: 26px;
+  }
+  .focus_item_more {
+    font-size: 20px;
+  }
+  /* ########## Section - Change ########## */
+  section.change {
+    flex-direction: column;
+  }
+  section.change > * {
+  }
+  .change_heading {
+    position: static;
+    transform: none;
+    margin: auto;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+  }
+  .change_heading p {
+    margin-top: 20px;
+  }
+  .change_heading .btn_normal {
+    margin-top: 20px;
+  }
+  .change_photo img {
+    display: block;
+    border-radius: 0;
+  }
+  /* ########## Section - Join ########## */
+  section.join {
+    padding: 70px 0;
+  }
+  section.join .heading {
+    width: 100%;
+  }
+  .join_items {
+    margin-top: 50px;
+  }
+  .join_items .row {
+    flex-direction: column;
+  }
+  .join_item {
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .join_item .desc {
+    height: auto;
+    padding: 25px;
+  }
+  .join_item .desc h4 {
+    font-size: 25px;
+    letter-spacing: -2px;
+  }
+  .join_item .desc p {
+    font-size: 15px;
+  }
+  .join_item_desc_bottom {
+    position: static;
+    width: 100%;
+  }
+  section.join .inner .btn_wrapper {
+    margin-top: 50px;
+  }
+  /* ########## Section - Total ########## */
+  section.total {
+    min-height: auto;
+  }
+  section.total .centering {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    padding: 120px 20px;
+  }
+  section.total .centering h2 {
+    font-size: 26px;
+    letter-spacing: -1px;
+    line-height: 1.5em;
+  }
+  /* ########## Section - Donations ########## */
+  section.donations {
+    padding: 70px 0;
+  }
+  .donate_outer {
+    padding: 20px;
+  }
+  .donate_heading .badge {
+    margin-top: 30px;
+  }
+  .donate_heading h3 {
+    margin-top: 30px;
+    font-size: 25px;
+    letter-spacing: -1px;
+  }
+  .donate {
+    margin-top: 30px;
+  }
+  .donate .btn_field {
+    margin-top: 30px;
+  }
+  .donate .btn_field_row button {
+    font-size: 15px;
+  }
+  .donate .btn_normal {
+    margin-top: 30px;
+    font-size: 15px;
+  }
+  .donors_outer {
+    margin-top: 70px;
+  }
+  .donors_outer h2 {
+    font-size: 35px;
+    letter-spacing: -1px;
+  }
+  .donors_items_row {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+  .donors_item_badge {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+  }
+  .donors_item b {
+    margin-top: -10px;
+    font-size: 20px;
+  }
+  /* ########## Section - Help ########## */
+  section.help {
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
+  .save_ocean_outer h2 {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .save_ocean {
+    margin-top: 30px;
+  }
+  .save_ocean_detail {
+    flex-direction: column;
+  }
+  .save_ocean_detail .photo img {
+    display: block;
+  }
+  .save_ocean_detail .desc {
+    padding: 30px 20px;
+    padding-bottom: 0px;
+    gap: 15px;
+    border-bottom: 1px solid #fff;
+  }
+  .save_ocean_detail .desc h3 {
+    font-size: 25px;
+    letter-spacing: -1px;
+  }
+  .save_ocean_detail .desc p {
+    margin: 0;
+    font-size: 15px;
+  }
+  .save_ocean_total {
+    flex-wrap: wrap;
+  }
+  .save_ocean_total .item {
+    flex: none;
+    padding: 20px 0;
+  }
+  .save_ocean_total .item:nth-child(1) {
+    width: 100%;
+  }
+  .save_ocean_total .item:nth-child(2),
+  .save_ocean_total .item:nth-child(3) {
+    width: 50%;
+    padding-top: 0;
+    font-size: 13px;
+  }
+  .save_ocean_total .item:nth-child(2) em,
+  .save_ocean_total .item:nth-child(3) em {
+    font-size: 17px;
+  }
+  .save_ocean_total .item em {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .save_ocean_outer .btn_normal {
+    margin-top: 50px;
+  }
+  .help_bottom {
+    position: static;
+    margin-top: 50px;
+    height: auto;
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: normal;
+    gap: 20px;
+  }
+  .help_item {
+    justify-content: normal;
+    gap: 20px;
+  }
+  .help_item span b {
+    padding-top: 10px;
+    font-size: 35px;
+    margin-bottom: 10px;
+    margin-left: -2px;
+  }
+  /* ########## Section - Happening ########## */
+  section.happening {
+    padding: 70px 0;
+  }
+  .right_now {
+    margin-top: 30px;
+  }
+  .right_now_row {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .right_now_item {
+    height: auto;
+  }
+  .right_now_item .desc {
+    margin-top: 10px;
+  }
+  .right_now_item .desc h4 {
+    font-size: 25px;
+    letter-spacing: -1px;
+  }
+  .right_now_item .desc span {
+    position: static;
+    margin-top: 10px;
+  }
+  .right_now_outer .btn_normal {
+    margin-top: 30px;
+    font-size: 15px;
+  }
+  /* ########## Footer ########## */
+  footer {
+    padding-bottom: 90px;
+  }
+  footer .inner {
+    padding: 0 20px;
+  }
+  .footer_sitemap {
+    position: static;
+    padding: 30px 50px;
+  }
+  .footer_sitemap .links a {
+    font-size: 20px;
+  }
+  .footer_sitemap .sns {
+    margin-top: 30px;
+  }
+  .footer_sitemap .sns a {
+    font-size: 25px;
+  }
+  .footer_sitemap .sns a:nth-child(3) {
+    font-size: 28px;
+    transform: translateY(2px);
+  }
+  .footer_sitemap .sns a:nth-child(3) {
+    transform: translateY(1px);
+  }
+  .subscribe_outer {
+    width: 100%;
+  }
+  .subscribe_outer .logo {
+    margin-top: 50px;
+  }
+  .subscribe_outer p {
+    margin: 30px 0;
+  }
+  .subscribe {
+    width: 100%;
+  }
+  .subscribe button {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  /* ########## Top Button ########## */
+  .btn_top {
+    right: 30px;
+  }
+  .btn_top.active {
+    bottom: 30px;
+  }
+}

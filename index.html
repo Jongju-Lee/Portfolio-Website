@@ -28,6 +28,17 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
+    <!-- Featherlight.js -->
+    <link
+      href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <script
+      src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
     <!-- Custom CSS & JS -->
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/custom.js"></script>
@@ -393,24 +404,20 @@
             <input type="radio" name="web" id="web3" />
             <input type="radio" name="web" id="web4" />
             <div class="web_tab_btns">
-              <label for="web1">Green Save Earth</label>
-              <label for="web2">SMEG</label>
-              <label for="web3">NETFLIX</label>
-              <label for="web4">Logitech</label>
+              <div class="web_tab_btns_indicator"></div>
+              <label for="web1" data-link="Green Save Earth"></label>
+              <label for="web2" data-link="SMEG"></label>
+              <label for="web3" data-link="NETFLIX"></label>
+              <label for="web4" data-link="Logitech"></label>
             </div>
             <div class="web_tab_content_outer">
-              <div class="web_tab_content">
-                <div class="web_tab_content_thum">
-                  <img
-                    src="./image/website_smeg_thum_01.png"
-                    alt="SMEG 프리뷰"
-                  />
-                </div>
+              <div class="web_tab_content green">
+                <div class="web_tab_content_thum"></div>
                 <div class="web_tab_content_desc">
                   <div class="title">
-                    <h3>SMEG</h3>
+                    <h3>Green Save Earth</h3>
                     <p>
-                      기존 사이트에서 배너 배치, UI가 불편해던 부분을 개선해서
+                      기존 사이트에서 배너 배치, UI가 불편했던 부분을 개선해서
                       제작 하였고 반응형 페이지가 될 수 있도록 제작 하였습니다.
                     </p>
                   </div>
@@ -441,8 +448,149 @@
                     </span>
                   </div>
                   <div class="btns">
-                    <a href="#none">PC Ver.</a>
+                    <a
+                      href="./portfolio/website_publishing/green_save_earth/index.html"
+                      data-featherlight="iframe"
+                      >PC Ver.</a
+                    >
                     <a href="#none">Mobile Ver.</a>
+                  </div>
+                </div>
+              </div>
+              <div class="web_tab_content smeg">
+                <div class="web_tab_content_thum"></div>
+                <div class="web_tab_content_desc">
+                  <div class="title">
+                    <h3>SMEG</h3>
+                    <p>
+                      기존 사이트에서 배너 배치, UI가 불편해던 부분을 개선해서
+                      제작 하였고 반응형 페이지가 될 수 있도록 제작 하였습니다.
+                    </p>
+                  </div>
+                  <div class="details">
+                    <span>
+                      <b>작업기간</b>
+                      3일
+                    </span>
+                    <span>
+                      <b>작업범위</b>
+                      기획, UI디자인, 퍼블리싱
+                    </span>
+                    <span>
+                      <b>제작참여</b>
+                      100%
+                    </span>
+                    <span>
+                      <b>제작방식</b>
+                      HTML + CSS + JQUERY
+                    </span>
+                    <span>
+                      <b>레이아웃</b>
+                      Flex 기반의 레이아웃
+                    </span>
+                    <span>
+                      <b>참고사항</b>
+                      모든 퍼블리싱 작업을 직접 하드코딩으로 제작
+                    </span>
+                  </div>
+                  <div class="btns">
+                    <a
+                      href="./portfolio/website_publishing/smeg/index.html"
+                      data-featherlight="iframe"
+                      >PC Ver.</a
+                    >
+                    <a href="#none">Mobile Ver.</a>
+                  </div>
+                </div>
+              </div>
+              <div class="web_tab_content netflix">
+                <div class="web_tab_content_thum"></div>
+                <div class="web_tab_content_desc">
+                  <div class="title">
+                    <h3>NETFLIX</h3>
+                    <p>
+                      기존 사이트와 최대한 비슷하게 작업하였고, 반응형 페이지가
+                      될 수 있도록 제작 하였습니다.
+                    </p>
+                  </div>
+                  <div class="details">
+                    <span>
+                      <b>작업기간</b>
+                      2일
+                    </span>
+                    <span>
+                      <b>작업범위</b>
+                      기획, UI디자인, 퍼블리싱
+                    </span>
+                    <span>
+                      <b>제작참여</b>
+                      100%
+                    </span>
+                    <span>
+                      <b>제작방식</b>
+                      HTML + CSS + JQUERY
+                    </span>
+                    <span>
+                      <b>레이아웃</b>
+                      Flex 기반의 레이아웃
+                    </span>
+                    <span>
+                      <b>참고사항</b>
+                      모든 퍼블리싱 작업을 직접 하드코딩으로 제작
+                    </span>
+                  </div>
+                  <div class="btns">
+                    <a
+                      href="./portfolio/website_publishing/netflix/index.html"
+                      data-featherlight="iframe"
+                      >PC Ver.</a
+                    >
+                    <a href="#none">Mobile Ver.</a>
+                  </div>
+                </div>
+              </div>
+              <div class="web_tab_content logitech">
+                <div class="web_tab_content_thum"></div>
+                <div class="web_tab_content_desc">
+                  <div class="title">
+                    <h3>Logitech</h3>
+                    <p>
+                      기존 사이트와 최대한 비슷하게 작업하였고, 반응형 페이지가
+                      될 수 있도록 제작 하였습니다.
+                    </p>
+                  </div>
+                  <div class="details">
+                    <span>
+                      <b>작업기간</b>
+                      3일
+                    </span>
+                    <span>
+                      <b>작업범위</b>
+                      기획, UI디자인, 퍼블리싱
+                    </span>
+                    <span>
+                      <b>제작참여</b>
+                      100%
+                    </span>
+                    <span>
+                      <b>제작방식</b>
+                      HTML + CSS + JQUERY
+                    </span>
+                    <span>
+                      <b>레이아웃</b>
+                      Flex 기반의 레이아웃
+                    </span>
+                    <span>
+                      <b>참고사항</b>
+                      모든 퍼블리싱 작업을 직접 하드코딩으로 제작
+                    </span>
+                  </div>
+                  <div class="btns">
+                    <a
+                      href="./portfolio/website_publishing/logitech/index.html"
+                      data-featherlight="iframe"
+                      >PC Ver.</a
+                    >
                   </div>
                 </div>
               </div>

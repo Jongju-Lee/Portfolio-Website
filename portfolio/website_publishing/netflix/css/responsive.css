@@ -1,0 +1,135 @@
+/* ##### Responsive ##### */
+@media (max-width: 768px) {
+  /* ##### COMMON ##### */
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  section:not(.intro) {
+    padding: 30px 0;
+  }
+  /* ########## Header ########## */
+  header {
+    margin-top: 5px;
+  }
+  header .logo {
+    width: 120px;
+    margin-top: 5px;
+  }
+  .header_btns {
+    gap: 5px;
+  }
+  /* ########## Section - Intro ########## */
+  .intro .heading {
+    top: 42%;
+    width: 100%;
+    padding: 20px;
+  }
+  .intro .heading h1 {
+    width: 70%;
+    margin: auto;
+    font-size: 30px;
+    line-height: 1.5em;
+  }
+  .intro .heading p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  .intro .heading p span {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .input_field {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .input_field input {
+    width: 80%;
+    margin: auto;
+  }
+  .btn_start {
+    width: 50%;
+    margin: auto;
+  }
+  .intro .banner {
+    bottom: -25px;
+    left: 0;
+    height: 30%;
+    background: url(../image/netflix_banner.png) no-repeat center left -900px / cover;
+  }
+  .intro .banner p {
+    top: 55%;
+    left: 60%;
+  }
+  /* ##### Section - Enjoy, Watch, Kids, Download ##### */
+  /* COMMON */
+  .feature_inner {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    gap: 0;
+  }
+  :is(.watch, .download) .feature_inner {
+    flex-direction: column-reverse;
+  }
+  .feature_heading {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .feature_heading_inner h2 {
+    font-size: 32px;
+  }
+  .feature_heading_inner p {
+    font-size: 18px;
+  }
+  /* Section - Download */
+  .add_on {
+    width: 250px;
+    height: 100px;
+  }
+  /* ########## Section - FAQ ########## */
+  .accordion_outer h1 {
+    font-size: 32px;
+  }
+  .accordion label {
+    padding-right: 60px;
+    line-height: 1.3em;
+    font-size: 20px;
+  }
+  .faq_desc p {
+    font-size: 20px;
+  }
+  .enter_membership {
+    margin-top: 30px;
+  }
+  .enter_membership span {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  /* ########## Section - Footer ########## */
+  footer {
+    padding: 30px 0;
+  }
+  .sitemap_outer .tel {
+    display: inline-block;
+    line-height: 1.5em;
+  }
+  .sitemap_outer .tel a {
+    display: block;
+  }
+  .sitemap {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+  }
+  .sitemap .item {
+    flex: none;
+    width: 48%;
+  }
+}

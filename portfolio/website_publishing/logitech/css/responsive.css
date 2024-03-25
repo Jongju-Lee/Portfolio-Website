@@ -1,0 +1,14 @@
+/* ##### Mobile Responsive ##### */
+@media (max-width: 768px) {
+  /* ########## Header ########## */
+  .mobile_header {
+    display: block;
+    position: absolute;
+  }
+  .header_top {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+}
