@@ -70,7 +70,7 @@ body {
   height: calc(100% - 40px);
   border-radius: 25px;
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
-  /* overflow: hidden; */
+  overflow: hidden;
   z-index: 10;
   pointer-events: none;
 }
@@ -120,6 +120,5 @@ body {
   right: -17px;
   width: calc(100% + 17px);
   height: calc(100% - 40px);
-  border-radius: 0 0 25px 25px;
   pointer-events: all;
 }

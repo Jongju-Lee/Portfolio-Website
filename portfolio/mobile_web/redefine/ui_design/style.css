@@ -6,6 +6,7 @@
 body {
   margin: 0;
   height: 100vh;
+  background-color: #f1f1f1;
 }
 .tabs_outer {
   position: relative;
@@ -19,22 +20,23 @@ input[name="tab"] {
 .tabs {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 200%;
+  right: 0;
+  width: inherit;
   height: inherit;
-  transition: 1s ease-in-out;
 }
 .tab {
-  position: relative;
-  float: left;
-  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
   height: inherit;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
 }
 .tab.ui {
-  background-color: #eaf4ff;
 }
 .tab.wire {
-  background-color: #f4f4f4;
 }
 .tab.ui img,
 .tab.wire img {
@@ -50,29 +52,31 @@ input[name="tab"] {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
   background-color: #333;
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
   cursor: pointer;
   transition: 0.5s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 9999;
 }
 .btn_front {
   left: 0;
+  border-radius: 0 5px 5px 0;
 }
 .btn_back {
   right: 0;
+  border-radius: 5px 0 0 5px;
 }
 /* Radio Checked Function */
-input[id="tab1"]:checked ~ .tabs {
-  left: 0;
-}
-input[id="tab2"]:checked ~ .tabs {
-  left: -100%;
+input[id="tab1"]:checked ~ .tabs .tab.ui,
+input[id="tab2"]:checked ~ .tabs .tab.wire {
+  opacity: 1;
+  visibility: visible;
 }
 input[id="tab1"]:checked ~ .btn_front {
   left: -70px;

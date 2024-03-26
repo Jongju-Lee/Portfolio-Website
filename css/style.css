@@ -96,6 +96,19 @@ header {
 header nav {
   height: inherit;
 }
+header nav .btn_functional {
+  line-height: 65px;
+  font-family: "Pretendard-Light";
+  padding: 8px 15px;
+  border: 3px solid #00ad54b5;
+  color: #00ad53;
+  border-radius: 5px;
+  transition: 0.35s ease;
+}
+header nav .btn_functional:hover {
+  background-color: #00ad53;
+  color: #fff;
+}
 header nav .gnb {
   float: right;
   height: inherit;
@@ -191,6 +204,7 @@ header nav .gnb a:hover::after {
   border: 2px dashed #555;
   border-radius: 50%;
   transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   z-index: 10000;
 }
 .featherlight .featherlight-close-icon:hover {
@@ -848,10 +862,14 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   font-family: "Outfit", sans-serif;
   font-size: 40px;
   font-weight: 600;
-  padding: 20px 20px 20px 0;
+  padding: 25px 25px 20px 0;
   color: #999;
   text-decoration: none;
   transition: 0.35s;
+}
+.fullscreen_navi_inner a:last-child {
+  font-family: "Pretendard-Regular";
+  font-weight: 700;
 }
 .fullscreen_navi_inner a:hover {
   color: #fff;

@@ -34,10 +34,11 @@ $(function () {
       $(".empty_message").show();
     }
   });
-  $(".cart .cart_item_thum").click(function () {
+  $(".cart .cart_item_thum, .btn_cart_item_check").click(function () {
     // 카트아이템을 클릭했을때 체크
     $(this).parent().toggleClass("active");
   });
+  $(".btn_cart_item_check").click(function () {});
   $(".cart .btn_close_cart_item").click(function () {
     $(this).parent().remove();
     const itemLength = $(".cart_item").length;
@@ -46,6 +47,7 @@ $(function () {
       $(".cart .check_all").removeClass("active");
       // 결제금액란 없어짐
       $(".calculate_outer").remove();
+      // 장바구니가 비었습니다 메세지 출력
       $(".empty_message").show();
     }
   });

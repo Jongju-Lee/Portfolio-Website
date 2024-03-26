@@ -258,7 +258,7 @@ footer nav a:first-child i {
 }
 .preloading_heading {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -1001,7 +1001,7 @@ form.sign_up {
   font-weight: 700;
 }
 .cart .check_all::before,
-.cart .cart_item::before {
+.btn_cart_item_check::before {
   content: "\F26B";
   font-family: "bootstrap-icons";
   display: inline-block;
@@ -1014,7 +1014,7 @@ form.sign_up {
   margin-right: 5px;
 }
 .cart .check_all.active::before,
-.cart .cart_item.active::before {
+.cart_item.active .btn_cart_item_check::before {
   content: "\F26A";
   color: var(--dodgerBlue);
 }
@@ -1030,8 +1030,11 @@ form.sign_up {
   padding-bottom: 60px;
   border-top: 1px solid var(--whiteSmoke);
 }
-.cart .cart_item::before {
-  transform: translateY(0px);
+.btn_cart_item_check {
+  height: fit-content;
+}
+.btn_cart_item_check::before {
+  transform: translateY(0);
 }
 .cart .cart_item_thum {
   width: 90px;
