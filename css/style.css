@@ -182,12 +182,19 @@ header nav .gnb a:hover::after {
 }
 .featherlight .featherlight-close-icon {
   right: 17px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 30px;
-  background-color: #fff;
-  opacity: 0.8;
+  width: 60px;
+  height: 60px;
+  line-height: 55px;
+  font-size: 35px;
+  color: #555;
+  background-color: #ffffffc4;
+  border: 2px dashed #555;
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: 10000;
+}
+.featherlight .featherlight-close-icon:hover {
+  transform: rotate(180deg);
 }
 /* ########## Section - About ########## */
 #about .inner .wrapper {

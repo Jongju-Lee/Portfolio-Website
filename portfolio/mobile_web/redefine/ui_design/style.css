@@ -1,0 +1,82 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+}
+.tabs_outer {
+  position: relative;
+  width: 100vw;
+  height: inherit;
+  overflow: hidden;
+}
+input[name="tab"] {
+  display: none;
+}
+.tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: inherit;
+  transition: 1s ease-in-out;
+}
+.tab {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: inherit;
+}
+.tab.ui {
+  background-color: #eaf4ff;
+}
+.tab.wire {
+  background-color: #f4f4f4;
+}
+.tab.ui img,
+.tab.wire img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 95vh;
+  object-fit: cover;
+}
+.btn_front,
+.btn_back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.btn_front {
+  left: 0;
+}
+.btn_back {
+  right: 0;
+}
+/* Radio Checked Function */
+input[id="tab1"]:checked ~ .tabs {
+  left: 0;
+}
+input[id="tab2"]:checked ~ .tabs {
+  left: -100%;
+}
+input[id="tab1"]:checked ~ .btn_front {
+  left: -70px;
+}
+input[id="tab2"]:checked ~ .btn_back {
+  right: -70px;
+}

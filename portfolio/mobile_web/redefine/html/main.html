@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0077ed" />
+    <title>Redefine - 쇼핑을 재정의하다</title>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Slick.js -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/custom.js"></script>
+  </head>
+  <body>
+    <div class="container main">
+      <!-- ##### Header ##### -->
+      <header>
+        <a class="logo" href="../html/main.html">
+          <img src="../image/redefine_small_logo.png" alt="헤더 스몰로고" />
+        </a>
+        <h2>쇼핑을 재정의하다</h2>
+        <a class="header_cart" href="../html/cart.html" data-count="3">
+          <i class="fi fi-rr-cart-shopping-fast"></i>
+        </a>
+      </header>
+      <!-- ##### Section ##### -->
+      <section>
+        <ul class="tab_menu">
+          <li><a class="active" href="#">베스트</a></li>
+          <li><a href="#best">추천</a></li>
+          <li><a href="#new">신제품</a></li>
+          <li><a href="#hot">재입고</a></li>
+        </ul>
+        <article class="sitemap">
+          <div class="sitemap_items">
+            <div class="sitemap_items_row">
+              <div class="sitemap_item">
+                <a href="#none">
+                  <img src="../image/grid_icon.svg" alt="전체보기 아이콘" />
+                  <span>전체보기</span>
+                </a>
+              </div>
+              <div class="sitemap_item">
+                <a href="#none">
+                  <img
+                    class="best"
+                    src="../image/star_icon.svg"
+                    alt="베스트 아이콘"
+                  />
+                  <span>베스트</span>
+                </a>
+              </div>
+              <div class="sitemap_item">
+                <a href="#none">
+                  <img src="../image/capsules.svg" alt="영양제 아이콘" />
+                  <span>영양제</span>
+                </a>
+              </div>
+              <div class="sitemap_item">
+                <a href="#none">
+                  <img src="../image/shampoo.svg" alt="헤어바디 아이콘" />
+                  <span>헤어바디</span>
+                </a>
+              </div>
+            </div>
+            <div class="sitemap_items_row">
+              <div class="sitemap_item">
+                <a href="#none">
+                  <img src="../image/beauty_icon.svg" alt="뷰티 아이콘" />
+                  <span>뷰티</span>
+                </a>
+              </div>
+              <div class="sitemap_item">
+                <a href="#none">
+                  <img src="../image/dish_icon.svg" alt="생활용품 아이콘" />
+                  <span>생활용품</span>
+                </a>
+              </div>
+              <div class="sitemap_item">
+                <a href="#none">
+                  <img src="../image/bread_icon.svg" alt="푸드 아이콘" />
+                  <span>푸드</span>
+                </a>
+              </div>
+              <div class="sitemap_item">
+                <a href="#none">
+                  <img
+                    class="more"
+                    src="../image/plus_icon.svg"
+                    alt="더보기 아이콘"
+                  />
+                  <span>더보기</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="banner_slider">
+          <div class="banner_slider_item">
+            <img src="../image/banner_01.jpg" alt="리뷰쓰고 포인트 배너" />
+          </div>
+          <div class="banner_slider_item">
+            <img src="../image/banner_04.jpg" alt="친구 초대 이벤트 배너" />
+          </div>
+        </div>
+        <article class="feature" id="best">
+          <b><span>Redefine</span> 베스트</b>
+          <div class="product_slider">
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img
+                    src="../image/shaver_blade.png"
+                    alt="면도기 몸체 리필 세트"
+                  />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>면도기 몸체 + 리필용 5중 면도날 <span>4P 세트</span></p>
+                <s>13,000원</s>
+                <b>9,900원</b>
+                <span class="badge blue"><em>3,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>236</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cool_body_wash.png" alt="쿨링 샤워젤" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>남성용 쿨링 샤워젤 <span>(500ml)</span></p>
+                <s>6,990원</s>
+                <b>4,090원</b>
+                <span class="badge blue"><em>2,900</em>원 할인</span>
+                <span class="badge gold">1 + 1</span>
+                <div class="star_rating">
+                  <span>4.7</span>
+                  (<em>510</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cosmetics.png" alt="화장품 세트" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>토너 + 세럼 + 수분크림으로 한번에 해결!</p>
+                <s>27,370원</s>
+                <b>15,420원</b>
+                <span class="badge blue"><em>3,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>190</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/hair_dryer.png" alt="BLDC모터 드라이기" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>BLDC 항공모터 드라이기<span>(퍼플)</span></p>
+                <s>49,900원</s>
+                <b>39,490원</b>
+                <span class="badge blue"><em>10,410</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.7</span>
+                  (<em>1500</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/honey.png" alt="아카시아 벌꿀" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>국산 아카시아 벌꿀 <span>500g</span></p>
+                <s>11,490원</s>
+                <b>9,890원</b>
+                <span class="badge blue"><em>1,600</em>원 할인</span>
+                <span class="badge gold">1 + 1</span>
+                <div class="star_rating">
+                  <span>4.8</span>
+                  (<em>511</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cream_skin.png" alt="크림 스킨케어" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>Redefine 크림 스킨케어 <span>200ml</span></p>
+                <s>5,790원</s>
+                <b>3,190원</b>
+                <span class="badge blue"><em>2,600</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>341</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/fry_pan.png" alt="프라이팬" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>Redefine 추천! 세라믹 코팅 프라이팬</p>
+                <s>35,490원</s>
+                <b>27,490원</b>
+                <span class="badge blue"><em>8,000</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>702</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cool_body_wash.png" alt="남성용 샤워젤" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>남성용 쿨링 샤워젤 <span>500ml</span></p>
+                <s>6,990원</s>
+                <b>4,090원</b>
+                <span class="badge blue"><em>2,900</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.7</span>
+                  (<em>510</em>)
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn_view_more" href="#none">베스트 더 보러 가기</a>
+        </article>
+        <article class="feature" id="suggestion">
+          <b><span>Redefine</span> 추천상품</b>
+          <div class="product_slider">
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/night_care.png" alt="나이트케어 화장품" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>하이드로 딥 나이트 케어 <span>50ml</span></p>
+                <s>8,290원</s>
+                <b>3,490원</b>
+                <span class="badge blue"><em>4,800</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>991</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/shampoo.png" alt="카페인 탈모샴푸" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>카페인 1% 탈모샴푸 <span>(지성용)</span></p>
+                <s>6,290원</s>
+                <b>4,290원</b>
+                <span class="badge blue"><em>2,000</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.8</span>
+                  (<em>2,678</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img
+                    src="../image/shower_head_filter.png"
+                    alt="나이트케어 화장품"
+                  />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>샤워 헤드 마이크로 필터 <span>3P</span></p>
+                <s>6,290원</s>
+                <b>3,190원</b>
+                <span class="badge blue"><em>3,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>5.0</span>
+                  (<em>569</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/shave_gel.png" alt="쉐이빙 젤" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>와이즐리 쉐이빙 젤 <span>200ml</span></p>
+                <s>2,990원</s>
+                <b>2,190원</b>
+                <span class="badge blue"><em>800</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.8</span>
+                  (<em>1348</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/shaver.png" alt="리필용 면도날" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>Redefine 5중 면도날 리필 <span>4P</span></p>
+                <s>5,490원</s>
+                <b>5,390원</b>
+                <span class="badge blue"><em>100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.6</span>
+                  (<em>1915</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/tooth_brush.png" alt="치석케어 칫솔" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>Redefine 치석케어 칫솔 <span>4P</span></p>
+                <s>3,590원</s>
+                <b>2,490원</b>
+                <span class="badge blue"><em>1,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.8</span>
+                  (<em>530</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/eye_brow.png" alt="속눈썹 영양제" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>비오틴 속눈썹 영양제 <span>10g</span></p>
+                <s>6,690원</s>
+                <b>4,590원</b>
+                <span class="badge blue"><em>2,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>702</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cool_body_wash.png" alt="남성용 샤워젤" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>남성용 쿨링 샤워젤 <span>500ml</span></p>
+                <s>6,990원</s>
+                <b>4,090원</b>
+                <span class="badge blue"><em>2,900</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.7</span>
+                  (<em>510</em>)
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn_view_more" href="#none">추천상품 더 보러 가기</a>
+        </article>
+        <div class="banner_slider">
+          <div class="banner_slider_item">
+            <img
+              src="../image/starbucks_review.jfif"
+              alt="아메리카노 증정 배너"
+            />
+          </div>
+          <div class="banner_slider_item">
+            <img src="../image/banner_02.jpg" alt="모바일 할인 이벤트 배너" />
+          </div>
+        </div>
+        <article class="feature" id="new">
+          <b>따끈따끈 신상품</b>
+          <div class="product_slider">
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img
+                    src="../image/shaver_blade.png"
+                    alt="면도기 몸체 리필 세트"
+                  />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>면도기 몸체 + 리필용 5중 면도날 <span>4P 세트</span></p>
+                <s>13,000원</s>
+                <b>9,900원</b>
+                <span class="badge blue"><em>3,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>236</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cool_body_wash.png" alt="쿨링 샤워젤" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>남성용 쿨링 샤워젤 <span>(500ml)</span></p>
+                <s>6,990원</s>
+                <b>4,090원</b>
+                <span class="badge blue"><em>2,900</em>원 할인</span>
+                <span class="badge gold">1 + 1</span>
+                <div class="star_rating">
+                  <span>4.7</span>
+                  (<em>510</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cosmetics.png" alt="화장품 세트" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>토너 + 세럼 + 수분크림으로 한번에 해결!</p>
+                <s>27,370원</s>
+                <b>15,420원</b>
+                <span class="badge blue"><em>3,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>190</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/hair_dryer.png" alt="BLDC모터 드라이기" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>BLDC 항공모터 드라이기<span>(퍼플)</span></p>
+                <s>49,900원</s>
+                <b>39,490원</b>
+                <span class="badge blue"><em>10,410</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.7</span>
+                  (<em>1500</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/honey.png" alt="아카시아 벌꿀" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>국산 아카시아 벌꿀 <span>500g</span></p>
+                <s>11,490원</s>
+                <b>9,890원</b>
+                <span class="badge blue"><em>1,600</em>원 할인</span>
+                <span class="badge gold">1 + 1</span>
+                <div class="star_rating">
+                  <span>4.8</span>
+                  (<em>511</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cream_skin.png" alt="크림 스킨케어" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>Redefine 크림 스킨케어 <span>200ml</span></p>
+                <s>5,790원</s>
+                <b>3,190원</b>
+                <span class="badge blue"><em>2,600</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>341</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/fry_pan.png" alt="프라이팬" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>Redefine 추천! 세라믹 코팅 프라이팬</p>
+                <s>35,490원</s>
+                <b>27,490원</b>
+                <span class="badge blue"><em>8,000</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>702</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cool_body_wash.png" alt="남성용 샤워젤" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>남성용 쿨링 샤워젤 <span>500ml</span></p>
+                <s>6,990원</s>
+                <b>4,090원</b>
+                <span class="badge blue"><em>2,900</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.7</span>
+                  (<em>510</em>)
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn_view_more" href="#none">신상품 더 보러 가기</a>
+        </article>
+        <article class="feature" id="hot">
+          <b>재입고된 인기상품</b>
+          <div class="product_slider">
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/night_care.png" alt="나이트케어 화장품" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>하이드로 딥 나이트 케어 <span>50ml</span></p>
+                <s>8,290원</s>
+                <b>3,490원</b>
+                <span class="badge blue"><em>4,800</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>991</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/shampoo.png" alt="카페인 탈모샴푸" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>카페인 1% 탈모샴푸 <span>(지성용)</span></p>
+                <s>6,290원</s>
+                <b>4,290원</b>
+                <span class="badge blue"><em>2,000</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.8</span>
+                  (<em>2,678</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img
+                    src="../image/shower_head_filter.png"
+                    alt="샤워 헤드 필터"
+                  />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>샤워 헤드 마이크로 필터 <span>3P</span></p>
+                <s>6,290원</s>
+                <b>3,190원</b>
+                <span class="badge blue"><em>3,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>5.0</span>
+                  (<em>569</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/shave_gel.png" alt="쉐이빙 젤" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>와이즐리 쉐이빙 젤 <span>200ml</span></p>
+                <s>2,990원</s>
+                <b>2,190원</b>
+                <span class="badge blue"><em>800</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.8</span>
+                  (<em>1348</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/shaver.png" alt="리필용 면도날" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>Redefine 5중 면도날 리필 <span>4P</span></p>
+                <s>5,490원</s>
+                <b>5,390원</b>
+                <span class="badge blue"><em>100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.6</span>
+                  (<em>1915</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/tooth_brush.png" alt="치석케어 칫솔" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>Redefine 치석케어 칫솔 <span>4P</span></p>
+                <s>3,590원</s>
+                <b>2,490원</b>
+                <span class="badge blue"><em>1,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.8</span>
+                  (<em>530</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/eye_brow.png" alt="속눈썹 영양제" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>비오틴 속눈썹 영양제 <span>10g</span></p>
+                <s>6,690원</s>
+                <b>4,590원</b>
+                <span class="badge blue"><em>2,100</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.9</span>
+                  (<em>702</em>)
+                </div>
+              </div>
+            </div>
+            <div class="product_slider_item">
+              <div class="product_slider_item_thum">
+                <a href="../html/details.html">
+                  <img src="../image/cool_body_wash.png" alt="남성용 샤워젤" />
+                </a>
+              </div>
+              <div class="product_slider_item_desc">
+                <p>남성용 쿨링 샤워젤 <span>500ml</span></p>
+                <s>6,990원</s>
+                <b>4,090원</b>
+                <span class="badge blue"><em>2,900</em>원 할인</span>
+                <div class="star_rating">
+                  <span>4.7</span>
+                  (<em>510</em>)
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn_view_more" href="#none">인기상품 더 보러 가기</a>
+        </article>
+      </section>
+      <!-- ##### Footer - GNB Include ##### -->
+      <footer></footer>
+      <!-- ##### Footer - GNB Include ##### -->
+    </div>
+  </body>
+</html>
