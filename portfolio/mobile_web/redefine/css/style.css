@@ -20,6 +20,7 @@ body {
   padding-bottom: 65px;
   min-height: 780px;
   overflow-x: hidden;
+  color: var(--darkBlack);
 }
 /* Header CSS */
 header {
@@ -376,9 +377,11 @@ footer nav a:first-child i {
   border-radius: 5px;
   font-size: 15px;
 }
+.login_form .btn_login,
+.login_form .btn_sign_up {
+  text-align: center;
+}
 .login_form .btn_login {
-  width: 100%;
-  border: none;
   background-color: var(--dodgerBlue);
   color: #fff;
 }
@@ -406,7 +409,9 @@ footer nav a:first-child i {
 form.sign_up {
   font-size: 15px;
 }
-.sign_up button {
+form.sign_up input,
+select {
+  color: #333;
 }
 .sign_up .input_field {
   margin-bottom: 30px;
@@ -432,6 +437,13 @@ form.sign_up {
   border-radius: 5px;
   padding: 0 15px;
   font-size: 15px;
+}
+.sign_up .input_field input::placeholder {
+  color: #999;
+  transition: 0.2s;
+}
+.sign_up .input_field input:focus::placeholder {
+  color: transparent;
 }
 .sign_up .input_field span {
   display: block;
@@ -464,6 +476,7 @@ form.sign_up {
   align-items: center;
 }
 .sign_up .phone_inner :is(select, input, .btn_code) {
+  flex: 1;
   width: 70px;
   height: 45px;
   line-height: 45px;
@@ -510,7 +523,7 @@ form.sign_up {
 }
 .sign_up .agree {
   margin-top: 30px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .sign_up .agree span {
   display: block;
