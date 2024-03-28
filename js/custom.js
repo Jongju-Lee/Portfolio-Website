@@ -33,6 +33,12 @@ $(function () {
       $(this).removeClass("scroll");
     }
   });
+  /* ##### Practical Coding - Light Box ##### */
+  $(".practical_slider a img").click(function () {
+    // 슬라이더 아이템 클릭(LightBox 열림)
+    $(".trigger, .btn_top").removeClass("scroll");
+    // Trigger, Top 버튼 숨김
+  });
   /* ##### Slick. JS ##### */
   $(".practical_slider").slick({
     dots: true,

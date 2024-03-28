@@ -139,8 +139,8 @@ header nav .gnb a:hover::after {
 }
 /* ##### Slick.js Custom CSS ##### */
 /*  ##### Arrows ##### */
-.slick-prev:before,
-.slick-next:before {
+.practical_slider .slick-prev:before,
+.practical_slider .slick-next:before {
   font-family: "bootstrap-icons";
   font-size: 30px;
   font-weight: 700;
@@ -149,38 +149,56 @@ header nav .gnb a:hover::after {
   color: #ddd;
   -webkit-font-smoothing: antialiased;
 }
-.slick-prev {
+.practical_slider .slick-prev {
   left: -50px;
 }
-.slick-prev:before {
+.practical_slider .slick-prev:before {
   content: "\F284";
 }
-.slick-next:before {
+.practical_slider .slick-next:before {
   content: "\F285";
 }
 /* ##### Dots ##### */
-.slick-dots {
+.practical_slider .slick-dots {
   left: -5px;
   bottom: -40px;
 }
-.slick-dots li button:before {
-  font-size: 10px;
+.practical_slider .slick-dots li button:before {
+  font-size: 12px;
 }
-.slick-dots li.slick-active button:before {
+.practical_slider .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #00ad53;
 }
 /* ##### UIKit Custom CSS ##### */
 /* Light Box */
+.uk-lightbox {
+  background: #fff;
+}
+.uk-lightbox-toolbar {
+  background-color: transparent;
+  margin: 10px;
+}
+.uk-lightbox-toolbar-icon {
+  color: #fff;
+  background-color: #00ad53;
+  border-radius: 50%;
+  padding: 15px;
+  transition: 0.2s;
+}
+.uk-lightbox-toolbar-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 .uk-position-bottom {
-  bottom: 10px;
+  padding-bottom: 20px;
   font-size: 25px;
   font-weight: 700;
-  color: #ddd;
+  color: #333;
 }
-.uk-lightbox-button {
-  width: 120px;
-  height: 30%;
+.uk-lightbox-iframe {
+  width: 100%;
+  height: 100%;
 }
 /* ##### Featherlight.js ##### */
 .featherlight .featherlight-content {
@@ -289,6 +307,11 @@ header nav .gnb a:hover::after {
   border-radius: 10px;
   padding: 30px 25px;
   background-color: #fff;
+  transition: 0.35s;
+}
+.skill_item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 .skill_item:last-of-type {
   margin-right: 0;
@@ -774,17 +797,12 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   opacity: 0.5;
   z-index: -1;
 }
-.practical_slider {
-}
-.practical_slider div {
-}
-.practical_slider div:last-child {
-}
 .practical_slider a {
   display: block;
   width: 100%;
   height: 200px;
   margin-right: 10px;
+  transition: 0.2s;
 }
 .practical_slider a:last-child {
   margin-right: 0;
@@ -901,12 +919,13 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   font-size: 35px;
   text-align: center;
   border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   transition: 0.35s;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  z-index: 9999;
+  pointer-events: none;
+  z-index: 9000;
 }
 .trigger.active {
   background-color: #00ad53;
@@ -916,6 +935,7 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   top: 30px;
   opacity: 1;
   visibility: visible;
+  pointer-events: all;
 }
 /* ########## Top Button ########## */
 .btn_top {
@@ -935,10 +955,12 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   z-index: 9999;
 }
 .btn_top.scroll {
   bottom: 30px;
   opacity: 1;
   visibility: visible;
+  pointer-events: all;
 }
