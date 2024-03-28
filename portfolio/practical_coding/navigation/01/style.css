@@ -45,8 +45,8 @@ input[id="active"] {
 }
 .trigger {
   position: absolute;
-  top: 75px;
-  left: 75px;
+  top: 30px;
+  left: 30px;
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -104,7 +104,7 @@ input[id="active"] {
   height: 100%;
   background: linear-gradient(-135deg, #c850c0, #4158d8);
   color: #fff;
-  clip-path: circle(25px at 100px 100px);
+  clip-path: circle(25px at 55px 55px);
   transition: 0.5s ease-in-out;
 }
 .overlay .menu {

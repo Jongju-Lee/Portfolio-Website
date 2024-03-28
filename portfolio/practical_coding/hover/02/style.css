@@ -1,5 +1,5 @@
-/* XEICON CDN */
-@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /* Reset CSS */
 * {
   outline: none;
@@ -40,6 +40,7 @@ body {
   margin: 0 15px;
   overflow: hidden;
   z-index: 10;
+  color: #555;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 .btn_sns a::after {
@@ -73,7 +74,19 @@ body {
 .btn_sns a i {
   transition: 0.5s;
 }
+.btn_sns a:nth-child(2) i {
+  transform: translateX(2px);
+}
+.btn_sns a:nth-child(4) i {
+  transform: translateX(2px) translateY(-1px);
+}
 .btn_sns a:hover i {
   transform: rotateY(360deg);
   color: #fff;
+}
+.btn_sns a:nth-child(2):hover i {
+  transform: translateX(2px) rotateY(360deg);
+}
+.btn_sns a:nth-child(4):hover i {
+  transform: translateX(2px) translateY(-1px) rotateY(360deg);
 }

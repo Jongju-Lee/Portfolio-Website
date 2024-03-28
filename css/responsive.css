@@ -1,0 +1,86 @@
+/* ########## Responsive CSS ########## */
+@media (max-width: 768px) {
+  /* ########## Layout ########## */
+  /* ##### COMMON ##### */
+  header nav,
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  section {
+    padding: 50px 0;
+  }
+  section .inner > h2 {
+    text-align: center;
+  }
+  #about .inner > h2 {
+    text-align: left;
+  }
+  /* ##### UIKit Custom CSS ##### */
+  /* Light Box */
+  .uk-lightbox-iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .about_desc .uk-position-bottom {
+    color: #333;
+  }
+  /* ########## Header ########## */
+  header {
+    display: none;
+  }
+  /* ########## Section - About ########## */
+  #about .inner .wrapper {
+    padding: 0;
+  }
+  .about_photo {
+    float: none;
+    margin: auto;
+  }
+  .about_desc {
+    position: static;
+    transform: none;
+    margin-top: 30px;
+    width: 100%;
+  }
+  .about_desc_slogan {
+    text-align: center;
+  }
+  .about_desc_slogan p {
+    font-size: 19px;
+  }
+  .about_desc_info {
+    margin-top: 30px;
+  }
+  .about_desc_info div {
+    margin-bottom: 15px;
+  }
+  .about_desc_info div b {
+    font-size: 20px;
+  }
+  .about_desc_info div span {
+    font-size: 18px;
+  }
+  /* ########## Section - Skill ########## */
+  #skill {
+    padding: 70px 0;
+  }
+  #skill .inner .wrapper {
+    margin-top: 70px;
+  }
+  .skill_items {
+    height: auto;
+    margin-top: 0;
+    background-color: #fafafa;
+  }
+  .skill_item {
+    float: none;
+    width: 100%;
+    margin-bottom: 60px;
+    height: auto;
+    margin-right: 0;
+  }
+  .skill_items:last-child .skill_item:last-child {
+    margin-bottom: 0;
+  }
+}
