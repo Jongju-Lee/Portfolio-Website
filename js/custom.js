@@ -33,6 +33,11 @@ $(function () {
       $(this).removeClass("scroll");
     }
   });
+  /* ##### Top Button ##### */
+  $(".btn_top").click(function () {
+    $(".trigger").removeClass("active");
+    $(".fullscreen_navi").stop().fadeOut();
+  });
   /* ##### Practical Coding - Light Box ##### */
   $(".practical_slider a img").click(function () {
     // 슬라이더 아이템 클릭(LightBox 열림)
@@ -49,31 +54,13 @@ $(function () {
     slidesToScroll: 4,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
         breakpoint: 480,
         settings: {
+          arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ],
   });
 });

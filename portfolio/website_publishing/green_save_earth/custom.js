@@ -28,6 +28,7 @@ $(function () {
   });
   $(".mobile_lnb a").click(function () {
     $(".mobile_lnb_outer").removeClass("active");
+    $(".trigger_outer").toggleClass("active");
   });
   /* ##### Section - Donations ##### */
   // Java Script

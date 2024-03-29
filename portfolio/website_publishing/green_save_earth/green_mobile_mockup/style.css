@@ -1,15 +1,13 @@
 /* Bootstrap Icons CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 body {
-  margin: 0;
-  padding: 0;
 }
 .phone {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.85);
-  width: 400px;
+  transform: translate(-50%, -50%);
+  width: 350px;
   height: 750px;
   background-color: #fff;
   border-radius: 35px;
@@ -117,6 +115,7 @@ body {
   position: absolute;
   top: 40px;
   left: 0;
+  width: 100%;
   width: calc(100% + 17px);
   height: calc(100% - 40px);
   background-color: #fff;

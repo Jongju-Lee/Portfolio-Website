@@ -68,6 +68,8 @@ body {
   line-height: 1.5em;
   min-height: 100vh;
   margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
   color: #555;
 }
 /* ########## Layout ########## */
@@ -178,6 +180,9 @@ section .inner > h2 {
 }
 .featherlight .featherlight-close-icon:hover {
   transform: rotate(180deg);
+}
+.featherlight .featherlight-content {
+  padding: 0;
 }
 /* ########## Header ########## */
 header {
@@ -374,7 +379,7 @@ header nav .gnb a:hover::after {
 .timeline_item_peroid span b,
 .timeline_item_desc span b {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #555;
   font-weight: 600;
 }
@@ -406,7 +411,7 @@ header nav .gnb a:hover::after {
   top: 25px;
   left: -39px;
   width: 2px;
-  height: 77px;
+  height: 80px;
   background-color: #eee;
 }
 .timeline_item:last-child .timeline_item_desc::after {
@@ -470,6 +475,7 @@ header nav .gnb a:hover::after {
 .mobile_desc_title p {
   margin-top: 10px;
   font-size: 16px;
+  line-height: 1.7em;
 }
 .mobile_desc_format {
   margin-top: 20px;
@@ -485,6 +491,7 @@ header nav .gnb a:hover::after {
 .mobile_desc_format_font b {
   font-size: 18px;
   font-family: "NPSfontExtraBold";
+  color: #555;
 }
 .mobile_desc_format_color .color_chips,
 .mobile_desc_format_font .color_chips {
@@ -516,6 +523,9 @@ header nav .gnb a:hover::after {
 .mobile_desc_format_color .color_chips em:nth-child(3) {
   background-color: #f4c500;
 }
+.mobile_desc_format_color p {
+  line-height: 1.7em;
+}
 .mobile_desc_format_font .color_chips em:nth-child(1) {
   background-color: #333;
 }
@@ -525,19 +535,28 @@ header nav .gnb a:hover::after {
 .mobile_desc_format_font .color_chips em:nth-child(3) {
   background-color: #999;
 }
+
 .mobile_desc_format_font span {
   display: block;
 }
-.mobile_desc_detail span {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
+.mobile_desc_format_font .text_size {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px dashed #999;
+  border-radius: 10px;
+  line-height: 1.7em;
 }
-.mobile_desc_detail span b {
+.mobile_desc_detail div {
+  margin-bottom: 10px;
+}
+.mobile_desc_detail div b {
   display: inline-block;
   width: 70px;
   font-family: "NPSfontExtraBold";
   font-size: 14px;
+}
+.mobile_desc_detail div span {
+  font-size: 16px;
 }
 .mobile_desc_btns {
   margin-top: 20px;
@@ -558,8 +577,6 @@ header nav .gnb a:hover::after {
   color: #fff;
 }
 /* ########## Section - Web ########## */
-#web {
-}
 #web .inner .wrapper {
   margin-top: 70px;
 }
@@ -609,11 +626,6 @@ input[id="web4"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
   overflow: hidden;
   border-radius: 10px;
 }
-input[id="web1"]:checked ~ .web_tab_btns label[for="web1"],
-input[id="web2"]:checked ~ .web_tab_btns label[for="web2"],
-input[id="web3"]:checked ~ .web_tab_btns label[for="web3"],
-input[id="web4"]:checked ~ .web_tab_btns label[for="web4"] {
-}
 .web_tab_btns label::before,
 .web_tab_btns label::after {
   content: attr(data-link);
@@ -622,7 +634,6 @@ input[id="web4"]:checked ~ .web_tab_btns label[for="web4"] {
   width: 100%;
   transition: 0.35s;
 }
-
 .web_tab_btns label::before {
   position: absolute;
   top: 0;
@@ -715,12 +726,14 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
 .web_tab_content_desc .title p {
   margin-top: 30px;
   line-height: 1.7em;
+  font-size: 18px;
   color: #777;
 }
 .web_tab_content_desc .details {
   position: absolute;
   left: 50px;
   bottom: 40px;
+  width: 100%;
 }
 .web_tab_content_desc .details span {
   display: block;
@@ -731,6 +744,18 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   display: inline-block;
   color: #555;
   width: 70px;
+}
+.web_tab_content_desc .details .feature {
+  overflow: hidden;
+  width: 100%;
+}
+.web_tab_content_desc .details .feature b {
+  float: left;
+  width: 70px;
+  height: 40px;
+}
+.web_tab_content_desc .details .feature span {
+  width: 100%;
 }
 .web_tab_content_desc .btns {
   position: absolute;
@@ -836,6 +861,7 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
 .epilogue_heading h3 span {
   color: #00ad53;
   font-weight: 700;
+  text-decoration: underline;
 }
 .epilogue_heading p {
   margin-top: 10px;
@@ -849,12 +875,13 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
 }
 .epilogue_job_strength div b {
   color: #00ad53;
+  font-size: 16px;
 }
 .epilogue_job_strength div p {
   color: #555;
   font-family: "Pretendard-Light";
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 15px;
 }
 /* ########## Fullscreen Navigation ########## */
 .fullscreen_navi {
