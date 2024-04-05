@@ -1,0 +1,43 @@
+/* ##### Tablet Responsive ##### */
+@media (min-width: 768px) and (max-width: 1366px) {
+  .portfolio {
+    padding: 0;
+    padding-top: 40px;
+  }
+  .portfolio .btn_responsive {
+    display: none;
+  }
+  .portfolio h1 {
+    font-size: 40.5px;
+    margin-bottom: 50px;
+  }
+  .portfolio .items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* ##### Mobile Responsive ##### */
+@media (max-width: 767px) {
+  .portfolio {
+    padding: 0;
+    padding-top: 20px;
+  }
+  .portfolio .btn_responsive {
+    display: none;
+  }
+  .portfolio h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .portfolio .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio .items div:not(:last-child) span {
+    display: none;
+  }
+  .portfolio .items div:last-child {
+    grid-area: span 2/span 2;
+  }
+  .portfolio .items .focus {
+    grid-area: span 1/span 1;
+  }
+}

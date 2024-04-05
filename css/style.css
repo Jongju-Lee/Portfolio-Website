@@ -126,15 +126,14 @@ section .inner > h2 {
 /* ##### UIKit Custom CSS ##### */
 /* Light Box */
 .uk-lightbox {
-  background: #555;
+  background: #fff;
 }
 .uk-lightbox-toolbar {
   background-color: transparent;
-  margin: 10px;
 }
 .uk-lightbox-toolbar-icon {
   color: #fff;
-  background-color: #999999b7;
+  background-color: crimson;
   border-radius: 50%;
   padding: 15px;
   transition: 0.2s;
@@ -143,15 +142,31 @@ section .inner > h2 {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+.uk-position-top {
+  width: fit-content;
+  height: fit-content;
+  top: 87%;
+  left: 30px;
+}
+.uk-transition-slide-top {
+  --uk-translate-y: 0;
+}
 .uk-position-bottom {
-  padding-bottom: 5px;
+  padding-bottom: 25px;
   font-size: 22px;
   font-weight: 700;
-  color: #fff;
+  color: #555;
+  pointer-events: none;
+}
+.uk-transition-slide-bottom {
+  --uk-translate-y: 0;
 }
 .uk-lightbox-iframe {
-  width: 85%;
-  height: 85%;
+  width: 100%;
+  height: 100%;
+}
+.uk-transition-fade {
+  opacity: 1;
 }
 /* ##### Featherlight.js ##### */
 .featherlight .featherlight-content {

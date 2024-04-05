@@ -1,0 +1,81 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-size: 15px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bright Checkbox Icon Button */
+
+// Variables
+$icon_width: 100px;
+$main_color: yellowgreen;
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: $icon_width / 3.33;
+  label {
+    cursor: pointer;
+    div {
+      position: relative;
+      width: $icon_width;
+      height: $icon_width;
+      border-radius: $icon_width / 10;
+      border: ($icon_width / 25) solid #333;
+      background-color: #222;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: $icon_width / 8;
+        transform: scale(0.9);
+        background-color: $main_color;
+        transition: 0.5s;
+        z-index: -1;
+      }
+      i {
+        font-size: $icon_width / 2;
+        transition: 0.5s;
+      }
+    }
+  }
+  input[type="checkbox"] {
+    display: none;
+    &:checked + div {
+      border: 1px solid #333;
+      box-shadow: 0 0 ($icon_width / 20) $main_color;
+      &::before {
+        transform: scale(1.1);
+        box-shadow: 0 0 ($icon_width / 5) $main_color;
+      }
+      i {
+        color: $main_color;
+        text-shadow: 0 0 ($icon_width / 20) $main_color;
+      }
+    }
+  }
+}

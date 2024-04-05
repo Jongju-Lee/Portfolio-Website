@@ -1,0 +1,77 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-size: 15px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bright Checkbox Icon Button */
+.icons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 30.03003003px;
+}
+.icons label {
+  cursor: pointer;
+}
+.icons label div {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: 4px solid #333;
+  background-color: #222;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.icons label div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12.5px;
+  transform: scale(0.9);
+  background-color: yellowgreen;
+  transition: 0.5s;
+  z-index: -1;
+}
+.icons label div i {
+  font-size: 50px;
+  transition: 0.5s;
+}
+.icons input[type=checkbox] {
+  display: none;
+}
+.icons input[type=checkbox]:checked + div {
+  border: 1px solid #333;
+  box-shadow: 0 0 5px yellowgreen;
+}
+.icons input[type=checkbox]:checked + div::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px yellowgreen;
+}
+.icons input[type=checkbox]:checked + div i {
+  color: yellowgreen;
+  text-shadow: 0 0 5px yellowgreen;
+}

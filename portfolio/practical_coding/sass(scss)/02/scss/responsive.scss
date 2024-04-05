@@ -1,0 +1,46 @@
+// Import
+@import "variables";
+
+/* ##### Tablet Responsive ##### */
+@media (min-width: 768px) and (max-width: 1366px) {
+  .portfolio {
+    padding: 0;
+    padding-top: 40px;
+    .btn_responsive {
+      display: none;
+    }
+    h1 {
+      font-size: $font_base * 2.7;
+      margin-bottom: 50px;
+    }
+    .items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+/* ##### Mobile Responsive ##### */
+@media (max-width: 767px) {
+  .portfolio {
+    padding: 0;
+    padding-top: 20px;
+    .btn_responsive {
+      display: none;
+    }
+    h1 {
+      font-size: $font_base * 2;
+      margin-bottom: 30px;
+    }
+    .items {
+      grid-template-columns: repeat(2, 1fr);
+      div:not(:last-child) span {
+        display: none;
+      }
+      div:last-child {
+        grid-area: span 2 / span 2;
+      }
+      .focus {
+        grid-area: span 1 / span 1;
+      }
+    }
+  }
+}

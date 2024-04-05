@@ -1,0 +1,157 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+// Import
+@import "reset";
+
+// Variables
+$tab_size: (
+  tab_width: 834px,
+  tab_height: 1194px,
+  tab_frame: 50px,
+  // Ipad pro : 834px * 1.43 = 1194px,
+  btn_size_base: 6px,
+);
+
+/* ########## Tablet Mockup with SCSS ########## */
+.tablet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.45);
+  width: map-get($tab_size, tab_width) * 1.1;
+  height: map-get($tab_size, tab_height) * 1.1;
+  background-color: #fff;
+  border-radius: 35px;
+  box-shadow: inset 0 0 15px rgba($color: #000000, $alpha: 0.2),
+    0 40px 100px rgba($color: #000000, $alpha: 0.4);
+  &_btn_top,
+  &_btns_right,
+  &_inner {
+    position: absolute;
+  }
+  &_btn_top {
+    bottom: 100%;
+    right: 90px;
+    width: map-get($tab_size, btn_size_base) * 10;
+    height: map-get($tab_size, btn_size_base);
+    .power {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #bbb;
+      border-bottom: 1px solid #555;
+      border-radius: 4px 4px 0 0;
+    }
+  }
+  &_btns_right {
+    top: 90px;
+    left: 100%;
+    width: map-get($tab_size, btn_size_base);
+    height: map-get($tab_size, btn_size_base) * 24;
+    .volume_up,
+    .volume_down {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: map-get($tab_size, btn_size_base) * 10;
+      background-color: #bbb;
+      border-radius: 0 4px 4px 0;
+      border-left: 1px solid #555;
+    }
+    .volume_up {
+      top: 0;
+    }
+    .volume_down {
+      bottom: 0;
+    }
+  }
+  &_camera {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      background-color: #1b1464;
+    }
+  }
+  &_inner {
+    top: map-get($tab_size, tab_frame);
+    left: map-get($tab_size, tab_frame);
+    width: calc(100% - map-get($tab_size, tab_frame) * 2);
+    height: calc(100% - map-get($tab_size, tab_frame) * 2);
+    border-radius: 20px;
+    box-shadow: inset 0 0 15px rgba($color: #000000, $alpha: 0.3);
+    overflow: hidden;
+    pointer-events: none;
+    .tablet_header {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      &_left,
+      &_right {
+        position: relative;
+        width: 50%;
+        height: inherit;
+        :is(.wifi, .volume_mode)::before,
+        :is(.bluetooth, .battery)::before {
+          position: absolute;
+          font-family: "bootstrap-icons";
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 25px;
+        }
+      }
+      &_left {
+        .wifi::before {
+          content: "\F61C";
+          top: 51%;
+          left: 30px;
+          font-size: 30px;
+        }
+        .volume_mode::before {
+          content: "\F631";
+          left: 75px;
+        }
+      }
+      &_right {
+        .bluetooth::before {
+          content: "\F682";
+          right: 80px;
+          font-size: 25px;
+        }
+        .battery::before {
+          content: "\F186";
+          top: 51%;
+          right: 30px;
+          font-size: 35px;
+        }
+      }
+    }
+    iframe {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 50px);
+      background-color: #fff;
+      z-index: -1;
+      pointer-events: all;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fff;
+}
+
+/* ########## Tablet Mockup with SCSS ########## */
+.tablet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.45);
+  width: 917.4px;
+  height: 1313.4px;
+  background-color: #fff;
+  border-radius: 35px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2), 0 40px 100px rgba(0, 0, 0, 0.4);
+}
+.tablet_btn_top, .tablet_btns_right, .tablet_inner {
+  position: absolute;
+}
+.tablet_btn_top {
+  bottom: 100%;
+  right: 90px;
+  width: 60px;
+  height: 6px;
+}
+.tablet_btn_top .power {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #bbb;
+  border-bottom: 1px solid #555;
+  border-radius: 4px 4px 0 0;
+}
+.tablet_btns_right {
+  top: 90px;
+  left: 100%;
+  width: 6px;
+  height: 144px;
+}
+.tablet_btns_right .volume_up,
+.tablet_btns_right .volume_down {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #bbb;
+  border-radius: 0 4px 4px 0;
+  border-left: 1px solid #555;
+}
+.tablet_btns_right .volume_up {
+  top: 0;
+}
+.tablet_btns_right .volume_down {
+  bottom: 0;
+}
+.tablet_camera {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.tablet_camera span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #1b1464;
+}
+.tablet_inner {
+  top: 50px;
+  left: 50px;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  border-radius: 20px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  pointer-events: none;
+}
+.tablet_inner .tablet_header {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+}
+.tablet_inner .tablet_header_left, .tablet_inner .tablet_header_right {
+  position: relative;
+  width: 50%;
+  height: inherit;
+}
+.tablet_inner .tablet_header_left :is(.wifi, .volume_mode)::before,
+.tablet_inner .tablet_header_left :is(.bluetooth, .battery)::before, .tablet_inner .tablet_header_right :is(.wifi, .volume_mode)::before,
+.tablet_inner .tablet_header_right :is(.bluetooth, .battery)::before {
+  position: absolute;
+  font-family: "bootstrap-icons";
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+}
+.tablet_inner .tablet_header_left .wifi::before {
+  content: "\f61c";
+  top: 51%;
+  left: 30px;
+  font-size: 30px;
+}
+.tablet_inner .tablet_header_left .volume_mode::before {
+  content: "\f631";
+  left: 75px;
+}
+.tablet_inner .tablet_header_right .bluetooth::before {
+  content: "\f682";
+  right: 80px;
+  font-size: 25px;
+}
+.tablet_inner .tablet_header_right .battery::before {
+  content: "\f186";
+  top: 51%;
+  right: 30px;
+  font-size: 35px;
+}
+.tablet_inner iframe {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: #fff;
+  z-index: -1;
+  pointer-events: all;
+}
