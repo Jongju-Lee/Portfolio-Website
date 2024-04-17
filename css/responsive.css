@@ -95,12 +95,18 @@
     margin-top: 0;
     background-color: #fafafa;
   }
+  .skill_items.solo {
+    margin-bottom: 70px;
+  }
   .skill_item {
     float: none;
     width: 100%;
     margin-bottom: 60px;
     height: auto;
     margin-right: 0;
+  }
+  .skill_items.solo .skill_item {
+    width: 100%;
   }
   .skill_items:last-child .skill_item:last-child {
     margin-bottom: 0;
@@ -395,7 +401,6 @@
   }
   .epilogue_job_strength div p {
     font-size: 16px;
-    line-height: 1.7em;
   }
   /* ########## Fullscreen Navigation ########## */
   .fullscreen_navi_inner {

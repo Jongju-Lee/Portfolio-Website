@@ -27,22 +27,22 @@ h6 {
 body {
   font-size: 15px;
   line-height: 1.6em;
-  min-height: 100vh;
   margin: 0;
   color: #777;
   background-color: #f8f8f8;
+  height: 100vh;
 }
 
 /* Grid Responsive Layout(Blog Post Style) */
 .portfolio {
   position: relative;
-  margin: 15px;
-  padding: 50px 0;
+  padding: 0 20px;
+  padding-top: 60px;
 }
 .portfolio .btn_responsive {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
 }
 .portfolio .btn_responsive .mobile,
 .portfolio .btn_responsive .tablet {
@@ -72,12 +72,12 @@ body {
 .portfolio h1 {
   position: relative;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   font-weight: 500;
   text-decoration: underline;
   text-decoration-color: #3dc1d3;
   pointer-events: none;
-  font-size: 45px;
+  font-size: 55.5px;
 }
 .portfolio h1 span {
   color: #3dc1d3;

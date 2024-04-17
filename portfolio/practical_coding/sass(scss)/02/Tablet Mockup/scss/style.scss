@@ -15,8 +15,10 @@ $tab_size: (
 
 /* ########## Tablet Mockup with SCSS ########## */
 .tablet {
-  margin: auto;
-  transform: translateY(-250px) scale(0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
   width: map-get($tab_size, tab_width) * 1.1;
   height: map-get($tab_size, tab_height) * 1.1;
   background-color: #fff;
@@ -145,7 +147,7 @@ $tab_size: (
       position: absolute;
       top: 50px;
       left: 0;
-      width: calc(100% + 15px);
+      width: 100%;
       height: calc(100% - 50px);
       z-index: -1;
       pointer-events: all;

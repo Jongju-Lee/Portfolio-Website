@@ -3,15 +3,17 @@
 
 /* ##### Tablet Responsive ##### */
 @media (min-width: 768px) and (max-width: 1366px) {
+  body {
+    height: auto;
+  }
   .portfolio {
-    padding: 0;
+    padding: 15px;
     padding-top: 40px;
     .btn_responsive {
       display: none;
     }
     h1 {
       font-size: $font_base * 2.7;
-      margin-bottom: 50px;
     }
     .items {
       grid-template-columns: repeat(3, 1fr);
@@ -20,9 +22,11 @@
 }
 /* ##### Mobile Responsive ##### */
 @media (max-width: 767px) {
+  body {
+    height: auto;
+  }
   .portfolio {
-    padding: 0;
-    padding-top: 20px;
+    padding: 15px;
     .btn_responsive {
       display: none;
     }

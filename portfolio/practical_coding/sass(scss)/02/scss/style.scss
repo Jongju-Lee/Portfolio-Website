@@ -29,15 +29,18 @@ h6 {
 }
 body {
   @include default;
+  height: 100vh;
 }
 
 /* Grid Responsive Layout(Blog Post Style) */
 .portfolio {
   position: relative;
+  padding: 0 20px;
+  padding-top: 60px;
   .btn_responsive {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 20px;
+    right: 20px;
     .mobile,
     .tablet {
       display: inline-block;
@@ -64,11 +67,9 @@ body {
       }
     }
   }
-  margin: 15px;
-  padding: 50px 0;
   h1 {
     @include heading;
-    font-size: $font_base * 3;
+    font-size: $font_base * 3.7;
   }
   .items {
     display: grid;

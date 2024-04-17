@@ -315,19 +315,27 @@ header nav .gnb a:hover::after {
 }
 .skill_items {
   margin-top: 70px;
-  height: 200px;
+  height: 250px;
+}
+.skill_items.solo {
+  height: auto;
 }
 .skill_item {
   position: relative;
   float: left;
   width: calc(1220px / 4);
-  height: 200px;
+  height: 100%;
   border: 1px solid #ddd;
   margin-right: 20px;
   border-radius: 10px;
   padding: 30px 25px;
   background-color: #fff;
   transition: 0.35s;
+}
+.skill_items.solo .skill_item {
+  float: none;
+  margin: auto;
+  width: 50%;
 }
 .skill_item:hover {
   transform: translateY(-10px);
@@ -336,6 +344,7 @@ header nav .gnb a:hover::after {
 .skill_item:last-of-type {
   margin-right: 0;
 }
+
 .skill_item_icon {
   position: absolute;
   top: 0;
@@ -369,6 +378,7 @@ header nav .gnb a:hover::after {
   font-size: 16px;
   margin-top: 10px;
   color: #777;
+  line-height: 1.6em;
 }
 /* ########## Section - Edu ########## */
 #edu {
@@ -867,7 +877,6 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
 }
 .epilogue_heading {
   padding: 70px;
-  padding-top: 50px;
 }
 .epilogue_heading h3 {
   font-family: "Pretendard-Regular";
@@ -897,6 +906,7 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   font-family: "Pretendard-Light";
   margin-top: 5px;
   font-size: 15px;
+  line-height: 1.7em;
 }
 /* ########## Fullscreen Navigation ########## */
 .fullscreen_navi {

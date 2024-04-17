@@ -1,7 +1,10 @@
 /* ##### Tablet Responsive ##### */
 @media (min-width: 768px) and (max-width: 1366px) {
+  body {
+    height: auto;
+  }
   .portfolio {
-    padding: 0;
+    padding: 15px;
     padding-top: 40px;
   }
   .portfolio .btn_responsive {
@@ -9,7 +12,6 @@
   }
   .portfolio h1 {
     font-size: 40.5px;
-    margin-bottom: 50px;
   }
   .portfolio .items {
     grid-template-columns: repeat(3, 1fr);
@@ -17,9 +19,11 @@
 }
 /* ##### Mobile Responsive ##### */
 @media (max-width: 767px) {
+  body {
+    height: auto;
+  }
   .portfolio {
-    padding: 0;
-    padding-top: 20px;
+    padding: 15px;
   }
   .portfolio .btn_responsive {
     display: none;
