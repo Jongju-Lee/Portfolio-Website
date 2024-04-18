@@ -1,0 +1,297 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+/* Noonnu Korean Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Google Web Font */
+/* Noonnu Korean Fonts */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* ##### Travelium - Responsive ##### */
+@media (max-width: 768px) {
+  /* ##### COMMON - START ##### */
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  /* ##### COMMON - END ##### */
+  /* ########## Header ########## */
+  header {
+    height: 65px;
+  }
+  header nav {
+    width: 100%;
+    padding: 0 30px;
+  }
+  header nav .logo a {
+    font-size: 30px;
+  }
+  header nav ul.gnb {
+    gap: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 200px;
+    height: 100vh;
+    background-color: #fff;
+    padding-top: 100px;
+    transition: 0.35s;
+  }
+  header nav ul.gnb li {
+    text-align: center;
+  }
+  header nav ul.gnb li a {
+    color: #333333;
+    font-size: 24px;
+    width: 100%;
+    padding: 20px;
+  }
+  header nav ul.gnb li a::after {
+    display: none;
+  }
+  header nav ul.gnb.active {
+    right: 0;
+  }
+  header nav .trigger {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 18px;
+  }
+  header nav .trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  header nav .trigger span:nth-child(1) {
+    top: 0;
+  }
+  header nav .trigger span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+  }
+  header nav .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  header nav .trigger.active span {
+    background-color: #333333;
+  }
+  header nav .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  header nav .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  header nav .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  /* ########## Section - Intro ########## */
+  section#intro {
+    height: auto;
+  }
+  section#intro .search_box {
+    position: static;
+    transform: none;
+    padding: 120px 20px;
+    min-height: 100vh;
+  }
+  section#intro .search_box .title h3 {
+    color: #fff;
+    font-size: 24px;
+  }
+  section#intro .search_box .title h3 span {
+    margin-top: 15px;
+  }
+  section#intro .search_box .content {
+    margin-top: 10px;
+  }
+  section#intro .search_box .content form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section#intro .search_box .content form .input_field b {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  section#intro .search_box .content form .btn_search {
+    margin-top: 20px;
+    width: 100%;
+  }
+  /* ########## Section - Destinations ########## */
+  section#destinations .inner .items {
+    gap: 0;
+    row-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section#destinations .inner .items .item:first-child, section#destinations .inner .items .item:last-child {
+    grid-area: 1 span/1 span;
+  }
+  /* ########## Section - Get off ########## */
+  section#get_off .background::after {
+    width: 100%;
+  }
+  section#get_off .heading {
+    right: none;
+    left: 50%;
+    width: 100%;
+    padding-right: 0;
+    transform: translate(-50%, -50%);
+  }
+  section#get_off .heading h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  section#get_off .heading h2 span {
+    font-size: 24px;
+  }
+  section#get_off .heading h2 b em {
+    font-size: 33px;
+  }
+  section#get_off .heading .btn_book_now {
+    margin: auto;
+    margin-top: 20px;
+  }
+  /* ########## Section - Popular ########## */
+  section#popular {
+    padding: 80px 20px;
+  }
+  section#popular .heading {
+    margin-bottom: 40px;
+  }
+  section#popular .popular_slider .item {
+    margin: 0;
+  }
+  section#popular .popular_slider .item .desc {
+    font-size: 24px;
+  }
+  section#popular .popular_slider .item .desc b {
+    font-size: 30px;
+  }
+  section#popular .popular_slider .item .btn_book_now {
+    font-size: 18px;
+  }
+  section#popular .popular_slider .item .info .price {
+    font-size: 24px;
+  }
+  /* ########## Section - Testimonial ########## */
+  section#testimonial {
+    padding: 80px 0;
+  }
+  section#testimonial .inner .items {
+    margin-top: 70px;
+    flex-direction: column;
+    gap: 100px;
+  }
+  section#testimonial .inner .items .item {
+    padding: 0;
+    width: 100%;
+  }
+  section#testimonial .inner .items .item .desc {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  section#testimonial .inner .items .item .desc b {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  section#testimonial .inner .items .item .user_info {
+    margin-top: 30px;
+  }
+  section#testimonial .inner .items .item .user_info .face {
+    width: 80px;
+    height: 80px;
+    border: 7px solid #bbc53d;
+  }
+  section#testimonial .inner .items .item .user_info .name {
+    font-size: 18px;
+    margin-left: 15px;
+    padding: 10px 0;
+  }
+  /* ########## Section - Special ########## */
+  section#special .inner .package .heading h2 span {
+    font-size: 24px;
+  }
+  section#special .inner .package .special_slider::before, section#special .inner .package .special_slider::after {
+    display: none;
+  }
+  section#special .inner .package .special_slider .item {
+    margin: 0;
+    height: 350px;
+  }
+  section#special .inner .package .special_slider .item .desc {
+    top: 30px;
+  }
+  section#special .inner .package .special_slider .item .desc b,
+  section#special .inner .package .special_slider .item .desc em,
+  section#special .inner .package .special_slider .item .desc span {
+    font-size: 26px;
+  }
+  section#special .inner .subscribe form .input_field {
+    width: 100%;
+  }
+  section#special .inner .subscribe form .input_field .btn_subscribe {
+    padding: 0 20px;
+  }
+  /* ########## Footer ########## */
+  footer .footer_header {
+    height: auto;
+    padding: 10px 0;
+  }
+  footer .footer_header .inner {
+    flex-direction: column;
+  }
+  footer .footer_header .inner .phone {
+    font-size: 16.5px;
+    letter-spacing: 0;
+  }
+  footer .footer_header .inner .lnb {
+    margin-top: 5px;
+    text-align: center;
+  }
+  footer .footer_header .inner .lnb a {
+    font-size: 13.5px;
+  }
+  footer .footer_header .inner .lnb a:not(:last-child)::after {
+    margin-left: 5px;
+    margin-right: 2px;
+  }
+  footer .footer_content {
+    height: auto;
+  }
+  footer .footer_content .inner {
+    flex-direction: column;
+  }
+  footer .footer_content .inner .left .content,
+  footer .footer_content .inner .right .copyright {
+    position: static;
+    transform: none;
+    margin-top: 30px;
+  }
+  footer .footer_content .inner .right .copyright {
+    padding-bottom: 30px;
+  }
+  /* ########## Overlay ########## */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+}

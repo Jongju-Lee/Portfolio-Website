@@ -619,7 +619,7 @@ header nav .gnb a:hover::after {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 20%;
   height: 100%;
   background-color: #f4f4f4;
   border-radius: 20px;
@@ -630,13 +630,16 @@ input[id="web1"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
   left: 0;
 }
 input[id="web2"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
-  left: 25%;
+  left: 20%;
 }
 input[id="web3"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
-  left: 50%;
+  left: 40%;
 }
 input[id="web4"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
-  left: 75%;
+  left: 60%;
+}
+input[id="web5"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
+  left: 80%;
 }
 .web_tab_btns label {
   position: relative;
@@ -672,6 +675,7 @@ input[id="web1"]:checked ~ .web_tab_btns label[for="web1"]::before,
 input[id="web2"]:checked ~ .web_tab_btns label[for="web2"]::before,
 input[id="web3"]:checked ~ .web_tab_btns label[for="web3"]::before,
 input[id="web4"]:checked ~ .web_tab_btns label[for="web4"]::before,
+input[id="web5"]:checked ~ .web_tab_btns label[for="web5"]::before,
 .web_tab_btns label:hover::before {
   top: -110%;
 }
@@ -679,6 +683,7 @@ input[id="web1"]:checked ~ .web_tab_btns label[for="web1"]::after,
 input[id="web2"]:checked ~ .web_tab_btns label[for="web2"]::after,
 input[id="web3"]:checked ~ .web_tab_btns label[for="web3"]::after,
 input[id="web4"]:checked ~ .web_tab_btns label[for="web4"]::after,
+input[id="web5"]:checked ~ .web_tab_btns label[for="web5"]::after,
 .web_tab_btns label:hover::after {
   top: 0%;
 }
@@ -698,10 +703,11 @@ input[id="web4"]:checked ~ .web_tab_btns label[for="web4"]::after,
   z-index: -1;
   transition: 1s;
 }
-input[id="web1"]:checked ~ .web_tab_content_outer .web_tab_content.green,
-input[id="web2"]:checked ~ .web_tab_content_outer .web_tab_content.smeg,
-input[id="web3"]:checked ~ .web_tab_content_outer .web_tab_content.netflix,
-input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
+input[id="web1"]:checked ~ .web_tab_content_outer .web_tab_content.traveluim,
+input[id="web2"]:checked ~ .web_tab_content_outer .web_tab_content.green,
+input[id="web3"]:checked ~ .web_tab_content_outer .web_tab_content.smeg,
+input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.netflix,
+input[id="web5"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   opacity: 1;
   visibility: visible;
   z-index: 1;
@@ -718,6 +724,10 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   background-position: top;
   transition-timing-function: ease-in-out;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.web_tab_content.traveluim .web_tab_content_thum {
+  background-image: url(../image/web_travelium_thum.jpg);
+  transition-duration: 4s;
 }
 .web_tab_content.green .web_tab_content_thum {
   background-image: url(../image/web_green_save_earth_thum.png);
@@ -749,7 +759,7 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   font-weight: 400;
 }
 .web_tab_content_desc .title p {
-  margin-top: 30px;
+  margin-top: 20px;
   line-height: 1.7em;
   font-size: 18px;
   color: #777;
@@ -807,6 +817,13 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   color: #00ad53;
   border: 1px solid #00ad53;
 }
+.web_tab_content_desc .btns a:nth-child(3) {
+  font-family: "Pretendard-Light";
+  /* letter-spacing: 1px; */
+  background-color: #fff;
+  color: #555;
+  border: 1px solid #555;
+}
 .web_tab_content_desc .btns a:nth-child(1):hover {
   background-color: #fff;
   border: 1px solid #00ad53;
@@ -814,6 +831,11 @@ input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
 }
 .web_tab_content_desc .btns a:nth-child(2):hover {
   background-color: #00ad53;
+  color: #fff;
+  border: 1px solid transparent;
+}
+.web_tab_content_desc .btns a:nth-child(3):hover {
+  background-color: #333;
   color: #fff;
   border: 1px solid transparent;
 }

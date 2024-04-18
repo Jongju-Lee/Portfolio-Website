@@ -1,0 +1,931 @@
+@charset "UTF-8";
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+/* Noonnu Korean Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Google Web Font */
+/* Noonnu Korean Fonts */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.6em;
+  min-height: 100vh;
+  margin: 0;
+  color: #333333;
+}
+
+/* Google Web Font */
+/* Noonnu Korean Fonts */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Bootstrap Icons CDN */
+/* ########## Travelium - Main Page ########## */
+* {
+  font-family: "Pretendard-Regular";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ##### COMMON - START ##### */
+.inner {
+  width: 1280px;
+  margin: auto;
+}
+
+/* Slick.js Custom Dots */
+.slick-dots {
+  bottom: -50px;
+}
+
+.slick-dots li button::before {
+  font-size: 12px;
+  padding: 5px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #333;
+  opacity: 1;
+}
+
+/* Slick.js Custom Arrows */
+.slick-prev,
+.slick-next {
+  width: 190px;
+  height: 100%;
+}
+
+.slick-prev {
+  left: 0;
+  z-index: 1000;
+  width: 190px;
+  height: 100%;
+}
+
+.slick-next {
+  right: 20px;
+  z-index: 1001;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "bootstrap-icons";
+  font-size: 40px;
+  font-weight: bold;
+  color: #dfeb48;
+  opacity: 1;
+}
+
+.slick-prev:before {
+  content: "\f284";
+}
+
+.slick-next:before {
+  content: "\f285";
+}
+
+/* ##### COMMON - END ##### */
+/* ########## Header ########## */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 9999;
+  transition: 0.5s;
+}
+header.active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header nav {
+  width: 1280px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo a {
+  display: block;
+  padding: 15px;
+  padding-left: 0;
+  font-family: "Madimi One";
+  font-size: 40px;
+  color: #dfeb48;
+}
+header nav ul.gnb {
+  display: flex;
+  gap: 20px;
+}
+header nav ul.gnb li a {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px;
+  transition: 0.2s;
+}
+header nav ul.gnb li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #dfeb48;
+  transition: 0.2s;
+}
+header nav ul.gnb li a:hover::after {
+  width: calc(100% - 20px);
+}
+header nav .trigger {
+  display: none;
+}
+
+/* ########## Section - Intro ########## */
+section#intro {
+  position: relative;
+  background-image: url(../images/travel_intro_01.png);
+  height: 100vh;
+}
+section#intro .search_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+section#intro .search_box .title {
+  padding-bottom: 20px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+section#intro .search_box .title h3 {
+  color: #fff;
+  font-size: 26px;
+}
+section#intro .search_box .title h3 span {
+  display: inline-block;
+  margin-top: 10px;
+  color: #bbc53d;
+  font-family: "Madimi One";
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+section#intro .search_box .title h3 span::after {
+  content: "₩";
+}
+section#intro .search_box .content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+section#intro .search_box .content form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 30px;
+}
+section#intro .search_box .content form .input_field {
+  position: relative;
+}
+section#intro .search_box .content form .input_field b {
+  display: block;
+  color: #555555;
+  font-size: 16.5px;
+  margin-bottom: 5px;
+}
+section#intro .search_box .content form .input_field input {
+  width: 250px;
+  padding: 10px 0;
+  padding-left: 45px;
+  border-radius: 3px;
+  border: 1px solid #999999;
+  color: #333333;
+  font-size: 16.5px;
+  transition: 0.2s;
+}
+section#intro .search_box .content form .input_field input:focus {
+  box-shadow: 0 0 8px rgba(187, 197, 61, 0.5);
+  border: 1px solid #bbc53d;
+}
+section#intro .search_box .content form .input_field input:focus + i {
+  color: #bbc53d;
+}
+section#intro .search_box .content form .input_field i {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 22px;
+  color: #555555;
+  transition: 0.2s;
+}
+section#intro .search_box .content form .input_field:nth-child(3) i {
+  font-size: 18px;
+}
+section#intro .search_box .content form .input_field:nth-child(4) i {
+  left: 14px;
+  font-size: 20px;
+}
+section#intro .search_box .content form .btn_search {
+  margin-top: 5px;
+  width: fit-content;
+  padding: 8px 20px;
+  background-color: #bbc53d;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #ffffff;
+  transition: 0.35s;
+}
+section#intro .search_box .content form .btn_search:hover {
+  color: #000;
+}
+
+/* ########## Section - Destinations ########## */
+section#destinations {
+  padding: 100px 0;
+}
+section#destinations .inner .heading h2 {
+  font-size: 30px;
+  text-align: center;
+}
+section#destinations .inner .heading h2 span {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+section#destinations .inner .items {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 50px;
+}
+section#destinations .inner .items .item {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+section#destinations .inner .items .item:first-child, section#destinations .inner .items .item:last-child {
+  grid-area: 1 span/2 span;
+}
+section#destinations .inner .items .item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #000, transparent 40%);
+  transition: 0.35s;
+}
+section#destinations .inner .items .item:hover::after {
+  top: 0;
+}
+section#destinations .inner .items .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.35s;
+}
+section#destinations .inner .items .item:hover img {
+  transform: scale(1.05);
+}
+section#destinations .inner .items .item .desc {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  color: #ffffff;
+  font-size: 20px;
+  z-index: 20;
+}
+section#destinations .inner .items .item .desc b {
+  display: block;
+  margin-bottom: 10px;
+  color: #dfeb48;
+  font-size: 24px;
+}
+section#destinations .inner .items .item .btn_more {
+  position: absolute;
+  bottom: -100%;
+  right: -100%;
+  padding: 30px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Madimi One";
+  color: #555555;
+  transition: 0.2s;
+  z-index: 10;
+}
+section#destinations .inner .items .item .btn_more::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: rotate(45deg) scale(1.5);
+  width: 100%;
+  height: 100%;
+  background-color: #dfeb48;
+  z-index: -1;
+}
+section#destinations .inner .items .item .btn_more:hover {
+  color: #ffffff;
+}
+section#destinations .inner .items .item:hover .btn_more {
+  bottom: 0;
+  right: 0;
+}
+
+/* ########## Section - Get off ########## */
+section#get_off {
+  position: relative;
+}
+section#get_off .background {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url(../images/get_off.jpg) no-repeat center center/cover;
+}
+section#get_off .background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+section#get_off .heading {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%);
+  padding-right: 30px;
+}
+section#get_off .heading h2 {
+  text-align: right;
+  color: #dfeb48;
+  font-size: 30px;
+}
+section#get_off .heading h2 span {
+  display: block;
+  color: #ffffff;
+  font-weight: normal;
+  margin: 5px 0;
+  font-size: 24px;
+}
+section#get_off .heading h2 b {
+  display: block;
+  font-size: 30px;
+}
+section#get_off .heading h2 b em {
+  font-style: normal;
+  font-family: "Madimi One";
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+section#get_off .heading .btn_book_now {
+  display: block;
+  width: fit-content;
+  margin-top: 30px;
+  margin-left: auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  font-size: 16.5px;
+  background-color: #dfeb48;
+  transition: 0.35s;
+}
+section#get_off .heading .btn_book_now:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ########## Section - Popular ########## */
+section#popular {
+  padding: 100px 0;
+}
+section#popular .heading {
+  margin-bottom: 50px;
+}
+section#popular .heading h2 {
+  font-size: 30px;
+  text-align: center;
+}
+section#popular .heading h2 span {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+section#popular .popular_slider .item {
+  position: relative;
+  height: 450px;
+  margin: 0 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+section#popular .popular_slider .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section#popular .popular_slider .item .desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  color: #dfeb48;
+  text-shadow: 0 0 5px black;
+  transition: 0.35s;
+}
+section#popular .popular_slider .item .desc b {
+  display: block;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 26px;
+}
+section#popular .popular_slider .item:hover .desc {
+  top: 45%;
+}
+section#popular .popular_slider .item .btn_book_now {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 15px;
+  background-color: #dfeb48;
+  font-size: 16.5px;
+  font-weight: bold;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.35s;
+}
+section#popular .popular_slider .item .btn_book_now:hover {
+  background-color: #000;
+  color: #fff;
+}
+section#popular .popular_slider .item:hover .btn_book_now {
+  top: 60%;
+  opacity: 1;
+}
+section#popular .popular_slider .item .info {
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  width: 100%;
+  color: #dfeb48;
+  transition: 0.35s;
+  z-index: 10;
+}
+section#popular .popular_slider .item .info .price {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 19.5px;
+  transition: 0.35s;
+}
+section#popular .popular_slider .item .info .price::before {
+  content: "\f5af";
+  font-family: "bootstrap-icons";
+  display: inline-block;
+  transform: translate(-2px, 2px);
+}
+section#popular .popular_slider .item .info .price span,
+section#popular .popular_slider .item .info .price em {
+  font-family: "Madimi One";
+}
+section#popular .popular_slider .item .info .price span::after {
+  content: "₩";
+  margin-left: 3px;
+}
+section#popular .popular_slider .item .info .price em {
+  font-style: normal;
+}
+section#popular .popular_slider .item .info .star_rating {
+  text-align: center;
+  margin-bottom: 10px;
+}
+section#popular .popular_slider .item .info .star_rating span::after {
+  content: "\f586";
+  font-family: "bootstrap-icons";
+  color: #fed32f;
+}
+section#popular .popular_slider .item:hover .info {
+  bottom: 0;
+  color: #333333;
+}
+section#popular .popular_slider .item::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #dfeb48;
+  transition: 0.2s;
+  z-index: 0;
+}
+section#popular .popular_slider .item:hover::after {
+  bottom: 0;
+}
+
+/* ########## Section - Testimonial ########## */
+section#testimonial {
+  padding-top: 80px;
+  background-color: #f5f5f5;
+}
+section#testimonial .inner .heading h2 {
+  font-size: 30px;
+  text-align: center;
+}
+section#testimonial .inner .heading h2 span {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+section#testimonial .inner .heading h2 {
+  font-size: 36px;
+}
+section#testimonial .inner .items {
+  margin-top: 50px;
+  display: flex;
+}
+section#testimonial .inner .items .item {
+  width: 50%;
+  padding: 80px;
+  padding-top: 0;
+}
+section#testimonial .inner .items .item .double_quote::after {
+  content: "\f6b0";
+  display: inline-block;
+  color: #bbc53d;
+  font-family: "bootstrap-icons";
+  font-size: 60px;
+  transform: translateX(-10px);
+}
+section#testimonial .inner .items .item .desc {
+  line-height: 1.6em;
+  font-size: 20px;
+}
+section#testimonial .inner .items .item .desc b {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+section#testimonial .inner .items .item .user_info {
+  margin-top: 20px;
+  display: flex;
+}
+section#testimonial .inner .items .item .user_info .face {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #bbc53d;
+}
+section#testimonial .inner .items .item .user_info .face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section#testimonial .inner .items .item .user_info .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  padding: 5px 0;
+}
+section#testimonial .inner .items .item .user_info .name b {
+  display: block;
+}
+
+/* ########## Section - Special ########## */
+section#special {
+  padding: 100px 0;
+}
+section#special .inner .package {
+  position: relative;
+}
+section#special .inner .package .heading h2 {
+  font-size: 30px;
+  text-align: center;
+}
+section#special .inner .package .heading h2 span {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+section#special .inner .package .special_slider {
+  margin-top: 50px;
+}
+section#special .inner .package .special_slider::before, section#special .inner .package .special_slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 190px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+section#special .inner .package .special_slider::before {
+  left: 0;
+}
+section#special .inner .package .special_slider::after {
+  right: 0;
+}
+section#special .inner .package .special_slider .item {
+  position: relative;
+  margin: 0 10px;
+  width: 100%;
+  height: 400px;
+}
+section#special .inner .package .special_slider .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section#special .inner .package .special_slider .item .desc {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  text-shadow: 0 0 5px black;
+}
+section#special .inner .package .special_slider .item .desc b,
+section#special .inner .package .special_slider .item .desc em {
+  font-family: "Madimi One";
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+section#special .inner .package .special_slider .item .desc b::after {
+  content: "₩";
+}
+section#special .inner .package .special_slider .item .desc em {
+  font-style: normal;
+}
+section#special .inner .package .special_slider .item .desc span {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  color: #dfeb48;
+  font-weight: bold;
+  font-size: 24px;
+}
+section#special .inner .package .special_slider .item .btn_book_now {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 8px 20px;
+  background-color: #dfeb48;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.35s;
+}
+section#special .inner .package .special_slider .item .btn_book_now:hover {
+  background-color: #000;
+  color: #fff;
+}
+section#special .inner .subscribe {
+  margin-top: 120px;
+}
+section#special .inner .subscribe .heading h2 {
+  font-size: 30px;
+  text-align: center;
+}
+section#special .inner .subscribe .heading h2 span {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+section#special .inner .subscribe .heading h2 {
+  font-size: 30px;
+}
+section#special .inner .subscribe form .input_field {
+  position: relative;
+  width: 700px;
+  margin: auto;
+  margin-top: 30px;
+}
+section#special .inner .subscribe form .input_field input[type=email] {
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 16.5px;
+  color: #555555;
+  border-radius: 25px;
+  border: 1px solid #999999;
+}
+section#special .inner .subscribe form .input_field input[type=email]::placeholder {
+  transition: 0.35s;
+}
+section#special .inner .subscribe form .input_field input[type=email]:focus::placeholder {
+  opacity: 0;
+}
+section#special .inner .subscribe form .input_field .btn_subscribe {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  padding: 0 30px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #dfeb48;
+  font-size: 16.5px;
+  transition: 0.35s;
+}
+section#special .inner .subscribe form .input_field .btn_subscribe:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ########## Footer ########## */
+footer .footer_header {
+  height: 50px;
+  background-color: #333333;
+}
+footer .footer_header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  height: 100%;
+}
+footer .footer_header .inner .phone {
+  font-size: 20px;
+  font-weight: normal;
+}
+footer .footer_header .inner .phone .number {
+  margin-left: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+footer .footer_header .inner .lnb a {
+  font-size: 18px;
+  transition: 0.2s;
+}
+footer .footer_header .inner .lnb a:not(:last-child)::after {
+  content: "|";
+  margin-left: 15px;
+  margin-right: 10px;
+}
+footer .footer_header .inner .lnb a:hover {
+  color: #999999;
+}
+footer .footer_header .inner .lnb a:hover::after {
+  color: #fff;
+}
+footer .footer_content {
+  position: relative;
+  height: 300px;
+  background: url(../images/travel_intro_02.jpg) no-repeat center center/cover;
+}
+footer .footer_content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+footer .footer_content .inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  color: #fff;
+  height: 100%;
+}
+footer .footer_content .inner .left,
+footer .footer_content .inner .right {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+footer .footer_content .inner .left .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+footer .footer_content .inner .left .content .logo_slogan .logo a {
+  display: block;
+  padding: 15px;
+  padding-left: 0;
+  font-family: "Madimi One";
+  font-size: 40px;
+  color: #dfeb48;
+}
+footer .footer_content .inner .left .content .logo_slogan .logo a .slogan {
+  display: block;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 16.5px;
+}
+footer .footer_content .inner .left .content .sns a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 41px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 3px;
+  background-color: #f5f5f5;
+  color: #555555;
+  font-size: 18px;
+  transition: 0.2s;
+}
+footer .footer_content .inner .left .content .sns a:last-child {
+  line-height: 42px;
+}
+footer .footer_content .inner .left .content .sns a:hover {
+  background-color: #000;
+  color: #fff;
+}
+footer .footer_content .inner .right .copyright {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  line-height: 1.5em;
+  font-size: 13.5px;
+}
+footer .footer_content .inner .right .copyright b {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16.5px;
+}
+
+/* ########## Overlay ########## */
+.overlay {
+  display: none;
+}
