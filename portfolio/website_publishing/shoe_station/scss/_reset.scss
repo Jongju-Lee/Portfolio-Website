@@ -1,0 +1,42 @@
+// Import
+@import "variables";
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+em {
+  font-style: normal;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-size: map-get($map: $font_size, $key: body);
+  line-height: 1.6em;
+  min-height: 100vh;
+  margin: 0;
+  color: map-get($map: $font_color, $key: primary);
+  background-color: map-get($map: $theme_color, $key: white);
+  overflow-x: hidden;
+}

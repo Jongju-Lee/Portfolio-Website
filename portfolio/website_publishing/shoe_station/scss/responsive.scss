@@ -1,0 +1,389 @@
+// Import
+@import "variables";
+@import "reset";
+@import "mixins";
+
+/* ########## Mobile ########## */
+@media (max-width: 768px) {
+  /* ##### COMMON ##### */
+  section {
+    padding: 30px 0;
+  }
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .btn_close {
+    display: none;
+  }
+  /* ########## Header ########## */
+  header {
+    .top {
+      .inner {
+        position: relative;
+        height: 70px;
+        .trigger {
+          position: relative;
+          display: block;
+          width: 30px;
+          height: 19px;
+          span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: map-get($map: $font_color, $key: primary);
+            transition: 0.5s;
+            &:nth-child(1) {
+              top: 0;
+            }
+            &:nth-child(2) {
+              top: 50%;
+            }
+            &:nth-child(3) {
+              top: 100%;
+            }
+          }
+          &.active span {
+            &:nth-child(1) {
+              top: 50%;
+              transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              top: 50%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        .logo {
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -55%);
+          width: 100px;
+          height: 55px;
+        }
+        .search_field {
+          display: none;
+        }
+        .lnb {
+          a {
+            margin-right: 10px;
+            &:nth-child(1) {
+              display: inline-block;
+            }
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      .gnb {
+        display: none;
+        margin-top: 0px;
+        background-color: map-get($map: $theme_color, $key: white);
+        height: auto;
+        &.active {
+          display: block;
+        }
+        & > li {
+          display: none;
+          &:nth-child(1),
+          &:nth-child(2) {
+            display: inline-block;
+            width: 49%;
+            .gnb_title {
+              display: block;
+              width: 100%;
+              height: 100%;
+              &.orange {
+                color: map-get($map: $font_color, $key: primary);
+              }
+            }
+            .gnb_content {
+              top: 50px;
+              min-height: 100vh;
+              .inner {
+                .tab_menu {
+                  display: block;
+                  width: 100%;
+                  li {
+                    .tab_title {
+                      padding: 0 30px;
+                      text-align: left;
+                      background-color: map-get(
+                        $map: $theme_color,
+                        $key: white
+                      );
+                      border: none;
+                      border-bottom: 1px solid
+                        map-get($map: $font_color, $key: fourth);
+                      &::after {
+                        content: "\F286";
+                        font-family: "bootstrap-icons";
+                        font-size: map-get($map: $font-size, $key: body) * 0.8;
+                        float: right;
+                      }
+                    }
+                    &.active a.tab_title::after {
+                      transform: rotate(180deg);
+                    }
+                    &.active a.tab_title {
+                      border-bottom: none;
+                    }
+                    &:last-child a.tab_title {
+                      border-bottom: none;
+                    }
+                    .tab_content {
+                      position: static;
+                      width: 100%;
+                      border: none;
+                      div {
+                        float: none;
+                        width: 100%;
+                        text-align: left;
+                        .items {
+                          display: none;
+                        }
+                        &.active .items {
+                          display: block;
+                        }
+                        a {
+                          padding: 5px 60px;
+                          border-right: none;
+                          &.title {
+                            padding: 10px 45px;
+                            &::after {
+                              content: "\F286";
+                              font-family: "bootstrap-icons";
+                              font-size: map-get($map: $font-size, $key: body) *
+                                0.8;
+                              float: right;
+                            }
+                            &.active::after {
+                              transform: rotate(180deg);
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              &.brand_menu {
+                .inner {
+                  width: 100%;
+                  height: auto;
+                  .main_logo {
+                    grid-template-columns: repeat(1, 1fr);
+                  }
+                  .gray_logo {
+                    grid-template-columns: repeat(2, 1fr);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* ########## Section - Intro ########## */
+  section.intro {
+    padding-top: 70px;
+    .intro_slider {
+      .item {
+        .desc {
+          position: absolute;
+          bottom: 40px;
+          left: 20px;
+          h3 {
+            font-size: map-get($map: $font-size, $key: h2) * 1.1;
+          }
+          span {
+            font-size: map-get($map: $font-size, $key: body) * 1.2;
+          }
+        }
+      }
+    }
+  }
+  /* ########## Section - Best Seller ########## */
+  /* Mixins 안에 mediaQuery로 반응형 하였음. */
+
+  /* ########## Section - Best Brand ########## */
+  section.best_brand {
+    padding-top: 50px;
+    .inner {
+      .wrapper {
+        .content {
+          height: auto;
+          article {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+            .thum {
+              a {
+                position: static;
+              }
+              .desc {
+                bottom: 25px;
+                left: 20px;
+              }
+            }
+            aside {
+              padding: 20px;
+              padding-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* ########## Section - new ########## */
+  section.new {
+    margin-top: 0;
+    /* Mixins 안에 mediaQuery로 반응형 하였음. */
+  }
+  /* ########## Section - Magazine ########## */
+  section.magazine {
+    .inner {
+      width: 100%;
+      .magazine_slider_outer {
+        .title {
+          font-weight: map-get($map: $font_weight, $key: bold);
+        }
+        .magazine_slider {
+          .item {
+            .desc {
+              b {
+                margin-bottom: 5px;
+                font-size: map-get($map: $font-size, $key: h3);
+              }
+              span {
+                font-size: map-get($map: $font-size, $key: body) * 1.1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* ########## Section - Insta ########## */
+  section.insta {
+    padding-top: 50px;
+    .items {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      .thum {
+        &:nth-child(2) {
+          grid-area: 2 span / 2 span;
+        }
+        &.hash_tag {
+          grid-area: 2 span / 2 span;
+          a {
+            padding: 0;
+            .insta_icon {
+              width: 50px;
+              height: 50px;
+            }
+            .desc {
+              b {
+                font-size: map-get($map: $font-size, $key: h2);
+                font-weight: map-get($map: $font_weight, $key: bold);
+                line-height: 1.2em;
+              }
+              span {
+                font-size: map-get($map: $font-size, $key: body) * 1.2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* ########## Footer ########## */
+  footer {
+    .service {
+      .service_inner {
+        width: 100%;
+        padding: 40px 0;
+        .title {
+          font-size: map-get($map: $font-size, $key: h3);
+        }
+        .items {
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 30px;
+          padding: 0 30px;
+          .item {
+            .icon {
+              width: 80px;
+              height: 80px;
+              margin-bottom: 10px;
+              &::after {
+                line-height: 80px;
+                font-size: map-get($map: $font-size, $key: h1);
+              }
+            }
+            span {
+              font-size: map-get($map: $font-size, $key: body);
+            }
+          }
+        }
+      }
+    }
+    .center {
+      .inner {
+        padding: 30px 20px;
+        .info {
+          .phone {
+            span {
+              font-size: map-get($map: $font-size, $key: h3);
+            }
+            em {
+              margin-left: 5px;
+              letter-spacing: 2px;
+              font-weight: map-get($map: $font_weight, $key: bold);
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      .inner {
+        .items {
+          .logo {
+            margin-left: -10px;
+          }
+          .copyright {
+            margin-left: 10px;
+            font-size: map-get($map: $font-size, $key: body) * 0.8;
+            .links {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              a {
+                margin-right: 5px;
+              }
+            }
+            span em {
+              margin-top: 10px;
+              display: block;
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

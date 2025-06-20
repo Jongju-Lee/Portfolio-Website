@@ -1,5 +1,6 @@
 /* Bootstrap Icons CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 /* Google Web Fonts CDN */
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 /* font-family: "Caveat", cursive; */
@@ -180,7 +181,8 @@ section .inner > h2 {
   height: 100%;
 }
 .featherlight .featherlight-close-icon {
-  right: 17px;
+  top: 12px;
+  left: 12px;
   width: 60px;
   height: 60px;
   line-height: 55px;
@@ -317,7 +319,9 @@ header nav .gnb a:hover::after {
   margin-top: 70px;
   height: 250px;
 }
-.skill_items.solo {
+.skill_items.twin {
+  display: flex;
+  justify-content: center;
   height: auto;
 }
 .skill_item {
@@ -330,16 +334,14 @@ header nav .gnb a:hover::after {
   border-radius: 10px;
   padding: 30px 25px;
   background-color: #fff;
-  transition: 0.35s;
+  transition: 0.25s;
 }
-.skill_items.solo .skill_item {
-  float: none;
-  margin: auto;
-  width: 50%;
+.skill_items.twin .skill_item {
+  flex: 1;
 }
 .skill_item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 .skill_item:last-of-type {
   margin-right: 0;
@@ -362,7 +364,8 @@ header nav .gnb a:hover::after {
   color: #fff;
 }
 .skill_item_desc {
-  text-align: center;
+  text-align: justify;
+  pointer-events: none;
 }
 .skill_item_desc h4,
 .skill_item_desc p span {
@@ -373,6 +376,7 @@ header nav .gnb a:hover::after {
   font-weight: 700;
   margin-top: 10px;
   color: #555;
+  text-align: center;
 }
 .skill_item_desc p {
   font-size: 16px;
@@ -413,6 +417,12 @@ header nav .gnb a:hover::after {
   text-align: right;
   margin-right: 70px;
 }
+.timeline_item:first-child .timeline_item_peroid .right {
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  right: 75px;
+}
 .timeline_item_peroid span b {
   font-family: "Outfit", sans-serif;
   font-size: 22px;
@@ -425,18 +435,18 @@ header nav .gnb a:hover::after {
   font-family: "bootstrap-icons";
   position: absolute;
   top: 2px;
-  left: -50px;
-  font-size: 25px;
+  left: -46px;
+  font-size: 15px;
   color: #00ad53;
   z-index: 10;
 }
 .timeline_item_desc::after {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 18px;
   left: -39px;
   width: 2px;
-  height: 80px;
+  height: 94px;
   background-color: #eee;
 }
 .timeline_item:last-child .timeline_item_desc::after {
@@ -601,6 +611,151 @@ header nav .gnb a:hover::after {
   background-color: #0077ed;
   color: #fff;
 }
+
+/* ########## Section - Mobile.sec ########## */
+#mobile.sec {
+  background-color: #F5FFEF;
+  padding-bottom: 0;
+  color: #777;
+}
+.mobile_photo {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding-bottom: 90px;
+}
+.mobile_photo_first,
+.mobile_photo_second {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.mobile_photo_first img,
+.mobile_photo_second img {
+  display: block;
+  width: 100%;
+}
+.mobile_photo_second {
+  position: absolute;
+  top: 50px;
+  left: 250px;
+}
+.mobile_desc_title h3 {
+  font-family: "NPSfontExtraBold";
+  font-size: 34px;
+  color: #555;
+}
+#mobile.sec .mobile_desc_title h3 span {
+  font-family: "NPSfontExtraBold";
+  color: #6cc31c;
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+.mobile_desc_title p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+.mobile_desc_format {
+  margin-top: 20px;
+  overflow: hidden;
+}
+/* .mobile_desc_format COMMON */
+.mobile_desc_format_color,
+.mobile_desc_format_font {
+  float: left;
+  width: calc(50% - 20px);
+}
+.mobile_desc_format_color b,
+.mobile_desc_format_font b {
+  font-size: 18px;
+  font-family: "NPSfontExtraBold";
+  color: #555;
+}
+.mobile_desc_format_color .color_chips,
+.mobile_desc_format_font .color_chips {
+  margin: 10px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.mobile_desc_format_color .color_chips em,
+.mobile_desc_format_font .color_chips em {
+  float: left;
+  width: calc(100% / 3);
+  text-align: center;
+  font-style: normal;
+  color: white;
+  font-size: 13px;
+  font-family: "Pretendard-Light";
+}
+/* .mobile_desc_format COMMON - END */
+.mobile_desc_format_color {
+  margin-right: 40px;
+}
+.mobile_desc_format_color .color_chips em:nth-child(1) {
+  background-color: #0077ed;
+}
+.mobile_desc_format_color .color_chips em:nth-child(2) {
+  background-color: #e1f0ff;
+  color: #777;
+}
+.mobile_desc_format_color .color_chips em:nth-child(3) {
+  background-color: #f4c500;
+}
+.mobile_desc_format_color p {
+  line-height: 1.7em;
+}
+.mobile_desc_format_font .color_chips em:nth-child(1) {
+  background-color: #333;
+}
+.mobile_desc_format_font .color_chips em:nth-child(2) {
+  background-color: #777;
+}
+.mobile_desc_format_font .color_chips em:nth-child(3) {
+  background-color: #999;
+}
+
+.mobile_desc_format_font span {
+  display: block;
+}
+.mobile_desc_format_font .text_size {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px dashed #999;
+  border-radius: 10px;
+  line-height: 1.7em;
+}
+.mobile_desc_detail div {
+  margin-bottom: 10px;
+}
+.mobile_desc_detail div b {
+  display: inline-block;
+  width: 70px;
+  font-family: "NPSfontExtraBold";
+  font-size: 14px;
+}
+.mobile_desc_detail div span {
+  font-size: 16px;
+}
+.mobile_desc_btns {
+  margin-top: 20px;
+}
+.mobile_desc_btns a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  padding: 3px 0;
+  margin-right: 5px;
+  color: #0077ed;
+  border: 1px solid #0077ed;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.mobile_desc_btns a:hover {
+  background-color: #0077ed;
+  color: #fff;
+}
+
 /* ########## Section - Web ########## */
 #web .inner .wrapper {
   margin-top: 70px;
@@ -611,41 +766,52 @@ header nav .gnb a:hover::after {
 .web_tab_btns {
   position: relative;
   width: fit-content;
-  height: fit-content;
   margin: auto;
-  height: 50px;
+  height: 140px;
+  width: 1000px;
+  margin: auto;
 }
 .web_tab_btns_indicator {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20%;
-  height: 100%;
+  width: 33.333333%;
+  height: 50%;
   background-color: #f4f4f4;
   border-radius: 20px;
   transition: 0.5s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 input[id="web1"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
+  top: 0;
   left: 0;
 }
 input[id="web2"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
-  left: 20%;
+  top: 0;
+  left: 33.333333%;
 }
 input[id="web3"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
-  left: 40%;
+  top: 0;
+  left: 66.666666%;
 }
 input[id="web4"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
-  left: 60%;
+  top: 50%;
+  left: 0;
 }
 input[id="web5"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
-  left: 80%;
+  top: 50%;
+  left: 33.333333%;
+}
+input[id="web6"]:checked ~ .web_tab_btns .web_tab_btns_indicator {
+  top: 50%;
+  left: 66.666666%;
 }
 .web_tab_btns label {
   position: relative;
   float: left;
-  width: 250px;
+  width: calc(100% / 3);
   height: 50px;
+  margin: 10px 0;
   line-height: 50px;
   font-size: 28px;
   font-family: "Outfit", sans-serif;
@@ -676,6 +842,7 @@ input[id="web2"]:checked ~ .web_tab_btns label[for="web2"]::before,
 input[id="web3"]:checked ~ .web_tab_btns label[for="web3"]::before,
 input[id="web4"]:checked ~ .web_tab_btns label[for="web4"]::before,
 input[id="web5"]:checked ~ .web_tab_btns label[for="web5"]::before,
+input[id="web6"]:checked ~ .web_tab_btns label[for="web6"]::before,
 .web_tab_btns label:hover::before {
   top: -110%;
 }
@@ -684,6 +851,7 @@ input[id="web2"]:checked ~ .web_tab_btns label[for="web2"]::after,
 input[id="web3"]:checked ~ .web_tab_btns label[for="web3"]::after,
 input[id="web4"]:checked ~ .web_tab_btns label[for="web4"]::after,
 input[id="web5"]:checked ~ .web_tab_btns label[for="web5"]::after,
+input[id="web6"]:checked ~ .web_tab_btns label[for="web6"]::after,
 .web_tab_btns label:hover::after {
   top: 0%;
 }
@@ -703,11 +871,12 @@ input[id="web5"]:checked ~ .web_tab_btns label[for="web5"]::after,
   z-index: -1;
   transition: 1s;
 }
-input[id="web1"]:checked ~ .web_tab_content_outer .web_tab_content.traveluim,
-input[id="web2"]:checked ~ .web_tab_content_outer .web_tab_content.green,
-input[id="web3"]:checked ~ .web_tab_content_outer .web_tab_content.smeg,
-input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.netflix,
-input[id="web5"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
+input[id="web1"]:checked ~ .web_tab_content_outer .web_tab_content.travelium,
+input[id="web2"]:checked ~ .web_tab_content_outer .web_tab_content.shoe_station,
+input[id="web3"]:checked ~ .web_tab_content_outer .web_tab_content.green,
+input[id="web4"]:checked ~ .web_tab_content_outer .web_tab_content.smeg,
+input[id="web5"]:checked ~ .web_tab_content_outer .web_tab_content.netflix,
+input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   opacity: 1;
   visibility: visible;
   z-index: 1;
@@ -725,8 +894,12 @@ input[id="web5"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   transition-timing-function: ease-in-out;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-.web_tab_content.traveluim .web_tab_content_thum {
+.web_tab_content.travelium .web_tab_content_thum {
   background-image: url(../image/web_travelium_thum.jpg);
+  transition-duration: 4s;
+}
+.web_tab_content.shoe_station .web_tab_content_thum {
+  background-image: url(../image/web_shoe_station_thum.jpg);
   transition-duration: 4s;
 }
 .web_tab_content.green .web_tab_content_thum {
@@ -759,7 +932,7 @@ input[id="web5"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   font-weight: 400;
 }
 .web_tab_content_desc .title p {
-  margin-top: 20px;
+  margin-top: 10px;
   line-height: 1.7em;
   font-size: 18px;
   color: #777;
@@ -772,7 +945,7 @@ input[id="web5"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
 }
 .web_tab_content_desc .details span {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: #777;
 }
 .web_tab_content_desc .details span b {
@@ -819,7 +992,6 @@ input[id="web5"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
 }
 .web_tab_content_desc .btns a:nth-child(3) {
   font-family: "Pretendard-Light";
-  /* letter-spacing: 1px; */
   background-color: #fff;
   color: #555;
   border: 1px solid #555;
@@ -1037,4 +1209,9 @@ input[id="web5"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+.btn_top a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }

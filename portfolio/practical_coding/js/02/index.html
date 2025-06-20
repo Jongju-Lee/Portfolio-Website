@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Watch with JavaScript</title>
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="stop_watch">
+      <div class="btns">
+        <button class="btn_start">Start</button>
+        <button class="btn_stop">Stop</button>
+      </div>
+      <div class="time">
+        <div class="circle_outer">
+          <div class="circle">
+            <div class="circle_inner">
+              <span id="minutes">00</span>
+              <div class="dots">
+                <b>ㆍ</b>
+                <b>ㆍ</b>
+              </div>
+              <span id="seconds">00</span>
+              <div class="dots">
+                <b>ㆍ</b>
+                <b>ㆍ</b>
+              </div>
+              <span id="millis">00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="btn_reset">
+        <i class="bi bi-arrow-clockwise"></i>
+      </span>
+    </div>
+  </body>
+</html>

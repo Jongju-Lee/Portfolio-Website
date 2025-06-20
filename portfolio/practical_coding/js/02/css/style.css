@@ -1,0 +1,112 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  box-sizing: border-box;
+  outline: none;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #1f2342;
+  color: #fff;
+}
+.stop_watch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  padding: 35px;
+  text-align: center;
+}
+.stop_watch .btns {
+  display: flex;
+  width: 200px;
+  margin: auto;
+  box-shadow: 0 0 15px 10px #393e79;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 25px;
+}
+.btns button {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.btns button:hover,
+.btns button.checked {
+  color: #db656e;
+}
+.stop_watch .time {
+  width: 320px;
+  height: 320px;
+  margin: auto;
+  margin-top: 50px;
+}
+.time .circle_outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 10px #393e79;
+}
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  border: 5px solid #db656e;
+  border-radius: 50%;
+}
+.circle_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.circle_inner span {
+  font-size: 50px;
+}
+.circle_inner .dots {
+  position: relative;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.circle_inner .dots b {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+.circle_inner .dots b:nth-child(1) {
+  top: 35%;
+}
+.circle_inner .dots b:nth-child(2) {
+  top: 65%;
+}
+.stop_watch .btn_reset {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 45px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.stop_watch .btn_reset:hover {
+  color: #db656e;
+  transform: rotate(360deg);
+}
