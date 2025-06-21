@@ -161,10 +161,6 @@
   .timeline_item:first-child .timeline_item_peroid .right {
     right: 0;
   }
-    .timeline_item_desc span {
-    line-height: 1.7em;
-    font-size: 15px;
-  }
   .timeline_item_desc::before {
     top: -148px;
     left: 50%;
@@ -178,6 +174,13 @@
     height: 80px;
     transform: translateX(-50%);
     z-index: -1;
+  }
+  .timeline_item_desc span {
+  line-height: 1.7em;
+  font-size: 15px;
+  }
+  .timeline_item_desc span em:nth-of-type(2) {
+    display: block;
   }
   .timeline_item:last-child .timeline_item_desc::after {
     display: block;

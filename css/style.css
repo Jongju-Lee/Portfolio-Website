@@ -417,12 +417,6 @@ header nav .gnb a:hover::after {
   text-align: right;
   margin-right: 70px;
 }
-.timeline_item:first-child .timeline_item_peroid .right {
-  white-space: nowrap;
-  display: inline-block;
-  position: relative;
-  right: 75px;
-}
 .timeline_item_peroid span b {
   font-family: "Outfit", sans-serif;
   font-size: 22px;
@@ -963,6 +957,7 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
 }
 .epilogue_heading {
   padding: 70px;
+
 }
 .epilogue_heading h3 {
   font-family: "Pretendard-Regular";
@@ -979,6 +974,7 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   line-height: 1.7em;
   color: #555;
   font-family: "Pretendard-Light";
+  text-align: justify;
 }
 .epilogue_job_strength div:not(:last-child) {
   margin-bottom: 20px;
@@ -993,6 +989,7 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   margin-top: 5px;
   font-size: 15px;
   line-height: 1.7em;
+  text-align: justify;
 }
 /* ########## Fullscreen Navigation ########## */
 .fullscreen_navi {
