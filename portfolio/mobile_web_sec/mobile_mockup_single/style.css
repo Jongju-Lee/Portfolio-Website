@@ -1,0 +1,126 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+body {
+  margin: 0;
+  padding: 0;
+}
+.phone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  width: 400px;
+  height: 750px;
+  background-color: #fff;
+  border-radius: 35px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2), 0 40px 100px rgba(0, 0, 0, 0.4);
+}
+.phone_btns_left {
+  position: absolute;
+  top: 120px;
+  right: 100%;
+  width: 4px;
+  height: 200px;
+}
+.phone_btns_left :is(.sleep, .volume_up, .volume_down) {
+  position: absolute;
+  left: 0;
+  width: 3px;
+  background-color: #bbb;
+  border-right: 1px solid #999;
+  border-radius: 3px 0 0 3px;
+}
+.phone_btns_left .sleep {
+  top: 0;
+  left: 0;
+  height: 30px;
+}
+.phone_btns_left .volume_up {
+  top: 60px;
+  left: 0;
+  height: 50px;
+}
+.phone_btns_left .volume_down {
+  top: 125px;
+  left: 0;
+  height: 50px;
+}
+.phone_btns_right {
+  position: absolute;
+  top: 190px;
+  left: 100%;
+  width: 4px;
+  height: 70px;
+}
+.phone_btns_right .power {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  border-left: 1px solid #999;
+  background-color: #bbb;
+  border-radius: 3px;
+}
+.phone_inner {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border-radius: 25px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  pointer-events: none;
+}
+.phone_header {
+  position: absolute;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  height: 40px;
+  border-bottom: 1px solid #ddd;
+}
+.phone_header .camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.phone_header .camera::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background-color: #1b1464;
+  border-radius: 50%;
+}
+.phone_header .icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 14px;
+  transform: translateY(-50%);
+}
+.phone_header .icon i:last-child {
+  display: inline-block;
+  font-size: 20px;
+  transform: translateY(2px);
+}
+.phone .screen {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  /* width: calc(100% + 17px); */
+  width: 100%;
+  height: calc(100% - 40px);
+  background-color: #fff;
+  z-index: -1;
+  pointer-events: all;
+}

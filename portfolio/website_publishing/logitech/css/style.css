@@ -509,6 +509,7 @@ section.intro img {
 }
 .slider_items span.reverse {
   top: 30px;
+  bottom: auto;
 }
 .slider_items .item a {
   overflow: hidden;

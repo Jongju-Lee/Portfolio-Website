@@ -1,0 +1,33 @@
+/* ########## Responsive CSS ########## */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    min-height: auto;
+  }
+  .phone_wrapper {
+    display: block;
+    width: 360px;
+    margin: auto;
+    margin-bottom: -120px;
+  }
+  .phone {
+    width: inherit;
+    height: 675px;
+  }
+  .phone .screen img {
+    transform-origin: top center;
+    transform: scale(0.86) translateX(-50%);
+  }
+  .phone .screen.mockup_01 img,
+  .phone .screen.mockup_02 img,
+  .phone .screen.mockup_03 img {
+    left: 40%;
+  }
+  .phone .screen.mockup_04 img,
+  .phone .screen.mockup_05 img,
+  .phone .screen.mockup_06 img {
+    left: 0;
+    transform-origin: top left;
+    transform: scale(0.84);
+  }
+}
