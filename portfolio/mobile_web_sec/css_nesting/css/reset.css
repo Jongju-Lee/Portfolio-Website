@@ -24,3 +24,9 @@ ul {
 em {
   font-style: normal;
 }
+select {
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

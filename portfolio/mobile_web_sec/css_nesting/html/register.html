@@ -24,33 +24,123 @@
     </div>
     <!-- ########## //top_bar ########## -->
 
-    <div class="thum">
-      <img src="../images/join-header.jpg" alt="파스타">
-    </div>
-    
-    <div class="detail">
-      <div class="input_area">
+    <!-- ########## content ########## -->
+    <div class="content">
+      <form class="input_wrap" action="">
         <div class="input_box">
-          <input type="email" placeholder="이메일">
+          <label for="index_01">이메일</label>
+          <input type="email" id="index_01">
+          <span class="guide_text">로그인 아이디로 사용할 이메일을 입력해 주세요.</span>
         </div>
         
         <div class="input_box">
-          <input type="password" placeholder="비밀번호">
+          <label for="index_02">비밀번호</label>
+          <input type="password" id="index_02">
+          <span class="guide_text">
+            <i></i>
+            비밀번호는 영문, 숫자, 특수문자 포함 8~12자리
+          </span>
         </div>
 
         <div class="input_box">
-          <input type="password" placeholder="비밀번호 확인">
+          <label for="index_03">비밀번호 확인</label>
+          <input type="password" id="index_03">
         </div>
-      </div>
 
-      <span class="guide_text">
-        <em></em>
-        비밀번호는 영문, 숫자, 특수문자 포함 8~12자리
-      </span>
+        <div class="input_box">
+          <label for="index_04">이름</label>
+          <input type="text" id="index_04">
+        </div>
 
-      <div class="button_box">
-        <button class="btn_primary">회원가입</button>
-      </div>
+        <div class="input_cont">
+          <span>주소</span>
+          <div class="input_box arrayH">
+            <input type="text" id="index_05" placeholder="우편번호">
+            <button class="btn_primary">주소검색</button>
+          </div>
+          <div class="input_box">
+            <input type="text" id="index_06" placeholder="기본 주소">
+          </div>
+          <div class="input_box">
+            <input type="text" id="index_07" placeholder="나머지 주소">
+          </div>
+        </div>
+
+        <div class="input_cont">
+          <span>휴대폰 번호</span>
+          <div class="flex_box arrayH">
+            <div class="input_box">
+              <select name="phone_num_first" id="index_08">
+                <option value="010" selected>010</option>
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="019">019</option>
+              </select>
+            </div>
+            <em>-</em>
+            <div class="input_box">
+              <input type="text" id="index_09">
+            </div>
+            <em>-</em>
+            <div class="input_box">
+              <input type="text" id="index_10">
+            </div>
+            <button class="btn_primary">인증하기</button>
+          </div>
+        </div>
+
+        <div class="input_cont gender">
+          <span>성별</span>
+          <div class="arrayH">
+            <div class="input_box">
+              <input type="radio" name="gender" id="index_11">
+              <label for="index_11"><i></i><span>남자</span></label>
+            </div>
+            <div class="input_box">
+              <input type="radio" name="gender" id="index_12">
+              <label for="index_12"><i></i><span>여자</span></label>
+            </div>
+            <div class="input_box">
+              <input type="radio" name="gender" id="index_13">
+              <label for="index_13"><i></i><span>선택 안함</span></label>
+            </div>
+          </div>
+        </div>
+
+        <span class="line"></span>
+
+        <div class="agree">
+          <div class="input_box">
+            <b>이용약관동의</b>
+            <input type="checkbox" id="agree_all" name="agree" checked>
+            <label for="agree_all"><i></i><span>전체 동의합니다.</span></label>
+            <span>선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</span>
+          </div>
+          <div class="input_box">
+            <input type="checkbox" id="index_14" name="agree" checked>
+            <label for="index_14"><i></i><span>[필수] 이용약관 동의</span></label>
+          </div>
+          <div class="input_box">
+            <input type="checkbox" id="index_15" name="agree" checked>
+            <label for="index_15"><i></i><span>[필수] 개인정보 수집 및 이용 동의</span></label>
+          </div>
+          <div class="input_box">
+            <input type="checkbox" id="index_16" name="agree" checked>
+            <label for="index_16"><i></i><span>[선택] SMS (문자, 카카오톡 등)으로 혜택과 유용한 정보를 보내드려도 될까요?</span></label>
+          </div>
+          <div class="input_box">
+            <input type="checkbox" id="index_17" name="agree" checked>
+            <label for="index_17"><i></i><span>[선택] 이메일로 혜택과 정보를 보내드려도 될까요?</span></label>
+          </div>
+        </div>
+
+        <div class="button_box">
+          <p>본인은 만 14세 이상이며, <a href="#none">이용약관</a>, <a href="#non">개인정보 수집 및 이용 내용</a>을<br />확인 하였으며, 동의합니다.</p>
+          <button class="btn_primary">회원가입</button>
+        </div>
+      </form>
+
+      
     </div>
   </div>
 
