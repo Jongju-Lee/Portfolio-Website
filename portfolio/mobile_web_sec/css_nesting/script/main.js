@@ -76,7 +76,16 @@ $(document).ready(function () {
 
   // ########## MyFresh.html ##########
   $('.my_fresh .thum').on('click', function () {
-    location.href = "./my_page.html";
+    location.href = './my_page.html';
+  });
+
+  // ########## MyPage.html ##########
+  $('.my_page .btn_edit_info').on('click', function () {
+    location.href = './edit_user_info.html';
+  });
+
+  $('.my_page .btn_edit_address').on('click', function () {
+    location.href = './address_manage.html';
   });
 
   // ########## Slick Slider ##########

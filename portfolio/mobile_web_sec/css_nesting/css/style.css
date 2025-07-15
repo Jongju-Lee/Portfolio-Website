@@ -1175,8 +1175,7 @@ body {
             gap: 4px;
             & label {
               & span {
-                width: calc(100% - 100px);
-                word-break: keep-all;
+                width: calc(100% - 90px);
                 font-weight: 400;
                 line-height: 1.5em;
               }
@@ -1207,6 +1206,9 @@ body {
                 .sale_box {
                   font-weight: 500;
                   color: var(--darkGray);
+                  .sale {
+                    color: var(--roseRed);
+                  }
                 }
                 .price {
                   font-size: 18px;
@@ -1734,7 +1736,6 @@ body {
                 color: var(--roseRed);
               }
               & s {
-                font-size: 12px;
                 color: var(--lightBlack);
               }
               & b {
