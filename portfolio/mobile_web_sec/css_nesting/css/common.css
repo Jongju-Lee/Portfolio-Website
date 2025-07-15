@@ -264,6 +264,9 @@ input[type="checkbox"] {
       margin-right: 4px;
       flex-shrink: 0;
     }
+    &.blue i {
+      background-image: url(../images/check_02_bg.png);
+    }
   }
   &:checked + label i {
     background-position: right center;
@@ -281,6 +284,9 @@ input[type="radio"] {
       margin-right: 4px;
       background-image: url(../images/radio_01.png);
       background-position: left center;
+    }
+    &.blue i {
+      background-image: url(../images/radio_02.png);
     }
   } 
   &:checked + label i {

@@ -7,6 +7,9 @@ $(document).ready(function () {
   $('.top_bar .btn_back').on('click', function () {
     history.go(-1);
   });
+  $('.btn_alarm').on('click', function () {
+    location.href = "./my_page.html"
+  });
 
   // ########## Home.html ##########
   // 회사 정보 버튼 이벤트
@@ -16,7 +19,7 @@ $(document).ready(function () {
     $('html, body').animate({scrollTop:document.body.scrollHeight}, '500');
   });
   $('.home .slider_cont .desc .btn_secondary').on('click', function () {
-    location.href="./cart.html"
+    location.href = "./cart.html"
   });
 
   // ########## Detail.html ##########
@@ -26,7 +29,7 @@ $(document).ready(function () {
     $(this).siblings().removeClass('on');
   });
   // 하트 아이콘 이벤트
-  $('.detail .heart_icon').on('click', function () {
+  $('.detail .heart_icon, .detail .icon.wish span').on('click', function () {
     $(this).toggleClass('on');
   });
   // 위로 이동 버튼 이벤트
@@ -51,6 +54,29 @@ $(document).ready(function () {
     } else if ($(this).hasClass('btn_plus')) {
       $currentNum.text(currentNum + 1);
     }
+  });
+  // 전체 동의하기 버튼 이벤트
+  $('.cart input[name="check_all"]').on('click', function () {
+    if ($(this).is(':checked') === true) {
+      $('input[name="chk_cart"]').prop('checked', true)
+    } else if ($(this).is(':checked') === false) {
+      $('input[name="chk_cart"]').prop('checked', false)
+    };
+  });
+
+  // ########## Register.html ##########
+  // 전체 동의하기 버튼 이벤트
+  $('.register input[name="agree_all"]').on('click', function () {
+    if ($(this).is(':checked') === true) {
+      $('input[name="agree"]').prop('checked', true)
+    } else if ($(this).is(':checked') === false) {
+      $('input[name="agree"]').prop('checked', false)
+    };
+  });
+
+  // ########## MyFresh.html ##########
+  $('.my_fresh .thum').on('click', function () {
+    location.href = "./my_page.html";
   });
 
   // ########## Slick Slider ##########

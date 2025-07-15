@@ -349,9 +349,6 @@ body {
                 margin-bottom: 0;
               }
               input[type="radio"] {
-                & + label i {
-                  background-image: url(../images/radio_02.png);
-                }
                 &:checked + label i + span {
                   color: var(--cornBlue);
                   cursor: pointer;
@@ -386,7 +383,6 @@ body {
           }
           input[type="checkbox"] + label i {
             margin-top: 0;
-            background-image: url(../images/check_02_bg.png);
           }
           &:first-child > span:last-child {
             display: inline-block;
@@ -419,20 +415,14 @@ body {
 
 /* ########## find_pw.html ########## */
 .container.find_pw {
-  display: flex;
-  flex-direction: column;
-  .thum {
-    height: 350px;
-    & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  .top_bar {
+    position: relative;
   }
-  .detail {
+  .content {
     flex: 1;
     padding: 36px 20px;
     background-color: #f8f8f8;
+    height: 100%;
     .sub_title {
       font-weight: 500;
       font-size: 18px;
@@ -819,7 +809,7 @@ body {
     .input_area {
       border-top: 1px solid var(--cloudyGray);
       margin-top: 16px;
-      padding-top: 24px;
+      padding-top: 18px;
       .input_box {
         position: relative;
         :not(:last-child) {
@@ -1983,7 +1973,7 @@ body {
       }
       .slider_cont {
         margin-top: 12px;
-        width: 472px;
+        width: 140%;
         .item {
           margin-right: 8px;
           .thum {
@@ -2007,6 +1997,7 @@ body {
             }
             & span {
               display: flex;
+              align-items: center;
               gap: 4px;
               font-weight: 400;
               & em {
@@ -2015,9 +2006,6 @@ body {
               & s {
                 font-size: 12px;
                 color: var(--lightBlack);
-              }
-              & b {
-                margin-left: 4px;
               }
             }
             .review {
@@ -2104,7 +2092,7 @@ body {
       }
       .slider_cont {
         margin-top: 12px;
-        width: 472px;
+        width: 140%;
         .item {
           margin-right: 8px;
           .thum {
@@ -2133,6 +2121,7 @@ body {
             }
             & span {
               display: flex;
+              align-items: center;
               gap: 4px;
               font-weight: 400;
               & em {
@@ -2141,9 +2130,6 @@ body {
               & s {
                 font-size: 12px;
                 color: var(--lightBlack);
-              }
-              & b {
-                margin-left: 4px;
               }
             }
             .review {
@@ -2379,6 +2365,10 @@ body {
                     width: 22px;
                     height: 20px;
                     background-image: url(../images/share_01.png);
+                    transition: 0.25s;
+                    &.on {
+                      background-image: url(../images/share_01_1.png);
+                    }
                   }
                   &:nth-child(2) span {
                     width: 19px;
