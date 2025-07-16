@@ -27,27 +27,27 @@
     </div>
     
     <div class="detail">
-      <div class="input_area">
+      <form class="input_area" onsubmit="return false;">
         <div class="input_box">
-          <input type="email" placeholder="이메일">
+          <input type="email" placeholder="이메일" required>
           <span></span>
         </div>
         
         <div class="input_box">
-          <input type="password" placeholder="비밀번호">
+          <input type="password" placeholder="비밀번호" required>
           <span></span>
         </div>
-      </div>
+        <span class="guide_text">
+          <em></em>
+          비밀번호는 영문, 숫자, 특수문자 포함 8~12자리
+        </span>
+  
+        <div class="button_box">
+          <button class="btn_primary" onclick="location.href='./home.html'">임시 테스트 로그인</button>
+          <a class="forgot_pw" href="./find_pw.html">비밀번호를 잊으셨나요?</a>
+        </div>
+      </form>
 
-      <span class="guide_text">
-        <em></em>
-        비밀번호는 영문, 숫자, 특수문자 포함 8~12자리
-      </span>
-
-      <div class="button_box">
-        <button class="btn_primary" onclick="location.href='./home.html'">임시 테스트 로그인</button>
-        <a class="forgot_pw" href="./find_pw.html">비밀번호를 잊으셨나요?</a>
-      </div>
     </div>
   </div>
 

@@ -60,7 +60,7 @@ body {
       bottom: 0;
       left: 0;
       width: 100%;
-      background-image: url(../images/toast-back.jpg);
+      background-image: url(../images/toast-back.png);
       background-size: cover;
       border-radius: 20px 20px 0 0;
       .detail {
@@ -1719,13 +1719,13 @@ body {
             font-weight: 400;
             & > *:not(:last-child) {
               margin-bottom: 2px;
+            }
+            & p {
               overflow: hidden;
               text-overflow: ellipsis;
               display: -webkit-box;
               -webkit-line-clamp: 2;
               -webkit-box-orient: vertical;
-            }
-            & p {
               word-break: keep-all;
               font-weight: 500;
             }
@@ -1742,28 +1742,7 @@ body {
                 margin-left: 4px;
               }
             }
-            .star_rating {
-              gap: 6px;
-              align-items: center;
-              .star_box {
-                transform: translateY(-1px);
-                .star {
-                  width: calc(48px / 4.5);
-                  height: calc(48px / 4.5);
-                  background-image: url(../images/star_01.png);
-                  background-size: 100% 100%;
-                  &.half {
-                    background-image: url(../images/star_02.png);
-                  }
-                }
-              }
-              .review {
-                font-size: 13px;
-                .count {
-                  display: inline-block;
-                }
-              }
-            }
+            
             > b {
               font-weight: 600;
               color: var(--lawnGreen);
@@ -1939,7 +1918,7 @@ body {
         align-items: start;
         .title_box {
           & > div {
-            gap: 6px;
+            gap: 4px;
             .emoji {
               font-size: 16px;
             }
@@ -2009,28 +1988,13 @@ body {
                 color: var(--lightBlack);
               }
             }
-            .review {
-              cursor: pointer;
-              gap: 4px;
-              & i {
-                display: inline-block;
-                width: calc(40px / 2.5);
-                height: calc(40px / 2.5);
-                background-image: url(../images/comment_01.png);
-                background-size: 100% 100%;
-              }
-              & span {
-                color: var(--lightBlack);
-                font-weight: 400;
-              }
-            }
             .btn_secondary {
               display: flex;
               justify-content: center;
               align-items: center;
               gap: 4px;
               width: 100%;
-              margin-top: 4px;
+              margin-top: 6px;
               padding: 4px;
               border-color: var(--snowGray);
               & i {
@@ -2057,7 +2021,7 @@ body {
         align-items: start;
         .title_box {
           & > div {
-            gap: 6px;  
+            gap: 4px;  
             .emoji {
               font-size: 16px;
             }
@@ -2204,6 +2168,7 @@ body {
         width: calc(100% + 40px);
         line-height: 1.8em;
         padding: 16px 20px 36px;
+        margin-bottom: -20px;
         font-size: 12px;
         font-weight: 500;
         background-color: var(--cloudyGray);

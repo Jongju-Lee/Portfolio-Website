@@ -126,6 +126,43 @@ html {
   line-height: 13px;
 }
 
+/* ##### Star & Review ##### */
+.star_rating {
+  gap: 6px;
+  align-items: center;
+  .star_box {
+    transform: translateY(1px);
+    .star {
+      display: inline-block;
+      width: calc(48px / 3.2);
+      height: calc(48px / 3.2);
+      background-image: url(../images/star.png);
+      background-size: 100% 100%;
+      transform: translateY(-2px);
+    }
+    .score {
+      margin-left: 2px;
+      font-weight: 500;
+    }
+  }
+}
+
+.review {
+  cursor: pointer;
+  gap: 2px;
+  & i {
+    display: inline-block;
+    width: calc(40px / 2.5);
+    height: calc(40px / 2.5);
+    background-image: url(../images/comment_01.png);
+    background-size: 100% 100%;
+  }
+  & span {
+    color: var(--lightBlack);
+    font-weight: 500;
+  }
+}
+
 /* ##### LAYOUT ##### */
 .top_bar {
   position: fixed;
