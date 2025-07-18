@@ -15,7 +15,7 @@ $(document).ready(function () {
   // 회사 정보 버튼 이벤트
   $('.home .company_info button').on('click', function () {
     $(this).toggleClass('on');
-    $(this).siblings().toggleClass('on');
+    $(this).siblings().slideToggle();
     $('html, body').animate({scrollTop:document.body.scrollHeight}, '500');
   });
   $('.home .slider_cont .desc .btn_secondary').on('click', function () {
@@ -73,6 +73,10 @@ $(document).ready(function () {
       $('input[name="agree"]').prop('checked', false)
     };
   });
+  // 회원가입 버튼
+  $('.register .btn_register').on('click', function () {
+    location.href = './login.html';
+  });
 
   // ########## MyFresh.html ##########
   $('.my_fresh .thum').on('click', function () {
@@ -86,6 +90,13 @@ $(document).ready(function () {
 
   $('.my_page .btn_edit_address').on('click', function () {
     location.href = './address_manage.html';
+  });
+
+  // ########## Search.html ##########
+  $('.search .list_box .item').on('click', function () {
+    let word = $(this).text();
+    console.log(word);
+    $('.search .search_box input').val(word);
   });
 
   // ########## Slick Slider ##########

@@ -16,9 +16,7 @@ html {
       height: 100vh;
     }
     .content {
-      & > .title {
-        margin-top: 24px;
-      }
+      padding: 80px 20px 0;
     }
     &:not(.max_vh) .content {
       margin-bottom: 100px;
@@ -166,10 +164,13 @@ html {
 /* ##### LAYOUT ##### */
 .top_bar {
   position: fixed;
+  top: 0;
+  left: 0;
   padding: 12px 20px;
   width: 100%;
   z-index: 10;
   background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
   .btn_back {
     display: inline-block;
     width: 24px;

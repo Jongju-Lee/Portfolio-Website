@@ -247,11 +247,10 @@ body {
   }
 }
 
-
 /* ########## register.html ########## */
 .container.register {
   .content {
-    padding: 72px 20px 48px;
+    padding: 80px 20px 48px;
     background-color: #f8f8f8;
     .input_wrap {
       &  > .input_box {
@@ -415,12 +414,8 @@ body {
 
 /* ########## find_pw.html ########## */
 .container.find_pw {
-  .top_bar {
-    position: relative;
-  }
   .content {
     flex: 1;
-    padding: 36px 20px;
     background-color: #f8f8f8;
     height: 100%;
     .sub_title {
@@ -470,10 +465,8 @@ body {
 
 /* ########## my_fresh.html ########## */
 .container.my_fresh {
-  .top_bar {
-    position: relative;
-  }
   .content {
+    padding: 80px 0;
     .user_info {
       .profile {
         display: flex;
@@ -679,13 +672,8 @@ body {
 
 /* ########## my_page.html ########## */
 .container.my_page {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
     .profile {
-      margin-top: 12px;
       .thum {
         position: relative;
         width: fit-content;
@@ -792,11 +780,7 @@ body {
 
 /* ########## edit_info_check.html ########## */
 .container.edit_info_check {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
     .title {
       & h3 {
         font-size: 18px;
@@ -864,11 +848,7 @@ body {
 
 /* ########## edit_user_info.html ########## */
 .container.edit_user_info {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
     overflow: auto;
     .basic_info {
       & h3 {
@@ -1077,11 +1057,7 @@ body {
 
 /* ########## address_manage.html ########## */
 .container.address_manage {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
     .title {
       font-weight: 600;
     }
@@ -1120,16 +1096,10 @@ body {
   }
 }
 
-
 /* ########## cart.html ########## */
 .container.cart {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
     .title_box {
-      margin-top: 24px;
       border: 1px solid #03cf5d;
       text-align: center;
       padding: 8px;
@@ -1175,7 +1145,7 @@ body {
             gap: 4px;
             & label {
               & span {
-                width: calc(100% - 90px);
+                width: calc(100% - 100px);
                 font-weight: 400;
                 line-height: 1.5em;
               }
@@ -1309,15 +1279,9 @@ body {
   }
 }
 
-
-
 /* ########## payment.html ########## */
 .container.payment {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
     .arrayH {
       gap: 4px;
     }
@@ -1460,17 +1424,12 @@ body {
   }
 }
 
-
 /* ########## wish.html ########## */
 .container.wish {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
-    
+    padding-top: 64px;
     .list_box {
-      margin-top: 16px;
+      margin-top: 24px;
       .line {
         display: inline-block;
         margin: 20px 0;
@@ -1548,20 +1507,13 @@ body {
   }
 }
 
-
 /* ########## order_list.html ########## */
 .container.order_list {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
+    padding-top: 64px;
     .list_box {
-      margin-top: 36px;
       .item {
-        &:not(:last-child) {
-          margin-bottom: 24px;
-        }
+        margin-top: 24px;
         & > div:first-child {
           padding: 0 4px;
           justify-content: space-between;
@@ -1680,14 +1632,10 @@ body {
   }
 }
 
-
 /* ########## recent.html ########## */
 .container.recent {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
+    padding-top: 64px;
     .list_wrap {
       margin-top: 28px;
       .filter_box {
@@ -1774,14 +1722,10 @@ body {
   }
 }
 
-
 /* ########## search.html ########## */
 .container.search {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 0 20px;
+    padding-top: 64px;
     .search_recent {
       margin-top: 24px;
       .title_box {
@@ -1843,11 +1787,9 @@ body {
   }
 }
 
-
 /* ########## Home.html ########## */
 .container.home {
   .top_bar {
-    position: relative;
     .logo {
       display: inline-block;
       width: 133px;
@@ -1858,7 +1800,7 @@ body {
     }
   }
   .content {
-    padding: 0 20px;
+    padding-top: 50px;
     margin-bottom: 80px;
     .main_banner_box {
       border-radius: 12px;
@@ -2009,6 +1951,9 @@ body {
               }
             }
           }
+          &:hover .desc p {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -2132,6 +2077,9 @@ body {
               font-size: 14px;
               color: var(--darkBlack);
             }
+          }
+          &:hover .desc p {
+            text-decoration: underline;
           }
         }
       }
@@ -2261,13 +2209,10 @@ body {
   }
 }
 
-
 /* ########## Detail.html ########## */
 .container.detail {
-  .top_bar {
-    position: relative;
-  }
   .content {
+    padding: 52px 0;
     .tab_wrap {
       margin-top: 12px;
       .tab_btn_box {
@@ -2301,7 +2246,7 @@ body {
         margin-bottom: 60px;
         .tab_box {
           display: none;
-          margin-top: 16px;
+          /* margin-top: 16px; */
           &:nth-child(1) {
             .thum {
               width: 100%;
@@ -2426,7 +2371,7 @@ body {
             padding: 0 12px;
           }
           &:nth-child(3) {
-            padding: 6px 20px 16px;
+            padding: 24px 20px 16px;
             .review_header {
               align-items: start;
               gap: 16px;
@@ -2621,15 +2566,11 @@ body {
   }
 }
 
-
 /* ########## Category.html ########## */
 
 .container.category {
-  .top_bar {
-    position: relative;
-  }
   .content {
-    padding: 20px;
+    padding: 52px 20px;
     .category_list {
       & li {
         position: relative;
