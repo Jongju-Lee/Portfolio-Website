@@ -384,10 +384,10 @@ input[type="radio"] {
     &:nth-child(4) span em {
       background-image: url(../images/gnb_cart.png);
       &::after {
+        content: attr(data-count);
         position: absolute;
         top: -2px;
         right: -4px;
-        content: attr(data-count);
         width: 16px;
         height: 16px;
         border-radius: 50%;
