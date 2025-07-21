@@ -32,6 +32,21 @@ $(document).ready(function () {
   $('.detail .heart_icon, .detail .icon.wish span').on('click', function () {
     $(this).toggleClass('on');
   });
+  // 장바구니 버튼 클릭시 팝업 이벤트
+  $('.detail .btn_cart button').on('click', function () {
+    $('.detail .popup').addClass('on');
+  });
+  // 팝업 버튼 이벤트
+  $('.detail .popup_btn_box .btn_primary').on('click', function () {
+    location.href = './cart.html';
+  });
+  $('.detail .popup_btn_box .btn_secondary, .detail .popup').on('click', function () {
+    $('.detail .popup').removeClass('on');
+  });
+  $('.detail .popup_box').on('click', function (e) {
+    e.stopPropagation();
+  });
+
   // 위로 이동 버튼 이벤트
   $(window).on('scroll', function () {
     if ($(window).scrollTop() > 200) {
