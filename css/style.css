@@ -781,27 +781,27 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .web_tab_content.travelium .web_tab_content_thum {
-  background-image: url(../image/web_travelium_thum.jpg);
+  background-image: url(../image/website_pub/web_travelium_thum.jpg);
   transition-duration: 4s;
 }
 .web_tab_content.shoe_station .web_tab_content_thum {
-  background-image: url(../image/web_shoe_station_thum.jpg);
+  background-image: url(../image/website_pub/web_shoe_station_thum.jpg);
   transition-duration: 4s;
 }
 .web_tab_content.green .web_tab_content_thum {
-  background-image: url(../image/web_green_save_earth_thum.png);
+  background-image: url(../image/website_pub/web_green_save_earth_thum.png);
   transition-duration: 8s;
 }
 .web_tab_content.smeg .web_tab_content_thum {
-  background-image: url(../image/web_smeg_thum.png);
+  background-image: url(../image/website_pub/web_smeg_thum.png);
   transition-duration: 4s;
 }
 .web_tab_content.netflix .web_tab_content_thum {
-  background-image: url(../image/web_netflix_thum.png);
+  background-image: url(../image/website_pub/web_netflix_thum.png);
   transition-duration: 3s;
 }
 .web_tab_content.logitech .web_tab_content_thum {
-  background-image: url(../image/web_logitech_thum.png);
+  background-image: url(../image/website_pub/web_logitech_thum.png);
   transition-duration: 2.5s;
 }
 .web_tab_content_thum:hover {
