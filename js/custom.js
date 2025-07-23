@@ -45,6 +45,7 @@ $(function () {
     // Trigger, Top 버튼 숨김
   });
   /* ##### Slick. JS ##### */
+  // Practical Coding
   $(".practical_slider").slick({
     dots: true,
     arrows: true,
@@ -52,6 +53,25 @@ $(function () {
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+  // Project
+  $(".project_slider").slick({
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 480,

@@ -18,11 +18,11 @@
     <!-- Featherlight.js -->
     <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
     <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-    <!-- Custom CSS & JS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/custom.js"></script>
-    <!-- Responsive CSS -->
     <link rel="stylesheet" href="./css/responsive.css" />
+    <!-- Custom JS -->
+    <script src="./js/custom.js"></script>
   </head>
   <body>
     <div class="container">
@@ -44,7 +44,7 @@
       <!-- ########## Section - About ########## -->
       <section id="about">
         <div class="inner">
-          <h2 class="title">About me.</h2>
+          <h2>About me.</h2>
           <div class="wrapper">
             <div class="about_photo">
               <img src="./image/about/profile.png" alt="프로필 사진" />
@@ -166,11 +166,9 @@
                 <div class="skill_item_desc">
                   <h4>Responsive Web</h4>
                   <p>
-                    반응형 웹은 안정적인 기존방식인
-                    <span>position</span>, <span>float</span>, <span>media query</span> 등을
-                    활용한 반응형 웹 제작 경험이 충분하고, 좀 더 반응형에
-                    특화된 레이아웃이 필요한 경우 <span>Grid, Flex</span>를
-                    사용한 방식으로도 작업이 가능합니다.
+                    반응형 웹은 <span>position</span>, <span>float</span>, <span>media query</span>
+                    등 안정적인 <span>CSS</span> 속성을 활용한 반응형 웹 제작 경험이 충분하고, 좀 더 반응형에 특화된
+                    레이아웃이 필요한 경우 <span>Grid, Flex</span>를 사용한 방식으로도 작업이 가능합니다.
                   </p>
                 </div>
               </div>
@@ -339,36 +337,44 @@
       <section id="project">
         <div class="inner">
           <h2>Project.</h2>
-          <div class="tab_container"></div>
-          <input type="radio" name="project_tab" id="project_tab_01" checked />
-          <input type="radio" name="project_tab" id="project_tab_02" />
-          <input type="radio" name="project_tab" id="project_tab_03" />
-          <input type="radio" name="project_tab" id="project_tab_04" />
-          <input type="radio" name="project_tab" id="project_tab_05" />
-          <input type="radio" name="project_tab" id="project_tab_06" />
-          <div class="tab_btn_box">
-            <label for="project_tab_01"></label>
-            <label for="project_tab_02"></label>
-            <label for="project_tab_03"></label>
-            <label for="project_tab_04"></label>
-            <label for="project_tab_05"></label>
-          </div>
-          <div class="tab_box">
-            <div class="tab_item">
-              <div class="project_slider">
-                <a href="#none">
-                  <img src="" alt="">
-                </a>
-              </div>
-              <div class="proejct_desc">
-                <h3>프로젝트 타이틀</h3>
-                <ul>
-                  <li>프로젝트 설명 1</li>
-                  <li>프로젝트 설명 2</li>
-                  <li>프로젝트 설명 3</li>
-                  <li>프로젝트 설명 4</li>
-                  <li>프로젝트 설명 5</li>
-                </ul>
+          <div class="tab_container">
+            <input type="radio" name="project_tab" id="project_tab_01" checked />
+            <input type="radio" name="project_tab" id="project_tab_02" />
+            <input type="radio" name="project_tab" id="project_tab_03" />
+            <input type="radio" name="project_tab" id="project_tab_04" />
+            <input type="radio" name="project_tab" id="project_tab_05" />
+            <input type="radio" name="project_tab" id="project_tab_06" />
+            <div class="tab_btn_box">
+              <label for="project_tab_01">개인 프로젝트</label>
+              <label for="project_tab_02">동아 수학</label>
+              <label for="project_tab_03">천재 사회</label>
+              <label for="project_tab_04">동아 수학</label>
+              <label for="project_tab_05">천재 과학</label>
+              <label for="project_tab_06">천재 수학</label>
+            </div>
+            <div class="indicator"></div>
+
+            <div class="tab_box">
+              <div class="tab_item">
+                <div class="project_slider">
+                  <a href="#none">
+                    <img src="./image/project/cj_mid_sci_1/chun_sci_01.png" alt="중등 과학 1페이지">
+                  </a>
+
+                  <a href="#none">
+                    <img src="./image/project/cj_mid_sci_1/chun_sci_01.png" alt="중등 과학 1페이지">
+                  </a>
+                </div>
+                <div class="proejct_desc">
+                  <h3>프로젝트 타이틀</h3>
+                  <ul>
+                    <li>프로젝트 설명 1</li>
+                    <li>프로젝트 설명 2</li>
+                    <li>프로젝트 설명 3</li>
+                    <li>프로젝트 설명 4</li>
+                    <li>프로젝트 설명 5</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
