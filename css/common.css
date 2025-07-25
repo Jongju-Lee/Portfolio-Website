@@ -3,22 +3,40 @@
 /* Bootstrap Icons CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-/* ##### COMMON ##### */
+/* ########## Layout ########## */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  min-height: 100vh;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  color: #555;
+}
+.container {
+  min-height: inherit;
+}
 header nav,
 .inner {
   width: 1280px;
   margin: 0 auto;
 }
-section {
+.container > section {
   padding: 100px 0;
 }
+.container > section:nth-of-type(even) {
+  background-color: #fafafa;
+}
 section .inner > h2 {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--text_title);
   font-size: 32px;
   font-weight: 600;
 }
 /* ##### Slick.js Custom CSS ##### */
-/* Arrows */
+/* practical_slider */
 .practical_slider .slick-prev:before,
 .practical_slider .slick-next:before {
   font-family: "bootstrap-icons";
@@ -38,17 +56,56 @@ section .inner > h2 {
 .practical_slider .slick-next:before {
   content: "\F285";
 }
-/* Dots */
 .practical_slider .slick-dots {
   left: -5px;
   bottom: -40px;
 }
+.practical_slider .slick-dots li {
+  margin: 0 4px;
+}
 .practical_slider .slick-dots li button:before {
-  font-size: 12px;
+  font-size: 10px;
 }
 .practical_slider .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #00ad53;
+}
+/* project_slider */
+.project_slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  bottom: -24px;
+}
+.project_slider .slick-dots li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+}
+.project_slider .slick-dots li button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color_text_light);
+  opacity: 0.6;
+  padding: 0;
+  transition: 0.3s;
+}
+.project_slider .slick-dots li.slick-active button {
+  opacity: 1;
+  width: 32px;
+  height: 8px;
+  background-color: var(--color_main);
+  border-radius: 6px;
+}
+.project_slider .slick-dots li button:before,
+.project_slider .slick-dots li.slick-active button:before {
+  display: none;
 }
 
 /* ##### UIKit Custom CSS ##### */
@@ -83,7 +140,8 @@ section .inner > h2 {
   padding-bottom: 25px;
   font-size: 22px;
   font-weight: 700;
-  color: #555;
+  color: #aaa;
+  mix-blend-mode: difference;
   pointer-events: none;
 }
 .uk-transition-slide-bottom {

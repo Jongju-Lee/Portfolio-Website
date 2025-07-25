@@ -67,9 +67,11 @@ $(function () {
   // Project
   $(".project_slider").slick({
     dots: true,
-    arrows: true,
+    arrows: false,
     infinite: true,
-    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [

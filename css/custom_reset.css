@@ -1,13 +1,10 @@
 @charset "utf-8";
 
 /* Reset CSS */
-html {
-  scroll-behavior: smooth;
-}
 * {
   box-sizing: border-box;
   outline: none;
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard-Regular", sans-serif;
 }
 a, a:hover {
   text-decoration: none;
@@ -24,12 +21,8 @@ p {
   margin: 0;
   line-height: 1.5em;
 }
-body {
-  font-size: 15px;
-  line-height: 1.5em;
-  min-height: 100vh;
+ul {
   margin: 0;
-  width: 100vw;
-  overflow-x: hidden;
-  color: #555;
+  padding: 0;
+  list-style: none;
 }
