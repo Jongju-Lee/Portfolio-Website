@@ -276,7 +276,6 @@ header nav .gnb a:hover::after {
 }
 
 /* ########## Section - Project ########## */
-#project {}
 #project .tab_container {
   margin-top: 50px;
   padding: 35px 50px;
@@ -346,6 +345,7 @@ header nav .gnb a:hover::after {
 }
 #project .tab_item {
   opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -362,6 +362,7 @@ header nav .gnb a:hover::after {
 #project input[id="project_tab_05"]:checked ~ .tab_box .tab_item:nth-child(5),
 #project input[id="project_tab_06"]:checked ~ .tab_box .tab_item:nth-child(6) { 
   opacity: 1;
+  visibility: visible;
 }
 #project .project_slider {
   width: calc(1634px / 3);
