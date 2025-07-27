@@ -735,11 +735,11 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   transition-duration: 4s;
 }
 .web_tab_content.green .web_tab_content_thum {
-  background-image: url(../image/website_pub/web_green_save_earth_thum.png);
+  background-image: url(../image/website_pub/web_green_save_earth_thum.jpg);
   transition-duration: 8s;
 }
 .web_tab_content.smeg .web_tab_content_thum {
-  background-image: url(../image/website_pub/web_smeg_thum.png);
+  background-image: url(../image/website_pub/web_smeg_thum.jpg);
   transition-duration: 4s;
 }
 .web_tab_content.netflix .web_tab_content_thum {
@@ -747,7 +747,7 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   transition-duration: 3s;
 }
 .web_tab_content.logitech .web_tab_content_thum {
-  background-image: url(../image/website_pub/web_logitech_thum.png);
+  background-image: url(../image/website_pub/web_logitech_thum.jpg);
   transition-duration: 2.5s;
 }
 .web_tab_content_thum:hover {

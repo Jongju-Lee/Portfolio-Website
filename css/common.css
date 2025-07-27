@@ -154,6 +154,9 @@ section .inner > h2 {
 .uk-transition-fade {
   opacity: 1;
 }
+.uk-lightbox-button {
+  border-radius: 5px;
+}
 /* ##### Featherlight.js ##### */
 .featherlight .featherlight-content {
   width: 100%;

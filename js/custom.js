@@ -70,8 +70,8 @@ $(function () {
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 2500,
-    speed: 1000,
+    autoplaySpeed: 2000,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [

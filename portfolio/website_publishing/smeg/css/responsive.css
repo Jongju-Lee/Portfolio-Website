@@ -197,7 +197,7 @@
   }
   .mixer .learn_more {
     position: relative;
-    background: url(../image/main_item_visual_hmf01.png) no-repeat center right -50px /
+    background: url(../image/main_item_visual_hmf01.jpg) no-repeat center right -50px /
       cover;
   }
   .mixer .learn_more::after,
@@ -211,7 +211,7 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
   .wine_cooler .learn_more {
-    background: url(../image/main_item_visual_SCV115A.png) no-repeat center
+    background: url(../image/main_item_visual_SCV115A.jpg) no-repeat center
       center / cover;
   }
   /* ##### Heading ##### */

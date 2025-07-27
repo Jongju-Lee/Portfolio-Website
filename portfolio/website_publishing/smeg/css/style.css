@@ -330,7 +330,7 @@ header.active .trigger span {
 .sitemap_search {
   position: relative;
   height: 450px;
-  background: url(../image/full_menu_img.png) no-repeat bottom center / cover;
+  background: url(../image/full_menu_img.jpg) no-repeat bottom center / cover;
   padding: 20px;
 }
 .sitemap_search input {
@@ -508,11 +508,11 @@ section.intro iframe {
   background: url(../image/main_visual_02.jpg) no-repeat center center / cover;
 }
 .mixer .learn_more {
-  background: url(../image/main_item_visual_hmf01.png) no-repeat center center /
+  background: url(../image/main_item_visual_hmf01.jpg) no-repeat center center /
     cover;
 }
 .wine_cooler .learn_more {
-  background: url(../image/main_item_visual_SCV115A.png) no-repeat center center /
+  background: url(../image/main_item_visual_SCV115A.jpg) no-repeat center center /
     cover;
 }
 /* ##### Heading ##### */
