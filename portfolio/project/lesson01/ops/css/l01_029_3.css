@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.quizWrap {
+  margin-top: 30px;
+}
+
+.contBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 140px;
+}
+
+.img_box {
+width: 350px;
+}
+.img_box img {border-radius: 0;}
+
+/* ########## INPUT ########## */
+.input_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input_wrap .input_box {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.input_wrap .input_box span {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.topMenu .navigation .corner {
+  display: none;
+}
+
+.popup[data-use="imgPop"] .popContentContainer.long .popImg {
+  height: 580px;
+}

@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.list { padding: 25px 35px; border-radius: 30px; background-color: #ddd; margin-top: 20px; }
+.list p { font-family: 'pretendardB'; }
+.list hr { background-color: #000; margin: 20px auto; }
+.list ul { display: flex; flex-wrap: wrap; row-gap: 18px; }
+.list ul li { display: flex; gap: 12px; align-items: center; width: calc(100% / 3); }
+.list ul li::before { content: ""; display: inline-block; width: 6px; height: 6px; background-color: #000; border-radius: 50%; }

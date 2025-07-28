@@ -1,0 +1,282 @@
+{
+    "grade": 1,
+    "subject": "중등 과학 지도서",
+    "season": 1,
+    "contents": [
+        {
+            "index": 1,
+            "title": "Ⅰ 과학과 인류의 지속가능한 삶",
+            "textbookPage": 7,
+            "src": "./",
+            "active": true,
+            "chapters": [
+                {
+                    "index": 1,
+                    "title": "단원 도입",
+                    "textbookPage": "7",
+                    "active": true,
+                    "corners": [
+                        {
+                            "index": 1,
+                            "title": "대단원 목차",
+                            "textbookPage": "7",
+                            "active": true,
+                            "htmls": [
+                                {
+                                    "step": "",
+                                    "type": "act",
+                                    "title": "대단원 목차",
+                                    "textbookPage": "7",
+                                    "file": "l01_007_1"
+                                }
+                            ]
+                        },
+                        {
+                            "index": 2,
+                            "title": "대단원 게임",
+                            "textbookPage": "7",
+                            "active": true,
+                            "htmls": [
+                                {
+                                    "step": "",
+                                    "type": "act",
+                                    "title": "대단원 게임",
+                                    "textbookPage": "7",
+                                    "file": "l01_007_2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "title": "<em>1</em> 과학과 인류의 지속가능한 삶",
+                    "textbookPage": "8~17",
+                    "active": true,
+                    "corners": [
+                        {
+                            "index": 1,
+                            "title": "<p class='smallMenuText2'><span>01</span> 과학적 탐구 방법</p>",
+                            "textbookPage": "8~9",
+                            "active": true,
+                            "htmls": [
+                                {
+                                    "step": "",
+                                    "type": "act",
+                                    "title": "중단원 도입 영상",
+                                    "textbookPage": "8~9",
+                                    "file": "l01_008_1"
+                                },
+                                {
+                                    "step": "",
+                                    "type": "act",
+                                    "title": "궁금해",
+                                    "textbookPage": "8~9",
+                                    "file": "l01_008_2"
+                                },
+                                {
+                                    "step": "",
+                                    "type": "act",
+                                    "title": "이전에 배웠어요",
+                                    "textbookPage": "8~9",
+                                    "file": "l01_008_3"
+                                },
+                                {
+                                    "step": "",
+                                    "type": "act",
+                                    "title": "이전에 배웠어요",
+                                    "textbookPage": "8~9",
+                                    "file": "l01_008_4"
+                                },
+                                {
+                                    "step": "도입",
+                                    "type": "act",
+                                    "title": "이 단원에서 나는",
+                                    "textbookPage": "10~11",
+                                    "file": "l01_010_1"
+                                },
+                                {
+                                    "step": "도입",
+                                    "type": "act",
+                                    "title": "소단원 도입 애니메이션",
+                                    "textbookPage": "10~11",
+                                    "file": "l01_010_2"
+                                },
+                                {
+                                    "step": "도입",
+                                    "type": "act",
+                                    "title": "개념 영상",
+                                    "textbookPage": "10~11",
+                                    "file": "l01_010_3"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "학습 자료1",
+                                    "subTitle": "학습 자료1_각기병",
+                                    "textbookPage": "10~11",
+                                    "file": "l01_010_4"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "학습 자료2",
+                                    "subTitle": "학습 자료2_에이크만",
+                                    "textbookPage": "10~11",
+                                    "file": "l01_010_5"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "학습 자료3",
+                                    "subTitle": "학습 자료3_문제 인식",
+                                    "textbookPage": "10~11",
+                                    "file": "l01_010_6"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "학습 자료4",
+                                    "subTitle": "학습 자료4_가설 설정",
+                                    "textbookPage": "12~13",
+                                    "file": "l01_012_1"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "학습 자료5",
+                                    "subTitle": "학습 자료5_탐구 설계",
+                                    "textbookPage": "12~13",
+                                    "file": "l01_012_2"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "Q",
+                                    "textbookPage": "12~13",
+                                    "file": "l01_012_3"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "학습 자료6",
+                                    "subTitle": "학습 자료6_탐구 수행",
+                                    "textbookPage": "14~15",
+                                    "file": "l01_014_1"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "학습 자료7",
+                                    "subTitle": "학습 자료7_탐구 결과 해석",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_016_1"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "탐구",
+                                    "subTitle": "탐구_주변에서 탐구할 문제를 발견하고 탐구 계획서 작성하기",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_016_a_1"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "탐구",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_016_b_1"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "탐구",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_016_b_2"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "탐구",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_016_c_1"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "탐구",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_016_c_2"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "탐구",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_016_c_3"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "탐구",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_016_d_1"
+                                },
+                                {
+                                    "step": "전개",
+                                    "type": "act",
+                                    "title": "탐구",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_016_e_1"
+                                },
+                                {
+                                    "step": "정리",
+                                    "type": "act",
+                                    "title": "스스로 확인하기",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_017_1"
+                                },
+                                {
+                                    "step": "정리",
+                                    "type": "act",
+                                    "title": "스스로 확인하기",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_017_2"
+                                },
+                                {
+                                    "step": "정리",
+                                    "type": "act",
+                                    "title": "이것만은 꼭",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_017_3"
+                                },
+                                {
+                                    "step": "정리",
+                                    "type": "act",
+                                    "title": "OX 문제",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_017_4"
+                                },
+                                {
+                                    "step": "정리",
+                                    "type": "act",
+                                    "title": "핵심 정리",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_017_5"
+                                },
+                                {
+                                    "step": "정리",
+                                    "type": "act",
+                                    "title": "다음 시간에는",
+                                    "textbookPage": "16~17",
+                                    "file": "l01_017_6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+

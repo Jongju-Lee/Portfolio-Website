@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+  <title>l01_017_4</title>
+
+  <link rel="stylesheet" href="include/contentsUI/css/index.css">
+  <link rel="stylesheet" href="include/css/common.css">
+  <link rel="stylesheet" href="./css/game.css">
+  <link rel="stylesheet" href="./css/game_quest.css">
+
+  <script src="include/contentsUI/js/config.js"></script>
+  <script src="include/contentsUI/js/index.js"></script>
+  <script src="include/contentsUI/js/contentsUI.js"></script>
+  <script src="include/js/config.js"></script>
+  <script src="include/js/pageManager.js"></script>
+  <script src="include/js/common.js"></script>
+  <script src="js/l01_017_4.js"></script>
+  <script src="js/game.js"></script>
+</head>
+<body>
+  <div class="wrap js-scale">
+    <main class="pageContainer">
+      <!-- 풍선이 필요해 게임 페이지 -->
+      <!-- intro -->
+      <div class="bgContainer intro on">
+        <div class="game_title">
+          <div class="intro_text">
+            <img src="./images/game/balloon/Intro_txt.png" alt="">
+          </div>
+        </div>
+
+        <button class="btn_help"></button>
+        <button class="btn_start"></button>
+      </div>
+      <!-- //intro -->
+      
+      <!-- main -->
+      <div class="bgContainer main">
+        <div class="quiz_box">
+          <img src="" class="quiz_num" alt="">
+          <div class="quiz_text"></div>
+        </div>
+
+        <div class="quizContainer">
+          <div class="balloon">
+            <img src="" alt="">
+          </div>
+          <div class="balloon">
+            <img src="" alt="">
+          </div>
+        </div>
+
+        <div class="main_bottom">
+          <div class="clock"></div>
+          <div class="time_text"></div>
+          <!-- timer -->
+          <div class="timer">
+            <p>
+              <img src="./images/game/balloon/game_Bottom_clock_br2.png" alt="">
+            </p>
+          </div>
+
+          <!-- life -->
+          <div class="life">
+            <p class="life_01 on">
+              <img src="./images/game/balloon/game_Bottom_life1.png" alt="">
+            </p>
+
+            <p class="life_02 on">
+              <img src="./images/game/balloon/game_Bottom_life1.png" alt="">
+            </p>
+
+            <p class="life_03 on">
+              <img src="./images/game/balloon/game_Bottom_life1.png" alt="">
+            </p>
+          </div>
+        </div>
+
+        <div class="mouseCursor">
+          <img src="./images/game/balloon/apng_game_ct_basic.png" alt="">
+        </div>
+      </div>
+      <!-- //main -->
+
+      <!-- bgm 버튼 -->
+      <div class="btn_bgm">
+        <button class="on"></button>
+        <button class="off"></button>
+      </div>      
+
+      <!-- popup -->
+      <!-- 게임방법 팝업 -->
+      <section class="help_pop">
+        <div class="help_pop_img">
+          <img src="./images/game/balloon/how_txt.png" alt="">
+        </div>
+
+        <div class="how_ct"></div>
+
+        <span class="help_pop_close"></span>
+      </section>
+      
+      <!-- 게임 완료 팝업 -->
+      <section class="end_pop">
+        <div class="success"></div>
+        <div class="fail"></div>
+        
+        <button class="gameclear_start"></button>
+        <button class="gameover_replay"></button>
+      </section>
+      <!-- //popup -->
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+.img_box {width: 250px; left: 30px; margin-left: auto;}
+
+.popup[data-use="imgPop"] .popContentContainer.long .popImg { height: 600px; }

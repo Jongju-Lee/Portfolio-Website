@@ -1,0 +1,24 @@
+@charset "utf-8";
+.map_bg {background-image: url(../images/l01_028_1/01_028_1_1.png);}
+
+.openMindMapBtn1 {top: 110px;  left: 565px;}
+.openMindMapBtn2 {top: 130px; left: 669px;}
+.openMindMapBtn3 {top: 250px; left: 630px;}
+
+.dragItem[data-idx="1"] {width: calc(229px / 2); height: calc(165px / 2); background-image: url(../images/l01_028_1/drag01.png);}
+.dragItem[data-idx="2"] {width: calc(227px / 2); height: calc(197px / 2); background-image: url(../images/l01_028_1/drag02.png);}
+.dragItem[data-idx="3"] {width: calc(218px / 2); height: calc(186px / 2); background-image: url(../images/l01_028_1/drag03.png);}
+.dragItem[data-idx="4"] {width: calc(222px / 2); height: calc(176px / 2); background-image: url(../images/l01_028_1/drag04.png);}
+
+
+.droparea {z-index: 2; }
+.droparea[data-idx="1"] {width: 100px; height: 80px; top: 247px; left: 711px;}
+.droparea[data-idx="2"] {width: 90px; height: 85px; top: 319px; left: 865px;}
+.droparea[data-idx="3"] {width: 70px; height: 59px; top: 407px; left: 645px;}
+.droparea[data-idx="4"] {width: 85px; height: 71px; top: 153px; left: 318px;}
+
+
+
+.droparea.dropped .dragItem {  width: 100%; height: 100%; background-size: contain; background-repeat: no-repeat;}
+
+.topMenu .navigation .corner {display: none;}

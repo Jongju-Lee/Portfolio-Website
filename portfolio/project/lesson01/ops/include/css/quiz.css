@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+/************************* default ************************/
+input[type="checkbox"] { display: none; }
+
+.quizAlert {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    overflow: hidden;
+}
+.quizAlert > div {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.quizAlert.on {display: block;}
+.quizAlert[data-alert-type="solve"] .solve,
+.quizAlert[data-alert-type="correct"] .correct,
+.quizAlert[data-alert-type="first"] .first,
+.quizAlert[data-alert-type="second"] .second,
+.quizAlert[data-alert-type="answer"] .answer,
+.quizAlert[data-alert-type="example"] .example {
+    display: block;
+    animation: showAlert .3s ease-in-out forwards;
+    -webkit-animation: showAlert .3s ease-in-out forwards;
+}
+@keyframes showAlert {
+    0% {transform: scale(0.2);}
+    80% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+/* buttons */
+.quizButton {display: none;}
+.quizButton.on {display: block;}
+
+/* quiz items */
+.quizInput.complete,
+.quizSelect.complete,
+.quizChoice.complete,
+.quizTruefalse.complete,
+.quizCheckbox.complete,
+.dragItem.complete,
+.droparea.complete,
+.draglineItem.complete {
+    pointer-events: none;
+    cursor: default;
+}
+
+/* select */
+.quizSelectList {display: none;}
+.quizSelect.on .quizSelectList {
+    display: block;
+}
+
+/* toggle */
+.quizContainer[data-quiz-type="toggle"] .quizItemBtn {display: none;}
+
+/* dragdrop */
+.quizContainer[data-quiz-type="dragdrop"] {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.quizContainer[data-quiz-type="dragdrop"] .js-quizItem.isDragging {
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    outline: 1px solid tomato;
+}
+.quizContainer[data-quiz-type="dragdrop"] .js-quizItem.freeDrag {
+    position: absolute;
+}
+.quizContainer[data-quiz-type="dragdrop"] .js-quizItem.nonEvent {
+    opacity: .5;
+    pointer-events: none;
+}
+
+/* dragline */
+.quizContainer[data-quiz-type="dragline"] {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.quizContainer[data-quiz-type="dragline"] .quizItemBtn.hide {display: none;}
+.draglineItem {
+  /* position: absolute; */
+    pointer-events: auto;
+    cursor: pointer;
+}
+.draglineItem:before {
+    content: '';
+    --size: -20px;
+    position: absolute;
+    top: var(--size);
+    left: var(--size);
+    right: var(--size);
+    bottom: var(--size);
+    cursor: default;
+}
+.quizSvgContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* pointer-events: none; */
+}
+
+/* ############### CUSTOM ###############  */
+/* ########## 서술형 퀴즈 ########## */
+[data-quiz-type="essay"] .textarea_box {
+    position: relative;
+    padding: 10px;
+    background-color: var(--input_bg);
+    border: 3px solid var(--input_border);
+    border-radius: 20px;
+}
+[data-quiz-type="essay"] .textarea_box textarea {
+    width: calc(100% - 6px);
+    background-color: transparent;
+    border: none;
+    resize: none;
+    text-align: justify;
+    font-family: 'pretendardB';
+    font-size: 36px;
+}
+[data-quiz-type="essay"] .textarea_box textarea::placeholder {
+    display: inline-block;
+    background-image: url(../../include/images/pencil_icon.png);
+    background-repeat: no-repeat;
+    background-size: 23px 30px;
+}
+[data-quiz-type="essay"] .textarea_box textarea:focus::placeholder {
+    opacity: 0;
+} 
+[data-quiz-type="essay"] .textarea_box .quizTarget {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background-color: var(--input_bg);
+    color: var(--color_answer);
+    font-family: 'pretendardB';
+    text-align: justify;
+    overflow: auto;
+}
+[data-quiz-type="essay"] .textarea_box .quizTarget.on {
+    display: block;
+}
+[data-quiz-type="essay"] .textarea_box .quizTarget p {
+    display: flex;
+    gap: 10px;
+}
+[data-quiz-type="essay"] .textarea_box .quizTarget p:not(:last-child) {
+    margin-bottom: 10px;
+}
+[data-quiz-type="essay"] .textarea_box .quizTarget p span {
+    flex-shrink: 0;
+}
+
+/* ########## 토글 퀴즈 ########## */
+[data-quiz-type="toggle"] .word_box {
+    display: inline-flex;
+}
+[data-quiz-type="toggle"] .word_box .toggle_box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin: 0 3px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+[data-quiz-type="toggle"] .word_box .toggle_box .toggle_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #777;
+}
+[data-quiz-type="toggle"] .word_box .toggle_box.on .toggle_cover {
+    display: none;
+}
+[data-quiz-type="toggle"] .word_box .toggle_box.on .answer {
+    color: var(--color_answer);
+}
+
+/* ########## 초이스 퀴즈 ########## */
+[data-quiz-type="choice"] .quizChoice {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+[data-quiz-type="choice"] .quizChoice label {
+    position: relative;
+    cursor: pointer;
+}
+[data-quiz-type="choice"] .quizChoice label.selected i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 25px);
+    height: calc(100% + 12px);
+    transform: translate(-50%, -50%);
+    border: 3px solid red;
+    border-radius: 50%;
+}
+[data-quiz-type="choice"].QUIZ_FINISH .quizChoice label.isAnswer i {
+    border-color: var(--color_answer);
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+  <title>l01_012_3</title>
+
+  <link rel="stylesheet" href="include/contentsUI/css/index.css">
+  <link rel="stylesheet" href="include/css/common.css">
+  <link rel="stylesheet" href="./css/l01_012_3.css">
+
+  <script src="include/contentsUI/js/config.js"></script>
+  <script src="include/contentsUI/js/index.js"></script>
+  <script src="include/contentsUI/js/contentsUI.js"></script>
+  <script src="include/js/config.js"></script>
+  <script src="include/js/pageManager.js"></script>
+  <script src="include/js/common.js"></script>
+</head>
+<body>
+  <div class="wrap js-scale hide_corner">
+    <main class="pageContainer">
+      <section class="contContainer">
+        <!-- Q 페이지 -->
+        <div class="contentBox Qpage">
+          <div class="quiz_wrap">
+            <!-- question_box -->
+            <div class="question_box">
+              <span class="num q_icon"></span>
+              <div class="question_text">
+                다음 대화를 참고하여 14쪽 탐구 계획서의 탐구 순서를 채우고, 완성한 탐구 계획서를 공유 플랫폼에 올려서 친구들과 의견을 나누어 보자.
+              </div>
+            </div>
+            <!-- //question_box -->
+            <!-- quiz_box -->
+            <div class="quiz_box">
+              <div class="img_box">
+                <img src="./images/l01_012_3/l01_012_3_2.png" alt="">
+                <button class="js-openPopBtn zoom_img_btn" data-pop-idx="1"></button>
+              </div>
+            </div>
+            <!-- //quiz_box -->
+            
+            <!-- 버튼 박스 -->
+            <div class="bot_btn_box">
+              <button class="js-openPopBtn ex_ans_btn" data-pop-idx="2"></button>
+            </div>
+            <!-- //버튼 박스 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- popup -->
+      <!-- 이미지 확대 팝업 -->
+        <section class="js-popupContent popup" data-pop-idx="1" data-use="zoomImg">
+          <div class="popContentContainer">
+            <div class="img_box">
+              <img src="./images/l01_012_3/l01_012_3_2.png" alt="">
+            </div>
+          </div>
+          <button class="js-closePopBtn closePopBtn"></button>
+        </section>
+
+      <!-- 예시 팝업 -->
+      <section class="js-popupContent popup" data-pop-idx="2" data-use="exAnswer">
+        <div class="popContentContainer">
+          <div class="ex_ans_box">
+            <div class="img_box">
+              <img src="./images/l01_012_3/l01_012_3_1.png" alt="">
+              <div class="answer_box">
+                <div class="answer">
+                  <span>1.</span>
+                  <p>네 개의 비커에 각각 같은 양의 이온 음료, 탄산음료, 우유, 물을 넣는다.</p>
+                </div>
+                <div class="answer">
+                  <span>2.</span>
+                  <p>온도계로 비커 속 음료수의 온도를 측정하여 온도가 모두 같아질 때까지 기다린다.</p>
+                </div>
+                <div class="answer">
+                  <span>3.</span>
+                  <p>각각의 음료수에 크기와 모양이 같은 얼음을 다섯 개씩 넣는다.</p>
+                </div>
+                <div class="answer">
+                  <span>4.</span>
+                  <p>음료수에 넣은 얼음이 모두 녹을 때까지 걸린 시간을 각각 측정하여 기록한다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="js-closePopBtn closePopBtn"></button>
+        </div>
+      </section>
+      <!-- //popup -->
+    </main>
+  </div>
+</body>
+</html>

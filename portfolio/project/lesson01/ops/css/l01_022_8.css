@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.input_wrap {
+    margin-left: 30px;
+}
+
+.topMenu .navigation .chapter,
+.topMenu .navigation .corner {display: none;}
+
+.sub_title { position: absolute; top: 30px; left: 240px; display: flex; align-items: center; gap: 10px; font-size: 30px;}
+.sub_title em {color: #9e64ff; font-size: 38px;}
+
+.subTit{color: #395580;}

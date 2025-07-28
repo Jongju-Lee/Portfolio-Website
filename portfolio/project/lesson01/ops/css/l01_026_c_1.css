@@ -1,0 +1,10 @@
+@charset "utf-8";
+.actContent {display: flex; justify-content: center; align-items: center; background-color: #f3e8dd; padding: 10px; }
+
+.toggleItem {pointer-events: none;  }
+.toggleItem.on {border-bottom: 2px solid red; background-color: #e6a2a2;}
+
+.textBox {  font-size: 30px; text-align: justify; line-height: 45px; }
+.textBox> div:nth-child(1) {margin-bottom: 5px;}
+
+.img_box {width: 341px; flex-shrink: 0; }

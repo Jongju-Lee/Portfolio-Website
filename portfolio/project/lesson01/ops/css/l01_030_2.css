@@ -1,0 +1,14 @@
+@charset "utf-8";
+.text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 38px;}
+
+.input_wrap {
+    width: 1170px;
+    margin: 30px 0 30px 25px;
+}
+
+.topMenu .navigation .corner {display: none;}
+
+.sub_title { position: absolute; top: 30px; left: 240px; display: flex; align-items: center; gap: 10px; font-size: 30px;}
+.sub_title em {color: #9e64ff; font-size: 38px;}
+
+.quizcheckPage .quiz_title .noNum {margin-top: 25px;}

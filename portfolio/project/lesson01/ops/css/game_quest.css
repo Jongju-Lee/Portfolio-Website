@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.quiz_text[data-type='type2'] {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.quiz_text[data-type="type2"] p {
+    display: inline-block;
+}
+.quiz_text[data-type="type2"] span {
+    height: 170px;
+    display: inline-flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.quiz_text[data-type="type2"] span img {
+    width: auto; 
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
