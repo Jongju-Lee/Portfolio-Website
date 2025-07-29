@@ -34,9 +34,6 @@
     width: 100%;
     height: 100%;
   }
-  .uk-position-bottom {
-    color: #333;
-  }
   /* ##### Featherlight.js ##### */
   .featherlight .featherlight-close-icon {
     top: 60px;
@@ -283,6 +280,53 @@
   }
   .mobile_desc_btns a:nth-child(odd) {
     margin-right: 5px;
+  }
+  /* ########## Section - Project ########## */
+  #project .tab_container {
+    padding: 25px 20px 30px;
+  }
+  #project .tab_btn_box label {
+    padding: 0;
+    font-size: 18px;
+  }
+  #project .tab_btn_box label:nth-child(1)::after {
+  content: "1";
+  }
+  #project .tab_btn_box label:nth-child(2)::after {
+    content: "2";
+  }
+  #project .tab_btn_box label:nth-child(3)::after {
+    content: "3";
+  }
+  #project .tab_btn_box label:nth-child(4)::after {
+    content: "4";
+  }
+  #project .tab_btn_box label:nth-child(5)::after {
+    content: "5";
+  }
+  #project .tab_btn_box label:nth-child(6)::after {
+    content: "6";
+  }
+  #project .tab_box {
+    width: 100%;
+    height: auto;
+  }
+  #project .tab_item {
+    flex-direction: column;
+  }
+  #project .project_slider,
+  #project .tab_item .img_box {
+    width: 100%;
+    height: auto;
+  }
+  #project .project_desc > div p {
+    margin-top: 20px;
+  }
+  #project .project_desc ul {
+    margin-top: 20px;
+  }
+  #project .project_desc ul li {
+    text-align: justify;
   }
   /* ########## Section - Web ########## */
   #web {
