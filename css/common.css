@@ -75,7 +75,7 @@ section .inner > h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  /* gap: 15px; */
   bottom: -24px;
 }
 .project_slider .slick-dots li {
@@ -85,11 +85,12 @@ section .inner > h2 {
   margin: 0;
   width: fit-content;
   height: fit-content;
+  padding: 8px;
 }
 .project_slider .slick-dots li button {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: var(--color_text_light);
   opacity: 0.6;
@@ -113,6 +114,9 @@ section .inner > h2 {
 .uk-lightbox {
   background: #fff;
 }
+.uk-lightbox.uk-open {
+  pointer-events: none;
+}
 .uk-lightbox-toolbar {
   background-color: transparent;
 }
@@ -135,6 +139,7 @@ section .inner > h2 {
 }
 .uk-transition-slide-top {
   --uk-translate-y: 0;
+  pointer-events: all;
 }
 .uk-position-bottom {
   padding-bottom: 25px;
@@ -156,6 +161,7 @@ section .inner > h2 {
 }
 .uk-lightbox-button {
   border-radius: 5px;
+  pointer-events: all;
 }
 /* ##### Featherlight.js ##### */
 .featherlight .featherlight-content {

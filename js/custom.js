@@ -44,6 +44,12 @@ $(function () {
     $(".trigger, .btn_top").removeClass("scroll");
     // Trigger, Top 버튼 숨김
   });
+  /* ##### Company Project - Light Box ##### */
+  $(".project_slider a img").click(function () {
+    // 슬라이더 아이템 클릭(LightBox 열림)
+    $(".trigger, .btn_top").removeClass("scroll");
+    // Trigger, Top 버튼 숨김
+  });
   /* ##### Slick. JS ##### */
   // Practical Coding
   $(".practical_slider").slick({
@@ -80,6 +86,10 @@ $(function () {
         settings: {
           dots: false,
           arrows: false,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          speed: 300,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
