@@ -313,6 +313,7 @@
   }
   #project .tab_item {
     flex-direction: column;
+    height: fit-content;
   }
   #project .project_slider,
   #project .tab_item .img_box {
@@ -327,6 +328,9 @@
   }
   #project .project_desc ul li {
     text-align: justify;
+  }
+  #project .tab_item:not(:first-child) .project_desc ul li:last-child span {
+    letter-spacing: -0.5px;
   }
   /* ########## Section - Web ########## */
   #web {

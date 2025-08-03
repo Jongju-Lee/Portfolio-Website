@@ -121,10 +121,11 @@ section .inner > h2 {
   background-color: transparent;
 }
 .uk-lightbox-toolbar-icon {
-  color: #fff;
-  background-color: crimson;
-  border-radius: 50%;
+  opacity: 0.7;
   padding: 15px;
+  border-radius: 50%;
+  background-color: crimson;
+  color: #fff;
   transition: 0.2s;
 }
 .uk-lightbox-toolbar-icon:hover {

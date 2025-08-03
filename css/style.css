@@ -305,13 +305,13 @@ header nav .gnb a:hover::after {
   content: "초등 5, 6 수학";
 }
 #project .tab_btn_box label:nth-child(3)::after {
-  content: "중 1 과학";
+  content: "초등 3, 4 수학";
 }
 #project .tab_btn_box label:nth-child(4)::after {
   content: "초등 5, 6 사회";
 }
 #project .tab_btn_box label:nth-child(5)::after {
-  content: "초등 3, 4 수학";
+  content: "중등 1 과학";
 }
 #project .tab_btn_box label:nth-child(6)::after {
   content: "초등 3, 4 수학";
