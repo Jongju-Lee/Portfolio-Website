@@ -438,7 +438,7 @@ header nav .gnb a:hover::after {
   word-break: keep-all;
 }
 #project .project_desc ul {
-  margin-top: 36px;
+  margin-top: 12px;
 }
 #project .project_desc ul li {
   font-size: 18px;
@@ -446,7 +446,7 @@ header nav .gnb a:hover::after {
   gap: 15px;
 }
 #project .project_desc ul li:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 #project .project_desc ul li em {
   flex-shrink: 0;
