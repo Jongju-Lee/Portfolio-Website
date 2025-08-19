@@ -315,8 +315,7 @@
     flex-direction: column;
     height: fit-content;
   }
-  #project .project_slider,
-  #project .tab_item .img_box {
+  #project .project_slider {
     width: 100%;
     height: auto;
   }
