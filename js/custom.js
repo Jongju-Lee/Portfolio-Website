@@ -4,17 +4,17 @@ $(function () {
     // 스크롤이 내려오면
     if (window.scrollY >= 50) {
       // trigger 버튼을 생성
-      $(".trigger, .btn_top").addClass("scroll");
+      $(".trigger, .btn_top").addClass("on");
     } else {
       // 스크롤이 최상단일때
-      $(".btn_top").removeClass("scroll");
+      $(".btn_top").removeClass("on");
       if ($(".trigger").hasClass("active")) {
         // 만약 버튼에 active클래스가 있는데(모달이 켜져있는데) 스크롤이 최상단이면
         // 버튼숨김 취소
         return;
       }
       // 버튼숨김
-      $(".trigger").removeClass("scroll");
+      $(".trigger").removeClass("on");
     }
   });
   /* ##### Fullscreen Navigation ##### */
