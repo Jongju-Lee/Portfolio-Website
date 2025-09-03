@@ -988,7 +988,7 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
   z-index: 1000;
 }
@@ -1065,6 +1065,14 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+.trigger img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(56px / 2);
+  height: calc(56px / 2);
 }
 
 /* ########## Top Button ########## */
