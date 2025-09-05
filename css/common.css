@@ -12,8 +12,6 @@ body {
   line-height: 1.5em;
   min-height: 100vh;
   margin: 0;
-  width: 100vw;
-  overflow-x: hidden;
   color: #555;
 }
 .container {
