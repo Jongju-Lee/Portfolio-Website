@@ -21,6 +21,7 @@
     <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
     <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     <!-- ########## CSS ########## -->
+    <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive/responsive.css" />
     <!-- ########## JS ########## -->
@@ -50,7 +51,8 @@
           <div class="about-inner inner">
             <h2>About me.</h2>
             <div class="about-content">
-              <div class="about-desc">
+              <!-- ########## about-desc ########## -->
+              <article class="about-desc">
                 <div class="about-desc__slogan">
                   <span class="about-desc__slogan-title">"Based on the basics"</span>
                   <p class="about-desc__slogan-text">
@@ -73,10 +75,11 @@
                     <span>jeje7@naver.com</span>
                   </li>
                 </ul>
-              </div>
-              <div class="about-photo">
+              </article>
+              <!-- ########## about-photo ########## -->
+              <figure class="about-photo">
                 <img src="./image/about/profile.png" alt="프로필 사진" />
-              </div>
+              </figure>
             </div>
           </div>
         </section>
@@ -229,8 +232,8 @@
                 </div>
                 <div class="timeline_item_desc">
                   <span>
-                    <b>개발팀 퍼블리셔로 근무중</b>
-                    <em>교과서 및 전자저작물 퍼블리싱</em><em>(1년간 5개 프로젝트 경험)</em>
+                    <b>개발팀 퍼블리셔로 근무</b>
+                    <em>교과서 및 전자저작물 퍼블리싱</em><em>(5개 프로젝트 완료)</em>
                   </span>
                 </div>
               </div>
@@ -243,7 +246,7 @@
                 </div>
                 <div class="timeline_item_desc">
                   <span>
-                    <b>인프런 코딩웍스 웹 퍼블리싱 & 프론트엔드 개발 코스 수료</b>
+                    <b>온라인 웹 퍼블리싱 & 프론트엔드 개발 코스 수료</b>
                     <em>HTML5, CSS3, JS, jQuery, SCSS, PhotoShop, Figma</em>
                   </span>
                 </div>
@@ -257,7 +260,7 @@
                 </div>
                 <div class="timeline_item_desc">
                   <span>
-                    <b>인프런 프론트엔드 개발 강의 독학 시작</b>
+                    <b>프론트엔드 개발 독학</b>
                     <em>HTML5, CSS3, JS, React.js, Git</em>
                   </span>
                 </div>
@@ -336,30 +339,31 @@
             </div>
           </div>
         </section>
+
         <!-- ########## React Web App ########## -->
         <section id="react">
-          <div class="inner">
+          <div class="react-inner inner">
             <h2 class="section-title">React Web App.</h2>
             <div class="react-content">
-              <!-- ########## react-mockups ########## -->
-              <figure class="react-mockups">
-                <div class="react-mockups__item-box">
-                  <div class="react-mockups__item-tablet">
+              <!-- ########## react-mockup ########## -->
+              <figure class="react-mockup">
+                <div class="react-mockup__item-box">
+                  <div class="react-mockup__item-tablet">
                     <img src="./image/react/mockup-tablet.png" alt="태블릿 프리뷰">
                   </div>
-                  <div class="react-mockups__item-mobile">
+                  <div class="react-mockup__item-mobile">
                     <img src="./image/react/mockup-mobile.png" alt="모바일 프리뷰">
                   </div>
                 </div>
-                <div class="react-mockups__item-box">
-                  <div class="react-mockups__item-laptop">
+                <div class="react-mockup__item-box">
+                  <div class="react-mockup__item-laptop">
                     <img src="./image/react/mockup-labtop.png" alt="노트북 프리뷰">
                   </div>
                 </div>
               </figure>
               <!-- ########## react-detail ########## -->
               <article class="react-detail">
-                <h3 class="react-detail__title"></h3>
+                <h3 class="react-detail__title">TaskFlow</h3>
                 <div class="react-detail__inner">
                   <p>
                     누구나, 언제 어디서나 어떤 디바이스로도 편리하게 사용 가능하도록 설계한
@@ -489,8 +493,6 @@
             </div>
           </div>
         </section>
-        <!-- ########## //React Web App ########## -->
-
 
         <!-- ########## Mobile ########## -->
         <section id="mobile">

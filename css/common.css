@@ -1,3 +1,8 @@
+/* ########## IMPORT ########## */
+@import url(./variables.css);
+@import url(./font.css);
+@import url(./custom-reset.css);
+
 /* ---------- COMMON ---------- */
 main > section:nth-of-type(even) {
   background-color: var(--color-background-light-gray);

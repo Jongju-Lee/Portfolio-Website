@@ -1,21 +1,100 @@
 #react {
   background-color: var(--section-background-react) !important;
 }
+#react * {
+  color: var(--text-color-react);
+}
 .react-content {
   margin-top: var(--spacing-6xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3xl);
+}
+
+/* ----- react-mockup ----- */
+.react-mockup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+.react-mockup__item-box {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+.react-mockup__item-tablet {
+  width: calc(870px / 2);
+  height: calc(640px / 2);
+}
+.react-mockup__item-mobile {
+  width: calc(330px / 2);
+  height: calc(640px / 2);
+}
+.react-mockup__item-laptop {
+  width: calc(1224px / 2);
+  height: calc(716px / 2);
+}
+
+/* ----- react-detail ----- */
+.react-detail {}
+.react-detail__title {
+  font-family: var(--font-EN);
+  font-weight: 600;
+  font-size: var(--font-size-app-title);
+}
+.react-detail__inner {
+  margin-top: var(--spacing-sm);
+}
+.react-detail__inner p {
+  font-size: var(--font-size-md);
+}
+.react-detail__inner p span {
+  font-weight: 500;
+}
+
+/* ----- react-detail-format ----- */
+.react-detail__format {
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
 }
 
-/* ----- react-mockups ----- */
-.react-mockups {}
-.react-mockups__item-box {}
-.react-mockups__item-tablet {}
-.react-mockups__item-mobile {}
-.react-mockups__item-laptop {}
+/* ----- react-detail-theme ----- */
+.react-detail__theme {}
+.react-detail__theme-title {}
+.react-detail__theme-color-box {}
+.react-detail__theme-color-item {}
+.react-detail__theme-color-item span {}
+.react-detail__theme-color-item span:nth-child(1) {}
+.react-detail__theme-color-item span:nth-child(2) {}
+.react-detail__theme-color-item span:nth-child(3) {}
+.react-detail__theme-desc {}
 
-/* ----- react-detail ----- */
-.react-detail {}
-.react-detail__title {}
-.react-detail__inner {}
-.react-detail__inner p {}
+/* ----- react-detail__typo ----- */
+
+.react-detail__typo {}
+.react-detail__typo-title {}
+.react-detail__typo-color-box {}
+.react-detail__typo-color-item {}
+.react-detail__typo-color-item span {}
+.react-detail__typo-desc {}
+.react-detail__typo-desc-list {}
+.react-detail__typo-desc-list b {}
+.react-detail__typo-desc-list ul {}
+.react-detail__typo-desc-list ul li {}
+.react-detail__typo-desc-list ul li span {}
+
+/* ----- react-detail__function ----- */
+.react-detail__function {}
+.react-detail__function-title {}
+.react-detail__function-list {}
+.react-detail__function-list-item {}
+
+/* ----- react-detail__work-list ----- */
+.react-detail__work-list {}
+.react-detail__work-list-item {}
+.react-detail__work-list-item b {}
+.react-detail__work-list-item p {}
+
+/* ----- react-detail__btn-box ----- */
+.react-detail__btn-box {}
+.react-detail__btn-box button {}
