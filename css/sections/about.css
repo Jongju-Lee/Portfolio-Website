@@ -11,15 +11,13 @@
 .about-desc__slogan-title {
   color: var(--color-primary);
   font-family: var(--font-slogan);
-  font-size: var(--font-size-4xl);
-  font-weight: 600;
+  font-size: var(--font-size-slogan-title);
 }
 .about-desc__slogan-text {
   width: 400px;
-  margin-top: 20px;
+  margin-top: var(--spacing-xl);
   text-align: justify;
   font-size: var(--font-size-lg);
-  font-weight: 300;
   line-height: 1.6em;
   letter-spacing: 0.1px;
   word-break: keep-all;

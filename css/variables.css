@@ -23,6 +23,7 @@
 
   /* --------- SHADOW --------- */
   --shadow-normal: 0 0 12px rgba(0, 0, 0, 0.1);
+  --shadow-color-box: 0 0 8px rgba(0, 0, 0, 0.3);
 
   /* --------- SPACING --------- */
   --spacing-xs: 4px;
@@ -39,9 +40,8 @@
 
   /* --------- FONT FAMILY --------- */
   --font-KR: "PretendardVariable", sans-serif;
-  --font-KR-light: "Pretendard-Light", sans-serif;
-  --font-EN: "Outfit", sans-serif;
-  --font-slogan: "Caveat", cursive;
+  --font-EN: "OutfitVariable", sans-serif;
+  --font-slogan: "Caveat-Regular", cursive;
   --font-mobile-section: "NPSfontExtraBold", sans-serif;
 
   /* --------- FONT SIZE --------- */
@@ -56,6 +56,7 @@
   --font-size-5xl: 60px;
   --font-size-6xl: 80px;
 
+  --font-size-slogan-title: 50px;
   --font-size-app-title: 36px;
 
   /* --------- LAYOUT --------- */

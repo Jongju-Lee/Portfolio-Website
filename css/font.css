@@ -3,12 +3,27 @@
 /* Bootstrap Icons CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-/* Google Web Fonts CDN */
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
-/* font-family: "Caveat", cursive; */
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
-
+/* Pretendard-Variable */
+@font-face {
+  font-family: "PretendardVariable";
+  src: url("../font/PretendardVariable.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+}
+/* Outfit-Variable */
+@font-face {
+  font-family: "OutfitVariable";
+  src: url("../font/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 700;
+  font-style: normal;
+}
+/* Caveat-Regular */
+@font-face {
+  font-family: "Caveat-Regular";
+  src: url("../font/Caveat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 /* 국민연금체 */
 @font-face {
   font-family: "NPSfontBold";
@@ -20,20 +35,5 @@
   font-family: "NPSfontExtraBold";
   src: url("../font/NPSfont_extrabold.ttf") format("truetype");
   font-weight: 800;
-  font-style: normal;
-}
-/* 프리텐다드 */
-@font-face {
-  font-family: 'PretendardVariable';
-  src: url('../font/PretendardVariable.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-/* 삭제 예정 */
-@font-face {
-  font-family: "Pretendard-Light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-    format("woff");
-  font-weight: 300;
   font-style: normal;
 }

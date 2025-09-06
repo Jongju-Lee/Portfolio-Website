@@ -4,7 +4,6 @@
 * {
   box-sizing: border-box;
   outline: none;
-  font-family: "Pretendard-Regular", sans-serif;
 }
 a, a:hover {
   text-decoration: none;
@@ -13,10 +12,12 @@ a, a:hover {
 button {
   border: none;
   cursor: pointer;
+  color: inherit;
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   line-height: 1.2em;
+  color: inherit;
 }
 p {
   margin: 0;
