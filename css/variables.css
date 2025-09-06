@@ -15,6 +15,10 @@
   --text-color-light: #999999;
   --text-color-white: #ffffff;
 
+  /* --------- SECTION BACKGROUND COLOR --------- */
+  --section-background-react: #f1fdf7;
+
+
   /* --------- SHADOW --------- */
   --shadow-normal: 0 0 12px rgba(0, 0, 0, 0.1);
 
@@ -32,11 +36,11 @@
   --spacing-7xl: 80px;
 
   /* --------- FONT FAMILY --------- */
-  --font-KR: "PretendardVariable";
+  --font-KR: "PretendardVariable", sans-serif;
   --font-KR-light: "Pretendard-Light", sans-serif;
   --font-EN: "Outfit", sans-serif;
   --font-slogan: "Caveat", cursive;
-  --font-mobile-section: "NPSfontExtraBold";
+  --font-mobile-section: "NPSfontExtraBold", sans-serif;
 
   /* --------- FONT SIZE --------- */
   --font-size-xs: 12px;

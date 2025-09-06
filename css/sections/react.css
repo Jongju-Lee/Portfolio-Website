@@ -1,0 +1,21 @@
+#react {
+  background-color: var(--section-background-react) !important;
+}
+.react-content {
+  margin-top: var(--spacing-6xl);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ----- react-mockups ----- */
+.react-mockups {}
+.react-mockups__item-box {}
+.react-mockups__item-tablet {}
+.react-mockups__item-mobile {}
+.react-mockups__item-laptop {}
+
+/* ----- react-detail ----- */
+.react-detail {}
+.react-detail__title {}
+.react-detail__inner {}
+.react-detail__inner p {}

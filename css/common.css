@@ -1,4 +1,7 @@
 /* ---------- COMMON ---------- */
+main > section:nth-of-type(even) {
+  background-color: var(--color-background-light-gray);
+}
 section .inner > h2 {
   font-family: var(--font-EN);
   font-size: var(--font-size-3xl);
@@ -16,6 +19,9 @@ img {
 }
 em {
   font-style: normal;
+}
+.font-en {
+  font-family: var(--font-EN);
 }
 
 /* ---------- Slick.js ---------- */

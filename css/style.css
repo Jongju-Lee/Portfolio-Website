@@ -11,6 +11,7 @@
 @import url(./sections/about.css);
 @import url(./sections/skill.css);
 @import url(./sections/edu.css);
+@import url(./sections/react.css);
 @import url(./sections/project.css);
 @import url(./sections/mobile.css);
 @import url(./sections/web.css);
@@ -44,10 +45,12 @@ header nav,
 main > section {
   padding: var(--section-padding);
 }
-main > section:nth-of-type(even) {
-  background-color: var(--color-background-light-gray);
+main > section .inner > h2 {
+  font-family: var(--font-EN);
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  padding-left: var(--spacing-md);
 }
-
 /* ---------- //LAYOUT ---------- */
 
 
