@@ -3,34 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="웹 퍼블리셔 이종주의 포트폴리오 사이트입니다." />
+    <meta name="theme-color" content="#00ad53" />
     <title>웹 퍼블리셔 이종주 입니다.</title>
     
-    <!-- jQuery CDN -->
+    <!-- ########## jQuery CDN ########## -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Slick.js -->
+    <!-- ########## Slick.js ########## -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- UIkit CSS & JS -->
+    <!-- ########## UIkit CSS & JS ########## -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
-    <!-- Featherlight.js -->
+    <!-- ########## Featherlight.js ########## -->
     <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
     <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-    <!-- Custom CSS -->
+    <!-- ########## CSS ########## -->
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
-    <!-- Custom JS -->
-    <script src="./js/custom.js"></script>
+    <link rel="stylesheet" href="./css/responsive/responsive.css" />
+    <!-- ########## JS ########## -->
+    <script src="./js/main.js"></script>
   </head>
   <body>
     <div class="container">
       <!-- ########## Header ########## -->
-      <header>
-        <nav>
-          <a class="btn_functional" href="./doc/portfolio_website_fs.pdf" data-featherlight="iframe" >이 웹사이트 기능정의서</a>
-          <div class="gnb">
+      <header role="banner">
+        <nav role="navigation">
+          <a class="header__btn-functional" href="./doc/portfolio_website_fs.pdf" data-featherlight="iframe" >이 웹사이트 기능정의서</a>
+          <div class="header__gnb">
             <a href="#about">ABOUT</a>
             <a href="#skill">SKILL</a>
             <a href="#edu">EDU & EXPERIENCE</a>
@@ -42,1519 +44,1202 @@
           </div>
         </nav>
       </header>
-      <!-- ########## Section - About ########## -->
-      <section id="about">
-        <div class="inner">
-          <h2>About me.</h2>
-          <div class="wrapper">
-            <div class="about_photo">
-              <img src="./image/about/profile.png" alt="프로필 사진" />
-            </div>
-            <div class="about_desc">
-              <div class="about_desc_slogan">
-                <span>"Based on the basics"</span>
-                <p>
-                  탄탄한 퍼블리싱 기본기 및 체계적인 하드코딩 습관을 바탕으로
-                  협업하기 좋은 코드를 위해 항상 고민하는 <br />
-                  웹 퍼블리셔 지원자, <em>이 종 주</em> 입니다.
-                </p>
+      <main>
+        <!-- ########## Section - About ########## -->
+        <section id="about">
+          <div class="about-inner inner">
+            <h2>About me.</h2>
+            <div class="about-content">
+              <div class="about-desc">
+                <div class="about-desc__slogan">
+                  <span class="about-desc__slogan-title">"Based on the basics"</span>
+                  <p class="about-desc__slogan-text">
+                    탄탄한 퍼블리싱 기본기 및 체계적인 하드코딩 습관을 바탕으로
+                    협업하기 좋은 코드를 위해 항상 고민하는
+                    웹 퍼블리셔 지원자, <em>이 종 주</em> 입니다.
+                  </p>
+                </div>
+                <ul class="about-desc__info">
+                  <li class="about-desc__info-item">
+                    <b>Residence</b>
+                    <span>서울특별시 광진구</span>
+                  </li>
+                  <li class="about-desc__info-item">
+                    <b>Birth</b>
+                    <span>1990년</span>
+                  </li>
+                  <li class="about-desc__info-item">
+                    <b>Email</b>
+                    <span>jeje7@naver.com</span>
+                  </li>
+                </ul>
               </div>
-              <div class="about_desc_info">
-                <div>
-                  <b>Residence</b>
-                  <span>서울특별시 광진구</span>
+              <div class="about-photo">
+                <img src="./image/about/profile.png" alt="프로필 사진" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ########## Section - Skill ########## -->
+        <section id="skill">
+          <div class="inner">
+            <h2>Publishing Skill.</h2>
+            <div class="wrapper">
+              <div class="skill_items twin">
+                <div class="skill_item">
+                  <div class="skill_item_icon">T</div>
+                  <div class="skill_item_desc">
+                    <h4>Text Editor</h4>
+                    <p>
+                      메인 에디터로 <span>Visual Studio Code</span>를 활용하며, 효율적인 코드 작성과
+                      유지보수를 위해 다양한 <span>Extension</span>과 단축키를 능숙하게 활용합니다.
+                      또한 <span>Cursor Ai</span>를 코드 보완 및 반복적인 작업을 최소화 하기 위해 병행해서 활용합니다.
+                      최신 코드 트렌드에 따라 필요한 기능을 찾아 활용하며, 코드 작성 시 최적화를 위해 최신 코드 문법을 적극 활용합니다.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <b>Birth</b>
-                  <span>1990년</span>
+                <div class="skill_item">
+                  <div class="skill_item_icon">SV</div>
+                  <div class="skill_item_desc">
+                    <h4>SVN, Git</h4>
+                    <p>
+                      프로젝트 협업 시 SVN과 Git을 통한 체계적인 버전 관리를 수행합니다.
+                      GitHub을 활용한 브랜치 운영과 커밋 이력을 명확하게 관리하여,
+                      협업 중 발생할 수 있는 충돌을 최소화하고 이슈 추적 및 병합 관리를 효과적으로 수행할 수 있습니다.
+                      SVN 역시 사내 프로젝트나 팀 내 관리 시스템에서 원활히 사용하고 있으며,
+                      다양한 협업 환경에 유연하게 대응 가능합니다.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <b>Email</b>
-                  <span>jeje7@naver.com</span>
+              </div>
+              <div class="skill_items">
+                <div class="skill_item">
+                  <div class="skill_item_icon">H</div>
+                  <div class="skill_item_desc">
+                    <h4>HTML5</h4>
+                    <p>
+                      <span>HTML5</span>의 <span>Semantic Tag</span>의 의미를 알고 적극 활용하여 구조적으로 명확하고
+                      접근성이 뛰어난 마크업을 작성합니다. <span>SEO</span>에 친화적인 구조 설계를 통해 검색 엔진 최적화에 기여하고 있고, 
+                      웹 표준 및 웹 접근성<span>(WCAG)</span>을 준수하며 <span>UX</span> 향상을 위한 접근성 관련 <span>Attr</span>을 적극 활용합니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="skill_item">
+                  <div class="skill_item_icon">C</div>
+                  <div class="skill_item_desc">
+                    <h4>CSS3</h4>
+                    <p>
+                      <span>CSS3</span>를 기반으로 한 스타일링 작업을 수행하며, <span>Cross-Browsing</span>을 고려해서
+                      안정적인 <span>CSS</span> 속성을 활용하여 작업합니다. 특히 <span>BEM(Block Element Modifier)</span> 
+                      방법론을 활용하여 <span>Class Naming Convention</span>을 체계적으로 구성합니다. 
+                      이는 팀 단위 협업 시 코드의 가독성을 높이고 유지보수를 수월하게 하며,
+                      대규모 프로젝트에서의 스타일 충돌을 방지하는 데 효과적입니다. 
+                    </p>
+                  </div>
+                </div>
+                <div class="skill_item">
+                  <div class="skill_item_icon">JS</div>
+                  <div class="skill_item_desc">
+                    <h4>JavaScript, jQuery</h4>
+                    <p>
+                      <span>JavaScript</span>를 활용해 동적인 <span>UI</span> 요소를 구현하며, <span>jQuery</span>를 통한 <span>DOM</sp> 조작과
+                      이벤트 처리에 능숙합니다. 최근에는 <span>React</span> 라이브러리를 활용해 <span>component</span> 기반의 구조를 이해하고, 
+                      효율적인 상태 관리를 통해 재사용성과 유지보수를 고려하여 주석을 적극 활용한 가독성 좋은 코드 작성을 지향하고 있습니다.
+                      최신 트렌드에 따라 필요한 기능을 찾아 활용하며, 코드 작성 시 최적화를 위해 최신 코드 문법을 적극 활용합니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="skill_item">
+                  <div class="skill_item_icon">M</div>
+                  <div class="skill_item_desc">
+                    <h4>Mobile Web App</h4>
+                    <p>
+                      <span>Mobile Web App</span>을 제작한 경험이 있습니다. 더
+                      나은 <span>UI/UX</span>를 위해 디자인 뿐만 아니라 효율적인
+                      컨텐츠 배치를 우선적으로 고민하여 제작합니다. 반응형 웹,
+                      적응형 웹, 모바일 웹앱, 하이브리드 앱, 네이티브 앱의
+                      차이점을 이해하고 있습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="skill_items">
+                <div class="skill_item">
+                  <div class="skill_item_icon">RW</div>
+                  <div class="skill_item_desc">
+                    <h4>Responsive Web</h4>
+                    <p>
+                      반응형 웹은 <span>position</span>, <span>float</span>, <span>media query</span>
+                      등 안정적인 <span>CSS</span> 속성을 활용한 반응형 웹 제작 경험이 충분하고, 좀 더 반응형에 특화된
+                      레이아웃이 필요한 경우 <span>Grid, Flex</span>를 사용한 방식으로도 작업이 가능합니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="skill_item">
+                  <div class="skill_item_icon">FR</div>
+                  <div class="skill_item_desc">
+                    <h4>CSS Framework</h4>
+                    <p>
+                      <span>Bootstrap, MUI, Ant Design, UIKit</span>등 여러가지
+                      <span>Framework</span>를 사용해본 경험이 있고 충분한
+                      이해도를 가지고 있습니다. 그 중, 크로스 브라우징이 잘
+                      되어있고 <span>CSS Custom</span>이 비교적 편한
+                      <span>UIKit</span>을 주로 사용하고 있습니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="skill_item">
+                  <div class="skill_item_icon">SC</div>
+                  <div class="skill_item_desc">
+                    <h4>SCSS, CSS Nesting</h4>
+                    <p>
+                      <span>CSS</span>를 보다 더 효율적으로 작성하고 유지보수성을
+                      높이기 위해서 <span>SCSS</span>를 사용합니다.
+                      <span>SCSS</span>는 작업시 매번 컴파일을 해줘야 한다는
+                      단점이 있지만 컴파일이 필요없는 최신 문법인 <span>CSS Nesting</span>도 사용 가능합니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="skill_item">
+                  <div class="skill_item_icon">Fig</div>
+                  <div class="skill_item_desc">
+                    <h4>Figma, PhotoShop</h4>
+                    <p>
+                      웹사이트 UI디자인 및 간단한 이미지 편집은 <span>Figma</span>를 주로 활용하여
+                      작업합니다.
+                      <span>PhotoShop</span>은 사진 보정, 이미지 편집 등의 작업에 활용합니다.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- ########## Section - Skill ########## -->
-      <section id="skill">
-        <div class="inner">
-          <h2>Publishing Skill.</h2>
-          <div class="wrapper">
-            <div class="skill_items twin">
-              <div class="skill_item">
-                <div class="skill_item_icon">T</div>
-                <div class="skill_item_desc">
-                  <h4>Text Editor</h4>
-                  <p>
-                    메인 에디터로 <span>Visual Studio Code</span>를 사용하고
-                    있고, 빠른 작업을 위해 단축키와 <span>Extension</span>을 적극 활용합니다.
-                    <span>AI</span>의 도움이 필요한 경우에는 <span>Cursor</span>를 사용하고 있고,
-                    <span>HTML</span>구조 설계시에는 <span>NotePad++</span>를 주로 사용하여 작업합니다.
-                  </p>
+        </section>
+        <!-- ########## Edu ########## -->
+        <section id="edu">
+          <div class="inner">
+            <h2>Edu & Experience.</h2>
+            <div class="wrapper">
+              <div class="timeline_item">
+                <div class="timeline_item_peroid">
+                  <span>
+                    <b>2024. 06 ~ 2025. 08</b>
+                    <span>아이스캔디(전자 교과서)</span>
+                  </span>
+                </div>
+                <div class="timeline_item_desc">
+                  <span>
+                    <b>개발팀 퍼블리셔로 근무중</b>
+                    <em>교과서 및 전자저작물 퍼블리싱</em><em>(1년간 5개 프로젝트 경험)</em>
+                  </span>
                 </div>
               </div>
-              <div class="skill_item">
-                <div class="skill_item_icon">SV</div>
-                <div class="skill_item_desc">
-                  <h4>SVN, Git</h4>
-                  <p>
-                    현재 재직중인 회사에서 <span>SVN</span>을 주로 사용하고 있어 <span>SVN</span>은 매우 익숙합니다.
-                    <span>Git</span>은 실무에서는 아직 사용해보지 못했지만 익숙해지기 위해 자기개발 프로젝트시 <span>Git</span>을 주로 사용하고 있어 실무에 바로 적용 가능합니다.
-                  </p>
+              <div class="timeline_item">
+                <div class="timeline_item_peroid">
+                  <span>
+                    <b>2023. 12 ~ Current</b>
+                    퍼블리싱 독학 시작
+                  </span>
+                </div>
+                <div class="timeline_item_desc">
+                  <span>
+                    <b>인프런 코딩웍스 웹 퍼블리싱 & 프론트엔드 개발 코스 수료</b>
+                    <em>HTML5, CSS3, JS, jQuery, SCSS, PhotoShop, Figma</em>
+                  </span>
                 </div>
               </div>
-            </div>
-            <div class="skill_items">
-              <div class="skill_item">
-                <div class="skill_item_icon">H</div>
-                <div class="skill_item_desc">
-                  <h4>HTML5</h4>
-                  <p>
-                    웹표준 및 웹접근성을 준수하고 <span>HTML5</span>에서
-                    권장하는 마크업 방식과 <span>Semantic Tag</span>를 적극
-                    활용하여 <span>SEO</span>에 유리하게 레이아웃을 설계 합니다.
-                    <span>UI</span> 디자인 작업 후 클래스네임과 함께
-                    <span>HTML구조를</span> 미리 설계한 다음 퍼블리싱을
-                    시작합니다.
-                  </p>
+              <div class="timeline_item">
+                <div class="timeline_item_peroid">
+                  <span>
+                    <b>2023. 06 ~ 2023. 12</b>
+                    웹 프론트엔드 독학 시작
+                  </span>
+                </div>
+                <div class="timeline_item_desc">
+                  <span>
+                    <b>인프런 프론트엔드 개발 강의 독학 시작</b>
+                    <em>HTML5, CSS3, JS, React.js, Git</em>
+                  </span>
                 </div>
               </div>
-              <div class="skill_item">
-                <div class="skill_item_icon">C</div>
-                <div class="skill_item_desc">
-                  <h4>CSS3</h4>
-                  <p>
-                    <span>CSS</span> 코딩은 크로스 브라우징
-                    을 고려해서 안정적인 <span>CSS</span> 속성을 사용하여
-                    <span>DOM</span>을 배치하고, 필요한 경우
-                    <span>Flex, Grid</span>를 사용해 배치합니다. 탭 메뉴,
-                    어코디언 등의 컨텐츠도 순수 <span>CSS</span>만으로 제작
-                    가능합니다.
-                  </p>
+              <div class="timeline_item">
+                <div class="timeline_item_peroid">
+                  <span>
+                    <b>2020.01 ~ 2023. 08</b>
+                    공영식품(일식)
+                  </span>
+                </div>
+                <div class="timeline_item_desc">
+                  <span>
+                    <b>공영식품 본사 영업본부 S/V</b>
+                    신규 가맹점 또는 직영점을 오픈할 때마다 현장에서 새로운
+                    사람들을 리드하여 매장을 이끌어 왔습니다.
+                  </span>
                 </div>
               </div>
-              <div class="skill_item">
-                <div class="skill_item_icon">JS</div>
-                <div class="skill_item_desc">
-                  <h4>JavaScript, jQuery</h4>
-                  <p>
-                    <span>Slider</span> 등 꼭 필요한 기능성 플러그인을 제외하고
-                    네비게이션, 탭 메뉴, 어코디언 등 상호작용을 위한 컨텐츠에는
-                    플러그인을 사용하지 않고 <span>JavaScript, jQuery</span>를
-                    병행해서 활용하며 직접 하드코딩 해서 작업합니다.
-                  </p>
+              <div class="timeline_item">
+                <div class="timeline_item_peroid">
+                  <span>
+                    <b>2018</b>
+                    학사학위 취득
+                  </span>
+                </div>
+                <div class="timeline_item_desc">
+                  <span>
+                    <b>사이버 대학 학점은행제(경영학과)</b>
+                    직장 근무하면서 학위 취득 하였습니다.
+                  </span>
                 </div>
               </div>
-              <div class="skill_item">
-                <div class="skill_item_icon">M</div>
-                <div class="skill_item_desc">
-                  <h4>Mobile Web App</h4>
-                  <p>
-                    <span>Mobile Web App</span>을 제작한 경험이 있습니다. 더
-                    나은 <span>UI/UX</span>를 위해 디자인 뿐만 아니라 효율적인
-                    컨텐츠 배치를 우선적으로 고민하여 제작합니다. 반응형 웹,
-                    적응형 웹, 모바일 웹앱, 하이브리드 앱, 네이티브 앱의
-                    차이점을 이해하고 있습니다.
-                  </p>
+              <div class="timeline_item">
+                <div class="timeline_item_peroid">
+                  <span>
+                    <b>2016. 06 ~ 2020.01</b>
+                    공영식품(일식)
+                  </span>
+                </div>
+                <div class="timeline_item_desc">
+                  <span>
+                    <b>본사 직영점 점장 및 주방 실장</b>
+                    4년간 직영점 5개 매장을 돌아가면서 관리해 본 경험이 있습니다.
+                  </span>
                 </div>
               </div>
-            </div>
-            <div class="skill_items">
-              <div class="skill_item">
-                <div class="skill_item_icon">RW</div>
-                <div class="skill_item_desc">
-                  <h4>Responsive Web</h4>
-                  <p>
-                    반응형 웹은 <span>position</span>, <span>float</span>, <span>media query</span>
-                    등 안정적인 <span>CSS</span> 속성을 활용한 반응형 웹 제작 경험이 충분하고, 좀 더 반응형에 특화된
-                    레이아웃이 필요한 경우 <span>Grid, Flex</span>를 사용한 방식으로도 작업이 가능합니다.
-                  </p>
+              <div class="timeline_item">
+                <div class="timeline_item_peroid">
+                  <span>
+                    <b>2015. 07 ~ 2016. 06</b>
+                    가츠라(일식)
+                  </span>
+                </div>
+                <div class="timeline_item_desc">
+                  <span>
+                    <b>주방 부실장</b>
+                    전 직장 경력을 살려 주방에서 근무 하였습니다.
+                  </span>
                 </div>
               </div>
-              <div class="skill_item">
-                <div class="skill_item_icon">FR</div>
-                <div class="skill_item_desc">
-                  <h4>CSS Framework</h4>
-                  <p>
-                    <span>Bootstrap, MUI, Ant Design, UIKit</span>등 여러가지
-                    <span>Framework</span>를 사용해본 경험이 있고 충분한
-                    이해도를 가지고 있습니다. 그 중, 크로스 브라우징이 잘
-                    되어있고 <span>CSS Custom</span>이 비교적 편한
-                    <span>UIKit</span>을 주로 사용하고 있습니다.
-                  </p>
+              <div class="timeline_item">
+                <div class="timeline_item_peroid">
+                  <span>
+                    <b>2013. 07 ~ 2015. 07</b>
+                    페페론치노(양식)
+                  </span>
                 </div>
-              </div>
-              <div class="skill_item">
-                <div class="skill_item_icon">SC</div>
-                <div class="skill_item_desc">
-                  <h4>SCSS, CSS Nesting</h4>
-                  <p>
-                    <span>CSS</span>를 보다 더 효율적으로 작성하고 유지보수성을
-                    높이기 위해서 <span>SCSS</span>를 사용합니다.
-                    <span>SCSS</span>는 작업시 매번 컴파일을 해줘야 한다는
-                    단점이 있지만 컴파일이 필요없는 최신 문법인 <span>CSS Nesting</span>도 사용 가능합니다.
-                  </p>
-                </div>
-              </div>
-              <div class="skill_item">
-                <div class="skill_item_icon">Fig</div>
-                <div class="skill_item_desc">
-                  <h4>Figma, PhotoShop</h4>
-                  <p>
-                    웹사이트 UI디자인 및 간단한 이미지 편집은 <span>Figma</span>를 주로 활용하여
-                    작업합니다.
-                    <span>PhotoShop</span>은 사진 보정, 이미지 편집 등의 작업에 활용합니다.
-                  </p>
+                <div class="timeline_item_desc">
+                  <span>
+                    <b>주방 직원</b>
+                    첫 직장으로 주방업무를 경험 하였습니다.
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- ########## Edu ########## -->
-      <section id="edu">
-        <div class="inner">
-          <h2>Edu & Experience.</h2>
-          <div class="wrapper">
-            <div class="timeline_item">
-              <div class="timeline_item_peroid">
-                <span>
-                  <b>2024. 06 ~ 2025. 08</b>
-                  <span>아이스캔디(전자 교과서)</span>
-                </span>
-              </div>
-              <div class="timeline_item_desc">
-                <span>
-                  <b>개발팀 퍼블리셔로 근무중</b>
-                  <em>교과서 및 전자저작물 퍼블리싱</em><em>(1년간 5개 프로젝트 경험)</em>
-                </span>
-              </div>
-            </div>
-            <div class="timeline_item">
-              <div class="timeline_item_peroid">
-                <span>
-                  <b>2023. 12 ~ Current</b>
-                  퍼블리싱 독학 시작
-                </span>
-              </div>
-              <div class="timeline_item_desc">
-                <span>
-                  <b>인프런 코딩웍스 웹 퍼블리싱 & 프론트엔드 개발 코스 수료</b>
-                  <em>HTML5, CSS3, JS, jQuery, SCSS, PhotoShop, Figma</em>
-                </span>
-              </div>
-            </div>
-            <div class="timeline_item">
-              <div class="timeline_item_peroid">
-                <span>
-                  <b>2023. 06 ~ 2023. 12</b>
-                  웹 프론트엔드 독학 시작
-                </span>
-              </div>
-              <div class="timeline_item_desc">
-                <span>
-                  <b>인프런 프론트엔드 개발 강의 독학 시작</b>
-                  <em>HTML5, CSS3, JS, React.js, Git</em>
-                </span>
-              </div>
-            </div>
-            <div class="timeline_item">
-              <div class="timeline_item_peroid">
-                <span>
-                  <b>2020.01 ~ 2023. 08</b>
-                  공영식품(일식)
-                </span>
-              </div>
-              <div class="timeline_item_desc">
-                <span>
-                  <b>공영식품 본사 영업본부 S/V</b>
-                  신규 가맹점 또는 직영점을 오픈할 때마다 현장에서 새로운
-                  사람들을 리드하여 매장을 이끌어 왔습니다.
-                </span>
-              </div>
-            </div>
-            <div class="timeline_item">
-              <div class="timeline_item_peroid">
-                <span>
-                  <b>2018</b>
-                  학사학위 취득
-                </span>
-              </div>
-              <div class="timeline_item_desc">
-                <span>
-                  <b>사이버 대학 학점은행제(경영학과)</b>
-                  직장 근무하면서 학위 취득 하였습니다.
-                </span>
-              </div>
-            </div>
-            <div class="timeline_item">
-              <div class="timeline_item_peroid">
-                <span>
-                  <b>2016. 06 ~ 2020.01</b>
-                  공영식품(일식)
-                </span>
-              </div>
-              <div class="timeline_item_desc">
-                <span>
-                  <b>본사 직영점 점장 및 주방 실장</b>
-                  4년간 직영점 5개 매장을 돌아가면서 관리해 본 경험이 있습니다.
-                </span>
-              </div>
-            </div>
-            <div class="timeline_item">
-              <div class="timeline_item_peroid">
-                <span>
-                  <b>2015. 07 ~ 2016. 06</b>
-                  가츠라(일식)
-                </span>
-              </div>
-              <div class="timeline_item_desc">
-                <span>
-                  <b>주방 부실장</b>
-                  전 직장 경력을 살려 주방에서 근무 하였습니다.
-                </span>
-              </div>
-            </div>
-            <div class="timeline_item">
-              <div class="timeline_item_peroid">
-                <span>
-                  <b>2013. 07 ~ 2015. 07</b>
-                  페페론치노(양식)
-                </span>
-              </div>
-              <div class="timeline_item_desc">
-                <span>
-                  <b>주방 직원</b>
-                  첫 직장으로 주방업무를 경험 하였습니다.
-                </span>
-              </div>
+        </section>
+        <!-- ########## React Web App ########## -->
+        <section id="react">
+          <div class="inner">
+            <h2>React Web App.</h2>
+            <div class="react-content">
+              <!-- ########## react-mockups ########## -->
+              <figure class="react-mockups">
+                <div class="react-mockups__item-box">
+                  <div class="react-mockups__item-tablet">
+                    <img src="./image/react/mockup-tablet.png" alt="태블릿 프리뷰">
+                  </div>
+                  <div class="react-mockups__item-mobile">
+                    <img src="./image/react/mockup-mobile.png" alt="모바일 프리뷰">
+                  </div>
+                </div>
+                <div class="react-mockups__item-box">
+                  <div class="react-mockups__item-laptop">
+                    <img src="./image/react/mockup-labtop.png" alt="노트북 프리뷰">
+                  </div>
+                </div>
+              </figure>
+              <!-- ########## react-detail ########## -->
+              <article class="react-detail">
+                <h3 class="react-detail__title"></h3>
+                <div class="react-detail__inner">
+                  <p>
+                    누구나, 언제 어디서나 어떤 디바이스로도 편리하게 사용 가능하도록 설계한
+                    <span>React</span>기반의 <span>Todo-List Web App</span> 앱 입니다. 
+                    날짜별 일정 관리 및 실시간 할 일 검색, 드래그 앤 드롭으로 할 일의 순서를
+                    직관적으로 변경이 가능하며 마우스가 없을 때에도
+                    키보드 만으로도 빠르고 편리한 조작이 가능한 앱 입니다.
+                  </p>
+                  <!-- ########## react-detail__format ########## -->
+                  <div class="react-detail__format">
+                    <div class="react-detail__theme">
+                      <h4 class="react-detail__theme-title">Color Theme</h4>
+                      <div class="react-detail__theme-color-box">
+                        <div class="react-detail__theme-color-item">
+                          <span>#72E3AD</span>
+                        </div>
+                        <div class="react-detail__theme-color-item">
+                          <span>#FCFCFC</span>
+                        </div>
+                        <div class="react-detail__theme-color-item">
+                          <span>#DFDFDF</span>
+                        </div>
+                      </div>
+                      <p class="react-detail__theme-desc">
+                        부드러운 톤에 흰색 배경으로 대비하여 피로감이 적으면서도 
+                        가독성도 함께 살릴 수 있는 테마 컬러 입니다.
+                      </p>
+                    </div>
+                    <div class="react-detail__typo">
+                      <h4 class="react-detail__typo-title">Typography</h4>
+                      <div class="react-detail__typo-color-box">
+                        <div class="react-detail__typo-color-item">
+                          <span>#1E2723</span>
+                        </div>
+                        <div class="react-detail__typo-color-item">
+                          <span>#707070</span>
+                        </div>
+                        <div class="react-detail__typo-color-item">
+                          <span>#8F8FA4</span>
+                        </div>
+                      </div>
+                      <div class="react-detail__typo-desc">
+                        <div class="react-detail__typo-desc-list">
+                          <b>Font-family</b>
+                          <ul>
+                            <li>
+                              <span>한글 :</span><span class="font-kr">Pretendard</span>
+                            </li>
+                            <li>
+                              <span>영문 :</span><span class="font-en">Outfit</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="react-detail__typo-desc-list">
+                          <b>Font-Size</b>
+                          <ul>
+                            <li>
+                              <span>PC :</span><span>18px</span>
+                            </li>
+                            <li>
+                              <span>Tablet :</span><span>16px</span>
+                            </li>
+                            <li>
+                              <span>Mobile :</span><span>14px</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ########## react-detail__function ########## -->
+                  <div class="react-detail__function">
+                    <h4 class="react-detail__function-title"><span class="font-en">App</span> 주요 기능</h4>
+                    <ul class="react-detail__function-list">
+                      <li class="react-detail__function-list-item">
+                        반응형 <span class="font-en">UI(Mobile, Tablet, PC)</span>
+                      </li>
+                      <li class="react-detail__function-list-item">
+                        단축키를 통해 키보드만으로도 사용 가능
+                      </li>
+                      <li class="react-detail__function-list-item">
+                        달력을 연동하여 날짜별로 <span class="font-en">List</span> 관리
+                      </li>
+                      <li class="react-detail__function-list-item">
+                        <span class="font-en">Drag & Drop</span>으로 할 일 순서 변경
+                      </li>
+                      <li class="react-detail__function-list-item">
+                        내 할 일 검색 및 필터링
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- ########## react-detail__work-list ########## -->
+                  <ul class="react-detail__work-list">
+                    <li class="react-detail__work-list-item">
+                      <b>작업 기간</b>
+                      <p>10 일</p>
+                    </li>
+                    <li class="react-detail__work-list-item">
+                      <b>작업 범위</b>
+                      <p>기획, <span class="font-en">UI</span> 디자인, 퍼블리싱, 개발</p>
+                    </li>
+                    <li class="react-detail__work-list-item">
+                      <b>제작 참여도</b>
+                      <p>1 명 본인(100%)</p>
+                    </li>
+                    <li class="react-detail__work-list-item">
+                      <b>개발 환경</b>
+                      <p><span class="font-en">React</span> 기반의 <span class="font-en">Vite</span> 개발 환경</p>
+                    </li>
+                    <li class="react-detail__work-list-item">
+                      <b>적용한 라이브러리</b>
+                      <p>
+                        <span class="font-en">Styled-Components(CSS-in-JS)</span>,
+                        <span class="font-en">React Calendar</span>(캘린더),
+                        <span class="font-en">dnd-kit(Drag & Drop)</span>
+                      </p>
+                    </li>
+                  </ul>
+                  <!-- ########## react-detail__btn-box ########## -->
+                  <div class="react-detail__btn-box">
+                    <button>Mobile</button>
+                    <button>Tablet</button>
+                    <button>PC</button>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- ########## Project ########## -->
-      <!-- <section id="project">
-        <div class="inner">
-          <h2>Company Project.</h2>
-          <div class="tab_container">
-            <input type="radio" name="project_tab" id="project_tab_01" checked />
-            <input type="radio" name="project_tab" id="project_tab_02" />
-            <input type="radio" name="project_tab" id="project_tab_03" />
-            <input type="radio" name="project_tab" id="project_tab_04" />
-            <input type="radio" name="project_tab" id="project_tab_05" />
-            <input type="radio" name="project_tab" id="project_tab_06" />
-            <div class="tab_btn_box">
-              <label for="project_tab_01"></label>
-              <label for="project_tab_02"></label>
-              <label for="project_tab_03"></label>
-              <label for="project_tab_04"></label>
-              <label for="project_tab_05"></label>
-              <label for="project_tab_06"></label>
-            </div>
-            <div class="indicator"></div>
+        </section>
+        <!-- ########## //React Web App ########## -->
 
-            <div class="tab_box">
-              <div class="tab_item">
-                <div class="project_slider" uk-lightbox>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_01.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_01.png" alt="초등 수학 5,6학년 1페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_02.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_02.png" alt="초등 수학 5,6학년 2페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_03.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_03.png" alt="초등 수학 5,6학년 3페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_04.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_04.png" alt="초등 수학 5,6학년 4페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_05.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_05.png" alt="초등 수학 5,6학년 5페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_06.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_06.png" alt="초등 수학 5,6학년 6페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_07.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_07.png" alt="초등 수학 5,6학년 7페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_08.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_08.png" alt="초등 수학 5,6학년 8페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_09.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_09.png" alt="초등 수학 5,6학년 9페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_10.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_10.png" alt="초등 수학 5,6학년 10페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_11.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_11.png" alt="초등 수학 5,6학년 11페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_12.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_12.png" alt="초등 수학 5,6학년 12페이지">
-                  </a>
+
+        <!-- ########## Mobile ########## -->
+        <section id="mobile">
+          <div class="inner">
+            <h2>Mobile WebⅠ.</h2>
+            <div class="wrapper">
+              <div class="mobile_photo">
+                <div class="mobile_photo_first">
+                  <img src="./image/mobile_web/redefine_mobile_04.png" alt="리디파인 프리로딩 화면" />
                 </div>
-                <div class="project_desc">
-                  <div>
-                    <h3>회사 소스로 개인이 제작한 개발물</h3>
-                    <p>
-                      공통 HTML, CSS 기획 및 모든 페이지 직접 작업(개발 관련된 코드는 사내 템플릿), 웹 접근성 검사, 웹 표준 적합성 검사 하였습니다.
-                    </p>
-                  </div>
-                  <ul>
-                    <li>
-                      <em>페이지 수</em>
-                      <span>HTML 약 31 페이지</span>
-                    </li>
-                    <li>
-                      <em>작업 기간</em>
-                      <span>약 3일</span>
-                    </li>
-                    <li>
-                      <em>작업 인원</em>
-                      <span>1명(본인)</span>
-                    </li>
-                    <li>
-                      <em>제작 참여</em>
-                      <span>100%(개발 코드 제외)</span>
-                    </li>
-                    <li>
-                      <em>완료 날짜</em>
-                      <span>2025. 08.</span>
-                    </li>
-                    <li>
-                      <em>참고 사항</em>
-                      <span>회사 보안 정책상 코드 공개가 어려워 스크린샷으로 대체.</span>
-                    </li>
-                  </ul>
+                <div class="mobile_photo_second">
+                  <img src="./image/mobile_web/redefine_mobile_05.png" alt="리디파인 메인화면" />
                 </div>
               </div>
-              <div class="tab_item">
-                <div class="project_slider" uk-lightbox>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_01.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_01.png" alt="초등 수학 5,6학년 1페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_02.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_02.png" alt="초등 수학 5,6학년 2페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_03.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_03.png" alt="초등 수학 5,6학년 3페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_04.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_04.png" alt="초등 수학 5,6학년 4페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_05.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_05.png" alt="초등 수학 5,6학년 5페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_06.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_06.png" alt="초등 수학 5,6학년 6페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_07.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_07.png" alt="초등 수학 5,6학년 7페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_08.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_08.png" alt="초등 수학 5,6학년 8페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_09.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_09.png" alt="초등 수학 5,6학년 9페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_10.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_10.png" alt="초등 수학 5,6학년 10페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_11.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_11.png" alt="초등 수학 5,6학년 11페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_5_6/dong_math_5_6_12.png">
-                    <img src="./image/project/dong_elem_math_5_6/dong_math_5_6_12.png" alt="초등 수학 5,6학년 12페이지">
-                  </a>
+              <div class="mobile_desc">
+                <div class="mobile_desc_title">
+                  <h3>
+                    <span>Redefine · </span>
+                    쇼핑을 재정의하다!
+                  </h3>
+                  <p>
+                    최근 폭등한 물가로 인해 브랜드 쇼핑이 부담스러운데, 인기가
+                    많은 브랜드 제품을 참고하여 같은 공정을 거쳐 성능은 비슷하되
+                    가격 거품을 걷어내고 합리적인 가격으로 소비자에게 제공될 수
+                    있다면 좋을것 같다는 생각으로 이 쇼핑몰을 제작 하였습니다.
+                  </p>
                 </div>
-                <div class="project_desc">
-                  <div>
-                    <h3>초등 수학 5,6 학년 학생용 교과서</h3>
+                <div class="mobile_desc_format">
+                  <div class="mobile_desc_format_color">
+                    <b>Color Theme</b>
+                    <div class="color_chips">
+                      <em>#0077ED</em>
+                      <em>#E1F0FF</em>
+                      <em>#F4C500</em>
+                    </div>
                     <p>
-                      페이지 양산작업 및 수정작업, 스크린 리더 대체 텍스트 작업, 웹 접근성 검사, 웹 표준 적합성 검사 담당 하였습니다.
+                      신뢰성을 상징하는 푸른색의 메인컬러를 사용하여 깔끔해 보일
+                      수 있도록 디자인 하였습니다.
                     </p>
                   </div>
-                  <ul>
-                    <li>
-                      <em>페이지 수</em>
-                      <span>HTML 약 3000 페이지</span>
-                    </li>
-                    <li>
-                      <em>작업 기간</em>
-                      <span>약 2개월</span>
-                    </li>
-                    <li>
-                      <em>작업 인원</em>
-                      <span>총 9명</span>
-                    </li>
-                    <li>
-                      <em>제작 참여</em>
-                      <span>15%</span>
-                    </li>
-                    <li>
-                      <em>완료 날짜</em>
-                      <span>2025. 07.</span>
-                    </li>
-                    <li>
-                      <em>참고 사항</em>
-                      <span>회사 보안 정책상 코드 공개가 어려워 스크린샷으로 대체.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="tab_item">
-                <div class="project_slider" uk-lightbox>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_01.png" data-alt="Image" data-caption="초등 3, 4학년 수학 1 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_01.png" alt="초등 수학 3,4 1페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_02.png" data-alt="Image" data-caption="초등 3, 4학년 수학 2 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_02.png" alt="초등 수학 3,4 2페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_03.png" data-alt="Image" data-caption="초등 3, 4학년 수학 3 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_03.png" alt="초등 수학 3,4 3페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_04.png" data-alt="Image" data-caption="초등 3, 4학년 수학 4 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_04.png" alt="초등 수학 3,4 4페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_05.png" data-alt="Image" data-caption="초등 3, 4학년 수학 5 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_05.png" alt="초등 수학 3,4 5페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_06.png" data-alt="Image" data-caption="초등 3, 4학년 수학 6 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_06.png" alt="초등 수학 3,4 6페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_07.png" data-alt="Image" data-caption="초등 3, 4학년 수학 7 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_07.png" alt="초등 수학 3,4 7페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_08.png" data-alt="Image" data-caption="초등 3, 4학년 수학 8 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_08.png" alt="초등 수학 3,4 8페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_09.png" data-alt="Image" data-caption="초등 3, 4학년 수학 9 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_09.png" alt="초등 수학 3,4 9페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_10.png" data-alt="Image" data-caption="초등 3, 4학년 수학 10 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_10.png" alt="초등 수학 3,4 10페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_11.png" data-alt="Image" data-caption="초등 3, 4학년 수학 11 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_11.png" alt="초등 수학 3,4 11페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_12.png" data-alt="Image" data-caption="초등 3, 4학년 수학 12 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_12.png" alt="초등 수학 3,4 12페이지">
-                  </a>
-                  <a href="./image/project/dong_elem_math_3_4/dong_math_13.png" data-alt="Image" data-caption="초등 3, 4학년 수학 13 / 13 페이지">
-                    <img src="./image/project/dong_elem_math_3_4/dong_math_13.png" alt="초등 수학 3,4 13페이지">
-                  </a>
-                </div>
-                <div class="project_desc">
-                  <div>
-                    <h3>초등 수학 3,4학년 교사용 전자저작물</h3>
-                    <p>
-                      페이지 양산작업 및 수정작업, 스크린 리더 대체 텍스트 작업, 웹 접근성 검사, 웹 표준 적합성 검사 작업 담당 하였습니다.
-                    </p>
+                  <div class="mobile_desc_format_font">
+                    <b>Font Color</b>
+                    <div class="color_chips">
+                      <em>#333333</em>
+                      <em>#777777</em>
+                      <em>#999999</em>
+                    </div>
+                    <div class="text_size">
+                      <span>한글 폰트 : 프리텐다드</span>
+                      <span>영문 폰트 : Poppins</span>
+                      <span>폰트크기</span>
+                      <span>body : 14px</span>
+                      <span>title : 18px, 16px, 15px</span>
+                    </div>
                   </div>
-                  <ul>
-                    <li>
-                      <em>페이지 수</em>
-                      <span>HTML 약 300 페이지</span>
-                    </li>
-                    <li>
-                      <em>작업 기간</em>
-                      <span>약 1개월</span>
-                    </li>
-                    <li>
-                      <em>작업 인원</em>
-                      <span>총 7명</span>
-                    </li>
-                    <li>
-                      <em>제작 참여</em>
-                      <span>15%</span>
-                    </li>
-                    <li>
-                      <em>완료 날짜</em>
-                      <span>2025. 4.</span>
-                    </li>
-                    <li>
-                      <em>참고 사항</em>
-                      <span>회사 보안 정책상 코드 공개가 어려워 스크린샷으로 대체.</span>
-                    </li>
-                  </ul>
                 </div>
-              </div>
-              <div class="tab_item">
-                <div class="project_slider" uk-lightbox>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_01.png" data-alt="Image" data-caption="초등 사회 5, 6학년 1 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_01.png" alt="초등 사회 5,6 1페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_02.png" data-alt="Image" data-caption="초등 사회 5, 6학년 2 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_02.png" alt="초등 사회 5,6 2페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_03.png" data-alt="Image" data-caption="초등 사회 5, 6학년 3 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_03.png" alt="초등 사회 5,6 3페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_04.png" data-alt="Image" data-caption="초등 사회 5, 6학년 4 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_04.png" alt="초등 사회 5,6 4페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_05.png" data-alt="Image" data-caption="초등 사회 5, 6학년 5 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_05.png" alt="초등 사회 5,6 5페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_06.png" data-alt="Image" data-caption="초등 사회 5, 6학년 6 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_06.png" alt="초등 사회 5,6 6페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_07.png" data-alt="Image" data-caption="초등 사회 5, 6학년 7 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_07.png" alt="초등 사회 5,6 7페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_08.png" data-alt="Image" data-caption="초등 사회 5, 6학년 8 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_08.png" alt="초등 사회 5,6 8페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_09.png" data-alt="Image" data-caption="초등 사회 5, 6학년 9 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_09.png" alt="초등 사회 5,6 9페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_10.png" data-alt="Image" data-caption="초등 사회 5, 6학년 10 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_10.png" alt="초등 사회 5,6 10페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_11.png" data-alt="Image" data-caption="초등 사회 5, 6학년 11 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_11.png" alt="초등 사회 5,6 11페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_12.png" data-alt="Image" data-caption="초등 사회 5, 6학년 12 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_12.png" alt="초등 사회 5,6 12페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_13.png" data-alt="Image" data-caption="초등 사회 5, 6학년 13 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_13.png" alt="초등 사회 5,6 13페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_14.png" data-alt="Image" data-caption="초등 사회 5, 6학년 14 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_14.png" alt="초등 사회 5,6 14페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_soc_5_6/chun_soc_15.png" data-alt="Image" data-caption="초등 사회 5, 6학년 15 / 15 페이지">
-                    <img src="./image/project/cj_elem_soc_5_6/chun_soc_15.png" alt="초등 사회 5,6 15페이지">
-                  </a>
-                </div>
-                <div class="project_desc">
+                <div class="mobile_desc_detail">
                   <div>
-                    <h3>초등 사회 5,6학년 교사용 전자저작물</h3>
-                    <p>
-                      페이지 양산작업 및 수정작업, 웹 접근성 검사, 웹 표준 적합성 검사 작업 담당 하였습니다.
-                    </p>
+                    <b>작업기간</b>
+                    <span>2주</span>
                   </div>
-                  <ul>
-                    <li>
-                      <em>페이지 수</em>
-                      <span>HTML 약 2100 페이지</span>
-                    </li>
-                    <li>
-                      <em>작업 기간</em>
-                      <span>약 2.5개월</span>
-                    </li>
-                    <li>
-                      <em>작업 인원</em>
-                      <span>총 5명</span>
-                    </li>
-                    <li>
-                      <em>제작 참여</em>
-                      <span>20%</span>
-                    </li>
-                    <li>
-                      <em>완료 날짜</em>
-                      <span>2025. 3.</span>
-                    </li>
-                    <li>
-                      <em>참고 사항</em>
-                      <span>회사 보안 정책상 코드 공개가 어려워 스크린샷으로 대체.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="tab_item">
-                <div class="project_slider" uk-lightbox>
-                  <a href="./image/project/cj_mid_sci_1/chun_sci_01.png" data-alt="Image" data-caption="중등 과학 1학년 1 / 9 페이지">
-                    <img src="./image/project/cj_mid_sci_1/chun_sci_01.png" alt="중등 과학 1페이지">
-                  </a>
-                  <a href="./image/project/cj_mid_sci_1/chun_sci_02.png" data-alt="Image" data-caption="중등 과학 1학년 2 / 9 페이지">
-                    <img src="./image/project/cj_mid_sci_1/chun_sci_02.png" alt="중등 과학 1페이지">
-                  </a>
-                  <a href="./image/project/cj_mid_sci_1/chun_sci_03.png" data-alt="Image" data-caption="중등 과학 1학년 3 / 9 페이지">
-                    <img src="./image/project/cj_mid_sci_1/chun_sci_03.png" alt="중등 과학 1페이지">
-                  </a>
-                  <a href="./image/project/cj_mid_sci_1/chun_sci_04.png" data-alt="Image" data-caption="중등 과학 1학년 4 / 9 페이지">
-                    <img src="./image/project/cj_mid_sci_1/chun_sci_04.png" alt="중등 과학 1페이지">
-                  </a>
-                  <a href="./image/project/cj_mid_sci_1/chun_sci_05.png" data-alt="Image" data-caption="중등 과학 1학년 5 / 9 페이지">
-                    <img src="./image/project/cj_mid_sci_1/chun_sci_05.png" alt="중등 과학 1페이지">
-                  </a>
-                  <a href="./image/project/cj_mid_sci_1/chun_sci_06.png" data-alt="Image" data-caption="중등 과학 1학년 6 / 9 페이지">
-                    <img src="./image/project/cj_mid_sci_1/chun_sci_06.png" alt="중등 과학 1페이지">
-                  </a>
-                  <a href="./image/project/cj_mid_sci_1/chun_sci_07.png" data-alt="Image" data-caption="중등 과학 1학년 7 / 9 페이지">
-                    <img src="./image/project/cj_mid_sci_1/chun_sci_07.png" alt="중등 과학 1페이지">
-                  </a>
-                  <a href="./image/project/cj_mid_sci_1/chun_sci_08.png" data-alt="Image" data-caption="중등 과학 1학년 8 / 9 페이지">
-                    <img src="./image/project/cj_mid_sci_1/chun_sci_08.png" alt="중등 과학 1페이지">
-                  </a>
-                  <a href="./image/project/cj_mid_sci_1/chun_sci_09.png" data-alt="Image" data-caption="중등 과학 1학년 9 / 9 페이지">
-                    <img src="./image/project/cj_mid_sci_1/chun_sci_09.png" alt="중등 과학 1페이지">
-                  </a>
-                </div>
-                <div class="project_desc">
                   <div>
-                    <h3>중등 과학 1학년 교사용 전자저작물</h3>
-                    <p>
-                      공통 HTML, CSS 기획, 페이지 양산작업 및 수정작업, 웹 접근성 검사, 웹 표준 적합성 검사,
-                      교육 영상 자막 제작 작업 담당 하였습니다.
-                    </p>
+                    <b>작업범위</b>
+                    <span>기획, UI디자인, 퍼블리싱</span>
                   </div>
-                  <ul>
-                    <li>
-                      <em>페이지 수</em>
-                      <span>HTML 약 600 페이지</span>
-                    </li>
-                    <li>
-                      <em>작업 기간</em>
-                      <span>약 1.5개월</span>
-                    </li>
-                    <li>
-                      <em>작업 인원</em>
-                      <span>총 5명</span>
-                    </li>
-                    <li>
-                      <em>제작 참여</em>
-                      <span>30%</span>
-                    </li>
-                    <li>
-                      <em>완료 날짜</em>
-                      <span>2025. 01.</span>
-                    </li>
-                    <li>
-                      <em>참고 사항</em>
-                      <span>회사 보안 정책상 코드 공개가 어려워 스크린샷으로 대체.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="tab_item">
-                <div class="project_slider" uk-lightbox>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_01.png" data-alt="Image" data-caption="초등 3, 4학년 수학 1 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_01.png" alt="초등 3,4 수학 1페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_02.png" data-alt="Image" data-caption="초등 3, 4학년 수학 2 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_02.png" alt="초등 3,4 수학 2페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_03.png" data-alt="Image" data-caption="초등 3, 4학년 수학 3 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_03.png" alt="초등 3,4 수학 3페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_04.png" data-alt="Image" data-caption="초등 3, 4학년 수학 4 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_04.png" alt="초등 3,4 수학 4페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_05.png" data-alt="Image" data-caption="초등 3, 4학년 수학 5 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_05.png" alt="초등 3,4 수학 5페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_06.png" data-alt="Image" data-caption="초등 3, 4학년 수학 6 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_06.png" alt="초등 3,4 수학 16페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_07.png" data-alt="Image" data-caption="초등 3, 4학년 수학 7 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_07.png" alt="초등 3,4 수학 7페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_08.png" data-alt="Image" data-caption="초등 3, 4학년 수학 8 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_08.png" alt="초등 3,4 수학 8페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_09.png" data-alt="Image" data-caption="초등 3, 4학년 수학 9 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_09.png" alt="초등 3,4 수학 9페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_10.png" data-alt="Image" data-caption="초등 3, 4학년 수학 10 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_10.png" alt="초등 3,4 수학 10페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_11.png" data-alt="Image" data-caption="초등 3, 4학년 수학 11 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_11.png" alt="초등 3,4 수학 11페이지">
-                  </a>
-                  <a href="./image/project/cj_elem_math_3_4/chun_math_12.png" data-alt="Image" data-caption="초등 3, 4학년 수학 12 / 12 페이지">
-                    <img src="./image/project/cj_elem_math_3_4/chun_math_12.png" alt="초등 3,4 수학 12페이지">
-                  </a>
-                </div>
-                <div class="project_desc">
                   <div>
-                    <h3>초등 수학 3,4학년 학생용 교과서</h3>
-                    <p>
-                      페이지 양산작업 및 수정작업, 스크린 리더 대체 텍스트 작업, 웹 접근성 검사, 웹 표준 적합성 검사 작업 하였습니다.
-                    </p>
+                    <b>제작참여</b>
+                    <span>100%</span>
                   </div>
-                  <ul>
-                    <li>
-                      <em>페이지 수</em>
-                      <span>HTML 약 2900개 페이지</span>
-                    </li>
-                    <li>
-                      <em>작업 기간</em>
-                      <span>약 4개월</span>
-                    </li>
-                    <li>
-                      <em>작업 인원</em>
-                      <span>총 5명</span>
-                    </li>
-                    <li>
-                      <em>제작 참여</em>
-                      <span>30%</span>
-                    </li>
-                    <li>
-                      <em>완료 날짜</em>
-                      <span>2024. 12</span>
-                    </li>
-                    <li>
-                      <em>참고 사항</em>
-                      <span>회사 보안 정책상 코드 공개가 어려워 스크린샷으로 대체.</span>
-                    </li>
-                  </ul>
+                  <div>
+                    <b>제작방식</b>
+                    <span>HTML + CSS + JQUERY</span>
+                  </div>
+                  <div class="feature">
+                    <b>레이아웃</b>
+                    <span>Flex 기반의 모바일 퍼스트 반응형 레이아웃</span>
+                  </div>
+                  <div>
+                    <b>플러그인</b>
+                    <span>Slick.js (슬라이더)</span>
+                  </div>
+                  <div class="feature">
+                    <b>프로세스</b>
+                    <span>
+                      와이어프레임 및 UI디자인 → 기능 정의서, HTML구조 설계 →
+                      퍼블리싱 시작
+                    </span>
+                  </div>
+                  <div class="feature">
+                    <b>참고사항</b>
+                    <span>
+                      Slick.js를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로
+                      제작
+                    </span>
+                  </div>
+                </div>
+                <div class="mobile_desc_btns">
+                  <a href="./doc/redefine_fs.pdf" data-featherlight="iframe">기능정의서</a>
+                  <a href="./portfolio/mobile_web/redefine/ui_design/index.html" data-featherlight="iframe">UI 디자인</a>
+                  <a href="./portfolio/mobile_web/mobile_mockup_single/index.html" data-featherlight="iframe">싱글뷰</a>
+                  <a href="./portfolio/mobile_web/mobile_mockup_multi/index.html" data-featherlight="iframe">멀티뷰</a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section> -->
-
-      <!-- ########## Mobile ########## -->
-      <section id="mobile">
-        <div class="inner">
-          <h2>Mobile WebⅠ.</h2>
-          <div class="wrapper">
-            <div class="mobile_photo">
-              <div class="mobile_photo_first">
-                <img src="./image/mobile_web/redefine_mobile_04.png" alt="리디파인 프리로딩 화면" />
+        </section>
+        <!-- ########## Mobile - second ########## -->
+        <section id="mobile" class="sec">
+          <div class="inner">
+            <h2>Mobile WebⅡ.</h2>
+            <div class="wrapper">
+              <div class="mobile_photo">
+                <div class="mobile_photo_first">
+                  <img src="./image/mobile_web_2/css_nesting_01.png" alt="마켓프레시 인트로 화면" />
+                </div>
+                <div class="mobile_photo_second">
+                  <img src="./image/mobile_web_2/css_nesting_02.png" alt="마켓프레시 메인화면" />
+                </div>
               </div>
-              <div class="mobile_photo_second">
-                <img src="./image/mobile_web/redefine_mobile_05.png" alt="리디파인 메인화면" />
+              <div class="mobile_desc">
+                <div class="mobile_desc_title">
+                  <h3>
+                    <span>Market Fresh</span>
+                  </h3>
+                  <p>
+                    SCSS(SASS)는 기존의 CSS보다 코드의 가독성 및 재사용성을 높여 유지보수가 쉽다는 장점이 있지만
+                    매번 컴파일을 해야 한다는 단점이 있는데, 최신 문법인 CSS Nesting은 SCSS와 완전히 동일한 문법이지만
+                    컴파일도 필요 없고 최근에 호환성까지 좋아져, 실무에서도 충분히 사용 가능할 것이라고 생각되고, 
+                    이를 활용하여 쇼핑몰 모바일 퍼스트 웹 앱을 제작 하였습니다. 
+                  </p>
+                </div>
+                <div class="mobile_desc_format">
+                  <div class="mobile_desc_format_color">
+                    <b>Color Theme</b>
+                    <div class="color_chips">
+                      <em>#6CC31C</em>
+                      <em>#FFFFFF</em>
+                      <em>#3498DB</em>
+                    </div>
+                    <p>
+                      신선한 야채, 과일 등의 제품을 직관적으로 연상시킬수 있는 초록색을 메인 테마 색상으로 디자인 하였습니다.
+                    </p>
+                  </div>
+                  <div class="mobile_desc_format_font">
+                    <b>Font Color</b>
+                    <div class="color_chips">
+                      <em>#111111</em>
+                      <em>#777777</em>
+                      <em>#9C9C9E</em>
+                    </div>
+                    <div class="text_size">
+                      <span>폰트 : 프리텐다드</span>
+                      <span>폰트크기</span>
+                      <span>body : 14px</span>
+                      <span>title : 18px , 16px</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mobile_desc_detail">
+                  <div>
+                    <b>작업기간</b>
+                    <span>2주</span>
+                  </div>
+                  <div>
+                    <b>작업범위</b>
+                    <span>기획, UI디자인, 퍼블리싱</span>
+                  </div>
+                  <div>
+                    <b>제작참여</b>
+                    <span>100%</span>
+                  </div>
+                  <div class="feature">
+                    <b>제작방식</b>
+                    <span>HTML + CSS Nesting + JQUERY</span>
+                  </div>
+                  <div class="feature">
+                    <b>레이아웃</b>
+                    <span>Flex 기반의 모바일 퍼스트 반응형 레이아웃</span>
+                  </div>
+                  <div>
+                    <b>플러그인</b>
+                    <span>Slick.js (슬라이더)</span>
+                  </div>
+                  <div class="feature">
+                    <b>프로세스</b>
+                    <span>
+                      와이어프레임 및 UI디자인 → 기능 정의서, HTML구조 설계 →
+                      퍼블리싱 시작
+                    </span>
+                  </div>
+                  <div class="feature">
+                    <b>참고사항</b>
+                    <span>
+                      Slick.js를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로
+                      제작
+                    </span>
+                  </div>
+                </div>
+                <div class="mobile_desc_btns">
+                  <a href="./portfolio/mobile_web_sec/mobile_mockup_single/index.html" data-featherlight="iframe">싱글뷰</a>
+                  <a href="./portfolio/mobile_web_sec/mobile_mockup_multi/index.html" data-featherlight="iframe">멀티뷰</a>
+                </div>
               </div>
             </div>
-            <div class="mobile_desc">
-              <div class="mobile_desc_title">
+          </div>
+        </section>
+        <!-- ########## Web ########## -->
+        <section id="web">
+          <div class="inner">
+            <h2>Website Publishing.</h2>
+            <div class="wrapper">
+              <input type="radio" name="web" id="web1" checked />
+              <input type="radio" name="web" id="web2" />
+              <input type="radio" name="web" id="web3" />
+              <input type="radio" name="web" id="web4" />
+              <input type="radio" name="web" id="web5" />
+              <input type="radio" name="web" id="web6" />
+              <div class="web_tab_btns">
+                <div class="web_tab_btns_indicator"></div>
+                <label for="web1" data-link="Travelium"></label>
+                <label for="web2" data-link="Shoe Station"></label>
+                <label for="web3" data-link="NGO"></label>
+                <label for="web4" data-link="SMEG"></label>
+                <label for="web5" data-link="NETFLIX"></label>
+                <label for="web6" data-link="Logitech"></label>
+              </div>
+              <div class="web_tab_content_outer">
+                <div class="web_tab_content travelium">
+                  <div class="web_tab_content_thum"></div>
+                  <div class="web_tab_content_desc">
+                    <div class="title">
+                      <h3>Travelium</h3>
+                      <p>
+                        저희 여행사는 고객님들의 안전한 여행을 보장하기 위해 여행 도중 발생하는 문제들을 신속하고 효율적으로 해결해 드립니다. 그리고, 특별한 여행 경험을 할 수 있도록 다양한 취향과 관심사를 반영하여 맞춤형 여행 일정과 프로그램을 제공합니다.
+                      </p>
+                    </div>
+                    <div class="details">
+                      <span>
+                        <b>작업기간</b>
+                        3일
+                      </span>
+                      <span>
+                        <b>작업범위</b>
+                        기획, UI 디자인, 퍼블리싱
+                      </span>
+                      <span>
+                        <b>제작참여</b>
+                        100%
+                      </span>
+                      <span>
+                        <b>제작방식</b>
+                        HTML + SCSS + JQUERY + Slider
+                      </span>
+                      <span>
+                        <b>레이아웃</b>
+                        Grid 기반의 레이아웃
+                      </span>
+                      <div class="feature">
+                        <div>
+                          <b>참고사항</b>
+                          <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btns">
+                      <a href="./portfolio/website_publishing/travelium/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a href="./portfolio/website_publishing/travelium/travelium_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
+                      <a href="./doc/travelium_fs.pdf" data-featherlight="iframe">기능정의서</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="web_tab_content shoe_station">
+                  <div class="web_tab_content_thum"></div>
+                  <div class="web_tab_content_desc">
+                    <div class="title">
+                      <h3>Shoe Station</h3>
+                      <p>
+                        이 쇼핑몰에서 다양한 브랜드의 제품을 한 자리에서 만나 보실 수 있습니다. 가격대도 다양하여 가성비 좋은 신발부터 고품질의 신발까지 모두 갖추고 있습니다. 여러분의 스타일에 맞는 신발을 찾을 수 있도 록 도와드립니다!
+                      </p>
+                    </div>
+                    <div class="details">
+                      <span>
+                        <b>작업기간</b>
+                        5일
+                      </span>
+                      <span>
+                        <b>작업범위</b>
+                        기획, UI 디자인, 퍼블리싱
+                      </span>
+                      <span>
+                        <b>제작참여</b>
+                        100%
+                      </span>
+                      <span>
+                        <b>제작방식</b>
+                        HTML + SCSS + JQUERY + Slider
+                      </span>
+                      <span>
+                        <b>레이아웃</b>
+                        Grid, Flex 기반의 레이아웃
+                      </span>
+                      <div class="feature">
+                        <div>
+                          <b>참고사항</b>
+                          <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btns">
+                      <a href="./portfolio/website_publishing/shoe_station/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a href="./portfolio/website_publishing/shoe_station/mobil_mockup_css/index.html" data-featherlight="iframe">Mobile Ver.</a>
+                      <a href="./doc/shoe_station_fs.pdf" data-featherlight="iframe">기능정의서</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="web_tab_content green">
+                  <div class="web_tab_content_thum"></div>
+                  <div class="web_tab_content_desc">
+                    <div class="title">
+                      <h3>Green Save Earth</h3>
+                      <p>
+                        매년 버려지는 수백만 톤의 플라스틱이 온 지구를 병들게 하고 있습니다. 미래 세대를 위해 지구를 잘 보존하고, 재활용을 잘 하는 취지로 만든 NGO 웹사이트 입니다.
+                      </p>
+                    </div>
+                    <div class="details">
+                      <span>
+                        <b>작업기간</b>
+                        4일
+                      </span>
+                      <span>
+                        <b>작업범위</b>
+                        기획, UI 디자인, 퍼블리싱
+                      </span>
+                      <span>
+                        <b>제작참여</b>
+                        100%
+                      </span>
+                      <span>
+                        <b>제작방식</b>
+                        HTML + CSS + JQUERY
+                      </span>
+                      <span>
+                        <b>레이아웃</b>
+                        Flex 기반의 레이아웃
+                      </span>
+                      <div class="feature">
+                        <div>
+                          <b>참고사항</b>
+                          <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btns">
+                      <a href="./portfolio/website_publishing/green_save_earth/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a href="./portfolio/website_publishing/green_save_earth/green_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="web_tab_content smeg">
+                  <div class="web_tab_content_thum"></div>
+                  <div class="web_tab_content_desc">
+                    <div class="title">
+                      <h3>SMEG</h3>
+                      <p>
+                        기존 웹사이트에서 배너 배치, UI가 불편하다고 생각되었던 부분을 개선해서 작업 하였고, 반응형 페이지로 제작 하였습니다.
+                      </p>
+                    </div>
+                    <div class="details">
+                      <span>
+                        <b>작업기간</b>
+                        4일
+                      </span>
+                      <span>
+                        <b>작업범위</b>
+                        UI디자인, 퍼블리싱
+                      </span>
+                      <span>
+                        <b>제작참여</b>
+                        100%
+                      </span>
+                      <span>
+                        <b>제작방식</b>
+                        HTML + CSS + JQUERY + WOW.js
+                      </span>
+                      <span>
+                        <b>레이아웃</b>
+                        Flex 기반의 레이아웃
+                      </span>
+                      <div class="feature">
+                        <div>
+                          <b>참고사항</b>
+                          <span>WOW.js 를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btns">
+                      <a href="./portfolio/website_publishing/smeg/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a href="./portfolio/website_publishing/smeg/smeg_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="web_tab_content netflix">
+                  <div class="web_tab_content_thum"></div>
+                  <div class="web_tab_content_desc">
+                    <div class="title">
+                      <h3>NETFLIX</h3>
+                      <p>
+                        기존 웹사이트와 최대한 비슷하게 작업하였고, 반응형
+                        페이지로 제작 하였습니다.
+                      </p>
+                    </div>
+                    <div class="details">
+                      <span>
+                        <b>작업기간</b>
+                        2일
+                      </span>
+                      <span>
+                        <b>작업범위</b>
+                        UI디자인, 퍼블리싱
+                      </span>
+                      <span>
+                        <b>제작참여</b>
+                        100%
+                      </span>
+                      <span>
+                        <b>제작방식</b>
+                        HTML + CSS + JQUERY
+                      </span>
+                      <span>
+                        <b>레이아웃</b>
+                        Flex 기반의 레이아웃
+                      </span>
+                      <div class="feature">
+                        <div>
+                          <b>참고사항</b>
+                          <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btns">
+                      <a href="./portfolio/website_publishing/netflix/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a href="./portfolio/website_publishing/netflix/netflix_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="web_tab_content logitech">
+                  <div class="web_tab_content_thum"></div>
+                  <div class="web_tab_content_desc">
+                    <div class="title">
+                      <h3>Logitech</h3>
+                      <p>기존 웹사이트와 최대한 비슷하게 작업 하였습니다.</p>
+                    </div>
+                    <div class="details">
+                      <span>
+                        <b>작업기간</b>
+                        5일
+                      </span>
+                      <span>
+                        <b>작업범위</b>
+                        UI디자인, 퍼블리싱
+                      </span>
+                      <span>
+                        <b>제작참여</b>
+                        100%
+                      </span>
+                      <span>
+                        <b>제작방식</b>
+                        HTML + CSS + JQUERY + Slider
+                      </span>
+                      <span>
+                        <b>레이아웃</b>
+                        Flex 기반의 레이아웃
+                      </span>
+                      <div class="feature">
+                        <div>
+                          <b>참고사항</b>
+                          <span
+                            >Slick.js 를 제외한 모든 퍼블리싱 작업을 직접
+                            하드코딩으로 제작</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btns">
+                      <a href="./portfolio/website_publishing/logitech/index.html" data-featherlight="iframe">PC Ver.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ########## Practical ########## -->
+        <section id="practical">
+          <div class="inner">
+            <h2>Practical Coding.</h2>
+            <div class="wrapper">
+              <div class="practical_slider_outer">
+                <h3>JavaScript</h3>
+                <div class="practical_slider" uk-lightbox>
+                  <a href="./portfolio/practical_coding/js/01/index.html" data-caption="Calculator with JavaScript">
+                    <img src="./image/prac_js/prac_js_01.png" alt="실전코딩 SASS 1" />
+                  </a>
+                  <a href="./portfolio/practical_coding/js/02/index.html" data-caption="Stop Watch with JavaScript">
+                    <img src="./image/prac_js/prac_js_02.png" alt="실전코딩 SASS 2" />
+                  </a>
+                  <a href="./portfolio/practical_coding/js/03/index.html" data-caption="Scissors Rock Paper Game">
+                    <img src="./image/prac_js/prac_js_03.png" alt="실전코딩 SASS 3" />
+                  </a>
+                  <a href="./portfolio/practical_coding/js/04/index.html" data-caption="Drag & Drop Item with JavaScript">
+                    <img src="./image/prac_js/prac_js_04.png" alt="실전코딩 SASS 4" />
+                  </a>
+                  <a href="./portfolio/practical_coding/js/05/index.html" data-caption="AutoSave TO-DO LIST with JavaScript">
+                    <img src="./image/prac_js/prac_js_05.png" alt="실전코딩 SASS 5" />
+                  </a>
+                  <a href="./portfolio/practical_coding/js/06/index.html" data-caption="Countdown with JavaScript">
+                    <img src="./image/prac_js/prac_js_06.png" alt="실전코딩 SASS 6" />
+                  </a>
+                </div>
+              </div>
+              <div class="practical_slider_outer">
+                <h3>SASS (SCSS)</h3>
+                <div class="practical_slider" uk-lightbox>
+                  <a href="./portfolio/practical_coding/sass(scss)/01/index.html" data-caption="Heartbeat Animation with SCSS">
+                    <img src="./image/prac_sass/prac_sass_01.png" alt="실전코딩 SASS 1" />
+                  </a>
+                  <a href="./portfolio/practical_coding/sass(scss)/02/index.html" data-caption="Responsive Gallery with SCSS">
+                    <img src="./image/prac_sass/prac_sass_02.jpg" alt="실전코딩 SASS 2" />
+                  </a>
+                  <a href="./portfolio/practical_coding/sass(scss)/03/index.html" data-caption="Glowing Icon with SCSS">
+                    <img src="./image/prac_sass/prac_sass_03.png" alt="실전코딩 SASS 3" />
+                  </a>
+                  <a href="./portfolio/practical_coding/sass(scss)/04/index.html" data-caption="Fullscreen Photo slider with SCSS">
+                    <img src="./image/prac_sass/prac_sass_04.jpg" alt="실전코딩 SASS 4" />
+                  </a>
+                  <a href="./portfolio/practical_coding/sass(scss)/05/index.html" data-caption="Mobile Mockup with SCSS">
+                    <img src="./image/prac_sass/prac_sass_05.png" alt="실전코딩 SASS 5" />
+                  </a>
+                  <a href="./portfolio/practical_coding/sass(scss)/06/index.html" data-caption="Tablet Mockup with SCSS">
+                    <img src="./image/prac_sass/prac_sass_06.png" alt="실전코딩 SASS 6" />
+                  </a>
+                </div>
+              </div>
+              <div class="practical_slider_outer">
+                <h3>NAVIGATION</h3>
+                <div class="practical_slider" uk-lightbox>
+                  <a href="./portfolio/practical_coding/navigation/01/index.html" data-caption="Overlay Navigation">
+                    <img src="./image/prac_nav/prac_nav_01.png" alt="실전코딩 네비게이션 1" />
+                  </a>
+                  <a href="./portfolio/practical_coding/navigation/02/index.html" data-caption="Glass Sidebar">
+                    <img src="./image/prac_nav/prac_nav_02.png" alt="실전코딩 네비게이션 2" />
+                  </a>
+                  <a href="./portfolio/practical_coding/navigation/03/index.html" data-caption="Dark Mode Navigation">
+                    <img src="./image/prac_nav/prac_nav_03.png" alt="실전코딩 네비게이션 3" />
+                  </a>
+                  <a href="./portfolio/practical_coding/navigation/04/index.html" data-caption="Use Attr Navigation">
+                    <img src="./image/prac_nav/prac_nav_04.png" alt="실전코딩 네비게이션 4" />
+                  </a>
+                  <a href="./portfolio/practical_coding/navigation/05/index.html" data-caption="Animation Indicator Nav">
+                    <img src="./image/prac_nav/prac_nav_05.png" alt="실전코딩 네비게이션 5" />
+                  </a>
+                </div>
+              </div>
+              <div class="practical_slider_outer">
+                <h3>TAB & ACCORDION</h3>
+                <div class="practical_slider" uk-lightbox>
+                  <a href="./portfolio/practical_coding/tab_menu/01/index.html" data-caption="Pure CSS Tab Slide Indicator">
+                    <img src="./image/prac_tab/prac_tab_01.png" alt="실전코딩 탭메뉴 1" />
+                  </a>
+                  <a href="./portfolio/practical_coding/tab_menu/02/index.html" data-caption="Pure CSS Accordion">
+                    <img src="./image/prac_tab/prac_tab_02.png" alt="실전코딩 탭메뉴 2" />
+                  </a>
+                  <a href="./portfolio/practical_coding/tab_menu/03/index.html" data-caption="Pure CSS Tab Navigation">
+                    <img src="./image/prac_tab/prac_tab_03.png" alt="실전코딩 탭메뉴 3" />
+                  </a>
+                  <a href="./portfolio/practical_coding/tab_menu/04/index.html" data-caption="Pure CSS Vertical Slider">
+                    <img src="./image/prac_tab/prac_tab_04.png" alt="실전코딩 탭메뉴 4" />
+                  </a>
+                  <a href="./portfolio/practical_coding/tab_menu/05/index.html" data-caption="Pure CSS Tab Menu">
+                    <img src="./image/prac_tab/prac_tab_05.png" alt="실전코딩 탭메뉴 5" />
+                  </a>
+                </div>
+              </div>
+              <div class="practical_slider_outer">
+                <h3>CARD UI</h3>
+                <div class="practical_slider" uk-lightbox>
+                  <a href="./portfolio/practical_coding/card_ui/01/index.html" data-caption="Product Card">
+                    <img src="./image/prac_card/prac_card_01.png" alt="실전코딩 카드 1" />
+                  </a>
+                  <a href="./portfolio/practical_coding/card_ui/02/index.html" data-caption="Hover Animation Card(z-index)">
+                    <img src="./image/prac_card/prac_card_02.png" alt="실전코딩 카드 2" />
+                  </a>
+                  <a href="./portfolio/practical_coding/card_ui/03/index.html" data-caption="Hover Animation Profile Card">
+                    <img src="./image/prac_card/prac_card_03.png" alt="실전코딩 카드 3" />
+                  </a>
+                  <a href="./portfolio/practical_coding/card_ui/04/index.html" data-caption="Website Card UI">
+                    <img src="./image/prac_card/prac_card_04.png" alt="실전코딩 카드 4" />
+                  </a>
+                  <a href="./portfolio/practical_coding/card_ui/05/index.html" data-caption="Profile Card">
+                    <img src="./image/prac_card/prac_card_05.png" alt="실전코딩 카드 5" />
+                  </a>
+                </div>
+              </div>
+              <div class="practical_slider_outer">
+                <h3>FORM</h3>
+                <div class="practical_slider" uk-lightbox>
+                  <a href="./portfolio/practical_coding/form/01/index.html" data-caption="Register Form">
+                    <img src="./image/prac_form/prac_form_01.png" alt="실전코딩 폼 1" />
+                  </a>
+                  <a class="caption_white" href="./portfolio/practical_coding/form/02/index.html" data-caption="Glass Login Form">
+                    <img src="./image/prac_form/prac_form_02.png" alt="실전코딩 폼 2" />
+                  </a>
+                  <a href="./portfolio/practical_coding/form/03/index.html" data-caption="Naver Sign-up Form">
+                    <img src="./image/prac_form/prac_form_03.png" alt="실전코딩 폼 3" />
+                  </a>
+                  <a href="./portfolio/practical_coding/form/04/index.html" data-caption="Custom Radio Button">
+                    <img src="./image/prac_form/prac_form_04.png" alt="실전코딩 폼 4" />
+                  </a>
+                  <a href="./portfolio/practical_coding/form/05/index.html" data-caption="Search Box Button">
+                    <img src="./image/prac_form/prac_form_05.png" alt="실전코딩 폼 5" />
+                  </a>
+                </div>
+              </div>
+              <div class="practical_slider_outer">
+                <h3>OTHER</h3>
+                <div class="practical_slider" uk-lightbox>
+                  <a href="./portfolio/practical_coding/prototype/01/index.html" data-caption="Video Landing Page">
+                    <img src="./image/prac_proto/prac_proto_01.png" alt="실전코딩 프로토타입 1" />
+                  </a>
+                  <a href="./portfolio/practical_coding/prototype/02/index.html" data-caption="Star Rating">
+                    <img src="./image/prac_proto/prac_proto_02.png" alt="실전코딩 프로토타입 2" />
+                  </a>
+                  <a href="./portfolio/practical_coding/prototype/03/index.html" data-caption="Animation Share Button">
+                    <img src="./image/prac_proto/prac_proto_03.png" alt="실전코딩 프로토타입 3" />
+                  </a>
+                  <a href="./portfolio/practical_coding/prototype/04/index.html" data-caption="Hamburger Button">
+                    <img src="./image/prac_proto/prac_proto_04.png" alt="실전코딩 프로토타입 4" />
+                  </a>
+                  <a href="./portfolio/practical_coding/prototype/05/index.html" data-caption="SNS Tooltip">
+                    <img src="./image/prac_proto/prac_proto_05.png" alt="실전코딩 프로토타입 5" />
+                  </a>
+                </div>
+              </div>
+              <div class="practical_slider_outer">
+                <h3>ANIMATION (KEYFRAMES)</h3>
+                <div class="practical_slider" uk-lightbox>
+                  <a href="./portfolio/practical_coding/animation/01/index.html" data-caption="Color Change Loading">
+                    <img src="./image/prac_ani/prac_ani_01.png" alt="실전코딩 애니메이션 1" />
+                  </a>
+                  <a href="./portfolio/practical_coding/animation/02/index.html" data-caption="Toast Notification">
+                    <img src="./image/prac_ani/prac_ani_02.png" alt="실전코딩 애니메이션 2" />
+                  </a>
+                  <a href="./portfolio/practical_coding/animation/03/index.html" data-caption="Text Animation Loading">
+                    <img src="./image/prac_ani/prac_ani_03.png" alt="실전코딩 애니메이션 3" />
+                  </a>
+                  <a href="./portfolio/practical_coding/animation/04/index.html" data-caption="Pebble Rotate Animation">
+                    <img src="./image/prac_ani/prac_ani_04.png" alt="실전코딩 애니메이션 4" />
+                  </a>
+                  <a href="./portfolio/practical_coding/animation/05/index.html" data-caption="Plane Animation Loading">
+                    <img src="./image/prac_ani/prac_ani_05.png" alt="실전코딩 애니메이션 5" />
+                  </a>
+                </div>
+              </div>
+              <div class="practical_slider_outer">
+                <h3>HOVER EFFECT</h3>
+                <div class="practical_slider" uk-lightbox>
+                  <a href="./portfolio/practical_coding/hover/01/index.html" data-caption="Gallery Accordion">
+                    <img src="./image/prac_hover/prac_hover_01.png" alt="실전코딩 호버 1" />
+                  </a>
+                  <a href="./portfolio/practical_coding/hover/02/index.html" data-caption="SNS Button">
+                    <img src="./image/prac_hover/prac_hover_02.png" alt="실전코딩 호버 2" />
+                  </a>
+                  <a href="./portfolio/practical_coding/hover/03/index.html" data-caption="Background Change Navigation">
+                    <img src="./image/prac_hover/prac_hover_03.png" alt="실전코딩 호버 3" />
+                  </a>
+                  <a href="./portfolio/practical_coding/hover/04/index.html" data-caption="3D Hover Effect">
+                    <img src="./image/prac_hover/prac_hover_04.png" alt="실전코딩 호버 4" />
+                  </a>
+                  <a href="./portfolio/practical_coding/hover/05/index.html" data-caption="Strike Hover Effect">
+                    <img src="./image/prac_hover/prac_hover_05.png" alt="실전코딩 호버 5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ########## Epilogue ########## -->
+        <section id="epilogue">
+          <div class="inner">
+            <h2>Epilogue.</h2>
+
+            <div class="wrapper">
+              <div class="epilogue_heading">
                 <h3>
-                  <span>Redefine · </span>
-                  쇼핑을 재정의하다!
+                  감사합니다! <br />
+                  웹 퍼블리셔
+                  <span>이 종 주</span>
+                  였습니다.
                 </h3>
                 <p>
-                  최근 폭등한 물가로 인해 브랜드 쇼핑이 부담스러운데, 인기가
-                  많은 브랜드 제품을 참고하여 같은 공정을 거쳐 성능은 비슷하되
-                  가격 거품을 걷어내고 합리적인 가격으로 소비자에게 제공될 수
-                  있다면 좋을것 같다는 생각으로 이 쇼핑몰을 제작 하였습니다.
+                  정말 잘하고 싶고, 제가 잘 할수 있는 일이라는 확신이 들었기 때문에 지금껏 오랜 시간동안 해왔던 일을 마무리 짓고
+                  작년 6월부터 퍼블리셔로서 새 출발을 하였습니다. 탄탄한 기본기와 빠른 습득력을 토대로
+                  트렌드에 뒤쳐지지 않기 위해 배움을 게을리 하지 않는 웹 퍼블리셔가 되겠습니다!
                 </p>
               </div>
-              <div class="mobile_desc_format">
-                <div class="mobile_desc_format_color">
-                  <b>Color Theme</b>
-                  <div class="color_chips">
-                    <em>#0077ED</em>
-                    <em>#E1F0FF</em>
-                    <em>#F4C500</em>
-                  </div>
+              <div class="epilogue_job_strength">
+                <div>
+                  <b>퍼블리싱 원칙과 기본기</b>
                   <p>
-                    신뢰성을 상징하는 푸른색의 메인컬러를 사용하여 깔끔해 보일
-                    수 있도록 디자인 하였습니다.
+                    원활한 작업을 위해 폴더구조와 경로를 체계적으로 정리하고, 항상
+                    깔끔한 인덴트와 적절한 주석 사용으로 저 뿐만 아니라 협업자도
+                    알아보는데 불편함이 없도록 깔끔하고 가독성이 좋은 코드작성을
+                    선호합니다.
                   </p>
                 </div>
-                <div class="mobile_desc_format_font">
-                  <b>Font Color</b>
-                  <div class="color_chips">
-                    <em>#333333</em>
-                    <em>#777777</em>
-                    <em>#999999</em>
-                  </div>
-                  <div class="text_size">
-                    <span>한글 폰트 : 프리텐다드</span>
-                    <span>영문 폰트 : Poppins</span>
-                    <span>폰트크기</span>
-                    <span>body : 14px</span>
-                    <span>title : 18px, 16px, 15px</span>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile_desc_detail">
                 <div>
-                  <b>작업기간</b>
-                  <span>2주</span>
-                </div>
-                <div>
-                  <b>작업범위</b>
-                  <span>기획, UI디자인, 퍼블리싱</span>
-                </div>
-                <div>
-                  <b>제작참여</b>
-                  <span>100%</span>
-                </div>
-                <div>
-                  <b>제작방식</b>
-                  <span>HTML + CSS + JQUERY</span>
-                </div>
-                <div class="feature">
-                  <b>레이아웃</b>
-                  <span>Flex 기반의 모바일 퍼스트 반응형 레이아웃</span>
-                </div>
-                <div>
-                  <b>플러그인</b>
-                  <span>Slick.js (슬라이더)</span>
-                </div>
-                <div class="feature">
-                  <b>프로세스</b>
-                  <span>
-                    와이어프레임 및 UI디자인 → 기능 정의서, HTML구조 설계 →
-                    퍼블리싱 시작
-                  </span>
-                </div>
-                <div class="feature">
-                  <b>참고사항</b>
-                  <span>
-                    Slick.js를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로
-                    제작
-                  </span>
-                </div>
-              </div>
-              <div class="mobile_desc_btns">
-                <a href="./doc/redefine_fs.pdf" data-featherlight="iframe">기능정의서</a>
-                <a href="./portfolio/mobile_web/redefine/ui_design/index.html" data-featherlight="iframe">UI 디자인</a>
-                <a href="./portfolio/mobile_web/mobile_mockup_single/index.html" data-featherlight="iframe">싱글뷰</a>
-                <a href="./portfolio/mobile_web/mobile_mockup_multi/index.html" data-featherlight="iframe">멀티뷰</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ########## Mobile - second ########## -->
-      <section id="mobile" class="sec">
-        <div class="inner">
-          <h2>Mobile WebⅡ.</h2>
-          <div class="wrapper">
-            <div class="mobile_photo">
-              <div class="mobile_photo_first">
-                <img src="./image/mobile_web_2/css_nesting_01.png" alt="마켓프레시 인트로 화면" />
-              </div>
-              <div class="mobile_photo_second">
-                <img src="./image/mobile_web_2/css_nesting_02.png" alt="마켓프레시 메인화면" />
-              </div>
-            </div>
-            <div class="mobile_desc">
-              <div class="mobile_desc_title">
-                <h3>
-                  <span>Market Fresh</span>
-                </h3>
-                <p>
-                  SCSS(SASS)는 기존의 CSS보다 코드의 가독성 및 재사용성을 높여 유지보수가 쉽다는 장점이 있지만
-                  매번 컴파일을 해야 한다는 단점이 있는데, 최신 문법인 CSS Nesting은 SCSS와 완전히 동일한 문법이지만
-                  컴파일도 필요 없고 최근에 호환성까지 좋아져, 실무에서도 충분히 사용 가능할 것이라고 생각되고, 
-                  이를 활용하여 쇼핑몰 모바일 퍼스트 웹 앱을 제작 하였습니다. 
-                </p>
-              </div>
-              <div class="mobile_desc_format">
-                <div class="mobile_desc_format_color">
-                  <b>Color Theme</b>
-                  <div class="color_chips">
-                    <em>#6CC31C</em>
-                    <em>#FFFFFF</em>
-                    <em>#3498DB</em>
-                  </div>
+                  <b>하드코딩</b>
                   <p>
-                    신선한 야채, 과일 등의 제품을 직관적으로 연상시킬수 있는 초록색을 메인 테마 색상으로 디자인 하였습니다.
+                    디자인이 아닌 기능적으로 필요한 경우에만 플러그인을 사용하고
+                    그 외 모든 작업은 하드코딩을 원칙으로 작업합니다. Position,
+                    Float 속성을 사용하는 기존방식과, Flex, Grid를 사용한 레이아웃
+                    모두 가능하고, 반복 또는 불필요한 코드는 최대한 압축하여
+                    코드를 작성합니다.
                   </p>
                 </div>
-                <div class="mobile_desc_format_font">
-                  <b>Font Color</b>
-                  <div class="color_chips">
-                    <em>#111111</em>
-                    <em>#777777</em>
-                    <em>#9C9C9E</em>
-                  </div>
-                  <div class="text_size">
-                    <span>폰트 : 프리텐다드</span>
-                    <span>폰트크기</span>
-                    <span>body : 14px</span>
-                    <span>title : 18px , 16px</span>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile_desc_detail">
                 <div>
-                  <b>작업기간</b>
-                  <span>2주</span>
+                  <b>체계적인 퍼블리싱</b>
+                  <p>
+                    작업에 들어가기 전 벤치마킹 사이트를 물색하고 와이어프레임을
+                    작성한 후, UI 디자인, 기능정의서, HTML구조 설계 순으로
+                    체계적인 퍼블리싱을 합니다. 순차적인 단계를 거침으로써
+                    프로젝트 중 발생하는 불필요한 과정을 줄이고 효율적으로
+                    퍼블리싱을 하고 있습니다.
+                  </p>
                 </div>
                 <div>
-                  <b>작업범위</b>
-                  <span>기획, UI디자인, 퍼블리싱</span>
-                </div>
-                <div>
-                  <b>제작참여</b>
-                  <span>100%</span>
-                </div>
-                <div class="feature">
-                  <b>제작방식</b>
-                  <span>HTML + CSS Nesting + JQUERY</span>
-                </div>
-                <div class="feature">
-                  <b>레이아웃</b>
-                  <span>Flex 기반의 모바일 퍼스트 반응형 레이아웃</span>
-                </div>
-                <div>
-                  <b>플러그인</b>
-                  <span>Slick.js (슬라이더)</span>
-                </div>
-                <div class="feature">
-                  <b>프로세스</b>
-                  <span>
-                    와이어프레임 및 UI디자인 → 기능 정의서, HTML구조 설계 →
-                    퍼블리싱 시작
-                  </span>
-                </div>
-                <div class="feature">
-                  <b>참고사항</b>
-                  <span>
-                    Slick.js를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로
-                    제작
-                  </span>
-                </div>
-              </div>
-              <div class="mobile_desc_btns">
-                <a href="./portfolio/mobile_web_sec/mobile_mockup_single/index.html" data-featherlight="iframe">싱글뷰</a>
-                <a href="./portfolio/mobile_web_sec/mobile_mockup_multi/index.html" data-featherlight="iframe">멀티뷰</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ########## Web ########## -->
-      <section id="web">
-        <div class="inner">
-          <h2>Website Publishing.</h2>
-          <div class="wrapper">
-            <input type="radio" name="web" id="web1" checked />
-            <input type="radio" name="web" id="web2" />
-            <input type="radio" name="web" id="web3" />
-            <input type="radio" name="web" id="web4" />
-            <input type="radio" name="web" id="web5" />
-            <input type="radio" name="web" id="web6" />
-            <div class="web_tab_btns">
-              <div class="web_tab_btns_indicator"></div>
-              <label for="web1" data-link="Travelium"></label>
-              <label for="web2" data-link="Shoe Station"></label>
-              <label for="web3" data-link="NGO"></label>
-              <label for="web4" data-link="SMEG"></label>
-              <label for="web5" data-link="NETFLIX"></label>
-              <label for="web6" data-link="Logitech"></label>
-            </div>
-            <div class="web_tab_content_outer">
-              <div class="web_tab_content travelium">
-                <div class="web_tab_content_thum"></div>
-                <div class="web_tab_content_desc">
-                  <div class="title">
-                    <h3>Travelium</h3>
-                    <p>
-                      저희 여행사는 고객님들의 안전한 여행을 보장하기 위해 여행 도중 발생하는 문제들을 신속하고 효율적으로 해결해 드립니다. 그리고, 특별한 여행 경험을 할 수 있도록 다양한 취향과 관심사를 반영하여 맞춤형 여행 일정과 프로그램을 제공합니다.
-                    </p>
-                  </div>
-                  <div class="details">
-                    <span>
-                      <b>작업기간</b>
-                      3일
-                    </span>
-                    <span>
-                      <b>작업범위</b>
-                      기획, UI 디자인, 퍼블리싱
-                    </span>
-                    <span>
-                      <b>제작참여</b>
-                      100%
-                    </span>
-                    <span>
-                      <b>제작방식</b>
-                      HTML + SCSS + JQUERY + Slider
-                    </span>
-                    <span>
-                      <b>레이아웃</b>
-                      Grid 기반의 레이아웃
-                    </span>
-                    <div class="feature">
-                      <div>
-                        <b>참고사항</b>
-                        <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="btns">
-                    <a href="./portfolio/website_publishing/travelium/index.html" data-featherlight="iframe">PC Ver.</a>
-                    <a href="./portfolio/website_publishing/travelium/travelium_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                    <a href="./doc/travelium_fs.pdf" data-featherlight="iframe">기능정의서</a>
-                  </div>
-                </div>
-              </div>
-              <div class="web_tab_content shoe_station">
-                <div class="web_tab_content_thum"></div>
-                <div class="web_tab_content_desc">
-                  <div class="title">
-                    <h3>Shoe Station</h3>
-                    <p>
-                      이 쇼핑몰에서 다양한 브랜드의 제품을 한 자리에서 만나 보실 수 있습니다. 가격대도 다양하여 가성비 좋은 신발부터 고품질의 신발까지 모두 갖추고 있습니다. 여러분의 스타일에 맞는 신발을 찾을 수 있도 록 도와드립니다!
-                    </p>
-                  </div>
-                  <div class="details">
-                    <span>
-                      <b>작업기간</b>
-                      5일
-                    </span>
-                    <span>
-                      <b>작업범위</b>
-                      기획, UI 디자인, 퍼블리싱
-                    </span>
-                    <span>
-                      <b>제작참여</b>
-                      100%
-                    </span>
-                    <span>
-                      <b>제작방식</b>
-                      HTML + SCSS + JQUERY + Slider
-                    </span>
-                    <span>
-                      <b>레이아웃</b>
-                      Grid, Flex 기반의 레이아웃
-                    </span>
-                    <div class="feature">
-                      <div>
-                        <b>참고사항</b>
-                        <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="btns">
-                    <a href="./portfolio/website_publishing/shoe_station/index.html" data-featherlight="iframe">PC Ver.</a>
-                    <a href="./portfolio/website_publishing/shoe_station/mobil_mockup_css/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                    <a href="./doc/shoe_station_fs.pdf" data-featherlight="iframe">기능정의서</a>
-                  </div>
-                </div>
-              </div>
-              <div class="web_tab_content green">
-                <div class="web_tab_content_thum"></div>
-                <div class="web_tab_content_desc">
-                  <div class="title">
-                    <h3>Green Save Earth</h3>
-                    <p>
-                      매년 버려지는 수백만 톤의 플라스틱이 온 지구를 병들게 하고 있습니다. 미래 세대를 위해 지구를 잘 보존하고, 재활용을 잘 하는 취지로 만든 NGO 웹사이트 입니다.
-                    </p>
-                  </div>
-                  <div class="details">
-                    <span>
-                      <b>작업기간</b>
-                      4일
-                    </span>
-                    <span>
-                      <b>작업범위</b>
-                      기획, UI 디자인, 퍼블리싱
-                    </span>
-                    <span>
-                      <b>제작참여</b>
-                      100%
-                    </span>
-                    <span>
-                      <b>제작방식</b>
-                      HTML + CSS + JQUERY
-                    </span>
-                    <span>
-                      <b>레이아웃</b>
-                      Flex 기반의 레이아웃
-                    </span>
-                    <div class="feature">
-                      <div>
-                        <b>참고사항</b>
-                        <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="btns">
-                    <a href="./portfolio/website_publishing/green_save_earth/index.html" data-featherlight="iframe">PC Ver.</a>
-                    <a href="./portfolio/website_publishing/green_save_earth/green_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                  </div>
-                </div>
-              </div>
-              <div class="web_tab_content smeg">
-                <div class="web_tab_content_thum"></div>
-                <div class="web_tab_content_desc">
-                  <div class="title">
-                    <h3>SMEG</h3>
-                    <p>
-                      기존 웹사이트에서 배너 배치, UI가 불편하다고 생각되었던 부분을 개선해서 작업 하였고, 반응형 페이지로 제작 하였습니다.
-                    </p>
-                  </div>
-                  <div class="details">
-                    <span>
-                      <b>작업기간</b>
-                      4일
-                    </span>
-                    <span>
-                      <b>작업범위</b>
-                      UI디자인, 퍼블리싱
-                    </span>
-                    <span>
-                      <b>제작참여</b>
-                      100%
-                    </span>
-                    <span>
-                      <b>제작방식</b>
-                      HTML + CSS + JQUERY + WOW.js
-                    </span>
-                    <span>
-                      <b>레이아웃</b>
-                      Flex 기반의 레이아웃
-                    </span>
-                    <div class="feature">
-                      <div>
-                        <b>참고사항</b>
-                        <span>WOW.js 를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="btns">
-                    <a href="./portfolio/website_publishing/smeg/index.html" data-featherlight="iframe">PC Ver.</a>
-                    <a href="./portfolio/website_publishing/smeg/smeg_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                  </div>
-                </div>
-              </div>
-              <div class="web_tab_content netflix">
-                <div class="web_tab_content_thum"></div>
-                <div class="web_tab_content_desc">
-                  <div class="title">
-                    <h3>NETFLIX</h3>
-                    <p>
-                      기존 웹사이트와 최대한 비슷하게 작업하였고, 반응형
-                      페이지로 제작 하였습니다.
-                    </p>
-                  </div>
-                  <div class="details">
-                    <span>
-                      <b>작업기간</b>
-                      2일
-                    </span>
-                    <span>
-                      <b>작업범위</b>
-                      UI디자인, 퍼블리싱
-                    </span>
-                    <span>
-                      <b>제작참여</b>
-                      100%
-                    </span>
-                    <span>
-                      <b>제작방식</b>
-                      HTML + CSS + JQUERY
-                    </span>
-                    <span>
-                      <b>레이아웃</b>
-                      Flex 기반의 레이아웃
-                    </span>
-                    <div class="feature">
-                      <div>
-                        <b>참고사항</b>
-                        <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="btns">
-                    <a href="./portfolio/website_publishing/netflix/index.html" data-featherlight="iframe">PC Ver.</a>
-                    <a href="./portfolio/website_publishing/netflix/netflix_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                  </div>
-                </div>
-              </div>
-              <div class="web_tab_content logitech">
-                <div class="web_tab_content_thum"></div>
-                <div class="web_tab_content_desc">
-                  <div class="title">
-                    <h3>Logitech</h3>
-                    <p>기존 웹사이트와 최대한 비슷하게 작업 하였습니다.</p>
-                  </div>
-                  <div class="details">
-                    <span>
-                      <b>작업기간</b>
-                      5일
-                    </span>
-                    <span>
-                      <b>작업범위</b>
-                      UI디자인, 퍼블리싱
-                    </span>
-                    <span>
-                      <b>제작참여</b>
-                      100%
-                    </span>
-                    <span>
-                      <b>제작방식</b>
-                      HTML + CSS + JQUERY + Slider
-                    </span>
-                    <span>
-                      <b>레이아웃</b>
-                      Flex 기반의 레이아웃
-                    </span>
-                    <div class="feature">
-                      <div>
-                        <b>참고사항</b>
-                        <span
-                          >Slick.js 를 제외한 모든 퍼블리싱 작업을 직접
-                          하드코딩으로 제작</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="btns">
-                    <a href="./portfolio/website_publishing/logitech/index.html" data-featherlight="iframe">PC Ver.</a>
-                  </div>
+                  <b>항상 배우려는 자세</b>
+                  <p>
+                    새로운 기술을 학습하는것 에 대한 욕심이 있고 배우고 사용하는
+                    과정에서 느끼는 보람과 성취감을 좋아합니다. 현재에 안주하지
+                    않고 항상 배움을 실천하는 퍼블리셔가 되려고 노력하고 있습니다.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- ########## Practical ########## -->
-      <section id="practical">
-        <div class="inner">
-          <h2>Practical Coding.</h2>
-          <div class="wrapper">
-            <div class="practical_slider_outer">
-              <h3>JavaScript</h3>
-              <div class="practical_slider" uk-lightbox>
-                <a href="./portfolio/practical_coding/js/01/index.html" data-caption="Calculator with JavaScript">
-                  <img src="./image/prac_js/prac_js_01.png" alt="실전코딩 SASS 1" />
-                </a>
-                <a href="./portfolio/practical_coding/js/02/index.html" data-caption="Stop Watch with JavaScript">
-                  <img src="./image/prac_js/prac_js_02.png" alt="실전코딩 SASS 2" />
-                </a>
-                <a href="./portfolio/practical_coding/js/03/index.html" data-caption="Scissors Rock Paper Game">
-                  <img src="./image/prac_js/prac_js_03.png" alt="실전코딩 SASS 3" />
-                </a>
-                <a href="./portfolio/practical_coding/js/04/index.html" data-caption="Drag & Drop Item with JavaScript">
-                  <img src="./image/prac_js/prac_js_04.png" alt="실전코딩 SASS 4" />
-                </a>
-                <a href="./portfolio/practical_coding/js/05/index.html" data-caption="AutoSave TO-DO LIST with JavaScript">
-                  <img src="./image/prac_js/prac_js_05.png" alt="실전코딩 SASS 5" />
-                </a>
-                <a href="./portfolio/practical_coding/js/06/index.html" data-caption="Countdown with JavaScript">
-                  <img src="./image/prac_js/prac_js_06.png" alt="실전코딩 SASS 6" />
-                </a>
-              </div>
-            </div>
-            <div class="practical_slider_outer">
-              <h3>SASS (SCSS)</h3>
-              <div class="practical_slider" uk-lightbox>
-                <a href="./portfolio/practical_coding/sass(scss)/01/index.html" data-caption="Heartbeat Animation with SCSS">
-                  <img src="./image/prac_sass/prac_sass_01.png" alt="실전코딩 SASS 1" />
-                </a>
-                <a href="./portfolio/practical_coding/sass(scss)/02/index.html" data-caption="Responsive Gallery with SCSS">
-                  <img src="./image/prac_sass/prac_sass_02.jpg" alt="실전코딩 SASS 2" />
-                </a>
-                <a href="./portfolio/practical_coding/sass(scss)/03/index.html" data-caption="Glowing Icon with SCSS">
-                  <img src="./image/prac_sass/prac_sass_03.png" alt="실전코딩 SASS 3" />
-                </a>
-                <a href="./portfolio/practical_coding/sass(scss)/04/index.html" data-caption="Fullscreen Photo slider with SCSS">
-                  <img src="./image/prac_sass/prac_sass_04.jpg" alt="실전코딩 SASS 4" />
-                </a>
-                <a href="./portfolio/practical_coding/sass(scss)/05/index.html" data-caption="Mobile Mockup with SCSS">
-                  <img src="./image/prac_sass/prac_sass_05.png" alt="실전코딩 SASS 5" />
-                </a>
-                <a href="./portfolio/practical_coding/sass(scss)/06/index.html" data-caption="Tablet Mockup with SCSS">
-                  <img src="./image/prac_sass/prac_sass_06.png" alt="실전코딩 SASS 6" />
-                </a>
-              </div>
-            </div>
-            <div class="practical_slider_outer">
-              <h3>NAVIGATION</h3>
-              <div class="practical_slider" uk-lightbox>
-                <a href="./portfolio/practical_coding/navigation/01/index.html" data-caption="Overlay Navigation">
-                  <img src="./image/prac_nav/prac_nav_01.png" alt="실전코딩 네비게이션 1" />
-                </a>
-                <a href="./portfolio/practical_coding/navigation/02/index.html" data-caption="Glass Sidebar">
-                  <img src="./image/prac_nav/prac_nav_02.png" alt="실전코딩 네비게이션 2" />
-                </a>
-                <a href="./portfolio/practical_coding/navigation/03/index.html" data-caption="Dark Mode Navigation">
-                  <img src="./image/prac_nav/prac_nav_03.png" alt="실전코딩 네비게이션 3" />
-                </a>
-                <a href="./portfolio/practical_coding/navigation/04/index.html" data-caption="Use Attr Navigation">
-                  <img src="./image/prac_nav/prac_nav_04.png" alt="실전코딩 네비게이션 4" />
-                </a>
-                <a href="./portfolio/practical_coding/navigation/05/index.html" data-caption="Animation Indicator Nav">
-                  <img src="./image/prac_nav/prac_nav_05.png" alt="실전코딩 네비게이션 5" />
-                </a>
-              </div>
-            </div>
-            <div class="practical_slider_outer">
-              <h3>TAB & ACCORDION</h3>
-              <div class="practical_slider" uk-lightbox>
-                <a href="./portfolio/practical_coding/tab_menu/01/index.html" data-caption="Pure CSS Tab Slide Indicator">
-                  <img src="./image/prac_tab/prac_tab_01.png" alt="실전코딩 탭메뉴 1" />
-                </a>
-                <a href="./portfolio/practical_coding/tab_menu/02/index.html" data-caption="Pure CSS Accordion">
-                  <img src="./image/prac_tab/prac_tab_02.png" alt="실전코딩 탭메뉴 2" />
-                </a>
-                <a href="./portfolio/practical_coding/tab_menu/03/index.html" data-caption="Pure CSS Tab Navigation">
-                  <img src="./image/prac_tab/prac_tab_03.png" alt="실전코딩 탭메뉴 3" />
-                </a>
-                <a href="./portfolio/practical_coding/tab_menu/04/index.html" data-caption="Pure CSS Vertical Slider">
-                  <img src="./image/prac_tab/prac_tab_04.png" alt="실전코딩 탭메뉴 4" />
-                </a>
-                <a href="./portfolio/practical_coding/tab_menu/05/index.html" data-caption="Pure CSS Tab Menu">
-                  <img src="./image/prac_tab/prac_tab_05.png" alt="실전코딩 탭메뉴 5" />
-                </a>
-              </div>
-            </div>
-            <div class="practical_slider_outer">
-              <h3>CARD UI</h3>
-              <div class="practical_slider" uk-lightbox>
-                <a href="./portfolio/practical_coding/card_ui/01/index.html" data-caption="Product Card">
-                  <img src="./image/prac_card/prac_card_01.png" alt="실전코딩 카드 1" />
-                </a>
-                <a href="./portfolio/practical_coding/card_ui/02/index.html" data-caption="Hover Animation Card(z-index)">
-                  <img src="./image/prac_card/prac_card_02.png" alt="실전코딩 카드 2" />
-                </a>
-                <a href="./portfolio/practical_coding/card_ui/03/index.html" data-caption="Hover Animation Profile Card">
-                  <img src="./image/prac_card/prac_card_03.png" alt="실전코딩 카드 3" />
-                </a>
-                <a href="./portfolio/practical_coding/card_ui/04/index.html" data-caption="Website Card UI">
-                  <img src="./image/prac_card/prac_card_04.png" alt="실전코딩 카드 4" />
-                </a>
-                <a href="./portfolio/practical_coding/card_ui/05/index.html" data-caption="Profile Card">
-                  <img src="./image/prac_card/prac_card_05.png" alt="실전코딩 카드 5" />
-                </a>
-              </div>
-            </div>
-            <div class="practical_slider_outer">
-              <h3>FORM</h3>
-              <div class="practical_slider" uk-lightbox>
-                <a href="./portfolio/practical_coding/form/01/index.html" data-caption="Register Form">
-                  <img src="./image/prac_form/prac_form_01.png" alt="실전코딩 폼 1" />
-                </a>
-                <a class="caption_white" href="./portfolio/practical_coding/form/02/index.html" data-caption="Glass Login Form">
-                  <img src="./image/prac_form/prac_form_02.png" alt="실전코딩 폼 2" />
-                </a>
-                <a href="./portfolio/practical_coding/form/03/index.html" data-caption="Naver Sign-up Form">
-                  <img src="./image/prac_form/prac_form_03.png" alt="실전코딩 폼 3" />
-                </a>
-                <a href="./portfolio/practical_coding/form/04/index.html" data-caption="Custom Radio Button">
-                  <img src="./image/prac_form/prac_form_04.png" alt="실전코딩 폼 4" />
-                </a>
-                <a href="./portfolio/practical_coding/form/05/index.html" data-caption="Search Box Button">
-                  <img src="./image/prac_form/prac_form_05.png" alt="실전코딩 폼 5" />
-                </a>
-              </div>
-            </div>
-            <div class="practical_slider_outer">
-              <h3>OTHER</h3>
-              <div class="practical_slider" uk-lightbox>
-                <a href="./portfolio/practical_coding/prototype/01/index.html" data-caption="Video Landing Page">
-                  <img src="./image/prac_proto/prac_proto_01.png" alt="실전코딩 프로토타입 1" />
-                </a>
-                <a href="./portfolio/practical_coding/prototype/02/index.html" data-caption="Star Rating">
-                  <img src="./image/prac_proto/prac_proto_02.png" alt="실전코딩 프로토타입 2" />
-                </a>
-                <a href="./portfolio/practical_coding/prototype/03/index.html" data-caption="Animation Share Button">
-                  <img src="./image/prac_proto/prac_proto_03.png" alt="실전코딩 프로토타입 3" />
-                </a>
-                <a href="./portfolio/practical_coding/prototype/04/index.html" data-caption="Hamburger Button">
-                  <img src="./image/prac_proto/prac_proto_04.png" alt="실전코딩 프로토타입 4" />
-                </a>
-                <a href="./portfolio/practical_coding/prototype/05/index.html" data-caption="SNS Tooltip">
-                  <img src="./image/prac_proto/prac_proto_05.png" alt="실전코딩 프로토타입 5" />
-                </a>
-              </div>
-            </div>
-            <div class="practical_slider_outer">
-              <h3>ANIMATION (KEYFRAMES)</h3>
-              <div class="practical_slider" uk-lightbox>
-                <a href="./portfolio/practical_coding/animation/01/index.html" data-caption="Color Change Loading">
-                  <img src="./image/prac_ani/prac_ani_01.png" alt="실전코딩 애니메이션 1" />
-                </a>
-                <a href="./portfolio/practical_coding/animation/02/index.html" data-caption="Toast Notification">
-                  <img src="./image/prac_ani/prac_ani_02.png" alt="실전코딩 애니메이션 2" />
-                </a>
-                <a href="./portfolio/practical_coding/animation/03/index.html" data-caption="Text Animation Loading">
-                  <img src="./image/prac_ani/prac_ani_03.png" alt="실전코딩 애니메이션 3" />
-                </a>
-                <a href="./portfolio/practical_coding/animation/04/index.html" data-caption="Pebble Rotate Animation">
-                  <img src="./image/prac_ani/prac_ani_04.png" alt="실전코딩 애니메이션 4" />
-                </a>
-                <a href="./portfolio/practical_coding/animation/05/index.html" data-caption="Plane Animation Loading">
-                  <img src="./image/prac_ani/prac_ani_05.png" alt="실전코딩 애니메이션 5" />
-                </a>
-              </div>
-            </div>
-            <div class="practical_slider_outer">
-              <h3>HOVER EFFECT</h3>
-              <div class="practical_slider" uk-lightbox>
-                <a href="./portfolio/practical_coding/hover/01/index.html" data-caption="Gallery Accordion">
-                  <img src="./image/prac_hover/prac_hover_01.png" alt="실전코딩 호버 1" />
-                </a>
-                <a href="./portfolio/practical_coding/hover/02/index.html" data-caption="SNS Button">
-                  <img src="./image/prac_hover/prac_hover_02.png" alt="실전코딩 호버 2" />
-                </a>
-                <a href="./portfolio/practical_coding/hover/03/index.html" data-caption="Background Change Navigation">
-                  <img src="./image/prac_hover/prac_hover_03.png" alt="실전코딩 호버 3" />
-                </a>
-                <a href="./portfolio/practical_coding/hover/04/index.html" data-caption="3D Hover Effect">
-                  <img src="./image/prac_hover/prac_hover_04.png" alt="실전코딩 호버 4" />
-                </a>
-                <a href="./portfolio/practical_coding/hover/05/index.html" data-caption="Strike Hover Effect">
-                  <img src="./image/prac_hover/prac_hover_05.png" alt="실전코딩 호버 5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ########## Epilogue ########## -->
-      <section id="epilogue">
-        <div class="inner">
-          <h2>Epilogue.</h2>
-          <div class="wrapper">
-            <div class="epilogue_heading">
-              <h3>
-                감사합니다! <br />
-                웹 퍼블리셔
-                <span>이 종 주</span>
-                였습니다.
-              </h3>
-              <p>
-                정말 잘하고 싶고, 제가 잘 할수 있는 일이라는 확신이 들었기 때문에 지금껏 오랜 시간동안 해왔던 일을 마무리 짓고
-                작년 6월부터 퍼블리셔로서 새 출발을 하였습니다. 탄탄한 기본기와 빠른 습득력을 토대로
-                트렌드에 뒤쳐지지 않기 위해 배움을 게을리 하지 않는 웹 퍼블리셔가 되겠습니다!
-              </p>
-            </div>
-            <div class="epilogue_job_strength">
-              <div>
-                <b>퍼블리싱 원칙과 기본기</b>
-                <p>
-                  원활한 작업을 위해 폴더구조와 경로를 체계적으로 정리하고, 항상
-                  깔끔한 인덴트와 적절한 주석 사용으로 저 뿐만 아니라 협업자도
-                  알아보는데 불편함이 없도록 깔끔하고 가독성이 좋은 코드작성을
-                  선호합니다.
-                </p>
-              </div>
-              <div>
-                <b>하드코딩</b>
-                <p>
-                  디자인이 아닌 기능적으로 필요한 경우에만 플러그인을 사용하고
-                  그 외 모든 작업은 하드코딩을 원칙으로 작업합니다. Position,
-                  Float 속성을 사용하는 기존방식과, Flex, Grid를 사용한 레이아웃
-                  모두 가능하고, 반복 또는 불필요한 코드는 최대한 압축하여
-                  코드를 작성합니다.
-                </p>
-              </div>
-              <div>
-                <b>체계적인 퍼블리싱</b>
-                <p>
-                  작업에 들어가기 전 벤치마킹 사이트를 물색하고 와이어프레임을
-                  작성한 후, UI 디자인, 기능정의서, HTML구조 설계 순으로
-                  체계적인 퍼블리싱을 합니다. 순차적인 단계를 거침으로써
-                  프로젝트 중 발생하는 불필요한 과정을 줄이고 효율적으로
-                  퍼블리싱을 하고 있습니다.
-                </p>
-              </div>
-              <div>
-                <b>항상 배우려는 자세</b>
-                <p>
-                  새로운 기술을 학습하는것 에 대한 욕심이 있고 배우고 사용하는
-                  과정에서 느끼는 보람과 성취감을 좋아합니다. 현재에 안주하지
-                  않고 항상 배움을 실천하는 퍼블리셔가 되려고 노력하고 있습니다.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
+      
       <!-- ########## Fullscreen Navigation ########## -->
       <div class="fullscreen_navi">
         <div class="fullscreen_navi_inner">

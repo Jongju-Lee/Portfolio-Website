@@ -1,31 +1,35 @@
 @charset "utf-8";
 
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 /* Google Web Fonts CDN */
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 /* font-family: "Caveat", cursive; */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-/* Noonnu Korean Fonts */
+
+
+/* 국민연금체 */
 @font-face {
   font-family: "NPSfontBold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
-    format("woff2");
+  src: url("../font/NPSfont_bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "NPSfontExtraBold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontExtraBold.woff2")
-    format("woff2");
+  src: url("../font/NPSfont_extrabold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
+/* 프리텐다드 */
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  font-family: 'PretendardVariable';
+  src: url('../font/PretendardVariable.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
+/* 삭제 예정 */
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")

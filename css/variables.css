@@ -1,0 +1,68 @@
+:root {
+  /* --------- THEME COLOR --------- */
+  --color-primary: #00ad53;
+  --color-foreground: #333333;
+  --color-background-white: #ffffff;
+  --color-background-light-gray: #fafafa;
+  --color-positive: #00ad53;
+  --color-negative: #ad1200;
+
+  /* --------- TEXT COLOR --------- */
+  --text-color-title: #333333;
+  --text-color-body: #333333;
+  --text-color-dark-gray: #555555;
+  --text-color-gray: #777777;
+  --text-color-light: #999999;
+  --text-color-white: #ffffff;
+
+  /* --------- SHADOW --------- */
+  --shadow-normal: 0 0 12px rgba(0, 0, 0, 0.1);
+
+  /* --------- SPACING --------- */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+  --spacing-5xl: 50px;
+  --spacing-6xl: 60px;
+  --spacing-7xl: 80px;
+
+  /* --------- FONT FAMILY --------- */
+  --font-KR: "PretendardVariable";
+  --font-KR-light: "Pretendard-Light", sans-serif;
+  --font-EN: "Outfit", sans-serif;
+  --font-slogan: "Caveat", cursive;
+  --font-mobile-section: "NPSfontExtraBold";
+
+  /* --------- FONT SIZE --------- */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 40px;
+  --font-size-5xl: 60px;
+  --font-size-6xl: 80px;
+
+  /* --------- LAYOUT --------- */
+  /* container width */
+  --container-width: 1280px;
+  --container-width-tablet: 1024px;
+
+  /* section padding */
+  --section-padding: 100px 0;
+
+
+  /* breakPoint */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+
+  
+}
+

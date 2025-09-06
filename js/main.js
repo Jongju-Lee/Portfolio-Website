@@ -1,25 +1,20 @@
 $(function () {
-  /* ##### Fullscreen Modal Trigger Button ##### */
+  /* ---------- 네비게이션 모달 버튼 ---------- */
   $(window).scroll(function () {
-    // 스크롤이 내려오면
+    // 스크롤이 내려오면 버튼 생성
     if (window.scrollY >= 50) {
-      // trigger 버튼을 생성
       $(".trigger, .btn_top").addClass("on");
     } else {
-      // 스크롤이 최상단일때
+      // 스크롤이 최상단일때 버튼 숨김
       $(".btn_top").removeClass("on");
       if ($(".trigger").hasClass("active")) {
-        // 만약 버튼에 active클래스가 있는데(모달이 켜져있는데) 스크롤이 최상단이면
-        // 버튼숨김 취소
         return;
       }
-      // 버튼숨김
       $(".trigger").removeClass("on");
     }
   });
-  /* ##### Fullscreen Navigation ##### */
+  /* ---------- 네비게이션 모달 ---------- */
   $(".fullscreen_navi_inner a").click(function () {
-    // Fullscreen Navigation 숨김
     $(".fullscreen_navi").stop().fadeOut();
     $(".trigger").removeClass("active");
   });
