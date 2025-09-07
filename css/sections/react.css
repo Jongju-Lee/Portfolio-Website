@@ -1,6 +1,7 @@
 main > section#react {
-  background-color: var(--section-background-react);
-  color: var(--text-color-react);
+  background-color: var(--react-background-color);
+  color: var(--react-text-color);
+  font-size: var(--font-size-lg);
 }
 .react-content {
   margin-top: var(--spacing-6xl);
@@ -36,33 +37,31 @@ main > section#react {
 .react-detail__title {
   font-family: var(--font-EN);
   font-weight: 600;
-  font-size: var(--font-size-app-title);
+  font-size: var(--font-size-section-title);
 }
 .react-detail__inner {
   margin-top: var(--spacing-sm);
 }
-.react-detail__app-intro {
-  font-size: var(--font-size-lg);
-}
-.react-detail__app-intro span {
-  font-weight: 500;
-}
 
 /* ----- react-detail-format ----- */
 .react-detail__format {
-  margin-top: var(--spacing-2xl);
+  margin-top: var(--spacing-3xl);
   display: flex;
   justify-content: space-between;
 }
+.react-detail__format > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
 .react-detail__format .title {
   font-family: var(--font-EN);
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--font-size-xl);
 }
 .react-detail__format .color-box {
   display: flex;
   width: fit-content;
-  margin-top: var(--spacing-sm);
   border-radius: var(--spacing-xs);
   overflow: hidden;
   box-shadow: var(--shadow-color-box);
@@ -76,15 +75,12 @@ main > section#react {
   font-family: var(--font-EN);
   line-height: 1em;
 }
-.react-detail__format .desc {
-  margin-top: var(--spacing-md);
-}
 /* ----- react-detail-theme ----- */
 .react-detail__theme {
   width: 270px;
 }
 .react-detail__theme-color-item:nth-child(1) {
-  background-color: #72E3AD;
+  background-color: var(--react-color-primary);
 }
 .react-detail__theme-color-item:nth-child(2) {
   background-color: #FCFCFC;
@@ -92,13 +88,8 @@ main > section#react {
 .react-detail__theme-color-item:nth-child(3) {
   background-color: #DFDFDF;
 }
-.react-detail__theme-desc {
-  font-size: var(--font-size-md);
-  text-align: justify;
-}
 
 /* ----- react-detail__typo ----- */
-
 .react-detail__typo-color-item {
   color: var(--text-color-white);
 }
@@ -112,33 +103,114 @@ main > section#react {
   background-color: #8F8FA4;
 }
 .react-detail__typo-desc {
-  border: 1px solid #000;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
 }
-.react-detail__typo-desc-list-box {}
 .react-detail__typo-desc-title {
-  font-size: var(--spacing-lg);
-  font-weight: 600;
-  font-family: var(--font-KR);
+  font-weight: 500;
+  font-family: var(--font-EN);
 }
-.react-detail__typo-desc-list {}
-.react-detail__typo-desc-list-item {}
-.react-detail__typo-desc-list-item .bold {}
+.react-detail__typo-desc-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+}
+.react-detail__typo-desc-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+.react-detail__typo-desc-list-item b {
+  font-weight: 400;
+}
+.react-detail__typo-desc-list-item::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--react-color-primary);
+}
+
+/* ----- react-detail-bottom-wrapper ----- */
+.react-detail-bottom-wrapper {
+  position: relative;
+  top: -72px;
+  font-size: var(--font-size-xl);
+}
 
 /* ----- react-detail__function ----- */
-.react-detail__function {}
-.react-detail__function-title {}
-.react-detail__function-list {}
-.react-detail__function-list-item {}
+.react-detail__function-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+}
+.react-detail__function-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+.react-detail__function-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-weight: 400;
+}
+.react-detail__function-list-item .dot {
+  display: inline-block;
+  width: calc(18px / 2);
+  height: calc(18px / 2);
+  background-image: url(../../image/react/dot.png);
+  background-size: 100% 100%;
+}
 
 /* ----- react-detail__work-list ----- */
-.react-detail__work-list {}
-.react-detail__work-list-item {}
-.react-detail__work-list-item b {}
-.react-detail__work-list-item p {}
+.react-detail__work-list {
+  border-radius: var(--spacing-sm);
+  margin-top: var(--spacing-3xl);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-normal);
+  background-color: #FCFCFC;
+}
+.react-detail__work-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+.react-detail__work-list-item:not(:last-child) {
+  margin-bottom: var(--spacing-md);
+}
+.react-detail__work-list-item b {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 92px;
+  text-align: right;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+.react-detail__work-list-item p {
+  font-weight: 500;
+}
 
 /* ----- react-detail__btn-box ----- */
-.react-detail__btn-box {}
-.react-detail__btn-box button {}
+.react-detail__btn-box {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-3xl);
+}
+.react-detail__btn-box button {
+  display: inline-block;
+  width: 90px;
+  padding: 6px 0;
+  border-radius: var(--spacing-sm);
+  background-color: var(--react-color-primary);
+  font-size: var(--font-size-lg);
+  box-shadow: var(--shadow-color-box-light);
+  transition: transform 0.2s ease;
+}
+.react-detail__btn-box button:hover {
+  transform: scale(1.05);
+}

@@ -9,7 +9,7 @@ main > section:nth-of-type(even) {
 }
 section .inner > h2 {
   font-family: var(--font-EN);
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-section-title);
   font-weight: 600;
 }
 *:focus-visible {
@@ -24,6 +24,9 @@ img {
 }
 p {
   text-align: justify;
+}
+b {
+  font-weight: 500;
 }
 em {
   font-style: normal;
