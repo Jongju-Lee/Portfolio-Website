@@ -1,0 +1,46 @@
+body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 100px 0;
+      background-color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mockup {
+      /* width: 393px;
+      height: 852px;
+      border: 16px solid #000;
+      border-radius: 40px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+
+      position: relative;
+      background-image: url(../images/mobile-mockup.png);
+      width: calc(780px / 1.7);
+      height: calc(1548px / 1.7);
+      background-size: 100% 100%;
+    }
+    .mockup-iframe {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 393px;
+      height: 852px;
+      background-color: #72e3ad;
+    }
+
+    /* .mockup iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: ;
+    } */

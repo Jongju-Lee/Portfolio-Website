@@ -228,16 +228,18 @@ main > section#react {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-2xl);
 }
-.react-detail__btn-box button {
+.react-detail__btn-box a {
   display: inline-block;
   width: 130px;
   padding: var(--spacing-sm) 0;
   border-radius: var(--spacing-sm);
   background-color: var(--react-color-primary);
   font-size: var(--font-size-lg);
+  text-align: center;
+  font-weight: 400;
   box-shadow: var(--shadow-color-box-light);
   transition: transform 0.2s ease;
 }
-.react-detail__btn-box button:hover {
+.react-detail__btn-box a:hover {
   transform: scale(1.05);
 }
