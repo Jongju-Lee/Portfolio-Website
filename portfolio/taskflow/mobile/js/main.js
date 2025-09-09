@@ -1,38 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // ------------------------------
-  // 뒤로가기 버튼 기능
-  // ------------------------------
-  const backButton = document.querySelector('.back-btn');
-
-  // 뒤로가기 동작을 안전하게 수행
-  const handleBackNavigation = () => {
-    try {
-      if (window.history.length > 1) {
-        window.history.back();
-        return;
-      }
-
-      if (window.opener) {
-        // 팝업인 경우 창 닫기 시도
-        window.close();
-      } else {
-        // 마지막 수단: 루트로 이동
-        window.location.href = '/';
-      }
-    } catch (error) {
-      console.warn('뒤로가기 기능 실행 중 오류 발생:', error);
-      // 오류가 나더라도 팝업이면 닫기 시도
-      try {
-        if (window.opener) window.close();
-      } catch (_) {}
-    }
-  };
-
-  if (backButton) {
-    backButton.addEventListener('click', handleBackNavigation);
-  }
-
-
   // 소수점 1자리 반올림 (부동소수 오차 방지)
   const roundToOneDecimal = (value) => Math.round(value * 10) / 10;
   // 값이 최소/최대 범위를 벗어나지 않도록 고정
@@ -145,9 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // 중앙 위치 계산
       const targetTop = Math.floor(maxScrollable / 2);
 
-      // 사용자가 이미 스크롤했다면 방해하지 않음
-      const currentTop = window.pageYOffset || document.documentElement.scrollTop || 0;
-      if (currentTop <= 0 && maxScrollable > 0) {
+      // 모달 페이지이므로 항상 중앙 정렬
+      if (maxScrollable > 0) {
         window.scrollTo({ top: targetTop, left: 0, behavior: 'auto' });
       }
     } catch (error) {

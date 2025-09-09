@@ -95,6 +95,9 @@ button {
   transform: scale(1.1);
   opacity: 0.8;
 }
+.scale-control__button:active {
+  transform: scale(0.9);
+}
 .scale-control__button:disabled {
   cursor: auto;
   opacity: 0.5;
@@ -149,34 +152,4 @@ button {
   line-height: 28px;
   transition: color 0.2s ease;
   text-align: center;
-}
-
-/* --------------- back-btn --------------- */
-.back-btn {
-  position: fixed;
-  top: 30px;
-  left: 30px;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.back-btn img {
-  position: absolute;
-  top: 50%;
-  left: calc(50% - 1px);
-  transform: translate(-50%, -50%);
-  width: calc(26px / 2.5);
-  height: calc(48px / 2.5);
-}
-.back-btn:hover {
-  transform: scale(1.05);
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.back-btn:active {
-  transform: scale(0.95);
 }
