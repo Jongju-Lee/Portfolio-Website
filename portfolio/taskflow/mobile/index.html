@@ -7,7 +7,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Style -->
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/style.css">
@@ -36,30 +36,38 @@
         <div class="scale-control__slider-wrapper">
           <div class="scale-control__value--adjacent scale-control__value--next"></div>
           <!-- 스케일 증가 버튼 -->
-          <button class="scale-control__button scale-control__button--increase" type="button" aria-label="확대">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+          <button class="scale-control__button scale-control__button--increase" title="확대 버튼">
+            <img src="./images/increase-btn.png" alt="확대 버튼 아이콘">
           </button>
           <!-- 스케일 값 slider-box -->
           <div class="scale-control__slider-box">
             <div class="scale-control__slider-box-inner">
-              <span>1.0</span>
-              <span>0.9</span>
-              <span>0.8</span>
-              <span>0.7</span>
-              <span>0.6</span>
-              <span>0.5</span>
+              <div class="scale-control__slider-box-item">
+                <span>1</span><span>.</span><span>0</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>9</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>8</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>7</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>6</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>5</span>
+              </div>
             </div>
           </div>
-          <button class="scale-control__button scale-control__button--decrease" type="button" aria-label="축소">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+          <button class="scale-control__button scale-control__button--decrease" aria-label="축소 버튼">
+            <img src="./images/decrease-btn.png" alt="축소 버튼 아이콘">
           </button>
           <div class="scale-control__value--adjacent scale-control__value--prev">0.9</div>
         </div>
-        <span class="scale-control__text">x</span>
+        <span class="scale-control__text bold">x</span>
       </div>
     </div>
     <!-- back-btn -->

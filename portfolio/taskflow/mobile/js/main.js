@@ -65,6 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentScale = INITIAL_SCALE;
 
+    // 슬라이더 아이템 높이 캐싱 (성능 최적화)
+    const sliderItem = document.querySelector('.scale-control__slider-box-item');
+    // 기본 높이값이 없을것을 대비
+    const sliderItemHeight = sliderItem ? parseFloat(getComputedStyle(sliderItem).height) : 64;
+
     // 현재 스케일을 기준으로 UI 전체를 업데이트
     const renderScaleUI = (targetScale) => {
       const clamped = clamp(targetScale, MIN_SCALE, MAX_SCALE);
@@ -73,17 +78,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // 1) Mockup에 스케일 적용
       mockupElement.style.transform = `scale(${rounded})`;
 
-      // 2) Slider 박스 이동 (px 단위로 정확한 매핑)
+      // 2) Slider 박스 이동 (동적 높이 계산)
       const getSliderPosition = (scale) => {
-        const positionMap = {
-          1.0: 0,    // 첫 번째 위치
-          0.9: -48,  // 두 번째 위치
-          0.8: -96, // 세 번째 위치
-          0.7: -144, // 네 번째 위치
-          0.6: -192, // 다섯 번째 위치
-          0.5: -240  // 여섯 번째 위치
-        };
-        return positionMap[scale] || 0; // 기본값 0 (알 수 없는 값일 경우)
+        // scale을 인덱스로 변환 (1.0 = 0, 0.9 = 1, 0.8 = 2, ...)
+        const scaleIndex = Math.round((1.0 - scale) / STEP_SCALE);
+        // 캐싱된 높이값을 사용해서 위치 계산 (음수 방향으로 이동)
+        return -(sliderItemHeight * scaleIndex);
       };
 
       const translateY = getSliderPosition(rounded);
