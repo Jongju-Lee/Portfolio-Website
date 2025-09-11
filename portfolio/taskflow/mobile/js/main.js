@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
 
       const translateY = getSliderPosition(rounded);
+      console.log('Applying transform:', `translateY(${translateY}px)`);
       sliderBoxInner.style.transform = `translateY(${translateY}px)`;
 
       // 3) 인접 값 표시 업데이트 (선택적)
@@ -84,10 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 버튼 이벤트 등록
     increaseScaleButton.addEventListener('click', function() {
+      console.log('Increase button clicked');
       changeScaleBy(STEP_SCALE);
     });
 
     decreaseScaleButton.addEventListener('click', function() {
+      console.log('Decrease button clicked');
       changeScaleBy(-STEP_SCALE);
     });
   }
