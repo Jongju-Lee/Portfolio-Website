@@ -139,7 +139,7 @@ em {
   border-radius: 50%;
   background-color: crimson;
   color: #fff;
-  transition: 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .uk-lightbox-toolbar-icon:hover {
   transform: translateY(-3px);
@@ -191,24 +191,40 @@ em {
   height: 100%;
 }
 .featherlight .featherlight-close-icon {
+  mix-blend-mode: difference;
+  opacity: 0.8;
   top: 20px;
   right: 40px;
-  width: 60px;
-  height: 60px;
-  line-height: 55px;
-  font-size: 35px;
-  color: #555;
-  background-color: #ffffffc4;
-  border: 2px dashed #555;
+  width: 50px;
+  height: 50px;
+  line-height: 44px;
+  font-size: 30px;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  transition: 0.5s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.3s ease;
+  animation: blink 1.2s ease-in 0.5s 3 forwards;
   z-index: 10000;
 }
 .featherlight .featherlight-close-icon:hover {
-  transform: rotate(180deg);
+  transform: translateY(-4px);
 }
 .featherlight .featherlight-content {
   padding: 0;
 }
 /* ---------- //Featherlight.js ---------- */
+
+/* ---------- @keyframes ---------- */
+@keyframes blink {
+  0% {
+    scale: 1;
+    opacity: 0.8;
+  }
+  50% {
+    scale: 0.9;
+    opacity: 0.3; 
+  }
+  100% {
+    scale: 1;
+    opacity: 0.8;
+  }
+}
