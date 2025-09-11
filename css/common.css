@@ -205,6 +205,10 @@ em {
   animation: blink 1.2s ease-in 0.5s 3 forwards;
   z-index: 10000;
 }
+.close-bottom-right .featherlight-close-icon {
+  top: auto;
+  bottom: 20px;
+}
 .featherlight .featherlight-close-icon:hover {
   transform: translateY(-4px);
 }
