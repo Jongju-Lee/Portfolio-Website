@@ -31,10 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentScale = INITIAL_SCALE;
 
-    // 슬라이더 아이템 높이 캐싱 (성능 최적화)
+    // 슬라이더 아이템 높이 측정 (페이지 렌더링 완료 시점으로 지연)
     const sliderItem = document.querySelector('.scale-control__slider-box-item');
-    // 기본 높이값이 없을것을 대비
-    const sliderItemHeight = sliderItem ? parseFloat(getComputedStyle(sliderItem).height) : 64;
+    let sliderItemHeight = 64; // 기본값으로 초기화
+
+    // 페이지 로딩 완료 후 실제 높이값 측정
+    const measureSliderHeight = () => {
+      if (sliderItem) {
+        const computedHeight = parseFloat(getComputedStyle(sliderItem).height);
+        sliderItemHeight = isNaN(computedHeight) ? 64 : computedHeight;
+      }
+    };
 
     // 현재 스케일을 기준으로 UI 전체를 업데이트
     const renderScaleUI = (targetScale) => {
@@ -53,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
       };
 
       const translateY = getSliderPosition(rounded);
-      console.log('Applying transform:', `translateY(${translateY}px)`);
       sliderBoxInner.style.transform = `translateY(${translateY}px)`;
 
       // 3) 인접 값 표시 업데이트 (선택적)
@@ -85,12 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 버튼 이벤트 등록
     increaseScaleButton.addEventListener('click', function() {
-      console.log('Increase button clicked');
       changeScaleBy(STEP_SCALE);
     });
 
     decreaseScaleButton.addEventListener('click', function() {
-      console.log('Decrease button clicked');
       changeScaleBy(-STEP_SCALE);
     });
   }
@@ -125,6 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 이미지/폰트 로딩 이후 안정화된 레이아웃에서 중앙 정렬 시도
   window.addEventListener('load', function() {
+    // 슬라이더 높이 재측정 (안정화된 렌더링 이후)
+    measureSliderHeight();
+
     // 첫 프레임 이후
     requestAnimationFrame(centerInitialScrollVertically);
     // 혹시 늦게 로드되는 리소스에 대비한 보정 시도
