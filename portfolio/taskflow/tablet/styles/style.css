@@ -32,20 +32,20 @@ button {
 .mockup {
   position: relative;
   background-image: url(../images/tablet-mockup.png);
-  width: 1210px;
-  height: 878px;
+  width: calc(2070px / 1.8);
+  height: calc(1436px / 1.8);
   background-size: 100% 100%;
   transition: transform 0.3s ease;
 }
 .mockup-container {
     position: absolute;
-    top: 52px;
-    left: 64px;
+    top: 53px;
+    left: 66px;
     display: flex;
     flex-direction: column;
-    width: 1082px;
-    height: 752px;
-    border-radius: 18px;
+    width: 1020px;
+    height: 670px;
+    border-radius: 20px;
     background-color: #72e3ad;
 }
 .mockup-header {
@@ -53,8 +53,8 @@ button {
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
-  width: calc(2164px / 2);
-  height: calc(98px / 2);
+  width: calc(2040px / 2);
+  height: calc(90px / 2);
   z-index: 1;
 }
 .mockup-header img {
@@ -66,7 +66,7 @@ button {
 .mockup-iframe__wrap {
   flex: 1;
   background-color: #ffffff;
-  border-radius: 0 0 18px 18px;
+  border-radius: 0 0 20px 20px;
   overflow: hidden;
 }
 .mockup-iframe__wrap iframe {

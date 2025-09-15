@@ -8,6 +8,13 @@
   --color-negative: #ad1200;
   --color-line: #dfdfdf;
 
+  /* skill-section */
+  /* --color-skill-section-bg: #F5F5DC; */
+  /* --color-skill-section-bg: #FFF8E1; */
+  /* --color-skill-section-bg: #FAFAD2; */
+  /* --color-skill-section-bg: #FFFDD0; */
+  --color-skill-section-bg: #F5F5F5;
+
   /* --------- TEXT COLOR --------- */
   --text-color-title: #333333;
   --text-color-body: #333333;
@@ -22,8 +29,6 @@
   --react-color-primary: #72E3AD;
   --react-background-color: #f1fdf7;
   
-
-
   /* --------- SHADOW --------- */
   --shadow-normal: 0 0 12px rgba(0, 0, 0, 0.1);
   --shadow-color-box: 0 0 8px rgba(0, 0, 0, 0.3);
@@ -60,6 +65,7 @@
   --font-size-5xl: 60px;
   --font-size-6xl: 80px;
 
+  /* font-size - title */
   --font-size-slogan-title: 50px;
   --font-size-section-title: 36px;
 

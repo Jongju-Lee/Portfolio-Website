@@ -31,8 +31,23 @@ b {
 em {
   font-style: normal;
 }
+.font-kr {
+  font-family: var(--font-KR);
+}
 .font-en {
   font-family: var(--font-EN);
+}
+.regular {
+  font-weight: 400;
+}
+.s-bold {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 600;
+}
+.under-line {
+  text-decoration: underline;
 }
 /* 스크린 리더 에만 인식(보이지 않음) */
 .sr-only {

@@ -49,7 +49,7 @@ main > section .inner > h2 {
 
 
 /* ########## Section - Skill ########## */
-#skill .inner .wrapper {
+/* #skill .inner .wrapper {
   margin-top: 100px;
 }
 .skill_items {
@@ -120,7 +120,7 @@ main > section .inner > h2 {
   margin-top: 10px;
   color: var(--text-color-gray);
   line-height: 1.6em;
-}
+} */
 
 /* ########## Section - Edu ########## */
 #edu {
