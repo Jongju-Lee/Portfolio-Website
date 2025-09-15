@@ -1,0 +1,70 @@
+#edu {
+  position: relative;
+}
+#edu .inner .wrapper {
+  margin: 0 auto;
+  margin-top: 70px;
+  width: fit-content;
+}
+.timeline_item {
+  margin-bottom: 50px;
+}
+.timeline_item_peroid,
+.timeline_item_desc {
+  display: inline-block;
+}
+.timeline_item_peroid span,
+.timeline_item_desc span {
+  font-size: 16px;
+  color: var(--text-color-light);
+}
+.timeline_item_peroid span b,
+.timeline_item_desc span b {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-color-body);
+  font-weight: 600;
+}
+.timeline_item_peroid {
+  width: 200px;
+  text-align: right;
+  margin-right: 70px;
+}
+.timeline_item_peroid span b {
+  font-family: var(--font-EN);
+  font-size: 22px;
+}
+.timeline_item_desc {
+  position: relative;
+}
+.timeline_item_desc::before {
+  content: "\F517";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  top: 2px;
+  left: -46px;
+  font-size: 15px;
+  color: var(--color-primary);
+  z-index: 10;
+}
+.timeline_item_desc::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: -39px;
+  width: 2px;
+  height: 94px;
+  background-color: #eee;
+}
+.timeline_item:last-child .timeline_item_desc::after {
+  display: none;
+}
+.timeline_item_desc span b {
+  font-size: 20px;
+}
+.timeline_item_desc span em {
+  font-style: normal;
+  font-size: 18px;
+  color: var(--color-primary);
+  font-family: var(--font-EN);
+}

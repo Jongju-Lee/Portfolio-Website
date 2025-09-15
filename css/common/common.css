@@ -3,6 +3,39 @@
 @import url(./font.css);
 @import url(./custom-reset.css);
 
+/* ---------- LAYOUT ---------- */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+body {
+  font-size: var(--font-size-md);
+  line-height: 1.4em;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text-color-body);
+  font-weight: 300;
+  font-family: var(--font-KR);
+}
+.container {
+  width: 100%;
+}
+.inner {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+main > section {
+  padding: var(--section-padding);
+}
+main > section .inner > h2 {
+  font-family: var(--font-EN);
+  font-size: var(--font-size-section-title);
+  font-weight: 600;
+  padding-left: var(--spacing-md);
+}
+
 /* ---------- COMMON ---------- */
 main > section:nth-of-type(even) {
   background-color: var(--color-background-light-gray);

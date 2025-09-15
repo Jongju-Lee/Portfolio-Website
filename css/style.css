@@ -1,128 +1,42 @@
 @charset "utf-8";
 
 /* ---------- IMPORT SECTIONS-CSS ---------- */
+
+/* header */
 @import url(./sections/header.css);
+
+/* about */
 @import url(./sections/about.css);
+
+/* skill */
 @import url(./sections/skill.css);
+
+/* edu */
 @import url(./sections/edu.css);
+
+/* react */
 @import url(./sections/react.css);
+
+/* project */
 @import url(./sections/project.css);
+
+/* mobile */
 @import url(./sections/mobile.css);
+
+/* web */
 @import url(./sections/web.css);
+
+/* practical */
 @import url(./sections/practical.css);
+
+/* epilogue */
 @import url(./sections/epilogue.css);
 
-/* ---------- LAYOUT ---------- */
-html {
-  scroll-behavior: smooth;
-  width: 100%;
-}
-body {
-  font-size: var(--font-size-md);
-  line-height: 1.4em;
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  color: var(--text-color-body);
-  font-weight: 300;
-  font-family: var(--font-KR);
-}
-.container {
-  width: 100%;
-}
-.inner {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-}
-main > section {
-  padding: var(--section-padding);
-}
-main > section .inner > h2 {
-  font-family: var(--font-EN);
-  font-size: var(--font-size-section-title);
-  font-weight: 600;
-  padding-left: var(--spacing-md);
-}
-/* ---------- //LAYOUT ---------- */
+/* ---------- //IMPORT SECTIONS-CSS ---------- */
 
-
-/* ########## Section - Skill ########## */
-/* #skill .inner .wrapper {
-  margin-top: 100px;
-}
-.skill_items {
-  margin-top: 70px;
-  height: 250px;
-}
-.skill_items.twin {
-  display: flex;
-  justify-content: center;
-  height: auto;
-}
-.skill_item {
-  position: relative;
-  float: left;
-  width: calc(1220px / 4);
-  height: 100%;
-  border: 1px solid #ddd;
-  margin-right: 20px;
-  border-radius: 10px;
-  padding: 30px 25px;
-  background-color: #fff;
-  transition: 0.25s;
-}
-.skill_items.twin .skill_item {
-  flex: 1;
-}
-.skill_item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-}
-.skill_item:last-of-type {
-  margin-right: 0;
-}
-
-.skill_item_icon {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border-radius: 5px;
-  font-size: 28px;
-  font-family: var(--font-EN);
-  font-weight: 500;
-  background-color: #d9d9d9;
-  color: #fff;
-}
-.skill_item_desc {
-  text-align: justify;
-  pointer-events: none;
-}
-.skill_item_desc h4,
-.skill_item_desc p span {
-  font-family: var(--font-EN);
-}
-.skill_item_desc h4 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-top: 10px;
-  color: var(--text-color-body);
-  text-align: center;
-}
-.skill_item_desc p {
-  font-size: 16px;
-  margin-top: 10px;
-  color: var(--text-color-gray);
-  line-height: 1.6em;
-} */
 
 /* ########## Section - Edu ########## */
-#edu {
+/* #edu {
   position: relative;
 }
 #edu .inner .wrapper {
@@ -191,7 +105,7 @@ main > section .inner > h2 {
   font-size: 18px;
   color: var(--color-primary);
   font-family: var(--font-EN);
-}
+} */
 
 /* ########## Section - Project ########## */
 #project .tab_container {
