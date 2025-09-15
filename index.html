@@ -31,9 +31,9 @@
     <div class="container">
       <!-- ########## Header ########## -->
       <header role="banner">
-        <nav role="navigation">
+        <div class="header-inner inner">
           <a class="header__btn-functional" href="./doc/portfolio_website_fs.pdf" data-featherlight="iframe" >이 웹사이트 기능정의서</a>
-          <div class="header__gnb">
+          <nav class="header__gnb">
             <a href="#about">ABOUT</a>
             <a href="#skill">SKILL</a>
             <a href="#edu">EDU & EXPERIENCE</a>
@@ -41,8 +41,8 @@
             <a href="#web">WEBSITE</a>
             <a href="#practical">PRACTICAL</a>
             <a href="#epilogue">EPILOGUE</a>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </header>
       <main>
         <!-- ########## Section - About ########## -->
@@ -101,10 +101,12 @@
                 </div>
                 <div class="skill-item__text-box">
                   <h3 class="skill-item__text-box-title">HTML5</h3>
-                  <p class="skill-item__text-box-desc">
-                    전자 교과서 퍼블리싱 프로젝트에서 <span class="font-en">HTML5</span>의 <span class="font-en s-bold">Semantic Tag</span>를 적극 활용하여 검색 엔진 최적화(<span class="font-en s-bold">SEO</span>)를 고려한 설계를 수행하였습니다.
-                    웹 표준 및 웹 접근성, 반응형 <span class="font-en">UI</span>를 고려하여 <span class="font-en">HTML</span> 구조를 먼저 설계한 후 <span class="font-en">Markup</span>을 진행합니다.
-                  </p>
+                  <div class="skill-item__text-box-desc">
+                    <p>
+                      전자 교과서 퍼블리싱 프로젝트에서 <span class="font-en">HTML5</span>의 <span class="font-en s-bold">Semantic Tag</span>를 적극 활용하여 검색 엔진 최적화(<span class="font-en s-bold">SEO</span>)를 고려한 설계를 수행하였습니다.
+                      웹 표준 및 웹 접근성, 반응형 <span class="font-en">UI</span>를 고려하여 <span class="font-en">HTML</span> 구조를 먼저 설계한 후 <span class="font-en">Markup</span>을 진행합니다.
+                    </p>
+                  </div>
                 </div>
               </div>
               <!-- ########## skill-item - CSS3 ########## -->
@@ -122,12 +124,14 @@
                 </div>
                 <div class="skill-item__text-box">
                   <h3 class="skill-item__text-box-title">CSS3</h3>
-                  <p class="skill-item__text-box-desc">
-                    <span class="font-en">CSS</span>는 <span class="font-en s-bold">BEM</span> 방법론을 적용하여 일관된 <span class="font-en s-bold">Class naming convention</span>을 유지합니다. 
-                    공통 <span class="font-en">UI</span> 설계와 재사용 가능한 스타일 코드 작성으로 프로젝트 효율성을 높였으며, 
-                    <span class="font-en s-bold">Flexbox</span>와 <span class="font-en s-bold">Grid</span> 및 <span class="font-en s-bold">MediaQuery</span>를 활용한 반응형 레이아웃 경험이 많습니다.
-                    큰 규모의 프로젝트의 경우 <span class="font-en s-bold">SCSS</span> 또는 <span class="font-en s-bold">CSS Nesting</span>를 활용해 불필요한 선택자 작성을 최소화하고 가독성을 높여 생산성 및 유지 보수성을 높일 수 있습니다.
-                  </p>
+                  <div class="skill-item__text-box-desc">
+                    <p>
+                      <span class="font-en">CSS</span>는 <span class="font-en s-bold">BEM</span> 방법론을 적용하여 일관된 <span class="font-en s-bold">Class naming convention</span>을 유지합니다. 
+                      공통 <span class="font-en">UI</span> 설계와 재사용 가능한 스타일 코드 작성으로 프로젝트 효율성을 높였으며, 
+                      <span class="font-en s-bold">Flexbox</span>와 <span class="font-en s-bold">Grid</span> 및 <span class="font-en s-bold">MediaQuery</span>를 활용한 반응형 레이아웃 경험이 많습니다.
+                      큰 규모의 프로젝트의 경우 <span class="font-en s-bold">SCSS</span> 또는 <span class="font-en s-bold">CSS Nesting</span>를 활용해 불필요한 선택자 작성을 최소화하고 가독성을 높여 생산성 및 유지 보수성을 높일 수 있습니다.
+                    </p>
+                  </div>
                 </div>
               </div>
               <!-- ########## skill-item - js, jQuery ########## -->
@@ -145,11 +149,15 @@
                     <span>JS,</span>
                     <span>jQuery</span>
                   </h3>
-                  <p class="skill-item__text-box-desc">
-                    JavaScript를 활용한 <span class="s-bold"><span class="font-en">DOM</span> 조작</span> 및 이벤트 제어에 익숙하고 Interaction 기능을 직접 구현할 수 있습니다.
-                    상태 관리 및 조건 분기 로직 등을 통해 <span class="s-bold">사용자 중심의 동적인 <span class="font-en">UI</span></span>를 제작한 경험이 있습니다.
-                    전자 저작물 등의 Legacy 프로젝트에서는 <span class="font-en s-bold">Cross-Browser</span> 호환성 및 생산성을 위해 <span class="font-en s-bold">jQuery</span>를 주로 활용하였습니다.
-                  </p>
+                  <div class="skill-item__text-box-desc">
+                    <p>
+                      <span class="font-en">JavaScript</span c>를 활용한 <span class="s-bold"><span class="font-en">DOM</span> 조작</span>
+                      및 이벤트 제어에 익숙하고 <span class="font-en">Interaction</span> 기능을 직접 구현할 수 있습니다. 
+                      상태 관리 및 조건 분기 로직 등을 통해 <span class="s-bold">사용자 중심의 동적인 <span class="font-en">UI</span></span>를 제작한 경험이 있습니다.
+                      전자 저작물 등의 <span class="font-en">Legacy</span> 프로젝트에서는 <span class="font-en s-bold">Cross-Browser</span> 호환성 및 생산성을 위해
+                      <span class="font-en s-bold">jQuery</span>를 주로 활용하였습니다.
+                    </p>
+                  </div>
                 </div>
               </div>
               <!-- ########## skill-item - Web Accessibility ########## -->
@@ -161,12 +169,14 @@
                 </div>
                 <div class="skill-item__text-box">
                   <h3 class="skill-item__text-box-title">Web Accessibility</h3>
-                  <p class="skill-item__text-box-desc">
-                    웹 접근성(<span class="font-en s-bold">WCAG</span>) 기준을 준수하며 <span class="font-en s-bold">HTML Semantic Tag</span> 구조 설계와 함께 
-                    <span class="s-bold"><span class="font-en">tabindex</span>, <span class="font-en">aria</span> 속성</span> 등 접근성 관련 
-                    <span class="font-en">Attr</span>을 적극 활용해 실제 <span class="s-bold">시각장애인 사용자</span>와 <span class="s-bold">스크린 리더</span>를 활용한 테스트
-                    를 거쳐 전자 저작물의 <span class="s-bold under-line">접근성 평가 기준 100%</span> 충족한 실전 경험을 보유한 실전 경험이 있습니다.
-                  </p>
+                  <div class="skill-item__text-box-desc">
+                    <p>
+                      웹 접근성(<span class="font-en s-bold">WCAG</span>) 기준을 준수하며 <span class="font-en s-bold">HTML Semantic Tag</span> 구조 설계와 함께 
+                      <span class="s-bold"><span class="font-en">tabindex</span>, <span class="font-en">aria</span> 속성</span> 등 접근성 관련 
+                      <span class="font-en">Attr</span>을 적극 활용해 실제 <span class="s-bold">시각장애인 사용자</span>와 <span class="s-bold">스크린 리더</span>를 활용한 테스트
+                      를 거쳐 전자 저작물의 <span class="s-bold under-line">접근성 평가 기준 100%</span> 충족한 실전 경험을 보유한 실전 경험이 있습니다.
+                    </p>
+                  </div>
                 </div>
               </div>
               <!-- ########## skill-item - Responsive UI, Cross-browser ########## -->
@@ -181,18 +191,20 @@
                 </div>
                 <div class="skill-item__text-box">
                   <h3 class="skill-item__text-box-title">Responsive UI, Cross-Browser</h3>
-                  <p class="skill-item__text-box-desc">
-                    <span class="s-bold"><span class="font-en">Media Query</span>, <span class="font-en">Flexbox</span></span>
-                    및 <span class="font-en s-bold">Grid</span>를 활용하여 다양한 해상도 및 디바이스 대응이 가능합니다.
-                    <span class="s-bold"><span class="font-en">Legacy Browser</span> 기반 런처 환경</span>
-                    에서도 일관된 <span class="font-en">UI/UX</span>를 제공하기 위해 <span class="font-en s-bold">reset.css</span>를 사용, <span class="s-bold">호환성을 고려한 <span class="font-en">CSS</span> 코드</span> 작성, <span class="font-en s-bold">CSS Fallback</span>을 구현하여 다수의 프로젝트를 수행한 경험이 있습니다.
-                  </p>
+                  <div class="skill-item__text-box-desc">
+                    <p>
+                      <span class="s-bold"><span class="font-en">Media Query</span>, <span class="font-en">Flexbox</span></span>
+                      및 <span class="font-en s-bold">Grid</span>를 활용하여 다양한 해상도 및 디바이스 대응이 가능합니다.
+                      <span class="s-bold"><span class="font-en">Legacy Browser</span> 기반 런처 환경</span>
+                      에서도 일관된 <span class="font-en">UI/UX</span>를 제공하기 위해 <span class="font-en s-bold">reset.css</span>를 사용, <span class="s-bold">호환성을 고려한 <span class="font-en">CSS</span> 코드</span> 작성, <span class="font-en s-bold">CSS Fallback</span>을 구현하여 다수의 프로젝트를 수행한 경험이 있습니다.
+                    </p>
+                  </div>
                 </div>
               </div>
               <!-- ########## skill-item - React, CSS Module, CSS-in-JS ########## -->
               <div class="skill-item">
                 <div class="skill-item__icon-box">
-                  <div class="skill-item__icon">
+                  <div class="skill-item__icon react">
                     <img src="./image/skill/react-icon.png" alt="react 아이콘">
                   </div>
                   <div class="skill-item__icon">
@@ -204,12 +216,53 @@
                 </div>
                 <div class="skill-item__text-box">
                   <h3 class="skill-item__text-box-title">React, CSS Module, CSS-in-JS</h3>
-                  <p class="skill-item__text-box-desc">
-                    <span class="s-bold"><span class="font-en">Media Query</span>, <span class="font-en">Flexbox</span></span>
-                    및 <span class="font-en s-bold">Grid</span>를 활용하여 다양한 해상도 및 디바이스 대응이 가능합니다.
-                    <span class="s-bold"><span class="font-en">Legacy Browser</span> 기반 런처 환경</span>
-                    에서도 일관된 <span class="font-en">UI/UX</span>를 제공하기 위해 <span class="font-en s-bold">reset.css</span>를 사용, <span class="s-bold">호환성을 고려한 <span class="font-en">CSS</span> 코드</span> 작성, <span class="font-en s-bold">CSS Fallback</span>을 구현하여 다수의 프로젝트를 수행한 경험이 있습니다.
-                  </p>
+                  <div class="skill-item__text-box-desc">
+                    <p>
+                      <span class="font-en">React</span>를 활용하여 <span class="font-en s-bold">components</span>
+                      기반의 <span class="font-en">Modern UI</span>를 구축한 경험이 있습니다.
+                      <span class="s-bold"><span class="font-en">CSS Module</span>화</span>를 통해 스타일 충돌 방지 및,
+                      유지 보수성을 높이고, 동적 스타일링이 필요한 프로젝트에서는 <span class="font-en s-bold">Styled-Components</span>를 활용하여 구현 가능합니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- ########## skill-item - Git, SVN ########## -->
+              <div class="skill-item">
+                <div class="skill-item__icon-box">
+                  <div class="skill-item__icon git">
+                    <img src="./image/skill/git-icon.png" alt="git 아이콘">
+                  </div>
+                  <div class="skill-item__icon svn">
+                    <img src="./image/skill/svn-icon.png" alt="svn 모듈 아이콘">
+                  </div>
+                </div>
+                <div class="skill-item__text-box">
+                  <h3 class="skill-item__text-box-title">Git, SVN</h3>
+                  <div class="skill-item__text-box-desc">
+                    <p>
+                      <span class="font-en">Git</span>을 활용한 <span class="s-bold">버전 관리</span>
+                      및 <span class="s-bold"><span class="font-en">branch</span> 운영</span>,
+                      <span class="s-bold">코드 충돌 최소화</span>, <span class="s-bold"><span class="font-en">history</span> 관리 경험</span>이 있고 <span class="font-en">Legacy Browser</span> 기반 전자 저작물 프로젝트에서는 <span class="font-en">SVN</span>을 활용한 경험이 있어 형상 관리에 능숙합니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- ########## skill-item - Figma ########## -->
+              <div class="skill-item">
+                <div class="skill-item__icon-box">
+                  <div class="skill-item__icon">
+                    <img src="./image/skill/figma-icon.png" alt="figma 아이콘">
+                  </div>
+                </div>
+                <div class="skill-item__text-box">
+                  <h3 class="skill-item__text-box-title">Figma</h3>
+                  <div class="skill-item__text-box-desc">
+                    <p>
+                      <span class="s-bold"><span class="font-en">Figma</span>를 활용해 디자이너와 소통</span>하며, 디자인 시안을 정확히 해석해 
+                      <span class="s-bold"><span class="font-en">px</span> 단위로 정밀하게 구현합니다.</span>
+                      협업 과정에서 디테일한 피드백을 반영해 <span class="s-bold">시안과 결과물 간의 차이를 최소화</span>하며 작업한 경험이 있습니다.
+                    </p>
+                  </div>
                 </div>
               </div>
             </article>

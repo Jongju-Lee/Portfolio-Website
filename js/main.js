@@ -2,7 +2,7 @@ $(function () {
   /* 스크롤 위치에 따른 모달 버튼 생성 */
   $(window).scroll(function () {
     // 스크롤이 내려오면 버튼 생성
-    if (window.scrollY >= 50) {
+    if (window.scrollY >= 500) {
       $(".trigger, .btn_top").addClass("on");
     } else {
       // 스크롤이 최상단일때 버튼 숨김

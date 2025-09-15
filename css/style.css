@@ -30,7 +30,6 @@ body {
 .container {
   width: 100%;
 }
-header nav,
 .inner {
   width: 100%;
   max-width: var(--container-width);
@@ -41,7 +40,7 @@ main > section {
 }
 main > section .inner > h2 {
   font-family: var(--font-EN);
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-section-title);
   font-weight: 600;
   padding-left: var(--spacing-md);
 }
