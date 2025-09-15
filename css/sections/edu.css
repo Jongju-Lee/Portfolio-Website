@@ -1,5 +1,6 @@
 .edu-content {
   margin-top: var(--spacing-8xl);
+  padding-left: var(--spacing-7xl);
 }
 /* ----- edu-timeline ----- */
 .edu-timeline {
@@ -38,7 +39,7 @@
 
 /* ----- edu-timeline__peroid ----- */
 .edu-timeline__peroid {
-  width: 250px;
+  width: 220px;
   text-align: right;
 }
 .edu-timeline__peroid-title {
