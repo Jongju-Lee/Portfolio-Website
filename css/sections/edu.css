@@ -1,70 +1,58 @@
-#edu {
+.edu-content {
+  margin-top: var(--spacing-8xl);
+}
+/* ----- edu-timeline ----- */
+.edu-timeline {
   position: relative;
+  display: flex;
+  gap: var(--spacing-5xl);
 }
-#edu .inner .wrapper {
-  margin: 0 auto;
-  margin-top: 70px;
-  width: fit-content;
-}
-.timeline_item {
-  margin-bottom: 50px;
-}
-.timeline_item_peroid,
-.timeline_item_desc {
-  display: inline-block;
-}
-.timeline_item_peroid span,
-.timeline_item_desc span {
-  font-size: 16px;
-  color: var(--text-color-light);
-}
-.timeline_item_peroid span b,
-.timeline_item_desc span b {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--text-color-body);
+.edu-timeline .title {
+  margin-bottom: var(--spacing-sm);
   font-weight: 600;
 }
-.timeline_item_peroid {
-  width: 200px;
-  text-align: right;
-  margin-right: 70px;
+
+/* ----- edu-timeline__line-box ----- */
+.edu-timeline__line-box {
+  position: relative;
+  top: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
 }
-.timeline_item_peroid span b {
-  font-family: var(--font-EN);
+.edu-timeline__line-box .circle {
+  display: inline-block;
+  width: calc(36px / 2);
+  height: calc(36px / 2);
+  background-image: url(../../image/edu/circle.png);
+  background-size: 100% 100%;
+}
+.edu-timeline__line-box .line {
+  display: inline-block;
+  width: 2px;
+  height: var(--spacing-8xl);
+  background-color: var(--color-line);
+}
+
+/* ----- edu-timeline__peroid ----- */
+.edu-timeline__peroid {
+  width: 250px;
+  text-align: right;
+}
+.edu-timeline__peroid-title {
   font-size: 22px;
 }
-.timeline_item_desc {
-  position: relative;
+
+/* ----- edu-timeline__desc ----- */
+.edu-timeline__desc-title {
+  font-size: var(--font-size-xl);
 }
-.timeline_item_desc::before {
-  content: "\F517";
-  font-family: "bootstrap-icons";
-  position: absolute;
-  top: 2px;
-  left: -46px;
-  font-size: 15px;
+.edu-timeline__desc span {
+  font-weight: 500;
   color: var(--color-primary);
-  z-index: 10;
 }
-.timeline_item_desc::after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: -39px;
-  width: 2px;
-  height: 94px;
-  background-color: #eee;
-}
-.timeline_item:last-child .timeline_item_desc::after {
-  display: none;
-}
-.timeline_item_desc span b {
-  font-size: 20px;
-}
-.timeline_item_desc span em {
-  font-style: normal;
-  font-size: 18px;
-  color: var(--color-primary);
-  font-family: var(--font-EN);
+.edu-timeline__desc .regular {
+  font-weight: 400;
 }

@@ -82,6 +82,9 @@ em {
 .under-line {
   text-decoration: underline;
 }
+.color-main {
+  color: var(--color-primary);
+}
 /* 스크린 리더 에만 인식(보이지 않음) */
 .sr-only {
   position: absolute;

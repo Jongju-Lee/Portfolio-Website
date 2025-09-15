@@ -1,8 +1,7 @@
 main > section#skill {
   background-color: var(--color-background-white);
 }
-
-/* ----- skill - content ----- */
+/* ----- skill-content ----- */
 .skill-content {
   display: flex;
   flex-wrap: wrap;
@@ -10,6 +9,7 @@ main > section#skill {
   gap: var(--spacing-5xl);
   margin-top: var(--spacing-7xl);
 }
+/* ----- skill-item ----- */
 .skill-item {
   position: relative;
   width: 390px;
@@ -19,6 +19,7 @@ main > section#skill {
   border-radius: var(--spacing-lg);
   background-color: var(--color-skill-section-bg);
 }
+/* ----- skill-item__icon-box ----- */
 .skill-item__icon-box {
   width: 100%;
   flex-shrink: 0;
@@ -47,6 +48,7 @@ main > section#skill {
 .skill-item__icon.svn {
   width: calc(114px / 2);
 }
+/* ----- skill-item__text-box ----- */
 .skill-item__text-box {
   margin-top: var(--spacing-2xl);
 }
