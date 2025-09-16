@@ -24,6 +24,16 @@
   --react-text-color: #1E2723;
   --react-color-primary: #72E3AD;
   --react-background-color: #f1fdf7;
+
+  /* Redefine */
+  --redefine-color-primary: #0077ed;
+  --redefine-color-primary-light: #4099f2;
+
+  /* Market Fresh */
+  --market-color-primary: #6CC31C;
+  --market-color-primary-light: #91d255;
+  --market-color-background: #F5FFEF;
+
   
   /* --------- SHADOW --------- */
   --shadow-normal: 0 0 12px rgba(0, 0, 0, 0.1);

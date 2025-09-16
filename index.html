@@ -476,13 +476,13 @@
                           <h5 class="react-detail__typo-desc-title">Font-Size</h5>
                           <ul class="react-detail__typo-desc-list">
                             <li class="react-detail__typo-desc-list-item">
-                              <span class="font-en">PC</span>-<b>18<span class="font-en">px</span></b>
+                              <span class="font-en">PC</span>-<b class="font-en">18px</b>
                             </li>
                             <li class="react-detail__typo-desc-list-item">
-                              <span class="font-en">Tablet</span>-<b>16<span class="font-en">px</span></b>
+                              <span class="font-en">Tablet</span>-<b class="font-en">16px</b>
                             </li>
                             <li class="react-detail__typo-desc-list-item">
-                              <span class="font-en">Mobile</span>-<b>14<span class="font-en">px</span></b>
+                              <span class="font-en">Mobile</span>-<b class="font-en">14px</b>
                             </li>
                           </ul>
                         </div>
@@ -521,6 +521,7 @@
                     <div class="react-detail__work-list">
                       <h4 class="react-detail__work-list-title title" aria-hidden="true"><span class="font-en">TaskFlow</span> 프로젝트 개요</h4>
                       <div class="react-detail__work-list-table-wrapper">
+                        <!-- react-detail__work-list-table -->
                         <table class="react-detail__work-list-table">
                           <!-- caption -->
                           <caption class="sr-only">TaskFlow 프로젝트 개요</caption>
@@ -533,33 +534,33 @@
                           </thead>
                           <!-- tbody -->
                           <tbody>
-                              <tr>
-                                  <th scope="row">작업 기간</th>
-                                  <td>10 일</td>
-                              </tr>
-                              <tr>
-                                  <th scope="row">작업 범위</th>
-                                  <td>기획, <span class="font-en">UI</span> 디자인, 퍼블리싱, 개발</td>
-                              </tr>
-                              <tr>
-                                  <th scope="row">제작 참여도</th>
-                                  <td>1명 본인(100%)</td>
-                              </tr>
-                              <tr>
-                                  <th scope="row">개발 환경</th>
-                                  <td>
-                                    <span class="font-en">React</span> 기반의 
-                                    <span class="font-en">Vite</span> 개발 환경
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <th scope="row">적용한<br />라이브러리</th>
-                                  <td>
-                                    <span class="font-en">Styled-Components(CSS-in-JS)</span>,<br />
-                                    <span class="font-en">React Calendar</span>(캘린더),
-                                    <span class="font-en">dnd-kit(Drag & Drop)</span>
-                                  </td>
-                              </tr>
+                            <tr>
+                              <th scope="row">작업 기간</th>
+                              <td>10 일</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">작업 범위</th>
+                              <td>기획, <span class="font-en">UI</span> 디자인, 퍼블리싱, 개발</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">제작 참여도</th>
+                              <td>1명 본인(100%)</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">개발 환경</th>
+                              <td>
+                                <span class="font-en">React</span> 기반의 
+                                <span class="font-en">Vite</span> 개발 환경
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">적용한<br />라이브러리</th>
+                              <td>
+                                <span class="font-en">Styled-Components(CSS-in-JS)</span>,<br />
+                                <span class="font-en">React Calendar</span>(캘린더),
+                                <span class="font-en">dnd-kit(Drag & Drop)</span>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -578,214 +579,350 @@
           </div>
         </section>
 
-        <!-- ########## Mobile ########## -->
-        <section id="mobile">
-          <div class="inner">
-            <h2>Mobile WebⅠ.</h2>
-            <div class="wrapper">
-              <div class="mobile_photo">
-                <div class="mobile_photo_first">
-                  <img src="./image/mobile_web/redefine_mobile_04.png" alt="리디파인 프리로딩 화면" />
+        <!-- ########## Mobile Web - Redefine ########## -->
+        <section id="redefine" class="mobile">
+          <div class="mobile-inner inner">
+            <h2 class="section-title">Mobile WebⅠ.</h2>
+            <div class="mobile-content">
+              <!-- ########## Redefine - mobile-mockup ########## -->
+              <figure class="mobile-mockup">
+                <div class="mobile-mockup__item">
+                  <img src="./image/mobile_web/redefine-mobile-01.png" alt="리디파인 모바일 목업 1">
                 </div>
-                <div class="mobile_photo_second">
-                  <img src="./image/mobile_web/redefine_mobile_05.png" alt="리디파인 메인화면" />
+                <div class="mobile-mockup__item">
+                  <img src="./image/mobile_web/redefine-mobile-02.png" alt="리디파인 모바일 목업 2">
                 </div>
-              </div>
-              <div class="mobile_desc">
-                <div class="mobile_desc_title">
-                  <h3>
-                    <span>Redefine · </span>
-                    쇼핑을 재정의하다!
-                  </h3>
-                  <p>
-                    최근 폭등한 물가로 인해 브랜드 쇼핑이 부담스러운데, 인기가
-                    많은 브랜드 제품을 참고하여 같은 공정을 거쳐 성능은 비슷하되
-                    가격 거품을 걷어내고 합리적인 가격으로 소비자에게 제공될 수
-                    있다면 좋을것 같다는 생각으로 이 쇼핑몰을 제작 하였습니다.
-                  </p>
-                </div>
-                <div class="mobile_desc_format">
-                  <div class="mobile_desc_format_color">
-                    <b>Color Theme</b>
-                    <div class="color_chips">
-                      <em>#0077ED</em>
-                      <em>#E1F0FF</em>
-                      <em>#F4C500</em>
-                    </div>
+              </figure>
+              <!-- ########## Redefine - mobile-detail ########## -->
+              <article class="mobile-detail">
+                <h3 class="mobile-detail__title font-en">Redefine</h3>
+                <div class="mobile-detail__inner">
+                  <!-- ########## Redefine - app-intro ########## -->
+                  <section class="section mobile-detail__app-intro">
                     <p>
-                      신뢰성을 상징하는 푸른색의 메인컬러를 사용하여 깔끔해 보일
-                      수 있도록 디자인 하였습니다.
+                      <span class="fone-en s-bold">Redefine</span>은 현대적인 모바일 이커머스 플랫폼으로, 
+                      "쇼핑을 재정의하다"라는 컨셉으로 기획된 <span class="font-en s-bold">Mobile Web App</span>
+                      입니다. 뷰티, 생활용품, 푸드 등 다양한 카테고리의 상품을 제공하며, 깔끔한 인터페이스와 
+                      직관적인 사용자 경험에 중점을 두고 개발하였습니다.
                     </p>
-                  </div>
-                  <div class="mobile_desc_format_font">
-                    <b>Font Color</b>
-                    <div class="color_chips">
-                      <em>#333333</em>
-                      <em>#777777</em>
-                      <em>#999999</em>
+                  </section>
+                  <!-- ########## Redefine - mobile-detail__format ########## -->
+                  <section class="mobile-detail__format">
+                    <!-- Redefine - mobile-detail__theme -->
+                    <div class="mobile-detail__theme">
+                      <h4 class="mobile-detail__theme-title title font-en">Color Theme</h4>
+                      <div class="mobile-detail__theme-color-box color-box">
+                        <span class="mobile-detail__theme-color-item color-item">#0077ED</span>
+                        <span class="mobile-detail__theme-color-item color-item">#FFFFFF</span>
+                        <span class="mobile-detail__theme-color-item color-item">#F4C500</span>
+                      </div>
+                      <p class="mobile-detail__theme-desc desc">
+                        신뢰감 있는 코발트 블루 색상에 깨끗한 화이트 배경으로 대비하여 
+                        안정감과 가독성을 모두 갖춘 테마 컬러입니다.
+                      </p>
                     </div>
-                    <div class="text_size">
-                      <span>한글 폰트 : 프리텐다드</span>
-                      <span>영문 폰트 : Poppins</span>
-                      <span>폰트크기</span>
-                      <span>body : 14px</span>
-                      <span>title : 18px, 16px, 15px</span>
+                    <!-- Redefine - mobile-detail__typo -->
+                    <div class="mobile-detail__typo">
+                      <h4 class="mobile-detail__typo-title title font-en">Typography</h4>
+                      <!-- Redefine - mobile-detail__typo-color-box -->
+                      <div class="mobile-detail__typo-color-box color-box">
+                        <span class="mobile-detail__typo-color-item color-item">#333333</span>
+                        <span class="mobile-detail__typo-color-item color-item">#777777</span>
+                        <span class="mobile-detail__typo-color-item color-item">#999999</span>
+                      </div>
+                        <!-- Redefine - mobile-detail__typo-desc -->
+                      <div class="mobile-detail__typo-desc desc">
+                        <div class="mobile-detail__typo-desc-list-box">
+                          <h5 class="mobile-detail__typo-desc-title">Font-family</h5>
+                          <ul class="mobile-detail__typo-desc-list">
+                            <li class="mobile-detail__typo-desc-list-item">
+                              <span>한글</span> - <b>프리텐다드</b>
+                            </li>
+                            <li class="mobile-detail__typo-desc-list-item">
+                              <span>영문</span> - <b class="font-en">Poppins</b>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="mobile-detail__typo-desc-list-box">
+                          <h5 class="mobile-detail__typo-desc-title">Font-size</h5>
+                          <ul class="mobile-detail__typo-desc-list">
+                            <li class="mobile-detail__typo-desc-list-item">
+                              <span class="font-en">Mobile-body</span> - <b class="font-en">14px</b>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </section>
+                  <!-- ########## Redefine - mobile-detail-bottom-wrapper ########## -->
+                  <section class="mobile-detail-bottom-wrapper">
+                    <!-- ########## Redefine - mobile-detail__function ########## -->
+                    <div class="mobile-detail__function">
+                      <h4 class="mobile-detail__function-title title">
+                        <span class="font-en">App</span> 주요 기능
+                      </h4>
+                      <ul class="mobile-detail__function-list">
+                        <li class="mobile-detail__function-list-item">
+                          <em class="dot"></em>
+                          <p>
+                            <span class="font-en">Mobile</span> 최적화 <span class="font-en">Web App</span>
+                          </p>
+                        </li>
+                        <li class="mobile-detail__function-list-item">
+                          <em class="dot"></em>
+                          <p>터치 친화적인 버튼 및 인터렉션</p>
+                        </li>
+                        <li class="mobile-detail__function-list-item">
+                          <em class="dot"></em>
+                          <p>상품 및 배너 자동 슬라이드</p>
+                        </li>
+                        <li class="mobile-detail__function-list-item">
+                          <em class="dot"></em>
+                          <p>아코디언 형태의 상세 정보 펼침/접힘</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- ########## Redefine - mobile-detail__work-list ########## -->
+                    <div class="mobile-detail__work-list">
+                      <h4 class="mobile-detail__work-list-title title">
+                        <span class="font-en">Redefine</span> 프로젝트 개요
+                      </h4>
+                      <div class="mobile-detail__work-list-table-wrapper">
+                        <!-- Redefine - mobile-detail__work-list-table -->
+                        <table class="mobile-detail__work-list-table">
+                          <!-- caption -->
+                          <caption class="sr-only">Redefine 프로젝트 개요</caption>
+                          <!-- thead -->
+                          <thead>
+                            <tr>
+                              <th scope="col">항목</th>
+                              <th scope="col">내용</th>
+                            </tr>
+                          </thead>
+                          <!-- tbody -->
+                          <tbody>
+                              <tr>
+                                  <th scope="row">작업 기간</th>
+                                  <td>약 2주</td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">작업 범위</th>
+                                  <td>기획, <span class="font-en">UI</span> 디자인, 퍼블리싱</td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">제작 참여도</th>
+                                  <td>1명 본인(100%)</td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">개발 환경</th>
+                                  <td>
+                                    <span class="font-en">HTML</span> + 
+                                    <span class="font-en">CSS</span> + 
+                                    <span class="font-en">JQUERY</span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">적용 플러그인</th>
+                                  <td>
+                                    <span class="font-en">Slick.js</span>(슬라이더)
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">참고 사항</th>
+                                  <td>
+                                    <span class="font-en">Slick.js</span>를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로 제작
+                                  </td>
+                              </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- ########## mobile-detail__btn-box ########## -->
+                    <div class="mobile-detail__btn-box">
+                      <a href="./portfolio/mobile_web/mobile_mockup_single/index.html" data-featherlight="iframe">싱글 뷰</a>
+                      <a href="./portfolio/mobile_web/mobile_mockup_multi/index.html" data-featherlight="iframe">멀티 뷰</a>
+                      <a href="./doc/redefine_fs.pdf" data-featherlight="iframe">기능정의서</a>
+                      <a class="font-en" href="./portfolio/mobile_web/redefine/ui_design/index.html" data-featherlight="iframe">UI Design</a>
+                    </div>
+                  </section>
                 </div>
-                <div class="mobile_desc_detail">
-                  <div>
-                    <b>작업기간</b>
-                    <span>2주</span>
-                  </div>
-                  <div>
-                    <b>작업범위</b>
-                    <span>기획, UI디자인, 퍼블리싱</span>
-                  </div>
-                  <div>
-                    <b>제작참여</b>
-                    <span>100%</span>
-                  </div>
-                  <div>
-                    <b>제작방식</b>
-                    <span>HTML + CSS + JQUERY</span>
-                  </div>
-                  <div class="feature">
-                    <b>레이아웃</b>
-                    <span>Flex 기반의 모바일 퍼스트 반응형 레이아웃</span>
-                  </div>
-                  <div>
-                    <b>플러그인</b>
-                    <span>Slick.js (슬라이더)</span>
-                  </div>
-                  <div class="feature">
-                    <b>프로세스</b>
-                    <span>
-                      와이어프레임 및 UI디자인 → 기능 정의서, HTML구조 설계 →
-                      퍼블리싱 시작
-                    </span>
-                  </div>
-                  <div class="feature">
-                    <b>참고사항</b>
-                    <span>
-                      Slick.js를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로
-                      제작
-                    </span>
-                  </div>
-                </div>
-                <div class="mobile_desc_btns">
-                  <a href="./doc/redefine_fs.pdf" data-featherlight="iframe">기능정의서</a>
-                  <a href="./portfolio/mobile_web/redefine/ui_design/index.html" data-featherlight="iframe">UI 디자인</a>
-                  <a href="./portfolio/mobile_web/mobile_mockup_single/index.html" data-featherlight="iframe">싱글뷰</a>
-                  <a href="./portfolio/mobile_web/mobile_mockup_multi/index.html" data-featherlight="iframe">멀티뷰</a>
-                </div>
-              </div>
+              </article>
             </div>
           </div>
         </section>
-        <!-- ########## Mobile - second ########## -->
-        <section id="mobile" class="sec">
-          <div class="inner">
-            <h2>Mobile WebⅡ.</h2>
-            <div class="wrapper">
-              <div class="mobile_photo">
-                <div class="mobile_photo_first">
-                  <img src="./image/mobile_web_2/css_nesting_01.png" alt="마켓프레시 인트로 화면" />
+
+        <!-- ########## Mobile Web - Market Fresh ########## -->
+        <section id="market" class="mobile">
+          <div class="mobile-inner inner">
+            <h2 class="section-title">Mobile WebⅡ.</h2>
+            <div class="mobile-content">
+              <!-- ########## Market - mobile-mockup ########## -->
+              <figure class="mobile-mockup">
+                <div class="mobile-mockup__item">
+                  <img src="./image/mobile_web/market-mobile-01.png" alt="마켓프레시 모바일 목업 1">
                 </div>
-                <div class="mobile_photo_second">
-                  <img src="./image/mobile_web_2/css_nesting_02.png" alt="마켓프레시 메인화면" />
+                <div class="mobile-mockup__item">
+                  <img src="./image/mobile_web/market-mobile-02.png" alt="마켓프레시 모바일 목업 2">
                 </div>
-              </div>
-              <div class="mobile_desc">
-                <div class="mobile_desc_title">
-                  <h3>
-                    <span>Market Fresh</span>
-                  </h3>
-                  <p>
-                    SCSS(SASS)는 기존의 CSS보다 코드의 가독성 및 재사용성을 높여 유지보수가 쉽다는 장점이 있지만
-                    매번 컴파일을 해야 한다는 단점이 있는데, 최신 문법인 CSS Nesting은 SCSS와 완전히 동일한 문법이지만
-                    컴파일도 필요 없고 최근에 호환성까지 좋아져, 실무에서도 충분히 사용 가능할 것이라고 생각되고, 
-                    이를 활용하여 쇼핑몰 모바일 퍼스트 웹 앱을 제작 하였습니다. 
-                  </p>
-                </div>
-                <div class="mobile_desc_format">
-                  <div class="mobile_desc_format_color">
-                    <b>Color Theme</b>
-                    <div class="color_chips">
-                      <em>#6CC31C</em>
-                      <em>#FFFFFF</em>
-                      <em>#3498DB</em>
-                    </div>
+              </figure>
+              <!-- ########## Market - mobile-detail ########## -->
+              <article class="mobile-detail">
+                <h3 class="mobile-detail__title font-en">Market Fresh</h3>
+                <div class="mobile-detail__inner">
+                  <!-- ########## Market - app-intro ########## -->
+                  <section class="section mobile-detail__app-intro">
                     <p>
-                      신선한 야채, 과일 등의 제품을 직관적으로 연상시킬수 있는 초록색을 메인 테마 색상으로 디자인 하였습니다.
+                      <span class="font-en s-bold">Market Fresh</span>는 당일 발송 시스템의 신선식품 플랫폼을 컨셉으로 한
+                      <span class="font-en s-bold">Mobile Web App</span> 입니다.  과일, 채소, 정육, 밀키트 등 다양한 신선식품 카테고리를  제공하며,
+                      사용자 친화적인 부드러운 색상의 <span class="font-en">UI</span>와 <span class="font-en">UX</span>를 고려한 구조 설계를 중점으로 개발하였습니다.
                     </p>
-                  </div>
-                  <div class="mobile_desc_format_font">
-                    <b>Font Color</b>
-                    <div class="color_chips">
-                      <em>#111111</em>
-                      <em>#777777</em>
-                      <em>#9C9C9E</em>
+                  </section>
+                  <!-- ########## Market - mobile-detail__format ########## -->
+                  <section class="mobile-detail__format">
+                    <!-- Market - mobile-detail__theme -->
+                    <div class="mobile-detail__theme">
+                      <h4 class="mobile-detail__theme-title title font-en">Color Theme</h4>
+                      <div class="mobile-detail__theme-color-box color-box">
+                        <span class="mobile-detail__theme-color-item color-item">#6CC31C</span>
+                        <span class="mobile-detail__theme-color-item color-item">#FFFFFF</span>
+                        <span class="mobile-detail__theme-color-item color-item">#3498DB</span>
+                      </div>
+                      <p class="mobile-detail__theme-desc desc">
+                        싱그럽고 자연스러운 녹색톤에 깨끗한 화이트 배경으로 대비하여
+                        신선식품의 건강함과 청결함을 강조하는 프레시한 테마 컬러입니다.
+                      </p>
                     </div>
-                    <div class="text_size">
-                      <span>폰트 : 프리텐다드</span>
-                      <span>폰트크기</span>
-                      <span>body : 14px</span>
-                      <span>title : 18px , 16px</span>
+                    <!-- Market - mobile-detail__typo -->
+                    <div class="mobile-detail__typo">
+                      <h4 class="mobile-detail__typo-title title font-en">Typography</h4>
+                      <!-- Market - mobile-detail__typo-color-box -->
+                      <div class="mobile-detail__typo-color-box color-box">
+                        <span class="mobile-detail__typo-color-item color-item">#111111</span>
+                        <span class="mobile-detail__typo-color-item color-item">#777777</span>
+                        <span class="mobile-detail__typo-color-item color-item">#9C9C9E</span>
+                      </div>
+                        <!-- Market - mobile-detail__typo-desc -->
+                      <div class="mobile-detail__typo-desc desc">
+                        <div class="mobile-detail__typo-desc-list-box">
+                          <h5 class="mobile-detail__typo-desc-title">Font-family</h5>
+                          <ul class="mobile-detail__typo-desc-list">
+                            <li class="mobile-detail__typo-desc-list-item">
+                              <span>한글</span> - <b>프리텐다드</b>
+                            </li>
+                            <li class="mobile-detail__typo-desc-list-item">
+                              <span>영문</span> - <b class="font-en">Poppins</b>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="mobile-detail__typo-desc-list-box">
+                          <h5 class="mobile-detail__typo-desc-title">Font-size</h5>
+                          <ul class="mobile-detail__typo-desc-list">
+                            <li class="mobile-detail__typo-desc-list-item">
+                              <span class="font-en">Mobile-body</span> - <b class="font-en">14px</b>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </section>
+                  <!-- ########## Market - mobile-detail-bottom-wrapper ########## -->
+                  <section class="mobile-detail-bottom-wrapper">
+                    <!-- ########## Market - mobile-detail__function ########## -->
+                    <div class="mobile-detail__function">
+                      <h4 class="mobile-detail__function-title title">
+                        <span class="font-en">App</span> 주요 기능
+                      </h4>
+                      <ul class="mobile-detail__function-list">
+                        <li class="mobile-detail__function-list-item">
+                          <em class="dot"></em>
+                          <p>
+                            <span class="font-en">Mobile</span> 최적화 <span class="font-en">Web App</span>
+                          </p>
+                        </li>
+                        <li class="mobile-detail__function-list-item">
+                          <em class="dot"></em>
+                          <p>터치 친화적인 버튼 및 인터렉션</p>
+                        </li>
+                        <li class="mobile-detail__function-list-item">
+                          <em class="dot"></em>
+                          <p>상품 상세 정보 탭 전환</p>
+                        </li>
+                        <li class="mobile-detail__function-list-item">
+                          <em class="dot"></em>
+                          <p>메인 배너, 상품 추천 자동 슬라이드</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- ########## Market - mobile-detail__work-list ########## -->
+                    <div class="mobile-detail__work-list">
+                      <h4 class="mobile-detail__work-list-title title">
+                        <span class="font-en">Market Fresh</span> 프로젝트 개요
+                      </h4>
+                      <div class="mobile-detail__work-list-table-wrapper">
+                        <!-- Market - mobile-detail__work-list-table -->
+                        <table class="mobile-detail__work-list-table">
+                          <!-- caption -->
+                          <caption class="sr-only">Market Fresh 프로젝트 개요</caption>
+                          <!-- thead -->
+                          <thead>
+                            <tr>
+                              <th scope="col">항목</th>
+                              <th scope="col">내용</th>
+                            </tr>
+                          </thead>
+                          <!-- tbody -->
+                          <tbody>
+                            <tr>
+                              <th scope="row">작업 기간</th>
+                              <td>약 2주</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">작업 범위</th>
+                              <td>기획, <span class="font-en">UI</span> 디자인, 퍼블리싱</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">제작 참여도</th>
+                              <td>1명 본인(100%)</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">개발 환경</th>
+                              <td>
+                                <span class="font-en">HTML</span> + 
+                                <span class="font-en">CSS Nesting</span> + 
+                                <span class="font-en">JQUERY</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">적용 플러그인</th>
+                              <td>
+                                <span class="font-en">Slick.js</span>(슬라이더)
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">참고 사항</th>
+                              <td>
+                                <span class="font-en">Slick.js</span>를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로 제작
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- ########## Market - mobile-detail__btn-box ########## -->
+                    <div class="mobile-detail__btn-box">
+                      <a href="./portfolio/mobile_web_sec/mobile_mockup_single/index.html" data-featherlight="iframe">싱글 뷰</a>
+                      <a href="./portfolio/mobile_web_sec/mobile_mockup_multi/index.html" data-featherlight="iframe">멀티 뷰</a>
+                    </div>
+                  </section>
                 </div>
-                <div class="mobile_desc_detail">
-                  <div>
-                    <b>작업기간</b>
-                    <span>2주</span>
-                  </div>
-                  <div>
-                    <b>작업범위</b>
-                    <span>기획, UI디자인, 퍼블리싱</span>
-                  </div>
-                  <div>
-                    <b>제작참여</b>
-                    <span>100%</span>
-                  </div>
-                  <div class="feature">
-                    <b>제작방식</b>
-                    <span>HTML + CSS Nesting + JQUERY</span>
-                  </div>
-                  <div class="feature">
-                    <b>레이아웃</b>
-                    <span>Flex 기반의 모바일 퍼스트 반응형 레이아웃</span>
-                  </div>
-                  <div>
-                    <b>플러그인</b>
-                    <span>Slick.js (슬라이더)</span>
-                  </div>
-                  <div class="feature">
-                    <b>프로세스</b>
-                    <span>
-                      와이어프레임 및 UI디자인 → 기능 정의서, HTML구조 설계 →
-                      퍼블리싱 시작
-                    </span>
-                  </div>
-                  <div class="feature">
-                    <b>참고사항</b>
-                    <span>
-                      Slick.js를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로
-                      제작
-                    </span>
-                  </div>
-                </div>
-                <div class="mobile_desc_btns">
-                  <a href="./portfolio/mobile_web_sec/mobile_mockup_single/index.html" data-featherlight="iframe">싱글뷰</a>
-                  <a href="./portfolio/mobile_web_sec/mobile_mockup_multi/index.html" data-featherlight="iframe">멀티뷰</a>
-                </div>
-              </div>
+              </article>
             </div>
           </div>
         </section>
+        
         <!-- ########## Web ########## -->
         <section id="web">
-          <div class="inner">
+          <div class="web-inner inner">
             <h2>Website Publishing.</h2>
             <div class="wrapper">
               <input type="radio" name="web" id="web1" checked />
@@ -1284,7 +1421,7 @@
               </div>
               <div class="epilogue_job_strength">
                 <div>
-                  <b>퍼블리싱 원칙과 기본기</b>
+                  <h5>퍼블리싱 원칙과 기본기</h5>
                   <p>
                     원활한 작업을 위해 폴더구조와 경로를 체계적으로 정리하고, 항상
                     깔끔한 인덴트와 적절한 주석 사용으로 저 뿐만 아니라 협업자도
@@ -1293,7 +1430,7 @@
                   </p>
                 </div>
                 <div>
-                  <b>하드코딩</b>
+                  <h5>하드코딩</h5>
                   <p>
                     디자인이 아닌 기능적으로 필요한 경우에만 플러그인을 사용하고
                     그 외 모든 작업은 하드코딩을 원칙으로 작업합니다. Position,
@@ -1303,7 +1440,7 @@
                   </p>
                 </div>
                 <div>
-                  <b>체계적인 퍼블리싱</b>
+                  <h5>체계적인 퍼블리싱</h5>
                   <p>
                     작업에 들어가기 전 벤치마킹 사이트를 물색하고 와이어프레임을
                     작성한 후, UI 디자인, 기능정의서, HTML구조 설계 순으로
@@ -1313,7 +1450,7 @@
                   </p>
                 </div>
                 <div>
-                  <b>항상 배우려는 자세</b>
+                  <h5>항상 배우려는 자세</h5>
                   <p>
                     새로운 기술을 학습하는것 에 대한 욕심이 있고 배우고 사용하는
                     과정에서 느끼는 보람과 성취감을 좋아합니다. 현재에 안주하지

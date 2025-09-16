@@ -34,6 +34,38 @@
 
 /* ---------- //IMPORT SECTIONS-CSS ---------- */
 
+/* ---------- LAYOUT ---------- */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.4em;
+  font-size: var(--font-size-md);
+  font-weight: 300;
+  font-family: var(--font-KR);
+  color: var(--text-color-body);
+}
+.container {
+  width: 100%;
+}
+.inner {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+main > section {
+  padding: var(--section-padding);
+}
+main > section .inner > h2 {
+  font-family: var(--font-EN);
+  font-size: var(--font-size-section-title);
+  font-weight: 600;
+  padding-left: var(--spacing-md);
+}
+
 
 /* ########## Section - Project ########## */
 #project .tab_container {
@@ -695,19 +727,24 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
 /* ########## Section - Epilogue ########## */
 #epilogue .inner .wrapper {
   margin-top: 50px;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-8xl);
+  padding: 70px;
 }
 .epilogue_heading,
 .epilogue_job_strength {
-  float: left;
-  width: calc(50% - 25px);
+  /* float: left; */
+  /* width: calc(50% - 25px); */
 }
 .epilogue_heading {
-  padding: 70px;
-
+  flex-shrink: 0;
+  width: 430px;
 }
 .epilogue_heading h3 {
-  font-family: var(--font-KR);
+  font-size: var(--spacing-2xl);
+  font-weight: 600;
   line-height: 1.5em;
 }
 .epilogue_heading h3 span {
@@ -716,23 +753,21 @@ input[id="web6"]:checked ~ .web_tab_content_outer .web_tab_content.logitech {
   text-decoration: underline;
 }
 .epilogue_heading p {
-  margin-top: 10px;
-  font-size: 18px;
+  margin-top: var(--spacing-md);
+  font-size: var(--spacing-xl);
   line-height: 1.7em;
-  color: var(--text-color-body);
-  text-align: justify;
 }
 .epilogue_job_strength div:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-3xl);
 }
-.epilogue_job_strength div b {
+.epilogue_job_strength div h5 {
   color: var(--color-primary);
-  font-size: 16px;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
 }
 .epilogue_job_strength div p {
   color: var(--text-color-body);
   margin-top: 5px;
-  font-size: 15px;
   line-height: 1.7em;
   text-align: justify;
 }
