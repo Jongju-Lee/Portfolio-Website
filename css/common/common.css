@@ -118,95 +118,23 @@ section .inner > h2 {
   border: 0;
 }
 
-/* ---------- Slick.js 슬라이더 ---------- */
-/* practical_slider */
-.practical_slider .slick-prev:before,
-.practical_slider .slick-next:before {
-  font-family: "bootstrap-icons";
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 1;
-  color: #ddd;
-  -webkit-font-smoothing: antialiased;
-}
-.practical_slider .slick-prev {
-  left: -50px;
-}
-.practical_slider .slick-prev:before {
-  content: "\F284";
-}
-.practical_slider .slick-next:before {
-  content: "\F285";
-}
-.practical_slider .slick-dots {
-  left: -5px;
-  bottom: -40px;
-}
-.practical_slider .slick-dots li {
-  margin: 0 4px;
-}
-.practical_slider .slick-dots li button:before {
-  font-size: 10px;
-}
-.practical_slider .slick-dots li.slick-active button:before {
-  opacity: 1;
-  color: #00ad53;
-}
-/* project_slider */
-.project_slider .slick-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* gap: 15px; */
-  bottom: -24px;
-}
-.project_slider .slick-dots li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  width: fit-content;
-  height: fit-content;
-  padding: 8px;
-}
-.project_slider .slick-dots li button {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--text-color-light);
-  opacity: 0.6;
-  padding: 0;
-  transition: 0.3s;
-}
-.project_slider .slick-dots li.slick-active button {
-  opacity: 1;
-  width: 32px;
-  height: 8px;
-  background-color: var(--color-primary);
-  border-radius: 6px;
-}
-.project_slider .slick-dots li button:before,
-.project_slider .slick-dots li.slick-active button:before {
-  display: none;
-}
-
 /* ---------- UIKit ---------- */
 /* Light Box */
 .uk-lightbox {
-  background: #fff;
+  background: var(--color-background-white);
 }
 .uk-lightbox-toolbar {
   background-color: transparent;
 }
 .uk-lightbox-toolbar-icon {
-  opacity: 0.7;
-  padding: 15px;
+  mix-blend-mode: difference;
+  opacity: 1;
+  padding: var(--spacing-lg);
   border-radius: 50%;
-  background-color: crimson;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--text-color-white);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: blink 1s ease-in 0.5s 3 forwards;
 }
 .uk-lightbox-toolbar-icon:hover {
   transform: translateY(-3px);
@@ -258,17 +186,17 @@ section .inner > h2 {
 }
 .featherlight .featherlight-close-icon {
   mix-blend-mode: difference;
-  opacity: 0.8;
+  opacity: 1;
   top: 20px;
   right: 40px;
   width: 50px;
   height: 50px;
   line-height: 44px;
   font-size: 30px;
-  background: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   transition: transform 0.3s ease;
-  animation: blink 1.2s ease-in 0.5s 3 forwards;
+  animation: blink 1s ease-in 0.5s 3 forwards;
   z-index: 10000;
 }
 .close-bottom-right .featherlight-close-icon {
@@ -286,14 +214,14 @@ section .inner > h2 {
 @keyframes blink {
   0% {
     scale: 1;
-    opacity: 0.8;
+    opacity: 1;
   }
   50% {
-    scale: 0.9;
-    opacity: 0.3; 
+    scale: 0.95;
+    opacity: 0.5; 
   }
   100% {
     scale: 1;
-    opacity: 0.8;
+    opacity: 1;
   }
 }

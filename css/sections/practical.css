@@ -1,0 +1,87 @@
+/* ----- practical-content ----- */
+.practical-content {
+  margin-top: 120px;
+}
+/* ----- practical-slider ----- */
+.practical-slider:not(:last-child) {
+  margin-bottom: 120px;
+}
+.practical-slider__title {
+  position: relative;
+  font-family: var(--font-EN);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  z-index: 0;
+}
+.practical-slider__title::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: -1;
+}
+/* ----- practical-slider__item ----- */
+.practical-slider__item {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border-radius: var(--spacing-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-color-box-light);
+}
+.practical-slider__item:not(:last-child) {
+  margin-right: var(--spacing-xl);
+}
+
+/* ---------- Slick.js 수정 ---------- */
+/* practical-slider__box */
+.practical-slider__box .slick-track {
+  padding: var(--spacing-md);
+}
+/* 슬라이더 좌, 우 arrow button */
+.practical-slider__box .slick-prev:before,
+.practical-slider__box .slick-next:before {
+  font-family: "bootstrap-icons";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 1;
+  color: #ddd;
+  -webkit-font-smoothing: antialiased;
+}
+.practical-slider__box .slick-prev {
+  left: -50px;
+}
+.practical-slider__box .slick-prev:before {
+  content: "\F284";
+}
+.practical-slider__box .slick-next:before {
+  content: "\F285";
+}
+/* 슬라이더 하단 dot-slider */
+.practical-slider__box .slick-dots {
+  left: -5px;
+  bottom: -40px;
+}
+.practical-slider__box .slick-dots li {
+  margin: 0 4px;
+}
+.practical-slider__box .slick-dots li button::before {
+  font-size: var(--font-size-xs);
+}
+.practical-slider__box .slick-dots li button:hover::before {
+  opacity: 0.5;
+}
+.practical-slider__box .slick-dots li.slick-active {
+  pointer-events: none;
+}
+.practical-slider__box .slick-dots li.slick-active button::before {
+  opacity: 1;
+  color: #00ad53;
+}

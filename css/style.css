@@ -22,52 +22,6 @@
 @import url(./sections/epilogue.css);
 
 
-/* ########## Section - Practical ########## */
-#practical .inner .wrapper {
-  margin-top: 120px;
-}
-.practical_slider_outer:not(:last-child) {
-  margin-bottom: 120px;
-}
-.practical_slider_outer h3 {
-  position: relative;
-  font-family: var(--font-EN);
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  z-index: 0;
-}
-.practical_slider_outer h3::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: -5px;
-  width: 15px;
-  height: 15px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  opacity: 0.5;
-  z-index: -1;
-}
-.practical_slider a {
-  display: block;
-  width: 100%;
-  height: 200px;
-  margin-right: 10px;
-  transition: 0.2s;
-}
-.practical_slider a:last-child {
-  margin-right: 0;
-}
-.practical_slider div a img {
-  display: block;
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-}
-
 /* ########## Section - Epilogue ########## */
 #epilogue .inner .wrapper {
   margin-top: 50px;
@@ -76,11 +30,6 @@
   align-items: center;
   gap: var(--spacing-8xl);
   padding: 70px;
-}
-.epilogue_heading,
-.epilogue_job_strength {
-  /* float: left; */
-  /* width: calc(50% - 25px); */
 }
 .epilogue_heading {
   flex-shrink: 0;

@@ -44,7 +44,7 @@ $(function () {
 
   /* ---------- Slick Slider ---------- */
   // Practical Coding
-  $(".practical_slider").slick({
+  $(".practical-slider__box").slick({
     dots: true,
     arrows: true,
     infinite: true,
