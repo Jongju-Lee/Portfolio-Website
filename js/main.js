@@ -38,7 +38,7 @@ $(function () {
   });
 
   /* Lightbox 링크 클릭시 trigger, btn_top 숨김 */
-  $(".lightbox_slider a").click(function () {
+  $(".practical-slider__item").click(function () {
     $(".trigger, .btn_top").removeClass("on");
   });
 
