@@ -924,288 +924,315 @@
         <section id="web">
           <div class="web-inner inner">
             <h2>Website Publishing.</h2>
-            <div class="wrapper">
+            <!-- ########## web-content ########## -->
+            <div class="web-content">
               <input class="sr-only" type="radio" name="web" id="web1" checked />
               <input class="sr-only" type="radio" name="web" id="web2" />
               <input class="sr-only" type="radio" name="web" id="web3" />
               <input class="sr-only" type="radio" name="web" id="web4" />
               <input class="sr-only" type="radio" name="web" id="web5" />
               <input class="sr-only" type="radio" name="web" id="web6" />
-              <div class="web_tab_btns">
-                <div class="web_tab_btns_indicator"></div>
-                <label for="web1" data-link="Travelium"></label>
-                <label for="web2" data-link="Shoe Station"></label>
-                <label for="web3" data-link="NGO"></label>
-                <label for="web4" data-link="SMEG"></label>
-                <label for="web5" data-link="NETFLIX"></label>
-                <label for="web6" data-link="Logitech"></label>
+              <!-- ########## web-tab__btn-box ########## -->
+              <div class="web-tab__btn-box">
+                <div class="web-tab__btn-indicator"></div>
+                <label class="web-tab__btn" for="web1" data-label-text="Travelium"></label>
+                <label class="web-tab__btn" for="web2" data-label-text="Shoe Station"></label>
+                <label class="web-tab__btn" for="web3" data-label-text="NGO"></label>
+                <label class="web-tab__btn" for="web4" data-label-text="SMEG"></label>
+                <label class="web-tab__btn" for="web5" data-label-text="NETFLIX"></label>
+                <label class="web-tab__btn" for="web6" data-label-text="Logitech"></label>
               </div>
-              <div class="web_tab_content_outer">
-                <div class="web_tab_content travelium">
-                  <div class="web_tab_content_thum"></div>
-                  <div class="web_tab_content_desc">
-                    <div class="title">
-                      <h3>Travelium</h3>
-                      <p>
-                        저희 여행사는 고객님들의 안전한 여행을 보장하기 위해 여행 도중 발생하는 문제들을 신속하고 효율적으로 해결해 드립니다. 그리고, 특별한 여행 경험을 할 수 있도록 다양한 취향과 관심사를 반영하여 맞춤형 여행 일정과 프로그램을 제공합니다.
+              <!-- ########## web-tab__item-box ########## -->
+              <section class="web-tab__item-box">
+                <!-- ########## web-tab__item - Travelium ########## -->
+                <div class="web-tab__item">
+                  <!-- Travelium - web-tab__item-thum -->
+                  <figure class="web-tab__item-thum" aria-label="Travelium 썸네일"></figure>
+                  <!-- Travelium - web-tab__item-content -->
+                  <article class="web-tab__item-content">
+                    <div class="web-tab__item-title-box">
+                      <h3 class="web-tab__item-title">Travelium</h3>
+                      <p class="web-tab__item-desc">
+                        저희 여행사는 고객님들의 안전한 여행을 보장하기 위해 여행 도중 발생하는 문제들을 신속하고 효율적으로 해결해 드립니다.
+                        그리고, 특별한 여행 경험을 할 수 있도록 다양한 취향과 관심사를 반영하여 맞춤형 여행 일정과 프로그램을 제공합니다.
+                      </p>
+                    </div> 
+                    <!-- Travelium - web-tab__item-detail -->
+                    <ul class="web-tab__item-detail">
+                      <li>
+                        <h5>작업기간</h5>
+                        <p>3 일</p>
+                      </li>
+                      <li>
+                        <h5>작업범위</h5>
+                        <p>기획, <span class="font-en">UI</span> 디자인, 퍼블리싱</p>
+                      </li>
+                      <li>
+                        <h5>제작참여</h5>
+                        <p>1명 본인(100%)</p>
+                      </li>
+                      <li>
+                        <h5>제작방식</h5>
+                        <p class="font-en">HTML + SCSS + JQUERY + Slider</p>
+                      </li>
+                      <li>
+                        <h5>레이아웃</h5>
+                        <p><span class="font-en">Grid</span> 기반의 레이아웃</p>
+                      </li>
+                      <li>
+                        <h5>참고사항</h5>
+                        <p>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</p>
+                      </li>
+                    </ul>
+                    <!-- Travelium - web-tab__item-link-box -->
+                    <div class="web-tab__item-link-box">
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/travelium/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/travelium/travelium_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
+                      <a class="web-tab__item-link-btn" href="./doc/travelium_fs.pdf" data-featherlight="iframe">기능정의서</a>
+                    </div>
+                  </article>
+                </div>
+                <!-- ########## web-tab__item - Shoe Station ########## -->
+                <div class="web-tab__item">
+                  <!-- Shoe Station - web-tab__item-thum -->
+                  <figure class="web-tab__item-thum" aria-label="Shoe Station 썸네일"></figure>
+                  <!-- Shoe Station - web-tab__item-content -->
+                  <article class="web-tab__item-content">
+                    <div class="web-tab__item-title-box">
+                      <h3 class="web-tab__item-title">Shoe Station</h3>
+                      <p class="web-tab__item-desc">
+                        이 쇼핑몰에서 다양한 브랜드의 제품을 한 자리에서 만나 보실 수 있습니다.
+                        가격대도 다양하여 가성비 좋은 신발부터 고품질의 신발까지 모두 갖추고 있습니다.
+                        여러분의 스타일에 맞는 신발을 찾을 수 있도록 도와드립니다!
                       </p>
                     </div>
-                    <div class="details">
-                      <span>
-                        <b>작업기간</b>
-                        3일
-                      </span>
-                      <span>
-                        <b>작업범위</b>
-                        기획, UI 디자인, 퍼블리싱
-                      </span>
-                      <span>
-                        <b>제작참여</b>
-                        100%
-                      </span>
-                      <span>
-                        <b>제작방식</b>
-                        HTML + SCSS + JQUERY + Slider
-                      </span>
-                      <span>
-                        <b>레이아웃</b>
-                        Grid 기반의 레이아웃
-                      </span>
-                      <div class="feature">
-                        <div>
-                          <b>참고사항</b>
-                          <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                        </div>
-                      </div>
+                    <!-- Shoe Station - web-tab__item-detail -->
+                    <ul class="web-tab__item-detail">
+                      <li>
+                        <h5>작업기간</h5>
+                        <p>5 일</p>
+                      </li>
+                      <li>
+                        <h5>작업범위</h5>
+                        <p>기획, <span class="font-en">UI</span> 디자인, 퍼블리싱</p>
+                      </li>
+                      <li>
+                        <h5>제작참여</h5>
+                        <p>100%</p>
+                      </li>
+                      <li>
+                        <h5>제작방식</h5>
+                        <p class="font-en">HTML + SCSS + JQUERY + Slider</p>
+                      </li>
+                      <li>
+                        <h5>레이아웃</h5>
+                        <p><span class="font-en">Grid, Flex</span> 기반의 레이아웃</p>
+                      </li>
+                      <li>
+                        <h5>참고사항</h5>
+                        <p>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</p>
+                      </li>
+                    </ul>
+                    <!-- Shoe Station - web-tab__item-link-box -->
+                    <div class="web-tab__item-link-box">
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/shoe_station/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/shoe_station/mobil_mockup_css/index.html" data-featherlight="iframe">Mobile Ver.</a>
+                      <a class="web-tab__item-link-btn" href="./doc/shoe_station_fs.pdf" data-featherlight="iframe">기능정의서</a>
                     </div>
-                    <div class="btns">
-                      <a href="./portfolio/website_publishing/travelium/index.html" data-featherlight="iframe">PC Ver.</a>
-                      <a href="./portfolio/website_publishing/travelium/travelium_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                      <a href="./doc/travelium_fs.pdf" data-featherlight="iframe">기능정의서</a>
-                    </div>
-                  </div>
+                  </article>
                 </div>
-                <div class="web_tab_content shoe_station">
-                  <div class="web_tab_content_thum"></div>
-                  <div class="web_tab_content_desc">
-                    <div class="title">
-                      <h3>Shoe Station</h3>
-                      <p>
-                        이 쇼핑몰에서 다양한 브랜드의 제품을 한 자리에서 만나 보실 수 있습니다. 가격대도 다양하여 가성비 좋은 신발부터 고품질의 신발까지 모두 갖추고 있습니다. 여러분의 스타일에 맞는 신발을 찾을 수 있도 록 도와드립니다!
+                <!-- ########## web-tab__item - NGO ########## -->
+                <div class="web-tab__item">
+                  <!-- NGO - web-tab__item-thum -->
+                  <figure class="web-tab__item-thum" aria-label="NGO 썸네일"></figure>
+                  <!-- NGO - web-tab__item-content -->
+                  <article class="web-tab__item-content">
+                    <div class="web-tab__item-title-box">
+                      <h3 class="web-tab__item-title">Green Save Earth</h3>
+                      <p class="web-tab__item-desc">
+                        매년 버려지는 수백만 톤의 플라스틱이 온 지구를 병들게 하고 있습니다.
+                        미래 세대를 위해 지구를 잘 보존하고, 재활용을 잘 하는 취지로 만든
+                        <span class="font-en">NGO</span> 웹사이트 입니다.
                       </p>
                     </div>
-                    <div class="details">
-                      <span>
-                        <b>작업기간</b>
-                        5일
-                      </span>
-                      <span>
-                        <b>작업범위</b>
-                        기획, UI 디자인, 퍼블리싱
-                      </span>
-                      <span>
-                        <b>제작참여</b>
-                        100%
-                      </span>
-                      <span>
-                        <b>제작방식</b>
-                        HTML + SCSS + JQUERY + Slider
-                      </span>
-                      <span>
-                        <b>레이아웃</b>
-                        Grid, Flex 기반의 레이아웃
-                      </span>
-                      <div class="feature">
-                        <div>
-                          <b>참고사항</b>
-                          <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                        </div>
-                      </div>
+                    <!-- NGO - web-tab__item-detail -->
+                    <ul class="web-tab__item-detail">
+                      <li>
+                        <h5>작업기간</h5>
+                        <p>4 일</p>
+                      </li>
+                      <li>
+                        <h5>작업범위</h5>
+                        <p>기획, <span class="font-en">UI</span> 디자인, 퍼블리싱</p>
+                      </li>
+                      <li>
+                        <h5>제작참여</h5>
+                        <p>100%</p>
+                      </li>
+                      <li>
+                        <h5>제작방식</h5>
+                        <p class="font-en">HTML + CSS + JQUERY</p>
+                      </li>
+                      <li>
+                        <h5>레이아웃</h5>
+                        <p><span class="font-en">Flex</span> 기반의 레이아웃</p>
+                      </li>
+                      <li>
+                        <h5>참고사항</h5>
+                        <p>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</p>
+                      </li>
+                    </ul>
+                    <!-- NGO - web-tab__item-link-box -->
+                    <div class="web-tab__item-link-box">
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/green_save_earth/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/green_save_earth/green_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
                     </div>
-                    <div class="btns">
-                      <a href="./portfolio/website_publishing/shoe_station/index.html" data-featherlight="iframe">PC Ver.</a>
-                      <a href="./portfolio/website_publishing/shoe_station/mobil_mockup_css/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                      <a href="./doc/shoe_station_fs.pdf" data-featherlight="iframe">기능정의서</a>
-                    </div>
-                  </div>
+                  </article>
                 </div>
-                <div class="web_tab_content green">
-                  <div class="web_tab_content_thum"></div>
-                  <div class="web_tab_content_desc">
-                    <div class="title">
-                      <h3>Green Save Earth</h3>
-                      <p>
-                        매년 버려지는 수백만 톤의 플라스틱이 온 지구를 병들게 하고 있습니다. 미래 세대를 위해 지구를 잘 보존하고, 재활용을 잘 하는 취지로 만든 NGO 웹사이트 입니다.
-                      </p>
-                    </div>
-                    <div class="details">
-                      <span>
-                        <b>작업기간</b>
-                        4일
-                      </span>
-                      <span>
-                        <b>작업범위</b>
-                        기획, UI 디자인, 퍼블리싱
-                      </span>
-                      <span>
-                        <b>제작참여</b>
-                        100%
-                      </span>
-                      <span>
-                        <b>제작방식</b>
-                        HTML + CSS + JQUERY
-                      </span>
-                      <span>
-                        <b>레이아웃</b>
-                        Flex 기반의 레이아웃
-                      </span>
-                      <div class="feature">
-                        <div>
-                          <b>참고사항</b>
-                          <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="btns">
-                      <a href="./portfolio/website_publishing/green_save_earth/index.html" data-featherlight="iframe">PC Ver.</a>
-                      <a href="./portfolio/website_publishing/green_save_earth/green_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="web_tab_content smeg">
-                  <div class="web_tab_content_thum"></div>
-                  <div class="web_tab_content_desc">
-                    <div class="title">
-                      <h3>SMEG</h3>
-                      <p>
+                <!-- ########## web-tab__item - SMEG ########## -->
+                <div class="web-tab__item">
+                  <!-- SMEG - web-tab__item-thum -->
+                  <figure class="web-tab__item-thum"></figure>
+                  <!-- SMEG - web-tab__item-content -->
+                  <article class="web-tab__item-content">
+                    <div class="web-tab__item-title-box">
+                      <h3 class="web-tab__item-title">SMEG</h3>
+                      <p class="web-tab__item-desc">
                         기존 웹사이트에서 배너 배치, UI가 불편하다고 생각되었던 부분을 개선해서 작업 하였고, 반응형 페이지로 제작 하였습니다.
                       </p>
                     </div>
-                    <div class="details">
-                      <span>
-                        <b>작업기간</b>
-                        4일
-                      </span>
-                      <span>
-                        <b>작업범위</b>
-                        UI디자인, 퍼블리싱
-                      </span>
-                      <span>
-                        <b>제작참여</b>
-                        100%
-                      </span>
-                      <span>
-                        <b>제작방식</b>
-                        HTML + CSS + JQUERY + WOW.js
-                      </span>
-                      <span>
-                        <b>레이아웃</b>
-                        Flex 기반의 레이아웃
-                      </span>
-                      <div class="feature">
-                        <div>
-                          <b>참고사항</b>
-                          <span>WOW.js 를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                        </div>
-                      </div>
+                    <!-- SMEG - web-tab__item-detail -->
+                    <ul class="web-tab__item-detail">
+                      <li>
+                        <h5>작업기간</h5>
+                        <p>4 일</p>
+                      </li>
+                      <li>
+                        <h5>작업범위</h5>
+                        <p><span class="font-en">UI</span>디자인, 퍼블리싱</p>
+                      </li>
+                      <li>
+                        <h5>제작참여</h5>
+                        <p>1명 본인(100%)</p>
+                      </li>
+                      <li>
+                        <h5>제작방식</h5>
+                        <p class="font-en">HTML + CSS + JQUERY + WOW.js</p>
+                      </li>
+                      <li>
+                        <h5>레이아웃</h5>
+                        <p><span class="font-en">Flex</span> 기반의 레이아웃</p>
+                      </li>
+                      <li>
+                        <h5>참고사항</h5>
+                        <p><span class="font-en">WOW.js</span> 를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로 제작</p>
+                      </li>
+                    </ul>
+                    <!-- SMEG - web-tab__item-link-box -->
+                    <div class="web-tab__item-link-box">
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/smeg/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/smeg/smeg_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
                     </div>
-                    <div class="btns">
-                      <a href="./portfolio/website_publishing/smeg/index.html" data-featherlight="iframe">PC Ver.</a>
-                      <a href="./portfolio/website_publishing/smeg/smeg_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                    </div>
-                  </div>
+                  </article>
                 </div>
-                <div class="web_tab_content netflix">
-                  <div class="web_tab_content_thum"></div>
-                  <div class="web_tab_content_desc">
-                    <div class="title">
-                      <h3>NETFLIX</h3>
-                      <p>
+                <!-- ########## web-tab__item - NETFLIX ########## -->
+                <div class="web-tab__item">
+                  <!-- NETFLIX - web-tab__item-thum -->
+                  <figure class="web-tab__item-thum"></figure>
+                  <!-- NETFLIX - web-tab__item-content -->
+                  <article class="web-tab__item-content">
+                    <div class="web-tab__item-title-box">
+                      <h3 class="web-tab__item-title">NETFLIX</h3>
+                      <p class="web-tab__item-desc">
                         기존 웹사이트와 최대한 비슷하게 작업하였고, 반응형
                         페이지로 제작 하였습니다.
                       </p>
                     </div>
-                    <div class="details">
-                      <span>
-                        <b>작업기간</b>
-                        2일
-                      </span>
-                      <span>
-                        <b>작업범위</b>
-                        UI디자인, 퍼블리싱
-                      </span>
-                      <span>
-                        <b>제작참여</b>
-                        100%
-                      </span>
-                      <span>
-                        <b>제작방식</b>
-                        HTML + CSS + JQUERY
-                      </span>
-                      <span>
-                        <b>레이아웃</b>
-                        Flex 기반의 레이아웃
-                      </span>
-                      <div class="feature">
-                        <div>
-                          <b>참고사항</b>
-                          <span>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</span>
-                        </div>
-                      </div>
+                    <!-- NETFLIX - web-tab__item-detail -->
+                    <ul class="web-tab__item-detail">
+                      <li>
+                        <h5>작업기간</h5>
+                        <p>2 일</p>
+                      </li>
+                      <li>
+                        <h5>작업범위</h5>
+                        <p><span class="font-en">UI</span> 디자인, 퍼블리싱</p>
+                      </li>
+                      <li>
+                        <h5>제작참여</h5>
+                        <p>1명 본인(100%)</p>
+                      </li>
+                      <li>
+                        <h5>제작방식</h5>
+                        <p class="font-en">HTML + CSS + JQUERY</p>
+                      </li>
+                      <li>
+                        <h5>레이아웃</h5>
+                        <p><span class="font-en">Flex</span> 기반의 레이아웃</p>
+                      </li>
+                      <li>
+                        <h5>참고사항</h5>
+                        <p>모든 퍼블리싱 작업을 직접 하드코딩으로 제작</p>
+                      </li>
+                    </ul>
+                    <!-- NETFLIX - web-tab__item-link-box -->
+                    <div class="web-tab__item-link-box">
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/netflix/index.html" data-featherlight="iframe">PC Ver.</a>
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/netflix/netflix_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
                     </div>
-                    <div class="btns">
-                      <a href="./portfolio/website_publishing/netflix/index.html" data-featherlight="iframe">PC Ver.</a>
-                      <a href="./portfolio/website_publishing/netflix/netflix_mobile_mockup/index.html" data-featherlight="iframe">Mobile Ver.</a>
-                    </div>
-                  </div>
+                  </article>
                 </div>
-                <div class="web_tab_content logitech">
-                  <div class="web_tab_content_thum"></div>
-                  <div class="web_tab_content_desc">
-                    <div class="title">
-                      <h3>Logitech</h3>
-                      <p>기존 웹사이트와 최대한 비슷하게 작업 하였습니다.</p>
+                <!-- ########## web-tab__item - Logitech ########## -->
+                <div class="web-tab__item">
+                  <!-- Logitech - web-tab__item-thum -->
+                  <figure class="web-tab__item-thum"></figure>
+                  <!-- Logitech - web-tab__item-content -->
+                  <article class="web-tab__item-content">
+                    <div class="web-tab__item-title-box">
+                      <h3 class="web-tab__item-title">Logitech</h3>
+                      <p class="web-tab__item-desc">기존 웹사이트와 최대한 비슷하게 작업 하였습니다.</p>
                     </div>
-                    <div class="details">
-                      <span>
-                        <b>작업기간</b>
-                        5일
-                      </span>
-                      <span>
-                        <b>작업범위</b>
-                        UI디자인, 퍼블리싱
-                      </span>
-                      <span>
-                        <b>제작참여</b>
-                        100%
-                      </span>
-                      <span>
-                        <b>제작방식</b>
-                        HTML + CSS + JQUERY + Slider
-                      </span>
-                      <span>
-                        <b>레이아웃</b>
-                        Flex 기반의 레이아웃
-                      </span>
-                      <div class="feature">
-                        <div>
-                          <b>참고사항</b>
-                          <span
-                            >Slick.js 를 제외한 모든 퍼블리싱 작업을 직접
-                            하드코딩으로 제작</span
-                          >
-                        </div>
-                      </div>
+                    <!-- Logitech - web-tab__item-detail -->
+                    <ul class="web-tab__item-detail">
+                      <li>
+                        <h5>작업기간</h5>
+                        <p>5 일</p>
+                      </li>
+                      <li>
+                        <h5>작업범위</h5>
+                        <p><span class="font-en">UI</span> 디자인, 퍼블리싱</p>
+                      </li>
+                      <li>
+                        <h5>제작참여</h5>
+                        <p>1명 본인(100%)</p>
+                      </li>
+                      <li>
+                        <h5>제작방식</h5>
+                        <p class="font-en">HTML + CSS + JQUERY + Slider</p>
+                      </li>
+                      <li>
+                        <h5>레이아웃</h5>
+                        <p><span class="font-en">Flex</span> 기반의 레이아웃</p>
+                      </li>
+                      <li>
+                        <h5>참고사항</h5>
+                        <p>
+                          <span class="font-en">Slick.js</span>
+                          를 제외한 모든 퍼블리싱 작업을 직접 하드코딩으로 제작
+                        </p>
+                      </li>
+                    </ul>
+                    <!-- Logitech - web-tab__item-link-box -->
+                    <div class="web-tab__item-link-box">
+                      <a class="web-tab__item-link-btn" href="./portfolio/website_publishing/logitech/index.html" data-featherlight="iframe">PC Ver.</a>
                     </div>
-                    <div class="btns">
-                      <a href="./portfolio/website_publishing/logitech/index.html" data-featherlight="iframe">PC Ver.</a>
-                    </div>
-                  </div>
+                  </article>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </section>
+
         <!-- ########## Practical ########## -->
         <section id="practical">
           <div class="inner">

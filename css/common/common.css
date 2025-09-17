@@ -3,6 +3,38 @@
 @import url(./font.css);
 @import url(./reset.css);
 
+/* ---------- LAYOUT ---------- */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.4em;
+  font-size: var(--font-size-md);
+  font-weight: 300;
+  font-family: var(--font-KR);
+  color: var(--text-color-body);
+}
+.container {
+  width: 100%;
+}
+.inner {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+main > section {
+  padding: var(--section-padding);
+}
+main > section .inner > h2 {
+  font-family: var(--font-EN);
+  font-size: var(--font-size-section-title);
+  font-weight: 600;
+  padding-left: var(--spacing-md);
+}
+
 /* ---------- COMMON ---------- */
 * {
   box-sizing: border-box;
@@ -30,24 +62,28 @@ b {
 em {
   font-style: normal;
 }
+/* img 태그 부모 크기에 맞게 */
 img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+/* 짝수 section 배경 색상 지정 */
 main > section:nth-of-type(even) {
   background-color: var(--color-background-light-gray);
 }
+/* section title */
 section .inner > h2 {
   font-family: var(--font-EN);
   font-size: var(--font-size-section-title);
   font-weight: 600;
 }
+/* 키보드 탭키 focus 이동 표시 */
 *:focus-visible {
   outline: 2px solid var(--text-color-light);
   outline-offset: 2px;
-};
+}
 .font-kr {
   font-family: var(--font-KR);
 }
@@ -82,7 +118,7 @@ section .inner > h2 {
   border: 0;
 }
 
-/* ---------- Slick.js ---------- */
+/* ---------- Slick.js 슬라이더 ---------- */
 /* practical_slider */
 .practical_slider .slick-prev:before,
 .practical_slider .slick-next:before {
@@ -155,7 +191,6 @@ section .inner > h2 {
 .project_slider .slick-dots li.slick-active button:before {
   display: none;
 }
-/* ---------- //Slick.js ---------- */
 
 /* ---------- UIKit ---------- */
 /* Light Box */
@@ -212,7 +247,6 @@ section .inner > h2 {
   border-radius: 5px;
   pointer-events: all;
 }
-/* ---------- //UIKit ---------- */
 
 /* ---------- Featherlight.js ---------- */
 .featherlight .featherlight-content {
@@ -250,7 +284,6 @@ section .inner > h2 {
 .featherlight .featherlight-content {
   padding: 0;
 }
-/* ---------- //Featherlight.js ---------- */
 
 /* ---------- @keyframes ---------- */
 @keyframes blink {
