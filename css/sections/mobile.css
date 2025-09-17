@@ -190,7 +190,6 @@ main > section.mobile {
   border-radius: var(--spacing-sm);
   font-size: var(--font-size-lg);
   text-align: center;
-  font-weight: 400;
   color: var(--text-color-white);
   box-shadow: var(--shadow-color-box-light);
   transition: transform 0.2s ease;

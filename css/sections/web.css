@@ -11,6 +11,7 @@
   width: 1000px;
   margin: 0 auto;
 }
+/* web-tab__btn-indicator */
 .web-tab__btn-indicator {
   position: absolute;
   top: 0;
@@ -22,6 +23,7 @@
   transition: top 0.5s, left 0.5s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+/* 체크 별 indicator 위치 수정 */
 input[id="web1"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   top: 0;
   left: 0;
@@ -46,6 +48,7 @@ input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   top: 50%;
   left: calc(100% / 1.5);
 }
+/* web-tab__btn */
 .web-tab__btn {
   position: relative;
   width: calc(100% / 3);
@@ -76,6 +79,7 @@ input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   top: 100%;
   color: var(--color-primary);
 }
+/* 체크된 탭 버튼 애니메이션 활성화 */
 input[id="web1"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web1"]::before,
 input[id="web2"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2"]::before,
 input[id="web3"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web3"]::before,
@@ -100,6 +104,7 @@ input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web6"]::after,
   margin-top: var(--spacing-6xl);
   height: 450px;
 }
+/* 체크되지 않은 상태에서는 탭 비활성화 */
 .web-tab__item {
   opacity: 0;
   visibility: hidden;
@@ -113,6 +118,7 @@ input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web6"]::after,
   transition: opacity 1s, visibility 1s;
   z-index: -1;
 }
+/* 체크된 탭만 활성화 */
 input[id="web1"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(1),
 input[id="web2"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(2),
 input[id="web3"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(3),
@@ -134,6 +140,7 @@ input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   transition: background-position ease-in-out;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+/* 썸네일 hover시 하단 이동 animation */
 .web-tab__item-thum:hover {
   background-position: bottom;
 }
@@ -212,6 +219,7 @@ input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
 .web-tab__item-link-btn:not(:last-child) {
   margin-right: var(--spacing-sm);
 }
+/* 링크 버튼 hover시 디자인 변경 */
 .web-tab__item-link-btn:nth-child(1) {
   background-color: var(--color-primary);
   color: var(--text-color-white);
