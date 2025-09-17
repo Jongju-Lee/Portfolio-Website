@@ -197,9 +197,6 @@ section .inner > h2 {
 .uk-lightbox {
   background: #fff;
 }
-.uk-lightbox.uk-open {
-  pointer-events: none;
-}
 .uk-lightbox-toolbar {
   background-color: transparent;
 }
