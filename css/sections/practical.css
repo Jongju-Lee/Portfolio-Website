@@ -34,9 +34,16 @@
   border-radius: var(--spacing-sm);
   overflow: hidden;
   box-shadow: var(--shadow-color-box-light);
+  transition: transform 0.3s;
 }
 .practical-slider__item:not(:last-child) {
   margin-right: var(--spacing-xl);
+}
+.practical-slider__item:hover {
+  transform: scale(1.05)
+}
+.practical-slider__item:active {
+  transform: scale(0.95);
 }
 
 /* ---------- Slick.js 수정 ---------- */

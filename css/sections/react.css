@@ -243,3 +243,6 @@ main > section#react {
 .react-detail__btn-box a:hover {
   transform: scale(1.05);
 }
+.react-detail__btn-box a:active {
+  transform: scale(0.95);
+}

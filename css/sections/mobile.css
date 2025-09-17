@@ -197,6 +197,9 @@ main > section.mobile {
 .mobile-detail__btn-box a:hover {
   transform: scale(1.05);
 }
+.mobile-detail__btn-box a:active {
+  transform: scale(0.95);
+}
 
 /* ---------- Redefine 개별 스타일 ---------- */
 #redefine {
