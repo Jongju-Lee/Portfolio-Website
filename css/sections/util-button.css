@@ -1,78 +1,63 @@
-/* 풀스크린 네비게이션 버튼 */
-.trigger {
-  position: fixed;
-  top: 0;
-  left: 30px;
-  width: 50px;
-  height: 50px;
-  line-height: 53px;
-  background-color: var(--text-color-light);
-  color: #fff;
-  font-size: 35px;
-  text-align: center;
-  border-radius: 50%;
-  transition: .3s;
-  cursor: pointer;
+/* ----- util-btn 공통 ----- */
+.util-btn {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  z-index: 9000;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-util-btn);
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--shadow-util-btn);
 }
-.trigger:hover {
-  transform: translateY(-5px);
+.util-btn:hover {
+  transform: translateY(-4px);
 }
-.trigger.active {
-  background-color: var(--color-primary);
-  transform: translateY(-5px) rotate(135deg);
+.util-btn:active {
+  transform: translateY(-4px) scale(0.9);
 }
-.trigger.on {
-  top: 30px;
+.util-btn.on {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+
+/* ----- 풀스크린 네비게이션 버튼 ----- */
+.trigger {
+  top: 0;
+  left: 30px;
+}
+.trigger.active {
+  background-color: var(--color-primary);
+  transform: translateY(-4px) rotate(135deg);
+}
+.trigger.active:active {
+  transform: scale(0.9);
+}
+.trigger.on {
+  top: 30px;
 }
 .trigger img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(56px / 2);
-  height: calc(56px / 2);
+  width: calc(56px / 2.4);
+  height: calc(56px / 2.4);
 }
 
-
-/* ########## Top Button ########## */
-.btn_top {
-  position: fixed;
+/* ----- Top Button ----- */
+.top-btn {
   bottom: 0;
   right: 30px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 25px;
-  background-color: var(--text-color-light);
-  color: #fff;
-  transition: .3s;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 9999;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.btn_top:hover {
-  transform: translateY(-5px);
-}
-.btn_top.on {
+.top-btn.on {
   bottom: 30px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
 }
-.btn_top img {
+.top-btn img {
   position: absolute;
   top: calc(50% - 2px);
   left: 50%;

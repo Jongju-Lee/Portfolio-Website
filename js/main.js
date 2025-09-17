@@ -3,10 +3,12 @@ $(function () {
   $(window).scroll(function () {
     // 스크롤이 내려오면 버튼 생성
     if (window.scrollY >= 500) {
-      $(".trigger, .btn_top").addClass("on");
+      $("header").addClass("hide");
+      $(".trigger, .top-btn").addClass("on");
     } else {
       // 스크롤이 최상단일때 버튼 숨김
-      $(".btn_top").removeClass("on");
+      $("header").removeClass("hide")
+      $(".top-btn").removeClass("on");
       if ($(".trigger").hasClass("active")) {
         return;
       }
@@ -17,7 +19,7 @@ $(function () {
   /* trigger - 풀스크린 네비게이션 버튼 */
   $(".trigger").click(function () {
     $(this).toggleClass("active");
-    $(".fullscreen_navi").stop().fadeToggle();
+    $(".fullscreen-nav").stop().fadeToggle();
     // 스크롤이 최상단 이면서 active 클래스가 없으면
     if (window.scrollY <= 50 && !$(this).hasClass("active")) {
       // 버튼을 숨김
@@ -26,20 +28,20 @@ $(function () {
   });
 
   /* ---------- 풀스크린 네비게이션 ---------- */
-  $(".fullscreen_navi_inner a").click(function () {
-    $(".fullscreen_navi").stop().fadeOut();
+  $(".fullscreen-nav__item").click(function () {
+    $(".fullscreen-nav").stop().fadeOut();
     $(".trigger").removeClass("active");
   });
 
-  /* btn_top - 위로 이동하기 버튼 */
-  $(".btn_top").click(function () {
+  /* top-btn - 위로 이동하기 버튼 */
+  $(".top-btn").click(function () {
     $(".trigger").removeClass("active");
-    $(".fullscreen_navi").stop().fadeOut();
+    $(".fullscreen-nav").stop().fadeOut();
   });
 
-  /* Lightbox 링크 클릭시 trigger, btn_top 숨김 */
+  /* Lightbox 링크 클릭시 trigger, top-btn 숨김 */
   $(".practical-slider__item").click(function () {
-    $(".trigger, .btn_top").removeClass("on");
+    $(".trigger, .top-btn").removeClass("on");
   });
 
   /* ---------- Slick Slider ---------- */

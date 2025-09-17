@@ -7,6 +7,7 @@
   --color-positive: #00ad53;
   --color-negative: #ad1200;
   --color-line: #dfdfdf;
+  --color-util-btn: #c4c4c4;
 
   /* skill-section */
   --color-skill-section-bg: #F5F5F5;
@@ -39,6 +40,7 @@
   --shadow-normal: 0 0 12px rgba(0, 0, 0, 0.1);
   --shadow-color-box: 0 0 8px rgba(0, 0, 0, 0.3);
   --shadow-color-box-light: 0 0 8px rgba(0, 0, 0, 0.2);
+  --shadow-util-btn: 0 2px 8px rgba(0, 0, 0, 0.2);
 
   /* --------- SPACING --------- */
   --spacing-xs: 4px;

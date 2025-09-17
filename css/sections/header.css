@@ -1,7 +1,17 @@
 /* ---------- Header ---------- */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: var(--spacing-md);
   box-shadow: var(--shadow-normal);
+  transition: transform 0.3s;
+  background-color: var(--color-background-white);
+  z-index: 1000;
+}
+header.hide {
+  transform: translateY(-100%);
 }
 .header-inner {
   display: flex;

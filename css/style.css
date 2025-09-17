@@ -20,9 +20,12 @@
 @import url(./sections/practical.css);
 /* ----- epilogue ----- */
 @import url(./sections/epilogue.css);
-/* ----- fullscreen navigation ----- */
-@import url(./sections/fullscreen-navi.css);
-/* ----- util button ----- */
-@import url(./sections/util-button.css);
 
 /* ---------- //IMPORT SECTIONS.CSS ---------- */
+
+
+/* ----- 유틸리티 버튼 ----- */
+@import url(./sections/util-button.css);
+
+/* ----- 풀스크린 네비게이션 ----- */
+@import url(./sections/fullscreen-nav.css);
