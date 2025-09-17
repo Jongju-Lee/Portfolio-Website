@@ -7,7 +7,9 @@
   margin-top: var(--spacing-5xl);
   padding: 0 150px;
 }
+
 /* ----- about-desc ----- */
+/* about-desc__slogan */
 .about-desc__slogan-title {
   color: var(--color-primary);
   font-family: var(--font-slogan);
@@ -27,6 +29,7 @@
   font-size: var(--font-size-xl);
   font-weight: 600;
 }
+/* about-desc__info */
 .about-desc__info {
   margin-top: var(--spacing-5xl);
 }
@@ -51,7 +54,8 @@
   font-size: var(--font-size-xl);
   color: var(--text-color-dark-gray);
 }
-/* ---------- about-photo ---------- */
+
+/* ----- about-photo ----- */
 .about-photo {
   width: 320px;
   height: 450px;
