@@ -2,61 +2,75 @@
 .about-content {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: end;
+  gap: var(--spacing-2xl);
   margin-top: var(--spacing-5xl);
-  padding: 0 150px;
 }
 
-/* ----- about-desc ----- */
-/* about-desc__slogan */
-.about-desc__slogan-title {
+/* ----- about-intro ----- */
+.about-intro {
+  margin: 0 auto;
+  margin-top: var(--spacing-5xl);
+}
+.about-intro__title {
   color: var(--color-primary);
   font-family: var(--font-slogan);
   font-size: var(--font-size-slogan-title);
 }
-.about-desc__slogan-text {
-  width: 400px;
-  margin-top: var(--spacing-xl);
+.about-intro__text {
+  margin-top: var(--spacing-sm);
+  margin-top: var(--spacing-md);
   text-align: justify;
-  font-size: var(--font-size-lg);
-  line-height: 1.6em;
-  letter-spacing: 0.1px;
+  line-height: 1.8em;
+  font-size: var(--font-size-xl);
   word-break: keep-all;
 }
-.about-desc__slogan-text em {
-  color: var(--color-primary);
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-}
-/* about-desc__info */
-.about-desc__info {
-  margin-top: var(--spacing-5xl);
-}
-.about-desc__info-item {
+.about-intro__name {
   display: flex;
   align-items: end;
-  gap: var(--spacing-3xl);
-}
-.about-desc__info-item:not(:last-child) {
-  margin-bottom: var(--spacing-2xl);
-}
-.about-desc__info-item b {
-  display: inline-block;
-  width: 110px;
-  font-size: var(--font-size-2xl);
-  font-family: var(--font-EN);
-  font-weight: 400;
-  text-align: right;
-  color: var(--color-primary);
-}
-.about-desc__info-item span {
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-3xl);
   font-size: var(--font-size-xl);
-  color: var(--text-color-dark-gray);
+}
+.about-intro__name span {
+  line-height: 1.2em;
+}
+.about-intro__name em {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  line-height: 1em;
 }
 
 /* ----- about-photo ----- */
 .about-photo {
+  flex-shrink: 0;
   width: 320px;
   height: 450px;
+}
+
+/* ----- about-info ----- */
+.about-info {
+  margin-top: auto;
+}
+.about-info__item {
+  display: flex;
+  align-items: end;
+  gap: var(--spacing-2xl);
+}
+.about-info__item:not(:last-child) {
+  margin-bottom: var(--spacing-2xl);
+}
+.about-info__item h5 {
+  display: inline-block;
+  width: 110px;
+  line-height: 1em;
+  font-size: var(--font-size-2xl);
+  font-family: var(--font-EN);
+  text-align: right;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+.about-info__item span {
+  font-size: var(--font-size-xl);
+  line-height: 1em;
 }

@@ -60,6 +60,7 @@ b {
   font-weight: 500;
 }
 em {
+  color: inherit;
   font-style: normal;
 }
 /* img 태그 부모 크기에 맞게 */
