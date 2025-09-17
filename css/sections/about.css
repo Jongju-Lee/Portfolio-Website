@@ -1,4 +1,4 @@
-/* ---------- Section - About ---------- */
+/* ----- about-content ----- */
 .about-content {
   position: relative;
   display: flex;
@@ -7,7 +7,7 @@
   margin-top: var(--spacing-5xl);
   padding: 0 150px;
 }
-/* ---------- about-desc ---------- */
+/* ----- about-desc ----- */
 .about-desc__slogan-title {
   color: var(--color-primary);
   font-family: var(--font-slogan);
