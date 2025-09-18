@@ -173,31 +173,168 @@
   
   
   /* ########## SECTION - REACT ########## */
-  /* react-detail__btn */
+  /* #REACT */
+  main > section#react {
+    padding-top: var(--spacing-8xl);
+  }
+  /* react-content */
+  .react-content {
+    flex-direction: column;
+    row-gap: var(--spacing-6xl);
+  }
+  /* react-mockup */
+  .react-mockup {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    gap: var(--spacing-3xl);
+  }
+  /* react-mockup__item */
+  .react-mockup__item-box:first-child {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-3xl);
+    width: fit-content;
+  }
+  .react-mockup__item-tablet {
+    order: 1;
+    width: calc(912px / 2.8);
+    height: calc(670px / 2.8);
+  }
+  .react-mockup__item-mobile {
+    order: 0;
+    width: calc(344px / 1.8);
+    height: calc(670px / 1.8);
+  }
+  .react-mockup__item-pc {
+    width: calc(1280px / 4);
+    height: calc(1066px / 4);
+  }
+  /* react-detail */
+  .react-detail {
+    width: 100%;
+  }
+  .react-detail__title {
+    font-size: var(--font-size-section-title-mobile);
+  }
+  .react-detail__format {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-3xl);
+  }
+  /* react-detail-bottom-wrapper */
+  .react-detail-bottom-wrapper {
+    top: auto;
+    margin-top: var(--spacing-3xl);
+  }
+  /* react-detail__function */
+  .react-detail__function {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  /* react-detail__work-list */
+  .react-detail__work-list {
+    margin-top: var(--spacing-6xl);
+  }
+  .react-detail__work-list-table :is(th, td) {
+    /* table 안의 모든 요소 font-size 14px */
+    font-size: var(--font-size-body-mobile);
+    line-height: 1.4em;
+    padding: var(--spacing-sm);
+    text-align: center;
+  }
+  .react-detail__work-list-table th {
+    width: 60px;
+  }
+  .react-detail__work-list-table thead th {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    line-height: 1.5em;
+  }
+  .react-detail__work-list-table tr:last-child td span:last-child {
+    display: block;
+    text-align: center;
+  }
+  /* react-detail__btn-box */
   .react-detail__btn-box {
-    justify-content: center;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+  }
+  .react-detail__btn {
+    width: 110px;
+    padding: 6px 0;
   }
   .react-detail__btn::before {
-    content: attr(data-label-tablet);
+    font-size: var(--font-size-sm);
   }
-  .react-detail__btn.only-pc {
-    display: none;
-  }
-
-
-
-
-  
   /* ########## END - REACT ########## */
   
   
   /* ########## SECTION - MOBILE(mobile 1, 2 공통) ########## */
   /* Market - mobile-detail__btn-box */
-  #market .mobile-detail__btn-box {
+  /* #market .mobile-detail__btn-box {
     justify-content: center;
     gap: var(--spacing-2xl);
+  } */
+
+
+  main > section.mobile {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
+  /* mobile-content */
+  .mobile-content {
+    flex-direction: column;
+    row-gap: var(--spacing-6xl);
+  }
+  /* mobile-mockup */
+  .mobile-mockup {
+    width: 320px;
+    height: 410px;
+    margin: 0 auto;
+    margin-top: var(--spacing-md);
+  }
+  /* mobile-mockup__item */
+  .mobile-mockup__item {
+    width: calc(678px / 3.8);
+    height: calc(1340px / 3.8);
+  }
+  .mobile-mockup__item:nth-child(2) {
+    top: 60px;
+    left: 142px;
+  }
+  /* mobile-detail */
+  .mobile-detail {
+    width: 100%;
+  }
+  .mobile-detail__title {
+    font-size: var(--font-size-section-title-mobile);
+  }
+  /* mobile-detail__format */
+  .mobile-detail__format {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-3xl);
+  }
+  /* mobile-detail-bottom-wrapper */
+  #redefine .mobile-detail-bottom-wrapper {
+    /* margin-top: ; */
+    margin-top: var(--spacing-3xl);
+  }
+  /* mobile-detail__function */
+  .mobile-detail__function {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  /* mobile-detail__work-list */
+  .mobile-detail__work-list {
+    margin-top: var(--spacing-6xl);
+  }
+
+
+
+
+
+
+
   /* ########## END - MOBILE(mobile 1, 2 공통) ########## */
   
   

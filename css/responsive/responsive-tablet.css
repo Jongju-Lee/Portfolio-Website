@@ -118,6 +118,10 @@
   
   
   /* ########## SECTION - REACT ########## */
+  /* react-detail__title */
+  .react-detail__title {
+    font-size: var(--font-size-section-title-tablet);
+  }
   /* react-detail__btn */
   .react-detail__btn-box {
     justify-content: center;
@@ -133,6 +137,10 @@
   
   
   /* ########## SECTION - MOBILE(mobile 1, 2 공통) ########## */
+  /* mobile-detail__title */
+  .mobile-detail__title {
+    font-size: var(--font-size-section-title-mobile);
+  }
   /* Market - mobile-detail__btn-box */
   #market .mobile-detail__btn-box {
     justify-content: center;
