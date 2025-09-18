@@ -34,8 +34,9 @@ header.hide {
 .header__gnb {
   flex: 1;
   display: flex;
-  justify-content: space-between;
-  gap: var(--spacing-2xl);
+  justify-content: center;
+  column-gap: 70px;
+  row-gap: 0;
   flex-wrap: wrap;
 }
 .header__gnb a {
