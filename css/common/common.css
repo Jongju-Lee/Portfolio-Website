@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* ########## IMPORT ########## */
 @import url(./variables.css);
 @import url(./font.css);
@@ -12,7 +14,7 @@ body {
   width: 100%;
   min-height: 100vh;
   line-height: 1.4em;
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-body);
   font-weight: 300;
   font-family: var(--font-KR);
   color: var(--text-color-body);
@@ -27,12 +29,6 @@ body {
 }
 main > section {
   padding: var(--section-padding);
-}
-main > section .inner > h2 {
-  font-family: var(--font-EN);
-  font-size: var(--font-size-section-title);
-  font-weight: 600;
-  padding-left: var(--spacing-md);
 }
 
 /* ---------- COMMON ---------- */
@@ -75,10 +71,11 @@ main > section:nth-of-type(even) {
   background-color: var(--color-background-light-gray);
 }
 /* section title */
-section .inner > h2 {
+.inner > h2 {
   font-family: var(--font-EN);
   font-size: var(--font-size-section-title);
   font-weight: 600;
+  padding-left: var(--spacing-md);
 }
 /* 키보드 탭키 focus 이동 표시 */
 *:focus-visible {

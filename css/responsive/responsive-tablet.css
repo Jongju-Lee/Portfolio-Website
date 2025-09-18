@@ -1,0 +1,102 @@
+@media (max-width: 1024px) {
+  /* ---------- 변수 재정의 ---------- */
+  :root {
+    /* FONT SIZE - tablet 재정의 */
+    /* 기존 --font-size-lg: 18px */
+    --font-size-lg: 16px;
+    /* 기존 --font-size-xl: 20px; */
+    --font-size-xl: 18px;
+    /* 기존 --font-size-2xl: 24px; */
+    --font-size-2xl: 22px;
+    /* 기존 --font-size-3xl: 32px; */
+    --font-size-3xl: 28px;
+    /* 기존 --font-size-4xl: 40px; */
+    --font-size-4xl: 36px;
+    /* 기존 --font-size-5xl: 52px; */
+    --font-size-5xl: 60px;
+    /* 기존 --font-size-6xl: 80px; */
+    --font-size-6xl: 72px;
+    
+    /* FONT SIZE - TABLET 전용 */
+    --font-size-body-tablet: 15px;
+    --font-size-slogan-title-tablet: 48px;
+    --font-size-section-title-tablet: 32px;
+  }
+  /* ---------- END - 변수 재정의 ---------- */
+
+
+  /* ---------- LAYOUT ---------- */
+  body {
+    font-size: var(--font-size-body-tablet);
+  }
+  .inner > h2 {
+    font-size: var(--font-size-section-title-tablet);
+  }
+  /* ---------- END - LAYOUT ---------- */
+
+
+  /* ---------- header ---------- */
+  header {
+    padding: var(--spacing-md) var(--spacing-4xl);
+  }
+  /* ########## sidebar 추가 예정 ########## */
+
+  /* ---------- END - header ---------- */
+  
+
+  /* ---------- about ---------- */
+  #about {
+    padding-top: 250px;
+  }
+  /* about-content */
+  .about-content {
+    justify-content: center;
+    column-gap: 300px;
+    margin-top: 0;
+  }
+  /* about-intro */
+  .about-intro__title {
+    font-size: var(--font-size-slogan-title-tablet);
+  }
+  /* ---------- END - about ---------- */
+  
+  
+  /* ---------- skill ---------- */
+  /* ---------- END - skill ---------- */
+  
+  
+  /* ---------- edu ---------- */
+  /* ---------- END - edu ---------- */
+  
+  
+  /* ---------- edu ---------- */
+  /* ---------- END - edu ---------- */
+  
+  
+  /* ---------- react ---------- */
+  /* ---------- END - react ---------- */
+  
+  
+  /* ---------- mobile(mobile 1, 2 공통) ---------- */
+  /* ---------- END - mobile(mobile 1, 2 공통) ---------- */
+  
+  
+  /* ---------- web ---------- */
+  /* ---------- END - web ---------- */
+  
+  
+  /* ---------- practical ---------- */
+  /* ---------- END - practical ---------- */
+  
+  
+  /* ---------- epilogue ---------- */
+  /* ---------- End - epilogue ---------- */
+  
+  
+  /* ---------- 유틸리티 버튼 ---------- */
+  /* ---------- End - 유틸리티 버튼 ---------- */
+  
+  
+  /* ---------- 풀스크린 네비게이션 ---------- */
+  /* ---------- End - 풀스크린 네비게이션 ---------- */
+}

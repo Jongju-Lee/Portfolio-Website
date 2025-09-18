@@ -19,6 +19,7 @@ header.hide {
   justify-content: space-between;
   gap: var(--spacing-5xl);
 }
+/* ----- header__btn-functional ----- */
 .header__btn-functional {
   padding: var(--spacing-sm) var(--spacing-md);
   border: 2px solid #00ad53;
@@ -31,11 +32,11 @@ header.hide {
   background-color: var(--color-primary);
   color: var(--text-color-white);
 }
+/* ----- header__gnb ----- */
 .header__gnb {
   flex: 1;
   display: flex;
   justify-content: center;
-  /* justify-content: space-between; */
   column-gap: 70px;
   row-gap: 0;
   flex-wrap: wrap;

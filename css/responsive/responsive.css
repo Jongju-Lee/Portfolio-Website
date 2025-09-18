@@ -1,4 +1,11 @@
 @charset "utf-8";
 
-/* 태블릿 breakpoint 추가 필요. */
+/* ---------- Responsive UI ---------- */
+
+/* ----- Tablet ----- */
+@import url(./responsive-tablet.css);
+
+/* ----- Mobile ----- */
+@import url(./responsive-mobile.css);
+
 

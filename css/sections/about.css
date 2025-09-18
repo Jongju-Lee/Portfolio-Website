@@ -9,7 +9,6 @@
   justify-content: end;
   column-gap: var(--spacing-2xl);
   row-gap: var(--spacing-5xl);
-
   margin-top: var(--spacing-5xl);
 }
 
@@ -24,7 +23,6 @@
   font-size: var(--font-size-slogan-title);
 }
 .about-intro__text {
-  margin-top: var(--spacing-sm);
   margin-top: var(--spacing-md);
   text-align: justify;
   line-height: 1.8em;
@@ -34,17 +32,18 @@
 .about-intro__name {
   display: flex;
   align-items: end;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-2xl);
   margin-top: var(--spacing-3xl);
-  font-size: var(--font-size-xl);
 }
 .about-intro__name span {
   line-height: 1.2em;
+  font-size: var(--font-size-xl);
 }
 .about-intro__name em {
-  font-size: var(--font-size-3xl);
-  font-weight: 600;
   line-height: 1em;
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  letter-spacing: var(--spacing-lg);
 }
 
 /* ----- about-photo ----- */
