@@ -14,7 +14,6 @@ main > section#skill {
   position: relative;
   width: 390px;
   padding: var(--spacing-2xl);
-  padding-bottom: var(--spacing-3xl);
   box-shadow: var(--shadow-color-box-light);
   border-radius: var(--spacing-lg);
   background-color: var(--color-skill-section-bg);
@@ -26,8 +25,8 @@ main > section#skill {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-3xl);
-  padding: var(--spacing-md);
+  gap: 36px;
+  padding: var(--spacing-lg);
   border-radius: var(--spacing-md);
   background-color: var(--color-background-white);
   box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
@@ -36,7 +35,7 @@ main > section#skill {
   width: calc(84px / 2);
   height: calc(84px / 2);
 }
-.skill-item__icon.long {
+.skill-item__icon.mini {
   width: calc(74px / 2);
 }
 .skill-item__icon.react {

@@ -8,7 +8,6 @@
   display: flex;
   gap: var(--spacing-5xl);
   height: 120px;
-  /* border: 1px solid #000; */
 }
 .edu-timeline .title {
   margin-bottom: var(--spacing-sm);
@@ -35,7 +34,6 @@
   justify-content: start;
   align-items: center;
   height: 100%;
-  /* border: 1px solid #000; */
   margin: 0;
 }
 .edu-timeline__line-box .circle {
@@ -48,14 +46,12 @@
 .edu-timeline__line-box .line {
   display: inline-block;
   width: 2px;
-  /* height: var(--spacing-8xl); */
   flex: 1;
   background-color: var(--color-line);
 }
 
 /* ----- edu-timeline__desc ----- */
 .edu-timeline__desc-title {
-  /* flex: 1; */
   font-size: var(--font-size-xl);
 }
 .edu-timeline__desc span {

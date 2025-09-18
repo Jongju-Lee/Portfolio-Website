@@ -1,4 +1,11 @@
 :root {
+  /* --------- LAYOUT --------- */
+  /* container width */
+  --container-width: 1280px;
+
+  /* section padding */
+  --section-padding: 120px 70px;
+
   /* --------- THEME COLOR --------- */
   --color-primary: #00ad53;
   --color-foreground: #333333;
@@ -78,20 +85,5 @@
   /* font-size - title */
   --font-size-slogan-title: 56px;
   --font-size-section-title: 36px;
-
-  /* --------- LAYOUT --------- */
-  /* container width */
-  --container-width: 1280px;
-  --container-width-tablet: 1024px;
-
-  /* section padding */
-  --section-padding: 120px 70px;
-
-
-  /* breakPoint */
-  --breakpoint-mobile: 768px;
-  --breakpoint-tablet: 1024px;
-
-  
 }
 

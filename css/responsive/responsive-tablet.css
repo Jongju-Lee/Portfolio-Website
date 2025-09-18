@@ -1,7 +1,7 @@
 @media (max-width: 1024px) {
-  /* ---------- 변수 재정의 ---------- */
+  /* ########## 변수 재정의 ########## */
   :root {
-    /* FONT SIZE - tablet 재정의 */
+    /* ----- TABLET - FONT SIZE 재정의 ----- */
     /* 기존 --font-size-lg: 18px */
     --font-size-lg: 16px;
     /* 기존 --font-size-xl: 20px; */
@@ -17,34 +17,34 @@
     /* 기존 --font-size-6xl: 80px; */
     --font-size-6xl: 72px;
     
-    /* FONT SIZE - TABLET 전용 */
+    /* ----- TABLET 전용 FONT SIZE ----- */
     --font-size-body-tablet: 15px;
     --font-size-slogan-title-tablet: 48px;
     --font-size-section-title-tablet: 32px;
   }
-  /* ---------- END - 변수 재정의 ---------- */
+  /* ########## END - 변수 재정의 ########## */
 
 
-  /* ---------- LAYOUT ---------- */
+  /* ########## LAYOUT ########## */
   body {
     font-size: var(--font-size-body-tablet);
   }
   .inner > h2 {
     font-size: var(--font-size-section-title-tablet);
   }
-  /* ---------- END - LAYOUT ---------- */
+  /* ########## END - LAYOUT ########## */
 
 
-  /* ---------- header ---------- */
+  /* ########## SECTION - HEADER ########## */
   header {
     padding: var(--spacing-md) var(--spacing-4xl);
   }
   /* ########## sidebar 추가 예정 ########## */
 
-  /* ---------- END - header ---------- */
+  /* ########## END - HEADER ########## */
   
 
-  /* ---------- about ---------- */
+  /* ########## SECTION - ABOUT ########## */
   #about {
     padding-top: 250px;
   }
@@ -58,45 +58,81 @@
   .about-intro__title {
     font-size: var(--font-size-slogan-title-tablet);
   }
-  /* ---------- END - about ---------- */
+  /* ########## END - ABOUT ########## */
   
   
-  /* ---------- skill ---------- */
-  /* ---------- END - skill ---------- */
+  /* ########## SECTION - SKILL ########## */
+  /* skill-item */
+  .skill-item {
+    width: 380px;
+  }
+  .skill-item__icon-box {
+    padding: var(--spacing-md);
+    gap: var(--spacing-3xl);
+  }
+  /* skill-item__icon */
+  .skill-item__icon {
+    width: calc(84px / 2.2);
+    height: calc(84px / 2.2);
+  }
+  .skill-item__icon.mini {
+    width: calc(74px / 2.2);
+  }
+  .skill-item__icon.react {
+    width: calc(94px / 2.2);
+  }
+  .skill-item__icon.git {
+    width: calc(158px / 2.2);
+  }
+  .skill-item__icon.svn {
+    width: calc(114px / 2.2);
+  }
+  /* ########## END - SKILL ########## */
   
   
-  /* ---------- edu ---------- */
-  /* ---------- END - edu ---------- */
+  /* ########## SECTION - EDU ########## */
+  /* edu-content */
+  .edu-content {
+    padding-left: 0;
+  }
+  /* ########## END - EDU ########## */
   
   
-  /* ---------- edu ---------- */
-  /* ---------- END - edu ---------- */
+  /* ########## SECTION - REACT ########## */
+  /* react-detail__btn */
+  .react-detail__btn-box {
+    justify-content: center;
+    gap: var(--spacing-2xl);
+  }
+  .react-detail__btn::before {
+    content: attr(data-label-tablet);
+  }
+  .react-detail__btn.only-pc {
+    display: none;
+  }
+  /* ########## END - REACT ########## */
   
   
-  /* ---------- react ---------- */
-  /* ---------- END - react ---------- */
+  /* ########## SECTION - MOBILE(mobile 1, 2 공통) ########## */
+  /* ########## END - MOBILE(mobile 1, 2 공통) ########## */
   
   
-  /* ---------- mobile(mobile 1, 2 공통) ---------- */
-  /* ---------- END - mobile(mobile 1, 2 공통) ---------- */
+  /* ########## SECTION - WEB ########## */
+  /* ########## END - WEB ########## */
   
   
-  /* ---------- web ---------- */
-  /* ---------- END - web ---------- */
+  /* ########## SECTION - PRACTICAL ########## */
+  /* ########## END - PRACTICAL ########## */
   
   
-  /* ---------- practical ---------- */
-  /* ---------- END - practical ---------- */
+  /* ########## SECTION - EPILOGUE ########## */
+  /* ########## END - EPILOGUE ########## */
   
   
-  /* ---------- epilogue ---------- */
-  /* ---------- End - epilogue ---------- */
+  /* ########## 유틸리티 버튼 ########## */
+  /* ########## END - 유틸리티 버튼 ########## */
   
   
-  /* ---------- 유틸리티 버튼 ---------- */
-  /* ---------- End - 유틸리티 버튼 ---------- */
-  
-  
-  /* ---------- 풀스크린 네비게이션 ---------- */
-  /* ---------- End - 풀스크린 네비게이션 ---------- */
+  /* ########## 풀스크린 네비게이션 ########## */
+  /* ########## END - 풀스크린 네비게이션 ########## */
 }

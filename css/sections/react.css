@@ -231,21 +231,28 @@ main > section#react {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-2xl);
 }
-.react-detail__btn-box a {
+.react-detail__btn {
   display: inline-block;
   width: 130px;
   padding: var(--spacing-sm) 0;
   border-radius: var(--spacing-sm);
   background-color: var(--react-color-primary);
-  font-size: var(--font-size-lg);
   text-align: center;
-  font-weight: 400;
   box-shadow: var(--shadow-color-box-light);
   transition: transform 0.2s ease;
 }
-.react-detail__btn-box a:hover {
+.react-detail__btn:not(:last-child):hover {
   transform: scale(1.05);
 }
-.react-detail__btn-box a:active {
+.react-detail__btn:not(:last-child):active {
   transform: scale(0.95);
+}
+.react-detail__btn::before {
+  content: attr(data-label-pc);
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+}
+.react-detail__btn:last-child {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
