@@ -1,11 +1,16 @@
 /* ----- Mobile Web 공통 스타일 ----- */
 main > section.mobile {
   font-size: var(--font-size-lg);
-  padding: 150px 0;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 .mobile-content {
   display: flex;
-  gap: var(--spacing-6xl);
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: var(--spacing-6xl);
+  row-gap: var(--spacing-7xl);
+  
   margin-top: var(--spacing-5xl);
 }
 .mobile-content :is(h3, h4) {
@@ -17,6 +22,7 @@ main > section.mobile {
   flex-shrink: 0;
   position: relative;
   width: 600px;
+  height: 800px;
   margin-top: var(--spacing-6xl);
 }
 .mobile-mockup__item {
@@ -30,6 +36,9 @@ main > section.mobile {
 }
 
 /* ----- mobile-detail ----- */
+.mobile-detail {
+  width: 620px;
+}
 .mobile-detail__title {
   font-size: var(--font-size-section-title);
 }

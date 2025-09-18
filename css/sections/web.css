@@ -102,7 +102,6 @@ input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web6"]::after,
 .web-tab__item-box {
   position: relative;
   margin-top: var(--spacing-6xl);
-  height: 450px;
 }
 /* 체크되지 않은 상태에서는 탭 비활성화 */
 .web-tab__item {
@@ -112,9 +111,11 @@ input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web6"]::after,
   top: 0;
   left: 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-5xl);
   width: 100%;
-  height: 100%;
+  min-height: 450px;
   transition: opacity 1s, visibility 1s;
   z-index: -1;
 }
@@ -125,6 +126,7 @@ input[id="web3"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(3),
 input[id="web4"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(4),
 input[id="web5"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(5),
 input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
+  position: static;
   opacity: 1;
   visibility: visible;
   z-index: 1;
@@ -132,8 +134,8 @@ input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
 /* ----- web-tab__item-thum ----- */
 .web-tab__item-thum {
   flex-shrink: 0;
-  width: 50%;
-  height: 100%;
+  width: 640px;
+  height: 450px;
   border-radius: var(--spacing-md);
   background-size: cover;
   background-position: top;
@@ -173,7 +175,8 @@ input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  width: 590px;
+  max-height: 450px;
 }
 .web-tab__item-title {
   font-family: var(--font-EN);
@@ -192,7 +195,7 @@ input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   flex-direction: column;
   justify-content: end;
   gap: var(--spacing-md);
-  padding-bottom: var(--spacing-3xl);
+  padding: var(--spacing-2xl) 0;
 }
 .web-tab__item-detail li {
   display: flex;

@@ -5,6 +5,7 @@
 }
 .epilogue-content-inner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: var(--spacing-8xl);
@@ -38,6 +39,9 @@
 }
 
 /* ----- epilogue-job-strength ----- */
+.epilogue-job-strength {
+  width: 600px;
+}
 .epilogue-job-strength__item:not(:last-child) {
   margin-bottom: var(--spacing-3xl);
 }
@@ -55,7 +59,7 @@
 
 /* ----- epilogue-ending ----- */
 .epilogue-ending {
-  margin: 120px 0 var(--spacing-4xl);
+  margin: 160px 0 var(--spacing-4xl);
   text-align: center;
   font-size: var(--spacing-3xl);
   color: var(--text-color-light);

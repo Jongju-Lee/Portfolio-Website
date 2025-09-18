@@ -5,8 +5,11 @@
 .about-content {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: end;
-  gap: var(--spacing-2xl);
+  column-gap: var(--spacing-2xl);
+  row-gap: var(--spacing-5xl);
+
   margin-top: var(--spacing-5xl);
 }
 

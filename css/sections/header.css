@@ -4,7 +4,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-6xl);
   box-shadow: var(--shadow-normal);
   transition: transform 0.3s;
   background-color: var(--color-background-white);
@@ -17,7 +17,7 @@ header.hide {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-7xl);
+  gap: var(--spacing-5xl);
 }
 .header__btn-functional {
   padding: var(--spacing-sm) var(--spacing-md);
@@ -35,6 +35,7 @@ header.hide {
   flex: 1;
   display: flex;
   justify-content: center;
+  /* justify-content: space-between; */
   column-gap: 70px;
   row-gap: 0;
   flex-wrap: wrap;
