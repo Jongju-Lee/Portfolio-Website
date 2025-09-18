@@ -1,46 +1,236 @@
 @media (max-width: 768px) {
-  /* ---------- Layout ---------- */
-  /* header nav,
-  .inner {
-    width: 100%;
-    padding: 0 20px;
+  /* ########## 변수 재정의 ########## */
+  :root {
+    /* ----- MOBILE - FONT SIZE 재정의 ----- */
+    /* 기존 --font-size-lg: 18px */
+    --font-size-lg: 15px;
+    /* 기존 --font-size-xl: 20px; */
+    --font-size-xl: 16px;
+    /* 기존 --font-size-2xl: 24px; */
+    --font-size-2xl: 20px;
+    /* 기존 --font-size-3xl: 32px; */
+    --font-size-3xl: 26px;
+    /* 기존 --font-size-4xl: 40px; */
+    --font-size-4xl: 32px;
+    /* 기존 --font-size-5xl: 60px; */
+    --font-size-5xl: 48px;
+    /* 기존 --font-size-6xl: 80px; */
+    --font-size-6xl: 60px;
+    
+    /* ----- MOBILE 전용 FONT SIZE ----- */
+    --font-size-body-mobile: 14px;
+    --font-size-slogan-title-mobile: 36px;
+    --font-size-section-title-mobile: 28px;
+
+    /* ----- TABLET - LAYOUT ----- */
+    --container-width-mobile: 768px;
+    --section-padding-mobile: 100px 20px;
   }
-  section {
-    padding: 80px 0;
+  /* ########## END - 변수 재정의 ########## */
+
+
+  /* ########## LAYOUT ########## */
+  body {
+    font-size: var(--font-size-body-mobile);
   }
-  section .inner > h2 {
+  main > section {
+    padding: var(--section-padding-mobile);
+  }
+  /* ---------- COMMON ---------- */
+  .inner > h2 {
+    font-size: var(--font-size-section-title-mobile);
     text-align: center;
   }
-  #about .inner > h2 {
-    text-align: left;
-  } */
+  /* ########## END - LAYOUT ########## */
 
-  /* ---------- Slick.js ---------- */
-  /* ----- Arrows -----  */
-  /* .practical_slider .slick-prev:before,
-  .practical_slider .slick-next:before {
+
+  /* ########## SECTION - HEADER ########## */
+  header {
+    padding: var(--spacing-md) var(--spacing-xl);
+  }
+  /* header__gnb */
+  .header__gnb {
     display: none;
-  } */
-  
-  /* ----- Dots ----- */
-  /* .practical_slider .slick-dots li button:before {
-    font-size: 14px;
-  } */
+  }
+  /* ########## sidebar 추가 예정 ########## */
 
-  /* ---------- UIKit Custom CSS ---------- */
-  /* ----- Light Box ----- */
-  /* .uk-lightbox-iframe {
+  /* ########## END - HEADER ########## */
+  
+
+  /* ########## SECTION - ABOUT ########## */
+  #about {
+    padding-top: 120px;
+  }
+  /* about-content */
+  .about-content {
+    row-gap: var(--spacing-xl);
+  }
+  /* about-intro */
+  .about-intro {
+    margin-bottom: var(--spacing-3xl);
+    padding-left: 0;
+  }
+  .about-intro__title {
+    font-size: var(--font-size-slogan-title-mobile);
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .about-intro__text {
+    margin-top: var(--spacing-xl);
+    padding: 0 var(--spacing-3xl);
+  }
+  .about-intro__text span {
+    display: inline;
+  }
+  .about-intro__name {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: var(--spacing-3xl);
+  }
+  /* about-photo */
+  .about-photo {
+    width: calc(320px / 1.2);
+    height: calc(450px / 1.2);
+  }
+  /* about-info */
+  .about-info__item {
+    gap: var(--spacing-xl);
+  }
+  .about-info__item:not(:last-child) {
+    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+  }
+  .about-info__item h5 {
+    width: 80px;
+    font-size: var(--font-size-xl);
+  }
+  .about-info__item span {
+    font-size: inherit;
+  }
+  /* ########## END - ABOUT ########## */
+  
+  
+  /* ########## SECTION - SKILL ########## */
+  /* skill-item */
+  .skill-content {
+    margin-top: var(--spacing-6xl);
+  }
+  /* ########## END - SKILL ########## */
+  
+  
+  /* ########## SECTION - EDU ########## */
+  /* edu-content */
+  .edu-content {
+    margin-top: var(--spacing-6xl);
+    padding: 0 var(--spacing-sm);
+  }
+  /* edu-timeline */
+  .edu-timeline {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    height: auto;
+    padding: var(--spacing-2xl);
+    border-radius: var(--spacing-md);
+    box-shadow: var(--shadow-color-box-light);
+  }
+  .edu-timeline:not(:last-child) {
+    margin-bottom: var(--spacing-8xl);
+  }
+  /* edu-timeline__peroid */
+  .edu-timeline__peroid {
+    width: fit-content;
+    text-align: center;
+  }
+  .edu-timeline__peroid-title {
+    font-size: 18px;
+  }
+  /* edu-timeline__line-box */
+  .edu-timeline__line-box {
+    position: absolute;
+    top: calc(100% - 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 108px;
+  }
+  /* 마지막 time-line의 circle 숨김 */
+  .edu-timeline:last-child .circle {
+    display: none;
+  }
+  /* edu-timeline__desc */
+  .edu-timeline__desc {
     width: 100%;
-    height: 100%;
-  } */
-   
-  /* ---------- Featherlight.js ---------- */
-  /* .featherlight .featherlight-close-icon {
-    top: 60px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    line-height: 35px;
-    font-size: 20px;
-  } */
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-line);
+    text-align: center;
+  }
+  .edu-timeline__desc span em {
+    display: block;
+  }
+  /* ########## END - EDU ########## */
+  
+  
+  /* ########## SECTION - REACT ########## */
+  /* react-detail__btn */
+  .react-detail__btn-box {
+    justify-content: center;
+    gap: var(--spacing-2xl);
+  }
+  .react-detail__btn::before {
+    content: attr(data-label-tablet);
+  }
+  .react-detail__btn.only-pc {
+    display: none;
+  }
+
+
+
+
+  
+  /* ########## END - REACT ########## */
+  
+  
+  /* ########## SECTION - MOBILE(mobile 1, 2 공통) ########## */
+  /* Market - mobile-detail__btn-box */
+  #market .mobile-detail__btn-box {
+    justify-content: center;
+    gap: var(--spacing-2xl);
+  }
+  /* ########## END - MOBILE(mobile 1, 2 공통) ########## */
+  
+  
+  /* ########## SECTION - WEB ########## */
+  .web-tab__btn-box {
+    width: auto;
+  }
+  /* ########## END - WEB ########## */
+  
+  
+  /* ########## SECTION - PRACTICAL ########## */
+  /* practical-slider__item */
+  .practical-slider__item {
+    height: 160px;
+  }
+  /* ########## END - PRACTICAL ########## */
+  
+  
+  /* ########## SECTION - EPILOGUE ########## */
+  /* epilogue-heading */
+  .epilogue-heading__title {
+    font-size: 26px;
+  }
+  .epilogue-job-strength__item-text {
+    font-size: var(--font-size-lg);
+  }
+  /* ########## END - EPILOGUE ########## */
+  
+  
+  /* ########## 유틸리티 버튼 ########## */
+  /* ########## END - 유틸리티 버튼 ########## */
+  
+  
+  /* ########## 풀스크린 네비게이션 ########## */
+  /* ########## END - 풀스크린 네비게이션 ########## */
 }

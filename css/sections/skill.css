@@ -1,6 +1,3 @@
-main > section#skill {
-  background-color: var(--color-background-white);
-}
 /* ----- skill-content ----- */
 .skill-content {
   display: flex;
@@ -16,7 +13,7 @@ main > section#skill {
   padding: var(--spacing-2xl);
   box-shadow: var(--shadow-color-box-light);
   border-radius: var(--spacing-lg);
-  background-color: var(--color-skill-section-bg);
+  background-color: var(--color-skill-item-bg);
 }
 /* ----- skill-item__icon-box ----- */
 .skill-item__icon-box {
@@ -69,7 +66,7 @@ main > section#skill {
   overflow: hidden;
   padding: 0 var(--spacing-2xl) 0;
   border-radius: 0 0 var(--spacing-lg) var(--spacing-lg);
-  background-color: var(--color-skill-section-bg);
+  background-color: var(--color-skill-item-bg);
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
   transition: max-height 0.4s ease, padding 0.2s ease;
   z-index: 1;

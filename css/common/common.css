@@ -68,7 +68,7 @@ img {
 }
 /* 짝수 section 배경 색상 지정 */
 main > section:nth-of-type(even) {
-  background-color: var(--color-background-light-gray);
+  background-color: var(--color-background-even-section);
 }
 /* section title */
 .inner > h2 {

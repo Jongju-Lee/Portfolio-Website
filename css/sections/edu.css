@@ -57,6 +57,7 @@
 .edu-timeline__desc span {
   font-weight: 500;
   color: var(--color-primary);
+  word-break: keep-all;
 }
 .edu-timeline__desc .regular {
   font-weight: 400;

@@ -12,8 +12,8 @@
     --font-size-3xl: 28px;
     /* 기존 --font-size-4xl: 40px; */
     --font-size-4xl: 36px;
-    /* 기존 --font-size-5xl: 52px; */
-    --font-size-5xl: 60px;
+    /* 기존 --font-size-5xl: 60px; */
+    --font-size-5xl: 56px;
     /* 기존 --font-size-6xl: 80px; */
     --font-size-6xl: 72px;
     
@@ -36,9 +36,13 @@
   main > section {
     padding: var(--section-padding-tablet);
   }
+  .inner {
+    max-width: (var(--container-width-tablet));
+  }
   /* ---------- COMMON ---------- */
   .inner > h2 {
     font-size: var(--font-size-section-title-tablet);
+    padding-left: 0;
   }
   /* ########## END - LAYOUT ########## */
 
@@ -47,22 +51,25 @@
   header {
     padding: var(--spacing-md) var(--spacing-4xl);
   }
+  /* header__gnb */
+  .header__gnb {
+    display: none;
+  }
   /* ########## sidebar 추가 예정 ########## */
 
   /* ########## END - HEADER ########## */
   
 
   /* ########## SECTION - ABOUT ########## */
-  #about {
-    padding-top: 250px;
-  }
   /* about-content */
   .about-content {
-    justify-content: center;
     column-gap: 300px;
     margin-top: 0;
   }
   /* about-intro */
+  .about-intro {
+    margin-top: var(--spacing-5xl);  
+  }
   .about-intro__title {
     font-size: var(--font-size-slogan-title-tablet);
   }
@@ -103,6 +110,10 @@
   .edu-content {
     padding-left: 0;
   }
+  /* edu-timeline__peroid */
+  .edu-timeline__peroid-title {
+    font-size: 20px;
+  } 
   /* ########## END - EDU ########## */
   
   
