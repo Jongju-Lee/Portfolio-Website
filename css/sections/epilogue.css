@@ -8,7 +8,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-8xl);
+  column-gap: var(--spacing-8xl);
+  row-gap: var(--spacing-7xl);
 }
 
 /* ----- epilogue-heading ----- */
@@ -29,10 +30,10 @@
 }
 .epilogue-heading__text-box {
   margin-top: var(--spacing-lg);
-  font-size: var(--spacing-xl);
 }
 .epilogue-heading__text {
   line-height: 1.8em;
+  font-size: var(--font-size-xl);
 }
 .epilogue-heading__text:nth-child(2) {
   margin-top: var(--spacing-sm);

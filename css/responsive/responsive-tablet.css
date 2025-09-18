@@ -21,6 +21,10 @@
     --font-size-body-tablet: 15px;
     --font-size-slogan-title-tablet: 48px;
     --font-size-section-title-tablet: 32px;
+
+    /* ----- TABLET - LAYOUT ----- */
+    --container-width-tablet: 1024px;
+    --section-padding-tablet: 120px 60px;
   }
   /* ########## END - 변수 재정의 ########## */
 
@@ -29,6 +33,10 @@
   body {
     font-size: var(--font-size-body-tablet);
   }
+  main > section {
+    padding: var(--section-padding-tablet);
+  }
+  /* ---------- COMMON ---------- */
   .inner > h2 {
     font-size: var(--font-size-section-title-tablet);
   }
@@ -114,18 +122,37 @@
   
   
   /* ########## SECTION - MOBILE(mobile 1, 2 공통) ########## */
+  /* Market - mobile-detail__btn-box */
+  #market .mobile-detail__btn-box {
+    justify-content: center;
+    gap: var(--spacing-2xl);
+  }
   /* ########## END - MOBILE(mobile 1, 2 공통) ########## */
   
   
   /* ########## SECTION - WEB ########## */
+  .web-tab__btn-box {
+    width: auto;
+  }
   /* ########## END - WEB ########## */
   
   
   /* ########## SECTION - PRACTICAL ########## */
+  /* practical-slider__item */
+  .practical-slider__item {
+    height: 160px;
+  }
   /* ########## END - PRACTICAL ########## */
   
   
   /* ########## SECTION - EPILOGUE ########## */
+  /* epilogue-heading */
+  .epilogue-heading__title {
+    font-size: 26px;
+  }
+  .epilogue-job-strength__item-text {
+    font-size: var(--font-size-lg);
+  }
   /* ########## END - EPILOGUE ########## */
   
   

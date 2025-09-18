@@ -29,7 +29,7 @@
 /* ----- practical-slider__item ----- */
 .practical-slider__item {
   display: block;
-  width: 100%;
+  width: inherit;
   height: 200px;
   border-radius: var(--spacing-sm);
   overflow: hidden;

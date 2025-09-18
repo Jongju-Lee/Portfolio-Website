@@ -28,7 +28,7 @@
 /* ----- 풀스크린 네비게이션 버튼 ----- */
 .trigger {
   top: 0;
-  left: 30px;
+  left: var(--spacing-3xl);
 }
 .trigger.active {
   background-color: var(--color-primary);
@@ -38,7 +38,7 @@
   transform: scale(0.9);
 }
 .trigger.on {
-  top: 30px;
+  top: var(--spacing-3xl);
 }
 .trigger img {
   position: absolute;
@@ -49,13 +49,13 @@
   height: calc(56px / 2.4);
 }
 
-/* ----- Top Button ----- */
+/* ----- 맨 위로 가기 버튼 ----- */
 .top-btn {
   bottom: 0;
-  right: 30px;
+  right: var(--spacing-3xl);
 }
 .top-btn.on {
-  bottom: 30px;
+  bottom: var(--spacing-3xl);
 }
 .top-btn img {
   position: absolute;

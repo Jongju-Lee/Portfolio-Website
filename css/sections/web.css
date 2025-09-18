@@ -140,7 +140,7 @@ input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   background-size: cover;
   background-position: top;
   transition: background-position ease-in-out;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-color-box);
 }
 /* 썸네일 hover시 하단 이동 animation */
 .web-tab__item-thum:hover {
