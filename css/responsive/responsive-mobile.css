@@ -61,7 +61,6 @@
   #about {
     padding-top: 120px;
   }
-  /* about-content */
   .about-content {
     row-gap: var(--spacing-xl);
   }
@@ -111,7 +110,6 @@
   
   
   /* ########## SECTION - SKILL ########## */
-  /* skill-item */
   .skill-content {
     margin-top: var(--spacing-6xl);
   }
@@ -119,7 +117,6 @@
   
   
   /* ########## SECTION - EDU ########## */
-  /* edu-content */
   .edu-content {
     margin-top: var(--spacing-6xl);
     padding: 0 var(--spacing-sm);
@@ -177,7 +174,6 @@
   main > section#react {
     padding-top: var(--spacing-8xl);
   }
-  /* react-content */
   .react-content {
     flex-direction: column;
     row-gap: var(--spacing-6xl);
@@ -276,7 +272,6 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  /* mobile-content */
   .mobile-content {
     flex-direction: column;
     row-gap: var(--spacing-6xl);
@@ -353,6 +348,10 @@
     column-gap: var(--spacing-2xl);
     row-gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
+  }
+  /* Market Fresh 개별 스타일 */
+  #market .mobile-detail-bottom-wrapper {
+    margin-top: var(--spacing-3xl);
   }
   /* ########## END - MOBILE(mobile 1, 2 공통) ########## */
   
@@ -436,28 +435,85 @@
   
   
   /* ########## SECTION - PRACTICAL ########## */
-  /* practical-slider__item */
+  .practical-content {
+    margin-top: var(--spacing-7xl);
+  }
+  /* practical-slider */
+  .practical-slider:not(:last-child) {
+    margin-bottom: var(--spacing-8xl);
+  }
+  .practical-slider__item:not(:last-child) {
+    margin-right: var(--spacing-lg);
+  }
   .practical-slider__item {
-    height: 160px;
+    height: 100px;
+  }
+  .practical-slider__box .slick-dots {
+    bottom: -28px;
+  }
+  .practical-slider__box .slick-dots li {
+    margin: 0 6px;
   }
   /* ########## END - PRACTICAL ########## */
   
   
   /* ########## SECTION - EPILOGUE ########## */
+  .epilogue-content {
+    padding: 0;
+  }
+  .epilogue-content-inner {
+    flex-direction: column;
+    row-gap: var(--spacing-6xl);
+  }
+  .epilogue-heading {
+    width: 100%;
+  }
   /* epilogue-heading */
   .epilogue-heading__title {
-    font-size: 26px;
+    font-size: 24px;
+  }
+  /* epilogue-job-strength */
+  .epilogue-job-strength {
+    width: 100%;
+  }
+  .epilogue-job-strength__item-title {
+    font-size: 18px;
   }
   .epilogue-job-strength__item-text {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
+  }
+  .epilogue-ending {
+    margin: var(--spacing-7xl) 0 var(--spacing-lg);
+    color: var(--text-color-light);
   }
   /* ########## END - EPILOGUE ########## */
   
   
   /* ########## 유틸리티 버튼 ########## */
+  /* 풀스크린 네비게이션 버튼 */
+  .trigger {
+    left: var(--spacing-xl);
+  }
+  .trigger.on {
+    top: var(--spacing-xl);
+  }
+  /* 맨 위로 가기 버튼 */
+  .top-btn {
+    right: var(--spacing-xl);
+  }
+  .top-btn.on {
+    bottom: var(--spacing-xl);
+  }
   /* ########## END - 유틸리티 버튼 ########## */
   
   
   /* ########## 풀스크린 네비게이션 ########## */
+  .fullscreen-nav-inner {
+    padding-left: var(--spacing-2xl);
+  }
+  /* fullscreen-nav__item */
+  .fullscreen-nav__item {
+    font-size: 28px;
+  }
   /* ########## END - 풀스크린 네비게이션 ########## */
 }

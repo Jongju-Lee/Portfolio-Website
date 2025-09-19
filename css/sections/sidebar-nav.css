@@ -1,0 +1,25 @@
+.sidebar-nav {
+  display: none;
+  /* display: none; jQuery로 fade 조작 */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+  z-index: 3000;
+}
+.sidebar-nav-inner {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  height: 100vh;
+  max-width: 300px;
+  background-color: #fff;
+  transition: right 0.3s;
+}
+.sidebar-nav-inner--active {
+  right: 0;
+}

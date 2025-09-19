@@ -8,7 +8,7 @@ header {
   box-shadow: var(--shadow-normal);
   transition: transform 0.3s;
   background-color: var(--color-background-white);
-  z-index: 1000;
+  z-index: 2000;
 }
 header.hide {
   transform: translateY(-100%);
@@ -19,8 +19,8 @@ header.hide {
   justify-content: space-between;
   gap: var(--spacing-5xl);
 }
-/* ----- header__btn-functional ----- */
-.header__btn-functional {
+/* ----- header__functional-btn ----- */
+.header__functional-btn {
   padding: var(--spacing-sm) var(--spacing-md);
   border: 2px solid #00ad53;
   color: var(--color-primary);
@@ -28,7 +28,7 @@ header.hide {
   transition: background-color 0.2s ease, color 0.2s ease;
   font-weight: 400;
 }
-.header__btn-functional:hover {
+.header__functional-btn:hover {
   background-color: var(--color-primary);
   color: var(--text-color-white);
 }
@@ -69,3 +69,4 @@ header.hide {
   opacity: 1;
   top: 4px;
 }
+

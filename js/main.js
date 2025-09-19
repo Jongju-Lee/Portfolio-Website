@@ -1,14 +1,17 @@
 $(function () {
+  /* ############### 유틸 버튼 관련 ############### */
   /* 스크롤 위치에 따른 모달 버튼 생성 */
   $(window).scroll(function () {
     // 스크롤이 내려오면 버튼 생성
     if (window.scrollY >= 500) {
       $("header").addClass("hide");
       $(".trigger, .top-btn").addClass("on");
+      $(".sidebar-btn").addClass("sidebar-btn--on")
     } else {
-      // 스크롤이 최상단일때 버튼 숨김
+      // 스크롤이 500 미만일때 버튼 숨김
       $("header").removeClass("hide")
       $(".top-btn").removeClass("on");
+      $(".sidebar-btn").removeClass("sidebar-btn--on")
       if ($(".trigger").hasClass("active")) {
         return;
       }
@@ -16,7 +19,7 @@ $(function () {
     }
   });
   
-  /* trigger - 풀스크린 네비게이션 버튼 */
+  /* 풀스크린 네비게이션 모달 열림 버튼 */
   $(".trigger").click(function () {
     $(this).toggleClass("active");
     $(".fullscreen-nav").stop().fadeToggle();
@@ -27,7 +30,7 @@ $(function () {
     }
   });
 
-  /* ---------- 풀스크린 네비게이션 ---------- */
+  /* 풀스크린 네비게이션 link 버튼 클릭 동작 */
   $(".fullscreen-nav__item").click(function () {
     $(".fullscreen-nav").stop().fadeOut();
     $(".trigger").removeClass("active");
@@ -44,7 +47,20 @@ $(function () {
     $(".trigger, .top-btn").removeClass("on");
   });
 
-  /* ---------- Slick Slider ---------- */
+  /* 태블릿, 모바일 전용 사이드바 버튼 */
+  $(".sidebar-btn").click(function () {
+    $(this).toggleClass("sidebar-btn--active");
+    $(".sidebar-nav").stop().fadeToggle();
+    $(".sidebar-nav-inner").toggleClass("sidebar-nav-inner--active")
+    // 사이드바 열릴 때에는 --on 제거
+    if($(this).hasClass("sidebar-btn--active")) {
+      $(this).removeClass("sidebar-btn--on")
+    };
+  });
+  /* ############### END - 유틸 버튼 관련 ############### */
+
+
+  /* ############### Slick Slider 관련 함수 ############### */
   // Practical Coding
   $(".practical-slider__box").slick({
     dots: true,
@@ -64,24 +80,25 @@ $(function () {
       {
         breakpoint: 560,
         settings: {
+          arrows: false,
           slidesToShow: 2,
           slidesToScroll: 2,
         },
       },
     ],
   });
-});
+  /* ############### END - Slick Slider 관련 함수 ############### */
 
-/* ---------- Featherlight 커스텀 클래스 ---------- */
-$(document).ready(function() {
+
+  /* ############### Featherlight 커스텀 클래스 ############### */
   // 클릭된 링크 저장용 변수
   let lastClickedLink = null;
-
+  
   // 클릭 이벤트 - 링크 정보 저장
   $(document).on('click', 'a[data-featherlight]', function() {
     lastClickedLink = this;
   });
-
+  
   // DOM 변화 감시 - 모달 생성 시 클래스 적용
   const observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
@@ -90,7 +107,7 @@ $(document).ready(function() {
           // 모달 로딩 완료 대기 후 클래스 적용
           setTimeout(function() {
             const $content = $(node).find('.featherlight-content');
-
+  
             if (lastClickedLink && $content.length) {
               const customClass = $(lastClickedLink).data('custom');
               if (customClass) {
@@ -102,9 +119,10 @@ $(document).ready(function() {
       });
     });
   });
-
+  
   observer.observe(document.body, {
     childList: true,
     subtree: true
   });
+  /* ############### END - Featherlight 커스텀 클래스 ############### */
 });

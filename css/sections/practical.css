@@ -73,11 +73,12 @@
 }
 /* 슬라이더 하단 dot-slider */
 .practical-slider__box .slick-dots {
-  left: -5px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -40px;
 }
 .practical-slider__box .slick-dots li {
-  margin: 0 4px;
+  margin: 0 var(--spacing-sm);
 }
 .practical-slider__box .slick-dots li button::before {
   font-size: var(--font-size-xs);

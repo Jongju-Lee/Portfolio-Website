@@ -18,8 +18,7 @@
   width: 500px;
 }
 .epilogue-heading__title {
-  font-size: var(--spacing-2xl);
-  font-size: 28px;
+  font-size: var(--font-size-3xl);
   font-weight: 600;
   line-height: 1.5em;
 }
@@ -62,6 +61,6 @@
 .epilogue-ending {
   margin: 160px 0 var(--spacing-4xl);
   text-align: center;
-  font-size: var(--spacing-3xl);
+  font-size: var(--font-size-3xl);
   color: var(--text-color-light);
 }
