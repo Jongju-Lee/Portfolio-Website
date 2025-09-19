@@ -77,24 +77,35 @@
   border-radius: 50%;
   background-color: transparent;
   z-index: 9999;
-  transition: top 0.3s, right 0.3s, background-color 0.3s;
+  transition: top 0.3s, right 0.3s, background-color 0.3s, transform 0.3s;
 }
+/* 스크롤 내려갈 시 디자인 변경 */
 .sidebar-btn--on {
   top: var(--spacing-xl);
   right: var(--spacing-xl);
   background-color: var(--color-util-btn);
 }
+/* 사이드바 열릴 때 위치 수정 */
 .sidebar-btn--active {
+  top: 2px;
+  right: 4px;
 }
+/* sidebar-btn__inner */
 .sidebar-btn__inner {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 24px;
+  width: 28px;
+  height: 22px;
   transition: transform 0.3s;
+  transform-origin: center center;
 }
+/* 스크롤 내려갈 때 디자인 변경 */
 .sidebar-btn--on .sidebar-btn__inner {
   transform: scale(0.9);
+}
+/* 사이드바 열릴 때 디자인 변경 */
+.sidebar-btn--active .sidebar-btn__inner {
+  transform: scale(0.8);
 }
 .sidebar-btn__inner span {
   position: absolute;
@@ -116,9 +127,15 @@
   top: 100%;
   transform: translateY(-100%);
 }
+/* 스크롤 내려갔을 때 선 색 변경 */
 .sidebar-btn--on .sidebar-btn__inner span {
   background-color: var(--color-background-white);
 }
+/* 사이드바 열릴 때 선 색 변경 */
+.sidebar-btn--active .sidebar-btn__inner span {
+  background-color: var(--color-foreground);
+}
+/* 사이드바 열릴 때 button 애니메이션 */
 .sidebar-btn--active .sidebar-btn__inner span:nth-child(1) {
   top: 50%;
   transform: rotate(45deg);

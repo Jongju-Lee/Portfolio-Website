@@ -504,6 +504,11 @@
   .top-btn.on {
     bottom: var(--spacing-xl);
   }
+  /* 사이드바 link 버튼 */
+  .sidebar-nav__item {
+    padding: var(--spacing-xl) 0;
+    font-size: var(--spacing-xl);
+  }
   /* ########## END - 유틸리티 버튼 ########## */
   
   

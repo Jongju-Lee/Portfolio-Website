@@ -1,3 +1,10 @@
+/* 사이드바가 열렸을 때 body 스크롤 방지 */
+body.sidebar--on {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+/* 사이드 바 배경 딤처리 */
 .sidebar-nav {
   display: none;
   /* display: none; jQuery로 fade 조작 */
@@ -6,10 +13,11 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(2px);
   z-index: 3000;
 }
+/* 사이드 바(최초 숨김처리) */
 .sidebar-nav-inner {
   position: absolute;
   top: 0;
@@ -17,9 +25,23 @@
   width: 50%;
   height: 100vh;
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--spacing-8xl);
   background-color: #fff;
   transition: right 0.3s;
 }
+/* --active -> 사이드바 등장 */
 .sidebar-nav-inner--active {
   right: 0;
+}
+.sidebar-nav__item {
+  padding: var(--spacing-2xl) 0;
+  font-size: var(--spacing-2xl);
+  font-family: var(--font-EN);
+  font-weight: 400;
+}
+.sidebar-nav__item:first-child {
+  font-family: var(--font-KR);
 }

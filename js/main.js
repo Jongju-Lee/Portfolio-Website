@@ -18,23 +18,6 @@ $(function () {
       $(".trigger").removeClass("on");
     }
   });
-  
-  /* 풀스크린 네비게이션 모달 열림 버튼 */
-  $(".trigger").click(function () {
-    $(this).toggleClass("active");
-    $(".fullscreen-nav").stop().fadeToggle();
-    // 스크롤이 최상단 이면서 active 클래스가 없으면
-    if (window.scrollY <= 50 && !$(this).hasClass("active")) {
-      // 버튼을 숨김
-      $(this).removeClass("on");
-    }
-  });
-
-  /* 풀스크린 네비게이션 link 버튼 클릭 동작 */
-  $(".fullscreen-nav__item").click(function () {
-    $(".fullscreen-nav").stop().fadeOut();
-    $(".trigger").removeClass("active");
-  });
 
   /* top-btn - 위로 이동하기 버튼 */
   $(".top-btn").click(function () {
@@ -47,15 +30,47 @@ $(function () {
     $(".trigger, .top-btn").removeClass("on");
   });
 
+  /* PC 전용 풀스크린 네비게이션 모달 열림 버튼 */
+  $(".trigger").click(function () {
+    $(this).toggleClass("active");
+    $(".fullscreen-nav").stop().fadeToggle();
+    // 스크롤이 최상단 이면서 active 클래스가 없으면
+    if (window.scrollY <= 50 && !$(this).hasClass("active")) {
+      // 버튼을 숨김
+      $(this).removeClass("on");
+    }
+  });
+
+  /* 풀스크린 네비게이션 link 버튼 클릭 이벤트 */
+  $(".fullscreen-nav__item").click(function () {
+    $(".fullscreen-nav").stop().fadeOut();
+    $(".trigger").removeClass("active");
+  });
+
   /* 태블릿, 모바일 전용 사이드바 버튼 */
   $(".sidebar-btn").click(function () {
     $(this).toggleClass("sidebar-btn--active");
-    $(".sidebar-nav").stop().fadeToggle();
+    // 사이드바 상태에 따라 fade 적용
+    if ($(this).hasClass("sidebar-btn--active")) {
+      $(".sidebar-nav").stop().fadeIn();
+    } else {
+      $(".sidebar-nav").stop().fadeOut();
+    }
     $(".sidebar-nav-inner").toggleClass("sidebar-nav-inner--active")
+    $("body").toggleClass("sidebar--on")
     // 사이드바 열릴 때에는 --on 제거
     if($(this).hasClass("sidebar-btn--active")) {
       $(this).removeClass("sidebar-btn--on")
     };
+  });
+
+  /* 사이드바 link 버튼 클릭 이벤트 */ 
+  $(".sidebar-nav__item").click(function (e) {
+    e.stopPropagation(); // 이벤트 전파 방지
+    $(".sidebar-nav").stop().fadeOut();
+    $(".sidebar-btn").removeClass("sidebar-btn--active");
+    $(".sidebar-nav-inner").removeClass("sidebar-nav-inner--active");
+    $("body").removeClass("sidebar--on");
   });
   /* ############### END - 유틸 버튼 관련 ############### */
 
