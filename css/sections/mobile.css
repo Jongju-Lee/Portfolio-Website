@@ -192,7 +192,7 @@ main > section.mobile {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-2xl);
 }
-.mobile-detail__btn-box a {
+.mobile-detail__btn {
   display: inline-block;
   width: 130px;
   padding: var(--spacing-sm) 0;
@@ -203,10 +203,10 @@ main > section.mobile {
   box-shadow: var(--shadow-color-box-light);
   transition: transform 0.2s ease;
 }
-.mobile-detail__btn-box a:hover {
+.mobile-detail__btn:hover {
   transform: scale(1.05);
 }
-.mobile-detail__btn-box a:active {
+.mobile-detail__btn a:active {
   transform: scale(0.95);
 }
 
@@ -274,7 +274,7 @@ main > section.mobile {
 #redefine .mobile-detail__btn-box {
   justify-content: space-evenly;
 }
-#redefine .mobile-detail__btn-box a {
+#redefine .mobile-detail__btn {
   background-color: var(--redefine-color-primary-light);
 }
 
