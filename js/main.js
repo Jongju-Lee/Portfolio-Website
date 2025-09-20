@@ -34,6 +34,7 @@ $(function () {
   $(".trigger").click(function () {
     $(this).toggleClass("active");
     $(".fullscreen-nav").stop().fadeToggle();
+    $("body").toggleClass("fullscreen-nav--on");
     // 스크롤이 최상단 이면서 active 클래스가 없으면
     if (window.scrollY <= 50 && !$(this).hasClass("active")) {
       // 버튼을 숨김
@@ -42,9 +43,11 @@ $(function () {
   });
 
   /* 풀스크린 네비게이션 link 버튼 클릭 이벤트 */
-  $(".fullscreen-nav__item").click(function () {
+  $(".fullscreen-nav__item").click(function (e) {
+    e.stopPropagation(); // 이벤트 전파 방지
     $(".fullscreen-nav").stop().fadeOut();
     $(".trigger").removeClass("active");
+    $("body").removeClass("fullscreen-nav--on");
   });
 
   /* 태블릿, 모바일 전용 사이드바 버튼 */

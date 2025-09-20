@@ -1,8 +1,6 @@
 /* 사이드바가 열렸을 때 body 스크롤 방지 */
 body.sidebar--on {
   overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 /* 사이드 바 배경 딤처리 */
 .sidebar-nav {

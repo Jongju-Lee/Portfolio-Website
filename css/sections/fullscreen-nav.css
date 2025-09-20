@@ -1,3 +1,7 @@
+/* 모달 열렸을 때 body 스크롤 방지 */
+body.fullscreen-nav--on {
+  overflow: hidden;
+}
 .fullscreen-nav {
   display: none;
   /* display: none; jQuery로 fade 조작 */
