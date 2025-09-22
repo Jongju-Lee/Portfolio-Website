@@ -155,7 +155,13 @@
   
   
   /* ########## SECTION - PRACTICAL ########## */
-  /* practical-slider__item */
+  /* practical-slider */
+  .practical-slider__title {
+    margin-bottom: var(--spacing-xs);
+  }
+  .practical-slider__title::before {
+    top: 0;
+  }
   .practical-slider__item {
     height: 160px;
   }

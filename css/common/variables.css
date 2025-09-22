@@ -6,6 +6,9 @@
   /* section padding */
   --section-padding: 120px 70px;
 
+  /* util-btn width, height */
+  --size-util-btn: 50px;
+
   /* --------- THEME COLOR --------- */
   --color-primary: #00ad53;
   --color-foreground: #333333;

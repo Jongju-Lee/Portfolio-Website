@@ -4,8 +4,8 @@
   visibility: hidden;
   pointer-events: none;
   position: fixed;
-  width: 50px;
-  height: 50px;
+  width: var(--size-util-btn);
+  height: var(--size-util-btn);
   border-radius: 50%;
   background-color: var(--color-util-btn);
   transition: 0.3s;
@@ -20,12 +20,12 @@
   transform: translateY(-4px) scale(0.9);
 }
 .util-btn.on {
-  opacity: 1;
+  opacity: 0.7;
   visibility: visible;
   pointer-events: all;
 }
 
-/* ----- 풀스크린 네비게이션 버튼 ----- */
+/* ----- 풀스크린 네비게이션 버튼(trigger) ----- */
 .trigger {
   top: 0;
   left: var(--spacing-3xl);
@@ -49,7 +49,7 @@
   height: calc(56px / 2.4);
 }
 
-/* ----- 맨 위로 가기 버튼 ----- */
+/* ----- 맨 위로 가기 버튼(top-btn) ----- */
 .top-btn {
   bottom: 0;
   right: var(--spacing-3xl);
@@ -66,21 +66,21 @@
   height: calc(32px / 2.5);
 }
 
-/* ----- 사이드 바 버튼 ----- */
+/* ----- 사이드 바 버튼(sidebar-btn) ----- */
 .sidebar-btn {
   display: none;
   position: fixed;
   top: 8px;
   right: 10px;
-  width: 50px;
-  height: 50px;
+  width: var(--size-util-btn);
+  height: var(--size-util-btn);
   border-radius: 50%;
-  /* background-color: transparent; */
   z-index: 9999;
   transition: top 0.3s, right 0.3s, background-color 0.3s, transform 0.3s;
 }
 /* 스크롤 내려갈 시 디자인 변경 */
 .sidebar-btn--on {
+  opacity: 0.7;
   top: var(--spacing-xl);
   right: var(--spacing-xl);
   background-color: var(--color-util-btn);
@@ -146,4 +146,135 @@
 .sidebar-btn--active .sidebar-btn__inner span:nth-child(3) {
   top: 50%;
   transform: rotate(-45deg);
+}
+
+/* mockup-box 버튼 */
+.mockup-box {
+  position: fixed;
+  bottom: var(--spacing-3xl);
+  left: var(--spacing-3xl);
+  width: var(--size-util-btn);
+  height: var(--size-util-btn);
+  transition: bottom 0.2s ease-in-out, left 0.2s ease-in-out;
+  z-index: 1000;
+}
+.mockup-box.mockup-box--on {
+  bottom: var(--spacing-5xl);
+  left: var(--spacing-5xl);
+}
+/* mockup-box__open-btn */
+.mockup-box__open-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  visibility: visible;
+  pointer-events: all;
+}
+/* 애니메이션 동작 중 비활성화 */
+.mockup-box__open-btn--disabled {
+  pointer-events: none;
+}
+/* 목업 모음 활성화 시 */
+.mockup-box--on .mockup-box__open-btn {
+  opacity: 1;
+  background-color: var(--color-primary);
+}
+.mockup-box--on .mockup-box__open-btn:hover {
+  opacity: 0.7;
+  transform: translateY(0);
+}
+.mockup-box__open-btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  left: calc(50% - 1px);
+  transform: translate(-50%, -50%);
+  width: calc(58px / 2);
+  height: calc(58px / 2);
+}
+/* mockup-box__inner */
+.mockup-box__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.mockup-box__action-btn {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+.mockup-box__action-btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* 모바일 목업 버튼 */
+.mockup-box__action-btn.mobile {
+  background-color: #72e3ad;
+  transition-delay: 0.3s;
+}
+.mockup-box__action-btn.mobile img {
+  width: calc(28px / 2);
+  height: calc(40px / 2);
+}
+/* 태블릿 목업 버튼 */
+.mockup-box__action-btn.tablet {
+  background-color: #1da1f2;
+  transition-delay: 0.15s;
+}
+.mockup-box__action-btn.tablet img {
+  width: calc(40px / 2);
+  height: calc(32px / 2);
+}
+/* 닫기 버튼 */
+.mockup-box__action-btn.close {
+  background-color: #e4405f;
+  transition-delay: 0.45s;
+}
+.mockup-box__action-btn.close img {
+  width: calc(28px / 2);
+  height: calc(28px / 2);
+}
+/* 목업 박스 열릴 때 액션버튼 동작 */
+.mockup-box--on .mockup-box__action-btn {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  box-shadow: var(--shadow-util-btn);
+}
+.mockup-box__action-btn:hover {
+  animation: actionBtnHover 0.2s ease-in-out forwards;
+}
+/* 모바일 - 목업 박스 열릴 때 액션버튼 동작 */
+.mockup-box--on .mockup-box__action-btn.mobile{
+  top: -48px;
+  left: 0;
+}
+/* 태블릿 - 목업 박스 열릴 때 액션버튼 동작 */
+.mockup-box--on .mockup-box__action-btn.tablet{
+  top: -32px;
+  left: 48px;
+}
+/* 닫기 버튼 - 목업 박스 열릴 때 액션버튼 동작 */
+.mockup-box--on .mockup-box__action-btn.close{
+  top: calc(100% - 36px);
+  left: calc(100% + 18px);
+}
+/* 액션버튼 호버 애니메이션 */
+@keyframes actionBtnHover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }

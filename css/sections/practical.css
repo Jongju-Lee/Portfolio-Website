@@ -9,9 +9,10 @@
 .practical-slider__title {
   position: relative;
   font-family: var(--font-EN);
-  font-size: 24px;
+  font-size: var(--font-size-2xl);
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-sm);
+  margin-left: var(--spacing-xl);
   z-index: 0;
 }
 .practical-slider__title::before {
@@ -19,8 +20,8 @@
   position: absolute;
   top: 2px;
   left: -5px;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   background-color: var(--color-primary);
   border-radius: 50%;
   opacity: 0.5;

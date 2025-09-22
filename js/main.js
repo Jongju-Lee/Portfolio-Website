@@ -75,6 +75,20 @@ $(function () {
     $(".sidebar-nav-inner").removeClass("sidebar-nav-inner--active");
     $("body").removeClass("sidebar--on");
   });
+
+  /* 목업 모음 열기 버튼 */
+  $(".mockup-box__open-btn").click(function () {
+    $(".mockup-box").toggleClass("mockup-box--on");
+    // 애니메이션 동작 중 버튼 비활성화(오작동 방지)
+    $(this).addClass("mockup-box__open-btn--disabled");
+    setTimeout(() => {
+      $(this).removeClass("mockup-box__open-btn--disabled")
+    }, 600);
+  });
+  // 목업 닫기 버튼
+  $(".mockup-box__action-btn.close").click(function () {
+    $(".mockup-box").removeClass("mockup-box--on");
+  });
   /* ############### END - 유틸 버튼 관련 ############### */
 
 
