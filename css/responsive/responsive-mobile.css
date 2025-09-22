@@ -86,11 +86,6 @@
     margin: 0 auto;
     margin-top: var(--spacing-3xl);
   }
-  /* about-photo */
-  .about-photo {
-    width: calc(320px / 1.2);
-    height: calc(450px / 1.2);
-  }
   /* about-info */
   .about-info__item {
     gap: var(--spacing-xl);

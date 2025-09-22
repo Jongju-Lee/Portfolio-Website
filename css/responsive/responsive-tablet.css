@@ -62,15 +62,22 @@
 
   /* ########## SECTION - ABOUT ########## */
   .about-content {
-    column-gap: 300px;
+    column-gap: var(--spacing-4xl);
     margin-top: 0;
   }
   /* about-intro */
   .about-intro {
-    margin-top: var(--spacing-5xl);  
+    margin: 0;
+    margin-top: var(--spacing-5xl);
+    max-width: 470px;
   }
   .about-intro__title {
     font-size: var(--font-size-slogan-title-tablet);
+  }
+  /* about-photo */
+  .about-photo {
+    width: calc(320px / 1.2);
+    height: calc(450px / 1.2);
   }
   /* ########## END - ABOUT ########## */
   
