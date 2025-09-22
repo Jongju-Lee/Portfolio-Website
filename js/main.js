@@ -98,7 +98,7 @@ $(function () {
     }, 600);
   });
   // 목업 닫기 버튼
-  $(".mockup-box__action-btn.close").click(function () {
+  $(".mockup-box__action-btn").click(function () {
     $(".mockup-box").removeClass("mockup-box--on");
   });
   /* ############### END - 유틸 버튼 관련 ############### */
