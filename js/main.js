@@ -23,6 +23,7 @@ $(function () {
   $(".top-btn").click(function () {
     $(".trigger").removeClass("active");
     $(".fullscreen-nav").stop().fadeOut();
+    $("body").removeClass("sidebar--on, fullscreen-nav--on")
   });
 
   /* Lightbox 링크 클릭시 trigger, top-btn 숨김 */
