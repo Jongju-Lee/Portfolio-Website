@@ -156,7 +156,7 @@
   
   /* ########## SECTION - WEB ########## */
   .web-tab__btn-box {
-    width: auto;
+    width: calc(100% - 30px);
   }
   /* ########## END - WEB ########## */
   

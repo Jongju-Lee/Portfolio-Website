@@ -1,5 +1,33 @@
+// 유틸 버튼 관리 함수들
+const UtilButtons = {
+  // 네비게이션 토글 공통 로직
+  toggleNavigation: function(selector, bodyClass) {
+    $(selector).stop().fadeToggle();
+    $("body").toggleClass(bodyClass);
+  },
+
+  // 버튼 상태 초기화
+  resetButtons: function() {
+    $(".trigger").removeClass("active on");
+    $(".fullscreen-nav").stop().fadeOut();
+    $(".sidebar-nav").stop().fadeOut();
+    $(".sidebar-btn").removeClass("sidebar-btn--active sidebar-btn--on");
+    $(".sidebar-nav-inner").removeClass("sidebar-nav-inner--active");
+    $("body").removeClass("sidebar--on fullscreen-nav--on");
+  }
+};
+
 $(function () {
-  /* ############### 모바일 목업에서 스크롤바 X ############### */
+  // 페이지 진입 즉시 전체화면 로딩 표시
+  if (window.loadingManager) {
+    window.loadingManager.show({
+      text: '페이지 로딩 중...',
+      variant: 'light',
+      timeout: 0
+    });
+    $(window).on('load', () => window.loadingManager.hide());
+  }
+  /* ############### 모바일 목업 스크롤바 제거 ############### */
   if (window.location.search.includes('mobileMockup=true')) {
     const style = document.createElement('style');
     style.textContent = `
@@ -10,98 +38,68 @@ $(function () {
     document.head.appendChild(style);
   }
 
-  /* ############### 유틸 버튼 관련 ############### */
-  /* 스크롤 위치에 따른 모달 버튼 생성 */
+  /* ############### 유틸 버튼 이벤트 ############### */
+  // 스크롤에 따른 버튼 표시/숨김
   $(window).scroll(function () {
-    // 스크롤이 내려오면 버튼 생성
-    if (window.scrollY >= 500) {
-      $("header").addClass("hide");
-      $(".trigger, .top-btn").addClass("on");
-      $(".sidebar-btn").addClass("sidebar-btn--on")
-    } else {
-      // 스크롤이 500 미만일때 버튼 숨김
-      $("header").removeClass("hide")
-      $(".top-btn").removeClass("on");
-      $(".sidebar-btn").removeClass("sidebar-btn--on")
-      if ($(".trigger").hasClass("active")) {
-        return;
-      }
-      $(".trigger").removeClass("on");
-    }
+    const scrolled = window.scrollY >= 500;
+    $("header").toggleClass("hide", scrolled);
+    $(".trigger, .top-btn").toggleClass("on", scrolled);
+    $(".sidebar-btn").toggleClass("sidebar-btn--on", scrolled);
   });
 
-  /* top-btn - 위로 이동하기 버튼 */
-  $(".top-btn").click(function () {
-    $(".trigger").removeClass("active");
-    $(".fullscreen-nav").stop().fadeOut();
-    $("body").removeClass("sidebar--on, fullscreen-nav--on")
-  });
+  // 상단 이동 버튼
+  $(".top-btn").click(UtilButtons.resetButtons);
 
-  /* Lightbox 링크 클릭시 trigger, top-btn 숨김 */
+  // 라이트박스 링크 클릭시 버튼 숨김
   $(".practical-slider__item").click(function () {
     $(".trigger, .top-btn").removeClass("on");
   });
 
-  /* PC 전용 풀스크린 네비게이션 모달 열림 버튼 */
+  // 풀스크린 네비게이션 토글
   $(".trigger").click(function () {
     $(this).toggleClass("active");
-    $(".fullscreen-nav").stop().fadeToggle();
-    $("body").toggleClass("fullscreen-nav--on");
-    // 스크롤이 최상단 이면서 active 클래스가 없으면
+    UtilButtons.toggleNavigation(".fullscreen-nav", "fullscreen-nav--on");
+
+    // 최상단에서 비활성 시 숨김
     if (window.scrollY <= 50 && !$(this).hasClass("active")) {
-      // 버튼을 숨김
       $(this).removeClass("on");
     }
   });
 
-  /* 풀스크린 네비게이션 link 버튼 클릭 이벤트 */
+  // 풀스크린 네비게이션 링크
   $(".fullscreen-nav__item").click(function (e) {
-    e.stopPropagation(); // 이벤트 전파 방지
-    $(".fullscreen-nav").stop().fadeOut();
-    $(".trigger").removeClass("active");
-    $("body").removeClass("fullscreen-nav--on");
+    e.stopPropagation();
+    UtilButtons.resetButtons();
   });
 
-  /* 태블릿, 모바일 전용 사이드바 버튼 */
+  // 사이드바 토글
   $(".sidebar-btn").click(function () {
-    $(this).toggleClass("sidebar-btn--active");
-    // 사이드바 상태에 따라 fade 적용
-    if ($(this).hasClass("sidebar-btn--active")) {
-      $(".sidebar-nav").stop().fadeIn();
-    } else {
-      $(".sidebar-nav").stop().fadeOut();
+    const isActive = $(this).toggleClass("sidebar-btn--active").hasClass("sidebar-btn--active");
+    UtilButtons.toggleNavigation(".sidebar-nav", "sidebar--on");
+    $(".sidebar-nav-inner").toggleClass("sidebar-nav-inner--active", isActive);
+
+    if (isActive) {
+      $(this).removeClass("sidebar-btn--on");
     }
-    $(".sidebar-nav-inner").toggleClass("sidebar-nav-inner--active")
-    $("body").toggleClass("sidebar--on")
-    // 사이드바 열릴 때에는 --on 제거
-    if($(this).hasClass("sidebar-btn--active")) {
-      $(this).removeClass("sidebar-btn--on")
-    };
   });
 
-  /* 사이드바 link 버튼 클릭 이벤트 */ 
+  // 사이드바 링크
   $(".sidebar-nav__item").click(function (e) {
-    e.stopPropagation(); // 이벤트 전파 방지
-    $(".sidebar-nav").stop().fadeOut();
-    $(".sidebar-btn").removeClass("sidebar-btn--active");
-    $(".sidebar-nav-inner").removeClass("sidebar-nav-inner--active");
-    $("body").removeClass("sidebar--on");
+    e.stopPropagation();
+    UtilButtons.resetButtons();
   });
 
-  /* 목업 모음 열기 버튼 */
+  // 목업 박스 토글
   $(".mockup-box__open-btn").click(function () {
     $(".mockup-box").toggleClass("mockup-box--on");
-    // 애니메이션 동작 중 버튼 비활성화(오작동 방지)
     $(this).addClass("mockup-box__open-btn--disabled");
-    setTimeout(() => {
-      $(this).removeClass("mockup-box__open-btn--disabled")
-    }, 600);
+    setTimeout(() => $(this).removeClass("mockup-box__open-btn--disabled"), 600);
   });
-  // 목업 닫기 버튼
+
   $(".mockup-box__action-btn").click(function () {
     $(".mockup-box").removeClass("mockup-box--on");
   });
-  /* ############### END - 유틸 버튼 관련 ############### */
+  /* ############### END - 유틸 버튼 이벤트 ############### */
 
 
   /* ############### Slick Slider 관련 함수 ############### */
@@ -134,24 +132,21 @@ $(function () {
   /* ############### END - Slick Slider 관련 함수 ############### */
 
 
+
   /* ############### Featherlight 커스텀 클래스 ############### */
-  // 클릭된 링크 저장용 변수
   let lastClickedLink = null;
-  
-  // 클릭 이벤트 - 링크 정보 저장
+
   $(document).on('click', 'a[data-featherlight]', function() {
     lastClickedLink = this;
   });
-  
-  // DOM 변화 감시 - 모달 생성 시 클래스 적용
+
   const observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
       mutation.addedNodes.forEach(function(node) {
         if (node.nodeType === Node.ELEMENT_NODE && $(node).hasClass('featherlight')) {
-          // 모달 로딩 완료 대기 후 클래스 적용
           setTimeout(function() {
             const $content = $(node).find('.featherlight-content');
-  
+
             if (lastClickedLink && $content.length) {
               const customClass = $(lastClickedLink).data('custom');
               if (customClass) {
@@ -163,10 +158,9 @@ $(function () {
       });
     });
   });
-  
+
   observer.observe(document.body, {
     childList: true,
     subtree: true
   });
-  /* ############### END - Featherlight 커스텀 클래스 ############### */
 });
