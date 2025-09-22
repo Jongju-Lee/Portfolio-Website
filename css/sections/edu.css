@@ -23,6 +23,9 @@
 .edu-timeline__peroid-title {
   font-size: 22px;
 }
+.edu-timeline__peroid span {
+  font-weight: 400;
+}
 
 /* ----- edu-timeline__line-box ----- */
 .edu-timeline__line-box {

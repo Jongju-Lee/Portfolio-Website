@@ -1,4 +1,15 @@
 $(function () {
+  /* ############### 모바일 목업에서 스크롤바 X ############### */
+  if (window.location.search.includes('mobileMockup=true')) {
+    const style = document.createElement('style');
+    style.textContent = `
+      ::-webkit-scrollbar { display: none; }
+      html { scrollbar-width: none; -ms-overflow-style: none; }
+      body { -webkit-overflow-scrolling: touch; }
+    `;
+    document.head.appendChild(style);
+  }
+
   /* ############### 유틸 버튼 관련 ############### */
   /* 스크롤 위치에 따른 모달 버튼 생성 */
   $(window).scroll(function () {

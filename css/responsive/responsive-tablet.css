@@ -185,6 +185,10 @@
   .sidebar-btn {
     display: block;
   }
+  /* mockup-box 버튼 */
+  .mockup-box {
+    display: none;
+  }
   /* ########## END - 유틸리티 버튼 ########## */
   
   
