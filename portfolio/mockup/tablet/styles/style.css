@@ -13,6 +13,7 @@ body {
   align-items: center;
   gap: 80px;
   padding: 80px 0;
+  min-height: 100vh;
   color: #1e2723;
 }
 img {
@@ -30,6 +31,7 @@ button {
 
 /* --------------- tablet mockup --------------- */
 .mockup {
+  flex-shrink: 0;
   position: relative;
   background-image: url(../images/tablet-mockup.png);
   width: calc(2070px / 1.8);
@@ -46,7 +48,7 @@ button {
     width: 1020px;
     height: 670px;
     border-radius: 20px;
-    background-color: #72e3ad;
+    background-color: #f5f5f5;
 }
 .mockup-header {
   position: relative;

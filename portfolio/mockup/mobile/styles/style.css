@@ -7,10 +7,7 @@ body {
   font-weight: 300;
 }
 .container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
   padding: 80px 0;
   color: #1e2723;
 }
@@ -30,9 +27,10 @@ button {
 /* --------------- mockup --------------- */
 .mockup {
   position: relative;
-  background-image: url(../images/mobile-mockup.png);
+  margin: 0 auto;
   width: 465px;
   height: 923px;
+  background-image: url(../images/mobile-mockup.png);
   background-size: 100% 100%;
   transition: transform 0.3s ease;
 }
