@@ -85,6 +85,9 @@
   right: var(--spacing-xl);
   background-color: var(--color-util-btn);
 }
+.sidebar-btn--on:hover {
+  transform: translateY(-4px);
+}
 /* 사이드바 열릴 때 위치 수정 */
 .sidebar-btn--active {
   top: 2px;

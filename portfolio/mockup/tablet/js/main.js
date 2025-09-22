@@ -5,6 +5,7 @@ const roundToOneDecimal = (value) => Math.round(value * 10) / 10;
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
 document.addEventListener('DOMContentLoaded', function() {
+
   // ------------------------------
   // Mockup 스케일 컨트롤 기능
   // ------------------------------
