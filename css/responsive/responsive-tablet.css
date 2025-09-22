@@ -188,7 +188,10 @@
   .trigger {
     display: none;
   }
-  /* 사이드 바 버튼 */
+  /* sidebar-nav */
+  .sidebar-nav-inner {
+    padding-top: 0;
+  }
   .sidebar-btn {
     display: block;
   }

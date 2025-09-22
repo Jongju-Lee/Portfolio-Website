@@ -507,6 +507,7 @@
   }
   /* sidebar-nav */
   .sidebar-nav-inner {
+    justify-content: start;
     padding-top: var(--spacing-8xl);
   }
   .sidebar-nav__item {
