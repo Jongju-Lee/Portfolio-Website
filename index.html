@@ -46,27 +46,28 @@
       <!-- ########## Header ########## -->
       <header role="banner">
         <div class="header-inner inner">
-          <a class="header__functional-btn" href="./doc/portfolio_website_fs.pdf" data-featherlight="iframe" >이 웹사이트 기능정의서</a>
           <!-- ########## header__gnb ########## -->
-          <nav class="header__gnb">
-            <a href="#about">ABOUT</a>
-            <a href="#skill">SKILL</a>
-            <a href="#edu">EXPERIENCE</a>
-            <a href="#react">WEB APP</a>
-            <a href="#web">WEBSITE</a>
-            <a href="#practical">PRACTICAL</a>
-            <a href="#epilogue">EPILOGUE</a>
+          <nav class="header__gnb" tabindex="0" aria-label="웹사이트 상단 네비게이션">
+            <a href="#about" aria-label="인트로 섹션으로 이동">ABOUT</a>
+            <a href="#skill" label="스킬 섹션으로 이동">SKILL</a>
+            <a href="#edu" label="교육, 경력 섹션으로 이동">EXPERIENCE</a>
+            <a href="#react" label="리액트 개발물 섹션으로 이동">WEB APP</a>
+            <a href="#web" label="웹페이지 개발물 섹션으로 이동">WEBSITE</a>
+            <a href="#practical" label="프로토타입 개발물 섹션으로 이동">PRACTICAL</a>
+            <a href="#epilogue" label="마무리 섹션으로 이동">EPILOGUE</a>
           </nav>
+          <!-- header__functional-btn -->
+          <a class="header__functional-btn" href="./doc/portfolio_website_fs.pdf" data-featherlight="iframe" aria-label="기능정의서 보러 가기">이 웹사이트 기능정의서</a>
         </div>
       </header>
       <main>
         <!-- ########## Section - About ########## -->
-        <section id="about">
+        <section id="about" tabindex="0" aria-label="웹 퍼블리셔 이종주 인트로 섹션">
           <div class="about-inner inner">
             <h2>About me.</h2>
             <div class="about-content">
               <!-- ########## about-intro ########## -->
-              <article class="about-intro">
+              <article class="about-intro" tabindex="0" aria-label="새로운 기술에 대한 호기심과 지속적인 학습을 통해, 더 나은 사용자의 경험을 만들어가는 것이 저의 목표입니다. 웹 퍼블리셔 이종주">
                   <h1 class="about-intro__title">
                     " Learn, for a<br />
                     Better User Experience."
@@ -80,20 +81,20 @@
                   </h4>
               </article>
               <!-- ########## about-photo ########## -->
-              <figure class="about-photo">
+              <figure class="about-photo" tabindex="0" aria-label="지원자 프로필 사진">
                 <img src="./image/about/profile.png" alt="프로필 사진" />
               </figure>
               <!-- ########## about-info ########## -->
-              <ul class="about-info">
-                <li class="about-info__item">
+              <ul class="about-info" tabindex="0" aria-label="지원자 정보">
+                <li class="about-info__item" tabindex="0" aria-label="주소 : 서울 특별시 광진구">
                   <h5>Address</h5>
                   <span>서울특별시 광진구</span>
                 </li>
-                <li class="about-info__item">
+                <li class="about-info__item" tabindex="0" aria-label="태어난 년도 : 1990년">
                   <h5>Birth</h5>
                   <span>1990년</span>
                 </li>
-                <li class="about-info__item">
+                <li class="about-info__item" tabindex="0" aria-label="이메일 : jeje7@naver.com">
                   <h5>Email</h5>
                   <span>jeje7@naver.com</span>
                 </li>
@@ -953,17 +954,17 @@
               <!-- ########## web-tab__btn-box ########## -->
               <div class="web-tab__btn-box">
                 <div class="web-tab__btn-indicator"></div>
-                <label class="web-tab__btn" for="web1" data-label-text="Travelium"></label>
-                <label class="web-tab__btn" for="web2" data-label-text="Shoe Station"></label>
-                <label class="web-tab__btn" for="web3" data-label-text="NGO"></label>
-                <label class="web-tab__btn" for="web4" data-label-text="SMEG"></label>
-                <label class="web-tab__btn" for="web5" data-label-text="NETFLIX"></label>
-                <label class="web-tab__btn" for="web6" data-label-text="Logitech"></label>
+                <label class="web-tab__btn" for="web1" role="tab" data-label-text="Travelium"></label>
+                <label class="web-tab__btn" for="web2" role="tab" data-label-text="Shoe Station"></label>
+                <label class="web-tab__btn" for="web3" role="tab" data-label-text="NGO"></label>
+                <label class="web-tab__btn" for="web4" role="tab" data-label-text="SMEG"></label>
+                <label class="web-tab__btn" for="web5" role="tab" data-label-text="NETFLIX"></label>
+                <label class="web-tab__btn" for="web6" role="tab" data-label-text="Logitech"></label>
               </div>
               <!-- ########## web-tab__item-box ########## -->
-              <section class="web-tab__item-box">
+              <section class="web-tab__item-box" role="tablist">
                 <!-- ########## web-tab__item - Travelium ########## -->
-                <div class="web-tab__item">
+                <div class="web-tab__item" role="tabpanel">
                   <!-- Travelium - web-tab__item-thum -->
                   <figure class="web-tab__item-thum" aria-label="Travelium 썸네일"></figure>
                   <!-- Travelium - web-tab__item-content -->
@@ -1011,7 +1012,7 @@
                   </article>
                 </div>
                 <!-- ########## web-tab__item - Shoe Station ########## -->
-                <div class="web-tab__item">
+                <div class="web-tab__item" role="tabpanel">
                   <!-- Shoe Station - web-tab__item-thum -->
                   <figure class="web-tab__item-thum" aria-label="Shoe Station 썸네일"></figure>
                   <!-- Shoe Station - web-tab__item-content -->
@@ -1060,7 +1061,7 @@
                   </article>
                 </div>
                 <!-- ########## web-tab__item - NGO ########## -->
-                <div class="web-tab__item">
+                <div class="web-tab__item" role="tabpanel">
                   <!-- NGO - web-tab__item-thum -->
                   <figure class="web-tab__item-thum" aria-label="NGO 썸네일"></figure>
                   <!-- NGO - web-tab__item-content -->
@@ -1108,7 +1109,7 @@
                   </article>
                 </div>
                 <!-- ########## web-tab__item - SMEG ########## -->
-                <div class="web-tab__item">
+                <div class="web-tab__item" role="tabpanel">
                   <!-- SMEG - web-tab__item-thum -->
                   <figure class="web-tab__item-thum" aria-label="SMEG 썸네일"></figure>
                   <!-- SMEG - web-tab__item-content -->
@@ -1154,7 +1155,7 @@
                   </article>
                 </div>
                 <!-- ########## web-tab__item - NETFLIX ########## -->
-                <div class="web-tab__item">
+                <div class="web-tab__item" role="tabpanel">
                   <!-- NETFLIX - web-tab__item-thum -->
                   <figure class="web-tab__item-thum" aria-label="NETFLIX 썸네일"></figure>
                   <!-- NETFLIX - web-tab__item-content -->
@@ -1201,7 +1202,7 @@
                   </article>
                 </div>
                 <!-- ########## web-tab__item - Logitech ########## -->
-                <div class="web-tab__item">
+                <div class="web-tab__item" role="tabpanel">
                   <!-- Logitech - web-tab__item-thum -->
                   <figure class="web-tab__item-thum" aria-label="Logitech 썸네일"></figure>
                   <!-- Logitech - web-tab__item-content -->
@@ -1540,7 +1541,7 @@
       
       <!-- ########## 풀스크린 모달 ########## -->
       <!-- Fullscreen Navigation -->
-      <aside class="fullscreen-nav">
+      <aside class="fullscreen-nav" aria-label="풀스크린 네비게이션">
         <nav class="fullscreen-nav-inner">
           <a class="fullscreen-nav__item font-kr" href="./doc/portfolio_website_fs.pdf" data-featherlight="iframe">기능 정의서</a>
           <a class="fullscreen-nav__item" href="#about">About me</a>
@@ -1554,7 +1555,7 @@
       </aside>
 
       <!-- Sidebar Navigation -->
-      <aside class="sidebar-nav">
+      <aside class="sidebar-nav" aria-label="사이드바 네비게이션">
         <nav class="sidebar-nav-inner">
           <a class="sidebar-nav__item" href="./doc/portfolio_website_fs.pdf" data-featherlight="iframe">기능 정의서</a>
           <a class="sidebar-nav__item" href="#about">About me</a>
@@ -1577,7 +1578,7 @@
         </span>
       </button>
 
-      <!-- Trigger -->
+      <!-- trigger -->
       <button class="trigger util-btn" title="풀스크린 네비게이션 버튼">
         <img src="./image/icon/trigger-icon.png" alt="풀스크린 네비게이션 버튼 아이콘">
       </button>
@@ -1594,7 +1595,7 @@
           <img src="./image/icon/mockup-box_open-btn.png" alt="목업 모음 열기 버튼">
         </button>
         <!-- mockup-box-inner -->
-        <div class="mockup-box__inner">
+        <div class="mockup-box__inner" role="toolbar">
           <a class="mockup-box__action-btn mobile" href="./portfolio/mockup/mobile/index.html" data-featherlight="iframe" title="모바일 목업 버튼">
             <img src="./image/icon/mockup-box_action-btn-mobile.png" alt="모바일 목업 버튼 아이콘">
           </a>

@@ -21,6 +21,7 @@ header.hide {
 }
 /* ----- header__functional-btn ----- */
 .header__functional-btn {
+  order: 0;
   padding: var(--spacing-sm) var(--spacing-md);
   border: 2px solid #00ad53;
   color: var(--color-primary);
@@ -34,6 +35,7 @@ header.hide {
 }
 /* ----- header__gnb ----- */
 .header__gnb {
+  order: 1;
   flex: 1;
   display: flex;
   justify-content: center;

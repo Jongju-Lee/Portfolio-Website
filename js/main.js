@@ -55,6 +55,7 @@ $(function () {
   $(".practical-slider__item").click(function () {
     $(".trigger").removeClass("trigger--on");
     $(".top-btn").removeClass("top-btn--on");
+    $(".sidebar-btn").addClass("sidebar-btn--hide");
   });
 
   // 풀스크린 네비게이션 토글
@@ -164,5 +165,12 @@ $(function () {
   observer.observe(document.body, {
     childList: true,
     subtree: true
+  });
+
+  // 라이트박스 닫힐 때 sidebar-btn 숨김 해제
+  $(document).on('hidden.uk.lightbox', function() {
+    $('.sidebar-btn').removeClass('sidebar-btn--hide');
+    $(".trigger").addClass("trigger--on");
+    $(".top-btn").addClass("top-btn--on");
   });
 });

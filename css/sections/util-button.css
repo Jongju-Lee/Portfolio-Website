@@ -96,6 +96,10 @@
   top: 2px;
   right: 4px;
 }
+/* lightbox열릴 때 숨김 처리 */
+.sidebar-btn--hide {
+  display: none !important;
+}
 /* sidebar-btn__inner */
 .sidebar-btn__inner {
   position: relative;
