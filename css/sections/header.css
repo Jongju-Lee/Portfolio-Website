@@ -43,7 +43,7 @@ header.hide {
   row-gap: 0;
   flex-wrap: wrap;
 }
-.header__gnb a {
+.header__gnb-item {
   position: relative;
   line-height: var(--spacing-5xl);
   font-family: var(--font-EN);
@@ -51,10 +51,10 @@ header.hide {
   font-weight: 500;
   transition: color 0.4s ease;
 }
-.header__gnb a:hover {
+.header__gnb-item:hover {
   color: var(--text-color-gray);
 }
-.header__gnb a::after {
+.header__gnb-item::after {
   content: "";
   position: absolute;
   top: -20px;
@@ -67,7 +67,7 @@ header.hide {
   opacity: 0;
   transition: top 0.4s ease, opacity 0.2s ease;
 }
-.header__gnb a:hover::after {
+.header__gnb-item:hover::after {
   opacity: 1;
   top: 4px;
 }

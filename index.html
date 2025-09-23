@@ -44,17 +44,17 @@
   <body>
     <div class="container">
       <!-- ########## Header ########## -->
-      <header role="banner">
+      <header role="banner" tabindex="0" aria-label="웹사이트 네비게이션 탭 키를 누르면 이동 버튼으로 넘어갑니다.">
         <div class="header-inner inner">
           <!-- ########## header__gnb ########## -->
-          <nav class="header__gnb" tabindex="0" aria-label="웹사이트 상단 네비게이션">
-            <a href="#about" aria-label="인트로 섹션으로 이동">ABOUT</a>
-            <a href="#skill" label="스킬 섹션으로 이동">SKILL</a>
-            <a href="#edu" label="교육, 경력 섹션으로 이동">EXPERIENCE</a>
-            <a href="#react" label="리액트 개발물 섹션으로 이동">WEB APP</a>
-            <a href="#web" label="웹페이지 개발물 섹션으로 이동">WEBSITE</a>
-            <a href="#practical" label="프로토타입 개발물 섹션으로 이동">PRACTICAL</a>
-            <a href="#epilogue" label="마무리 섹션으로 이동">EPILOGUE</a>
+          <nav class="header__gnb">
+            <a class="header__gnb-item" href="#about" aria-label="인트로 섹션으로 이동">ABOUT</a>
+            <a class="header__gnb-item" href="#skill" aria-label="스킬 섹션으로 이동">SKILL</a>
+            <a class="header__gnb-item" href="#edu" aria-label="교육, 경력 섹션으로 이동">EXPERIENCE</a>
+            <a class="header__gnb-item" href="#react" aria-label="리액트 개발물 섹션으로 이동">WEB APP</a>
+            <a class="header__gnb-item" href="#web" aria-label="웹페이지 개발물 섹션으로 이동">WEBSITE</a>
+            <a class="header__gnb-item" href="#practical" aria-label="프로토타입 개발물 섹션으로 이동">PRACTICAL</a>
+            <a class="header__gnb-item" href="#epilogue" aria-label="마무리 섹션으로 이동">EPILOGUE</a>
           </nav>
           <!-- header__functional-btn -->
           <a class="header__functional-btn" href="./doc/portfolio_website_fs.pdf" data-featherlight="iframe" aria-label="기능정의서 보러 가기">이 웹사이트 기능정의서</a>
@@ -62,39 +62,39 @@
       </header>
       <main>
         <!-- ########## Section - About ########## -->
-        <section id="about" tabindex="0" aria-label="웹 퍼블리셔 이종주 인트로 섹션">
+        <section id="about" tabindex="0" aria-label="포트폴리오 인트로 섹션 입니다.">
           <div class="about-inner inner">
-            <h2>About me.</h2>
+            <h2 aria-hidden="true">About me.</h2>
             <div class="about-content">
               <!-- ########## about-intro ########## -->
-              <article class="about-intro" tabindex="0" aria-label="새로운 기술에 대한 호기심과 지속적인 학습을 통해, 더 나은 사용자의 경험을 만들어가는 것이 저의 목표입니다. 웹 퍼블리셔 이종주">
+              <article class="about-intro">
                   <h1 class="about-intro__title">
                     " Learn, for a<br />
                     Better User Experience."
                   </h1>
-                  <p class="about-intro__text regular">
+                  <p class="about-intro__text regular" tabindex="0">
                     <span>새로운 기술에 대한 호기심과 지속적인 학습을 통해,</span>
                     <span>더 나은 사용자의 경험을 만들어가는 것이 저의 목표입니다.</span>
                   </p>
-                  <h4 class="about-intro__name">
+                  <h4 class="about-intro__name" tabindex="0">
                     <span>웹 퍼블리셔</span><em>이종주</em>
                   </h4>
               </article>
               <!-- ########## about-photo ########## -->
-              <figure class="about-photo" tabindex="0" aria-label="지원자 프로필 사진">
-                <img src="./image/about/profile.png" alt="프로필 사진" />
+              <figure class="about-photo" tabindex="0">
+                <img src="./image/about/profile.png" alt="지원자 프로필 사진" />
               </figure>
               <!-- ########## about-info ########## -->
               <ul class="about-info" tabindex="0" aria-label="지원자 정보">
-                <li class="about-info__item" tabindex="0" aria-label="주소 : 서울 특별시 광진구">
+                <li class="about-info__item" tabindex="0" aria-hidden="true" aria-label="주소 : 서울 특별시 광진구">
                   <h5>Address</h5>
                   <span>서울특별시 광진구</span>
                 </li>
-                <li class="about-info__item" tabindex="0" aria-label="태어난 년도 : 1990년">
+                <li class="about-info__item" tabindex="0" aria-hidden="true" aria-label="태어난 년도 : 1990년">
                   <h5>Birth</h5>
                   <span>1990년</span>
                 </li>
-                <li class="about-info__item" tabindex="0" aria-label="이메일 : jeje7@naver.com">
+                <li class="about-info__item" tabindex="0" aria-hidden="true" aria-label="이메일 : jeje7@naver.com">
                   <h5>Email</h5>
                   <span>jeje7@naver.com</span>
                 </li>
@@ -104,9 +104,9 @@
         </section>
 
         <!-- ########## Section - Skill ########## -->
-        <section id="skill">
+        <section id="skill" tabindex="0" aria-label="포트폴리오 스킬 섹션 입니다.">
           <div class="skill-inner inner">
-            <h2 class="section-title">Publishing Skill</h2>
+            <h2 class="section-title" aria-hidden="true">Publishing Skill</h2>
             <!-- ########## skill - content ########## -->
             <article class="skill-content">
               <!-- ########## skill-item - HTML5 ########## -->
