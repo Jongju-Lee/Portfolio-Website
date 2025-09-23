@@ -8,7 +8,7 @@ const UtilButtons = {
 
   // 버튼 상태 초기화
   resetButtons: function() {
-    $(".trigger").removeClass("active on");
+    $(".trigger").removeClass("active trigger--on");
     $(".fullscreen-nav").stop().fadeOut();
     $(".sidebar-nav").stop().fadeOut();
     $(".sidebar-btn").removeClass("sidebar-btn--active sidebar-btn--on");
@@ -43,7 +43,8 @@ $(function () {
   $(window).scroll(function () {
     const scrolled = window.scrollY >= 500;
     $("header").toggleClass("hide", scrolled);
-    $(".trigger, .top-btn").toggleClass("on", scrolled);
+    $(".trigger").toggleClass("trigger--on", scrolled);
+    $(".top-btn").toggleClass("top-btn--on", scrolled);
     $(".sidebar-btn").toggleClass("sidebar-btn--on", scrolled);
   });
 
@@ -52,7 +53,8 @@ $(function () {
 
   // 라이트박스 링크 클릭시 버튼 숨김
   $(".practical-slider__item").click(function () {
-    $(".trigger, .top-btn").removeClass("on");
+    $(".trigger").removeClass("trigger--on");
+    $(".top-btn").removeClass("top-btn--on");
   });
 
   // 풀스크린 네비게이션 토글
@@ -62,7 +64,7 @@ $(function () {
 
     // 최상단에서 비활성 시 숨김
     if (window.scrollY <= 50 && !$(this).hasClass("active")) {
-      $(this).removeClass("on");
+      $(this).removeClass("trigger--on");
     }
   });
 

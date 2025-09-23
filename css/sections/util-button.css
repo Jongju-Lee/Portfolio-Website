@@ -19,7 +19,10 @@
 .util-btn:active {
   transform: translateY(-4px) scale(0.9);
 }
-.util-btn.on {
+/* 각 요소별 on 상태 정의 */
+.trigger--on,
+.top-btn--on,
+.sidebar-btn--on {
   opacity: 0.7;
   visibility: visible;
   pointer-events: all;
@@ -37,7 +40,7 @@
 .trigger.active:active {
   transform: scale(0.9);
 }
-.trigger.on {
+.trigger--on {
   top: var(--spacing-3xl);
 }
 .trigger img {
@@ -54,7 +57,7 @@
   bottom: 0;
   right: var(--spacing-3xl);
 }
-.top-btn.on {
+.top-btn--on {
   bottom: var(--spacing-3xl);
 }
 .top-btn img {
