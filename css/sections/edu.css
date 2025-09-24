@@ -23,8 +23,9 @@
 .edu-timeline__peroid-title {
   font-size: 22px;
 }
-.edu-timeline__peroid span {
+.edu-timeline__peroid-content {
   font-weight: 400;
+  text-align: right;
 }
 
 /* ----- edu-timeline__line-box ----- */
@@ -57,7 +58,7 @@
 .edu-timeline__desc-title {
   font-size: var(--font-size-xl);
 }
-.edu-timeline__desc span {
+.edu-timeline__desc-content {
   font-weight: 500;
   color: var(--color-primary);
   word-break: keep-all;
