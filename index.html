@@ -498,13 +498,13 @@
         </section>
 
         <!-- ########## Section - React Web App ########## -->
-        <section id="react">
-          <div class="react-inner inner">
+        <section id="react" tabindex="0" aria-label="포트폴리오 리액트 웹 앱 섹션입니다.">
+          <div class="react-inner inner" aria-hidden="true">
             <h2 class="section-title">React Web App.</h2>
             <div class="react-content">
               <!-- ########## react-mockup ########## -->
-              <figure class="react-mockup">
-                <div class="react-mockup__item-box">
+              <figure class="react-mockup" tabindex="0" aria-label="개발물이 모바일, 태블릿, PC 목업 안에서 구동되고 있는 이미지.">
+                <div class="react-mockup__item-box" aria-hidden="true">
                   <div class="react-mockup__item-tablet">
                     <img src="./image/react/mockup-tablet.png" alt="태블릿 프리뷰">
                   </div>
@@ -512,7 +512,7 @@
                     <img src="./image/react/mockup-mobile.png" alt="모바일 프리뷰">
                   </div>
                 </div>
-                <div class="react-mockup__item-box">
+                <div class="react-mockup__item-box" aria-hidden="true">
                   <div class="react-mockup__item-pc">
                     <img src="./image/react/mockup-pc.png" alt="노트북 프리뷰">
                   </div>
@@ -520,59 +520,62 @@
               </figure>
               <!-- ########## react-detail ########## -->
               <article class="react-detail">
-                <h3 class="react-detail__title font-en">TaskFlow</h3>
+                <h3 class="react-detail__title font-en" tabindex="0" aria-label="이 앱의 이름은 태스크 플로우 입니다.">
+                  <span aria-hidden="true">TaskFlow</span>
+                </h3>
                 <div class="react-detail__inner">
-                  <section class="react-detail__app-intro">
+                  <section class="react-detail__app-intro" tabindex="0">
                     <p>
                       누구나, 언제 어디서나 어떤 기기에서도 편리하게 사용 가능하도록 설계한
-                      <b class="font-en">React</b>기반의 <b class="font-en">Todo-List Web App</b> 앱 입니다. 
-                      날짜별 일정 관리 및 실시간 할 일 검색, <span class="font-en">Drag & Drop</span>으로 할 일의 순서를
-                      직관적으로 변경이 가능하며 마우스 없이 키보드 만으로도 빠르고 편리한 조작이 가능하도록 구성되어 있습니다.
+                      <b class="font-en" aria-hidden="true">React</b><span class="sr-only">리액트</span>기반의 
+                      <b class="font-en" aria-hidden="true">Todo-List Web App</b><span class="sr-only">투두리스트 웹 앱</span> 앱 입니다. 
+                      날짜별 일정 관리 및 실시간 할 일 검색, <span class="font-en" aria-hidden="true">Drag & Drop</span><span class="sr-only">드래그 앤 드롭</span>으로
+                      할 일의 순서를 직관적으로 변경이 가능하며 마우스 없이 키보드 만으로도 빠르고 편리한 조작이 가능하도록 구성되어 있습니다.
                     </p>
                   </section>
                   <!-- ########## react-detail__format ########## -->
                   <section class="react-detail__format">
-                    <div class="react-detail__theme">
+                    <div class="react-detail__theme" aria-hidden="true">
                       <h4 class="react-detail__theme-title title font-en">Color Theme</h4>
-                      <div class="react-detail__theme-color-box color-box">
-                        <span class="react-detail__theme-color-item color-item">#72E3AD</span>
-                        <span class="react-detail__theme-color-item color-item">#FCFCFC</span>
-                        <span class="react-detail__theme-color-item color-item">#DFDFDF</span>
+                      <div class="react-detail__theme-color-box color-box" tabindex="0" aria-label="이 앱의 컬러 테마는 #칠이이삼에이디, #에프씨에프씨에프씨, #디에프디에프디에프 색상을 적용하였습니다.">
+                        <span class="react-detail__theme-color-item color-item" aria-hidden="true">#72E3AD</span>
+                        <span class="react-detail__theme-color-item color-item" aria-hidden="true">#FCFCFC</span>
+                        <span class="react-detail__theme-color-item color-item" aria-hidden="true">#DFDFDF</span>
                       </div>
-                      <p class="react-detail__theme-desc desc">
+                      <p class="react-detail__theme-desc desc" tabindex="0">
                         부드러운 톤에 흰색 배경으로 대비하여 피로감이 적으면서도 
                         가독성도 함께 살릴 수 있는 테마 컬러 입니다.
                       </p>
                     </div>
-                    <div class="react-detail__typo">
+                    <div class="react-detail__typo" aria-hidden="true">
                       <h4 class="react-detail__typo-title title font-en">Typography</h4>
-                      <div class="react-detail__typo-color-box color-box">
-                        <span class="react-detail__typo-color-item color-item">#1E2723</span>
-                        <span class="react-detail__typo-color-item color-item">#707070</span>
-                        <span class="react-detail__typo-color-item color-item">#8F8FA4</span>
+                      <div class="react-detail__typo-color-box color-box" tabindex="0" aria-label="이 앱의 타이포그래피는 #일이이칠이삼, #칠공칠공칠공, #팔에프팔에프에이포 색상을 적용하였습니다.">
+                        <span class="react-detail__typo-color-item color-item" aria-hidden="true">#1E2723</span>
+                        <span class="react-detail__typo-color-item color-item" aria-hidden="true">#707070</span>
+                        <span class="react-detail__typo-color-item color-item" aria-hidden="true">#8F8FA4</span>
                       </div>
                       <div class="react-detail__typo-desc desc">
-                        <div class="react-detail__typo-desc-list-box">
-                          <h5 class="react-detail__typo-desc-title">Font-family</h5>
+                        <div class="react-detail__typo-desc-list-box" tabindex="0" aria-label="한글은 프리텐다드, 영문은 아웃핏 폰트를 적용하였습니다.">
+                          <h5 class="react-detail__typo-desc-title" aria-hidden="true">Font-family</h5>
                           <ul class="react-detail__typo-desc-list">
-                            <li class="react-detail__typo-desc-list-item">
+                            <li class="react-detail__typo-desc-list-item" aria-hidden="true">
                               <span>한글</span>-<b class="font-kr">프리텐다드</b>
                             </li>
-                            <li class="react-detail__typo-desc-list-item">
+                            <li class="react-detail__typo-desc-list-item" aria-hidden="true">
                               <span>영문</span>-<b class="font-en">Outfit</b>
                             </li>
                           </ul>
                         </div>
-                        <div class="react-detail__typo-desc-list-box">
-                          <h5 class="react-detail__typo-desc-title">Font-Size</h5>
+                        <div class="react-detail__typo-desc-list-box" tabindex="0" aria-label="폰트 싸이즈는 피씨는 18픽셀, 태블릿은 16픽셀, 모바일은 14픽셀로 적용하였습니다.">
+                          <h5 class="react-detail__typo-desc-title" aria-hidden="true">Font-Size</h5>
                           <ul class="react-detail__typo-desc-list">
-                            <li class="react-detail__typo-desc-list-item">
+                            <li class="react-detail__typo-desc-list-item" aria-hidden="true">
                               <span class="font-en">PC</span>-<b class="font-en">18px</b>
                             </li>
-                            <li class="react-detail__typo-desc-list-item">
+                            <li class="react-detail__typo-desc-list-item" aria-hidden="true">
                               <span class="font-en">Tablet</span>-<b class="font-en">16px</b>
                             </li>
-                            <li class="react-detail__typo-desc-list-item">
+                            <li class="react-detail__typo-desc-list-item" aria-hidden="true">
                               <span class="font-en">Mobile</span>-<b class="font-en">14px</b>
                             </li>
                           </ul>
@@ -584,72 +587,81 @@
                   <section class="react-detail-bottom-wrapper">
                     <!-- ########## react-detail__function ########## -->
                     <div class="react-detail__function">
-                      <h4 class="react-detail__function-title title"><span class="font-en">App</span> 주요 기능</h4>
+                      <h4 class="react-detail__function-title title" tabindex="0" aria-label="앱의 주요 기능입니다.">
+                        <span class="font-en">App</span> 주요 기능
+                      </h4>
                       <ul class="react-detail__function-list">
-                        <li class="react-detail__function-list-item">
+                        <li class="react-detail__function-list-item" tabindex="0">
                           <em class="dot" aria-hidden="true"></em>
-                          <p>반응형 <span class="font-en">UI(Mobile, Tablet, PC)</span></p>
+                          <p aria-hidden="true">반응형 <span class="font-en">UI(Mobile, Tablet, PC)</span></p>
+                          <p class="sr-only">피씨, 모바일, 태블릿 모두 대응 가능한 반응형 유아이</p>
                         </li>
-                        <li class="react-detail__function-list-item">
+                        <li class="react-detail__function-list-item" tabindex="0">
                           <em class="dot" aria-hidden="true"></em>
                           <p>단축키를 통해 키보드만으로도 사용 가능</p>
                         </li>
-                        <li class="react-detail__function-list-item">
+                        <li class="react-detail__function-list-item" tabindex="0" aria-label="셋째, 달력을 연동하여 날짜별로 리스트 관리">
                           <em class="dot" aria-hidden="true"></em>
                           <p>달력을 연동하여 날짜별로 <span class="font-en">List</span> 관리</p>
                         </li>
-                        <li class="react-detail__function-list-item">
+                        <li class="react-detail__function-list-item" tabindex="0" aria-label="드래그 앤 드롭으로 할 일 순서 변경">
                           <em class="dot" aria-hidden="true"></em>
                           <p><span class="font-en">Drag & Drop</span>으로 할 일 순서 변경</p>
                         </li>
-                        <li class="react-detail__function-list-item">
+                        <li class="react-detail__function-list-item" tabindex="0">
                           <em class="dot" aria-hidden="true"></em>
                           <p>내 할 일 검색 및 필터링</p>
                         </li>
                       </ul>
                     </div>
                     <!-- ########## react-detail__work-list ########## -->
-                    <div class="react-detail__work-list">
+                    <div class="react-detail__work-list" tabindex="0" aria-label="태스크 플로우 프로젝트 개요를 나타낸 표 입니다.">
                       <h4 class="react-detail__work-list-title title" aria-hidden="true"><span class="font-en">TaskFlow</span> 프로젝트 개요</h4>
-                      <div class="react-detail__work-list-table-wrapper">
+                      <div class="react-detail__work-list-table-wrapper" aria-hidden="true">
                         <!-- react-detail__work-list-table -->
-                        <table class="react-detail__work-list-table">
+                        <table class="react-detail__work-list-table" aria-hidden="true">
                           <!-- caption -->
-                          <caption class="sr-only">TaskFlow 프로젝트 개요</caption>
+                          <caption class="sr-only" aria-hidden="true">TaskFlow 프로젝트 개요 입니다.</caption>
                           <!-- thead -->
                           <thead>
-                            <tr>
+                            <tr aria-hidden="true">
                               <th scope="col">항목</th>
                               <th scope="col">내용</th>
                             </tr>
                           </thead>
                           <!-- tbody -->
                           <tbody>
-                            <tr>
+                            <tr tabindex="0" aria-label="작업기간 : 10 일">
                               <th scope="row">작업 기간</th>
                               <td>10 일</td>
                             </tr>
-                            <tr>
+                            <tr tabindex="0" aria-label="작업 범위 : 기획, 유아이 디자인, 퍼블리싱, 개발">
                               <th scope="row">작업 범위</th>
-                              <td>기획, <span class="font-en">UI</span> 디자인, 퍼블리싱, 개발</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">제작 참여도</th>
-                              <td>1명 본인(100%)</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">개발 환경</th>
                               <td>
-                                <span class="font-en">React</span> 기반의 
-                                <span class="font-en">Vite</span> 개발 환경
+                                기획, 
+                                <span class="font-en" aria-hidden="true">UI</span><span class="sr-only">유아이</span>
+                                디자인, 퍼블리싱, 개발
                               </td>
                             </tr>
-                            <tr>
+                            <tr tabindex="0" aria-label="제작 참여도 : 한명, 본인이 백퍼센트 작업">
+                              <th scope="row">제작 참여도</th>
+                              <td>
+                                <span aria-hidden="true">1명 본인(100%)</span>
+                              </td>
+                            </tr>
+                            <tr tabindex="0" aria-label="개발 환경 : 리액트 기반의 빗 개발 환경">
+                              <th scope="row">개발 환경</th>
+                              <td>
+                                <span class="font-en" aria-hidden="true">React</span><span class="sr-only">리액트</span> 기반의 
+                                <span class="font-en" aria-hidden="true">Vite</span><span class="sr-only">빗</span> 개발 환경
+                              </td>
+                            </tr>
+                            <tr tabindex="0" aria-label="적용한 라이브러리 : 스타일드 컴포넌트, 리액트 캘린더, 디엔디 킷(드래그 앤 드롭)">
                               <th scope="row">적용한<br />라이브러리</th>
                               <td>
-                                <span class="font-en">Styled-Components(CSS-in-JS)</span>,<br />
-                                <span class="font-en">React Calendar</span>(캘린더),
-                                <span class="font-en">dnd-kit(Drag & Drop)</span>
+                                <span class="font-en" aria-hidden="true">Styled-Components(CSS-in-JS)</span><span class="sr-only">스타일드 컴포넌트(씨에스에스 인 제이에스)</span>,<br />
+                                <span class="font-en" aria-hidden="true">React Calendar</span><span class="sr-only">리액트 캘린더</span>(캘린더),
+                                <span class="font-en" aria-hidden="true">dnd-kit(Drag & Drop)</span><span class="sr-only">디엔디 킷(드래그 앤 드롭)</span>
                               </td>
                             </tr>
                           </tbody>
@@ -661,7 +673,7 @@
                       <a class="react-detail__btn only-pc font-en" href="./portfolio/taskflow/mobile/index.html" data-label-pc="Mobile" data-featherlight="iframe" aria-label="모바일로 보기"></a>
                       <a class="react-detail__btn only-pc font-en" href="./portfolio/taskflow/tablet/index.html" data-label-pc="Tablet" data-featherlight="iframe" aria-label="태블릿으로 보기"></a>
                       <a class="react-detail__btn font-en" href="https://taskflow-todo-list.netlify.app/" data-label-pc="PC" data-label-tablet="View-App" data-featherlight="iframe" aria-label="PC로 보기" data-custom="close-bottom-right"></a>
-                      <a class="react-detail__btn font-en" href="#none" data-label-pc="준비중" data-label-tablet="준비중" aria-label="준비중"></a>
+                      <a class="react-detail__btn font-en" href="#none" data-label-pc="준비중" data-label-tablet="준비중" tabindex="-1"></a>
                     </div>
                   </section>
                 </div>
