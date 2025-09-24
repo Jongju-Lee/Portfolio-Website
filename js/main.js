@@ -133,9 +133,24 @@ $(function () {
     ],
   });
   /* ############### END - Slick Slider 관련 함수 ############### */
-
-
-
+  // 웹 탭 버튼: 키보드 접근성 + 클릭 시 패널 포커스 이동
+  $(".web-tab__btn").on({
+    keydown: function(e) {
+      // Enter 또는 Space 누르면 클릭 트리거
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        $(this).click();
+      }
+    },
+    click: function() {
+      // 클릭된 버튼과 같은 인덱스의 패널로 포커스 이동 (지연 처리)
+      const idx = $(".web-tab__btn").index(this);
+      setTimeout(() => {
+        $(".web-tab__item").eq(idx).focus();
+      }, 50);
+    }
+  });
+  
   /* ############### Featherlight 커스텀 클래스 ############### */
   let lastClickedLink = null;
 
