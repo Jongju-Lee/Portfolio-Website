@@ -27,16 +27,6 @@ $(function () {
     });
     $(window).on('load', () => window.loadingManager.hide());
   }
-  /* ############### 모바일 목업 스크롤바 제거 ############### */
-  if (window.location.search.includes('mobileMockup=true')) {
-    const style = document.createElement('style');
-    style.textContent = `
-      ::-webkit-scrollbar { display: none; }
-      html { scrollbar-width: none; -ms-overflow-style: none; }
-      body { -webkit-overflow-scrolling: touch; }
-    `;
-    document.head.appendChild(style);
-  }
 
   /* ############### 유틸 버튼 이벤트 ############### */
   // 스크롤에 따른 버튼 표시/숨김
@@ -102,8 +92,17 @@ $(function () {
   $(".mockup-box__action-btn").click(function () {
     $(".mockup-box").removeClass("mockup-box--on");
   });
-  /* ############### END - 유틸 버튼 이벤트 ############### */
 
+  /* ############### 모바일 목업 스크롤바 제거 ############### */
+  if (window.location.search.includes('mobileMockup=true')) {
+    const style = document.createElement('style');
+    style.textContent = `
+      ::-webkit-scrollbar { display: none; }
+      html { scrollbar-width: none; -ms-overflow-style: none; }
+      body { -webkit-overflow-scrolling: touch; }
+    `;
+    document.head.appendChild(style);
+  }
 
   /* ############### Slick Slider 관련 함수 ############### */
   // Practical Coding
