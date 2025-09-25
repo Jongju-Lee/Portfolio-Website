@@ -44,10 +44,10 @@
   <body>
     <div class="container">
       <!-- ########## Header ########## -->
-      <header role="banner" tabindex="0" aria-label="웹사이트 네비게이션 탭 키를 누르면 이동 버튼으로 넘어갑니다.">
+      <header role="banner" tabindex="0" aria-label="웹사이트 헤더 섹션 입니다. 탭 키를 누르면 네비게이션으로 이동합니다.">
         <div class="header-inner inner">
           <!-- ########## header__gnb ########## -->
-          <nav class="header__gnb">
+          <nav class="header__gnb" tabindex="0" aria-label="네비게이션 입니다. 탭키를 눌러 링크를 선택하면 해당 섹션으로 이동됩니다. 단축키 컨트롤 알파벳 엔 을 눌러 언제든 네비게이션으로 돌아올 수 있습니다.">
             <a class="header__gnb-item" href="#about" aria-label="인트로 섹션으로 이동">ABOUT</a>
             <a class="header__gnb-item" href="#skill" aria-label="스킬 섹션으로 이동">SKILL</a>
             <a class="header__gnb-item" href="#edu" aria-label="교육, 경력 섹션으로 이동">EXPERIENCE</a>
@@ -1655,6 +1655,26 @@
           </div>
         </section>
       </main>
+
+      <!-- ########## 접근성 알림 토스트 ########## -->
+      <div class="accessibility-modal" role="alertdialog" aria-live="polite">
+        <h2 class="accessibility-modal__title bold">알림</h2>
+        <ul class="accessibility-modal__list-box">
+          <li class="accessibility-modal__list-item">
+            <p>이 웹사이트는 웹 접근성을 고려하여 설계 되었습니다.</p>
+          </li>
+          <li class="accessibility-modal__list-item">
+            <p>시각장애인도 탭 키로 컨텐츠를 탐색할 수 있도록 스크린리더 대응 대체텍스트를 적용했습니다.</p>
+          </li>
+          <li class="accessibility-modal__list-item">
+            <p><em class="font-en s-bold under-line">CTRL + N</em> 단축키로 언제든지 네비게이션으로 포커스 이동이 가능합니다.</p>
+          </li>
+        </ul>
+        <div class="accessibility-modal__btn-box">
+          <button class="accessibility-modal__btn dismiss-btn">오늘 다시보지 않기</button>
+          <button class="accessibility-modal__btn ok-btn">확인</button>
+        </div>
+    </div>
       
       <!-- ########## 풀스크린 모달 ########## -->
       <!-- Fullscreen Navigation -->

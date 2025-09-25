@@ -32,3 +32,6 @@
 
 /* ----- 태블릿, 모바일 전용 사이드바 ----- */
 @import url(./sections/sidebar-nav.css);
+
+/* ----- 접근성 알림 토스트 모달 ----- */
+@import url(./sections/accessibility-modal.css);

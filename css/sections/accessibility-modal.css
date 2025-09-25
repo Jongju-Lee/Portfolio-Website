@@ -1,0 +1,68 @@
+/* ----- 접근성 알림 토스트 ----- */
+.accessibility-modal {
+  position: fixed;
+  bottom: var(--spacing-3xl);
+  right: var(--spacing-3xl);
+  padding: var(--spacing-xl);
+  border-radius: var(--spacing-lg);
+  background-color: rgba(249, 247, 241, 0.8);
+  box-shadow: var(--shadow-color-box);
+  z-index: 1000;
+  max-width: 390px;
+}
+/* ----- accessibility-modal__title ----- */
+.accessibility-modal__title {
+  font-size: var(--font-size-2xl);
+  text-align: center;
+  font-weight: 700;
+}
+/* ----- accessibility-modal__list-box ----- */
+.accessibility-modal__list-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+.accessibility-modal__list-item {
+  display: flex;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-md);
+  font-weight: 400;
+}
+.accessibility-modal__list-item::before {
+  content: "";
+  flex-shrink: 0;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+.accessibility-modal__list-item em {
+}
+/* ----- accessibility-modal__btn-box ----- */
+.accessibility-modal__btn-box {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xl);
+}
+.accessibility-modal__btn {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+  padding: var(--spacing-md) 0;
+  border-radius: var(--spacing-sm);
+  color: var(--text-color-white);
+  line-height: 1em;
+  transition: opacity 0.2s;
+}
+.accessibility-modal__btn:hover {
+  opacity: 0.7;
+}
+.accessibility-modal__btn.dismiss-btn {
+  background-color: #aaa;
+}
+.accessibility-modal__btn.ok-btn {
+  background-color: var(--color-primary);
+}
