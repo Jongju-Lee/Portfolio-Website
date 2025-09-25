@@ -93,6 +93,12 @@ $(function () {
     $(".mockup-box").removeClass("mockup-box--on");
   });
 
+  /* ############### 접근성 알림 토스트 ############### */
+  $(".accessibility-modal__btn").on("click", function () {
+    $(".accessibility-modal").fadeOut();
+  });
+  
+
   /* ############### 모바일 목업 스크롤바 제거 ############### */
   if (window.location.search.includes('mobileMockup=true')) {
     const style = document.createElement('style');
@@ -131,7 +137,8 @@ $(function () {
       },
     ],
   });
-  /* ############### END - Slick Slider 관련 함수 ############### */
+
+  /* ############### Web section 탭 키 접근성 개선 ############### */
   // 웹 탭 버튼: 키보드 접근성 + 클릭 시 패널 포커스 이동
   $(".web-tab__btn").on({
     keydown: function(e) {
