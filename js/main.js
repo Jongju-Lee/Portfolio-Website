@@ -1,4 +1,4 @@
-// 유틸 버튼 관리 함수들
+/* ############### 유틸 버튼 관리 함수들 ############### */
 const UtilButtons = {
   // 네비게이션 토글 공통 로직
   toggleNavigation: function(selector, bodyClass) {
@@ -18,7 +18,7 @@ const UtilButtons = {
 };
 
 $(function () {
-  // 페이지 진입 즉시 전체화면 로딩 표시
+  /* ########## 페이지 진입시 로딩 화면 표시 ########## */
   if (window.loadingManager) {
     window.loadingManager.show({
       text: '페이지 로딩 중...',
@@ -28,8 +28,34 @@ $(function () {
     $(window).on('load', () => window.loadingManager.hide());
   }
 
+  /* ########## ALT + N 단축키 사용시 GNB로 포커스 ########## */
+  $(document).on('keydown', function(event) {
+    // ALT + N 키 조합 감지 (키코드 78은 'N'에 해당)
+    if (event.altKey && event.which === 78) {
+      // 브라우저의 기본 동작 방지
+      event.preventDefault();
+      // GNB 요소
+      const navElement = $('.header__gnb');
+      // 네비게이션에 포커스 설정
+      if (navElement.length) {
+        $("header").removeClass("hide");
+        navElement.focus();
+        // 헤더 영역에서 포커스가 완전히 벗어날 때만 헤더 숨김 처리
+        $(document).one('focusin', function(e) {
+          // 포커스된 요소가 헤더 내부에 있는지 확인
+          const isInHeader = $(e.target).closest('header').length > 0;
+          // 헤더 외부로 포커스가 이동했을 때만 헤더 숨김
+          if (!isInHeader && window.scrollY >= 500) {
+            $("header").addClass("hide");
+          }
+        });
+      }
+    }
+  });
+
+
   /* ############### 유틸 버튼 이벤트 ############### */
-  // 스크롤에 따른 버튼 표시/숨김
+  // 스크롤에 따른 header 및 버튼 표시/숨김
   $(window).scroll(function () {
     const scrolled = window.scrollY >= 500;
     $("header").toggleClass("hide", scrolled);
@@ -38,15 +64,8 @@ $(function () {
     $(".sidebar-btn").toggleClass("sidebar-btn--on", scrolled);
   });
 
-  // 상단 이동 버튼
+  // 상단 이동 버튼 클릭시
   $(".top-btn").click(UtilButtons.resetButtons);
-
-  // 라이트박스 링크 클릭시 버튼 숨김
-  $(".practical-slider__item").click(function () {
-    $(".trigger").removeClass("trigger--on");
-    $(".top-btn").removeClass("top-btn--on");
-    $(".sidebar-btn").addClass("sidebar-btn--hide");
-  });
 
   // 풀스크린 네비게이션 토글
   $(".trigger").click(function () {
@@ -81,8 +100,25 @@ $(function () {
     e.stopPropagation();
     UtilButtons.resetButtons();
   });
+  
 
-  // 목업 박스 토글
+  /* ############### 모바일 목업 스크롤바 제거 ############### */
+  // 라이트박스 링크 클릭시 버튼 숨김
+  $(".practical-slider__item").click(function () {
+    $(".trigger").removeClass("trigger--on");
+    $(".top-btn").removeClass("top-btn--on");
+    $(".sidebar-btn").addClass("sidebar-btn--hide");
+  });
+
+  // 라이트박스 닫힐 때 sidebar-btn 숨김 해제
+  $(document).on('hidden.uk.lightbox', function() {
+    $('.sidebar-btn').removeClass('sidebar-btn--hide');
+    $(".trigger").addClass("trigger--on");
+    $(".top-btn").addClass("top-btn--on");
+  });
+
+
+  /* ############### 멀티 박스(목업 모음) 관련 ############### */
   $(".mockup-box__open-btn").click(function () {
     $(".mockup-box").toggleClass("mockup-box--on");
     $(this).addClass("mockup-box__open-btn--disabled");
@@ -93,51 +129,7 @@ $(function () {
     $(".mockup-box").removeClass("mockup-box--on");
   });
 
-  /* ############### 접근성 알림 토스트 ############### */
-  // 접근성 모달 표시 여부 초기 검사
-  let hideUntil = null;
-  try {
-    hideUntil = localStorage.getItem('accessibilityModalHideUntil');
-  } catch (e) {
-    console.error('로컬스토리지 읽기 오류', e);
-  }
-  if (hideUntil && new Date(hideUntil) > new Date()) {
-    // $('.accessibility-modal').hide();
-    $('.accessibility-modal').hide();
-  }
-  // 확인 버튼 클릭 시 모달 닫기
-  $('.accessibility-modal__btn.ok-btn').click(function () {
-    $('.accessibility-modal').addClass("accessibility-modal--close");
-  });
-  // 오늘 다시 보지 않기 버튼 클릭 시 자정까지 숨김 처리
-  $('.accessibility-modal__btn.dismiss-btn').click(function () {
-    const now = new Date();
-    const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
-    try {
-      localStorage.setItem('accessibilityModalHideUntil', tomorrow.toISOString());
-    } catch (e) {
-      console.error('로컬스토리지 쓰기 에러', e);
-    }
-    $('.accessibility-modal').addClass("accessibility-modal--close");
-  });
-
-  // 접근성 토스트 애니메이션 종료 후 포커스 이동
-  const $accessibilityModal = $('.accessibility-modal');
-  $accessibilityModal.on('animationend webkitAnimationEnd oAnimationEnd', function(e) {
-    if (e.originalEvent.animationName === 'reveal-toast') {
-      $(this).focus(); // 모달 포커스 이동
-    }
-  });
-
-  // 헤더 접근성 버튼 클릭 시 모달 표시 및 포커스 이동
-  $('.header-accessibility-btn').click(function() {
-    $accessibilityModal
-      .removeClass('accessibility-modal--close') // 닫힘 클래스 제거
-      .show() // 모달 보이기
-      .focus(); // 포커스 이동
-  });
-
-  /* ############### 모바일 목업 스크롤바 제거 ############### */
+  // 모바일 목업 스크롤바 제거
   if (window.location.search.includes('mobileMockup=true')) {
     const style = document.createElement('style');
     style.textContent = `
@@ -147,6 +139,27 @@ $(function () {
     `;
     document.head.appendChild(style);
   }
+
+
+  /* ############### Web section 키보드 TAB key 접근성 개선 ############### */
+  // 웹 탭 버튼: 키보드 접근성 + 클릭 시 패널 포커스 이동
+  $(".web-tab__btn").on({
+    keydown: function(e) {
+      // Enter 또는 Space 누르면 클릭 트리거
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        $(this).click();
+      }
+    },
+    // 클릭된 버튼과 같은 인덱스의 패널로 포커스 이동 (지연 처리)
+    click: function() {
+      const idx = $(".web-tab__btn").index(this);
+      setTimeout(() => {
+        $(".web-tab__item").eq(idx).focus();
+      }, 50);
+    }
+  });
+
 
   /* ############### Slick Slider 관련 함수 ############### */
   // Practical Coding
@@ -176,24 +189,7 @@ $(function () {
     ],
   });
 
-  /* ############### Web section 탭 키 접근성 개선 ############### */
-  // 웹 탭 버튼: 키보드 접근성 + 클릭 시 패널 포커스 이동
-  $(".web-tab__btn").on({
-    keydown: function(e) {
-      // Enter 또는 Space 누르면 클릭 트리거
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        $(this).click();
-      }
-    },
-    click: function() {
-      // 클릭된 버튼과 같은 인덱스의 패널로 포커스 이동 (지연 처리)
-      const idx = $(".web-tab__btn").index(this);
-      setTimeout(() => {
-        $(".web-tab__item").eq(idx).focus();
-      }, 50);
-    }
-  });
+  
   
   /* ############### Featherlight 커스텀 클래스 ############### */
   let lastClickedLink = null;
@@ -224,12 +220,5 @@ $(function () {
   observer.observe(document.body, {
     childList: true,
     subtree: true
-  });
-
-  // 라이트박스 닫힐 때 sidebar-btn 숨김 해제
-  $(document).on('hidden.uk.lightbox', function() {
-    $('.sidebar-btn').removeClass('sidebar-btn--hide');
-    $(".trigger").addClass("trigger--on");
-    $(".top-btn").addClass("top-btn--on");
   });
 });

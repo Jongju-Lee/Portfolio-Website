@@ -43,6 +43,9 @@ header.hide {
   row-gap: 0;
   flex-wrap: wrap;
 }
+.header__gnb:focus {
+  outline: 2px solid var(--color-primary);
+}
 .header__gnb-item {
   position: relative;
   line-height: var(--spacing-5xl);
