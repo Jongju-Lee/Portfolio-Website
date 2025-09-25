@@ -94,10 +94,31 @@ $(function () {
   });
 
   /* ############### 접근성 알림 토스트 ############### */
-  $(".accessibility-modal__btn").on("click", function () {
-    $(".accessibility-modal").fadeOut();
+  // 접근성 모달 표시 여부 초기 검사
+  let hideUntil = null;
+  try {
+    hideUntil = localStorage.getItem('accessibilityModalHideUntil');
+  } catch (e) {
+    console.error('로컬스토리지 읽기 오류', e);
+  }
+  if (hideUntil && new Date(hideUntil) > new Date()) {
+    $('.accessibility-modal').hide();
+  }
+  // 확인 버튼 클릭 시 모달 닫기
+  $('.accessibility-modal__btn.ok-btn').click(function () {
+    $('.accessibility-modal').fadeOut();
   });
-  
+  // 오늘 다시 보지 않기 버튼 클릭 시 자정까지 숨김 처리
+  $('.accessibility-modal__btn.dismiss-btn').click(function () {
+    const now = new Date();
+    const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+    try {
+      localStorage.setItem('accessibilityModalHideUntil', tomorrow.toISOString());
+    } catch (e) {
+      console.error('로컬스토리지 쓰기 에러', e);
+    }
+    $('.accessibility-modal').fadeOut();
+  });
 
   /* ############### 모바일 목업 스크롤바 제거 ############### */
   if (window.location.search.includes('mobileMockup=true')) {
