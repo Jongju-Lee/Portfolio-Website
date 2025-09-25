@@ -12,6 +12,9 @@
   max-width: 390px;
   animation: reveal-toast 1s ease-in-out 0.5s forwards;
 }
+.accessibility-modal--close {
+  animation: close-toast 1s ease-in-out forwards;
+}
 /* ----- accessibility-modal__title ----- */
 .accessibility-modal__title {
   font-size: var(--font-size-2xl);
@@ -72,8 +75,21 @@
 @keyframes reveal-toast {
   0% {
     opacity: 0;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
+    visibility: visible;
+  }
+}
+/* 토스트 닫기 애니메이션 */
+@keyframes close-toast {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }

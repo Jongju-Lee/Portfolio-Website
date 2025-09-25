@@ -102,11 +102,12 @@ $(function () {
     console.error('로컬스토리지 읽기 오류', e);
   }
   if (hideUntil && new Date(hideUntil) > new Date()) {
+    // $('.accessibility-modal').hide();
     $('.accessibility-modal').hide();
   }
   // 확인 버튼 클릭 시 모달 닫기
   $('.accessibility-modal__btn.ok-btn').click(function () {
-    $('.accessibility-modal').fadeOut();
+    $('.accessibility-modal').addClass("accessibility-modal--close");
   });
   // 오늘 다시 보지 않기 버튼 클릭 시 자정까지 숨김 처리
   $('.accessibility-modal__btn.dismiss-btn').click(function () {
@@ -117,7 +118,7 @@ $(function () {
     } catch (e) {
       console.error('로컬스토리지 쓰기 에러', e);
     }
-    $('.accessibility-modal').fadeOut();
+    $('.accessibility-modal').addClass("accessibility-modal--close");
   });
 
   /* ############### 모바일 목업 스크롤바 제거 ############### */
