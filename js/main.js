@@ -121,6 +121,22 @@ $(function () {
     $('.accessibility-modal').addClass("accessibility-modal--close");
   });
 
+  // 접근성 토스트 애니메이션 종료 후 포커스 이동
+  const $accessibilityModal = $('.accessibility-modal');
+  $accessibilityModal.on('animationend webkitAnimationEnd oAnimationEnd', function(e) {
+    if (e.originalEvent.animationName === 'reveal-toast') {
+      $(this).focus(); // 모달 포커스 이동
+    }
+  });
+
+  // 헤더 접근성 버튼 클릭 시 모달 표시 및 포커스 이동
+  $('.header-accessibility-btn').click(function() {
+    $accessibilityModal
+      .removeClass('accessibility-modal--close') // 닫힘 클래스 제거
+      .show() // 모달 보이기
+      .focus(); // 포커스 이동
+  });
+
   /* ############### 모바일 목업 스크롤바 제거 ############### */
   if (window.location.search.includes('mobileMockup=true')) {
     const style = document.createElement('style');

@@ -80,7 +80,7 @@ main > section:nth-of-type(even) {
 }
 /* 키보드 탭키 focus 이동 표시 */
 *:focus-visible {
-  outline: 4px solid var(--color-primary);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 .font-kr {
