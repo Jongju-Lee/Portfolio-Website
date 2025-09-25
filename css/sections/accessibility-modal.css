@@ -9,7 +9,7 @@
   background-color: var(--color-background-even-section);
   box-shadow: var(--shadow-color-box);
   z-index: 1000;
-  width: 440px;
+  max-width: 440px;
   animation: reveal-toast 1s ease-in-out 0.5s forwards;
 }
 .accessibility-modal:focus-visible {
