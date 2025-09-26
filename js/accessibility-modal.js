@@ -1,4 +1,3 @@
-// accessibility-modal.js
 $(function() {
   /* 접근성 알림 토스트 */
   const $accessibilityModal = $(".accessibility-modal");
@@ -41,7 +40,7 @@ $(function() {
   });
 
   // 헤더 접근성 버튼 클릭 시 모달 표시 및 포커스 트랩
-  $(".header__help-btn").click(function() {
+  $(".header__gnb-help-btn").click(function() {
     $accessibilityModal
       .removeClass("accessibility-modal--close")
       .show();
@@ -61,6 +60,7 @@ $(function() {
   function initFocusTrap(container) {
     previousFocus = document.activeElement; // 이전 포커스 저장
     focusableEls = [container, ...getFocusableElements(container)];
+    
     firstFocusableEl = focusableEls[0];
     lastFocusableEl = focusableEls[focusableEls.length - 1];
     firstFocusableEl && firstFocusableEl.focus();

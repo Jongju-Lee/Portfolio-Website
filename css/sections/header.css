@@ -39,7 +39,8 @@ header.hide {
   flex: 1;
   display: flex;
   justify-content: center;
-  column-gap: 70px;
+  align-items: center;
+  column-gap: 66px;
   row-gap: 0;
   flex-wrap: wrap;
 }
@@ -74,4 +75,22 @@ header.hide {
   opacity: 1;
   top: 4px;
 }
+/* header__gnb-help-btn */
+.header__gnb-help-btn {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  color: var(--color-primary);
+  background-image: url(../../image/icon/header-gnb-help-btn-icon.png);
+  background-size: calc(20px / 2) calc(32px / 2);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.2s, background-image 0.2s;
+}
+.header__gnb-help-btn:hover {
+  background-color: var(--color-primary);
+  background-image: url(../../image/icon/header-gnb-help-btn-icon--white.png);
+}
+
 

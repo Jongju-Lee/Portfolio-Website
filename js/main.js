@@ -190,7 +190,6 @@ $(function () {
   });
 
   
-  
   /* ############### Featherlight 커스텀 클래스 ############### */
   let lastClickedLink = null;
 

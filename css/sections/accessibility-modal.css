@@ -9,6 +9,7 @@
   background-color: var(--color-background-even-section);
   box-shadow: var(--shadow-color-box);
   z-index: 1000;
+  width: 50%;
   max-width: 440px;
   animation: reveal-toast 1s ease-in-out 0.5s forwards;
 }
@@ -37,7 +38,6 @@
   gap: var(--spacing-sm);
   font-size: var(--font-size-md);
   font-weight: 400;
-  word-break: keep-all;
 }
 .accessibility-modal__list-item::before {
   content: "";
@@ -53,19 +53,20 @@
 .accessibility-modal__tip {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: var(--spacing-xl);
-  gap: var(--spacing-xs);
+  gap: 6px;
   color: var(--color-primary);
   font-size: var(--font-size-sm);
 }
 .accessibility-modal__tip::before {
   content: "";
+  flex-shrink: 0;
   display: inline-block;
   width: calc(14px / 2);
   height: calc(16px / 2);
   background-image: url(../../image/icon/toast-aster-icon.png);
   background-size: 100% 100%;
+  margin-top: 6px;
 }
 /* ----- accessibility-modal__btn-box ----- */
 .accessibility-modal__btn-box {
