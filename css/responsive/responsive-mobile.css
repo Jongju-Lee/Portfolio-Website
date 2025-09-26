@@ -498,11 +498,14 @@
   .epilogue-job-strength__item-text {
     font-size: var(--font-size-xl);
   }
-  .epilogue-ending {
-    margin: var(--spacing-7xl) 0 var(--spacing-lg);
-    color: var(--text-color-light);
-  }
   /* ########## END - EPILOGUE ########## */
+
+
+  /* ########## FOOTER ########## */
+  .footer__ending {
+    margin-bottom: var(--spacing-6xl);
+  }
+  /* ########## END - FOOTER ########## */
 
   
   /* ########## 유틸리티 버튼 ########## */
