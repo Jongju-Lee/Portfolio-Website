@@ -161,6 +161,61 @@ $(function () {
   });
 
 
+  /* ############### Web section Arrow 버튼 로직 ############### */
+  (function() {
+    // 요소 캐시
+    const $wrap = $(".web-year__wrap");
+    const $items = $wrap.find(".web-year__item");
+    const $yearCurrent = $(".web-year__arrow-current");
+    const $prevBtn = $(".web-year__arrow-btn--prev");
+    const $nextBtn = $(".web-year__arrow-btn--next");
+
+    // 현재 활성화 인덱스 반환
+    const getActiveIndex = function() {
+      return $items.index($items.filter(".web-year__item--active"));
+    };
+
+    // 활성화 인덱스 설정 (경계 체크 포함)
+    const setActiveIndex = function(nextIndex) {
+      if (nextIndex < 0 || nextIndex >= $items.length) return; // 범위 밖이면 무시
+      $items.removeClass("web-year__item--active").eq(nextIndex).addClass("web-year__item--active");
+    };
+
+    // UI 상태 업데이트 (활성 인덱스, 연도, 버튼 비활성화)
+    const updateUI = function(nextIndex) {
+      setActiveIndex(nextIndex);
+      // 연도 표시 업데이트 (아이템 수가 늘면 매핑 배열로 확장 추천)
+      if ($yearCurrent.length) {
+        $yearCurrent.text(nextIndex === 0 ? "2025" : "2024");
+      }
+      // 버튼 비활성화 클래스 토글
+      const isFirst = nextIndex === 0;
+      const isLast = nextIndex === $items.length - 1;
+      $prevBtn.toggleClass("web-year__arrow-btn--disabled", isFirst);
+      $nextBtn.toggleClass("web-year__arrow-btn--disabled", isLast);
+    };
+
+    // 초기 상태 동기화
+    updateUI(getActiveIndex());
+
+    // 이전 버튼 클릭
+    $prevBtn.on("click", function(e) {
+      e.preventDefault();
+      const current = getActiveIndex();
+      if (current <= 0) return; // 이미 처음이면 무시
+      updateUI(current - 1);
+    });
+
+    // 다음 버튼 클릭
+    $nextBtn.on("click", function(e) {
+      e.preventDefault();
+      const current = getActiveIndex();
+      if (current >= $items.length - 1) return; // 이미 끝이면 무시
+      updateUI(current + 1);
+    });
+  })();
+
+
   /* ############### Slick Slider 관련 함수 ############### */
   // Practical Coding
   $(".practical-slider__box").slick({

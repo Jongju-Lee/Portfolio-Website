@@ -2,6 +2,58 @@
 .web-content {
   margin-top: var(--spacing-7xl);
 }
+/* ----- web-year__arrow-box ----- */
+.web-year__arrow-box {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  width: fit-content;
+  margin: 0 auto var(--spacing-7xl);
+}
+.web-year__arrow-btn {
+  width: calc(96px / 2.2);
+  height: calc(96px / 2.2);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.web-year__arrow-btn:not(.web-year__arrow-btn--disabled):hover {
+  opacity: 0.7;
+  transform: scale(1.15);
+}
+.web-year__arrow-btn--disabled {
+  opacity: 0.3;
+  filter: grayscale(1);
+  pointer-events: none;
+}
+.web-year__arrow-btn img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.web-year__arrow-current {
+  font-size: 48px;
+  line-height: 1em;
+  font-family: var(--font-EN);
+  font-weight: 500;
+}
+/* ----- web-year__wrap ----- */
+.web-year__wrap {}
+.web-year__item {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.web-year__item--active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+.web-year__item:nth-child(1) .web-tab__item {
+  opacity: 1;
+  visibility: visible;
+  position: static;
+}
+
 /* ----- web-tab__btn-box ----- */
 .web-tab__btn-box {
   position: relative;
@@ -24,27 +76,27 @@
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 /* 체크 별 indicator 위치 수정 */
-input[id="web1"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+input[id="web2-1"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   top: 0;
   left: 0;
 }
-input[id="web2"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+input[id="web2-2"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   top: 0;
   left: calc(100% / 3);
 }
-input[id="web3"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+input[id="web2-3"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   top: 0;
   left: calc(100% / 1.5);
 }
-input[id="web4"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+input[id="web2-4"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   top: 50%;
   left: 0;
 }
-input[id="web5"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+input[id="web2-5"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   top: 50%;
   left: calc(100% / 3);
 }
-input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+input[id="web2-6"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   top: 50%;
   left: calc(100% / 1.5);
 }
@@ -80,21 +132,21 @@ input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
   color: var(--color-primary);
 }
 /* 체크된 탭 버튼 애니메이션 활성화 */
-input[id="web1"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web1"]::before,
-input[id="web2"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2"]::before,
-input[id="web3"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web3"]::before,
-input[id="web4"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web4"]::before,
-input[id="web5"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web5"]::before,
-input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web6"]::before,
+input[id="web2-1"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-1"]::before,
+input[id="web2-2"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-2"]::before,
+input[id="web2-3"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-3"]::before,
+input[id="web2-4"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-4"]::before,
+input[id="web2-5"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-5"]::before,
+input[id="web2-6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-6"]::before,
 .web-tab__btn:hover::before {
   top: -110%;
 }
-input[id="web1"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web1"]::after,
-input[id="web2"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2"]::after,
-input[id="web3"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web3"]::after,
-input[id="web4"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web4"]::after,
-input[id="web5"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web5"]::after,
-input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web6"]::after,
+input[id="web2-1"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-1"]::after,
+input[id="web2-2"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-2"]::after,
+input[id="web2-3"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-3"]::after,
+input[id="web2-4"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-4"]::after,
+input[id="web2-5"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-5"]::after,
+input[id="web2-6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-6"]::after,
 .web-tab__btn:hover::after {
   top: 0%;
 }
@@ -120,12 +172,12 @@ input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web6"]::after,
   z-index: -1;
 }
 /* 체크된 탭만 활성화 */
-input[id="web1"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(1),
-input[id="web2"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(2),
-input[id="web3"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(3),
-input[id="web4"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(4),
-input[id="web5"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(5),
-input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
+input[id="web2-1"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(1),
+input[id="web2-2"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(2),
+input[id="web2-3"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(3),
+input[id="web2-4"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(4),
+input[id="web2-5"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(5),
+input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   position: static;
   opacity: 1;
   visibility: visible;
@@ -185,6 +237,7 @@ input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   font-family: var(--font-EN);
   font-size: 36px;
   font-weight: 400;
+  line-height: 1em;
 }
 .web-tab__item-desc {
   margin-top: var(--spacing-sm);
