@@ -166,12 +166,12 @@ input[id="web6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   transition-duration: 4s;
 }
 .web-tab__item:nth-child(5) .web-tab__item-thum {
-  background-image: url(../../image/website_pub/web_netflix_thum.png);
-  transition-duration: 3s;
-}
-.web-tab__item:nth-child(6) .web-tab__item-thum {
   background-image: url(../../image/website_pub/web_logitech_thum.jpg);
   transition-duration: 2.5s;
+}
+.web-tab__item:nth-child(6) .web-tab__item-thum {
+  background-image: url(../../image/website_pub/web_netflix_thum.png);
+  transition-duration: 3s;
 }
 /* ----- web-tab__item-content ----- */
 .web-tab__item-content {
