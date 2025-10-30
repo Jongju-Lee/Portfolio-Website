@@ -213,7 +213,6 @@ input[id="web2-6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-6"]::afte
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: var(--spacing-5xl);
   width: 100%;
   min-height: 450px;
@@ -288,6 +287,7 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   justify-content: space-between;
   width: 590px;
   max-height: 434px;
+  margin-top: var(--spacing-sm);
 }
 .web-tab__item-title {
   font-family: var(--font-EN);
