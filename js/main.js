@@ -164,8 +164,8 @@ $(function () {
   /* ############### Web section Arrow 버튼 로직 ############### */
   (function() {
     // 요소 캐시
-    const $wrap = $(".web-year__wrap");
-    const $items = $wrap.find(".web-year__item");
+    const $inner = $(".web-year__wrap-inner");
+    const $items = $inner.find(".web-year__item");
     const $yearNumBox = $(".web-year__arrow-num-box");
     const $prevBtn = $(".web-year__arrow-btn--prev");
     const $nextBtn = $(".web-year__arrow-btn--next");

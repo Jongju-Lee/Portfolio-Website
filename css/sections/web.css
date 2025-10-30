@@ -47,7 +47,7 @@
   position: relative;
   display: flex;
   width: 200%;
-  transition: left 0.5s;
+  transition: left 1s;
 }
 .web-year__arrow-num-box--first {
   left: 0%;
@@ -55,7 +55,6 @@
 .web-year__arrow-num-box--second {
   left: -100%;
 }
-
 .web-year__arrow-num-item {
   flex: 1;
   display: inline-block;
@@ -71,37 +70,32 @@
   font-weight: 600;
   line-height: 1em;
 }
-/* ----- web-year__wrap ----- */
-.web-year__item {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  transition: left 0.5s, right 0.5s;
+/* ----- web-year__container ----- */
+.web-year__wrap {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
-.web-year__item:nth-child(1) {
-  left: -100vw;
-}
-.web-year__item:nth-child(2) {
-  right: -100vw;
-}
-.web-year__item--active {
-  opacity: 1;
-  visibility: visible;
+.web-year__wrap-inner {
   position: relative;
-}
-.web-year__item--active:nth-child(1) {
+  width: 200%;
+  height: 450px;
   left: 0;
+  display: flex;
+  transition: height 1s, left 1s;
 }
-.web-year__item--active:nth-child(2) {
-  right: 0;
+.web-year__wrap-inner:has(.web-year__item--active:nth-child(2)) {
+  left: -100%;
+  height: 680px;
 }
-
+.web-year__item {
+  flex: 1;
+}
 .web-year__item:nth-child(1) .web-tab__item {
   opacity: 1;
   visibility: visible;
   position: static;
 }
-
 /* ----- web-tab__btn-box ----- */
 .web-tab__btn-box {
   position: relative;
@@ -234,8 +228,9 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
 /* ----- web-tab__item-thum ----- */
 .web-tab__item-thum {
   flex-shrink: 0;
-  width: 640px;
-  height: 450px;
+  width: 624px;
+  height: 434px;
+  margin-top: var(--spacing-sm);
   border-radius: var(--spacing-md);
   background-size: cover;
   background-position: top;
@@ -249,27 +244,33 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
 .web-tab__item-thum:hover {
   background-position: bottom;
 }
-.web-tab__item:nth-child(1) .web-tab__item-thum {
+/* 2025년 작업물 */
+.web-year__item:nth-child(1) .web-tab__item:nth-child(1) .web-tab__item-thum {
+  background-image: url(../../image/website_pub/web-well-life-thum.png);
+  transition-duration: 4.5s;
+}
+/* 2024년 작업물 */
+.web-year__item:nth-child(2) .web-tab__item:nth-child(1) .web-tab__item-thum {
   background-image: url(../../image/website_pub/web_travelium_thum.jpg);
   transition-duration: 4s;
 }
-.web-tab__item:nth-child(2) .web-tab__item-thum {
+.web-year__item:nth-child(2) .web-tab__item:nth-child(2) .web-tab__item-thum {
   background-image: url(../../image/website_pub/web_shoe_station_thum.jpg);
   transition-duration: 4s;
 }
-.web-tab__item:nth-child(3) .web-tab__item-thum {
+.web-year__item:nth-child(2) .web-tab__item:nth-child(3) .web-tab__item-thum {
   background-image: url(../../image/website_pub/web_green_save_earth_thum.jpg);
   transition-duration: 8s;
 }
-.web-tab__item:nth-child(4) .web-tab__item-thum {
+.web-year__item:nth-child(2) .web-tab__item:nth-child(4) .web-tab__item-thum {
   background-image: url(../../image/website_pub/web_smeg_thum.jpg);
   transition-duration: 4s;
 }
-.web-tab__item:nth-child(5) .web-tab__item-thum {
+.web-year__item:nth-child(2) .web-tab__item:nth-child(5) .web-tab__item-thum {
   background-image: url(../../image/website_pub/web_logitech_thum.jpg);
   transition-duration: 2.5s;
 }
-.web-tab__item:nth-child(6) .web-tab__item-thum {
+.web-year__item:nth-child(2) .web-tab__item:nth-child(6) .web-tab__item-thum {
   background-image: url(../../image/website_pub/web_netflix_thum.png);
   transition-duration: 3s;
 }

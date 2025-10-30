@@ -18,6 +18,7 @@ body {
   font-weight: 300;
   font-family: var(--font-KR);
   color: var(--text-color-body);
+  overflow-x: hidden;
 }
 .container {
   width: 100%;
