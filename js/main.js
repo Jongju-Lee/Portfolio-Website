@@ -166,7 +166,7 @@ $(function () {
     // 요소 캐시
     const $wrap = $(".web-year__wrap");
     const $items = $wrap.find(".web-year__item");
-    const $yearCurrent = $(".web-year__arrow-current");
+    const $yearNumBox = $(".web-year__arrow-num-box");
     const $prevBtn = $(".web-year__arrow-btn--prev");
     const $nextBtn = $(".web-year__arrow-btn--next");
 
@@ -181,12 +181,14 @@ $(function () {
       $items.removeClass("web-year__item--active").eq(nextIndex).addClass("web-year__item--active");
     };
 
-    // UI 상태 업데이트 (활성 인덱스, 연도, 버튼 비활성화)
+    // UI 상태 업데이트 (활성 인덱스, 연도 박스 모디파이어, 버튼 비활성화)
     const updateUI = function(nextIndex) {
       setActiveIndex(nextIndex);
-      // 연도 표시 업데이트 (아이템 수가 늘면 매핑 배열로 확장 추천)
-      if ($yearCurrent.length) {
-        $yearCurrent.text(nextIndex === 0 ? "2025" : "2024");
+      // 연도 박스 클래스 토글: --first <-> --second
+      if ($yearNumBox.length) {
+        $yearNumBox
+          .removeClass("web-year__arrow-num-box--first web-year__arrow-num-box--second")
+          .addClass(nextIndex === 0 ? "web-year__arrow-num-box--first" : "web-year__arrow-num-box--second");
       }
       // 버튼 비활성화 클래스 토글
       const isFirst = nextIndex === 0;

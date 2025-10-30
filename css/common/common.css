@@ -84,19 +84,19 @@ main > section:nth-of-type(even) {
   outline-offset: 2px;
 }
 .font-kr {
-  font-family: var(--font-KR);
+  font-family: var(--font-KR) !important;
 }
 .font-en {
-  font-family: var(--font-EN);
+  font-family: var(--font-EN) !important;
 }
 .regular {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 .s-bold {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 .bold {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 .under-line {
   text-decoration: underline;
