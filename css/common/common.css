@@ -127,8 +127,6 @@ main > section:nth-of-type(even) {
   background-color: transparent;
 }
 .uk-lightbox-toolbar-icon {
-  mix-blend-mode: difference;
-  opacity: 1;
   padding: var(--spacing-lg);
   border-radius: 50%;
   background-color: var(--color-primary);
@@ -193,7 +191,7 @@ main > section:nth-of-type(even) {
   height: 50px;
   line-height: 44px;
   font-size: 30px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   transition: transform 0.3s ease;
   animation: blink 1s ease-in 0.5s 3 forwards;

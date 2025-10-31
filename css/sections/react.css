@@ -234,6 +234,7 @@ main > section#react {
   margin-top: var(--spacing-2xl);
 }
 .react-detail__btn {
+  opacity: 1;
   display: inline-block;
   width: 130px;
   padding: var(--spacing-sm) 0;
@@ -241,9 +242,10 @@ main > section#react {
   background-color: var(--react-color-primary);
   text-align: center;
   box-shadow: var(--shadow-color-box-light);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .react-detail__btn:not(:last-child):hover {
+  opacity: 0.7;
   transform: scale(1.05);
 }
 .react-detail__btn:not(:last-child):active {
