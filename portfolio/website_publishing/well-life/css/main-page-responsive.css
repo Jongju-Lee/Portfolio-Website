@@ -4,14 +4,21 @@
 /* #################### TABLET #################### */
 @media (max-width: 1280px) {
   /* ---------- SECTION - HERO ----------  */
-  /* hero-bg */
-  .hero-bg {
-    background-position: 35% 50%;
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: calc(100vh - 64px);
   }
 
   /* hero-inner */
   .hero-inner {
-    padding: var(--section-padding-h-tablet);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
     gap: var(--spacing-48);
   }
 
@@ -65,7 +72,15 @@
 
 
   /* ---------- SECTION - WHY ----------  */
+  .why {
+    height: auto;
+    min-height: var(100vh - 64px);
+  }
   .why-inner {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
     gap: var(--spacing-48);
   }
@@ -267,9 +282,19 @@
     font-size: var(--font-size-Large);
     border-radius: 0;
   }
-  .direction-map-img {
+  .direction-map__img {
     width: 100%;
     height: 450px;
+  }
+  .direction-map__img-balloon {
+    top: calc(50% - 16px);
+    width: 248px;  
+    height: 110px;
+    padding-bottom: var(--spacing-28);
+  }
+  .direction-map__img-balloon-logo {
+    width: 192px;
+    height: 35px;
   }
   /* ---------- END - DIRECTION ----------  */
 }
@@ -279,16 +304,12 @@
 @media (max-width: 768px) {
   /* ---------- SECTION - HERO ----------  */
   .hero {
-    height: auto;
+    min-height: auto;
     background-image: url(../images/main-page/hero/hero-bg--mobile.png);
   }
 
   /* hero-inner */
   .hero-inner {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
     padding: var(--section-padding-v-pc) var(--section-padding-h-mobile);
     gap: var(--spacing-36);
   }
@@ -599,55 +620,17 @@
     padding: var(--spacing-12);
     font-size: var(--font-size-Medium);
   }
-  .direction-map-img {
+  .direction-map__img {
     height: 50vh;
   }
+  .direction-map__img-balloon {
+    top: calc(50% - 18px);
+    width: 225px;
+    height: 100px;
+  }
+  .direction-map__img-balloon-logo {
+    width: 176px;
+    height: 32px;
+  }
   /* ---------- END - DIRECTION ----------  */
-
-
-  /* ---------- FOOTER ----------  */
-  .footer-inner {
-    padding: 0 var(--section-padding-h-mobile);
-  }
-  .footer-wrap {
-    gap: var(--spacing-24);
-    padding: var(--section-padding-h-mobile) 0;
-  }
-
-  /* footer-link */
-  .footer-link {
-    gap: var(--spacing-24);
-  }
-
-  /* footer-logo */
-  .footer-logo {
-    width: 131px;
-    height: 36px;
-  }
-
-  /* footer-info */
-  .footer-info {
-    margin-top: var(--spacing-24);
-  }
-  .footer-info__item {
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-  .footer-info__item-text,
-  .footer-info__item-list {
-    margin-top: var(--spacing-8);
-  }
-
-  /* footer-copyright */
-  .footer-copyright {
-    padding: var(--spacing-12);
-  }
-  .footer-copyright__text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: var(--spacing-4);
-    row-gap: var(--spacing-8);
-  }
-  /* ---------- END - FOOTER ----------  */
 }

@@ -106,10 +106,14 @@ header {
   flex-shrink: 0;
   display: inline-block;
   width: calc(350px / 2);
-  height: calc(68px / 2);
+  height: calc(72px / 2);
   background-image: url(../../images/includes/header-logo-pc.png);
   background-size: 100% 100%;
   transition: opacity 0.2s;
+}
+/* 다크모드 시 이미지 교체 */
+[data-theme="dark"] .header-logo {
+  background-image: url(../../images/includes/header-logo-pc-dark.png);
 }
 .header-logo:hover {
   opacity: 0.7;  
@@ -162,6 +166,10 @@ header {
   background-image: url(../../images/includes/header-tel.png);
   background-size: 100% 100%;
 }
+/* 다크모드 시 이미지 교체 */
+[data-theme="dark"] .header-right__tel {
+  background-image: url(../../images/includes/header-tel-dark.png);
+}
 /* header-right__hamburger-btn */
 .header-right__hamburger-btn {
   display: none;
@@ -190,8 +198,8 @@ footer {
 
 /* footer-logo */
 .footer-logo {
-  width: calc(438px / 2);
-  height: calc(118px / 2);
+  width: calc(435px / 2);
+  height: calc(80px / 2);
 }
 
 /* footer-contents */
@@ -277,6 +285,10 @@ footer {
   transition: opacity 0.5s, visibility 0.5s;
   z-index: 2000;
 }
+/* 다크모드 시 딤 처리 색상 변경 */
+[data-theme="dark"] .sidebar {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 /* 사이드 바 동작 시 딤 처리 */
 .sidebar--active {
   visibility: visible;
@@ -289,7 +301,7 @@ footer {
   width: 70%;
   max-width: 380px;
   height: 100vh;
-  background-color: var(--color-white);
+  background-color: var(--bg-primary);
   transition: right 0.5s;
 }
 /* 사이드 바 우측에서 좌측으로 나옴 */
@@ -318,6 +330,10 @@ footer {
   background-image: url(../../images/includes/header-logo-pc.png);
   background-size: 100% 100%;
   transition: opacity 0.2s;
+}
+/* 다크모드 시 로고 교체 */
+[data-theme="dark"] .sidebar-header__logo {
+  background-image: url(../../images/includes/header-logo-pc-dark.png);
 }
 .sidebar-header__logo:hover {
   opacity: 0.7;
@@ -351,14 +367,17 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding-top: var(--spacing-48);
 }
 
 /* sidebar-gnb */
 .sidebar-gnb {
+  flex: 1;
+  max-height: 450px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-32);
+  justify-content: center;
+  gap: var(--spacing-24);
+  padding: var(--spacing-24) 0;
 }
 .sidebar-gnb__item a {
   position: relative;
@@ -388,7 +407,7 @@ footer {
 .sidebar-etc {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-12);
+  gap: var(--spacing-8);
 }
 .sidebar-etc__item {
   display: flex;

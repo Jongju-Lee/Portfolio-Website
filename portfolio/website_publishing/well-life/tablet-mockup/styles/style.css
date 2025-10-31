@@ -6,8 +6,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 80px;
   padding: 80px 0;
-  color: #1e2723;
+  color: #000;
 }
 img {
   display: block;
@@ -22,33 +23,33 @@ button {
   padding: 0;
 }
 
-/* --------------- mockup --------------- */
+/* --------------- tablet mockup --------------- */
 .mockup {
   position: relative;
-  background-image: url(../images/mobile-mockup.png);
-  width: 465px;
-  height: 923px;
+  background-image: url(../images/tablet-mockup.png);
+  width: calc(2070px / 1.8);
+  height: calc(1436px / 1.8);
   background-size: 100% 100%;
   transition: transform 0.3s ease;
 }
 .mockup-container {
-  position: absolute;
-  top: 23px;
-  left: 35px;
-  display: flex;
-  flex-direction: column;
-  width: 393px;
-  height: 852px;
-  border-radius: 54px;
-  background-color: #72e3ad;
+    position: absolute;
+    top: 53px;
+    left: 66px;
+    display: flex;
+    flex-direction: column;
+    width: 1020px;
+    height: 670px;
+    border-radius: 20px;
+    background-color: #19248c;
 }
 .mockup-header {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
-  width: calc(780px / 2);
-  height: calc(100px / 2);
+  width: calc(2040px / 2);
+  height: calc(90px / 2);
   z-index: 1;
 }
 .mockup-header img {
@@ -60,7 +61,7 @@ button {
 .mockup-iframe__wrap {
   flex: 1;
   background-color: #ffffff;
-  border-radius: 0 0 54px 54px;
+  border-radius: 0 0 20px 20px;
   overflow: hidden;
 }
 .mockup-iframe__wrap iframe {
@@ -71,10 +72,6 @@ button {
 
 /* --------------- Scale Control --------------- */
 .scale-control {
-  position: absolute;
-  top: 50%;
-  left: 78%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,8 +104,6 @@ button {
 .scale-control__text {
   font-size: 36px;
   font-weight: 400;
-  line-height: 1em;
-  margin-bottom: 8px;
 }
 .scale-control__text.bold {
   font-weight: 700;

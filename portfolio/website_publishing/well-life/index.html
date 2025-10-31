@@ -13,14 +13,13 @@
   <!-- ########## CSS ########## -->
   <!-- 공통 CSS -->
   <link rel="stylesheet" href="./css/common/common.css" />
-  <link rel="stylesheet" href="./css/main-page.css" />
-  <!-- 반응형 - 컴포넌트 UI -->
   <link rel="stylesheet" href="./css/common/common-responsive/common-responsive.css" />
-  <!-- 메인 페이지 반응형 UI -->
+  <!-- 메인 페이지 CSS -->
+  <link rel="stylesheet" href="./css/main-page.css" />
   <link rel="stylesheet" href="./css/main-page-responsive.css" />
 
   <!-- ########## JS ########## -->
-  <!-- 컴포넌트 불러오기 로직 -->
+  <!-- 컴포넌트(INCLUDES) 호출 로직 -->
   <script src="./js/includes.js"></script>
   <!-- 공통 JS -->
   <script src="./js/common.js"></script>
@@ -359,8 +358,13 @@
           <!-- direction-map -->
           <figure class="direction-map">
             <figcaption class="direction-map-caption">서울특별시 광진구 능동로 50 <span>이튼타워리버 2차 108호</span></figcaption>
-            <div class="direction-map-img img-box">
+            <div class="direction-map__img img-box">
               <img src="./images/main-page/directions/directions-map.png" alt="병원 지도 이미지">
+              <div class="direction-map__img-balloon">
+                <div class="direction-map__img-balloon-logo img-box">
+                  <img src="./images/includes/footer-logo.png" alt="웰라이프내과 로고">
+                </div>
+              </div>
             </div>
           </figure>
         </div>

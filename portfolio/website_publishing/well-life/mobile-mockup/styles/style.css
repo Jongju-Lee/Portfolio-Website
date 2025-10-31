@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   padding: 80px 0;
-  color: #1e2723;
+  color: #000;
 }
 img {
   display: block;
@@ -40,7 +40,11 @@ button {
   width: 393px;
   height: 852px;
   border-radius: 54px;
-  background-color: #72e3ad;
+  background-color: #19248c;
+}
+/* 다크모드 적용 시 status-bar 색상 변경 */
+.mockup-container:has([data-theme="dark"]) {
+  background-color: #758eba;
 }
 .mockup-header {
   position: relative;

@@ -1,6 +1,9 @@
 /* ---------- 컴포넌트 반응형 UI - 태블릿 ---------- */
 
 @media (max-width: 1280px) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
   /* ---------- COMMON ----------  */
   h1, h2 {
     font-size: var(--font-size-XXL);
@@ -22,11 +25,6 @@
     padding: 0 var(--section-padding-h-tablet);
   }
 
-  /* header-logo */
-  .header-logo {
-    background-image: url(../../../images/includes/header-logo-pc.png);
-  }
-
   /* header-gnb */
   .header-gnb {
     display: none;
@@ -38,6 +36,10 @@
     height: 38px;
     background-image: url(../../../images/includes/header-icon-tel.png);
   }
+  /* 다크모드 시 이미지 교체 */
+  [data-theme="dark"] .header-right__tel {
+    background-image: url(../../../images/includes/header-icon-tel-dark.png);
+  }
 
   /* header-right__hamburger-btn */
   .header-right__hamburger-btn {
@@ -46,6 +48,10 @@
     height: 38px;
     background-image: url(../../../images/includes/header-icon-hamburger.png);
     background-size: 100% 100%;
+  }
+  /* 다크모드 시 이미지 교체 */
+  [data-theme="dark"] .header-right__hamburger-btn {
+    background-image: url(../../../images/includes/header-icon-hamburger-dark.png);
   }
   /* ---------- END - HEADER ----------  */
 
@@ -68,8 +74,8 @@
 
   /* footer-logo */
   .footer-logo {
-    width: 175px;
-    height: 47px;
+    width: 174px;
+    height: 32px;
   }
 
   /* footer-info */

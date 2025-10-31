@@ -115,7 +115,7 @@
 /* ---------- DARK MODE ---------- */
 :root[data-theme='dark'] {
   /* 테마 컬러 */
-  --theme-primary: #4768a3;
+  --theme-primary: #758eba;
 
   /* 배경 색상 */
   --bg-primary: var(--color-black);

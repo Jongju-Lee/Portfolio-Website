@@ -45,7 +45,11 @@
   .header-logo {
     width: 33px;
     height: 28px;
-    background-image: url(../../../images/includes/header-logo-tablet.png);
+    background-image: url(../../../images/includes/header-logo-mobile.png);
+  }
+  /* 다크모드 시 이미지 교체 */
+  [data-theme="dark"] .header-logo {
+    background-image: url(../../../images/includes/header-logo-mobile-dark.png);
   }
 
   /* header-right__tel */
@@ -80,7 +84,7 @@
   /* footer-logo */
   .footer-logo {
     width: 131px;
-    height: 36px;
+    height: 24px;
   }
 
   /* footer-info */
@@ -122,7 +126,11 @@
   .sidebar-header__logo {
     width: 33px;
     height: 28px;
-    background-image: url(../../../images/includes/header-logo-tablet.png);
+    background-image: url(../../../images/includes/header-logo-mobile.png);
+  }
+  /* 다크모드 시 로고 교체 */
+  [data-theme="dark"] .sidebar-header__logo {
+    background-image: url(../../../images/includes/header-logo-mobile-dark.png);
   }
 
   /* 사이드 바 닫기 버튼 */
@@ -133,7 +141,7 @@
 
   /* sidebar-gnb */
   .sidebar-gnb {
-    gap: var(--spacing-24);
+    max-height: 360px;
   }
   .sidebar-gnb__item a {
     font-size: var(--font-size-Medium);
