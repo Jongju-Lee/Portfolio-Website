@@ -1,0 +1,161 @@
+/* ---------- 컴포넌트 반응형 UI - 모바일 ---------- */
+
+@media (max-width: 768px) {
+  /* ---------- LAYOUT ---------- */
+  body {
+    font-size: var(--font-size-mobile-body);
+  }
+  main {
+    /* 헤더 높이만큼 하단 이동 */
+    padding-top: var(--spacing-56);
+  }
+  /* ---------- END - LAYOUT ---------- */
+
+
+  /* ---------- COMMON ----------  */
+  h1, h2 {
+    font-size: var(--font-size-XL);
+  }
+  h3 {
+    font-size: var(--font-size-Large);
+  }
+  h4 {
+    font-size: var(--font-size-Medium);
+  }
+  h5 {
+    font-size: var(--font-size-mobile-body);
+  }
+  /* 미니 타이틀 */
+  .title-sm {
+    font-size: 12px;
+  }
+  /* ---------- END - COMMON ----------  */
+
+
+  /* ---------- HEADER ----------  */
+  header {
+    padding: 0 var(--section-padding-h-mobile);
+  }
+  .header-inner {
+    /* height: 48px; */
+    height: 56px;
+  }
+
+  /* header-logo */
+  .header-logo {
+    width: 33px;
+    height: 28px;
+    background-image: url(../../../images/includes/header-logo-tablet.png);
+  }
+
+  /* header-right__tel */
+  .header-right__tel {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* header-right__hamburger-btn */
+  .header-right__hamburger-btn {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+  /* ---------- END - HEADER ----------  */
+
+
+  /* ---------- FOOTER ----------  */
+  .footer-inner {
+    padding: 0 var(--section-padding-h-mobile);
+  }
+  .footer-wrap {
+    gap: var(--spacing-24);
+    padding: var(--section-padding-h-mobile) 0;
+  }
+
+  /* footer-link */
+  .footer-link {
+    gap: var(--spacing-24);
+  }
+
+  /* footer-logo */
+  .footer-logo {
+    width: 131px;
+    height: 36px;
+  }
+
+  /* footer-info */
+  .footer-info {
+    margin-top: var(--spacing-24);
+  }
+  .footer-info__item {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .footer-info__item-text,
+  .footer-info__item-list {
+    margin-top: var(--spacing-8);
+  }
+
+  /* footer-copyright */
+  .footer-copyright {
+    padding: var(--spacing-12);
+  }
+  .footer-copyright__text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: var(--spacing-4);
+    row-gap: var(--spacing-8);
+  }
+  /* ---------- END - FOOTER ----------  */
+
+
+  /* ---------- SIDEBAR ----------  */
+  .sidebar-inner {
+    padding: var(--section-padding-h-mobile);
+  }
+
+  /* sidebar-header */
+  .sidebar-header {
+    padding-bottom: var(--spacing-16);
+  }
+  .sidebar-header__logo {
+    width: 33px;
+    height: 28px;
+    background-image: url(../../../images/includes/header-logo-tablet.png);
+  }
+
+  /* 사이드 바 닫기 버튼 */
+  .sidebar-header__close-btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* sidebar-gnb */
+  .sidebar-gnb {
+    gap: var(--spacing-24);
+  }
+  .sidebar-gnb__item a {
+    font-size: var(--font-size-Medium);
+  }
+
+  /* sidebar-etc */
+  .sidebar-etc {
+    gap: var(--spacing-8);
+  }
+  .sidebar-etc__item span {
+    width: 56px;
+  }
+  /* ---------- END - SIDEBAR ----------  */
+
+
+  /* ---------- 유틸리티 버튼 ----------  */
+  .dark-mode-btn {
+    bottom: 24px;
+    left: 24px;
+    width: 44px;
+    height: 44px;
+    background-size: 27px 26px;
+  }
+  /* ---------- END - 유틸리티 버튼 ----------  */
+}

@@ -1,0 +1,132 @@
+:root {
+  /* ############### COLOR ############### */
+  /* 공통 색상 */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-positive: #048848;
+  --color-negative: #ca0e25;
+  --color-warning: #ffc043;
+  --color-positive-transparent: #0488481a;
+  --color-negative-transparent: #ca0e251a;
+  
+  /* 테마 컬러 */
+  --theme-primary: #19248c;
+  --theme-secondary: #4cb9e7;
+  --theme-tertiary: #3453c7;
+
+  /* ---------- LIGHT MODE ---------- */
+  /* 배경 색상 */
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-black);
+  --bg-tertiary: #f5f5f5;
+
+  /* 메인페이지 INFO SECTION 배경 색상 */
+  --bg-info-section: #d6ddf4;
+
+  /* 컨텐츠 색상 */
+  --contents-primary: var(--color-black);
+  --contents-secondary: #6b6b6b;
+  --contents-tertiary: #a6a6a6;
+
+  /* BORDER 색상 */
+  --border-opaque: #898989;
+  --border-transparent: #8989894d;
+
+  /* BOX-SHADOW */
+  --shadow-normal: 0 4px 4px rgba(0, 0, 0, 0.05);
+
+
+  /* ############### SPACING ############### */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-36: 36px;
+  --spacing-40: 40px;
+  --spacing-44: 44px;
+  --spacing-48: 48px;
+  --spacing-52: 52px;
+  --spacing-56: 56px;
+  --spacing-60: 60px;
+  --spacing-64: 64px;
+
+
+  /* ############### PADDING ############### */
+  /* PC */
+  --section-padding-h-pc: 64px;
+  --section-padding-v-pc: 120px;
+
+  /* TABLET */
+  --section-padding-h-tablet: 32px;
+  --section-padding-v-tablet: 64px;
+
+  /* MOBILE */
+  --section-padding-h-mobile: 24px;
+  --section-padding-v-mobile: 48px;
+
+
+  /* ############### LAYOUT ############### */
+  /* MAX-WIDTH */
+  --max-width-pc: 1400px;
+
+  
+  /* ############### TYPOGRAPHY ############### */
+  /* ---------- FONT SIZE ---------- */
+  /* Perfect Fourth 적용(1.333배씩 커짐) */
+  --font-size-XXXL: 3.157rem; /* 50.52px */
+  --font-size-XXL: 2.369rem; /* 37.9px */
+  --font-size-XL: 1.777rem; /* 28.43px */ 
+  --font-size-Large: 1.333rem; /* 21.33px */ 
+  --font-size-Medium: 1rem; /* 16px */
+  --font-size-Small: 0.75rem; /* 12px */
+
+  /* Mobile 기본 폰트 사이즈 */
+  --font-size-mobile-body: 14px;
+
+  /* ---------- FONT FAMILY ---------- */
+  /* 한글 폰트 */
+  --font-KR-light: "SC-Dream--light", sans-serif;
+  --font-KR-medium: "SC-Dream--medium", sans-serif;
+  --font-KR-bold: "SC-Dream--bold", sans-serif;
+  --font-KR-heavy: "SC-Dream--heavy", sans-serif;
+  
+  /* 영문 폰트 */
+  --font-EN-medium: "Montserrat--medium", sans-serif;
+  --font-EN-semi-bold: "Montserrat--semi-bold", sans-serif;
+  --font-EN-black: "Montserrat--black", sans-serif;
+
+  /* 숫자 폰트 */
+  /* --font-number: "Oswald--bold"; */
+  --font-number: "GmarketSans--bold", sans-serif;
+
+  /* 배너 헤더 폰트 */
+  --font-banner: "NanumMyeongjo--bold", serif;
+
+  /* ---------- LINE HEIGHT ---------- */
+  --line-height-normal: 1.4em; 
+  --line-height-medium: 1.5em; 
+  --line-height-high: 1.6em; 
+}
+
+/* ---------- DARK MODE ---------- */
+:root[data-theme='dark'] {
+  /* 테마 컬러 */
+  --theme-primary: #4768a3;
+
+  /* 배경 색상 */
+  --bg-primary: var(--color-black);
+  --bg-secondary: var(--color-white);
+  --bg-tertiary: #2b2b2b;
+
+  /* 컨텐츠 색상 */
+  --contents-primary: var(--color-white);
+  --contents-secondary: #a6a6a6;
+  --contents-tertiary: #898989;
+
+  /* BORDER 색상 */
+  --border-opaque: #c4c4c4;
+}

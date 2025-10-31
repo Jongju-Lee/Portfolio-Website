@@ -1,0 +1,63 @@
+
+General Style Prompt(한글)
+
+내과 병원 웹사이트를 깔끔하고 전문적인 느낌으로 디자인해주세요.  
+배경은 흰색, 강조 색상은 연한 하늘색(#E0F0FF)과 네이비/그레이 계열을 사용합니다.  
+폰트는 SUIT, Pretendard, Noto Sans KR처럼 모던하고 가독성이 좋은 스타일로 적용해주세요.  
+전체 디자인은 차분하고 신뢰감을 주며, 성인과 고령층 환자가 사용하기 편리한 느낌이어야 합니다.
+
+
+
+General Style Prompt(영어)
+
+Design a clean and professional internal medicine clinic website.  
+Use a white background with light blue (#E0F0FF) and navy/gray accent colors.  
+Typography should be modern and legible, like SUIT, Pretendard, or Noto Sans KR.  
+Overall design should feel calm, trustworthy, and accessible for adult and senior patients.
+
+
+
+---------------------------------------------------
+
+
+메인 페이지(한글)
+
+내과 병원 메인 페이지를 디자인해주세요.
+
+- 상단 헤더에 로고와 메뉴(홈, 소개, 진료과목, 예약, 공지사항, FAQ, 갤러리) 포함  
+- 히어로 섹션: 의사/환자 상담 장면 이미지, 문구 "신뢰할 수 있는 건강 관리", 버튼 "예약하기"  
+- 병원 소개 섹션: 의사 사진 + 간단 소개 텍스트 + "자세히 보기" 버튼  
+- 진료과목 섹션: 4개 카드 (아이콘 + 제목 + 간단 설명) 예: 감기, 고혈압, 당뇨, 내시경  
+- 예약 안내 CTA 섹션: 간단 안내 + 버튼  
+- 갤러리 미리보기: 3~4 썸네일 이미지 + "전체보기" 버튼  
+- 최신 공지사항: 3개 제목 + 날짜, "공지사항 전체보기" 버튼  
+- 푸터: 주소, 전화번호, 진료시간, SNS 아이콘
+
+
+
+
+메인 페이지(영어)
+
+Design a home page for an internal medicine clinic website.
+
+- Header with logo and navigation menu: Home, About, Services, Reservation, Notices, FAQ, Gallery  
+- Hero section: image of doctor/patient consultation, headline "Reliable care for your health", button "Make a Reservation"  
+- Clinic introduction section: doctor photo + short text + "Learn More" button  
+- Services section: 4 cards (icon + title + short description) e.g., Cold, Hypertension, Diabetes, Endoscopy  
+- Reservation CTA section: short description + button  
+- Gallery preview: 3–4 thumbnail images + "View All" button  
+- Latest notices: 3 items with title + date, "View All Notices" button  
+- Footer: address, phone number, business hours, SNS icons
+
+
+
+---------------------------------------------------
+
+
+
+병원 소개 페이지(한글)
+
+
+
+
+병원 소개 페이지(영어)

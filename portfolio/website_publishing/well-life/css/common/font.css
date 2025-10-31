@@ -1,0 +1,58 @@
+/* S-Core Dream(한글 기본 폰트) */
+@font-face {
+  font-family: "SC-Dream--light";
+  src: url("../../font/SCDream3.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SC-Dream--medium";
+  src: url("../../font/SCDream5.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SC-Dream--bold";
+  src: url("../../font/SCDream6.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SC-Dream--heavy";
+  src: url("../../font/SCDream8.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+/* Montserrat(영문 기본 폰트) */
+@font-face {
+  font-family: "Montserrat--medium";
+  src: url("../../font/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat--semi-bold";
+  src: url("../../font/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat--black";
+  src: url("../../font/Montserrat-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+/* 지마켓 산스(숫자 폰트) */
+@font-face {
+  font-family: "GmarketSans--bold";
+  src: url("../../font/GmarketSansBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+/* 나눔명조(INTRO SECTION 배너 헤더 폰트) */
+@font-face {
+  font-family: "NanumMyeongjo--bold";
+  src: url("../../font/NanumMyeongjoBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}

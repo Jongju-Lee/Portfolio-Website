@@ -1,0 +1,103 @@
+/* ---------- 컴포넌트 반응형 UI - 태블릿 ---------- */
+
+@media (max-width: 1280px) {
+  /* ---------- COMMON ----------  */
+  h1, h2 {
+    font-size: var(--font-size-XXL);
+  }
+  h3 {
+    font-size: var(--font-size-XL);
+  }
+  h4 {
+    font-size: var(--font-size-Large);
+  }
+  h5 {
+    font-size: var(--font-size-Medium);
+  }
+  /* ---------- END - COMMON ----------  */
+
+  
+  /* ---------- HEADER ----------  */
+  header {
+    padding: 0 var(--section-padding-h-tablet);
+  }
+
+  /* header-logo */
+  .header-logo {
+    background-image: url(../../../images/includes/header-logo-pc.png);
+  }
+
+  /* header-gnb */
+  .header-gnb {
+    display: none;
+  }
+
+  /* header-right__tel */
+  .header-right__tel {
+    width: 38px;
+    height: 38px;
+    background-image: url(../../../images/includes/header-icon-tel.png);
+  }
+
+  /* header-right__hamburger-btn */
+  .header-right__hamburger-btn {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-image: url(../../../images/includes/header-icon-hamburger.png);
+    background-size: 100% 100%;
+  }
+  /* ---------- END - HEADER ----------  */
+
+
+  /* ---------- FOOTER ----------  */
+  .footer-inner {
+    padding: 0 var(--section-padding-h-tablet);
+  }
+  .footer-wrap {
+    flex-direction: column;
+    gap: var(--spacing-32);
+    padding: var(--section-padding-h-tablet) 0;
+  }
+
+  /* footer-contents */
+  .footer-contents {
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  /* footer-logo */
+  .footer-logo {
+    width: 175px;
+    height: 47px;
+  }
+
+  /* footer-info */
+  .footer-info {
+    margin-top: var(--spacing-32);
+  }
+  .footer-info__item-text,
+  .footer-info__item-list {
+    margin-top: var(--spacing-12);
+  }
+
+  /* footer-copyright */
+  .footer-copyright::after {
+    left: -32px;
+  }
+  .footer-copyright__text {
+    font-size: 12px;
+  }
+  /* ---------- END - FOOTER ----------  */
+
+
+  /* ---------- 유틸리티 버튼 ----------  */
+  .dark-mode-btn {
+    bottom: 32px;
+    left: 32px;
+    width: 50px;
+    height: 50px;
+    background-size: 31px 30px;
+  }
+  /* ---------- END - 유틸리티 버튼 ----------  */
+}
