@@ -29,6 +29,9 @@ main {
   box-sizing: border-box;
   outline: none;
 }
+main > section, header, .sidebar {
+  transition: background-color 0.5s;
+}
 button {
   border: none;
   cursor: pointer;
@@ -109,7 +112,7 @@ header {
   height: calc(72px / 2);
   background-image: url(../../images/includes/header-logo-pc.png);
   background-size: 100% 100%;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, background-image 0.5s linear;
 }
 /* 다크모드 시 이미지 교체 */
 [data-theme="dark"] .header-logo {
@@ -165,6 +168,7 @@ header {
   height: calc(152px / 4);
   background-image: url(../../images/includes/header-tel.png);
   background-size: 100% 100%;
+  transition: background-image 0.5s linear;
 }
 /* 다크모드 시 이미지 교체 */
 [data-theme="dark"] .header-right__tel {

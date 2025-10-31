@@ -41,9 +41,10 @@ button {
   height: 852px;
   border-radius: 54px;
   background-color: #19248c;
+  transition: background-color 0.5s linear;
 }
 /* 다크모드 적용 시 status-bar 색상 변경 */
-.mockup-container:has([data-theme="dark"]) {
+[data-theme="dark"].mockup-container {
   background-color: #758eba;
 }
 .mockup-header {

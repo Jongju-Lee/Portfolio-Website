@@ -55,6 +55,7 @@
 }
 .hero-badge-icon:nth-child(3) {
   background-color: var(--theme-primary);
+  transition: background-color 0.5s;
 }
 
 /* hero-logo */
@@ -358,6 +359,7 @@
   border-radius: 80px 0 0 0;
   background-color: var(--theme-primary);
   color: var(--color-white);
+  transition: background-color 0.5s;
 }
 .doctor-info__career {
   display: flex;
@@ -692,6 +694,7 @@
   padding-bottom: var(--spacing-36);
   background-image: url(../images/main-page/directions/directions-map-balloon.png);
   background-size: 100% 100%;
+  transition: background-image 0.5s;
 }
 /* 다크모드 시 이미지 변환 */
 [data-theme="dark"] .direction-map__img-balloon {

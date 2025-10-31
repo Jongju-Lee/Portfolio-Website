@@ -126,4 +126,57 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(centerInitialScrollVertically, 150);
     });
   }
+
+  // ------------------------------
+  // Iframe 다크모드 동기화
+  // ------------------------------
+  (function initIframeThemeSync() {
+    const container = document.querySelector('.mockup-container');
+    const iframe = document.querySelector('.mockup-iframe__wrap iframe');
+
+    // 필수 요소 확인
+    if (!container || !iframe) return;
+
+    // 컨테이너에 data-theme 반영
+    const applyThemeToContainer = (themeValue) => {
+      // themeValue가 truthy면 설정, 아니면 제거
+      if (themeValue) {
+        container.setAttribute('data-theme', themeValue);
+      } else {
+        container.removeAttribute('data-theme');
+      }
+    };
+
+    // iframe documentElement의 data-theme을 1회 동기화 + 변경 관찰
+    const startObservingIframeTheme = () => {
+      try {
+        const docEl = iframe.contentWindow && iframe.contentWindow.document && iframe.contentWindow.document.documentElement;
+        if (!docEl) return;
+
+        // 초기 상태 반영
+        applyThemeToContainer(docEl.getAttribute('data-theme'));
+
+        // 변화 감지 및 반영
+        const observer = new MutationObserver((mutations) => {
+          for (const mutation of mutations) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+              applyThemeToContainer(docEl.getAttribute('data-theme'));
+            }
+          }
+        });
+
+        observer.observe(docEl, { attributes: true, attributeFilter: ['data-theme'] });
+      } catch (error) {
+        // 교차 출처 등 접근 불가 시 종료
+        // console.warn('iframe 테마 동기화 실패:', error);
+      }
+    };
+
+    // iframe 로드 여부에 따라 초기화
+    if (iframe.complete) {
+      startObservingIframeTheme();
+    } else {
+      iframe.addEventListener('load', startObservingIframeTheme, { once: true });
+    }
+  })();
 });
