@@ -94,6 +94,7 @@
 .web-year__item {
   flex: 1;
   opacity: 0;
+  height: fit-content;
   transition: opacity 0.5s;
 }
 .web-year__item--active {

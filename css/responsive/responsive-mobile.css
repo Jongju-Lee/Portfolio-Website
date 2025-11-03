@@ -390,13 +390,10 @@
   }
   /* ----- web-year__container ----- */
   .web-year__wrap {
-    margin-top: var(--spacing-5xl);
+    margin-top: var(--spacing-4xl);
   }
   .web-year__wrap-inner {
     height: auto;
-  }
-  .web-year__wrap-inner:has(.web-year__item--active:nth-child(1)) {
-    height: 774px;
   }
   /* web-tab__btn-box */
   .web-tab__btn-box {
