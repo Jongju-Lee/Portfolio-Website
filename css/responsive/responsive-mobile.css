@@ -370,6 +370,33 @@
   .web-content {
     margin-top: var(--spacing-6xl);
   }
+  /* web-year__arrow */
+  .web-year__arrow {
+    gap: var(--spacing-xs);
+  }
+  .web-year__arrow-btn {
+    width: calc(96px / 2.8);
+    height: calc(96px / 2.8);
+  }
+  .web-year__arrow-num-wrap {
+    width: 66px;
+    height: 28px;
+  }
+  .web-year__arrow-num-item {
+    font-size: 28px;
+  }
+  .web-year__arrow-text {
+    font-size: 24px;
+  }
+  /* ----- web-year__container ----- */
+  .web-year__wrap {
+    margin-top: var(--spacing-3xl);
+  }
+  .web-year__wrap-inner {
+    height: auto;
+  }
+
+
   /* web-tab__btn-box */
   .web-tab__btn-box {
     width: 100%;
@@ -381,27 +408,27 @@
     height: calc(100% / 3);
   }
   /* 체크 별 indicator 위치 수정 */
-  input[id="web1"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+  input[id="web2-1"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
     top: 0;
     left: 0;
   }
-  input[id="web2"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+  input[id="web2-2"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
     top: 0;
     left: 50%;
   }
-  input[id="web3"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+  input[id="web2-3"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
     top: calc(100% / 3);
     left: 0;
   }
-  input[id="web4"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+  input[id="web2-4"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
     top: calc(100% / 3);
     left: 50%;
   }
-  input[id="web5"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+  input[id="web2-5"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
     top: calc(100% / 1.5);
     left: 0;
   }
-  input[id="web6"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
+  input[id="web2-6"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
     top: calc(100% / 1.5);
     left: 50%;
   }
@@ -422,6 +449,12 @@
     width: 100%;
     height: auto;
     padding-bottom: 65%;
+  }
+  /* web-tab__item-content */
+  .web-tab__item-content {
+    width: 100%;
+    height: auto;
+    max-height: none;
   }
   .web-tab__item-title {
     font-size: var(--spacing-3xl);

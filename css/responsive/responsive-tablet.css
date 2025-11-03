@@ -155,9 +155,39 @@
   
   
   /* ########## SECTION - WEB ########## */
+  /* web-year__arrow */
+  .web-year__arrow-box {
+    gap: var(--spacing-xs);
+  }
+  .web-year__arrow-btn {
+    width: calc(96px / 2.5);
+    height: calc(96px / 2.5);
+  }
+  .web-year__arrow-num-wrap {
+    width: 78px;
+    height: 32px;
+  }
+  .web-year__arrow-num-item {
+    font-size: 32px;
+  }
+  .web-year__arrow-text {
+    font-size: 28px;
+  }
+  /* ----- web-year__container ----- */
+  .web-year__wrap-inner {
+    height: 912px;
+  }
+
+  /* ---------- web.css 373번줄 1420px와 동일적용 ---------- */
+  /* .web-year__wrap-inner:has(.web-year__item--active:nth-child(2)) {
+    height: auto;
+  }
   .web-tab__btn-box {
     width: calc(100% - 30px);
-  }
+    max-width: 624px;
+  } */
+  /* ---------- web.css 373번줄 1420px와 동일적용 ---------- */
+
   /* ########## END - WEB ########## */
   
   

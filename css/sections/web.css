@@ -8,7 +8,7 @@
   align-items: center;
   gap: var(--spacing-md);
   width: fit-content;
-  margin: 0 auto var(--spacing-6xl);
+  margin: 0 auto;
 }
 /* web-year__arrow-box */
 .web-year__arrow-box {
@@ -48,6 +48,7 @@
   display: flex;
   width: 200%;
   transition: left 1s;
+  text-align: center;
 }
 .web-year__arrow-num-box--first {
   left: 0%;
@@ -64,7 +65,6 @@
   font-family: var(--font-EN);
   font-weight: 500;
 }
-/* web-year__arrow-text */
 .web-year__arrow-text {
   font-size: 32px;
   font-weight: 600;
@@ -75,6 +75,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  margin-top: var(--spacing-6xl);
 }
 .web-year__wrap-inner {
   position: relative;
@@ -119,7 +120,7 @@
   left: 0;
   width: calc(100% / 3);
   height: 50%;
-  background-color: var(--color-skill-item-bg);
+  background-color: var(--color-line);
   border-radius: var(--spacing-xl);
   transition: top 0.5s, left 0.5s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -234,7 +235,6 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
 }
 /* ----- web-tab__item-thum ----- */
 .web-tab__item-thum {
-  flex-shrink: 0;
   width: 624px;
   height: 434px;
   margin-top: var(--spacing-sm);
@@ -283,11 +283,12 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
 }
 /* ----- web-tab__item-content ----- */
 .web-tab__item-content {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 590px;
-  max-height: 434px;
+  max-height: 436px;
   margin-top: var(--spacing-sm);
 }
 .web-tab__item-title {
@@ -368,4 +369,20 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   background-color: var(--text-color-title);
   color: var(--text-color-white);
   border: 1px solid transparent;
+}
+
+/* 1420px 반응형 적용 */
+@media (max-width: 1420px) {
+  /* ########## SECTION - WEB ########## */
+  .web-year__wrap-inner {
+    height: 936px;
+  }
+  .web-year__wrap-inner:has(.web-year__item--active:nth-child(2)) {
+    height: auto;
+  }
+  .web-tab__btn-box {
+    width: calc(100% - 30px);
+    max-width: 624px;
+  }
+  /* ########## END - WEB ########## */
 }
