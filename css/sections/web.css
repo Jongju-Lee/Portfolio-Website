@@ -293,10 +293,22 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   margin-top: var(--spacing-sm);
 }
 .web-tab__item-title {
+  position: relative;
   font-family: var(--font-EN);
+  width: fit-content;
   font-size: 36px;
   font-weight: 400;
   line-height: 1em;
+}
+.web-tab__item-title.new::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: calc(100% + 2px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-negative);
 }
 .web-tab__item-desc {
   margin-top: var(--spacing-sm);

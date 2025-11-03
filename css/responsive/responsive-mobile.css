@@ -458,6 +458,11 @@
   .web-tab__item-title {
     font-size: var(--spacing-3xl);
   }
+  .web-tab__item-title.new::after {
+    left: 100%;
+    width: 8px;
+    height: 8px;
+  }
   .web-tab__item-detail li {
     align-items: start;
   }
@@ -559,8 +564,12 @@
   .sidebar-nav-inner {
     padding-bottom: 20%;
   }
-  .sidebar-nav__item {
+  .sidebar-nav__item span {
     font-size: var(--spacing-xl);
+  }
+  .sidebar-nav__item.new span::after {
+    top: -4px;
+    left: 100%;    
   }
   /* ########## END - 유틸리티 버튼 ########## */
   
