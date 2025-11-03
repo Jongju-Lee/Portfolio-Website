@@ -390,16 +390,17 @@
   }
   /* ----- web-year__container ----- */
   .web-year__wrap {
-    margin-top: var(--spacing-3xl);
+    margin-top: var(--spacing-5xl);
   }
   .web-year__wrap-inner {
     height: auto;
   }
-
-
+  .web-year__wrap-inner:has(.web-year__item--active:nth-child(1)) {
+    height: 774px;
+  }
   /* web-tab__btn-box */
   .web-tab__btn-box {
-    width: 100%;
+    width: calc(100% - 16px);
     height: 174px;
   }
   /* web-tab__btn-indicator */
@@ -440,10 +441,11 @@
   }
   /* web-tab__item-box */
   .web-tab__item-box {
-    margin-top: var(--spacing-4xl);
+    margin-top: var(--spacing-3xl);
   }
   .web-tab__item {
-    gap: var(--spacing-4xl);
+    gap: var(--spacing-2xl);
+    padding: 0 var(--spacing-sm);
   }
   .web-tab__item-thum {
     width: 100%;
