@@ -74,10 +74,30 @@ main > section:nth-of-type(even) {
 }
 /* section title */
 .inner > h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-items: start;
+  gap: var(--spacing-sm);
+  /* position: relative; */
   font-family: var(--font-EN);
   font-size: var(--font-size-section-title);
   font-weight: 600;
   padding-left: var(--spacing-md);
+  width: fit-content;
+}
+.inner > h2.new::after {
+  content: "NEW";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  line-height: 1em;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-negative);
+  color: var(--text-color-white);
+  font-size: var(--font-size-sm);
+  letter-spacing: 1px;
+  border-radius: 8px;
 }
 /* 키보드 탭키 focus 이동 표시 */
 *:focus-visible {

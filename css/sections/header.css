@@ -56,19 +56,22 @@ header.hide {
   transition: color 0.4s ease;
 }
 .header__gnb-item.new::before {
-      content: attr(data-count);
-    position: absolute;
-    top: 8px;
-    right: -16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    font-size: var(--font-size-xs);
-    background-color: var(--color-negative);
-    color: var(--text-color-white);
+  content: attr(data-count);
+  position: absolute;
+  top: 8px;
+  right: -16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: var(--font-size-xs);
+  background-color: var(--color-negative);
+  color: var(--text-color-white);
+}
+.header__gnb-item.new[data-count="1"]::before {
+  padding-right: 1px;
 }
 .header__gnb-item:hover {
   color: var(--text-color-gray);

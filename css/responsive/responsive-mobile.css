@@ -39,7 +39,7 @@
   /* ---------- COMMON ---------- */
   .inner > h2 {
     font-size: var(--font-size-section-title-mobile);
-    text-align: center;
+    margin: 0 auto;
   }
   /* ########## END - LAYOUT ########## */
 
