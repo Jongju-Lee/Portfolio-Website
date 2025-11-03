@@ -219,9 +219,6 @@
     display: none;
   }
   /* sidebar-nav */
-  .sidebar-nav-inner {
-    padding-top: 0;
-  }
   .sidebar-btn {
     display: block;
   }

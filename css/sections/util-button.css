@@ -93,8 +93,9 @@
 }
 /* 사이드바 열릴 때 위치 수정 */
 .sidebar-btn--active {
-  top: 2px;
-  right: 4px;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  /* right: 4px; */
 }
 /* lightbox열릴 때 숨김 처리 */
 .sidebar-btn--hide {
@@ -112,10 +113,6 @@
 /* 스크롤 내려갈 때 디자인 변경 */
 .sidebar-btn--on .sidebar-btn__inner {
   transform: scale(0.9);
-}
-/* 사이드바 열릴 때 디자인 변경 */
-.sidebar-btn--active .sidebar-btn__inner {
-  transform: scale(0.8);
 }
 .sidebar-btn__inner span {
   position: absolute;

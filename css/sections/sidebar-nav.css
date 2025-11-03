@@ -27,7 +27,6 @@ body.sidebar--on {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-top: var(--spacing-4xl);
   background-color: #fff;
   transition: right 0.3s;
 }
@@ -36,7 +35,7 @@ body.sidebar--on {
   right: 0;
 }
 .sidebar-nav__item {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-lg) 0;
   font-size: var(--spacing-2xl);
   font-family: var(--font-EN);
   font-weight: 400;
