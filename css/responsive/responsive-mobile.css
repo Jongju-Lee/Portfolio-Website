@@ -545,9 +545,14 @@
   }
   .epilogue-job-strength__item-title {
     font-size: 18px;
+    text-align: center;
+  }
+  .epilogue-job-strength__item:not(:last-child) {
+    margin-bottom: var(--spacing-4xl);
   }
   .epilogue-job-strength__item-text {
     font-size: var(--font-size-xl);
+    margin-top: var(--spacing-md)
   }
   /* ########## END - EPILOGUE ########## */
 
