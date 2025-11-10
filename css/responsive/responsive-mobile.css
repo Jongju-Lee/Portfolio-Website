@@ -484,6 +484,7 @@
       margin: 0 auto;
       grid-template-columns: repeat(2, 1fr);
       justify-items: center;
+      gap: var(--spacing-md);
     }
   }
   /* ----- 화면 400px보다 작을경우 한줄에 2버튼 ----- */

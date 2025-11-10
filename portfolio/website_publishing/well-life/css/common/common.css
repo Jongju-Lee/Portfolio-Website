@@ -94,6 +94,11 @@ header {
   box-shadow: var(--shadow-normal);
   z-index: 1000;
 }
+/* 다크모드시 shadow 색상 변경 */
+[data-theme="dark"] header {
+  box-shadow: var(--shadow-dark);
+}
+
 .header-inner {
   display: flex;
   justify-content: space-between;
