@@ -372,16 +372,20 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   color: var(--text-color-white);
   border: 1px solid transparent;
 }
-.web-tab__item-link-btn--func {
+.web-tab__item-link-btn--func,
+.web-tab__item-link-btn--design {
   background-color: var(--color-background-white);
   border: 1px solid var(--text-color-body);
   color: var(--text-color-body);
-  font-family: var(--font-KR);
 }
-.web-tab__item-link-btn--func:hover {
+.web-tab__item-link-btn--func:hover,
+.web-tab__item-link-btn--design:hover {
   background-color: var(--text-color-title);
   color: var(--text-color-white);
   border: 1px solid transparent;
+}
+.web-tab__item-link-btn--func {
+  font-family: var(--font-KR);
 }
 
 /* 1420px 반응형 적용 */

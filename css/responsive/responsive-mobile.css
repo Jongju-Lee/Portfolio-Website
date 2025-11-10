@@ -475,6 +475,19 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  /* ----- 화면 400px보다 작을경우 한줄에 2버튼 ----- */
+  @media (max-width: 400px) {
+    .web-year__item:first-child .web-tab__item-link-box {
+      display: grid;
+      width: fit-content;
+      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+  }
+  /* ----- 화면 400px보다 작을경우 한줄에 2버튼 ----- */
+
   .web-tab__item-link-btn {
     width: 100px;
   }
