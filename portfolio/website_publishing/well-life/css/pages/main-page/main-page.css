@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 64px);
-  background-image: url(../images/main-page/hero/hero-bg--pc.png);
+  background-image: url(../../../images/main-page/hero/hero-bg--pc.png);
   background-size: cover;
   background-position: center center;
 }
@@ -62,7 +62,7 @@
 .hero-logo {
   width: calc(788px / 2);
   height: calc(188px / 2);
-  background-image: url(../images/main-page/hero/hero-logo-pc.png);
+  background-image: url(../../../images/main-page/hero/hero-logo-pc.png);
   background-size: 100% 100%;
 }
 
@@ -182,7 +182,7 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 64px);
-  background-image: url(../images/main-page/why/why-bg.png);
+  background-image: url(../../../images/main-page/why/why-bg.png);
   background-size: cover;
   background-position: center center;
 }
@@ -300,7 +300,7 @@
   left: var(--spacing-64);
   width: calc(546px / 2);
   height: calc(481px / 2);
-  background-image: url(../images/main-page/doctor/doctor-bg--pc.png);
+  background-image: url(../../../images/main-page/doctor/doctor-bg--pc.png);
   background-size: 100% 100%;
 }
 .doctor-inner {
@@ -692,13 +692,13 @@
   width: calc(648px / 2);
   height: calc(288px / 2);
   padding-bottom: var(--spacing-36);
-  background-image: url(../images/main-page/directions/directions-map-balloon.png);
+  background-image: url(../../../images/main-page/directions/directions-map-balloon.png);
   background-size: 100% 100%;
   transition: background-image 0.5s;
 }
 /* 다크모드 시 이미지 변환 */
 [data-theme="dark"] .direction-map__img-balloon {
-  background-image: url(../images/main-page/directions/directions-map-balloon-dark.png);
+  background-image: url(../../../images/main-page/directions/directions-map-balloon-dark.png);
 }
 .direction-map__img-balloon-logo {
   width: 248px;

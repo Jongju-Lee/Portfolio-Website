@@ -36,7 +36,7 @@
   .hero-logo {
     width: calc(658px / 2);
     height: calc(168px / 2);
-    background-image: url(../images/main-page/hero/hero-logo-tablet.png);
+    background-image: url(../../../images/main-page/hero/hero-logo-tablet.png);
   }
   /* ---------- END - HERO ----------  */
 
@@ -305,7 +305,7 @@
   /* ---------- SECTION - HERO ----------  */
   .hero {
     min-height: auto;
-    background-image: url(../images/main-page/hero/hero-bg--mobile.png);
+    background-image: url(../../../images/main-page/hero/hero-bg--mobile.png);
   }
 
   /* hero-inner */
@@ -333,7 +333,7 @@
   .hero-logo {
     width: calc(438px / 2);
     height: calc(128px / 2);
-    background-image: url(../images/main-page/hero/hero-logo-mobile.png);
+    background-image: url(../../../images/main-page/hero/hero-logo-mobile.png);
   }
   /* hero-title */
   .hero-title {

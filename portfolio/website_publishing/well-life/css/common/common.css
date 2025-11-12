@@ -41,7 +41,6 @@ button {
   transition: transform 0.2s, opacity 0.2s;
 }
 button:hover {
-  transform: scale(1.05);
   opacity: 0.7;
 }
 a {
@@ -154,10 +153,13 @@ header {
   background-color: var(--theme-primary);
   transition: 0.2s;
 }
-.header-gnb__link:hover {
+.header-gnb__link:hover,
+.header-gnb__link:focus {
+  opacity: 0.7;
   color: var(--theme-primary);
 }
-.header-gnb__link:hover::after {
+.header-gnb__link:hover::after,
+.header-gnb__link:focus::after {
   width: 100%;
 }
 
@@ -173,7 +175,7 @@ header {
   height: calc(152px / 4);
   background-image: url(../../images/includes/header-tel.png);
   background-size: 100% 100%;
-  transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear, opacity 0.2s;
 }
 /* 다크모드 시 이미지 교체 */
 [data-theme="dark"] .header-right__tel {
