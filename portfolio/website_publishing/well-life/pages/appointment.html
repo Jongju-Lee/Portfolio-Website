@@ -12,11 +12,11 @@
 
   <!-- ########## CSS ########## -->
   <!-- 공통 CSS -->
-  <link rel="stylesheet" href="./css/common/common.css" />
-  <link rel="stylesheet" href="./css/common/common-responsive/common-responsive.css" />
-  <!-- 메인 페이지 CSS -->
-  <link rel="stylesheet" href="./css/appointment.css" />
-  <link rel="stylesheet" href="./css/appointment-responsive.css" />
+  <link rel="stylesheet" href="../css/common/common.css" />
+  <link rel="stylesheet" href="../css/common/common-responsive/common-responsive.css" />
+  <!-- 진료 예약 페이지 CSS -->
+  <link rel="stylesheet" href="../css/pages/appoinment/appoinment.css" />
+  <link rel="stylesheet" href="../css/pages/main-page/appoinment-responsive.css" />
 
   <!-- ########## JS ########## -->
   <!-- 컴포넌트(INCLUDES) 호출 로직 -->
@@ -31,349 +31,223 @@
     <header></header>
     <!-- ########## SIDE-BAR(INCLUDES) ########## -->
     <aside class="sidebar"></aside>
-    <!-- ########## MAIN ########## -->
-    <main class="appointment">
-      <!-- ########## SECTION - HERO ########## -->
-      <section class="hero">
-        <!-- hero-inner -->
-        <div class="hero-inner inner">
-          <!-- hero-badge-box -->
-          <div class="hero-badge-box">
-            <span class="hero-badge-icon">호흡기질환</span>
-            <span class="hero-badge-icon">만성기도질환</span>
-            <span class="hero-badge-icon">금연 클리닉</span>
+    <!-- ########## MAIN(진료 예약 페이지) ########## -->
+    <main id="appointment-page">
+      <div class="appointment-inner">
+        <h1 class="appointment-main-title">진료 예약</h1>
+        <!-- ########## APPOINTMENT-FORM ########## -->
+        <article class="appointment-form">
+          <div class="appointment-form__inner">
+            <!-- appointment-form__field -->
+            <div class="appointment-form__field">
+              <!-- appointment-form__box -->
+              <div class="appointment-form__box">
+                <!-- appointment-form__item - 날짜 선택 -->
+                <div class="appointment-form__item">
+                  <h3 class="appointment-form__item-title">날짜 선택</h3>
+                  <div class="appointment-form__item-calendar"></div>
+                </div>
+                <!-- appointment-form__item - 시간 선택 -->
+                <div class="appointment-form__item">
+                  <h3 class="appointment-form__item-title">시간 선택</h3>
+                  <div class="appointment-form__item-time-box">
+                    <button class="appointment-form__item-time-item" title="오전 아홉시">
+                      <span class="09:00"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오전 아홉시 삼십분">
+                      <span class="09:30"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오전 열시">
+                      <span class="10:00"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오전 열시 삼십분">
+                      <span class="10:30"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오전 열한시">
+                      <span class="11:00"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오전 열한시 삼십분">
+                      <span class="11:30"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오후 열두시">
+                      <span class="12:00"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오후 두시">
+                      <span class="14:00"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오후 두시 삼십분">
+                      <span class="14:30"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오후 세시">
+                      <span class="15:00"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오후 세시 삼십분">
+                      <span class="15:30"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오후 네시">
+                      <span class="16:00"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오후 네시 삼십분">
+                      <span class="16:30"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오후 다섯시">
+                      <span class="17:00"></span>
+                    </button>
+                    <button class="appointment-form__item-time-item" title="오후 다섯시 삼십분">
+                      <span class="17:30"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- appointment-form__box -->
+              <div class="appointment-form__box">
+                <!-- appointment-form__item - 진료과목 선택 -->
+                <div class="appointment-form__item">
+                  <h3 class="appointment-form__item-title">진료과목 선택</h3>
+                  <select class="appointment-form__item-select">
+                    <option value="일반내과 진료">일반내과 진료</option>
+                    <option value="금연클리닉">금연클리닉</option>
+                    <option value="만성질환클리닉">만성질환클리닉</option>
+                    <option value="위내시경">위내시경</option>
+                    <option value="대장내시경">대장내시경</option>
+                    <option value="초음파">초음파</option>
+                  </select>
+                </div>
+                <!-- appointment-form__item - 담당 의료진 -->
+                <div class="appointment-form__item">
+                  <h3 class="appointment-form__item-title">담당 의료진</h3>
+                  <div class="appointment-form__item-doctor">
+                    <div class="appointment-form__item-doctor-image">
+                      <img src="" alt="담당 의사 이미지">
+                    </div>
+                    <div class="appointment-form__item-doctor-info">
+                      <h4>김민재</h4>
+                      <b>대표원장</b>
+                      <span>호흡기내과전문의</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- appointment-form__item - 환자 정보 -->
+                <div class="appointment-form__item">
+                  <h3 class="appointment-form__item-title">환자 정보</h3>
+                  <form class="appointment-form__item-patient">
+                    <!-- 이름 -->
+                    <div class="appointment-form__item-patient-input-wrap">
+                      <label for="name">이름</label>
+                      <div class="appointment-form__item-patient-input-box--name appointment-form__item-patient-input-box">
+                        <input type="text" id="name" required>
+                      </div>
+                    </div>
+                    <!-- 주민등록번호 -->
+                    <div class="appointment-form__item-patient-input-wrap">
+                      <label for="resident-label">주민등록번호</label>
+                      <div class="appointment-form__item-patient-input-box--resident-num appointment-form__item-patient-input-box">
+                        <input type="text" id="resident-num-front" aria-labelledby="resident-label" required>
+                        <span>-</span>
+                        <input type="text" id="resident-num-back" aria-labelledby="resident-label" required>
+                      </div>
+                    </div>
+                    <!-- 전화번호 -->
+                    <div class="appointment-form__item-patient-input-wrap">
+                      <label for="phone">전화번호</label>
+                      <div class="appointment-form__item-patient-input-box--phone appointment-form__item-patient-input-box">
+                        <input type="text" id="phone-front" aria-labelledby="phone" required>
+                        <span>-</span>
+                        <input type="text" id="phone-center" aria-labelledby="phone" required>
+                        <span>-</span>
+                        <input type="text" id="phone-back" aria-labelledby="phone" required>
+                      </div>
+                    </div>
+                    <!-- 주소 -->
+                    <div class="appointment-form__item-patient-input-wrap">
+                      <label for="address">주소</label>
+                      <ul class="appointment-form__item-patient-list-box--address">
+                        <li class="appointment-form__item-patient-list-item--address">
+                          <input type="text" id="post" aria-labelledby="address" placeholder="우편번호" required>
+                          <button class="post-btn">우편번호찾기</button>
+                        </li>
+                        <li class="appointment-form__item-patient-list-item--address">
+                          <input type="text" id="address" aria-labelledby="address" placeholder="주소" required>
+                        </li>
+                        <li class="appointment-form__item-patient-list-item--address">
+                          <input type="text" id="address-detail" aria-labelledby="address" placeholder="상세주소" required>
+                        </li>
+                      </ul>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- appointment-form__terms-wrap -->
+            <div class="appointment-form__terms-wrap">
+              <!-- appointment-form__terms -->
+              <div class="appointment-form__terms">
+                <h3 class="appointment-form__terms-title">고유식별정보 처리에 대한 이용자 동의사항</h3>
+                <div class="appointment-form__terms-desc">
+                  <div class="appointment-form__terms-text">
+                    <p>1. 수집하는 고유식별정보 항목</p>
+                    <ul>
+                      <li>주민등록번호</li>
+                      <li>이름, 주민등록번호, 주소, 연락처, 휴대폰</li>
+                    </ul>
+                    <p>2. 수집·이용목적</p>
+                    <ul>
+                      <li>진료 예약 및 조회 시 정확한 본인 확인을 위함.</li>
+                    </ul>
+                    <p>3. 보유 및 이용기간</p>
+                    <ul>
+                      <li>홈페이지 시스템에는 주민등록번호를 보관하지 않습니다.</li>
+                      <li>별도의 병원 진료시스템에 예약정보로 보관됩니다.</li>
+                    </ul>
+                  </div>
+                  <div class="appointment-form__terms-check">
+                    <label for="agree-1">
+                      <input type="checkbox" id="agree-1">
+                      <span>고유식별정보의 수집과 이용에 동의합니다.</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- appointment-form__terms -->
+              <div class="appointment-form__terms">
+                <h3 class="appointment-form__terms-title">개인정보의 수집·이용 동의</h3>
+                <div class="appointment-form__terms-desc">
+                  <div class="appointment-form__terms-text">
+                    <p>1. 개인정보 등의 수집·이용 목적</p>
+                    <ul>
+                      <li>웰라이프내과의원은 진료예약시 정확한 본인 확인을 위하여 다음과 같이 귀하의 개인정보 및 고유식별정보를 수집, 이용합니다.</li>
+                    </ul>
+                    <p>2. 수집하려는 개인정보의 항목</p>
+                    <ul>
+                      <li>고유식별번호 : 주민등록번호</li>
+                      <li>필수항목 : 환자 주민등록번호, 환자명, 환자 주소, 환자 휴대폰</li>
+                    </ul>
+                    <p>3. 개인정보 등의 보유 및 이용 기간</p>
+                    <ul>
+                      <li>홈페이지 회원 탈퇴 시 파기</li>
+                    </ul>
+                    <p>
+                      4. 동의를 거부할 권리 / 동의거부에 따른 안내 : 고객께서는 본 안내에 따른 개인정보 수집에 대하여, 거부할 수 있는 권리가 있습니다. 수집·이용에 관한 사항의 동의를 거부할 때에는 온라인 진료 예약 이용이 제한됩니다. 단, 선택정보 사항을 획득하지 못한 사유로 인하여 서비스 제공을 거부하지 않습니다.
+                    </p>
+                  </div>
+                  <div class="appointment-form__terms-check">
+                    <label for="agree-2">
+                      <input type="checkbox" id="agree-2">
+                      <span>개인정보 수집처리에 동의합니다.</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 예약 완료하기 버튼 -->
+            <button class="appointment-form__finish-btn">예약 완료하기</button>
           </div>
-          <!-- hero-logo -->
-          <span class="hero-logo" aria-label="웰라이프내과 로고"></span>
-          <!-- hero-title -->
-          <h1 class="hero-title">
-            <span>환자의 마음까지 치유해드리는</span>
-            <span>의료기관이 되겠습니다.</span>
-          </h1>
-        </div>
-      </section>
-
-      <!-- ########## SECTION - INTRO ########## -->
-      <section class="intro">
-        <div class="intro-inner inner">
-          <!-- intro-heading -->
-          <section class="intro-heading">
-            <span class="intro-heading__title-mini title-sm">WELL LIFE LUNG CLINIC</span>
-            <h3 class="intro-heading__title">
-              <p>웰라이프내과의원은</p>
-              <div class="mobile-flex-box">
-                <b>여러분에게</b> <em>가장 도움이 되는 치료</em><span>를 하겠습니다.</span>
-              </div>
-            </h3>
-            <p class="intro-heading__desc">
-              <span>
-                안녕하세요. 
-                <em>웰라이프 내과를 찾아 주셔서 감사합니다.</em>
-              </span>
-              <span>대학병원 호흡기 질환 센터장을 역임하고 오랜 시간동안 대학병원에 재직하며</span>
-              <span>배운 전문 지식들과 여러 환자들을 진료하며 터득한 노하우로</span>
-              <span>저희 병원에 방문하신 모든 환자분들께 최선의 진료를 할 수 있도록 정성을 다하겠습니다.</span>
-            </p>
-            <span class="intro-heading__bg">LUNG CLINIC</span>
-          </section>
-          <!-- intro-image -->
-          <section class="intro-image">
-            <!-- intro-image__wrap -->
-            <div class="intro-image__wrap">
-              <div class="intro-image__box img-box">
-                <img src="./images/main-page/intro/intro-image-01.png" alt="진료 이미지 1">
-              </div>
-              <div class="intro-image__desc">
-                <b>ONE-STOP 진료</b>
-                <p>진료검사부터 치료까지 한 번에 가능한 진료 시스템을 구축하여 원스탑 진료 시행</p>
-              </div>
-            </div>
-            <!-- intro-image__wrap -->
-            <div class="intro-image__wrap">
-              <div class="intro-image__box img-box">
-                <img src="./images/main-page/intro/intro-image-02.png" alt="진료 이미지 2">
-              </div>
-              <div class="intro-image__desc">
-                <b>섬세하고 안전한 진료</b>
-                <p>원인과 증상에 대한 자세한 이해를 바탕으로 섬세하고 안전한 진료 시행</p>
-              </div>
-            </div>
-            <!-- intro-image__wrap -->
-            <div class="intro-image__wrap">
-              <div class="intro-image__box img-box">
-                <img src="./images/main-page/intro/intro-image-03.png" alt="진료 이미지 3">
-              </div>
-              <div class="intro-image__desc">
-                <b>환자를 위한 눈높이 진료</b>
-                <p>환자의 눈 높이에서 바라보고 생각하여 한걸음 다가선 진료 실시</p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
-    
-      <!-- ########## SECTION - WHY ########## -->
-      <section class="why">
-        <div class="why-inner inner">
-          <!-- why-heading -->
-          <section class="why-heading">
-            <h3 class="why-heading__question">
-              왜? 웰라이프내과의원을<br />
-              선택해야 할까요?
-            </h3>
-            <div class="why-heading__title-box">
-              <span class="why-heading__title-mini title-sm">WELL LIFE LUNG CLINIC</span>
-              <div class="why-heading__title">
-                <div class="why-heading__title-hash-tag">
-                  <span># 잘 들어주고</span>
-                  <span># 공감해 주고</span>
-                  <span># 설명을 잘해 주는</span>
-                </div>
-                <h1 class="why-heading__title-main">
-                  당신의 <b>든든한</b> 평생주치의
-                </h1>
-              </div>
-            </div>
-          </section>
-          <!-- why-badge -->
-          <div class="why-badge">
-            <div class="why-badge__item">
-              <p>
-                환자의 건강을 최우선으로 <span>생각하는 병원</span>
-              </p>
-            </div>
-            <span class="why-badge__line"></span>
-            <div class="why-badge__item">
-              <p>
-                대학병원 교수 출신 <span>호흡기내과전문의 진료</span>
-              </p>
-            </div>
-            <span class="why-badge__line"></span>
-            <div class="why-badge__item">
-              <p>
-                ONE-STOP 진료로 <span>정확한 진단과 치료 가능</span>
-              </p>
-            </div>
-          </div>
-          <!-- why-slogan -->
-          <h5 class="why-slogan">
-            <span>내 가족을 대하는 진심과 정성으로</span>
-            <span>평생 건강을 책임지는</span>
-            웰라이프내과의원이 되도록 노력하겠습니다.
-          </h5>
-        </div>
-      </section>
-
-      <!-- ########## SECTION - DOCTOR ########## -->
-      <section class="doctor">
-        <!-- doctor-bg-icon -->
-        <span class="doctor-bg-icon"></span>
-        <div class="doctor-inner inner">
-          <!-- doctor-heading -->
-          <section class="doctor-heading">
-            <!-- doctor-heading__title-box -->
-            <div class="doctor-heading__title-box">
-              <span class="doctor-heading__title-mini title-sm">WELL LIFE LUNG CLINIC</span>
-              <h2 class="doctor-heading__title">
-                정직한 진료를 약속하는 <b>의료진 소개</b>
-              </h2>
-            </div>
-            <!-- doctor-heading-name-box -->
-            <div class="doctor-heading-name-box">
-              <div class="doctor-heading__face img-box">
-                <img src="./images/main-page/doctor/doctor-image.png" alt="원장 이미지">
-              </div>
-              <h2 class="doctor-heading__name">
-                <b>김민재</b> 대표원장<span><i>|</i><em>호흡기내과전문의</em></span>
-              </h2>
-            </div>
-          </section>
-          <!-- doctor-info -->
-          <article class="doctor-info">
-            <div class="doctor-info__career">
-              <!-- doctor-info__career-text -->
-              <div class="doctor-info__career-text-container">
-                <div class="doctor-info__career-text-wrap">
-                  <div class="doctor-info__career-text-box">
-                    <ul class="doctor-info__career-text-item">
-                      <li>서울대학교 의과대학 의학사</li>
-                      <li>서울대학교 대학원 의학석사</li>
-                      <li>서울대학교 대학원 의학박사</li>
-                    </ul>
-                    <ul class="doctor-info__career-text-item">
-                      <li>서울대학교 의과대학 내과학 교실 교수</li>
-                      <li>미국 콜로라도 대학 연수</li>
-                      <li>서울대학교병원 호흡기알레르기내과 분과장</li>
-                      <li>서울대학교 의과대학 내과학교실 주임교수</li>
-                      <li>서울대학교병원 내과과장</li>
-                      <li>서울대학교병원 건강증진센터 센터장</li>
-                      <li>서울대학교 보건진료소 소장</li>
-                    </ul>
-                  </div>
-                  <div class="doctor-info__career-text-box">
-                    <ul class="doctor-info__career-text-item">
-                      <li>서울특별시의사회 학술이사</li>
-                      <li>서울대학교병원 연명의료윤리위원회 위원장</li>
-                      <li>서울대학교병원 권역 호흡기 전문질환센터장</li>
-                    </ul>
-                    <ul class="doctor-info__career-text-item">
-                      <li>대한내과학회 우수논문상</li>
-                      <li>보건복지가족부장관 표창장 수상</li>
-                      <li>보건복지부 장관 표창장 수상</li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- doctor-info__career-published -->
-                <div class="doctor-info__career-published">
-                  <span class="badge">저서</span>
-                  <p>호흡기학, 대한결핵및호흡기학회, 군자출판사</p>
-                </div>
-              </div>
-              <!-- doctor-info__face -->
-              <div class="doctor-info__face img-box">
-                <img src="./images/main-page/doctor/doctor-image.png" alt="원장 이미지">
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- ########## SECTION - INFO ########## -->
-      <section class="info">
-        <div class="info-inner inner">
-          <!-- info-heading-wrap -->
-          <div class="info-heading-wrap">
-            <!-- info-heading--tel -->
-            <div class="info-heading info-heading--tel">
-              <div class="info-heading__title-box">
-                <div class="info-heading__title-icon--tel info-heading__title-icon">
-                  <img src="./images/main-page/info/info-icon--tel.png" alt="전화기 아이콘">
-                </div>
-                <div class="info-heading__title">
-                  <h2>진료상담 및 예약</h2>
-                  <span class="title-sm">CONTACT INFORMATION</span>
-                </div>
-              </div>
-              <div class="info-heading__content--tel info-heading__content">
-                <h3>02-1234-1234</h3>
-                <p>
-                  진료에 대한 문의 및 예약상담을 위해 <span>항시 대기하여 친절히 상담해드립니다.</span>
-                </p>
-              </div>
-            </div>
-            <!-- info-heading-line -->
-            <span class="info-heading-line"></span>
-            <!-- info-heading--time -->
-            <div class="info-heading info-heading--time">
-              <div class="info-heading__title-box">
-                <div class="info-heading__title-icon--time info-heading__title-icon">
-                  <img src="./images/main-page/info/info-icon--time.png" alt="진료시간 아이콘">
-                </div>
-                <div class="info-heading__title">
-                  <h2>진료시간</h2>
-                  <span class="title-sm">OPEN & CLOSE</span>
-                </div>
-              </div>
-              <ul class="info-heading__content--time info-heading__content">
-                <li>
-                  <span class="badge">월·화·목·금</span>
-                  <p>
-                    오전 <b>09:00</b> ~ 오후 <b>06:00</b>
-                  </p>
-                </li>
-                <li>
-                  <span class="badge">수·토요일</span>
-                  <p>
-                    오전 <b>09:00</b> ~ 오후 <b>01:00</b>
-                    <span>(점심시간 없이 진료)</span>
-                  </p>
-                </li>
-                <li>
-                  <span class="badge">점심시간</span>
-                  <p>
-                    오후 <b>12:30</b> ~ 오후 <b>02:00</b>
-                  </p>
-                </li>
-                <li>
-                  <span class="badge">휴진</span>
-                  <p>일요일, 공휴일</p>
-                </li>
-              </ul> 
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ########## SECTION - DIRECTION ########## -->
-      <section class="direction">
-        <div class="direction-inner inner">
-          <!-- direction-heading -->
-          <section class="direction-heading">
-            <h2 class="direction-heading__title">
-              웰라이프내과의원 <b>오시는 길</b>
-            </h2>
-            <!-- direction-heading__way -->
-            <div class="direction-heading__way-wrap">
-              <div class="direction-heading__way">
-                <div class="direction-heading__way-top">
-                  <div class="direction-heading__way-top-icon--subway way-icon">
-                    <img src="./images/main-page/directions/directions-icon--subway.png" alt="지하철 아이콘">
-                  </div>
-                  <h4 class="direction-heading__way-top-title">지하철 이용시</h4>
-                </div>
-                <div class="direction-heading__way-bottom">
-                  <span class="direction-heading__way-bottom-badge--subway">7호선 자양역</span>
-                  <p class="direction-heading__way-bottom-label">자양역 1번 출구에서 412m</p>
-                </div>
-              </div>
-              <div class="direction-heading__way">
-                <div class="direction-heading__way-top">
-                  <div class="direction-heading__way-top-icon--bus way-icon">
-                    <img src="./images/main-page/directions/directions-icon--bus.png" alt="버스 아이콘">
-                  </div>
-                  <h4 class="direction-heading__way-top-title">버스 이용</h4>
-                </div>
-                <div class="direction-heading__way-bottom">
-                  <p class="direction-heading__way-bottom-label">신양초등학교앞 정류장</p>
-                  <div class="direction-heading__way-bottom-badge-box--bus">
-                    <span class="direction-heading__way-bottom-badge--bus">2222</span>
-                    <span class="direction-heading__way-bottom-badge--bus">광진05</span>
-                  </div>
-                </div>
-              </div>
-              <!-- direction-heading__way -->
-              <div class="direction-heading__way">
-                <div class="direction-heading__way-top">
-                  <div class="direction-heading__way-top-icon--parking way-icon">
-                    <img src="./images/main-page/directions/directions-icon--parking.png" alt="주차 아이콘">
-                  </div>
-                  <h4 class="direction-heading__way-top-title">주차안내</h4>
-                </div>
-                <div class="direction-heading__way-bottom">
-                  <p class="direction-heading__way-bottom-label">건물 내 주차장 이용</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- direction-map -->
-          <figure class="direction-map">
-            <figcaption class="direction-map-caption">서울특별시 광진구 능동로 50 <span>이튼타워리버 2차 108호</span></figcaption>
-            <div class="direction-map__img img-box">
-              <img src="./images/main-page/directions/directions-map.png" alt="병원 지도 이미지">
-              <div class="direction-map__img-balloon">
-                <div class="direction-map__img-balloon-logo img-box">
-                  <img src="./images/includes/footer-logo.png" alt="웰라이프내과 로고">
-                </div>
-              </div>
-            </div>
-          </figure>
-        </div>
-      </section>
-
+        </ㅁ>
+      </div>
       <!-- ########## FOOTER(INCLUDES) ########## -->
       <footer></footer>
     </main>
-    <!-- 다크모드 버튼(플로팅 버튼 제작 예정) -->
+    <!-- 다크모드 버튼 -->
     <button class="dark-mode-btn dark-mode-btn--dark"></button>
   </div>
 </body>
