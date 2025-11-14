@@ -1,6 +1,8 @@
 /* ---------- 진료 예약 페이지 ---------- */
-
-#appointment-page {}
+#appointment-page {
+  background-color: var(--bg-primary);
+  transition: background-color 0.5s;
+}
 .appointment-inner {
   padding: var(--section-padding-v-pc);
 }
@@ -10,7 +12,6 @@
   text-align: center;
   color: var(--theme-primary);
 }
-
 
 /* ---------- APPOINTMENT-FORM ---------- */
 .appointment-form {
@@ -25,6 +26,7 @@
 .appointment-form__field {
   display: flex;
   gap: var(--spacing-32);
+  color: var(--color-black);
 }
 .appointment-form__box {
   display: flex;
@@ -59,7 +61,7 @@
   border-radius: 8px;
 }
 
-/* 캘린더 타이틀 */
+/* 캘린더 */
 .appointment-form__item-calendar-title {
   display: flex;
   justify-content: center;
@@ -134,31 +136,27 @@
   pointer-events: none;
 }
 /* 토요일은 선택 가능 */
-.appointment-form__item-calendar-date:not(.appointment-form__item-calendar-date--disabled):nth-child(7n) {
+.appointment-form__item-calendar-date:nth-child(7n) {
   color: var(--theme-secondary);
 }
 .appointment-form__item-calendar-date:hover,
-.appointment-form__item-calendar-date--current,
 .appointment-form__item-calendar-date--selected {
-  color: var(--color-white);
+  color: var(--color-white) !important;
   font-family: var(--font-KR-medium);
 }
 .appointment-form__item-calendar-date:hover {
   opacity: 1;
   background-color: var(--theme-secondary);
 }
-.appointment-form__item-calendar-date--current {
-  background-color: var(--theme-primary);
-}
 .appointment-form__item-calendar-date--selected {
-  background-color: var(--theme-secondary);
+  background-color: var(--theme-primary) !important;
 }
 .appointment-form__item-calendar-date--disabled {
-  color: var(--contents-tertiary);
+  color: var(--contents-tertiary) !important;
   pointer-events: none;
 }
 
-/* appointment-form__item-time-wrap - 시간 선택 */
+/* appointment-form__item-time-box - 시간 선택 */
 .appointment-form__item-time-box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -190,7 +188,7 @@
   font-family: var(--font-KR-medium);
 }
 .appointment-form__item-time-item--selected {
-  background-color: var(--theme-primary);
+  background-color: var(--theme-primary) !important;
   border: 1px solid transparent;
   color: var(--color-white);
   font-family: var(--font-KR-medium);
@@ -198,7 +196,7 @@
 .appointment-form__item-time-item--disabled {
   border: 1px solid var(--border-transparent);
   color: var(--contents-tertiary);
-  background-color: var(--bg-text-background);
+  background-color: var(--color-light-gray);
   pointer-events: none;
 }
 
@@ -221,13 +219,11 @@
   border-radius: 8px;
   overflow: hidden;
 }
-.appointment-form__item-doctor-image img {}
 .appointment-form__item-doctor-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: var(--spacing-4) 0;
-
 }
 .appointment-form__item-doctor-info * {
   display: block;
@@ -238,7 +234,6 @@
   color: var(--theme-primary);
 }
 .appointment-form__item-doctor-info span {
-  /* color: var(--contents-secondary); */
   font-family: var(--font-KR-medium);
 }
 .appointment-form__item-doctor-info em {
@@ -262,6 +257,7 @@
 }
 .appointment-form__item-patient-input-box {
   flex: 1; 
+  height: 40px;
   display: flex;
   align-items: center;
   gap: var(--spacing-4);
@@ -270,6 +266,7 @@
 .appointment-form__item-patient-input-box input {
   flex: 1;
   min-width: 0;
+  height: inherit;
   display: inline-block;
   padding: var(--spacing-8);
 }
@@ -278,30 +275,25 @@
   color: var(--contents-tertiary);
 }
 
-/* 이름 */
-.appointment-form__item-patient-input-box--name {}
-
-/* 주민등록번호 */
-.appointment-form__item-patient-input-box--resident-num {}
-
-/* 전화번호 */
-.appointment-form__item-patient-input-box--phone {}
-
 /* 주소 */
 .appointment-form__item-patient-list-box--address {
   display: flex;
   width: 100%;
   flex-direction: column;
   gap: var(--spacing-8);
+  min-width: 0;
 }
 .appointment-form__item-patient-list-item--address {
   display: flex;
+  height: 40px;
   align-items: center;
   gap: var(--spacing-8);
 }
 .appointment-form__item-patient-list-item--address input {
   flex: 1;
+  height: inherit;
   padding: var(--spacing-8);
+  min-width: 0;
 }
 .appointment-form__item-patient-list-item--address input::placeholder {
   color: var(--contents-tertiary);
@@ -312,6 +304,7 @@
 .appointment-form__item-patient-list-item--address .post-btn {
   width: 120px;
   height: calc(100% - 2px);
+  box-sizing: border-box;
   font-family: var(--font-KR-medium);
   background-color: var(--contents-tertiary);
   color: var(--color-white);
@@ -331,16 +324,18 @@
 }
 .appointment-form__terms-title {
   display: flex;
-  align-items: center;
-  gap: var(--spacing-12);
+  gap: var(--spacing-8);
   margin-bottom: var(--spacing-16);
   font-family: var(--font-KR-medium);
+  font-size: var(--font-size-Large);
 }
 .appointment-form__terms-title::before {
+  flex-shrink: 0;
   content: "";
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
+  margin-top: 10px;
   background-color: var(--theme-primary);
   border-radius: 50%;
 }

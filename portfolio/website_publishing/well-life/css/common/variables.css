@@ -8,6 +8,7 @@
   --color-warning: #ffc043;
   --color-positive-transparent: #0488481a;
   --color-negative-transparent: #ca0e251a;
+  --color-light-gray: #f5f5f5;
   
   /* 테마 컬러 */
   --theme-primary: #19248c;
@@ -19,7 +20,7 @@
   --bg-primary: var(--color-white);
   --bg-secondary: var(--color-black);
   --bg-tertiary: #eef2fc;
-  --bg-text-background: #f5f5f5;
+  --bg-text-background: var(--color-light-gray);
   
   
   /* 컨텐츠 색상 */

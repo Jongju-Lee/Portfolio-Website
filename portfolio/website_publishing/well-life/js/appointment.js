@@ -45,9 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const compareDate = new Date(dateObj);
     compareDate.setHours(0, 0, 0, 0);
 
-    // 오늘 날짜 체크
-    if (compareDate.getTime() === today.getTime()) {
-      dateBtn.classList.add("appointment-form__item-calendar-date--current");
+    // 오늘 날짜는 기본 선택 처리
+    if (compareDate.getTime() === today.getTime() && isCurrentMonth) {
+      dateBtn.classList.add("appointment-form__item-calendar-date--selected");
+      selectedDate = new Date(dateObj);
     }
 
     // 과거 날짜 체크
@@ -197,5 +198,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   /* ---------- END - 시간 선택 기능 ---------- */
+
+
+  /* ---------- 버튼클릭시 refresh 방지 ---------- */
+  const form = document.querySelector(".appointment-form");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); // 기본 제출 막기
+    });
+  }
+  /* ---------- END - 버튼클릭시 refresh 방지 ---------- */
 });
 
