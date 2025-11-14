@@ -40,6 +40,11 @@
     margin-bottom: var(--spacing-48);
     font-size: var(--font-size-XL);
   }
+
+  /* ---------- APPOINTMENT-FORM ---------- */
+  .appointment-form {
+    gap: var(--spacing-32);
+  }
   .appointment-form__box {
     min-width: 100%;
     padding: var(--spacing-24);
@@ -83,4 +88,26 @@
     width: 100px;
     font-family: var(--font-KR-light);
   }
-} 
+
+  /* ----- appointment-form__terms-wrap ----- */
+  .appointment-form__terms {
+    min-width: 100%;
+  }
+  .appointment-form__terms-title {
+    margin-bottom: var(--spacing-12);
+  }
+  .appointment-form__terms-text {
+    height: auto;
+  }
+  .appointment-form__terms-check label {
+    font-family: var(--font-KR-light);
+  }
+
+  /* 예약 완료하기 버튼 */
+  .appointment-form__finish-btn {
+    margin: 0 auto;
+    font-size: inherit;
+    max-width: 300px;
+    padding: var(--spacing-8);
+  }
+}

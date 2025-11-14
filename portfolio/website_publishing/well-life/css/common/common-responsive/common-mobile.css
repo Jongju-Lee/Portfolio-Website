@@ -13,6 +13,16 @@
 
 
   /* ---------- COMMON ----------  */
+  input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+  }
+  input[type="checkbox"]:checked::after {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* HEADING */
   h1, h2 {
     font-size: var(--font-size-XL);
   }
@@ -25,6 +35,7 @@
   h5 {
     font-size: var(--font-size-mobile-body);
   }
+
   /* 미니 타이틀 */
   .title-sm {
     font-size: 12px;

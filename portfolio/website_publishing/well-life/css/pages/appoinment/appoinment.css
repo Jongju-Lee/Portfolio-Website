@@ -328,6 +328,7 @@
   margin-bottom: var(--spacing-16);
   font-family: var(--font-KR-medium);
   font-size: var(--font-size-Large);
+  line-height: var(--line-height-normal);
 }
 .appointment-form__terms-title::before {
   flex-shrink: 0;
