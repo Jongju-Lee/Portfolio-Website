@@ -32,6 +32,34 @@ main {
 main > section, header, .sidebar {
   transition: background-color 0.5s;
 }
+input, button, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+input {
+  border: 1px solid var(--border-transparent);
+  border-radius: 4px;
+}
+input[type="checkbox"] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--border-opaque);
+}
+input[type="checkbox"]:checked::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--theme-primary);
+  border-radius: 2px;
+}
+label:has(input[type="checkbox"]) {
+  cursor: pointer;
+}
 button {
   border: none;
   cursor: pointer;

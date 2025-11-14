@@ -130,7 +130,7 @@
   text-align: center;
   letter-spacing: 12px;
   line-height: 1em;
-  color: var(--bg-tertiary);
+  color: var(--bg-text-background);
   pointer-events: none;
   z-index: -1;
 }
@@ -435,7 +435,7 @@
 
 /* ----- SECTION - INFO ----- */
 .info {
-  background-color: var(--bg-info-section);
+  background-color: var(--bg-tertiary);
   color: var(--color-black);
 }
 .info-inner {
