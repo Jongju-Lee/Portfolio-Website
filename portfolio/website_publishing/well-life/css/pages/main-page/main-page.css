@@ -455,7 +455,7 @@
   text-align: center;
   font-size: var(--font-size-Large);
   color: var(--contents-secondary);
-  margin-top: var(--spacing-16);
+  margin-top: var(--spacing-32);
   line-height: var(--line-height-medium);
 }
 .gallery-heading__desc span {

@@ -71,14 +71,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ########## Slick.js ########## */
   $(".gallery-content__box").slick({
-    // centerMode: true,
-    // centerPadding: '400px',
-    // slidesToShow: 1,
     centerMode: true,
     centerPadding: '25%',
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          centerPadding: '20%',
+        },
+      },
+    ],
   });
   /* ########## END - Slick.js ########## */
 });
