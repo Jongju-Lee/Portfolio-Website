@@ -179,6 +179,9 @@
 
 
   /* ----- SECTION - GALLERY ----- */
+  .gallery-inner {
+    padding: var(--section-padding-v-tablet) 0;
+  }
   /* gallery-heading */
   .gallery-heading__title {
     margin-top: var(--spacing-8);
@@ -190,12 +193,13 @@
   
   /* gallery-content__box */
   .gallery-content__item::after {
+    bottom: 24px;
+    right: 28px;
     font-size: var(--font-size-Medium);
     padding: var(--spacing-4) var(--spacing-12);
   }
   .gallery-content__item:not(.slick-current)::after {
-    opacity: 0.3;
-    bottom: 48px;
+    bottom: 44px;
     right: 56px;
   }
   
@@ -206,13 +210,11 @@
     background-size: calc(96px / 2.5);
   }
   .gallery-content__box .slick-prev {
-    left: 19.5%;
+    left: 19%;
   }
   .gallery-content__box .slick-next {
-    right: 19.5%;
+    right: 19%;
   }
-
-
   /* ----- END - GALLERY ----- */
 
 
@@ -540,6 +542,49 @@
     padding: var(--spacing-4) var(--spacing-28);
   }
   /* ---------- END - DOCTOR ----------  */
+
+
+  /* ----- SECTION - GALLERY ----- */
+  .gallery-inner {
+    padding: var(--section-padding-v-mobile) 0;
+  }
+  /* gallery-heading */
+  .gallery-heading {
+    margin-bottom: var(--spacing-16);
+  }
+  .gallery-heading__desc {
+    font-size: var(--font-size-mobile-body);
+    padding: 0 var(--spacing-24);
+  }
+  .gallery-heading__desc span {
+    display: inline;
+    word-break: keep-all;
+  }
+  
+  /* gallery-content__box */
+  .gallery-content__item::after {
+    font-size: var(--font-size-Medium);
+    padding: var(--spacing-4) var(--spacing-12);
+  }
+  .gallery-content__item:not(.slick-current)::after {
+    bottom: 48px;
+    right: 56px;
+  }
+  
+  /* ----- GALLERY - Slick.js ----- */
+  .gallery-content__box .slick-arrow {
+    width: 36px;
+    height: 36px;
+    background-size: calc(96px / 3.5);
+    border-radius: 8px;
+  }
+  .gallery-content__box .slick-prev {
+    left: 5%;
+  }
+  .gallery-content__box .slick-next {
+    right: 5%;
+  }
+  /* ----- END - GALLERY ----- */
 
 
   /* ---------- SECTION - INFO ----------  */

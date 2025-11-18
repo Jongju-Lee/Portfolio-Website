@@ -83,6 +83,12 @@ document.addEventListener("DOMContentLoaded", () => {
           centerPadding: '20%',
         },
       },
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: '6%',
+        },
+      },
     ],
   });
   /* ########## END - Slick.js ########## */
