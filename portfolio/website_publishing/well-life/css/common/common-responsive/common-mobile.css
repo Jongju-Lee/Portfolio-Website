@@ -40,6 +40,13 @@
   .title-sm {
     font-size: 12px;
   }
+
+  /* HEADING-BG */
+  .heading-bg {
+    font-size: 64px;
+    padding: 0 var(--section-padding-h-mobile);
+    line-height: 1.2em;
+  }
   /* ---------- END - COMMON ----------  */
 
 

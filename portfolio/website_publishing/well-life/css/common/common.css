@@ -94,12 +94,29 @@ h4 {
 h5 {
     font-size: var(--font-size-Large);
 }
+
 /* 미니 타이틀 */
 .title-sm {
   font-family: var(--font-EN-medium);
   font-size: 14px;
   letter-spacing: 4px;
   line-height: var(--line-height-high);
+}
+
+/* HEADING-BG */
+.heading-bg {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  padding: 0 var(--section-padding-h-pc);
+  font-size: 120px;
+  font-family: var(--font-EN-black);
+  text-align: center;
+  letter-spacing: 12px;
+  line-height: 1em;
+  color: var(--bg-text-background);
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* img-box */

@@ -45,10 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const compareDate = new Date(dateObj);
     compareDate.setHours(0, 0, 0, 0);
 
-    // 오늘 날짜는 기본 선택 처리
-    if (compareDate.getTime() === today.getTime() && isCurrentMonth) {
-      dateBtn.classList.add("appointment-form__item-calendar-date--selected");
-      selectedDate = new Date(dateObj);
+    // 오늘 날짜 체크
+    if (compareDate.getTime() === today.getTime()) {
+      dateBtn.classList.add("appointment-form__item-calendar-date--current");
     }
 
     // 과거 날짜 체크

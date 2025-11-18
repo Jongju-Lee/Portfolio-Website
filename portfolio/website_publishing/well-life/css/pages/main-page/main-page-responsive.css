@@ -51,10 +51,6 @@
   .intro-heading {
     gap: var(--spacing-24);
   }
-  .intro-heading__bg {
-    font-size: 100px;
-    padding: 0 var(--section-padding-h-tablet);
-  }
 
   /* intro-image */
   .intro-image {
@@ -305,7 +301,7 @@
   /* ---------- SECTION - HERO ----------  */
   .hero {
     min-height: auto;
-    background-image: url(../../../images/main-page/hero/hero-bg--mobile.png);
+    background-image: url(../../../images/main-page/hero/hero-bg-mobile.png);
   }
 
   /* hero-inner */
@@ -376,9 +372,6 @@
   }
   .intro-heading__bg {
     top: calc(50% - -12px);
-    font-size: 64px;
-    padding: 0 var(--section-padding-h-mobile);
-    line-height: 1.2em;
   }
   
   /* intro-image */

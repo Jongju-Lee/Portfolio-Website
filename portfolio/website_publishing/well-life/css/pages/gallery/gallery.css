@@ -1,0 +1,58 @@
+/* ---------- 병원 둘러보기 페이지 ---------- */
+#gallery-page {
+  background-color: var(--bg-primary);
+  transition: background-color 0.5s;
+}
+.gallery-inner {
+  padding: var(--section-padding-v-pc);
+}
+.gallery-main-title {
+  margin-bottom: 80px;
+  font-size: var(--font-size-XXL);
+  text-align: center;
+  color: var(--theme-primary);
+}
+
+
+/* ---------- GALLERY-CONTENT ---------- */
+.gallery-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-64);
+  gap: 80px;
+  max-width: var(--max-width-pc);
+  margin: 0 auto;
+  padding: var(--section-padding-h-pc);
+  border-radius: 24px;
+  background-color: var(--bg-tertiary);
+}
+/* gallery-item */
+.gallery-item {
+}
+.gallery-item__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-32);
+  font-family: var(--font-KR-medium);
+}
+.gallery-item__title::before,
+.gallery-item__title::after {
+  content: "";
+  flex: 1;
+  max-width: 530px;
+  height: 1px;
+  background-color: var(--border-transparent);
+}
+.gallery-item__img-wrap {
+  display: flex;
+  gap: var(--spacing-32);
+
+}
+.gallery-item__img {
+  flex: 1;
+}
+.gallery-item__img img {
+  border-radius: 12px;
+  box-shadow: var(--shadow-gallery);
+}

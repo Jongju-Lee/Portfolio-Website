@@ -5,15 +5,15 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 64px);
-  background-image: url(../../../images/main-page/hero/hero-bg--pc.png);
+  background-image: url(../../../images/main-page/hero/hero-bg-pc.png);
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
 }
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
@@ -119,20 +119,8 @@
   display: block;
 }
 .intro-heading__bg {
-  position: absolute;
   top: calc(50% + 24px);
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  padding: 0 var(--section-padding-h-pc);
-  font-size: 120px;
-  font-family: var(--font-EN-black);
-  text-align: center;
-  letter-spacing: 12px;
-  line-height: 1em;
-  color: var(--bg-text-background);
-  pointer-events: none;
-  z-index: -1;
 }
 
 /* intro-image */
@@ -184,13 +172,13 @@
   height: calc(100vh - 64px);
   background-image: url(../../../images/main-page/why/why-bg.png);
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
 }
 .why::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
@@ -419,7 +407,6 @@
 }
 .doctor-info__career-published p::before {
   content: "-";
-  /* margin-right: var(--spacing-8); */
 }
 
 /* doctor-info__face */
@@ -431,6 +418,112 @@
   margin-top: -160px;
 }
 /* ----- END - DOCTOR ----- */
+
+
+/* ----- SECTION - GALLERY ----- */
+.gallery {
+  /* background-color: var(--color-light-gray); */
+  background-color: var(--bg-primary);
+  /* background-color: var(--bg-tertiary); */
+}
+.gallery-inner {
+  padding: var(--section-padding-v-pc) 0;
+}
+
+/* gallery-heading */
+.gallery-heading {
+  position: relative;
+  margin-bottom: var(--spacing-32);
+}
+
+.gallery-heading__title-box {
+  text-align: center;
+}
+.gallery-heading__title-mini {
+  color: var(--theme-primary);
+}
+
+.gallery-heading__title {
+  margin-top: var(--spacing-16);
+  font-family: var(--font-KR-light);
+}
+.gallery-heading__title b {
+  font-family: var(--font-KR-bold);
+  color: var(--theme-primary);
+}
+.gallery-heading__desc {
+  text-align: center;
+  font-size: var(--font-size-Large);
+  color: var(--contents-secondary);
+  margin-top: var(--spacing-16);
+  line-height: var(--line-height-medium);
+}
+.gallery-heading__desc span {
+  display: block;
+}
+
+/* gallery-content__box */
+.gallery-content__item {
+  position: relative;
+  padding: var(--spacing-16);
+  cursor: pointer;
+}
+.gallery-content__item::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  padding: var(--spacing-8) var(--spacing-16);
+  font-size: var(--font-size-Large);
+  background-color: var(--bg-primary);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 8px;
+  transition: bottom 0.5s, right 0.5s, opacity 0.5s;
+}
+.gallery-content__item:not(.slick-current)::after {
+  opacity: 0.3;
+  bottom: 64px;
+  right: 84px;
+}
+.gallery-content__item img {
+  border-radius: 12px;
+  transition: transform 0.5s;
+  box-shadow: var(--shadow-gallery);
+}
+.gallery-content__item:not(.slick-current) img {
+  opacity: 0.3;
+  transform: scale(0.9);
+}
+
+/* ----- GALLERY - Slick.js ----- */
+/* ARROW */
+.gallery-content__box .slick-arrow {
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: var(--theme-primary);
+  background-size: calc(96px / 2);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gallery-content__box .slick-arrow::before {
+  border: 1px solid #000;
+  color: transparent;
+  display: none;
+}
+.gallery-content__box .slick-prev {
+  left: 24%;
+  background-image: url(../../../images/main-page/gallery/gallery-prev-btn.png);
+}
+.gallery-content__box .slick-next {
+  right: 24%;
+  background-image: url(../../../images/main-page/gallery/gallery-next-btn.png);
+}
+
+/* ----- END - GALLERY ----- */
+
 
 
 /* ----- SECTION - INFO ----- */

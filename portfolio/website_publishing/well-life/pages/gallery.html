@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="웰라이프내과의원의 웹사이트 입니다." />
+  <meta name="keywords" content="웰라이프내과의원 웹사이트 진료예약 페이지">
+  <meta name="theme-color" content="#19428c" />
+  <title>웰라이프내과의원 | 갤러리</title>
+
+  <!-- ########## Open Graph 추가 필요 ########## -->
+
+  <!-- ########## CSS ########## -->
+  <!-- 공통 CSS -->
+  <link rel="stylesheet" href="../css/common/common.css" />
+  <link rel="stylesheet" href="../css/common/common-responsive/common-responsive.css" />
+  <!-- 진료 예약 페이지 CSS -->
+  <link rel="stylesheet" href="../css/pages/gallery/gallery.css" />
+  <link rel="stylesheet" href="../css/pages/gallery/gallery-responsive.css" />
+
+  <!-- ########## JS ########## -->
+  <!-- 컴포넌트(INCLUDES) 호출 로직 -->
+  <script src="../js/includes.js"></script>
+  <!-- 공통 JS -->
+  <script src="../js/common.js"></script>
+  <!-- 예약 페이지 JS -->
+  <script src="../js/appointment.js"></script>
+</head>
+<body>
+  <!-- ########## CONTAINER ########## -->
+  <div class="container">
+    <!-- ########## HEADER(INCLUDES) ########## -->
+    <header></header>
+    <!-- ########## SIDE-BAR(INCLUDES) ########## -->
+    <aside class="sidebar"></aside>
+    <!-- ########## MAIN(둘러보기 페이지) ########## -->
+    <main id="gallery-page">
+      <article class="gallery-inner">
+        <h1 class="gallery-main-title">병원 둘러보기</h1>
+        <!-- ########## GALLERY-CONTENT ########## -->
+        <div class="gallery-content">
+          <!-- gallery-item -->
+          <div class="gallery-item">
+            <h4 class="gallery-item__title">로비</h4>
+            <div class="gallery-item__img-wrap">
+              <div class="gallery-item__img img-box">
+                <img src="../images/gallery/gallery-lobby-img-01.png" alt="로비 이미지 1">
+              </div>
+              <div class="gallery-item__img img-box">
+                <img src="../images/gallery/gallery-lobby-img-02.png" alt="로비 이미지 2">
+              </div>
+              <div class="gallery-item__img img-box">
+                <img src="../images/gallery/gallery-lobby-img-03.png" alt="로비 이미지 3">
+              </div>
+            </div>
+          </div>
+          <!-- gallery-item -->
+          <div class="gallery-item">
+            <h4 class="gallery-item__title">진료실</h4>
+            <div class="gallery-item__img-wrap">
+              <div class="gallery-item__img img-box">
+                <img src="../images/gallery/gallery-care-img-01.png" alt="진료실 이미지 1">
+              </div>
+              <div class="gallery-item__img img-box">
+                <img src="../images/gallery/gallery-care-img-02.png" alt="진료실 이미지 2">
+              </div>
+              <div class="gallery-item__img img-box">
+                <img src="../images/gallery/gallery-care-img-03.png" alt="진료실 이미지 3">
+              </div>
+            </div>
+          </div>
+          <!-- gallery-item -->
+          <div class="gallery-item">
+            <h4 class="gallery-item__title">검사실</h4>
+            <div class="gallery-item__img-wrap">
+              <div class="gallery-item__img img-box">
+                <img src="../images/gallery/gallery-examination-img-01.png" alt="검사실 이미지 1">
+              </div>
+              <div class="gallery-item__img img-box">
+                <img src="../images/gallery/gallery-examination-img-02.png" alt="검사실 이미지 2">
+              </div>
+              <div class="gallery-item__img img-box">
+                <img src="../images/gallery/gallery-examination-img-03.png" alt="검사실 이미지 3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- ########## FOOTER(INCLUDES) ########## -->
+      <footer></footer>
+    </main>
+    <!-- 다크모드 버튼 -->
+    <button class="dark-mode-btn dark-mode-btn--dark"></button>
+  </div>
+</body>
+</html>

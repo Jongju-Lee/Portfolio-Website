@@ -67,4 +67,19 @@ document.addEventListener("DOMContentLoaded", () => {
     sideBar.classList.remove("sidebar--active");
   });
   /* ########## END - 사이드 바 기능 ########## */
+
+
+  /* ########## Slick.js ########## */
+  $(".gallery-content__box").slick({
+    // centerMode: true,
+    // centerPadding: '400px',
+    // slidesToShow: 1,
+    centerMode: true,
+    centerPadding: '25%',
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+  /* ########## END - Slick.js ########## */
 });
+

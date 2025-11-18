@@ -10,6 +10,14 @@
 
   <!-- ########## Open Graph 추가 필요 ########## -->
 
+  <!-- ########## jQuery CDN ########## -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- ########## Slick.js ########## -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   <!-- ########## CSS ########## -->
   <!-- 공통 CSS -->
   <link rel="stylesheet" href="./css/common/common.css" />
@@ -17,7 +25,7 @@
   <!-- 메인 페이지 CSS -->
   <link rel="stylesheet" href="./css/pages/main-page/main-page.css" />
   <link rel="stylesheet" href="./css/pages/main-page/main-page-responsive.css" />
-
+  
   <!-- ########## JS ########## -->
   <!-- 컴포넌트(INCLUDES) 호출 로직 -->
   <script src="./js/includes.js"></script>
@@ -34,7 +42,7 @@
     <!-- ########## MAIN ########## -->
     <main>
       <!-- ########## SECTION - HERO ########## -->
-      <section class="hero">
+      <section id="hero" class="hero">
         <!-- hero-inner -->
         <div class="hero-inner inner">
           <!-- hero-badge-box -->
@@ -54,7 +62,7 @@
       </section>
 
       <!-- ########## SECTION - INTRO ########## -->
-      <section class="intro">
+      <section id="intro" class="intro">
         <div class="intro-inner inner">
           <!-- intro-heading -->
           <section class="intro-heading">
@@ -74,7 +82,7 @@
               <span>배운 전문 지식들과 여러 환자들을 진료하며 터득한 노하우로</span>
               <span>저희 병원에 방문하신 모든 환자분들께 최선의 진료를 할 수 있도록 정성을 다하겠습니다.</span>
             </p>
-            <span class="intro-heading__bg">LUNG CLINIC</span>
+            <span class="intro-heading__bg heading-bg">LUNG CLINIC</span>
           </section>
           <!-- intro-image -->
           <section class="intro-image">
@@ -113,7 +121,7 @@
       </section>
     
       <!-- ########## SECTION - WHY ########## -->
-      <section class="why">
+      <section id="why" class="why">
         <div class="why-inner inner">
           <!-- why-heading -->
           <section class="why-heading">
@@ -165,7 +173,7 @@
       </section>
 
       <!-- ########## SECTION - DOCTOR ########## -->
-      <section class="doctor">
+      <section id="doctor" class="doctor">
         <!-- doctor-bg-icon -->
         <span class="doctor-bg-icon"></span>
         <div class="doctor-inner inner">
@@ -238,8 +246,57 @@
         </div>
       </section>
 
+      <!-- ########## SECTION - GALLERY ########## -->
+      <section id="gallery" class="gallery">
+        <div class="gallery-inner">
+          <!-- gallery-heading -->
+          <div class="gallery-heading">
+            <div class="gallery-heading__title-box">
+              <span class="gallery-heading__title-mini title-sm">WELL LIFE LUNG CLINIC</span>
+              <h2 class="gallery-heading__title">
+                웰라이프내과의원 <b>둘러보기</b>
+              </h2>
+            </div>
+            <p class="gallery-heading__desc">
+              <span>환자를 내 가족처럼 편안하게 진료하기 위해 항상 노력하는</span>
+              <span>웰라이프내과의원이 되겠습니다.</span>
+            </p>
+          </div>
+          <!-- gallery-content__box -->
+          <div class="gallery-content__box">
+            <div class="gallery-content__item img-box" data-text="안내 데스크">
+              <img src="./images/main-page/gallery/gallery-lobby-img-01.png" alt="안내 데스크">
+            </div>
+            <div class="gallery-content__item img-box" data-text="로비">
+              <img src="./images/main-page/gallery/gallery-lobby-img-02.png" alt="로비">
+            </div>
+            <div class="gallery-content__item img-box" data-text="진료실 복도">
+              <img src="./images/main-page/gallery/gallery-lobby-img-03.png" alt="진료실 복도">
+            </div>
+            <div class="gallery-content__item img-box" data-text="진료실">
+              <img src="./images/main-page/gallery/gallery-care-img-01.png" alt="진료실">
+            </div>
+            <div class="gallery-content__item img-box" data-text="혈액검사실">
+              <img src="./images/main-page/gallery/gallery-care-img-02.png" alt="혈액검사실">
+            </div>
+            <div class="gallery-content__item img-box" data-text="입원실">
+              <img src="./images/main-page/gallery/gallery-care-img-03.png" alt="입원실">
+            </div>
+            <div class="gallery-content__item img-box" data-text="주사실">
+              <img src="./images/main-page/gallery/gallery-examination-img-01.png" alt="주사실">
+            </div>
+            <div class="gallery-content__item img-box" data-text="X-Ray실">
+              <img src="./images/main-page/gallery/gallery-examination-img-02.png" alt="엑스레이실">
+            </div>
+            <div class="gallery-content__item img-box" data-text="호흡기 치료실">
+              <img src="./images/main-page/gallery/gallery-examination-img-03.png" alt="호흡기 치료실">
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ########## SECTION - INFO ########## -->
-      <section class="info">
+      <section id="info" class="info">
         <div class="info-inner inner">
           <!-- info-heading-wrap -->
           <div class="info-heading-wrap">
@@ -305,7 +362,7 @@
       </section>
 
       <!-- ########## SECTION - DIRECTION ########## -->
-      <section class="direction">
+      <section id="direction" class="direction">
         <div class="direction-inner inner">
           <!-- direction-heading -->
           <section class="direction-heading">
