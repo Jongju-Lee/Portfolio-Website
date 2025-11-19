@@ -178,6 +178,75 @@
   /* ---------- END - DOCTOR ----------  */
 
 
+  /* ----- SECTION - DISEASE ----- */
+  .disease-inner {
+    padding: 0 var(--section-padding-h-tablet) var(--section-padding-v-tablet);
+  }
+
+  /* disease-banner */
+  .disease-banner__img {
+    margin-left: -32px;
+  }
+
+  /* disease-heading */
+  .disease-heading {
+    margin: -80px auto 0;
+    padding: var(--spacing-32);
+  }
+  .disease-heading__title b {
+    display: block;
+  }
+  .disease-heading__content {
+    max-width: 600px;
+    margin: var(--spacing-24) auto 0;
+  }
+  .disease-heading__content-badge {
+    font-size: var(--font-size-Large);
+  }
+  .disease-heading__content-desc {
+    margin: var(--spacing-24) auto 0 ;
+  }
+  
+  /* ----- disease-types, disease-test 공통 ----- */
+  /* disease-sub-title */
+  .disease-types__title,
+  .disease-test__title {
+    margin-bottom: var(--spacing-24);
+  }
+  /* ----- disease-types, disease-test 공통 ----- */
+
+  /* disease-content */
+  .disease-content {
+    margin: 64px auto 0;
+  }
+
+  /* disease-types */
+  .disease-types__wrap {
+    gap: var(--spacing-24);
+  }
+  .disease-types__item {
+    padding: var(--spacing-24);
+    gap: var(--spacing-16);
+  }
+  .disease-types__item-desc {
+    gap: var(--spacing-8);
+  }
+
+  /* disease-test */
+  .disease-test {
+    margin-top: 64px;
+  }
+  .disease-test__wrap {
+    gap: var(--spacing-24);
+    padding: 0 var(--spacing-32);
+    padding: 0;
+  }
+  .disease-test__item span {
+    font-size: var(--font-size-Large);
+  }
+  /* ----- END - DISEASE ----- */
+
+
   /* ----- SECTION - GALLERY ----- */
   .gallery-inner {
     padding: var(--section-padding-v-tablet) 0;

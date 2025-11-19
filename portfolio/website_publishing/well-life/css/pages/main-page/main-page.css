@@ -460,7 +460,7 @@
   color: var(--theme-primary);
 }
 .disease-heading__title {
-  margin-top: var(--spacing-24);
+  margin-top: var(--spacing-16);
 }
 .disease-heading__title span {
   font-family: var(--font-KR-light);  
