@@ -33,7 +33,8 @@
   --border-transparent: #8989894d;
 
   /* BOX-SHADOW */
-  --shadow-normal: 0 4px 4px rgba(0, 0, 0, 0.05);
+  --shadow-normal: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-deep: 0 4px 12px rgba(0, 0, 0, 0.2);
   --shadow-dark: 0 4px 4px rgba(255, 255, 255, 0.2);
   --shadow-gallery: 0 4px 8px rgba(0, 0, 0, 0.25);
 
@@ -131,4 +132,9 @@
 
   /* BORDER 색상 */
   --border-opaque: #c4c4c4;
+
+  /* BOX-SHADOW */
+  --shadow-normal: 0 4px 8px rgba(255, 255, 255, 0.2);
+  --shadow-deep: 0 4px 20px rgba(255, 255, 255, 0.3);
+  --shadow-gallery: 0 4px 8px rgba(255, 255, 255, 0.3);
 }

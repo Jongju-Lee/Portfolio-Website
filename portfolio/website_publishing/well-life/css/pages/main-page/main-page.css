@@ -420,6 +420,337 @@
 /* ----- END - DOCTOR ----- */
 
 
+/* ----- SECTION - DISEASE ----- */
+.disease {
+  background-color: var(--bg-primary);
+}
+.disease-inner {
+  padding: 0 var(--section-padding-h-pc) var(--section-padding-v-pc);
+}
+
+/* disease-banner */
+.disease-banner__img {
+  position: relative;
+  width: 100vw;
+  margin-left: -64px;
+}
+.disease-banner__img::after {
+  content: "";
+  opacity: 0.3;
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-black);
+}
+
+/* disease-heading */
+.disease-heading {
+  position: relative;
+  max-width: var(--max-width-pc);
+  margin: -200px auto 0;
+  padding: var(--spacing-48);
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-deep);
+  z-index: 1;
+  border-radius: 20px;
+}
+.disease-heading__title-box {
+  text-align: center;
+}
+.disease-heading__title-mini {
+  color: var(--theme-primary);
+}
+.disease-heading__title {
+  margin-top: var(--spacing-24);
+}
+.disease-heading__title span {
+  font-family: var(--font-KR-light);  
+}
+.disease-heading__title b {
+  color: var(--theme-primary);
+}
+.disease-heading__content {
+  max-width: 800px;
+  margin: var(--spacing-32) auto 0;
+  text-align: center;
+}
+.disease-heading__content-badge {
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: var(--spacing-16) var(--spacing-32);
+  font-family: var(--font-KR-medium);
+  font-size: var(--font-size-XL);
+  background-color: var(--theme-primary);
+  color: var(--color-white);
+}
+.disease-heading__content-desc {
+  margin: var(--spacing-32) auto 0 ;
+  color: var(--contents-secondary);
+  word-break: keep-all;
+}
+.disease-heading__content-desc span {
+  display: block;
+}
+
+/* disease-content */
+.disease-content {
+  max-width: var(--max-width-pc);
+  margin: 80px auto 0;
+}
+
+/* ----- disease-types, disease-test 공통 ----- */
+/* disease-sub-title */
+.disease-types__title,
+.disease-test__title {
+  margin-bottom: var(--spacing-32);
+}
+.disease-types__title::before,
+.disease-test__title::before {
+  content: "|";
+  font-family: var(--font-KR-medium);
+  color: var(--theme-primary);
+}
+.disease-types__title span,
+.disease-test__title span {
+  font-family: var(--font-KR-light);
+}
+/* ----- disease-types, disease-test 공통 ----- */
+
+/* disease-types */
+.disease-types__wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-32);
+}
+.disease-types__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-24);
+  padding: var(--spacing-32);
+  border: 1px solid var(--theme-primary);
+  border-radius: 20px;
+}
+.disease-types__item-icon {
+  display: inline-block;
+  width: 79px;
+  height: 76px;
+  background-size: 100% 100%;
+  transition: background-image 0.5s;
+}
+.disease-types__item-icon.bronchitis {
+  background-image: url(../../../images/main-page/disease/disease-icon-01.png);
+}
+[data-theme="dark"] .disease-types__item-icon.bronchitis {
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-01.png);
+}
+.disease-types__item-icon.asthma {
+  background-image: url(../../../images/main-page/disease/disease-icon-02.png);
+}
+[data-theme="dark"] .disease-types__item-icon.asthma {
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-02.png);
+}
+.disease-types__item-icon.pneumonia {
+  background-image: url(../../../images/main-page/disease/disease-icon-03.png);
+}
+[data-theme="dark"] .disease-types__item-icon.pneumonia {
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-03.png);
+}
+.disease-types__item-icon.rhinitis {
+  background-image: url(../../../images/main-page/disease/disease-icon-04.png);
+}
+[data-theme="dark"] .disease-types__item-icon.rhinitis {
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-04.png);
+}
+.disease-types__item-icon.cough {
+  background-image: url(../../../images/main-page/disease/disease-icon-05.png);
+}
+[data-theme="dark"] .disease-types__item-icon.cough {
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-05.png);
+}
+.disease-types__item-icon.obstructive {
+  background-image: url(../../../images/main-page/disease/disease-icon-06.png);
+}
+[data-theme="dark"] .disease-types__item-icon.obstructive {
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-06.png);
+}
+.disease-types__item-icon.cancer {
+  background-image: url(../../../images/main-page/disease/disease-icon-07.png);
+}
+[data-theme="dark"] .disease-types__item-icon.cancer {
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-07.png);
+}
+.disease-types__item-icon.flu {
+  background-image: url(../../../images/main-page/disease/disease-icon-08.png);
+}
+[data-theme="dark"] .disease-types__item-icon.flu {
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-08.png);
+}
+.disease-types__item-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-12);
+}
+.disease-types__item-desc b {
+  font-size: var(--font-size-Large);
+  font-family: var(--font-KR-medium);
+  color: var(--theme-primary);
+}
+.disease-types__item-desc p {
+  color: var(--contents-secondary);
+  text-align: center;
+  word-break: keep-all;
+}
+
+/* disease-test */
+.disease-test {
+  margin-top: 80px;
+}
+.disease-test__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-32);
+  padding: 0 var(--spacing-64);
+}
+.disease-test__item {
+  position: relative;
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-normal);
+}
+.disease-test__item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-white);
+  font-family: var(--font-KR-medium);
+  font-size: var(--font-size-XL);
+  white-space: nowrap;
+}
+/* ----- END - DISEASE ----- */
+
+
+/* ----- SECTION - SUBJECT ----- */
+.subject-banner {
+  padding: var(--section-padding-v-pc) var(--section-padding-h-pc);
+  background-image: url(../../../images/main-page/subject/subject-banner.jpg);
+  background-position: center top;
+}
+
+/* subject-heading */
+.subject-heading {
+  max-width: var(--max-width-pc);
+  margin: 0 auto;
+  color: var(--color-white);
+}
+.subject-heading__title-mini {
+  opacity: 0.6;
+}
+.subject-heading__title {
+  margin: var(--spacing-32) 0;
+}
+.subject-heading__title span {
+  font-family: var(--font-KR-light);
+}
+.subject-heading__text {
+  opacity: 0.6;
+  font-size: var(--font-size-Large);
+}
+
+/* subject-clinic */
+.subject-clinic {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-32);
+  max-width: var(--max-width-pc);
+  margin: var(--spacing-64) auto 0;
+  padding: var(--spacing-32);
+  background-color: var(--bg-primary);
+  border-radius: 12px 0 0 12px;
+}
+.subject-clinic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 50%;
+  height: 100%;
+  background-color: var(--bg-primary);
+}
+.subject-clinic .partition {
+  width: 60px;
+  height: 1px;
+  background-color: var(--border-opaque);
+  transform: rotate(-50deg);
+
+}
+.subject-clinic__item {
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-32);
+}
+.subject-clinic__item-icon {
+  flex-shrink: 0;
+  width: 88px;
+  height: 83px;
+  background-size: 100% 100%;
+}
+.subject-clinic__item-icon.respiratory {
+  background-image: url(../../../images/main-page/subject/subject-icon-01.png);
+}
+.subject-clinic__item-icon.chronic {
+  background-image: url(../../../images/main-page/subject/subject-icon-02.png);
+}
+.subject-clinic__item-text b {
+  color: var(--theme-primary);
+  font-family: var(--font-KR-bold);
+  font-size: var(--font-size-Large);
+}
+.subject-clinic__item-text p {
+  margin-top: var(--spacing-4);
+  color: var(--contents-secondary);
+}
+
+/* subject-department__wrap */
+.subject-department__wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.subject-department__item {
+  position: relative;
+  display: block;
+  width: calc(100% / 3);
+}
+.subject-department__item-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+.subject-department__item-text-box b {
+  font-family: var(--font-KR-bold);
+  font-size: var(--font-size-XL);
+}
+.subject-department__item-text-box p {
+  margin-top: var(--spacing-16);
+}
+.subject-department__item-text-box p span {
+  display: block;
+  line-height: var(--line-height-high);
+}
+/* ----- END - SUBJECT ----- */
+
+
 /* ----- SECTION - GALLERY ----- */
 .gallery {
   background-color: var(--bg-primary);
