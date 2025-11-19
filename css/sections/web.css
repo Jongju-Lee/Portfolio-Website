@@ -255,7 +255,7 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
 /* 2025년 작업물 */
 .web-year__item:nth-child(1) .web-tab__item:nth-child(1) .web-tab__item-thum {
   background-image: url(../../image/website_pub/web-well-life-thum.png);
-  transition-duration: 4.5s;
+  transition-duration: 8s;
 }
 /* 2024년 작업물 */
 .web-year__item:nth-child(2) .web-tab__item:nth-child(1) .web-tab__item-thum {
