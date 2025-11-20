@@ -70,6 +70,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ########## Slick.js ########## */
+  /* ----- SECTION - SUBJECT ----- */
+  $(".subject-department__slick-wrap").slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  /* ----- SECTION - GALLERY ----- */
   $(".gallery-content__box").slick({
     centerMode: true,
     centerPadding: '25%',

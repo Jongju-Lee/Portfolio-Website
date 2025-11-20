@@ -246,6 +246,41 @@
   /* ----- END - DISEASE ----- */
 
 
+  /* ----- SECTION - SUBJECT ----- */
+  .subject-banner {
+    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
+  }
+
+  /* subject-heading */
+  .subject-heading__title {
+    margin: var(--spacing-24) 0;
+  }
+
+  /* subject-clinic */
+  .subject-clinic {
+    flex-direction: column;
+    margin: var(--spacing-48) auto 0;
+    padding: var(--spacing-32) var(--spacing-48);
+  }
+  .subject-clinic .partition {
+    display: none;
+  }
+
+  /* subject-department__wrap */
+  .subject-department__wrap {
+    /* PC에서만 출력 */
+    display: none;
+  }
+  .subject-department__slick-wrap {
+    /* 태블릿 모바일에서만 출력 */
+    display: block;
+  }
+  .subject-department__item {
+    cursor: pointer;
+  }
+  /* ----- END - SUBJECT ----- */
+
+
   /* ----- SECTION - GALLERY ----- */
   .gallery-inner {
     padding: var(--section-padding-v-tablet) 0;
@@ -623,12 +658,7 @@
   }
 
   /* disease-heading */
-  .disease-heading {
-    /* margin: -80px auto 0;
-    padding: var(--spacing-32); */
-  }
   .disease-heading__title {
-    /* margin-top: var(--spacing-16); */
     margin-top: var(--spacing-12);
   }
   .disease-heading__title b {

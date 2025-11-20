@@ -660,6 +660,10 @@
 .subject-heading__text {
   opacity: 0.6;
   font-size: var(--font-size-Large);
+  line-height: var(--line-height-medium);
+}
+.subject-heading__text span {
+  display: block;
 }
 
 /* subject-clinic */
@@ -689,7 +693,6 @@
   height: 1px;
   background-color: var(--border-opaque);
   transform: rotate(-50deg);
-
 }
 .subject-clinic__item {
   flex: 1;
@@ -721,7 +724,12 @@
 }
 
 /* subject-department__wrap */
+.subject-department__slick-wrap {
+  /* 태블릿 모바일에서만 출력 */
+  display: none;
+}
 .subject-department__wrap {
+  /* PC에서만 출력 */
   display: flex;
   flex-wrap: wrap;
 }
