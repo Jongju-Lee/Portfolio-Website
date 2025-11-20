@@ -639,6 +639,7 @@
 .subject-banner {
   padding: var(--section-padding-v-pc) var(--section-padding-h-pc);
   background-image: url(../../../images/main-page/subject/subject-banner.jpg);
+  background-size: 100% auto;
   background-position: center top;
 }
 
