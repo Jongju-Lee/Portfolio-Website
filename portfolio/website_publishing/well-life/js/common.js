@@ -72,10 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ########## Slick.js ########## */
   /* ----- SECTION - SUBJECT ----- */
   $(".subject-department__slick-wrap").slick({
-    autoplay: true,
-    autoplaySpeed: 3000,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
     slidesToShow: 2,
     slidesToScroll: 2,
+    dots: true,
     responsive: [
       {
         breakpoint: 480,

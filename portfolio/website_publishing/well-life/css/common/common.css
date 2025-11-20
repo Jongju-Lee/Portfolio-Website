@@ -127,6 +127,48 @@ h5 {
   object-fit: cover;
 }
 
+/* ---------- Slick.js ---------- */
+.slick-dots {
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-12);
+  width: fit-content;
+  padding: var(--spacing-12) var(--spacing-24);
+  border-radius: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+}
+.slick-dots li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+}
+.slick-dots li button {
+  display: block;
+  flex-shrink: 0;
+  width: inherit;
+  height: inherit;
+  padding: 0;
+  background-color: var(--contents-tertiary);
+  border-radius: 10px;
+  transition: width 0.2s;
+}
+.slick-dots li button:before {
+  display: none;
+}
+.slick-dots .slick-active {
+  width: 32px;
+}
+.slick-dots .slick-active button {
+  background-color: var(--theme-primary) !important;
+}
 
 /* #################### 컴포넌트 UI #################### */
 /* ---------- HEADER ----------  */

@@ -759,10 +759,8 @@
     gap: var(--spacing-24);
   }
   .subject-clinic__item-icon {
-    /* width: 88px;
-    height: 83px; */
-    width: calc(88px / 1.4);
-    height: calc(83px / 1.4);
+    width: calc(88px / 1.2);
+    height: calc(83px / 1.2);
   }
   .subject-clinic__item-text b {
     font-size: var(--font-size-Medium);
