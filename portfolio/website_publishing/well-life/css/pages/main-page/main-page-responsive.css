@@ -238,7 +238,6 @@
   }
   .disease-test__wrap {
     gap: var(--spacing-24);
-    padding: 0 var(--spacing-32);
     padding: 0;
   }
   .disease-test__item span {
@@ -611,6 +610,91 @@
     padding: var(--spacing-4) var(--spacing-28);
   }
   /* ---------- END - DOCTOR ----------  */
+
+
+  /* ----- SECTION - DISEASE ----- */
+  .disease-inner {
+    padding: 0 var(--section-padding-h-mobile) var(--section-padding-v-mobile);
+  }
+
+  /* disease-banner */
+  .disease-banner__img {
+    margin-left: -24px;
+  }
+
+  /* disease-heading */
+  .disease-heading {
+    /* margin: -80px auto 0;
+    padding: var(--spacing-32); */
+  }
+  .disease-heading__title {
+    /* margin-top: var(--spacing-16); */
+    margin-top: var(--spacing-12);
+  }
+  .disease-heading__title b {
+    word-break: keep-all;
+  }
+  .disease-heading__content {
+    margin: var(--spacing-16) auto 0;
+  }
+  .disease-heading__content-badge {
+    padding: var(--spacing-8) var(--spacing-24);
+    font-size: var(--font-size-Medium);
+    word-break: keep-all;
+  }
+  .disease-heading__content-desc {
+    margin: var(--spacing-16) auto 0 ;
+  }
+  
+  /* ----- disease-types, disease-test 공통 ----- */
+  /* disease-sub-title */
+  .disease-types__title,
+  .disease-test__title {
+    font-size: var(--font-size-XL);
+    margin-bottom: var(--spacing-16);
+  }
+  /* ----- disease-types, disease-test 공통 ----- */
+
+  /* disease-content */
+  .disease-content {
+    margin: 48px auto 0;
+  }
+
+  /* disease-types */
+  .disease-types__wrap {
+    gap: var(--spacing-16);
+  }
+  .disease-types__item {
+    gap: var(--spacing-24);
+    flex-direction: row;
+  }
+  .disease-types__item-icon {
+    width: calc(79px / 1.2);
+    height: calc(76px / 1.2);
+  }
+  .disease-types__item-desc {
+    align-items: start;
+  }
+  .disease-types__item-desc b {
+    font-size: var(--font-size-Large);
+  }
+  .disease-types__item-desc p {
+    text-align: left;
+    word-break: break-all;
+  }
+
+  /* disease-test */
+  .disease-test {
+    margin-top: 48px;
+  }
+  .disease-test__wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .disease-test__item {
+    max-width: 40%;
+  }
+  /* ----- END - DISEASE ----- */
 
 
   /* ----- SECTION - GALLERY ----- */

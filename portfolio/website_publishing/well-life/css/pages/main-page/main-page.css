@@ -517,11 +517,13 @@
 
 /* disease-types */
 .disease-types__wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-32);
 }
 .disease-types__item {
+  flex: 1;
+  min-width: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -531,6 +533,7 @@
   border-radius: 20px;
 }
 .disease-types__item-icon {
+  flex-shrink: 0;
   display: inline-block;
   width: 79px;
   height: 76px;
@@ -615,7 +618,6 @@
 .disease-test__item {
   position: relative;
   max-width: 280px;
-  max-height: 280px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: var(--shadow-normal);
