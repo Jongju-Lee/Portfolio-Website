@@ -103,8 +103,9 @@
   --font-EN-black: "Montserrat--black", sans-serif;
 
   /* 숫자 폰트 */
-  /* --font-number: "Oswald--bold"; */
-  --font-number: "GmarketSans--bold", sans-serif;
+  --font-number-light: "GmarketSans--medium", sans-serif;
+  --font-number-medium: "GmarketSans--medium", sans-serif;
+  --font-number-bold: "GmarketSans--bold", sans-serif;
 
   /* 배너 헤더 폰트 */
   --font-banner: "NanumMyeongjo--bold", serif;
@@ -117,6 +118,9 @@
 
 /* ---------- DARK MODE ---------- */
 :root[data-theme='dark'] {
+  /* 공통 색상 */
+  --color-negative: #df6e7c;
+
   /* 테마 컬러 */
   --theme-primary: #757cba;
 

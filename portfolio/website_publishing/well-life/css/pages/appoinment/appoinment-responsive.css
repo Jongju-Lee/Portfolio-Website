@@ -66,6 +66,9 @@
   .appointment-form__item-time-item {
     width: 72px;
   }
+  .appointment-form__item-time-item span {
+    transform: translateY(1px);
+  }
   
   /* appointment-form__item - 환자 정보 */
   .appointment-form__item-patient-input-wrap {

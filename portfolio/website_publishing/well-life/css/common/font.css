@@ -44,6 +44,18 @@
 }
 /* 지마켓 산스(숫자 폰트) */
 @font-face {
+  font-family: "GmarketSans--light";
+  src: url("../../font/GmarketSansLight.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans--medium";
+  src: url("../../font/GmarketSansMedium.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
   font-family: "GmarketSans--bold";
   src: url("../../font/GmarketSansBold.otf") format("opentype");
   font-weight: 700;

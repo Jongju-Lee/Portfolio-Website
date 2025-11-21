@@ -955,7 +955,7 @@
   text-align: center;
 }
 .info-heading__content--tel h3 {
-  font-family: var(--font-number);
+  font-family: var(--font-number-bold);
   color: var(--theme-primary);
 }
 .info-heading__content--tel p {
@@ -1003,7 +1003,7 @@
   font-family: var(--font-KR-medium);
 }
 .info-heading__content--time li p b {
-  font-family: var(--font-number);
+  font-family: var(--font-number-bold);
   font-size: var(--font-size-Large);
 }
 .info-heading__content--time li p span {

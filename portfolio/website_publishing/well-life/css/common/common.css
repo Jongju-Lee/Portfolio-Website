@@ -344,11 +344,11 @@ footer {
 }
 .footer-info__item-list li b {
   color: var(--theme-secondary);
-  font-family: var(--font-number);
+  font-family: var(--font-number-bold);
 }
 .footer-info__item-list li em {
   color: var(--color-white);
-  font-family: var(--font-number);
+  font-family: var(--font-number-bold);
 }
 
 /* footer-copyright */

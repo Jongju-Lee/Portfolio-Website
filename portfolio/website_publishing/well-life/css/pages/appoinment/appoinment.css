@@ -85,14 +85,15 @@
   display: flex;
   gap: var(--spacing-4);
   margin-left: var(--spacing-8);
-  scroll-margin-right: var(--spacing-4);
-  font-family: var(--font-KR-medium);
+  margin-right: var(--spacing-4);
   font-size: var(--font-size-Large);
+  font-family: var(--font-number-medium);
+  transform: translateY(2px);
 }
 
 /* 캘린더 박스 */
 .appointment-form__item-calendar-box {
-  max-width: 480px;
+  max-width: 440px;
   margin: 0 auto;
 }
 .appointment-form__item-calendar-day-names,
@@ -127,7 +128,7 @@
   color: var(--theme-secondary);
 }
 .appointment-form__item-calendar-date {
-  font-family: var(--font-KR-light);
+  font-family: var(--font-number-light);
   transition: background-color 0.2s, color 0.2s;
 }
 /* 일요일은 선택 불가(병원 휴일) */
@@ -140,7 +141,8 @@
   color: var(--theme-secondary);
 }
 .appointment-form__item-calendar-date:hover,
-.appointment-form__item-calendar-date--selected {
+.appointment-form__item-calendar-date--selected,
+.appointment-form__item-calendar-date--current {
   color: var(--color-white) !important;
   font-family: var(--font-KR-medium);
 }
@@ -148,8 +150,11 @@
   opacity: 1;
   background-color: var(--theme-secondary);
 }
-.appointment-form__item-calendar-date--selected {
+.appointment-form__item-calendar-date--current {
   background-color: var(--theme-primary) !important;
+}
+.appointment-form__item-calendar-date--selected {
+  background-color: var(--theme-secondary) !important;
 }
 .appointment-form__item-calendar-date--disabled {
   color: var(--contents-tertiary) !important;
@@ -179,25 +184,28 @@
   border: 1px solid var(--theme-primary);
   color: var(--theme-primary);
   transition: background-color 0.2s, color 0.2s;
+  font-family: var(--font-number-light);
 }
 .appointment-form__item-time-item:hover {
   opacity: 1;
   background-color: var(--theme-secondary);
   border: 1px solid transparent;
   color: var(--color-white);
-  font-family: var(--font-KR-medium);
 }
 .appointment-form__item-time-item--selected {
   background-color: var(--theme-primary) !important;
   border: 1px solid transparent;
   color: var(--color-white);
-  font-family: var(--font-KR-medium);
 }
 .appointment-form__item-time-item--disabled {
   border: 1px solid var(--border-transparent);
   color: var(--contents-tertiary);
   background-color: var(--color-light-gray);
   pointer-events: none;
+}
+.appointment-form__item-time-item span {
+  display: inline-block;
+  transform: translateY(2px);
 }
 
 /* appointment-form__item - 진료과목 선택 */
