@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------- 사이드 바 닫기버튼 클릭 시 ---------- */
   document.addEventListener("click", (e) => {
     const sideBarCloseBtn = e.target.closest(".sidebar-header__close-btn");
-    if (!sideBarCloseBtn) return; 
+    if (!sideBarCloseBtn) return;
     $sideBar.classList.remove("sidebar--active");
   });
 
   /* ---------- 사이드 바 배경 클릭 시 ---------- */
   document.addEventListener("click", (e) => {
     const sideBar = e.target.closest(".sidebar");
-    if (!sideBar) return; 
+    if (!sideBar) return;
 
     // sidebar-container 외부(dim 배경)를 클릭했는지 확인
     const sideBarContainer = e.target.closest(".sidebar-container");
@@ -70,13 +70,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ########## Slick.js ########## */
+  /* ----- 슬라이드 카운터 함수 (반응형 지원) ----- */
+  function updateCounter(event, slick, currentSlide) {
+    // 현재 슬라이드 인덱스
+    const current = currentSlide !== undefined ? currentSlide : slick.currentSlide;
+    // 한 번에 스크롤되는 슬라이드 개수 (반응형에 따라 변경)
+    const slidesToScroll = slick.options.slidesToScroll;
+    // 전체 슬라이드 개수
+    const totalSlides = slick.slideCount;
+
+    // 전체 페이지 수 계산 (전체 슬라이드 / 스크롤 개수, 올림 처리)
+    const totalPages = Math.ceil(totalSlides / slidesToScroll);
+    // 현재 페이지 계산 ((현재 슬라이드 인덱스 + 1) / 스크롤 개수, 올림 처리)
+    const currentPage = Math.ceil((current + 1) / slidesToScroll);
+
+    // 카운터 텍스트 업데이트
+    const $container = $(slick.$slider).parent();
+    $container.find(".current").text(currentPage);
+    $container.find(".total").text(totalPages);
+  }
+  // 초기화(init), 재초기화(reInit - 반응형), 슬라이드 변경(afterChange) 시 카운터 업데이트
+  $(".subject-department__slick-box").on("init reInit afterChange", updateCounter);
+
   /* ----- SECTION - SUBJECT ----- */
-  $(".subject-department__slick-wrap").slick({
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+  $(".subject-department__slick-box").slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
     slidesToShow: 2,
     slidesToScroll: 2,
-    dots: true,
     responsive: [
       {
         breakpoint: 480,
@@ -89,10 +110,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ----- SECTION - GALLERY ----- */
+  // 초기화(init), 재초기화(reInit - 반응형), 슬라이드 변경(afterChange) 시 카운터 업데이트
+  $(".gallery-content__box").on("init reInit afterChange", updateCounter);
+
   $(".gallery-content__box").slick({
     centerMode: true,
     centerPadding: '25%',
-    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [

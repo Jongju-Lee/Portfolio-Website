@@ -274,9 +274,36 @@
   .subject-department__slick-wrap {
     /* 태블릿 모바일에서만 출력 */
     display: block;
+    position: relative;
   }
   .subject-department__item {
     cursor: pointer;
+  }
+
+  /* Slick 슬라이더 카운터 */
+  .subject-department__slick-counter {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-8);
+    padding: var(--spacing-12) var(--spacing-16);
+    border-radius: 8px;
+    font-size: var(--font-size-Medium);
+    font-family: var(--font-KR-medium);
+    line-height: 1em;
+    color: var(--color-black);
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+  .subject-department__slick-counter .slash {
+    display: inline-block;
+    width: 14px;
+    height: 2px;
+    transform: rotate(-60deg);
+    background-color: var(--color-black);
   }
   /* ----- END - SUBJECT ----- */
 
@@ -294,7 +321,7 @@
     font-size: var(--font-size-Medium);
   }
   
-  /* gallery-content__box */
+  /* gallery-content__wrap */
   .gallery-content__item::after {
     bottom: 24px;
     right: 28px;
@@ -304,6 +331,17 @@
   .gallery-content__item:not(.slick-current)::after {
     bottom: 44px;
     right: 56px;
+  }
+
+  /* Slick 카운터 */
+  .gallery-content__slick-counter {
+    margin: var(--spacing-8) auto 0;
+    padding: var(--spacing-8) var(--spacing-12);
+    font-size: var(--font-size-Medium);
+  }
+  .gallery-content__slick-counter .slash {
+    width: 14px;
+    height: 2px;
   }
   
   /* ----- GALLERY - Slick.js ----- */
@@ -745,9 +783,6 @@
 
   /* subject-clinic */
   .subject-clinic {
-    /* flex-direction: column;
-    margin: var(--spacing-48) auto 0;
-    padding: var(--spacing-32) var(--spacing-48); */
     margin: var(--spacing-32) auto 0;
     padding: var(--spacing-24);
     border-radius: 12px;
@@ -764,6 +799,14 @@
   }
   .subject-clinic__item-text b {
     font-size: var(--font-size-Medium);
+  }
+
+  /* Slick 슬라이더 카운터 */
+  .subject-department__slick-counter {
+    bottom: 16px;
+    right: 16px;
+    border-radius: 4px;
+    padding: var(--spacing-8) var(--spacing-12);
   }
   /* ----- END - SUBJECT ----- */
 
@@ -796,6 +839,16 @@
     right: 56px;
   }
   
+  /* Slick 카운터 */
+  .gallery-content__slick-counter {
+    font-size: var(--font-size-mobile-body);
+    vertical-align: middle;
+  }
+  .gallery-content__slick-counter .slash {
+    width: 12px;
+    margin-bottom: 2px;
+  }
+
   /* ----- GALLERY - Slick.js ----- */
   .gallery-content__box .slick-arrow {
     width: 36px;
