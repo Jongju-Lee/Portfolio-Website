@@ -20,8 +20,9 @@ body {
 }
 main {
   /* 헤더 높이만큼 하단 이동 */
-  padding-top: var(--spacing-64);
+  padding-top: 72px;
 }
+/* ---------- END - LAYOUT ---------- */
 
 
 /* ---------- COMMON ---------- */
@@ -192,7 +193,7 @@ header {
   align-items: center;
   max-width: var(--max-width-pc);
   width: 100%;
-  height: 64px;
+  height: 72px;
   margin: 0 auto;
 }
 

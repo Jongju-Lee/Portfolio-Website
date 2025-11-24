@@ -1,9 +1,19 @@
 /* ---------- 컴포넌트 반응형 UI - 태블릿 ---------- */
 
 @media (max-width: 1280px) {
+  
+  
+  /* ---------- LAYOUT ---------- */
   body::-webkit-scrollbar {
     display: none;
   }
+  
+  main {
+    padding-top: var(--spacing-64);
+  }
+  /* ---------- END - LAYOUT ---------- */
+
+
   /* ---------- COMMON ----------  */
   h1, h2 {
     font-size: var(--font-size-XXL);
@@ -29,6 +39,9 @@
   /* ---------- HEADER ----------  */
   header {
     padding: 0 var(--section-padding-h-tablet);
+  }
+  .header-inner {
+    height: 64px;
   }
 
   /* header-gnb */
