@@ -148,5 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
   });
   /* ########## END - Slick.js ########## */
+
+  /* ########## AOS.js ########## */
+  AOS.init();
 });
 

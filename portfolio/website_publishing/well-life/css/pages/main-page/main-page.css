@@ -126,7 +126,7 @@
 /* intro-image */
 .intro-image {
   display: flex;
-  gap: var(--spacing-24);
+  gap: var(--spacing-32);
   max-width: var(--max-width-pc);
 }
 .intro-image__wrap {
@@ -170,7 +170,7 @@
 .why {
   position: relative;
   width: 100%;
-  height: calc(100vh - 64px);
+  padding: var(--section-padding-v-pc) var(--section-padding-h-pc);
   background-image: url(../../../images/main-page/why/why-bg.png);
   background-size: cover;
   background-position: center top;
@@ -184,16 +184,12 @@
 }
 /* why-inner */
 .why-inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-64);
   width: 100%;
-  padding: 0 var(--section-padding-h-pc);
   color: var(--color-white);
   z-index: 1;
 }
@@ -259,10 +255,17 @@
   display: block;
 }
 .why-badge__line {
+  display: flex;
+  align-items: center;
   width: 64px;
+  align-self: stretch;
+}
+.why-badge__line::after {
+  content: "";
+  width: 100%;
   height: 6px;
-  background-color: var(--border-opaque);
   border-radius: 3px;
+  background-color: var(--border-opaque);
 }
 
 /* why-slogan */

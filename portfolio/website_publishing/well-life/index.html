@@ -6,10 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="웰라이프내과의원의 웹사이트 입니다." />
   <meta name="keywords" content="웰라이프내과의원의 웹사이트 메인 페이지">
+  <link rel="canonical" href="https://www.well-life-clinic.co.kr">
   <meta name="theme-color" content="#19248c" />
   <title>웰라이프내과의원</title>
 
   <!-- ########## Open Graph 추가 필요 ########## -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="웰라이프내과의원의 웹사이트." />
+  <meta property="og:title" content="웰라이프내과의원의 웹사이트." />
+  <meta property="og:description" content="웰라이프내과의원은 서울특별시 광진구, 자양역에 위치한 내과 전문 클리닉으로 호흡기·알레르기 질환, 만성 기도질환, 폐 기능 검사, 수액 치료 등을 전문으로 진료합니다." />
+  <meta property="og:url" content="https://www.well-life-clinic.co.kr" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="./images/profile/well-life-og-profile.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- ########## jQuery CDN ########## -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -19,6 +29,10 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- ########## AOS.js ########## -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- ########## CSS ########## -->
   <!-- 공통 CSS -->
@@ -69,14 +83,14 @@
         <div class="intro-inner inner">
           <!-- intro-heading -->
           <section class="intro-heading">
-            <span class="intro-heading__title-mini title-sm">WELL LIFE LUNG CLINIC</span>
-            <h3 class="intro-heading__title">
+            <span class="intro-heading__title-mini title-sm" data-aos="fade-right">WELL LIFE LUNG CLINIC</span>
+            <h3 class="intro-heading__title" data-aos="fade-left">
               <p>웰라이프내과의원은</p>
               <div class="mobile-flex-box">
                 <b>여러분에게</b> <em>가장 도움이 되는 치료</em><span>를 하겠습니다.</span>
               </div>
             </h3>
-            <p class="intro-heading__desc">
+            <p class="intro-heading__desc" data-aos="fade-up">
               <span>
                 안녕하세요.
                 <em>웰라이프 내과를 찾아 주셔서 감사합니다.</em>
@@ -90,7 +104,7 @@
           <!-- intro-image -->
           <section class="intro-image">
             <!-- intro-image__wrap -->
-            <div class="intro-image__wrap">
+            <div class="intro-image__wrap" data-aos="fade-up">
               <div class="intro-image__box img-box">
                 <img src="./images/main-page/intro/intro-image-01.png" alt="진료 이미지 1">
               </div>
@@ -100,7 +114,7 @@
               </div>
             </div>
             <!-- intro-image__wrap -->
-            <div class="intro-image__wrap">
+            <div class="intro-image__wrap" data-aos="fade-up" data-aos-delay="300">
               <div class="intro-image__box img-box">
                 <img src="./images/main-page/intro/intro-image-02.png" alt="진료 이미지 2">
               </div>
@@ -110,7 +124,7 @@
               </div>
             </div>
             <!-- intro-image__wrap -->
-            <div class="intro-image__wrap">
+            <div class="intro-image__wrap" data-aos="fade-up" data-aos-delay="600">
               <div class="intro-image__box img-box">
                 <img src="./images/main-page/intro/intro-image-03.png" alt="진료 이미지 3">
               </div>
@@ -128,13 +142,15 @@
         <div class="why-inner inner">
           <!-- why-heading -->
           <section class="why-heading">
-            <h3 class="why-heading__question">
+            <h3 class="why-heading__question" data-aos="fade-right">
               왜? 웰라이프내과의원을<br />
               선택해야 할까요?
             </h3>
             <div class="why-heading__title-box">
-              <span class="why-heading__title-mini title-sm">WELL LIFE LUNG CLINIC</span>
-              <div class="why-heading__title">
+              <span class="why-heading__title-mini title-sm" data-aos="fade-left">
+                WELL LIFE LUNG CLINIC
+              </span>
+              <div class="why-heading__title" data-aos="fade-up">
                 <div class="why-heading__title-hash-tag">
                   <span># 잘 들어주고</span>
                   <span># 공감해 주고</span>
@@ -148,26 +164,26 @@
           </section>
           <!-- why-badge -->
           <div class="why-badge">
-            <div class="why-badge__item">
+            <div class="why-badge__item" data-aos="fade-up">
               <p>
                 환자의 건강을 최우선으로 <span>생각하는 병원</span>
               </p>
             </div>
-            <span class="why-badge__line"></span>
-            <div class="why-badge__item">
+            <span class="why-badge__line" data-aos="fade-up"></span>
+            <div class="why-badge__item" data-aos="fade-up" data-aos-delay="300">
               <p>
                 대학병원 교수 출신 <span>호흡기내과전문의 진료</span>
               </p>
             </div>
-            <span class="why-badge__line"></span>
-            <div class="why-badge__item">
+            <span class="why-badge__line" data-aos="fade-up" data-aos-delay="300"></span>
+            <div class="why-badge__item" data-aos="fade-up" data-aos-delay="600">
               <p>
                 ONE-STOP 진료로 <span>정확한 진단과 치료 가능</span>
               </p>
             </div>
           </div>
           <!-- why-slogan -->
-          <h5 class="why-slogan">
+          <h5 class="why-slogan" data-aos="fade-up">
             <span>내 가족을 대하는 진심과 정성으로</span>
             <span>평생 건강을 책임지는</span>
             웰라이프내과의원이 되도록 노력하겠습니다.
