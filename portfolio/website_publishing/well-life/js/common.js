@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $sideBar.classList.add("sidebar--active");
   });
 
-  /* ---------- 사이드 바 닫기버튼 클릭 시 ---------- */
+  /* ---------- 사이드 바 닫기 버튼 클릭 시 ---------- */
   document.addEventListener("click", (e) => {
     const sideBarCloseBtn = e.target.closest(".sidebar-header__close-btn");
     if (!sideBarCloseBtn) return;
@@ -66,6 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (sideBarContainer) return;
     sideBar.classList.remove("sidebar--active");
   });
+
+  /* ---------- 사이드 바 링크 버튼 클릭 시 ---------- */
+  document.addEventListener("click", (e) => {
+    const sideBarLinkBtn = e.target.closest(".sidebar-gnb__item a");
+    if (!sideBarLinkBtn) return;
+    $sideBar.classList.remove("sidebar--active");
+  });
+  // const sideBarLinkBtn = document.querySelector(".sidebar-gnb__item");
+  // sideBarLinkBtn.addEventListener("click", () => {
+  //   console.log("link 버튼 클릭")
+  //   $sideBar.classList.remove("sidebar--active");
+  // });
   /* ########## END - 사이드 바 기능 ########## */
 
 
