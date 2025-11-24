@@ -256,6 +256,7 @@
 }
 .why-badge__line {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 64px;
   align-self: stretch;
@@ -278,7 +279,6 @@
 .why-slogan span:first-child {
   display: block;
 }
-
 /* ----- END - WHY ----- */
 
 /* ----- SECTION - DOCTOR ----- */

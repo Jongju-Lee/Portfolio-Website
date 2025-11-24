@@ -97,6 +97,7 @@ h5 {
 
 /* 미니 타이틀 */
 .title-sm {
+  display: inline-block;
   font-family: var(--font-EN-medium);
   font-size: 14px;
   letter-spacing: 4px;
