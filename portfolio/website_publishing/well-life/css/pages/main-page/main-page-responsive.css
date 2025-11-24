@@ -10,15 +10,13 @@
     align-items: center;
     height: auto;
     min-height: calc(100vh - 64px);
+    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
   }
-
-  /* hero-inner */
   .hero-inner {
     position: relative;
     top: auto;
     left: auto;
     transform: none;
-    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
     gap: var(--spacing-48);
   }
 
@@ -42,9 +40,11 @@
 
 
   /* ---------- SECTION - INTRO ----------  */
+  .intro {
+    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
+  }
   .intro-inner {
     gap: var(--spacing-48);
-    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
   }
 
   /* intro-heading */
@@ -107,15 +107,16 @@
 
 
   /* ---------- SECTION - DOCTOR ----------  */
-  .doctor-bg-icon {
-    top: var(--spacing-64);
-    left: var(--spacing-48);
-    width: 204px;
-    height: 180px;
-  }
-  .doctor-inner {
+  .doctor {
     padding: 0;
     padding-top: var(--section-padding-v-tablet);
+  }
+  .doctor-bg-icon {
+    top: var(--spacing-64);
+    left: auto;
+    right: var(--spacing-48);
+    width: 204px;
+    height: 180px;
   }
 
   /* doctor-heading */
@@ -175,7 +176,7 @@
 
 
   /* ----- SECTION - DISEASE ----- */
-  .disease-inner {
+  .disease {
     padding: 0 var(--section-padding-h-tablet) var(--section-padding-v-tablet);
   }
 
@@ -256,7 +257,6 @@
   .subject-clinic {
     flex-direction: column;
     margin: var(--spacing-48) auto 0;
-    padding: var(--spacing-32) var(--spacing-48);
   }
   .subject-clinic .partition {
     display: none;
@@ -305,9 +305,10 @@
 
 
   /* ----- SECTION - GALLERY ----- */
-  .gallery-inner {
+  .gallery {
     padding: var(--section-padding-v-tablet) 0;
   }
+
   /* gallery-heading */
   .gallery-heading__title {
     margin-top: var(--spacing-8);
@@ -356,8 +357,8 @@
 
 
   /* ---------- SECTION - INFO ----------  */
-  .info-inner {
-    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
+  .info {
+    padding: var(--section-padding-v-tablet);
   }
 
   /* info-heading-wrap */
@@ -398,20 +399,19 @@
     margin-left: var(--spacing-4);
   }
 
-  /* info-heading-line */
-  .info-heading-line {
-    border: 1px dashed var(--border-transparent);
+  /* info-heading__line */
+  .info-heading__line {
     margin: var(--spacing-48) 0;
   }
   /* ---------- END - INFO ----------  */
 
 
   /* ---------- SECTION - DIRECTION ----------  */
+  .direction {
+    padding-top: var(--section-padding-v-tablet);
+  }
   .direction::after {
     top: 170px;
-  }
-  .direction-inner {
-    padding-top: var(--section-padding-v-tablet);
   }
 
   /* direction-heading__way */
@@ -478,12 +478,10 @@
   /* ---------- SECTION - HERO ----------  */
   .hero {
     min-height: auto;
+    padding: var(--section-padding-v-pc) var(--section-padding-h-mobile);
     background-image: url(../../../images/main-page/hero/hero-bg-mobile.png);
   }
-
-  /* hero-inner */
   .hero-inner {
-    padding: var(--section-padding-v-pc) var(--section-padding-h-mobile);
     gap: var(--spacing-36);
   }
   
@@ -516,9 +514,11 @@
 
 
   /* ---------- SECTION - INTRO ----------  */
+  .intro {
+    padding: var(--section-padding-v-mobile) var(--section-padding-h-mobile);
+  }
   .intro-inner {
     gap: var(--spacing-32);
-    padding: var(--section-padding-v-mobile) var(--section-padding-h-mobile);
   }
 
   /* intro-heading */
@@ -624,14 +624,14 @@
 
 
   /* ---------- SECTION - DOCTOR ----------  */
+  .doctor {
+    padding-top: var(--section-padding-v-mobile);
+  }
   .doctor-bg-icon {
     top: var(--spacing-20);
     left: var(--spacing-20);
     width: 136px;
     height: 120px;
-  }
-  .doctor-inner {
-    padding-top: var(--section-padding-v-mobile);
   }
 
   /* doctor-heading */
@@ -680,7 +680,7 @@
 
 
   /* ----- SECTION - DISEASE ----- */
-  .disease-inner {
+  .disease {
     padding: 0 var(--section-padding-h-mobile) var(--section-padding-v-mobile);
   }
 
@@ -806,7 +806,7 @@
 
 
   /* ----- SECTION - GALLERY ----- */
-  .gallery-inner {
+  .gallery {
     padding: var(--section-padding-v-mobile) 0;
   }
   
@@ -860,8 +860,8 @@
 
 
   /* ---------- SECTION - INFO ----------  */
-  .info-inner {
-    padding: var(--section-padding-v-mobile) var(--section-padding-h-mobile);
+  .info {
+    padding: var(--section-padding-v-mobile);
   }
 
   /* info-heading-wrap */
@@ -906,20 +906,15 @@
   .info-heading__content--time li p span {
     margin-left: 0;
   }
-
-  /* info-heading-line */
-  .info-heading-line {
-    margin: var(--spacing-32) 0;
-  }
   /* ---------- END - INFO ----------  */
 
 
   /* ---------- SECTION - DIRECTION ----------  */
+  .direction {
+    padding-top: var(--section-padding-v-mobile);
+  }
   .direction::after {
     display: none;
-  }
-  .direction-inner {
-    padding-top: var(--section-padding-v-mobile);
   }
 
   /* direction-heading */

@@ -278,12 +278,23 @@ header {
 
 /* ---------- FOOTER ----------  */
 footer {
+  /* background-color: var(--color-black); */
   background-color: var(--color-black);
 }
 .footer-inner {
+  /* padding: 0 var(--section-padding-h-pc); */
   padding: 0 var(--section-padding-h-pc);
 }
 .footer-wrap {
+  /* display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-64);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--section-padding-h-pc) 0;
+  color: var(--contents-tertiary);
+  font-family: var(--font-KR-medium);
+  line-height: var(--line-height-medium); */
   display: flex;
   justify-content: space-between;
   gap: var(--spacing-64);
