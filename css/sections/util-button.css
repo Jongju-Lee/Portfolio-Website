@@ -177,6 +177,8 @@
   opacity: 0.7;
   visibility: visible;
   pointer-events: all;
+  background-color: var(--color-mockup-box-btn);
+  opacity: 1;
 }
 /* 애니메이션 동작 중 비활성화 */
 .mockup-box__open-btn--disabled {
