@@ -4,7 +4,7 @@
 const roundToOneDecimal = (value) => Math.round(value * 10) / 10;
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
   // ------------------------------
   // Mockup 스케일 컨트롤 기능
@@ -87,11 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
     renderScaleUI(currentScale);
 
     // 버튼 이벤트 등록
-    increaseScaleButton.addEventListener('click', function() {
+    increaseScaleButton.addEventListener('click', function () {
       changeScaleBy(STEP_SCALE);
     });
 
-    decreaseScaleButton.addEventListener('click', function() {
+    decreaseScaleButton.addEventListener('click', function () {
       changeScaleBy(-STEP_SCALE);
     });
 
@@ -120,10 +120,29 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // 이미지/폰트 로딩 이후 안정화된 레이아웃에서 중앙 정렬 시도
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       measureSliderHeight();
       requestAnimationFrame(centerInitialScrollVertically);
       setTimeout(centerInitialScrollVertically, 150);
+    });
+  }
+
+  // ------------------------------
+  // 뒤로 가기 버튼 기능
+  // ------------------------------
+  const backButton = document.querySelector('.back-btn');
+
+  if (backButton) {
+    backButton.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // 방문 기록이 2개 이상이면 뒤로가기, 아니면 루트로 이동
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        // 현재 위치(mockup/mobile/) 기준으로 루트 index.html 경로 설정
+        window.location.href = 'https://portfolio-jongju-lee.netlify.app/';
+      }
     });
   }
 });

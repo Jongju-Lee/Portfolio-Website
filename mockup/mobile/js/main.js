@@ -125,4 +125,23 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(centerInitialScrollVertically, 150);
     });
   }
+
+  // ------------------------------
+  // 뒤로 가기 버튼 기능
+  // ------------------------------
+  const backButton = document.querySelector('.back-btn');
+
+  if (backButton) {
+    backButton.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // 방문 기록이 2개 이상이면 뒤로가기, 아니면 루트로 이동
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        // 현재 위치(mockup/mobile/) 기준으로 루트 index.html 경로 설정
+        window.location.href = 'https://portfolio-jongju-lee.netlify.app/';
+      }
+    });
+  }
 });
