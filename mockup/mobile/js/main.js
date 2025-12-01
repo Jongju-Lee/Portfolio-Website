@@ -4,7 +4,7 @@
 const roundToOneDecimal = (value) => Math.round(value * 10) / 10;
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // ------------------------------
   // Mockup 스케일 컨트롤 기능
   // ------------------------------
@@ -86,11 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
     renderScaleUI(currentScale);
 
     // 버튼 이벤트 등록
-    increaseScaleButton.addEventListener('click', function() {
+    increaseScaleButton.addEventListener('click', function () {
       changeScaleBy(STEP_SCALE);
     });
 
-    decreaseScaleButton.addEventListener('click', function() {
+    decreaseScaleButton.addEventListener('click', function () {
       changeScaleBy(-STEP_SCALE);
     });
 
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // 이미지/폰트 로딩 이후 안정화된 레이아웃에서 중앙 정렬 시도
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       measureSliderHeight();
       requestAnimationFrame(centerInitialScrollVertically);
       setTimeout(centerInitialScrollVertically, 150);
