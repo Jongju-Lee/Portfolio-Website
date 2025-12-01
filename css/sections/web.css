@@ -300,8 +300,11 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   font-family: var(--font-EN);
   width: fit-content;
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1em;
+}
+.web-tab__item-title.font-kr {
+  font-weight: 600;
 }
 .web-tab__item-title.new::after {
   content: "";
