@@ -1,13 +1,13 @@
 /* ############### 유틸 버튼 관리 함수들 ############### */
 const UtilButtons = {
   // 네비게이션 토글 공통 로직
-  toggleNavigation: function(selector, bodyClass) {
+  toggleNavigation: function (selector, bodyClass) {
     $(selector).stop().fadeToggle();
     $("body").toggleClass(bodyClass);
   },
 
   // 버튼 상태 초기화
-  resetButtons: function() {
+  resetButtons: function () {
     $(".trigger").removeClass("active trigger--on");
     $(".fullscreen-nav").stop().fadeOut();
     $(".sidebar-nav").stop().fadeOut();
@@ -25,11 +25,17 @@ $(function () {
       variant: 'light',
       timeout: 0
     });
-    $(window).on('load', () => window.loadingManager.hide());
+    // 이미 로딩이 완료된 경우 즉시 숨김 (Race Condition 방지)
+    if (document.readyState === 'complete') {
+      window.loadingManager.hide();
+    } else {
+      // 아직 로딩 중이면 이벤트 리스너 등록
+      $(window).on('load', () => window.loadingManager.hide());
+    }
   }
 
   /* ########## ALT + N 단축키 사용시 GNB로 포커스 ########## */
-  $(document).on('keydown', function(event) {
+  $(document).on('keydown', function (event) {
     // ALT + N 키 조합 감지 (키코드 78은 'N'에 해당)
     if (event.altKey && event.which === 78) {
       // 브라우저의 기본 동작 방지
@@ -41,7 +47,7 @@ $(function () {
         $("header").removeClass("hide");
         navElement.focus();
         // 헤더 영역에서 포커스가 완전히 벗어날 때만 헤더 숨김 처리
-        $(document).one('focusin', function(e) {
+        $(document).one('focusin', function (e) {
           // 포커스된 요소가 헤더 내부에 있는지 확인
           const isInHeader = $(e.target).closest('header').length > 0;
           // 헤더 외부로 포커스가 이동했을 때만 헤더 숨김
@@ -100,7 +106,7 @@ $(function () {
     e.stopPropagation();
     UtilButtons.resetButtons();
   });
-  
+
 
   /* ############### 모바일 목업 스크롤바 제거 ############### */
   // 라이트박스 링크 클릭시 버튼 숨김
@@ -111,7 +117,7 @@ $(function () {
   });
 
   // 라이트박스 닫힐 때 sidebar-btn 숨김 해제
-  $(document).on('hidden.uk.lightbox', function() {
+  $(document).on('hidden.uk.lightbox', function () {
     $('.sidebar-btn').removeClass('sidebar-btn--hide');
     $(".trigger").addClass("trigger--on");
     $(".top-btn").addClass("top-btn--on");
@@ -144,7 +150,7 @@ $(function () {
   /* ############### Web section 키보드 TAB key 접근성 개선 ############### */
   // 웹 탭 버튼: 키보드 접근성 + 클릭 시 패널 포커스 이동
   $(".web-tab__btn").on({
-    keydown: function(e) {
+    keydown: function (e) {
       // Enter 또는 Space 누르면 클릭 트리거
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
@@ -152,7 +158,7 @@ $(function () {
       }
     },
     // 클릭된 버튼과 같은 인덱스의 패널로 포커스 이동 (지연 처리)
-    click: function() {
+    click: function () {
       const idx = $(".web-tab__btn").index(this);
       setTimeout(() => {
         $(".web-tab__item").eq(idx).focus();
@@ -162,7 +168,7 @@ $(function () {
 
 
   /* ############### Web section Arrow 버튼 로직 ############### */
-  (function() {
+  (function () {
     // 요소 캐시
     const $inner = $(".web-year__wrap-inner");
     const $items = $inner.find(".web-year__item");
@@ -171,18 +177,18 @@ $(function () {
     const $nextBtn = $(".web-year__arrow-btn--next");
 
     // 현재 활성화 인덱스 반환
-    const getActiveIndex = function() {
+    const getActiveIndex = function () {
       return $items.index($items.filter(".web-year__item--active"));
     };
 
     // 활성화 인덱스 설정 (경계 체크 포함)
-    const setActiveIndex = function(nextIndex) {
+    const setActiveIndex = function (nextIndex) {
       if (nextIndex < 0 || nextIndex >= $items.length) return; // 범위 밖이면 무시
       $items.removeClass("web-year__item--active").eq(nextIndex).addClass("web-year__item--active");
     };
 
     // UI 상태 업데이트 (활성 인덱스, 연도 박스 모디파이어, 버튼 비활성화)
-    const updateUI = function(nextIndex) {
+    const updateUI = function (nextIndex) {
       setActiveIndex(nextIndex);
       // 연도 박스 클래스 토글: --first <-> --second
       if ($yearNumBox.length) {
@@ -201,7 +207,7 @@ $(function () {
     updateUI(getActiveIndex());
 
     // 이전 버튼 클릭
-    $prevBtn.on("click", function(e) {
+    $prevBtn.on("click", function (e) {
       e.preventDefault();
       const current = getActiveIndex();
       if (current <= 0) return; // 이미 처음이면 무시
@@ -209,7 +215,7 @@ $(function () {
     });
 
     // 다음 버튼 클릭
-    $nextBtn.on("click", function(e) {
+    $nextBtn.on("click", function (e) {
       e.preventDefault();
       const current = getActiveIndex();
       if (current >= $items.length - 1) return; // 이미 끝이면 무시
@@ -248,19 +254,19 @@ $(function () {
 
   /* ############### AOS.js ############### */
   AOS.init();
-  
+
   /* ############### Featherlight 커스텀 클래스 ############### */
   let lastClickedLink = null;
 
-  $(document).on('click', 'a[data-featherlight]', function() {
+  $(document).on('click', 'a[data-featherlight]', function () {
     lastClickedLink = this;
   });
 
-  const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      mutation.addedNodes.forEach(function(node) {
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      mutation.addedNodes.forEach(function (node) {
         if (node.nodeType === Node.ELEMENT_NODE && $(node).hasClass('featherlight')) {
-          setTimeout(function() {
+          setTimeout(function () {
             const $content = $(node).find('.featherlight-content');
 
             if (lastClickedLink && $content.length) {

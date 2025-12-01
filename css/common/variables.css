@@ -18,8 +18,7 @@
   --color-negative: #D32F2F;
   --color-line: #dfdfdf;
   --color-util-btn: #9d9d9d;
-  --color-mockup-box-btn: #33bd75; 
-  --color-mockup-box-btn: #00ad53; 
+  --color-mockup-box-btn: var(--color-primary); 
 
   /* skill-section */
   --color-background-even-section: #f9f7f1;
