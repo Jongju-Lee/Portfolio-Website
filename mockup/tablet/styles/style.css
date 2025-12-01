@@ -72,7 +72,7 @@ a {
 .mockup-iframe__wrap {
   flex: 1;
   background-color: #ffffff;
-  border-radius: 0 0 20px 20px;
+  border-radius: 20px;
   overflow: hidden;
 }
 .mockup-iframe__wrap iframe {
