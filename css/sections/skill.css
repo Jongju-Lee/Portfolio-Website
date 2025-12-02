@@ -14,6 +14,17 @@
   box-shadow: var(--shadow-color-box-light);
   border-radius: var(--spacing-lg);
   background-color: var(--color-skill-item-bg);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.skill-item:hover {
+  transform: scale(1.05);
+}
+.skill-item--on {
+  z-index: 10;
+}
+.skill-item--on:hover {
+  transform: none;
 }
 /* ----- skill-item__icon-box ----- */
 .skill-item__icon-box {
@@ -68,11 +79,11 @@
   border-radius: 0 0 var(--spacing-lg) var(--spacing-lg);
   background-color: var(--color-skill-item-bg);
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-  transition: max-height 0.4s ease, padding 0.2s ease;
+  transition: max-height 0.4s, padding 0.2s;
   z-index: 1;
   pointer-events: none;
 }
-.skill-item:hover .skill-item__text-box-desc {
+.skill-item--on .skill-item__text-box-desc {
   padding: 0 var(--spacing-2xl) var(--spacing-2xl);
   max-height: 500px;
 }
