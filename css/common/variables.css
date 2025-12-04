@@ -70,9 +70,9 @@
 
   /* --------- FONT FAMILY --------- */
   --font-KR: "PretendardVariable", sans-serif;
-  --font-EN: "OutfitVariable", sans-serif;
-  --font-slogan: "Caveat-Regular", cursive;
-  --font-mobile-section: "NPSfontExtraBold", sans-serif;
+  --font-EN: "OutfitVariable", "PretendardVariable", sans-serif;
+  --font-slogan: "Caveat-Regular", "OutfitVariable", cursive;
+  --font-mobile-section: "NPSfontExtraBold", "PretendardVariable", sans-serif;
 
   /* --------- FONT SIZE --------- */
   --font-size-xs: 12px;

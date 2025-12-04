@@ -98,17 +98,17 @@
   --font-KR-heavy: "SC-Dream--heavy", sans-serif;
   
   /* 영문 폰트 */
-  --font-EN-medium: "Montserrat--medium", sans-serif;
-  --font-EN-semi-bold: "Montserrat--semi-bold", sans-serif;
-  --font-EN-black: "Montserrat--black", sans-serif;
+  --font-EN-medium: "Montserrat--medium", "SC-Dream--medium", sans-serif;
+  --font-EN-semi-bold: "Montserrat--semi-bold", "SC-Dream--medium", sans-serif;
+  --font-EN-black: "Montserrat--black", "SC-Dream--bold", sans-serif;
 
   /* 숫자 폰트 */
-  --font-number-light: "GmarketSans--medium", sans-serif;
-  --font-number-medium: "GmarketSans--medium", sans-serif;
-  --font-number-bold: "GmarketSans--bold", sans-serif;
+  --font-number-light: "GmarketSans--light", "SC-Dream--light", sans-serif;
+  --font-number-medium: "GmarketSans--medium", "SC-Dream--medium", sans-serif;
+  --font-number-bold: "GmarketSans--bold", "SC-Dream--bold", sans-serif;
 
   /* 배너 헤더 폰트 */
-  --font-banner: "NanumMyeongjo--bold", serif;
+  --font-banner: "NanumMyeongjo--bold", "SC-Dream--bold", serif;
 
   /* ---------- LINE HEIGHT ---------- */
   --line-height-normal: 1.4em; 
