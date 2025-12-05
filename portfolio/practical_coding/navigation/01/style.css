@@ -46,7 +46,7 @@ input[id="active"] {
 .trigger {
   position: absolute;
   top: 30px;
-  left: 30px;
+  right: 30px;
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -54,7 +54,7 @@ input[id="active"] {
   background: linear-gradient(-135deg, #c850c0, #4158d8);
   border-radius: 50%;
   padding: 17px 13px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(200,80,192, 0.3);
   transition: 0.5s;
   cursor: pointer;
 }
@@ -104,7 +104,7 @@ input[id="active"] {
   height: 100%;
   background: linear-gradient(-135deg, #c850c0, #4158d8);
   color: #fff;
-  clip-path: circle(25px at 55px 55px);
+  clip-path: circle(25px at calc(100% - 55px) 55px);
   transition: 0.5s ease-in-out;
 }
 .overlay .menu {
