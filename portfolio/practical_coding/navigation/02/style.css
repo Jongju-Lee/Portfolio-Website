@@ -41,43 +41,51 @@ body {
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100px;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-right: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(15px);
   /* Cross Browsing */
   -webkit-backdrop-filter: blur(15px);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
   padding: 0 30px;
   padding-top: 10px;
-  transition: 0.2s;
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .sidebar:hover {
-  width: 280px;
+  width: 270px;
   padding: 0;
   padding-top: 10px;
-  padding-left: 45px;
-  padding-right: 30px;
+  padding-left: 40px;
+  padding-right: 45px;
 }
 .sidebar .logo {
   margin: 20px 0;
 }
 .sidebar .logo a {
+  position: relative;
   display: flex;
   gap: 10px;
   align-items: center;
 }
 .logo img {
-  transform: translate(-1px);
+  transform: translate(1px);
   width: 40px;
   height: 40px;
 }
 .logo h2 {
-  display: none;
+  position: absolute;
+  left: 54px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease 0.1s;
 }
 .sidebar:hover .logo h2 {
-  display: block;
+  opacity: 1;
 }
 .links hr {
   border-color: #999;
@@ -91,10 +99,14 @@ body {
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
-  display: none;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease, opacity 0.3s ease 0.1s, margin 0.3s ease;
 }
 .sidebar:hover .links h4 {
-  display: block;
+  height: 24px;
+  opacity: 1;
 }
 .links h4:first-child {
   margin-top: 0;
@@ -117,8 +129,13 @@ body {
 .links li a span {
   font-size: 18px;
   font-weight: 500;
-  display: none;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  transition: width 0.3s ease, opacity 0.3s ease 0.1s;
 }
 .sidebar:hover .links li a span {
-  display: block;
+  width: 140px;
+  opacity: 1;
 }
