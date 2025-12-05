@@ -89,26 +89,48 @@ header nav .gnb a:hover::after {
 }
 header nav .btn_field {
   position: relative;
+  top: 4px;
+  gap: 36px;
   display: flex;
-  gap: 30px;
 }
 header nav .btn_field span {
   position: relative;
 }
+/* Glow Pulse Animation for Button Icons */
+@keyframes glowPulse {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+                 0 0 20px rgba(255, 255, 255, 0.7),
+                 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.3);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+                 0 0 40px rgba(255, 255, 255, 1),
+                 0 0 60px rgba(255, 255, 255, 0.9),
+                 0 0 80px rgba(255, 255, 255, 0.7);
+  }
+}
+
 header nav .btn_field :is(.btn_dark, .btn_search)::after {
   font-family: "bootstrap-icons";
   cursor: pointer;
   transition: 0.2s;
+  font-size: 24px; /* 아이콘 크기 증가 */
+  animation: glowPulse 2s ease-in-out infinite;
 }
 header nav .btn_field :is(.btn_dark, .btn_search):hover::after {
   color: #ddd;
+  animation: none; /* 호버 시 애니메이션 중지 */
 }
 header nav .btn_field .btn_dark::after {
   content: "\F1D2";
-  font-size: 18px;
+  /* font-size는 위에서 통합 설정 */
 }
 header nav .btn_field .btn_search::after {
   content: "\F52A";
+  font-size: 22px;
 }
 header nav .btn_field .search_field {
   position: absolute;
@@ -189,3 +211,21 @@ header.active nav .btn_field .search_field img {
   filter: brightness(0) saturate(100%) invert(42%) sepia(44%) saturate(18%)
     hue-rotate(12deg) brightness(101%) contrast(96%);
 }
+/* Dark Mode - Weaker Glow Animation */
+@keyframes glowPulseDark {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(153, 153, 153, 0.5),
+                 0 0 10px rgba(153, 153, 153, 0.3);
+  }
+  50% {
+    transform: scale(1.15);
+    text-shadow: 0 0 10px rgba(153, 153, 153, 0.7),
+                 0 0 20px rgba(153, 153, 153, 0.5),
+                 0 0 30px rgba(153, 153, 153, 0.3);
+  }
+}
+header.active nav .btn_field :is(.btn_dark, .btn_search)::after {
+  animation: glowPulseDark 2s ease-in-out infinite;
+}
+
