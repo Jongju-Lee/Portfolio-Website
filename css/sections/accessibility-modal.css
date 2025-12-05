@@ -49,6 +49,9 @@
   border-radius: 50%;
   background-color: var(--color-primary);
 }
+.accessibility-modal__list-item b {
+  font-weight: 700;
+}
 /* ----- accessibility-modal__tip ----- */
 .accessibility-modal__tip {
   display: flex;
