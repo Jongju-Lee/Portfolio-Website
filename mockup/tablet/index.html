@@ -17,7 +17,16 @@
   <link rel="stylesheet" href="./styles/style.css">
   <!-- JavaScript -->
   <script src="../../../js/loading.js"></script>
-  <script src="./js/main.js" defer></script>
+  <script src="/js/mockup-core.js"></script>
+  <script>
+    MockupCore.init({
+      mockupHeight: 798,
+      enableAutoScale: true,
+      enableDarkModeSync: false,
+      enableBackButtonHandler: true,
+      backButtonFallbackUrl: '../../index.html'
+    });
+  </script>
 </head>
 
 <body>
@@ -77,7 +86,7 @@
     <!-- 이동 버튼 박스 -->
     <div class="btn-box">
       <a class="back-btn" href="#">뒤로 가기</a>
-      <a class="move-btn" href="../mobile/index.html">모바일 목업 보러가기</a>
+      <a class="move-btn" href="../mobile/index.html">모바일 보러가기</a>
     </div>
   </main>
 </body>
