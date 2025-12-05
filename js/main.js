@@ -71,7 +71,11 @@ $(function () {
   });
 
   // 상단 이동 버튼 클릭시
-  $(".top-btn").click(UtilButtons.resetButtons);
+  $(".top-btn").click(function (e) {
+    e.preventDefault(); // href="#" 기본 동작 방지 (iframe 내에서 부모 스크롤 방지)
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    UtilButtons.resetButtons();
+  });
 
   // 풀스크린 네비게이션 토글
   $(".trigger").click(function () {
