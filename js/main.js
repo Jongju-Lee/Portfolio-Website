@@ -17,6 +17,19 @@ const UtilButtons = {
   }
 };
 
+/* ############### Featherlight 기본 설정 ############### */
+// 닫기 버튼 텍스트를 "뒤로 가기"로 변경 (목업 페이지와 통일)
+$.featherlight.defaults.closeIcon = '뒤로 가기';
+
+/* ############### UIKit Lightbox 버튼 커스터마이징 ############### */
+// Lightbox 열릴 때 닫기 버튼 텍스트 변경
+UIkit.util.on(document, 'show', '.uk-lightbox', function (e) {
+  const closeBtn = e.target.querySelector('.uk-lightbox-toolbar-icon.uk-close-large');
+  if (closeBtn) {
+    closeBtn.textContent = '뒤로 가기';
+    closeBtn.classList.add('custom-back-btn');
+  }
+});
 $(function () {
   /* ########## 페이지 진입시 로딩 화면 표시 ########## */
   if (window.loadingManager) {
