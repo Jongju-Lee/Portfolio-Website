@@ -29,9 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const MIN_SCALE = 0.5;
     const MAX_SCALE = 1.0;
     const STEP_SCALE = 0.1;
-    const INITIAL_SCALE = 1.0;
+    const MOCKUP_HEIGHT = 923; // 목업 원본 높이 (px)
+    const VIEWPORT_PADDING = 160; // 상하 여백 (컨테이너 패딩 80px * 2)
 
-    let currentScale = INITIAL_SCALE;
+    let currentScale = MAX_SCALE;
     let sliderItemHeight = 64; // 기본값으로 초기화
 
     // 페이지 로딩 완료 후 실제 높이값 측정
@@ -40,6 +41,23 @@ document.addEventListener('DOMContentLoaded', function () {
         const computedHeight = parseFloat(getComputedStyle(sliderItem).height);
         sliderItemHeight = isNaN(computedHeight) ? 64 : computedHeight;
       }
+    };
+
+    // 뷰포트 크기에 맞는 최적 스케일 계산
+    const calculateOptimalScale = () => {
+      const viewportHeight = window.innerHeight;
+      const availableHeight = viewportHeight - VIEWPORT_PADDING;
+
+      // 목업이 화면에 맞는 스케일 계산 (+0.1 여유분 추가)
+      let optimalScale = (availableHeight / MOCKUP_HEIGHT) + 0.1;
+
+      // MIN_SCALE ~ MAX_SCALE 범위로 제한
+      optimalScale = clamp(optimalScale, MIN_SCALE, MAX_SCALE);
+
+      // 0.1 단위로 내림 (더 여유있게)
+      optimalScale = Math.floor(optimalScale * 10) / 10;
+
+      return optimalScale;
     };
 
     // 현재 스케일을 기준으로 UI 전체를 업데이트
@@ -82,8 +100,9 @@ document.addEventListener('DOMContentLoaded', function () {
       renderScaleUI(currentScale + delta);
     };
 
-    // 초기 렌더링
-    renderScaleUI(currentScale);
+    // 초기 렌더링 (뷰포트에 맞는 최적 스케일로 시작)
+    const initialScale = calculateOptimalScale();
+    renderScaleUI(initialScale);
 
     // 버튼 이벤트 등록
     increaseScaleButton.addEventListener('click', function () {
