@@ -218,6 +218,11 @@
   .trigger {
     display: none;
   }
+  /* 맨 위로 가기 버튼 */
+  .top-btn--on {
+    bottom: 32px;
+    right: 32px;
+  }
   /* sidebar-nav */
   .sidebar-btn {
     display: block;

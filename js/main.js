@@ -125,7 +125,24 @@ $(function () {
 
 
   /* ############### 멀티 박스(목업 모음) 관련 ############### */
-  $(".mockup-box__open-btn").click(function () {
+  const $mockupOpenBtn = $(".mockup-box__open-btn");
+
+  // 로딩 완료 후 목업박스 버튼에 주목 애니메이션 적용 (타이밍은 CSS animation-delay로 제어)
+  const startMockupAnimation = () => {
+    $mockupOpenBtn.addClass("mockup-box__open-btn--initial-attention");
+    setTimeout(() => $mockupOpenBtn.removeClass("mockup-box__open-btn--initial-attention"), 5000); // 4.5초 애니메이션 + 0.5초 delay
+  };
+
+  // 로딩이 완료된 후 애니메이션 시작
+  if (window.loadingManager) {
+    $(window).on('load', startMockupAnimation);
+  } else {
+    // loadingManager가 없으면 즉시 시작
+    startMockupAnimation();
+  }
+
+  // 목업박스 열기/닫기 기능
+  $mockupOpenBtn.click(function () {
     $(".mockup-box").toggleClass("mockup-box--on");
     $(this).addClass("mockup-box__open-btn--disabled");
     setTimeout(() => $(this).removeClass("mockup-box__open-btn--disabled"), 600);

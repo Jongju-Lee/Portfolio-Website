@@ -1,4 +1,4 @@
-﻿/* ----- util-btn 공통 ----- */
+﻿/* ----- util-btn 怨듯넻 ----- */
 .util-btn {
   opacity: 0;
   visibility: hidden;
@@ -19,7 +19,7 @@
 .util-btn:active {
   transform: translateY(-4px) scale(0.9);
 }
-/* 각 요소별 on 상태 정의 */
+/* 媛??붿냼蹂?on ?곹깭 ?뺤쓽 */
 .trigger--on,
 .top-btn--on,
 .sidebar-btn--on {
@@ -28,7 +28,7 @@
   pointer-events: all;
 }
 
-/* ----- 풀스크린 네비게이션 버튼(trigger) ----- */
+/* ----- ??ㅽ겕由??ㅻ퉬寃뚯씠??踰꾪듉(trigger) ----- */
 .trigger {
   top: 0;
   left: var(--spacing-3xl);
@@ -48,11 +48,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(56px / 1.9); /* 28% 증가 (23.3px → 30px) */
-  height: calc(56px / 1.9);
+  width: calc(56px / 2.4);
+  height: calc(56px / 2.4);
 }
 
-/* ----- 맨 위로 가기 버튼(top-btn) ----- */
+/* ----- 留??꾨줈 媛湲?踰꾪듉(top-btn) ----- */
 .top-btn {
   bottom: 0;
   right: var(--spacing-3xl);
@@ -65,41 +65,39 @@
   top: calc(50% - 2px);
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(56px / 2); /* 28% 증가 (22.4px → 28.7px) */
-  height: calc(32px / 2);
+  width: calc(56px / 2.5);
+  height: calc(32px / 2.5);
 }
 
-/* ----- 사이드 바 버튼(sidebar-btn) ----- */
+/* ----- ?ъ씠??諛?踰꾪듉(sidebar-btn) ----- */
 .sidebar-btn {
   display: none;
   position: fixed;
-  top: 7px;  /* 헤더 중앙 정렬 */
+  top: 8px;
   right: 10px;
-  width: 52px;  /* 초기 상태: 헤더 안에 적당한 크기 */
-  height: 52px;
+  width: var(--size-util-btn);
+  height: var(--size-util-btn);
   border-radius: 50%;
   z-index: 9999;
-  transition: top 0.3s, right 0.3s, width 0.3s, height 0.3s, background-color 0.3s, transform 0.3s;
+  transition: top 0.3s, right 0.3s, background-color 0.3s, transform 0.3s;
 }
-/* 스크롤 내려갈 시 디자인 변경 */
+/* ?ㅽ겕濡??대젮媛????붿옄??蹂寃?*/
 .sidebar-btn--on {
   opacity: 0.7;
   top: var(--spacing-xl);
   right: var(--spacing-xl);
-  width: 64px;  /* 스크롤 후: 독립 버튼으로 크게 */
-  height: 64px;
   background-color: var(--color-util-btn);
 }
 .sidebar-btn--on:hover {
   transform: translateY(-4px);
 }
-/* 사이드바 열릴 때 위치 수정 */
+/* ?ъ씠?쒕컮 ?대┫ ???꾩튂 ?섏젙 */
 .sidebar-btn--active {
   top: var(--spacing-md);
   right: var(--spacing-md);
   /* right: 4px; */
 }
-/* lightbox열릴 때 숨김 처리 */
+/* lightbox?대┫ ???④? 泥섎━ */
 .sidebar-btn--hide {
   display: none !important;
 }
@@ -107,25 +105,23 @@
 .sidebar-btn__inner {
   position: relative;
   display: inline-block;
-  width: 29px;  /* 초기 상태: 52px 버튼에 비례 */
-  height: 23px;
-  transition: width 0.3s, height 0.3s, transform 0.3s;
+  width: 28px;
+  height: 22px;
+  transition: transform 0.3s;
   transform-origin: center center;
 }
-/* 스크롤 내려갈 때 디자인 변경 */
+/* ?ㅽ겕濡??대젮媛????붿옄??蹂寃?*/
 .sidebar-btn--on .sidebar-btn__inner {
-  width: 36px;  /* 스크롤 후: 큰 아이콘 */
-  height: 28px;
   transform: scale(0.9);
 }
 .sidebar-btn__inner span {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 4px;  /* 초기 상태: 얇은 선 */
+  height: 4px;
   background-color: var(--text-color-light);
   border-radius: var(--spacing-xs);
-  transition: top 0.5s, height 0.3s, transform 0.5s, opacity 0.5s;
+  transition: top 0.5s, transform 0.5s, opacity 0.5s;
 }
 .sidebar-btn__inner span:nth-child(1) {
   top: 0;
@@ -138,16 +134,15 @@
   top: 100%;
   transform: translateY(-100%);
 }
-/* 스크롤 내려갔을 때 선 색 변경 */
+/* ?ㅽ겕濡??대젮媛붿쓣 ??????蹂寃?*/
 .sidebar-btn--on .sidebar-btn__inner span {
-  height: 5px;  /* 스크롤 후: 두꺼운 선 */
   background-color: var(--color-background-white);
 }
-/* 사이드바 열릴 때 선 색 변경 */
+/* ?ъ씠?쒕컮 ?대┫ ??????蹂寃?*/
 .sidebar-btn--active .sidebar-btn__inner span {
   background-color: var(--color-foreground);
 }
-/* 사이드바 열릴 때 button 애니메이션 */
+/* ?ъ씠?쒕컮 ?대┫ ??button ?좊땲硫붿씠??*/
 .sidebar-btn--active .sidebar-btn__inner span:nth-child(1) {
   top: 50%;
   transform: rotate(45deg);
@@ -160,7 +155,7 @@
   transform: rotate(-45deg);
 }
 
-/* mockup-box 버튼 */
+/* mockup-box 踰꾪듉 */
 .mockup-box {
   position: fixed;
   bottom: var(--spacing-3xl);
@@ -185,16 +180,15 @@
   background-color: var(--color-mockup-box-btn);
   opacity: 1;
 }
-/* 페이지 최초 로드 시 주목 애니메이션 (4.5초간) */
+/* ?좊땲硫붿씠???숈옉 以?鍮꾪솢?깊솕 */
+/* 페이지 최초 로드 시 주목 애니메이션 (3초간) */
 .mockup-box__open-btn--initial-attention {
-  animation: pulseGlow 1.5s ease-in-out 3;  /* ease-in-out: 우아한 느낌 */
-  animation-delay: 0.5s;
+  animation: pulseGlow 1s ease-in-out 3;
 }
-/* 애니메이션 동작 중 비활성화 */
 .mockup-box__open-btn--disabled {
   pointer-events: none;
 }
-/* 목업 모음 활성화 시 */
+/* 紐⑹뾽 紐⑥쓬 ?쒖꽦????*/
 .mockup-box--on .mockup-box__open-btn {
   opacity: 1;
   background-color: var(--color-primary);
@@ -209,8 +203,8 @@
   left: 50%;
   left: calc(50% - 1px);
   transform: translate(-50%, -50%);
-  width: calc(58px / 1.6); /* 28% 증가 (29px → 37px) */
-  height: calc(58px / 1.6);
+  width: calc(58px / 2);
+  height: calc(58px / 2);
 }
 /* mockup-box__inner */
 .mockup-box__inner {
@@ -225,8 +219,8 @@
   position: absolute;
   top: 7px;
   left: 7px;
-  width: 40px;  /* 36px와 46px의 중간 */
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
 }
@@ -236,34 +230,34 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* 모바일 목업 버튼 */
+/* 紐⑤컮??紐⑹뾽 踰꾪듉 */
 .mockup-box__action-btn.mobile {
   background-color: #72e3ad;
   transition-delay: 0.3s;
 }
 .mockup-box__action-btn.mobile img {
-  width: calc(28px / 1.8);
-  height: calc(40px / 1.8);
+  width: calc(28px / 2);
+  height: calc(40px / 2);
 }
-/* 태블릿 목업 버튼 */
+/* ?쒕툝由?紐⑹뾽 踰꾪듉 */
 .mockup-box__action-btn.tablet {
   background-color: #1da1f2;
   transition-delay: 0.15s;
 }
 .mockup-box__action-btn.tablet img {
-  width: calc(40px / 1.8);
-  height: calc(32px / 1.8);
+  width: calc(40px / 2);
+  height: calc(32px / 2);
 }
-/* 닫기 버튼 */
+/* ?リ린 踰꾪듉 */
 .mockup-box__action-btn.close {
-  background-color: var(--color-negative);
+  background-color: #e4405f;
   transition-delay: 0.45s;
 }
 .mockup-box__action-btn.close img {
-  width: calc(28px / 1.8);
-  height: calc(28px / 1.8);
+  width: calc(28px / 2);
+  height: calc(28px / 2);
 }
-/* 목업 박스 열릴 때 액션버튼 동작 */
+/* 紐⑹뾽 諛뺤뒪 ?대┫ ???≪뀡踰꾪듉 ?숈옉 */
 .mockup-box--on .mockup-box__action-btn {
   opacity: 1;
   visibility: visible;
@@ -273,22 +267,22 @@
 .mockup-box__action-btn:hover {
   animation: actionBtnHover 0.2s ease-in-out forwards;
 }
-/* 모바일 */
+/* 紐⑤컮??- 紐⑹뾽 諛뺤뒪 ?대┫ ???≪뀡踰꾪듉 ?숈옉 */
 .mockup-box--on .mockup-box__action-btn.mobile{
-  top: -56px; 
+  top: -48px;
   left: 0;
 }
-/* 태블릿 버튼 */
+/* ?쒕툝由?- 紐⑹뾽 諛뺤뒪 ?대┫ ???≪뀡踰꾪듉 ?숈옉 */
 .mockup-box--on .mockup-box__action-btn.tablet{
-  top: -36px;
-  left: calc(100% + -4px);
+  top: -32px;
+  left: 48px;
 }
-/* 닫기 버튼 */
+/* ?リ린 踰꾪듉 - 紐⑹뾽 諛뺤뒪 ?대┫ ???≪뀡踰꾪듉 ?숈옉 */
 .mockup-box--on .mockup-box__action-btn.close{
-  top: calc(100% - 40px);  /* 41px 버튼에 맞춰 조정 */
-  left: calc(100% + 16px);
+  top: calc(100% - 36px);
+  left: calc(100% + 18px);
 }
-/* 액션버튼 호버 애니메이션 */
+/* ?≪뀡踰꾪듉 ?몃쾭 ?좊땲硫붿씠??*/
 @keyframes actionBtnHover {
   0% {
     opacity: 1;
@@ -298,22 +292,14 @@
   }
 }
 
-
-
-/* 펄스 + 글로우 애니메이션 (초기 주목용) - ease-in-out으로 우아하게 */
+/* 펄스 + 글로우 애니메이션 (초기 주목용) */
 @keyframes pulseGlow {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 rgba(255, 184, 77, 0);
   }
-  50% {  /* 최대 지점 */
+  50% {
     transform: scale(1.05);
-    box-shadow: 
-      0 0 15px 5px rgba(255, 184, 77, 0.85),
-      0 0 30px 12px rgba(255, 184, 77, 0.55),
-      0 0 45px 18px rgba(255, 184, 77, 0.3);
+    box-shadow: 0 0 20px 8px rgba(255, 184, 77, 0.6);
   }
-  /* 75% 키프레임 제거 - ease-in-out이 자연스럽게 페이드 아웃 처리 */
 }
-
-

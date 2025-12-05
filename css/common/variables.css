@@ -7,7 +7,7 @@
   --section-padding: 120px 70px;
 
   /* util-btn width, height */
-  --size-util-btn: 50px;
+  --size-util-btn: 64px;
 
   /* --------- THEME COLOR --------- */
   --color-primary: #00ad53;
@@ -19,6 +19,8 @@
   --color-line: #dfdfdf;
   --color-util-btn: #777777;
   --color-mockup-box-btn: var(--color-primary); 
+  --color-attention-glow: rgba(255, 184, 77, 0.7); /* 주목 애니메이션용 글로우 색상 - 더 부드럽게 */
+ 
 
   /* skill-section */
   --color-background-even-section: #f9f7f1;
@@ -63,7 +65,7 @@
   --spacing-lg: 16px;
   --spacing-xl: 20px;
   --spacing-2xl: 24px;
-  --spacing-3xl: 32px;
+  --spacing-3xl: 48px;
   --spacing-4xl: 40px;
   --spacing-5xl: 50px;
   --spacing-6xl: 60px;
