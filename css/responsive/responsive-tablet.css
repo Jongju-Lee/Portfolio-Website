@@ -61,6 +61,15 @@
   
 
   /* ########## SECTION - ABOUT ########## */
+  #about {
+    padding: 80px 60px 100px;
+    margin-top: 65px;
+    height: auto;
+  }
+  #about .inner {
+    gap: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+  }
   .about-content {
     column-gap: var(--spacing-4xl);
     margin-top: 0;

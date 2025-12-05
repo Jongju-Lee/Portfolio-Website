@@ -64,11 +64,18 @@
   #about {
     padding-top: 120px;
   }
-  .about-content {
-    row-gap: var(--spacing-xl);
+  #about {
+    padding: 60px 20px;
+    margin-top: 65px;
+    height: auto;
+  }
+  #about .inner {
+    gap: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
   }
   /* about-intro */
   .about-intro {
+    margin-top: var(--spacing-3xl);
     margin-bottom: var(--spacing-3xl);
     padding-left: 0;
   }

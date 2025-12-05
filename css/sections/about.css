@@ -1,5 +1,15 @@
 #about {
-  padding-top: 200px;
+  padding: var(--section-padding);
+  margin-top: 74px;
+  height: calc(100vh - 74px);
+}
+#about .inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-5xl);
+  padding-bottom: var(--spacing-4xl);
 }
 /* ----- about-content ----- */
 .about-content {
@@ -9,7 +19,6 @@
   justify-content: center;
   column-gap: var(--spacing-3xl);
   row-gap: var(--spacing-5xl);
-  margin-top: var(--spacing-5xl);
 }
 
 /* ----- about-intro ----- */
