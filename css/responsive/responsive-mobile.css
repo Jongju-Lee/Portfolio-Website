@@ -402,6 +402,9 @@
   .web-year__wrap-inner {
     height: auto;
   }
+  .web-year__item:first-child .web-tab__item-thum {
+    height: auto;
+  }
   /* web-tab__btn-box */
   .web-tab__btn-box {
     width: calc(100% - 16px);
