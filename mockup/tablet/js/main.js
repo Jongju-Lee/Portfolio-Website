@@ -136,12 +136,16 @@ document.addEventListener('DOMContentLoaded', function () {
     backButton.addEventListener('click', function (e) {
       e.preventDefault();
 
-      // 방문 기록이 2개 이상이면 뒤로가기, 아니면 루트로 이동
-      if (window.history.length > 1) {
+      // URL 파라미터 확인: PDF에서 링크로 진입했는지 체크
+      const urlParams = new URLSearchParams(window.location.search);
+      const isFromPdf = urlParams.get('from') === 'pdf';
+
+      if (isFromPdf) {
+        // PDF에서 왔으면 → 뒤로가기 (PDF로 돌아감)
         window.history.back();
       } else {
-        // 현재 위치(mockup/mobile/) 기준으로 루트 index.html 경로 설정
-        window.location.href = 'https://portfolio-jongju-lee.netlify.app/';
+        // 그 외 → 루트 index.html로 이동
+        window.location.href = '../../index.html';
       }
     });
   }
