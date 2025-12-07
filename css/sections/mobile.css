@@ -1,4 +1,4 @@
-/* ----- Mobile Web 공통 스타일 ----- */
+﻿/* ----- Mobile Web 공통 스타일 ----- */
 main > section.mobile {
   font-size: var(--font-size-lg);
   padding-top: 150px;
@@ -252,7 +252,7 @@ main > section.mobile {
 
 /* ----- Redefine - mobile-detail__function ----- */
 #redefine .mobile-detail__function-list-item .dot {
-  background-image: url(../../image/mobile_web/redefine-dot.png);
+  background-image: url(../../images/mobile_web/redefine-dot.png);
 }
 
 /* ----- Redefine - mobile-detail__work-list ----- */
@@ -317,7 +317,7 @@ main > section.mobile {
 
 /* ----- Market - mobile-detail__function ----- */
 #market .mobile-detail__function-list-item .dot {
-  background-image: url(../../image/mobile_web/market-dot.png);
+  background-image: url(../../images/mobile_web/market-dot.png);
 }
 
 /* ----- Market - mobile-detail__work-list ----- */

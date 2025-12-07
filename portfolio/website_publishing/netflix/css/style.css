@@ -1,4 +1,4 @@
-/* Bootstrap Icons CDN */
+﻿/* Bootstrap Icons CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 /* Google Web Fonts CDN */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
@@ -112,7 +112,7 @@ section.intro {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url(../image/netflix_background.jpg) center center / cover;
+  background: url(../images/netflix_background.jpg) center center / cover;
 }
 section.intro::after {
   content: "";

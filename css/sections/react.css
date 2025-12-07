@@ -1,4 +1,4 @@
-main > section#react {
+﻿main > section#react {
   background-color: var(--react-background-color);
   color: var(--react-text-color);
   font-size: var(--font-size-lg);
@@ -174,7 +174,7 @@ main > section#react {
   display: inline-block;
   width: calc(18px / 2);
   height: calc(18px / 2);
-  background-image: url(../../image/react/dot.png);
+  background-image: url(../../images/react/dot.png);
   background-size: 100% 100%;
 }
 

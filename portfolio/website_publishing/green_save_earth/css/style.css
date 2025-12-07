@@ -1,4 +1,4 @@
-/* Bootstrap Icons CDN */
+﻿/* Bootstrap Icons CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 /* Google Web Font */
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
@@ -550,7 +550,7 @@ section.focus {
 /* ########## Section - Change ########## */
 section.change {
   display: flex;
-  background: url(../image/home-9.jpg) no-repeat center center / cover;
+  background: url(../images/home-9.jpg) no-repeat center center / cover;
 }
 section.change > * {
   flex: 1;
@@ -593,7 +593,7 @@ section.change > * {
 /* ########## Section - Join ########## */
 section.join {
   padding: 150px 0;
-  background: #333356 url(../image/pattern-footer.png);
+  background: #333356 url(../images/pattern-footer.png);
 }
 section.join .heading {
   width: 700px;
@@ -715,7 +715,7 @@ section.join .inner .btn_wrapper .btn_normal:hover {
 /* ########## Section - Total ########## */
 section.total {
   position: relative;
-  background: url(../image/home-11.jpg) no-repeat center center / cover;
+  background: url(../images/home-11.jpg) no-repeat center center / cover;
   min-height: 670px;
 }
 section.total::after {
@@ -775,7 +775,7 @@ section.donations {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 17px;
-  background: #fff url(../image/dollar.png) no-repeat center left 20px;
+  background: #fff url(../images/dollar.png) no-repeat center left 20px;
 }
 .donate .btn_field {
   margin-top: 20px;
@@ -872,7 +872,7 @@ section.help {
   position: relative;
   padding-top: 150px;
   padding-bottom: 300px;
-  background: #0b4d3c url(../image/pattern-footer.png);
+  background: #0b4d3c url(../images/pattern-footer.png);
 }
 .save_ocean_outer h2 {
   width: 700px;
@@ -961,7 +961,7 @@ section.help {
   left: 0;
   width: 100%;
   height: 200px;
-  background: url(../image/home-9.jpg) no-repeat center center / cover;
+  background: url(../images/home-9.jpg) no-repeat center center / cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1106,7 +1106,7 @@ section.happening {
 }
 /* ########## Footer ########## */
 footer {
-  background: #333356 url(../image/pattern-footer.png);
+  background: #333356 url(../images/pattern-footer.png);
   color: #fff;
 }
 footer .inner {

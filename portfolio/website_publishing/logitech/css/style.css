@@ -1,4 +1,4 @@
-/* Bootstrap Icons CDN */
+﻿/* Bootstrap Icons CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 /* Google Web Fonts CDN */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
@@ -195,10 +195,10 @@ header {
   position: relative;
 }
 .small_logo::before {
-  content: url(../image/logitechg-grey.svg);
+  content: url(../images/logitechg-grey.svg);
 }
 .small_logo:hover::before {
-  content: url(../image/logitechg.svg);
+  content: url(../images/logitechg.svg);
 }
 .small_logo::after {
   content: "|";
@@ -257,22 +257,22 @@ input[id="brand"]:checked ~ .our_brand_list {
   border-bottom: none;
 }
 a.stream::before {
-  content: url(../image/streamlabs-grey.svg);
+  content: url(../images/streamlabs-grey.svg);
 }
 a.ultimate::before {
-  content: url(../image/ultimate-ears-grey.svg);
+  content: url(../images/ultimate-ears-grey.svg);
 }
 a.jaybird::before {
-  content: url(../image/jaybird-grey.svg);
+  content: url(../images/jaybird-grey.svg);
 }
 a.stream:hover::before {
-  content: url(../image/streamlabs.svg);
+  content: url(../images/streamlabs.svg);
 }
 a.ultimate:hover::before {
-  content: url(../image/ultimate-ears.svg);
+  content: url(../images/ultimate-ears.svg);
 }
 a.jaybird:hover::before {
-  content: url(../image/jaybird.svg);
+  content: url(../images/jaybird.svg);
 }
 /* ########## Header - Nav ########## */
 nav {
@@ -670,7 +670,7 @@ section.intro img {
 }
 /* Item - Plastic */
 .envi_plastic {
-  background: url(../image/pcr-plastic-desktop.jfif) no-repeat bottom center /
+  background: url(../images/pcr-plastic-desktop.jfif) no-repeat bottom center /
     cover;
 }
 .envi_slider .item .heading_plastic {
@@ -684,17 +684,17 @@ section.intro img {
 }
 /* Item - Future */
 .envi_future {
-  background: url(../image/future-positive-challenge-desktop.jpg) no-repeat
+  background: url(../images/future-positive-challenge-desktop.jpg) no-repeat
     center center / cover;
 }
 /* Item - Climate */
 .envi_climate {
-  background: url(../image/climate-positive-desktop.jfif) no-repeat center
+  background: url(../images/climate-positive-desktop.jfif) no-repeat center
     center / cover;
 }
 /* Item - Carbon */
 .envi_carbon {
-  background: url(../image/carbon-methodology-desktop.jpg) no-repeat center
+  background: url(../images/carbon-methodology-desktop.jpg) no-repeat center
     center / cover;
 }
 .envi_carbon .btn_heading {
@@ -706,17 +706,17 @@ section.intro img {
 }
 /* Item - Society */
 .envi_society {
-  background: url(../image/bg-logicares-desktop.jpg) no-repeat center center /
+  background: url(../images/bg-logicares-desktop.jpg) no-repeat center center /
     cover;
 }
 /* Item - Award */
 .envi_award {
-  background: url(../image/bg-design-desktop.jpg) no-repeat center center /
+  background: url(../images/bg-design-desktop.jpg) no-repeat center center /
     cover;
 }
 /* Item - Introduction */
 .envi_introduction {
-  background: url(../image/bg-about-desktop.jpg) no-repeat center center / cover;
+  background: url(../images/bg-about-desktop.jpg) no-repeat center center / cover;
 }
 /* ########## Footer ########## */
 footer {

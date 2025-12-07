@@ -1,4 +1,4 @@
-/* ---------- Header ---------- */
+﻿/* ---------- Header ---------- */
 header {
   position: fixed;
   top: 0;
@@ -100,7 +100,7 @@ header.hide {
   border: 2px solid var(--color-primary);
   border-radius: 50%;
   color: var(--color-primary);
-  background-image: url(../../image/icon/header-gnb-help-btn-icon.png);
+  background-image: url(../../images/icon/header-gnb-help-btn-icon.png);
   background-size: calc(20px / 2) calc(32px / 2);
   background-position: center;
   background-repeat: no-repeat;
@@ -108,7 +108,7 @@ header.hide {
 }
 .header__gnb-help-btn:hover {
   background-color: var(--color-primary);
-  background-image: url(../../image/icon/header-gnb-help-btn-icon--white.png);
+  background-image: url(../../images/icon/header-gnb-help-btn-icon--white.png);
 }
 
 

@@ -1,4 +1,4 @@
-/* Bootstrap Icons CDN */
+﻿/* Bootstrap Icons CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 /* Google Web Font */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
@@ -35,7 +35,7 @@ body {
 section {
   position: relative;
   height: inherit;
-  background: url(./image/background.svg) no-repeat center center / cover;
+  background: url(./images/background.svg) no-repeat center center / cover;
 }
 .profile_card {
   position: absolute;

@@ -1,4 +1,4 @@
-/* Google Web Font */
+﻿/* Google Web Font */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
 /* Reset CSS */
 * {
@@ -37,7 +37,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(./image/initial.jpg);
+  background-image: url(./images/initial.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

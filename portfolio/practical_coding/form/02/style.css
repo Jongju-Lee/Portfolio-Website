@@ -1,4 +1,4 @@
-/* Fontawesome 4.7 */
+﻿/* Fontawesome 4.7 */
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /* Google Web Font */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
@@ -26,7 +26,7 @@ body {
 .container {
   position: relative;
   height: inherit;
-  background: url(./image/background.jpg) no-repeat center center / cover;
+  background: url(./images/background.jpg) no-repeat center center / cover;
 }
 .container::after {
   content: "";

@@ -1,4 +1,4 @@
-/* Bootstrap Icons CDN */
+﻿/* Bootstrap Icons CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 /* Google Web Fonts CDN */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
@@ -92,7 +92,7 @@ section {
   flex: 1;
 }
 .birth_wrapper select {
-  background: #fff url(./image/caret-down-fill.svg) no-repeat center right 20px;
+  background: #fff url(./images/caret-down-fill.svg) no-repeat center right 20px;
   background-size: 14px;
   color: #333;
 }

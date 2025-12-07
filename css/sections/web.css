@@ -1,4 +1,4 @@
-/* ----- web-content ----- */
+﻿/* ----- web-content ----- */
 .web-content {
   margin-top: var(--spacing-7xl);
 }
@@ -257,32 +257,32 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
 }
 /* 2025년 작업물 */
 .web-year__item:nth-child(1) .web-tab__item:nth-child(1) .web-tab__item-thum {
-  background-image: url(../../image/website_pub/web-well-life-thum.png);
+  background-image: url(../../images/website_pub/web-well-life-thum.png);
   transition-duration: 8s;
 }
 /* 2024년 작업물 */
 .web-year__item:nth-child(2) .web-tab__item:nth-child(1) .web-tab__item-thum {
-  background-image: url(../../image/website_pub/web_travelium_thum.jpg);
+  background-image: url(../../images/website_pub/web_travelium_thum.jpg);
   transition-duration: 4s;
 }
 .web-year__item:nth-child(2) .web-tab__item:nth-child(2) .web-tab__item-thum {
-  background-image: url(../../image/website_pub/web_shoe_station_thum.jpg);
+  background-image: url(../../images/website_pub/web_shoe_station_thum.jpg);
   transition-duration: 4s;
 }
 .web-year__item:nth-child(2) .web-tab__item:nth-child(3) .web-tab__item-thum {
-  background-image: url(../../image/website_pub/web_green_save_earth_thum.jpg);
+  background-image: url(../../images/website_pub/web_green_save_earth_thum.jpg);
   transition-duration: 8s;
 }
 .web-year__item:nth-child(2) .web-tab__item:nth-child(4) .web-tab__item-thum {
-  background-image: url(../../image/website_pub/web_smeg_thum.jpg);
+  background-image: url(../../images/website_pub/web_smeg_thum.jpg);
   transition-duration: 4s;
 }
 .web-year__item:nth-child(2) .web-tab__item:nth-child(5) .web-tab__item-thum {
-  background-image: url(../../image/website_pub/web_logitech_thum.jpg);
+  background-image: url(../../images/website_pub/web_logitech_thum.jpg);
   transition-duration: 2.5s;
 }
 .web-year__item:nth-child(2) .web-tab__item:nth-child(6) .web-tab__item-thum {
-  background-image: url(../../image/website_pub/web_netflix_thum.png);
+  background-image: url(../../images/website_pub/web_netflix_thum.png);
   transition-duration: 3s;
 }
 /* ----- web-tab__item-content ----- */

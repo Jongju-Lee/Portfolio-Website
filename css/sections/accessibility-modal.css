@@ -1,4 +1,4 @@
-/* ----- 접근성 알림 토스트 ----- */
+﻿/* ----- 접근성 알림 토스트 ----- */
 .accessibility-modal {
   opacity: 0;
   position: fixed;
@@ -67,7 +67,7 @@
   display: inline-block;
   width: calc(14px / 2);
   height: calc(16px / 2);
-  background-image: url(../../image/icon/toast-aster-icon.png);
+  background-image: url(../../images/icon/toast-aster-icon.png);
   background-size: 100% 100%;
   margin-top: 6px;
 }

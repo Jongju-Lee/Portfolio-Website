@@ -1,4 +1,4 @@
-.edu-content {
+﻿.edu-content {
   margin-top: var(--spacing-8xl);
   padding-left: var(--spacing-7xl);
 }
@@ -44,7 +44,7 @@
   display: inline-block;
   width: calc(36px / 2);
   height: calc(36px / 2);
-  background-image: url(../../image/edu/circle.png);
+  background-image: url(../../images/edu/circle.png);
   background-size: 100% 100%;
 }
 .edu-timeline__line-box .line {
