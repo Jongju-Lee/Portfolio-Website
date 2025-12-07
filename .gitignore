@@ -1,0 +1,9 @@
+# Antigravity AI Agent workflows
+.agent/
+
+# Node modules
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
