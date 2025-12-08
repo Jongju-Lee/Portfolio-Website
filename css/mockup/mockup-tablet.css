@@ -1,0 +1,40 @@
+/* ===============================================
+   Mockup Tablet Style
+   태블릿 목업 전용 스타일
+   공통 스타일은 mockup-common.css 참조
+   =============================================== */
+
+@import url('./mockup-common.css');
+
+/* ---------- Container ---------- */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 80px 0;
+    padding-left: 5%;
+    min-height: 100vh;
+    color: #1e2723;
+}
+
+/* ---------- Tablet Mockup ---------- */
+.mockup {
+    flex-shrink: 0;
+    background-image: url(/images/mockup/tablet-mockup.png);
+    width: calc(2070px / 1.8);
+    height: calc(1436px / 1.8);
+}
+
+.mockup-container {
+    top: 53px;
+    left: 66px;
+    width: 1020px;
+    height: 670px;
+    border-radius: 20px;
+}
+
+.mockup-iframe__wrap {
+    border-radius: 20px;
+}
