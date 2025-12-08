@@ -2,300 +2,47 @@
 .web-content {
   margin-top: var(--spacing-7xl);
 }
-/* ----- web-year__arrow ----- */
-.web-year__arrow {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  width: fit-content;
-  margin: 0 auto;
-}
-/* web-year__arrow-box */
-.web-year__arrow-box {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-.web-year__arrow-btn {
-  position: relative;
-  width: calc(96px / 2.2);
-  height: calc(96px / 2.2);
-  transition: opacity 0.2s, transform 0.2s;
-  z-index: 1;
-}
-.web-year__arrow-btn:not(.web-year__arrow-btn--disabled):hover {
-  opacity: 0.7;
-  transform: scale(1.15);
-}
-.web-year__arrow-btn--disabled {
-  opacity: 0.3;
-  filter: grayscale(1);
-  pointer-events: none;
-}
-.web-year__arrow-btn img {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.web-year__arrow-num-wrap {
-  width: 100px;
-  height: 40px;
-  overflow: hidden;
-}
-.web-year__arrow-num-box {
-  position: relative;
-  display: flex;
-  width: 200%;
-  transition: left 1s;
-  text-align: center;
-}
-.web-year__arrow-num-box--first {
-  left: 0%;
-}
-.web-year__arrow-num-box--second {
-  left: -100%;
-}
-.web-year__arrow-num-item {
-  flex: 1;
-  display: inline-block;
-  text-align: center;
-  font-size: 40px;
-  line-height: 1em;
-  font-family: var(--font-EN);
-  font-weight: 500;
-}
-.web-year__arrow-text {
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 1em;
-}
-/* ----- web-year__container ----- */
-.web-year__wrap {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  margin-top: var(--spacing-6xl);
-}
-.web-year__wrap-inner {
-  position: relative;
-  width: 200%;
-  height: 480px;
-  left: 0;
-  display: flex;
-  transition: height 1s, left 1s;
-  transition-delay: 0.5s, 0.5s;
-}
-.web-year__wrap-inner:has(.web-year__item--active:nth-child(2)) {
-  left: -100%;
-  height: 656px;
-  transition-delay: 0s, 0.5s;
-}
-.web-year__item {
-  flex: 1;
-  opacity: 0;
-  height: fit-content;
-  transition: opacity 0.5s;
-}
-.web-year__item--active {
-  opacity: 1;
-}
-.web-year__item:nth-child(1) .web-tab__item {
-  opacity: 1;
-  visibility: visible;
-  position: static;
-}
-/* ----- web-tab__btn-box ----- */
-.web-tab__btn-box {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  height: 140px;
-  width: 1000px;
-  margin: 0 auto;
-}
-/* web-tab__btn-indicator */
-.web-tab__btn-indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100% / 3);
-  height: 50%;
-  background-color: var(--color-line);
-  border-radius: var(--spacing-xl);
-  transition: top 0.5s, left 0.5s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-/* 체크 별 indicator 위치 수정 */
-input[id="web2-1"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
-  top: 0;
-  left: 0;
-}
-input[id="web2-2"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
-  top: 0;
-  left: calc(100% / 3);
-}
-input[id="web2-3"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
-  top: 0;
-  left: calc(100% / 1.5);
-}
-input[id="web2-4"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
-  top: 50%;
-  left: 0;
-}
-input[id="web2-5"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
-  top: 50%;
-  left: calc(100% / 3);
-}
-input[id="web2-6"]:checked ~ .web-tab__btn-box .web-tab__btn-indicator {
-  top: 50%;
-  left: calc(100% / 1.5);
-}
-/* web-tab__btn */
-.web-tab__btn {
-  position: relative;
-  width: calc(100% / 3);
-  height: 50px;
-  margin: 10px 0;
-  line-height: 50px;
-  font-size: 28px;
-  font-weight: 400;
-  font-family: var(--font-EN);
-  cursor: pointer;
-  text-align: center;
-  overflow: hidden;
-}
-.web-tab__btn::before,
-.web-tab__btn::after {
-  content: attr(data-label-text);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  transition: top 0.3s;
-}
-.web-tab__btn::before {
-  position: absolute;
-  top: 0;
-}
-.web-tab__btn::after {
-  position: absolute;
-  top: 100%;
-  color: var(--color-primary);
-}
-/* 체크된 탭 버튼 애니메이션 활성화 */
-input[id="web2-1"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-1"]::before,
-input[id="web2-2"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-2"]::before,
-input[id="web2-3"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-3"]::before,
-input[id="web2-4"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-4"]::before,
-input[id="web2-5"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-5"]::before,
-input[id="web2-6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-6"]::before,
-.web-tab__btn:hover::before {
-  top: -110%;
-}
-input[id="web2-1"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-1"]::after,
-input[id="web2-2"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-2"]::after,
-input[id="web2-3"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-3"]::after,
-input[id="web2-4"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-4"]::after,
-input[id="web2-5"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-5"]::after,
-input[id="web2-6"]:checked ~ .web-tab__btn-box .web-tab__btn[for="web2-6"]::after,
-.web-tab__btn:hover::after {
-  top: 0%;
-}
-/* ----- web-tab__item-box ----- */
-.web-tab__item-box {
-  position: relative;
-  margin-top: var(--spacing-6xl);
-}
-/* 체크되지 않은 상태에서는 탭 비활성화 */
-.web-tab__item {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
+
+/* ----- web-project ----- */
+.web-project {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--spacing-5xl);
   width: 100%;
-  min-height: 450px;
-  transition: opacity 1s, visibility 1s;
-  z-index: -1;
 }
-/* 체크된 탭만 활성화 */
-input[id="web2-1"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(1),
-input[id="web2-2"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(2),
-input[id="web2-3"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(3),
-input[id="web2-4"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(4),
-input[id="web2-5"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(5),
-input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
-  position: static;
-  opacity: 1;
-  visibility: visible;
-  z-index: 1;
-}
-/* ----- web-tab__item-thum ----- */
-.web-year__item:first-child .web-tab__item-thum {
-  height: 460px;
-}
-.web-tab__item-thum {
+
+/* ----- web-project__thumbnail ----- */
+.web-project__thumbnail {
   width: 624px;
-  height: 434px;
+  height: 460px;
   margin-top: var(--spacing-sm);
   border-radius: var(--spacing-md);
+  background-image: url(../../images/website_pub/web-well-life-thum.png);
   background-size: cover;
   background-position: top;
-  transition: background-position ease-in-out;
+  transition: background-position 8s ease-in-out;
   box-shadow: var(--shadow-color-box);
 }
-.web-tab__item-thum.on {
+.web-project__thumbnail.on {
   animation: blink2 1.2s linear 2 forwards;
 }
-/* 썸네일 hover시 하단 이동 animation */
-.web-tab__item-thum:hover {
+.web-project__thumbnail:hover {
   background-position: bottom;
 }
-/* 2025년 작업물 */
-.web-year__item:nth-child(1) .web-tab__item:nth-child(1) .web-tab__item-thum {
-  background-image: url(../../images/website_pub/web-well-life-thum.png);
-  transition-duration: 8s;
-}
-/* 2024년 작업물 */
-.web-year__item:nth-child(2) .web-tab__item:nth-child(1) .web-tab__item-thum {
-  background-image: url(../../images/website_pub/web_travelium_thum.jpg);
-  transition-duration: 4s;
-}
-.web-year__item:nth-child(2) .web-tab__item:nth-child(2) .web-tab__item-thum {
-  background-image: url(../../images/website_pub/web_shoe_station_thum.jpg);
-  transition-duration: 4s;
-}
-.web-year__item:nth-child(2) .web-tab__item:nth-child(3) .web-tab__item-thum {
-  background-image: url(../../images/website_pub/web_green_save_earth_thum.jpg);
-  transition-duration: 8s;
-}
-.web-year__item:nth-child(2) .web-tab__item:nth-child(4) .web-tab__item-thum {
-  background-image: url(../../images/website_pub/web_smeg_thum.jpg);
-  transition-duration: 4s;
-}
-.web-year__item:nth-child(2) .web-tab__item:nth-child(5) .web-tab__item-thum {
-  background-image: url(../../images/website_pub/web_logitech_thum.jpg);
-  transition-duration: 2.5s;
-}
-.web-year__item:nth-child(2) .web-tab__item:nth-child(6) .web-tab__item-thum {
-  background-image: url(../../images/website_pub/web_netflix_thum.png);
-  transition-duration: 3s;
-}
-/* ----- web-tab__item-content ----- */
-.web-tab__item-content {
+
+/* ----- web-project__content ----- */
+.web-project__content {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 590px;
-  max-height: 436px;
+  max-height: 460px;
   margin-top: var(--spacing-sm);
 }
-.web-tab__item-title {
+/* ----- web-project__header ----- */
+.web-project__title {
   position: relative;
   font-family: var(--font-EN);
   width: fit-content;
@@ -303,10 +50,10 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   font-weight: 500;
   line-height: 1em;
 }
-.web-tab__item-title.font-kr {
+.web-project__title.font-kr {
   font-weight: 600;
 }
-.web-tab__item-title.new::after {
+.web-project__title.new::after {
   content: "";
   position: absolute;
   top: -2px;
@@ -316,13 +63,13 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   border-radius: 50%;
   background-color: var(--color-negative);
 }
-.web-tab__item-desc {
+.web-project__description {
   margin-top: var(--spacing-lg);
   line-height: 1.6em;
   font-size: var(--font-size-lg);
 }
-/* ----- web-tab__item-detail ----- */
-.web-tab__item-detail {
+/* ----- web-project__details ----- */
+.web-project__details {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -330,22 +77,22 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   gap: var(--spacing-md);
   padding: var(--spacing-2xl) 0;
 }
-.web-tab__item-detail li {
+.web-project__details li {
   display: flex;
   align-items: center;
   gap: var(--spacing-2xl);
   font-size: var(--font-size-lg);
 }
-.web-tab__item-detail li h5 {
+.web-project__details li h5 {
   font-weight: 500;
   line-height: inherit;
 }
-/* ----- web-tab__item-link-box ----- */
-.web-tab__item-link-box {
+/* ----- web-project__links ----- */
+.web-project__links {
   display: flex;
   gap: var(--spacing-sm);
 }
-.web-tab__item-link-btn {
+.web-project__link {
   display: inline-block;
   width: 110px;
   padding: 6px 0;
@@ -356,56 +103,55 @@ input[id="web2-6"]:checked ~ .web-tab__item-box .web-tab__item:nth-child(6) {
   font-family: var(--font-EN);
   transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
-/* 링크 버튼 hover시 디자인 변경 */
-.web-tab__item-link-btn--pc {
+.web-project__link--pc {
   background-color: var(--color-primary);
   color: var(--text-color-white);
 }
-.web-tab__item-link-btn--pc:hover {
+.web-project__link--pc:hover {
   background-color: var(--color-background-white);
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
 }
-.web-tab__item-link-btn--mobile,
-.web-tab__item-link-btn--tablet {
+.web-project__link--mobile,
+.web-project__link--tablet {
   background-color: var(--color-background-white);
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
 }
-.web-tab__item-link-btn--mobile:hover,
-.web-tab__item-link-btn--tablet:hover {
+.web-project__link--mobile:hover,
+.web-project__link--tablet:hover {
   background-color: var(--color-primary);
   color: var(--text-color-white);
   border: 1px solid transparent;
 }
-.web-tab__item-link-btn--func,
-.web-tab__item-link-btn--design {
+.web-project__link--design {
   background-color: var(--color-background-white);
   border: 1px solid var(--text-color-body);
   color: var(--text-color-body);
 }
-.web-tab__item-link-btn--func:hover,
-.web-tab__item-link-btn--design:hover {
+.web-project__link--design:hover {
   background-color: var(--text-color-title);
   color: var(--text-color-white);
   border: 1px solid transparent;
 }
-.web-tab__item-link-btn--func {
-  font-family: var(--font-KR);
-}
 
 /* 1420px 반응형 적용 */
 @media (max-width: 1420px) {
+
   /* ########## SECTION - WEB ########## */
-  .web-year__wrap-inner {
-    height: 936px;
+  .web-project {
+    flex-direction: column;
+    align-items: center;
   }
-  .web-year__wrap-inner:has(.web-year__item--active:nth-child(2)) {
-    height: auto;
-  }
-  .web-tab__btn-box {
-    width: calc(100% - 30px);
+  .web-project__thumbnail {
+    width: 100%;
     max-width: 624px;
   }
+  .web-project__content {
+    width: 100%;
+    max-width: 624px;
+    max-height: none;
+  }
+
   /* ########## END - WEB ########## */
 }
