@@ -1,7 +1,18 @@
+@charset "utf-8";
+
+/* ========== SECTIONS-BOTTOM.CSS ==========
+ * 하단 섹션 스타일 (Practical, Epilogue)
+ * 병합된 파일: practical.css, epilogue.css
+ * ========================================= */
+
+
+/* ########## Practical Section ########## */
+
 /* ----- practical-content ----- */
 .practical-content {
   margin-top: 120px;
 }
+
 /* ----- practical-slider ----- */
 .practical-slider:not(:last-child) {
   margin-bottom: 120px;
@@ -27,6 +38,7 @@
   opacity: 0.5;
   z-index: -1;
 }
+
 /* ----- practical-slider__item ----- */
 .practical-slider__item {
   display: block;
@@ -52,6 +64,7 @@
 .practical-slider__box .slick-track {
   padding: var(--spacing-md);
 }
+
 /* 슬라이더 좌, 우 arrow button */
 .practical-slider__box .slick-prev:before,
 .practical-slider__box .slick-next:before {
@@ -72,6 +85,7 @@
 .practical-slider__box .slick-next:before {
   content: "\F285";
 }
+
 /* 슬라이더 하단 dot-slider */
 .practical-slider__box .slick-dots {
   left: 50%;
@@ -93,4 +107,66 @@
 .practical-slider__box .slick-dots li.slick-active button::before {
   opacity: 1;
   color: #00ad53;
+}
+
+
+/* ########## Epilogue Section ########## */
+
+/* ----- epilogue-content ----- */
+.epilogue-content {
+  margin-top: var(--spacing-7xl);
+  padding: 0 var(--spacing-4xl);
+}
+.epilogue-content-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: var(--spacing-8xl);
+  row-gap: var(--spacing-7xl);
+}
+
+/* ----- epilogue-heading ----- */
+.epilogue-heading {
+  flex-shrink: 0;
+  width: 500px;
+}
+.epilogue-heading__title {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  line-height: 1.5em;
+}
+.epilogue-heading__title span {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.epilogue-heading__text-box {
+  margin-top: var(--spacing-lg);
+}
+.epilogue-heading__text {
+  line-height: 1.8em;
+  font-size: var(--font-size-xl);
+}
+.epilogue-heading__text:nth-child(2) {
+  margin-top: var(--spacing-sm);
+}
+
+/* ----- epilogue-job-strength ----- */
+.epilogue-job-strength {
+  width: 600px;
+}
+.epilogue-job-strength__item:not(:last-child) {
+  margin-bottom: var(--spacing-3xl);
+}
+.epilogue-job-strength__item-title {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+.epilogue-job-strength__item-text {
+  margin-top: var(--spacing-sm);
+  line-height: 1.7em;
+  text-align: justify;
+  color: var(--text-color-body);
 }

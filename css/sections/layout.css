@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+/* ========== LAYOUT.CSS ==========
+ * 헤더, 푸터, 네비게이션 관련 스타일
+ * 병합된 파일: header.css, footer.css, fullscreen-nav.css, sidebar-nav.css
+ * ================================ */
+
+
+/* ########## Header ########## */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-6xl);
+  box-shadow: var(--shadow-normal);
+  transition: transform 0.3s;
+  background-color: var(--color-background-white);
+  z-index: 2000;
+}
+header.hide {
+  transform: translateY(-100%);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-5xl);
+}
+
+/* ----- header__functional-btn ----- */
+.header__functional-btn {
+  order: 0;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid #00ad53;
+  color: var(--color-primary);
+  border-radius: var(--spacing-sm);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: 400;
+}
+.header__functional-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--text-color-white);
+}
+
+/* ----- header__gnb ----- */
+.header__gnb {
+  order: 1;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 66px;
+  row-gap: 0;
+  flex-wrap: wrap;
+}
+.header__gnb:focus {
+  outline: 2px solid var(--color-primary);
+}
+.header__gnb-item {
+  position: relative;
+  line-height: var(--spacing-5xl);
+  font-family: var(--font-EN);
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  transition: color 0.4s ease;
+}
+.header__gnb-item.new::before {
+  content: attr(data-count);
+  position: absolute;
+  top: 8px;
+  right: -16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: var(--font-size-xs);
+  background-color: var(--color-negative);
+  color: var(--text-color-white);
+}
+.header__gnb-item.new[data-count="1"]::before {
+  padding-right: 1px;
+}
+.header__gnb-item:hover {
+  color: var(--text-color-gray);
+}
+.header__gnb-item::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  opacity: 0;
+  transition: top 0.4s ease, opacity 0.2s ease;
+}
+.header__gnb-item:hover::after {
+  opacity: 1;
+  top: 4px;
+}
+
+/* ----- header__gnb-help-btn ----- */
+.header__gnb-help-btn {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  color: var(--color-primary);
+  background-image: url(../../images/icon/header-gnb-help-btn-icon.png);
+  background-size: calc(20px / 2) calc(32px / 2);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.2s, background-image 0.2s;
+}
+.header__gnb-help-btn:hover {
+  background-color: var(--color-primary);
+  background-image: url(../../images/icon/header-gnb-help-btn-icon--white.png);
+}
+
+
+/* ########## Footer ########## */
+
+/* ----- footer__ending ----- */
+.footer__ending {
+  margin-bottom: var(--spacing-8xl);
+  text-align: center;
+  font-size: var(--font-size-3xl);
+  color: var(--text-color-light);
+}
+
+
+/* ########## Fullscreen Navigation ########## */
+
+/* 모달 열렸을 때 body 스크롤 방지 */
+body.fullscreen-nav--on {
+  overflow: hidden;
+}
+.fullscreen-nav {
+  display: none;
+  /* display: none; jQuery로 fade 조작 */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+.fullscreen-nav-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ----- fullscreen-nav__item ----- */
+.fullscreen-nav__item {
+  position: relative;
+  display: block;
+  width: fit-content;
+  padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-xl) 0;
+  font-family: var(--font-EN);
+  font-size: var(--font-size-4xl);
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--text-color-light);
+  transition:  color 0.3s;
+}
+.fullscreen-nav__item:hover {
+  color: var(--text-color-white);
+}
+.fullscreen-nav__item::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 0;
+  height: 15%;
+  background-color: var(--color-primary);
+  z-index: -1;
+  transition: width 0.3s;
+}
+.fullscreen-nav__item:hover::after {
+  width: 100%;
+}
+.fullscreen-nav__item.new::before {
+  content: attr(data-count);
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1px;
+  border-radius: 50%;
+  line-height: 1em;
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  background-color: var(--color-negative);
+  color: var(--text-color-white);
+}
+
+
+/* ########## Sidebar Navigation ########## */
+
+/* 사이드바가 열렸을 때 body 스크롤 방지 */
+body.sidebar--on {
+  overflow: hidden;
+}
+
+/* 사이드 바 배경 딤처리 */
+.sidebar-nav {
+  display: none;
+  /* display: none; jQuery로 fade 조작 */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  z-index: 3000;
+}
+
+/* 사이드 바(최초 숨김처리) */
+.sidebar-nav-inner {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  height: 100vh;
+  max-width: 260px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background-white);
+  transition: right 0.3s;
+}
+
+/* --active -> 사이드바 오픈 */
+.sidebar-nav-inner--active {
+  right: 0;
+}
+.sidebar-nav__item {
+  width: 100%;
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+.sidebar-nav__item:hover {
+  opacity: 0.7;
+  color: var(--color-primary);
+}
+.sidebar-nav__item span {
+  position: relative;
+  font-size: var(--spacing-2xl);
+  font-family: var(--font-EN);
+  font-weight: 400;
+  text-align: center;
+  transition: opacity 0.2s, color 0.2s;
+}
+.sidebar-nav__item.new span::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -2px;
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--text-color-white);
+  background-color: var(--color-negative);
+}

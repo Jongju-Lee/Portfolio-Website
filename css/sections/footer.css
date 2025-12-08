@@ -1,7 +1,0 @@
-/* ----- footer__ending ----- */
-.footer__ending {
-  margin-bottom: var(--spacing-8xl);
-  text-align: center;
-  font-size: var(--font-size-3xl);
-  color: var(--text-color-light);
-}
