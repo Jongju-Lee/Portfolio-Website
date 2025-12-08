@@ -3,9 +3,7 @@
 /* ---------- Responsive UI ---------- */
 
 /* ----- Tablet ----- */
-@import url(./responsive-tablet.css);
+@import url(./tablet.css);
 
 /* ----- Mobile ----- */
-@import url(./responsive-mobile.css);
-
-
+@import url(./mobile.css);
