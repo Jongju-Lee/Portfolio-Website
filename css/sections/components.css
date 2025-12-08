@@ -2,7 +2,6 @@
 
 /* ========== COMPONENTS.CSS ==========
  * 유틸리티 컴포넌트 스타일 (로딩, 버튼, 모달)
- * 병합된 파일: loading.css, util-button.css, accessibility-modal.css
  * ==================================== */
 
 
@@ -13,15 +12,19 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
 @keyframes loading__pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.6;
   }
@@ -143,7 +146,8 @@
   transform: translate(-50%, -50%) !important;
   width: auto !important;
   height: auto !important;
-  z-index: 10000 !important; /* Featherlight content 위에 표시 */
+  z-index: 10000 !important;
+  /* Featherlight content 위에 표시 */
 }
 
 
@@ -191,9 +195,11 @@
   z-index: 1000;
   box-shadow: var(--shadow-util-btn);
 }
+
 .util-btn:hover {
   transform: translateY(-4px);
 }
+
 .util-btn:active {
   transform: translateY(-4px) scale(0.9);
 }
@@ -212,22 +218,27 @@
   top: 0;
   left: var(--spacing-3xl);
 }
+
 .trigger.active {
   background-color: var(--color-primary);
   transform: translateY(-4px) rotate(135deg);
 }
+
 .trigger.active:active {
   transform: scale(0.9);
 }
+
 .trigger--on {
   top: var(--spacing-3xl);
 }
+
 .trigger img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(56px / 1.9); /* 28% 증가 (23.3px → 30px) */
+  width: calc(56px / 1.9);
+  /* 28% 증가 (23.3px → 30px) */
   height: calc(56px / 1.9);
 }
 
@@ -236,15 +247,18 @@
   bottom: 0;
   right: var(--spacing-3xl);
 }
+
 .top-btn--on {
   bottom: var(--spacing-3xl);
 }
+
 .top-btn img {
   position: absolute;
   top: calc(50% - 2px);
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(56px / 2); /* 28% 증가 (22.4px → 28.7px) */
+  width: calc(56px / 2);
+  /* 28% 증가 (22.4px → 28.7px) */
   height: calc(32px / 2);
 }
 
@@ -252,9 +266,11 @@
 .sidebar-btn {
   display: none;
   position: fixed;
-  top: 7px;  /* 헤더 중앙 정렬 */
+  top: 7px;
+  /* 헤더 중앙 정렬 */
   right: 10px;
-  width: 52px;  /* 초기 상태: 헤더 안에 적당한 크기 */
+  width: 52px;
+  /* 초기 상태: 헤더 안에 적당한 크기 */
   height: 52px;
   border-radius: 50%;
   z-index: 9999;
@@ -266,10 +282,12 @@
   opacity: 0.7;
   top: var(--spacing-xl);
   right: var(--spacing-xl);
-  width: 64px;  /* 스크롤 후: 독립 버튼으로 크게 */
+  width: 64px;
+  /* 스크롤 후: 독립 버튼으로 크게 */
   height: 64px;
   background-color: var(--color-util-btn);
 }
+
 .sidebar-btn--on:hover {
   transform: translateY(-4px);
 }
@@ -289,7 +307,8 @@
 .sidebar-btn__inner {
   position: relative;
   display: inline-block;
-  width: 29px;  /* 초기 상태: 52px 버튼에 비례 */
+  width: 29px;
+  /* 초기 상태: 52px 버튼에 비례 */
   height: 23px;
   transition: width 0.3s, height 0.3s, transform 0.3s;
   transform-origin: center center;
@@ -297,26 +316,32 @@
 
 /* 스크롤 내려갈 때 디자인 변경 */
 .sidebar-btn--on .sidebar-btn__inner {
-  width: 36px;  /* 스크롤 후: 큰 아이콘 */
+  width: 36px;
+  /* 스크롤 후: 큰 아이콘 */
   height: 28px;
   transform: scale(0.9);
 }
+
 .sidebar-btn__inner span {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 4px;  /* 초기 상태: 얇은 선 */
+  height: 4px;
+  /* 초기 상태: 얇은 선 */
   background-color: var(--text-color-light);
   border-radius: var(--spacing-xs);
   transition: top 0.5s, height 0.3s, transform 0.5s, opacity 0.5s;
 }
+
 .sidebar-btn__inner span:nth-child(1) {
   top: 0;
 }
+
 .sidebar-btn__inner span:nth-child(2) {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .sidebar-btn__inner span:nth-child(3) {
   top: 100%;
   transform: translateY(-100%);
@@ -324,7 +349,8 @@
 
 /* 스크롤 내려갔을 때 선 색 변경 */
 .sidebar-btn--on .sidebar-btn__inner span {
-  height: 5px;  /* 스크롤 후: 두꺼운 선 */
+  height: 5px;
+  /* 스크롤 후: 두꺼운 선 */
   background-color: var(--color-background-white);
 }
 
@@ -338,9 +364,11 @@
   top: 50%;
   transform: rotate(45deg);
 }
+
 .sidebar-btn--active .sidebar-btn__inner span:nth-child(2) {
   opacity: 0;
 }
+
 .sidebar-btn--active .sidebar-btn__inner span:nth-child(3) {
   top: 50%;
   transform: rotate(-45deg);
@@ -356,6 +384,7 @@
   transition: bottom 0.2s ease-in-out, left 0.2s ease-in-out;
   z-index: 1000;
 }
+
 .mockup-box--on {
   bottom: var(--spacing-5xl);
   left: var(--spacing-5xl);
@@ -375,7 +404,8 @@
 
 /* 페이지 최초 로드 시 주목 애니메이션 (4.5초간) */
 .mockup-box__open-btn--initial-attention {
-  animation: pulseGlow 1.5s ease-in-out 3;  /* ease-in-out: 우아한 느낌 */
+  animation: pulseGlow 1.5s ease-in-out 3;
+  /* ease-in-out: 우아한 느낌 */
   animation-delay: 0.5s;
 }
 
@@ -389,17 +419,20 @@
   opacity: 1;
   background-color: var(--color-primary);
 }
+
 .mockup-box--on .mockup-box__open-btn:hover {
   opacity: 0.7;
   transform: translateY(0);
 }
+
 .mockup-box__open-btn img {
   position: absolute;
   top: 50%;
   left: 50%;
   left: calc(50% - 1px);
   transform: translate(-50%, -50%);
-  width: calc(58px / 1.6); /* 28% 증가 (29px → 37px) */
+  width: calc(58px / 1.6);
+  /* 28% 증가 (29px → 37px) */
   height: calc(58px / 1.6);
 }
 
@@ -409,6 +442,7 @@
   width: 100%;
   height: 100%;
 }
+
 .mockup-box__action-btn {
   opacity: 0;
   visibility: hidden;
@@ -416,11 +450,13 @@
   position: absolute;
   top: 7px;
   left: 7px;
-  width: 40px;  /* 36px와 46px의 중간 */
+  width: 40px;
+  /* 36px와 46px의 중간 */
   height: 40px;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
 }
+
 .mockup-box__action-btn img {
   position: absolute;
   top: 50%;
@@ -433,6 +469,7 @@
   background-color: #72e3ad;
   transition-delay: 0.3s;
 }
+
 .mockup-box__action-btn.mobile img {
   width: calc(28px / 1.8);
   height: calc(40px / 1.8);
@@ -443,6 +480,7 @@
   background-color: #1da1f2;
   transition-delay: 0.15s;
 }
+
 .mockup-box__action-btn.tablet img {
   width: calc(40px / 1.8);
   height: calc(32px / 1.8);
@@ -453,6 +491,7 @@
   background-color: var(--color-negative);
   transition-delay: 0.45s;
 }
+
 .mockup-box__action-btn.close img {
   width: calc(28px / 1.8);
   height: calc(28px / 1.8);
@@ -466,13 +505,14 @@
   pointer-events: all;
   box-shadow: var(--shadow-util-btn);
 }
+
 .mockup-box__action-btn:hover {
   animation: actionBtnHover 0.2s ease-in-out forwards;
 }
 
 /* 모바일 */
 .mockup-box--on .mockup-box__action-btn.mobile {
-  top: -56px; 
+  top: -56px;
   left: 0;
 }
 
@@ -484,7 +524,8 @@
 
 /* 닫기 버튼 */
 .mockup-box--on .mockup-box__action-btn.close {
-  top: calc(100% - 40px);  /* 41px 버튼에 맞춰 조정 */
+  top: calc(100% - 40px);
+  /* 41px 버튼에 맞춰 조정 */
   left: calc(100% + 16px);
 }
 
@@ -493,6 +534,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0.7;
   }
@@ -500,17 +542,22 @@
 
 /* 펄스 + 글로우 애니메이션 (초기 주목용) - ease-in-out으로 우아하게 */
 @keyframes pulseGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 transparent;
   }
-  50% {  /* 최대 지점 */
+
+  50% {
+    /* 최대 지점 */
     transform: scale(1.05);
-    box-shadow: 
+    box-shadow:
       0 0 15px 5px rgba(255, 184, 77, 0.85),
       0 0 30px 12px rgba(255, 184, 77, 0.55),
       0 0 45px 18px rgba(255, 184, 77, 0.3);
   }
+
   /* 75% 키프레임 제거 - ease-in-out이 자연스럽게 페이드 아웃 처리 */
 }
 
@@ -532,6 +579,7 @@
   max-width: 440px;
   animation: reveal-toast 1s ease-in-out 0.5s forwards;
 }
+
 .accessibility-modal:focus-visible {
   outline: 1px solid var(--color-primary);
 }
@@ -555,12 +603,14 @@
   gap: var(--spacing-sm);
   margin-top: var(--spacing-xl);
 }
+
 .accessibility-modal__list-item {
   display: flex;
   gap: var(--spacing-sm);
   font-size: var(--font-size-md);
   font-weight: 400;
 }
+
 .accessibility-modal__list-item::before {
   content: "";
   flex-shrink: 0;
@@ -571,6 +621,7 @@
   border-radius: 50%;
   background-color: var(--color-primary);
 }
+
 .accessibility-modal__list-item b {
   font-weight: 700;
 }
@@ -584,6 +635,7 @@
   color: var(--color-primary);
   font-size: var(--font-size-sm);
 }
+
 .accessibility-modal__tip::before {
   content: "";
   flex-shrink: 0;
@@ -601,6 +653,7 @@
   gap: var(--spacing-sm);
   margin-top: var(--spacing-md);
 }
+
 .accessibility-modal__btn {
   flex: 1;
   font-size: var(--font-size-sm);
@@ -611,12 +664,15 @@
   line-height: 1em;
   transition: opacity 0.2s;
 }
+
 .accessibility-modal__btn:hover {
   opacity: 0.7;
 }
+
 .accessibility-modal__btn.dismiss-btn {
   background-color: #aaa;
 }
+
 .accessibility-modal__btn.ok-btn {
   background-color: var(--color-primary);
 }
@@ -627,6 +683,7 @@
     opacity: 0;
     visibility: hidden;
   }
+
   100% {
     opacity: 1;
     visibility: visible;
@@ -639,6 +696,7 @@
     opacity: 1;
     visibility: visible;
   }
+
   100% {
     opacity: 0;
     visibility: hidden;
