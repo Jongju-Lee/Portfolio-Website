@@ -379,7 +379,7 @@
   }
   /* web-year__arrow */
   .web-year__arrow {
-    gap: var(--spacing-xs);
+    gap: 0;
   }
   .web-year__arrow-btn {
     width: calc(96px / 2.8);

@@ -165,6 +165,9 @@
   
   /* ########## SECTION - WEB ########## */
   /* web-year__arrow */
+  .web-year__arrow {
+    gap: var(--spacing-xs);
+  }
   .web-year__arrow-box {
     gap: var(--spacing-xs);
   }

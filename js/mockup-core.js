@@ -37,6 +37,7 @@
         enableAutoScale: true,
         enableDarkModeSync: false,
         enableBackButtonHandler: false,
+        enableIframeScrollIsolation: true, // iframe 앵커 스크롤 시 부모 스크롤 격리
         backButtonFallbackUrl: ''
     };
 
@@ -60,6 +61,11 @@
                 // 뒤로가기 버튼 핸들러 (옵션)
                 if (config.enableBackButtonHandler) {
                     initBackButtonHandler(config.backButtonFallbackUrl);
+                }
+
+                // iframe 앵커 스크롤 격리 (옵션)
+                if (config.enableIframeScrollIsolation) {
+                    initIframeScrollIsolation();
                 }
             });
         }
@@ -268,6 +274,59 @@
                 window.history.back();
             } else {
                 window.location.href = fallbackUrl || '/';
+            }
+        });
+    }
+
+    // ------------------------------
+    // iframe 앵커 스크롤 격리 기능
+    // ------------------------------
+    function initIframeScrollIsolation() {
+        const iframe = document.querySelector('.mockup-iframe__wrap iframe');
+
+        if (!iframe) return;
+
+        // 부모 페이지 스크롤 위치 저장 변수
+        let savedScrollX = 0;
+        let savedScrollY = 0;
+        let isIframeActive = false;
+        let rafId = null;
+
+        // 스크롤 위치 강제 유지 (렌더링 직전 복원으로 깜빡임 방지)
+        const forceScrollPosition = () => {
+            if (!isIframeActive) return;
+
+            const currentY = window.scrollY || window.pageYOffset;
+            const currentX = window.scrollX || window.pageXOffset;
+
+            // 스크롤 위치가 변경되었으면 즉시 복원
+            if (currentX !== savedScrollX || currentY !== savedScrollY) {
+                window.scrollTo(savedScrollX, savedScrollY);
+            }
+
+            // 다음 프레임에도 계속 감시
+            rafId = requestAnimationFrame(forceScrollPosition);
+        };
+
+        // iframe 영역 진입 시 스크롤 위치 고정 시작
+        iframe.addEventListener('mouseenter', function () {
+            savedScrollX = window.scrollX || window.pageXOffset;
+            savedScrollY = window.scrollY || window.pageYOffset;
+            isIframeActive = true;
+
+            // RAF 루프 시작
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(forceScrollPosition);
+        });
+
+        // iframe 영역 이탈 시 고정 해제
+        iframe.addEventListener('mouseleave', function () {
+            isIframeActive = false;
+
+            // RAF 루프 중지
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+                rafId = null;
             }
         });
     }

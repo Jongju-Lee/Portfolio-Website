@@ -6,7 +6,7 @@
 .web-year__arrow {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   width: fit-content;
   margin: 0 auto;
 }
@@ -67,7 +67,7 @@
 }
 .web-year__arrow-text {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1em;
 }
 /* ----- web-year__container ----- */
