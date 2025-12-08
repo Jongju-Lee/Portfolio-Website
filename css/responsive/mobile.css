@@ -98,6 +98,7 @@
     width: fit-content;
     margin: 0 auto;
     margin-top: var(--spacing-3xl);
+    gap: var(--spacing-xl);
   }
 
   /* about-info */
@@ -105,15 +106,10 @@
     gap: var(--spacing-xl);
   }
   .about-info__item:not(:last-child) {
-    margin-bottom: var(--spacing-xl);
     margin-bottom: var(--spacing-lg);
   }
   .about-info__item h5 {
     width: 80px;
-    font-size: var(--font-size-xl);
-  }
-  .about-info__item span {
-    font-size: inherit;
   }
   /* ########## END - ABOUT ########## */
 
