@@ -40,44 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
   // 사이드 바 DOM
   const $sideBar = document.querySelector(".sidebar");
 
-  /* ---------- 햄버거 버튼 클릭 시 ---------- */
+  /* ---------- 사이드 바 이벤트 위임 ---------- */
   document.addEventListener("click", (e) => {
-    // 햄버거 버튼
     const hamburgerBtn = e.target.closest(".header-right__hamburger-btn");
-    if (!hamburgerBtn) return;
-    $sideBar.classList.add("sidebar--active");
-  });
+    const closeBtn = e.target.closest(".sidebar-header__close-btn");
+    const linkBtn = e.target.closest(".sidebar-gnb__item a");
+    const sidebar = e.target.closest(".sidebar");
+    const sidebarContainer = e.target.closest(".sidebar-container");
 
-  /* ---------- 사이드 바 닫기 버튼 클릭 시 ---------- */
-  document.addEventListener("click", (e) => {
-    const sideBarCloseBtn = e.target.closest(".sidebar-header__close-btn");
-    if (!sideBarCloseBtn) return;
-    $sideBar.classList.remove("sidebar--active");
-  });
+    // 햄버거 버튼 클릭 시 사이드바 열기
+    if (hamburgerBtn) {
+      $sideBar.classList.add("sidebar--active");
+      return;
+    }
 
-  /* ---------- 사이드 바 배경 클릭 시 ---------- */
-  document.addEventListener("click", (e) => {
-    const sideBar = e.target.closest(".sidebar");
-    if (!sideBar) return;
+    // 닫기 버튼 또는 링크 클릭 시 사이드바 닫기
+    if (closeBtn || linkBtn) {
+      $sideBar.classList.remove("sidebar--active");
+      return;
+    }
 
-    // sidebar-container 외부(dim 배경)를 클릭했는지 확인
-    const sideBarContainer = e.target.closest(".sidebar-container");
-    // sidebar-container 내부를 클릭했다면 무시
-    if (sideBarContainer) return;
-    sideBar.classList.remove("sidebar--active");
+    // 사이드바 배경(dim) 클릭 시 닫기
+    if (sidebar && !sidebarContainer) {
+      $sideBar.classList.remove("sidebar--active");
+    }
   });
-
-  /* ---------- 사이드 바 링크 버튼 클릭 시 ---------- */
-  document.addEventListener("click", (e) => {
-    const sideBarLinkBtn = e.target.closest(".sidebar-gnb__item a");
-    if (!sideBarLinkBtn) return;
-    $sideBar.classList.remove("sidebar--active");
-  });
-  // const sideBarLinkBtn = document.querySelector(".sidebar-gnb__item");
-  // sideBarLinkBtn.addEventListener("click", () => {
-  //   console.log("link 버튼 클릭")
-  //   $sideBar.classList.remove("sidebar--active");
-  // });
   /* ########## END - 사이드 바 기능 ########## */
 
 

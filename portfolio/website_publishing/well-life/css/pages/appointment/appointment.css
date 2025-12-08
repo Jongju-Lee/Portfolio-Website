@@ -81,6 +81,18 @@
 .appointment-form__item-calendar-title .next-btn {
   background-image: url(../../../images/appointment/appointment-next-btn.png);
 }
+/* disabled 상태 */
+.appointment-form__item-calendar-title .prev-btn.btn--disabled,
+.appointment-form__item-calendar-title .next-btn.btn--disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+.appointment-form__item-calendar-title .prev-btn.btn--disabled {
+  background-image: url(../../../images/appointment/appointment-prev-btn-disabled.png);
+}
+.appointment-form__item-calendar-title .next-btn.btn--disabled {
+  background-image: url(../../../images/appointment/appointment-next-btn-disabled.png);
+}
 .appointment-form__item-calendar-title .cur-date {
   display: flex;
   gap: var(--spacing-4);
@@ -112,7 +124,7 @@
 .appointment-form__item-calendar-date {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -151,10 +163,10 @@
   background-color: var(--theme-secondary);
 }
 .appointment-form__item-calendar-date--current {
-  background-color: var(--theme-primary) !important;
+  background-color: var(--theme-secondary) !important;
 }
 .appointment-form__item-calendar-date--selected {
-  background-color: var(--theme-secondary) !important;
+  background-color: var(--theme-primary) !important;
 }
 .appointment-form__item-calendar-date--disabled {
   color: var(--contents-tertiary) !important;
@@ -211,6 +223,7 @@
 /* appointment-form__item - 진료과목 선택 */
 .appointment-form__item-subject-select {
   padding: var(--spacing-4) var(--spacing-8);
+  border-radius: 4px;
 }
 .appointment-form__item-subject-select option[disabled] {
   color: var(--contents-tertiary);
@@ -264,7 +277,7 @@
   width: 120px;
 }
 .appointment-form__item-patient-input-box {
-  flex: 1; 
+  flex: 1;
   height: 40px;
   display: flex;
   align-items: center;
@@ -319,7 +332,6 @@
   border-radius: 4px;
   border: none;
 }
-
 
 /* ----- appointment-form__terms-wrap ----- */
 .appointment-form__terms-wrap {
@@ -399,3 +411,65 @@
   border-radius: 8px;
   margin: 0 auto;
 }
+
+/* ---------- 폼 검증 스타일 ---------- */
+/* input-box를 relative로 설정 (clear 버튼 배치용) */
+.appointment-form__item-patient-input-box {
+  position: relative;
+}
+/* Focus 상태 */
+.appointment-form__item-patient-input-box input:focus,
+.appointment-form__item-patient-list-item--address input:focus {
+  outline: none;
+  border: 2px solid var(--theme-primary);
+}
+/* 성공 상태 */
+.appointment-form__item-patient-input-box.input--valid input {
+  border: 2px solid var(--color-positive);
+  background-color: var(--color-positive-transparent);
+}
+/* 에러 상태 */
+.appointment-form__item-patient-input-box.input--error input {
+  border: 2px solid var(--color-negative);
+  background-color: var(--color-negative-transparent);
+}
+/* 흔들림 애니메이션 */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+.input--error {
+  animation: shake 0.4s ease-in-out;
+}
+/* select 에러 상태 */
+.appointment-form__item-subject-select.input--error {
+  border: 2px solid var(--color-negative);
+  background-color: var(--color-negative-transparent);
+  animation: shake 0.4s ease-in-out;
+}
+.appointment-form__item-subject-select.input--valid {
+  border: 2px solid var(--color-positive);
+  background-color: var(--color-positive-transparent);
+}
+/* 체크박스 에러 상태 */
+.appointment-form__terms-check.terms-check--error label {
+  animation: shake 0.4s ease-in-out;
+}
+.appointment-form__terms-check.terms-check--error label span {
+  color: var(--color-negative);
+}
+/* ---------- END - 폼 검증 스타일 ---------- */

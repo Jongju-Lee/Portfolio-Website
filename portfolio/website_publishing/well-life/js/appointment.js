@@ -138,11 +138,43 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateCalendar(date) {
     updateYearMonth(date);
     renderCalendar(date);
+    updateNavBtnState(date);
+  }
+
+  /**
+   * 네비게이션 버튼 상태 업데이트
+   * @param {Date} date 현재 표시 중인 날짜
+   */
+  function updateNavBtnState(date) {
+    const today = new Date();
+    const maxDate = new Date(today.getFullYear(), today.getMonth() + 3, 1); // 3개월 후
+
+    // 현재 월이면 prev 비활성화
+    if (date.getFullYear() === today.getFullYear() &&
+      date.getMonth() === today.getMonth()) {
+      prevBtn.classList.add("btn--disabled");
+    } else {
+      prevBtn.classList.remove("btn--disabled");
+    }
+
+    // 3개월 후 월이면 next 비활성화
+    if (date.getFullYear() === maxDate.getFullYear() &&
+      date.getMonth() === maxDate.getMonth()) {
+      nextBtn.classList.add("btn--disabled");
+    } else {
+      nextBtn.classList.remove("btn--disabled");
+    }
   }
 
   // 이전 달 버튼 클릭
   if (prevBtn) {
     prevBtn.addEventListener("click", () => {
+      const today = new Date();
+      // 현재 월 이전으로는 이동 불가
+      if (currentDate.getFullYear() === today.getFullYear() &&
+        currentDate.getMonth() === today.getMonth()) {
+        return;
+      }
       currentDate.setMonth(currentDate.getMonth() - 1);
       updateCalendar(currentDate);
     });
@@ -151,6 +183,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // 다음 달 버튼 클릭
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
+      const today = new Date();
+      const maxDate = new Date(today.getFullYear(), today.getMonth() + 3, 1);
+      // 3개월 후 이후로는 이동 불가
+      if (currentDate.getFullYear() === maxDate.getFullYear() &&
+        currentDate.getMonth() === maxDate.getMonth()) {
+        return;
+      }
       currentDate.setMonth(currentDate.getMonth() + 1);
       updateCalendar(currentDate);
     });
@@ -158,6 +197,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 초기 캘린더 렌더링
   updateCalendar(currentDate);
+
+  // 오늘 날짜 자동 선택
+  const todayBtn = datesContainer.querySelector(".appointment-form__item-calendar-date--current");
+  if (todayBtn && !todayBtn.disabled) {
+    todayBtn.click();
+  }
   /* ---------- END - 캘린더 기능 ---------- */
 
 
@@ -199,13 +244,178 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------- END - 시간 선택 기능 ---------- */
 
 
-  /* ---------- 버튼클릭시 refresh 방지 ---------- */
+  /* ---------- 폼 검증 ---------- */
+  /**
+   * 이름 검증
+   * @param {string} value 이름 값
+   * @returns {boolean} 검증 결과
+   */
+  function validateName(value) {
+    return value.trim().length >= 2;
+  }
+
+  /**
+   * 전화번호 검증
+   * @param {string} front 앞자리
+   * @param {string} center 중간자리
+   * @param {string} back 뒷자리
+   * @returns {boolean} 검증 결과
+   */
+  function validatePhone(front, center, back) {
+    const phoneRegex = /^01[0-9][0-9]{3,4}[0-9]{4}$/;
+    const fullPhone = front + center + back;
+    return phoneRegex.test(fullPhone);
+  }
+
+  /**
+   * 주민등록번호 검증 (형식만 체크)
+   * @param {string} front 앞자리 6자리
+   * @param {string} back 뒷자리 7자리
+   * @returns {boolean} 검증 결과
+   */
+  function validateResident(front, back) {
+    const frontRegex = /^[0-9]{6}$/;
+    const backRegex = /^[1-4][0-9]{6}$/;
+    return frontRegex.test(front) && backRegex.test(back);
+  }
+
+  /**
+   * input-box에 상태 클래스 적용 (매번 애니메이션 재실행)
+   * @param {HTMLElement} inputBox input-box 요소
+   * @param {boolean} isValid 유효 여부
+   */
+  function setInputState(inputBox, isValid) {
+    inputBox.classList.remove("input--error", "input--valid");
+    if (isValid) {
+      inputBox.classList.add("input--valid");
+    } else {
+      void inputBox.offsetWidth; // reflow 강제하여 애니메이션 재실행
+      inputBox.classList.add("input--error");
+    }
+  }
+
+  /**
+   * 전체 폼 검증 (한 번에 모든 에러 표시)
+   * @returns {boolean} 검증 결과
+   */
+  function validateForm() {
+    let isValid = true;
+    let firstErrorElement = null;
+
+    // DOM 요소
+    const nameInput = document.getElementById("name");
+    const nameBox = nameInput.closest(".appointment-form__item-patient-input-box");
+    const phoneF = document.getElementById("phone-front");
+    const phoneC = document.getElementById("phone-center");
+    const phoneB = document.getElementById("phone-back");
+    const phoneBox = phoneF.closest(".appointment-form__item-patient-input-box");
+    const residentF = document.getElementById("resident-num-front");
+    const residentB = document.getElementById("resident-num-back");
+    const residentBox = residentF.closest(".appointment-form__item-patient-input-box");
+    const subjectSelect = document.querySelector(".appointment-form__item-subject-select");
+    const agree1 = document.getElementById("agree-1");
+    const agree2 = document.getElementById("agree-2");
+    const agree1Check = agree1.closest(".appointment-form__terms-check");
+    const agree2Check = agree2.closest(".appointment-form__terms-check");
+
+    // 진료과목 선택 확인
+    if (!subjectSelect.value) {
+      subjectSelect.classList.remove("input--valid", "input--error");
+      void subjectSelect.offsetWidth; // reflow 강제하여 애니메이션 재실행
+      subjectSelect.classList.add("input--error");
+      isValid = false;
+      if (!firstErrorElement) firstErrorElement = subjectSelect;
+    } else {
+      subjectSelect.classList.remove("input--error");
+      subjectSelect.classList.add("input--valid");
+    }
+
+    // 이름 검증
+    if (!validateName(nameInput.value)) {
+      setInputState(nameBox, false);
+      isValid = false;
+      if (!firstErrorElement) firstErrorElement = nameInput;
+    } else {
+      setInputState(nameBox, true);
+    }
+
+    // 주민등록번호 검증
+    if (!validateResident(residentF.value, residentB.value)) {
+      setInputState(residentBox, false);
+      isValid = false;
+      if (!firstErrorElement) firstErrorElement = residentF;
+    } else {
+      setInputState(residentBox, true);
+    }
+
+    // 전화번호 검증
+    if (!validatePhone(phoneF.value, phoneC.value, phoneB.value)) {
+      setInputState(phoneBox, false);
+      isValid = false;
+      if (!firstErrorElement) firstErrorElement = phoneF;
+    } else {
+      setInputState(phoneBox, true);
+    }
+
+    // 동의 체크박스 확인
+    if (!agree1.checked) {
+      agree1Check.classList.remove("terms-check--error");
+      void agree1Check.offsetWidth; // reflow 강제하여 애니메이션 재실행
+      agree1Check.classList.add("terms-check--error");
+      isValid = false;
+      if (!firstErrorElement) firstErrorElement = agree1;
+    } else {
+      agree1Check.classList.remove("terms-check--error");
+    }
+
+    if (!agree2.checked) {
+      agree2Check.classList.remove("terms-check--error");
+      void agree2Check.offsetWidth; // reflow 강제하여 애니메이션 재실행
+      agree2Check.classList.add("terms-check--error");
+      isValid = false;
+      if (!firstErrorElement) firstErrorElement = agree2;
+    } else {
+      agree2Check.classList.remove("terms-check--error");
+    }
+
+    // 첫 번째 에러 위치로 스크롤
+    if (firstErrorElement) {
+      firstErrorElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (firstErrorElement.focus) firstErrorElement.focus();
+    }
+
+    return isValid;
+  }
+  /* ---------- END - 폼 검증 ---------- */
+
+
+  /* ---------- Input 입력 시 상태 리셋 ---------- */
+  const patientInputs = document.querySelectorAll(".appointment-form__item-patient input");
+  patientInputs.forEach(input => {
+    input.addEventListener("input", () => {
+      const inputBox = input.closest(".appointment-form__item-patient-input-box");
+      if (inputBox) {
+        inputBox.classList.remove("input--error", "input--valid");
+      }
+    });
+  });
+  /* ---------- END - Input 입력 시 상태 리셋 ---------- */
+
+
+  /* ---------- 폼 제출 ---------- */
   const form = document.querySelector(".appointment-form");
   if (form) {
     form.addEventListener("submit", (e) => {
-      e.preventDefault(); // 기본 제출 막기
+      e.preventDefault();
+
+      // 검증 실패 시 중단
+      if (!validateForm()) return;
+
+      // 검증 성공 시 완료 메시지 후 메인페이지로 이동
+      alert("예약이 완료되었습니다.");
+      window.location.href = "/portfolio/website_publishing/well-life/index.html";
     });
   }
-  /* ---------- END - 버튼클릭시 refresh 방지 ---------- */
+  /* ---------- END - 폼 제출 ---------- */
 });
 
