@@ -125,6 +125,11 @@
   font-size: var(--font-size-lg);
   font-weight: 500;
 }
+.react-detail__typo-desc-title .text-small {
+  font-size: var(--font-size-sm);
+  margin-left: var(--spacing-xs);
+  color: var(--text-color-gray);
+}
 .react-detail__typo-desc-list {
   display: flex;
   flex-direction: column;

@@ -1080,9 +1080,12 @@
                     <b class="font-en" aria-hidden="true">React</b><span class="sr-only">리액트</span>기반의
                     <b class="font-en" aria-hidden="true">Todo-List Web App</b><span class="sr-only">투두리스트 웹 앱</span> 앱
                     입니다.
-                    날짜별 일정 관리 및 실시간 할 일 검색, <span class="font-en" aria-hidden="true">Drag & Drop</span><span
-                      class="sr-only">드래그 앤 드롭</span>으로
+                    <b><span class="font-en">React Calendar</span> 연동</b>으로 날짜별 일정 관리 및 실시간 할 일 검색, <b class="font-en"
+                      aria-hidden="true">Drag & Drop(dnd-kit)</b><span class="sr-only">드래그 앤 드롭</span>으로
                     할 일의 순서를 직관적으로 변경이 가능하며 마우스 없이 키보드 만으로도 빠르고 편리한 조작이 가능하도록 구성되어 있습니다.
+                    <b>특히, 이 프로젝트는 <span class="font-en">px</span><span class="sr-only">픽셀</span>대신 <span
+                        class="font-en">rem</span><span class="sr-only">알이엠</span> 기준으로 설계</b>하여, 여러
+                    반응형 환경에서도 대응 가능한 앱 입니다.
                   </p>
                 </section>
                 <!-- ########## react-detail__format ########## -->
@@ -1122,17 +1125,18 @@
                         </ul>
                       </div>
                       <div class="react-detail__typo-desc-list-box" tabindex="0"
-                        aria-label="폰트 싸이즈는 피씨는 18픽셀, 태블릿은 16픽셀, 모바일은 14픽셀로 적용하였습니다.">
-                        <h5 class="react-detail__typo-desc-title" aria-hidden="true">Font-Size</h5>
+                        aria-label="폰트 사이즈는 피씨는 18픽셀(1.8알이엠), 태블릿은 16픽셀(1.6알이엠), 모바일은 14픽셀(1.4알이엠)로 적용하였습니다.">
+                        <h5 class="react-detail__typo-desc-title" aria-hidden="true">Font-Size<span
+                            class="text-small">(1.0rem = 10px)</span></h5>
                         <ul class="react-detail__typo-desc-list">
                           <li class="react-detail__typo-desc-list-item" aria-hidden="true">
-                            <span class="font-en">PC</span>-<b class="font-en">18px</b>
+                            <span class="font-en">PC</span>-<b class="font-en">1.8rem</b>
                           </li>
                           <li class="react-detail__typo-desc-list-item" aria-hidden="true">
-                            <span class="font-en">Tablet</span>-<b class="font-en">16px</b>
+                            <span class="font-en">Tablet</span>-<b class="font-en">1.6rem</b>
                           </li>
                           <li class="react-detail__typo-desc-list-item" aria-hidden="true">
-                            <span class="font-en">Mobile</span>-<b class="font-en">14px</b>
+                            <span class="font-en">Mobile</span>-<b class="font-en">1.4rem</b>
                           </li>
                         </ul>
                       </div>
@@ -1190,34 +1194,34 @@
                         <tbody aria-hidden="true">
                           <tr tabindex="0" aria-label="작업기간 : 10 일 2025년 9월 완료">
                             <th scope="row">작업 기간</th>
-                            <td>10 일 (2025년 9월 완료)</td>
+                            <td><b>10 일</b>(2025년 9월 완료)</td>
                           </tr>
                           <tr tabindex="0" aria-label="작업 범위 : 기획, 유아이 디자인, 퍼블리싱, 개발">
                             <th scope="row">작업 범위</th>
                             <td>
-                              기획, <span class="font-en">UI</span>디자인, 퍼블리싱, 개발
+                              <b>기획, <span class="font-en">UI</span>디자인, 퍼블리싱, 개발</b>
                             </td>
                           </tr>
                           <tr tabindex="0" aria-label="제작 참여도 : 한명, 본인 백퍼센트 작업">
                             <th scope="row">제작 참여도</th>
                             <td>
-                              <span>1명 본인(100%)</span>
+                              <span>1명 <b>본인(100%)</b></span>
                             </td>
                           </tr>
                           <tr tabindex="0" aria-label="개발 환경 : 리액트 기반의 빗 개발 환경">
                             <th scope="row">개발 환경</th>
                             <td>
-                              <span class="font-en">React</span><span class="sr-only">리액트</span> 기반의
-                              <span class="font-en">Vite</span><span class="sr-only">빗</span> 개발 환경
+                              <b class="font-en">React</b><span class="sr-only">리액트</span> 기반의
+                              <b class="font-en">Vite</b><span class="sr-only">빗</span> 개발 환경
                             </td>
                           </tr>
                           <tr tabindex="0" aria-label="적용한 라이브러리 : 스타일드 컴포넌트, 리액트 캘린더, 디엔디 킷(드래그 앤 드롭)">
                             <th scope="row">적용한<br />라이브러리</th>
                             <td>
-                              <span class="font-en">Styled-Components(CSS-in-JS)</span><span class="sr-only">스타일드
+                              <span class="font-en"><b>Styled-Components</b>(CSS-in-JS)</span><span class="sr-only">스타일드
                                 컴포넌트(씨에스에스 인 제이에스)</span>,<br />
-                              <span class="font-en">React Calendar</span><span class="sr-only">리액트 캘린더</span>(캘린더),
-                              <span class="font-en">dnd-kit(Drag & Drop)</span><span class="sr-only">디엔디 킷(드래그 앤
+                              <b class="font-en">React Calendar</b><span class="sr-only">리액트 캘린더</span>(캘린더),
+                              <span class="font-en"><b>dnd-kit</b>(Drag & Drop)</span><span class="sr-only">디엔디 킷(드래그 앤
                                 드롭)</span>
                             </td>
                           </tr>
