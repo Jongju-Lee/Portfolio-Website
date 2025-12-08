@@ -150,19 +150,6 @@
   /* ########## END - REACT ########## */
   
   
-  /* ########## SECTION - MOBILE(mobile 1, 2 공통) ########## */
-  /* mobile-detail__title */
-  .mobile-detail__title {
-    font-size: var(--font-size-section-title-mobile);
-  }
-  /* Market - mobile-detail__btn-box */
-  #market .mobile-detail__btn-box {
-    justify-content: center;
-    gap: var(--spacing-2xl);
-  }
-  /* ########## END - MOBILE(mobile 1, 2 공통) ########## */
-  
-  
   /* ########## SECTION - WEB ########## */
   /* web-year__arrow */
   .web-year__arrow {
