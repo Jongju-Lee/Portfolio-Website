@@ -4,18 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>웰라이프 내과의원 - 태블릿</title>
+  <title>이종주의 포트폴리오 - 모바일 목업</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <!-- Style -->
+  <link rel="stylesheet" href="../css/sections/loading.css">
   <link rel="stylesheet" href="/css/common/reset.css">
-  <link rel="stylesheet" href="/css/mockup/mockup-tablet.css">
+  <link rel="stylesheet" href="/css/mockup/mockup-mobile.css">
   <!-- JavaScript -->
+  <script src="../js/loading.js"></script>
   <script src="/js/mockup-core.js"></script>
   <script>
     MockupCore.init({
-      mockupHeight: 798,
+      mockupHeight: 923,
       enableAutoScale: true,
-      enableDarkModeSync: true,
-      enableBackButtonHandler: false
+      enableDarkModeSync: false,
+      enableBackButtonHandler: true,
+      backButtonFallbackUrl: '../index.html'
     });
   </script>
 </head>
@@ -25,8 +34,11 @@
     <!-- mockup -->
     <figure class="mockup">
       <div class="mockup-container">
+        <div class="mockup-header">
+          <img src="/images/mockup/mobile-status-bar.png" alt="상태 창">
+        </div>
         <div class="mockup-iframe__wrap">
-          <iframe src="../index.html" title="앱 미리보기"></iframe>
+          <iframe src="../index.html?mobileMockup=true" title="포트폴리오 모바일 목업"></iframe>
         </div>
       </div>
     </figure>
@@ -74,9 +86,10 @@
       </div>
     </div>
 
+    <!-- 이동 버튼 박스 -->
     <div class="btn-box">
-      <a class="back-btn" href="/index.html#web">뒤로 가기</a>
-      <a class="move-btn" href="../mobile-mockup/index.html">모바일 보러가기</a>
+      <a class="back-btn" href="#">뒤로 가기</a>
+      <a class="move-btn" href="./tablet.html">태블릿 보러가기</a>
     </div>
   </main>
 </body>
