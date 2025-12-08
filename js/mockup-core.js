@@ -177,36 +177,69 @@
             changeScaleBy(-STEP_SCALE);
         });
 
-        // 세로 스크롤 중앙 정렬
+        // 세로 스크롤 중앙 정렬 + Fade-in (검증 루프 방식)
+        let scrollAttempts = 0;
+        const MAX_SCROLL_ATTEMPTS = 10;
+        const SCROLL_CHECK_INTERVAL = 100; // ms
+        let scrollIntervalId = null;
+
         const centerInitialScrollVertically = () => {
-            try {
-                if ('scrollRestoration' in history) {
-                    history.scrollRestoration = 'manual';
+            const documentHeight = Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight
+            );
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+            const maxScrollable = Math.max(0, documentHeight - viewportHeight);
+            const targetTop = Math.floor(maxScrollable / 2);
+
+            // 현재 스크롤 위치
+            const currentTop = Math.round(window.scrollY || window.pageYOffset);
+
+            // 목표 위치와 현재 위치의 차이 (허용 오차: 5px)
+            const isPositioned = Math.abs(currentTop - targetTop) <= 5;
+
+            if (!isPositioned && maxScrollable > 0) {
+                window.scrollTo({ top: targetTop, left: 0, behavior: 'auto' });
+            }
+
+            scrollAttempts++;
+
+            // 위치가 잡혔거나 최대 시도 횟수 도달 시
+            if (isPositioned || scrollAttempts >= MAX_SCROLL_ATTEMPTS) {
+                // 인터벌 중지
+                if (scrollIntervalId) {
+                    clearInterval(scrollIntervalId);
+                    scrollIntervalId = null;
                 }
-
-                const documentHeight = Math.max(
-                    document.body.scrollHeight,
-                    document.documentElement.scrollHeight
-                );
-                const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
-                const maxScrollable = Math.max(0, documentHeight - viewportHeight);
-
-                const targetTop = Math.floor(maxScrollable / 2);
-
-                if (maxScrollable > 0) {
-                    window.scrollTo({ top: targetTop, left: 0, behavior: 'auto' });
+                // mockup 표시 (fade-in)
+                if (mockupElement && !mockupElement.classList.contains('mockup--ready')) {
+                    mockupElement.classList.add('mockup--ready');
                 }
-            } catch (error) {
-                console.warn('초기 스크롤 중앙 정렬 중 오류:', error);
             }
         };
 
-        // 이미지/폰트 로딩 이후 중앙 정렬
+        // 브라우저 스크롤 복원 방지 (조기 설정)
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // 이미지/폰트 로딩 이후 중앙 정렬 + fade-in
         window.addEventListener('load', function () {
             measureSliderHeight();
+
+            // 첫 시도
             requestAnimationFrame(centerInitialScrollVertically);
-            setTimeout(centerInitialScrollVertically, 150);
+
+            // 검증 루프: 100ms 간격으로 위치 확인 및 재시도
+            scrollIntervalId = setInterval(centerInitialScrollVertically, SCROLL_CHECK_INTERVAL);
         });
+
+        // 만약 load 이벤트가 이미 발생했다면 즉시 실행 (fallback)
+        if (document.readyState === 'complete') {
+            measureSliderHeight();
+            requestAnimationFrame(centerInitialScrollVertically);
+            scrollIntervalId = setInterval(centerInitialScrollVertically, SCROLL_CHECK_INTERVAL);
+        }
     }
 
     // ------------------------------
