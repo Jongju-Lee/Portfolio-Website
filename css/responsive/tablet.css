@@ -129,6 +129,54 @@
     font-size: 20px;
   } 
   /* ########## END - EDU ########## */
+
+
+  /* ########## SECTION - RESUME ########## */
+  /* resume-content */
+  .resume-content {
+    margin-top: var(--spacing-6xl);
+  }
+  /* resume-main */
+  .resume-main__title {
+    font-size: var(--font-size-2xl);
+  }
+  /* resume-hero */
+  .resume-hero__card {
+    padding: var(--spacing-3xl) var(--spacing-4xl);
+  }
+  .resume-hero__body {
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+  }
+  .resume-hero__list li {
+    padding-left: 14px;
+  }
+  .resume-hero__list li::before {
+    top: 12px;
+  }
+  .resume-hero__meta {
+    width: 100%;
+    padding-left: 0;
+    padding-top: var(--spacing-2xl);
+    border-left: none;
+    border-top: 1px dashed var(--color-line);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-2xl);
+  }
+  .resume-hero__meta-group {
+    flex: 1;
+    min-width: 120px;
+  }
+  /* resume-sub */
+  .resume-sub__title {
+    font-size: var(--font-size-2xl);
+  }
+  .resume-sub__header,
+  .resume-sub__item {
+    grid-template-columns: 50% 15% 17% 18%;
+  }
+  /* ########## END - RESUME ########## */
   
   
   /* ########## SECTION - REACT ########## */

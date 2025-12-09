@@ -27,6 +27,7 @@
     --container-width-mobile: 768px;
     --section-padding-mobile: 100px 20px;
   }
+
   /* ########## END - 변수 재정의 ########## */
 
 
@@ -34,6 +35,7 @@
   body {
     font-size: var(--font-size-body-mobile);
   }
+
   main>section {
     padding: var(--section-padding-mobile);
   }
@@ -43,6 +45,7 @@
     font-size: var(--font-size-section-title-mobile);
     margin: 0 auto;
   }
+
   /* ########## END - LAYOUT ########## */
 
 
@@ -55,9 +58,11 @@
   .header__gnb {
     display: none;
   }
+
   .header__gnb-help-btn {
     display: none;
   }
+
   /* ########## sidebar 추가 예정 ########## */
   /* ########## END - HEADER ########## */
 
@@ -66,11 +71,13 @@
   #about {
     padding-top: 120px;
   }
+
   #about {
     padding: 60px 20px;
     margin-top: 65px;
     height: auto;
   }
+
   #about .inner {
     gap: var(--spacing-3xl);
     padding-bottom: var(--spacing-3xl);
@@ -82,18 +89,22 @@
     margin-bottom: var(--spacing-3xl);
     padding-left: 0;
   }
+
   .about-intro__title {
     font-size: var(--font-size-slogan-title-mobile);
     width: fit-content;
     margin: 0 auto;
   }
+
   .about-intro__text {
     margin-top: var(--spacing-xl);
     padding: 0 var(--spacing-3xl);
   }
+
   .about-intro__text span {
     display: inline;
   }
+
   .about-intro__name {
     width: fit-content;
     margin: 0 auto;
@@ -105,12 +116,15 @@
   .about-info__item {
     gap: var(--spacing-xl);
   }
+
   .about-info__item:not(:last-child) {
     margin-bottom: var(--spacing-lg);
   }
+
   .about-info__item h5 {
     width: 80px;
   }
+
   /* ########## END - ABOUT ########## */
 
 
@@ -118,6 +132,7 @@
   .skill-content {
     margin-top: var(--spacing-6xl);
   }
+
   /* ########## END - SKILL ########## */
 
 
@@ -138,6 +153,7 @@
     border-radius: var(--spacing-md);
     box-shadow: var(--shadow-color-box-light);
   }
+
   .edu-timeline:not(:last-child) {
     margin-bottom: var(--spacing-8xl);
   }
@@ -147,9 +163,11 @@
     width: fit-content;
     text-align: center;
   }
+
   .edu-timeline__peroid-title {
     font-size: 18px;
   }
+
   .edu-timeline__peroid-content {
     text-align: center;
   }
@@ -172,9 +190,11 @@
   .edu-timeline__desc-title {
     line-height: 1.4em;
   }
+
   .edu-timeline__desc-title em {
     display: block;
   }
+
   .edu-timeline__desc {
     width: 100%;
     margin-top: var(--spacing-lg);
@@ -182,13 +202,146 @@
     border-top: 1px solid var(--color-line);
     text-align: center;
   }
+
   .edu-timeline__desc-content {
     text-align: center;
   }
+
   .edu-timeline__desc-content em {
     display: block;
   }
+
   /* ########## END - EDU ########## */
+
+
+  /* ########## SECTION - RESUME ########## */
+  /* resume-content */
+  #resume {
+    padding-top: var(--spacing-5xl);
+  }
+
+  .resume-content {
+    margin-top: var(--spacing-6xl);
+  }
+
+  /* resume-main */
+  .resume-main__heading,
+  .resume-sub__heading {
+    padding-left: var(--spacing-sm);
+  }
+  .resume-main__title,
+  .resume-sub__title {
+    font-size: var(--font-size-2xl);
+    border-left-width: 4px;
+  }
+  .resume-main__desc,
+  .resume-sub__desc {
+    font-size: var(--font-size-md);
+    word-break: keep-all;
+    text-align: left;
+  }
+  .resume-main__caption,
+  .resume-sub__caption {
+    display: flex;
+  }
+
+  /* resume-hero */
+  .resume-hero__card {
+    padding: var(--spacing-2xl);
+    gap: var(--spacing-xl);
+  }
+  .resume-hero__header {
+    padding-bottom: var(--spacing-md);
+  }
+  .resume-hero__title {
+    font-size: var(--font-size-xl);
+    text-align: center;
+  }
+  .resume-hero__body {
+    gap: var(--spacing-2xl);
+  }
+  .resume-hero__list li {
+    font-size: var(--font-size-md);
+    padding-left: var(--spacing-md);
+  }
+
+  .resume-hero__list li::before {
+    top: 10px;
+    width: 4px;
+    height: 4px;
+  }
+
+  .resume-hero__list li:not(:last-child) {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .resume-hero__meta {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .resume-hero__meta-tags {
+    gap: var(--spacing-sm);
+  }
+
+  /* resume-sub - 카드형 변환 */
+  .resume-sub {
+    margin-top: var(--spacing-6xl);
+  }
+  .resume-sub__header {
+    display: none;
+  }
+
+  .resume-sub__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xl);
+  }
+
+  .resume-sub__col-info {
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 1px dashed var(--color-line);
+  }
+
+  .resume-sub__pj-name {
+    font-size: var(--font-size-md);
+    text-align: center;
+  }
+
+  .resume-sub__pj-tags {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 라벨-값 가로 배치 */
+  .resume-sub__col-period,
+  .resume-sub__col-vol,
+  .resume-sub__col-role {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xs) 0;
+  }
+  .resume-sub__label {
+    display: block;
+    width: 100px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--text-color-gray);
+  }
+  .resume-sub__value,
+  .resume-sub__stat-value {
+    width: 80px;
+    font-size: var(--font-size-md);
+    text-align: center;
+  }
+
+  /* ########## END - RESUME ########## */
 
 
   /* ########## SECTION - REACT ########## */
@@ -196,6 +349,7 @@
   main>section#react {
     padding-top: var(--spacing-8xl);
   }
+
   .react-content {
     flex-direction: column;
     row-gap: var(--spacing-6xl);
@@ -215,16 +369,19 @@
     gap: var(--spacing-3xl);
     width: fit-content;
   }
+
   .react-mockup__item-tablet {
     order: 1;
     width: calc(912px / 2.8);
     height: calc(670px / 2.8);
   }
+
   .react-mockup__item-mobile {
     order: 0;
     width: calc(344px / 1.8);
     height: calc(670px / 1.8);
   }
+
   .react-mockup__item-pc {
     width: calc(1280px / 4);
     height: calc(1066px / 4);
@@ -234,9 +391,11 @@
   .react-detail {
     width: 100%;
   }
+
   .react-detail__title {
     font-size: var(--font-size-section-title-mobile);
   }
+
   .react-detail__format {
     flex-direction: column;
     align-items: center;
@@ -259,6 +418,7 @@
   .react-detail__work-list {
     margin-top: var(--spacing-6xl);
   }
+
   .react-detail__work-list-table :is(th, td) {
     /* table 안의 모든 요소 font-size 14px */
     font-size: var(--font-size-body-mobile);
@@ -266,16 +426,20 @@
     padding: var(--spacing-sm);
     text-align: center;
   }
+
   .react-detail__work-list-table th {
     width: max-content;
   }
+
   .react-detail__work-list-table thead th {
     padding: var(--spacing-xs) var(--spacing-sm);
     line-height: 1.5em;
   }
+
   .react-detail__work-list-table td {
     width: 70%;
   }
+
   .react-detail__work-list-table tr:last-child td span:last-child {
     display: block;
     text-align: center;
@@ -286,13 +450,16 @@
     gap: var(--spacing-xl);
     margin-top: var(--spacing-xl);
   }
+
   .react-detail__btn {
     width: 120px;
     padding: 6px 0;
   }
+
   .react-detail__btn::before {
     font-size: var(--font-size-sm);
   }
+
   /* ########## END - REACT ########## */
 
 
@@ -300,35 +467,43 @@
   .web-content {
     margin-top: var(--spacing-6xl);
   }
+
   .web-project {
     gap: var(--spacing-2xl);
     padding: 0 var(--spacing-sm);
   }
+
   .web-project__thumbnail {
     width: 100%;
     height: auto;
     padding-bottom: 65%;
   }
+
   .web-project__content {
     width: 100%;
     height: auto;
     max-height: none;
   }
+
   .web-project__title {
     font-size: var(--spacing-3xl);
   }
+
   .web-project__title.new::after {
     left: 100%;
     width: 8px;
     height: 8px;
   }
+
   .web-project__details li {
     align-items: start;
   }
+
   .web-project__details li h5 {
     flex-shrink: 0;
     line-height: 1.6em;
   }
+
   .web-project__links {
     flex-wrap: wrap;
     justify-content: center;
@@ -345,9 +520,11 @@
       gap: var(--spacing-md);
     }
   }
+
   .web-project__link {
     width: 100px;
   }
+
   /* ########## END - WEB ########## */
 
 
@@ -360,24 +537,31 @@
   .practical-slider:not(:last-child) {
     margin-bottom: var(--spacing-8xl);
   }
+
   .practical-slider__title {
     margin-bottom: 0;
   }
+
   .practical-slider__title::before {
     top: -2px;
   }
+
   .practical-slider__item:not(:last-child) {
     margin-right: var(--spacing-lg);
   }
+
   .practical-slider__item {
     height: 100px;
   }
+
   .practical-slider__box .slick-dots {
     bottom: -28px;
   }
+
   .practical-slider__box .slick-dots li {
     margin: 0 6px;
   }
+
   /* ########## END - PRACTICAL ########## */
 
 
@@ -385,10 +569,12 @@
   .epilogue-content {
     padding: 0;
   }
+
   .epilogue-content-inner {
     flex-direction: column;
     row-gap: var(--spacing-6xl);
   }
+
   .epilogue-heading {
     width: 100%;
   }
@@ -402,17 +588,21 @@
   .epilogue-job-strength {
     width: 100%;
   }
+
   .epilogue-job-strength__item-title {
     font-size: 18px;
     text-align: center;
   }
+
   .epilogue-job-strength__item:not(:last-child) {
     margin-bottom: var(--spacing-4xl);
   }
+
   .epilogue-job-strength__item-text {
     font-size: var(--font-size-xl);
     margin-top: var(--spacing-md)
   }
+
   /* ########## END - EPILOGUE ########## */
 
 
@@ -420,6 +610,7 @@
   .footer__ending {
     margin-bottom: var(--spacing-6xl);
   }
+
   /* ########## END - FOOTER ########## */
 
 
@@ -428,6 +619,7 @@
   .trigger {
     left: var(--spacing-xl);
   }
+
   .trigger.on {
     top: var(--spacing-xl);
   }
@@ -436,15 +628,18 @@
   .top-btn {
     right: var(--spacing-xl);
   }
+
   .top-btn.on {
     bottom: var(--spacing-xl);
   }
+
   .top-btn--on {
     width: 48px;
     height: 48px;
     bottom: 20px;
     right: 20px;
   }
+
   .top-btn img {
     width: calc(56px / 2.5);
     height: calc(32px / 2.5);
@@ -457,10 +652,12 @@
     width: 48px;
     height: 48px;
   }
+
   .sidebar-btn--on .sidebar-btn__inner {
     width: 27px;
     height: 21px;
   }
+
   .sidebar-btn--on .sidebar-btn__inner span {
     height: 3.7px;
   }
@@ -469,13 +666,16 @@
   .sidebar-nav-inner {
     padding-bottom: 20%;
   }
+
   .sidebar-nav__item span {
     font-size: var(--spacing-xl);
   }
+
   .sidebar-nav__item.new span::after {
     top: -4px;
     left: 100%;
   }
+
   /* ########## END - 유틸리티 버튼 ########## */
 
 
@@ -483,6 +683,7 @@
   .accessibility-modal {
     display: none;
   }
+
   /* ########## END - 접근성 알림 토스트 ########## */
 
 
@@ -495,5 +696,6 @@
   .fullscreen-nav__item {
     font-size: 28px;
   }
+
   /* ########## END - 풀스크린 네비게이션 ########## */
 }
