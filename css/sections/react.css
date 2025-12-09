@@ -11,7 +11,7 @@
   justify-content: center;
   column-gap: var(--spacing-5xl);
   row-gap: var(--spacing-7xl);
-  margin-top: var(--spacing-6xl);
+  margin-top: var(--spacing-7xl);
 }
 .react-content :is(h3, h4) {
   font-weight: 600;
@@ -24,7 +24,6 @@
   align-items: center;
   flex-direction: column;
   gap: var(--spacing-lg);
-  margin-top: var(--spacing-6xl);
 }
 
 /* ----- react-mockup__item ----- */
@@ -34,16 +33,16 @@
   justify-content: space-between;
 }
 .react-mockup__item-tablet {
-  width: calc(912px / 2);
-  height: calc(670px / 2);
+  width: calc(912px / 1.7);
+  height: calc(670px / 1.7);
 }
 .react-mockup__item-mobile {
-  width: calc(344px / 2);
-  height: calc(670px / 2);
+  width: calc(344px / 1.7);
+  height: calc(670px / 1.7);
 }
 .react-mockup__item-pc {
-  width: calc(1280px / 2);
-  height: calc(1066px / 2);
+  width: calc(1280px / 1.7);
+  height: calc(1066px / 1.7);
 }
 
 /* ----- react-detail ----- */

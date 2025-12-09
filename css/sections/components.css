@@ -220,10 +220,14 @@
 }
 
 .trigger.active {
+  opacity: 1;
   background-color: var(--color-primary);
   transform: translateY(-4px) rotate(135deg);
 }
-
+.trigger.active:hover {
+  opacity: 0.7;
+  transform: translateY(-8px) rotate(135deg);
+}
 .trigger.active:active {
   transform: scale(0.9);
 }

@@ -1,7 +1,7 @@
 :root {
   /* --------- LAYOUT --------- */
   /* container width */
-  --container-width: 1280px;
+  --container-width: 1400px;
 
   /* section padding */
   --section-padding: 160px 80px;
@@ -18,9 +18,9 @@
   --color-negative: #D32F2F;
   --color-line: #dfdfdf;
   --color-util-btn: #777777;
-  --color-mockup-box-btn: var(--color-primary); 
-  --color-attention-glow: rgba(255, 184, 77, 0.7); /* 주목 애니메이션용 글로우 색상 - 더 부드럽게 */
- 
+  --color-mockup-box-btn: var(--color-primary);
+  --color-attention-glow: rgba(255, 184, 77, 0.7);
+
 
   /* skill-section */
   --color-background-even-champagne: #f9f7f1;
@@ -42,7 +42,7 @@
   --react-color-primary: #72E3AD;
   --react-background-color: #f1fdf7;
 
-  
+
   /* --------- SHADOW --------- */
   --shadow-normal: 0 0 12px rgba(0, 0, 0, 0.1);
   --shadow-light: 0 0 12px rgba(0, 0, 0, 0.03);
@@ -50,7 +50,7 @@
   --shadow-color-box-light: 0 0 8px rgba(0, 0, 0, 0.2);
   --shadow-util-btn: 0 2px 8px rgba(0, 0, 0, 0.2);
   --shadow-accent: 0 0 12px rgba(0, 173, 83, 0.3);
-  --shadow-accent-light: 0 10px 25px rgba(0, 173, 83, 0.06), 0 4px 10px rgba(0,0,0,0.02);
+  --shadow-accent-light: 0 10px 25px rgba(0, 173, 83, 0.06), 0 4px 10px rgba(0, 0, 0, 0.02);
 
   /* --------- SPACING --------- */
   --spacing-xs: 4px;
@@ -89,4 +89,3 @@
   --font-size-slogan-title: 56px;
   --font-size-section-title: 36px;
 }
-
