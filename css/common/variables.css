@@ -33,7 +33,7 @@
   --text-color-gray: #777777;
   --text-color-light: #999999;
   --text-color-white: #ffffff;
-  --text-highlight-bg: rgba(0, 173, 83, 0.1); 
+  --text-highlight-bg: rgba(0, 173, 83, 0.1);
 
 
   /* --------- SECTION COLOR --------- */
@@ -48,6 +48,8 @@
   --shadow-color-box: 0 0 8px rgba(0, 0, 0, 0.3);
   --shadow-color-box-light: 0 0 8px rgba(0, 0, 0, 0.2);
   --shadow-util-btn: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-accent: 0 0 12px rgba(0, 173, 83, 0.2);
+  --shadow-accent-light: 0 10px 25px rgba(0, 173, 83, 0.06), 0 4px 10px rgba(0,0,0,0.02);
 
   /* --------- SPACING --------- */
   --spacing-xs: 4px;
