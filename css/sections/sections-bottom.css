@@ -6,6 +6,9 @@
 
 
 /* ########## Practical Section ########## */
+#practical {
+  background-color: var(--color-background-even-champagne);
+}
 
 /* ----- practical-content ----- */
 .practical-content {

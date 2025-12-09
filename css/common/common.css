@@ -30,6 +30,7 @@ body {
 }
 main > section {
   padding: var(--section-padding);
+  background-color: var(--color-background-white);
 }
 
 /* ---------- COMMON ---------- */
@@ -68,19 +69,17 @@ img {
   height: 100%;
   object-fit: cover;
 }
-/* 짝수 section 배경 색상 지정 */
-main > section:nth-of-type(even) {
-  background-color: var(--color-background-even-section);
-}
+
 /* section title */
 .inner > h2 {
   display: flex;
   align-items: start;
+  width: fit-content;
+  padding-left: var(--spacing-md);
   font-family: var(--font-EN);
   font-size: var(--font-size-section-title);
-  font-weight: 600;
-  padding-left: var(--spacing-md);
-  width: fit-content;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 .inner > h2.new::after {
   content: "NEW";

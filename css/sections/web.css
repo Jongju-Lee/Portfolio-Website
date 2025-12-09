@@ -1,4 +1,8 @@
-﻿/* ----- web-content ----- */
+﻿#web {
+  background-color: var(--color-background-even-champagne);
+}
+
+/* ----- web-content ----- */
 .web-content {
   margin-top: var(--spacing-7xl);
 }
