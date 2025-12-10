@@ -58,6 +58,10 @@ p {
 b {
   font-weight: 500;
 }
+b.font-kr,
+b .font-kr {
+  font-weight: 600;
+}
 em {
   color: inherit;
   font-style: normal;

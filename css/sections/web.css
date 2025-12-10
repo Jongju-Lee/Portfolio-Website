@@ -51,11 +51,12 @@
   font-family: var(--font-EN);
   width: fit-content;
   font-size: 36px;
-  font-weight: 500;
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
   line-height: 1em;
 }
 .web-project__title.font-kr {
-  font-weight: 600;
+  font-weight: 700;
 }
 .web-project__title.new::after {
   content: "";

@@ -14,7 +14,7 @@
   margin-top: var(--spacing-7xl);
 }
 .react-content :is(h3, h4) {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* ----- react-mockup ----- */
@@ -69,7 +69,7 @@
   gap: var(--spacing-md);
 }
 .react-detail__format .title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
 }
 .react-detail__format .color-box {
   display: flex;
@@ -122,8 +122,8 @@
 }
 .react-detail__typo-desc-title {
   font-family: var(--font-EN);
-  font-size: var(--font-size-lg);
-  font-weight: 500;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
 }
 .react-detail__typo-desc-title .text-small {
   font-size: var(--font-size-sm);
@@ -142,7 +142,10 @@
   gap: var(--spacing-sm);
 }
 .react-detail__typo-desc-list-item b {
-  font-weight: 400;
+  font-weight: 500;
+}
+.react-detail__typo-desc-list-item b.font-kr {
+  font-weight: 600;
 }
 .react-detail__typo-desc-list-item::before {
   content: "";
@@ -172,7 +175,7 @@
 .react-detail__function-list-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   font-weight: 400;
 }
 .react-detail__function-list-item .dot {
@@ -215,7 +218,7 @@
 }
 .react-detail__work-list-table th {
   padding: var(--spacing-sm) var(--spacing-2xl);
-  font-weight: 500;
+  font-weight: 600;
 }
 .react-detail__work-list-table thead th {
   background-color: var(--react-color-primary);
@@ -225,7 +228,7 @@
 }
 .react-detail__work-list-table tbody th {
     border-right: 1px solid var(--react-color-primary);
-    font-weight: 600;
+    font-weight: 500;
 }
 .react-detail__work-list-table td {
   padding: var(--spacing-sm) var(--spacing-3xl);
@@ -262,7 +265,7 @@
 .react-detail__btn::before {
   content: attr(data-label-pc);
   font-size: var(--font-size-lg);
-  font-weight: 400;
+  font-weight: 500;
 }
 .react-detail__btn:last-child {
   opacity: 0.5;
