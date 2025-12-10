@@ -92,6 +92,9 @@
   font-weight: 500;
   line-height: inherit;
 }
+.web-project__details li p {
+  text-align: left;
+}
 /* ----- web-project__links ----- */
 .web-project__links {
   display: flex;
