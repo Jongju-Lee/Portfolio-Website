@@ -458,17 +458,12 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  /* ----- 화면 400px보다 작을경우 한줄에 2버튼 ----- */
-  @media (max-width: 400px) {
-    .web-project__links {
-      display: grid;
-      width: fit-content;
-      margin: 0 auto;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-      gap: var(--spacing-md);
-    }
+  .web-project__link--mobile,
+  .web-project__link--tablet {
+    display: none;
+  }
+  .web-project__link--pc::before {
+    content: attr(data-label-mobile);
   }
   .web-project__link {
     width: 100px;

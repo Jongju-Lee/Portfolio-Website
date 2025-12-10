@@ -112,6 +112,9 @@
   background-color: var(--color-primary);
   color: var(--text-color-white);
 }
+.web-project__link--pc::before {
+  content: attr(data-label-pc);
+}
 .web-project__link--pc:hover {
   background-color: var(--color-background-white);
   border: 1px solid var(--color-primary);

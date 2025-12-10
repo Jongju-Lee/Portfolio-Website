@@ -245,8 +245,14 @@ img {
   color: var(--text-color-white);
   transform: none;
 }
+.close-bottom-left .featherlight-close-icon {
+  top: auto;
+  bottom: var(--spacing-xl);
+}
 .close-bottom-right .featherlight-close-icon {
   top: auto;
+  left: auto;
+  right: 26px;
   bottom: var(--spacing-xl);
 }
 

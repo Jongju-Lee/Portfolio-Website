@@ -215,6 +215,13 @@
   .web-project__title {
     font-size: 30px;
   }
+  .web-project__link--mobile,
+  .web-project__link--tablet {
+    display: none;
+  }
+  .web-project__link--pc::before {
+    content: attr(data-label-tablet);
+  }
   /* ########## END - WEB ########## */
   
   
