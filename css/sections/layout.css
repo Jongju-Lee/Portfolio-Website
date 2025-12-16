@@ -25,6 +25,7 @@ header.hide {
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-5xl);
+  width: 100%;
 }
 
 /* ----- header__functional-btn ----- */
