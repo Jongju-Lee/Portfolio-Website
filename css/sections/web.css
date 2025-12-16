@@ -1,4 +1,4 @@
-﻿#web {
+#web {
   background-color: var(--color-background-even-champagne);
 }
 
@@ -49,6 +49,8 @@
 .web-project__title {
   position: relative;
   font-family: var(--font-EN);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 36px;
   font-size: var(--font-size-3xl);

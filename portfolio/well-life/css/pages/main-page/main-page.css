@@ -4,7 +4,8 @@
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 64px); /* 폴백 */
+  height: calc(100dvh - 64px); /* iOS Safari 동적 뷰포트 */
   padding: var(--section-padding-v-pc) var(--section-padding-h-pc);
 
   background-image: url(../../../images/main-page/hero/hero-bg-pc.png);
@@ -415,6 +416,8 @@
 .doctor-info__face {
   flex-shrink: 0;
   width: 30%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   min-width: 380px;
   margin-top: -160px;
@@ -848,6 +851,8 @@
   justify-content: center;
   align-items: center;
   gap: var(--spacing-8);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: var(--spacing-12) auto 0;
   padding: var(--spacing-8) var(--spacing-16);
@@ -1084,6 +1089,8 @@
   height: calc(64px / 2);
 }
 .direction-heading__way-bottom-badge--subway {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: var(--spacing-8) var(--spacing-16);
   border-radius: 100px;

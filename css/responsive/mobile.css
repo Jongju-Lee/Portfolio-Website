@@ -84,6 +84,8 @@
   }
   .about-intro__title {
     font-size: var(--font-size-slogan-title-mobile);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
   }
@@ -95,6 +97,8 @@
     display: inline;
   }
   .about-intro__name {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
     margin-top: var(--spacing-3xl);
@@ -146,6 +150,8 @@
 
   /* edu-timeline__peroid */
   .edu-timeline__peroid {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     text-align: center;
   }
@@ -337,6 +343,8 @@
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-3xl);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
   .react-mockup__item-tablet {
@@ -375,6 +383,8 @@
 
   /* react-detail__function */
   .react-detail__function {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
   }
@@ -391,6 +401,8 @@
     text-align: center;
   }
   .react-detail__work-list-table th {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
   .react-detail__work-list-table thead th {

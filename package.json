@@ -1,0 +1,13 @@
+{
+  "name": "publishing-portfolio",
+  "version": "1.0.0",
+  "description": "Publishing portfolio with cross-browser support",
+  "scripts": {
+    "prefix": "postcss css/**/*.css portfolio/well-life/css/**/*.css --use autoprefixer --replace --no-map"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0"
+  }
+}

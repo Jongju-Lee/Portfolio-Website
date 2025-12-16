@@ -129,7 +129,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: var(--spacing-4);
+    -moz-column-gap: var(--spacing-4);
+         column-gap: var(--spacing-4);
     row-gap: var(--spacing-8);
   }
   /* ---------- END - FOOTER ----------  */

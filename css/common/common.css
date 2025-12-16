@@ -71,6 +71,7 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -78,6 +79,8 @@ img {
 .inner > h2 {
   display: flex;
   align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding-left: var(--spacing-md);
   font-family: var(--font-EN);
@@ -149,6 +152,8 @@ img {
   left: 26px;
   right: auto;
   bottom: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   min-width: auto;
   height: auto;
@@ -175,7 +180,11 @@ img {
 }
 /* 닫기 버튼 컨테이너 위치 재설정 */
 .uk-lightbox .uk-position-top {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   top: 0;
   left: 0;
@@ -225,6 +234,8 @@ img {
   /* 목업 페이지의 back-btn 스타일과 통일 */
   top: 14px;
   left: 26px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   height: auto;
   padding: var(--spacing-md) var(--spacing-xl);

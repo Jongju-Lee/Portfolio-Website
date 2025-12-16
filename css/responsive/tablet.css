@@ -1,4 +1,4 @@
-﻿@media (max-width: 1024px) {
+@media (max-width: 1024px) {
   /* ########## 변수 재정의 ########## */
   :root {
     /* ----- TABLET - FONT SIZE 재정의 ----- */
@@ -71,7 +71,8 @@
     padding-bottom: var(--spacing-3xl);
   }
   .about-content {
-    column-gap: var(--spacing-4xl);
+    -moz-column-gap: var(--spacing-4xl);
+         column-gap: var(--spacing-4xl);
     margin-top: 0;
   }
   /* about-intro */

@@ -49,6 +49,7 @@ header.hide {
   display: flex;
   justify-content: center;
   align-items: center;
+  -moz-column-gap: 66px;
   column-gap: 66px;
   row-gap: 0;
   flex-wrap: wrap;
@@ -148,7 +149,8 @@ body.fullscreen-nav--on {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   z-index: 1000;
 }
 .fullscreen-nav-inner {
@@ -162,6 +164,8 @@ body.fullscreen-nav--on {
 .fullscreen-nav__item {
   position: relative;
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-xl) 0;
   font-family: var(--font-EN);
@@ -225,7 +229,8 @@ body.sidebar--on {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   z-index: 3000;
 }
 

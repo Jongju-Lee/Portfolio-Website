@@ -124,6 +124,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  -moz-column-gap: var(--spacing-8xl);
   column-gap: var(--spacing-8xl);
   row-gap: var(--spacing-7xl);
 }

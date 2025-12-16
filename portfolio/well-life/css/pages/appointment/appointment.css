@@ -316,8 +316,14 @@
   padding: var(--spacing-8);
   min-width: 0;
 }
+.appointment-form__item-patient-list-item--address input::-moz-placeholder {
+  color: var(--contents-tertiary);
+}
 .appointment-form__item-patient-list-item--address input::placeholder {
   color: var(--contents-tertiary);
+}
+.appointment-form__item-patient-list-item--address input:focus::-moz-placeholder {
+  opacity: 0;
 }
 .appointment-form__item-patient-list-item--address input:focus::placeholder {
   opacity: 0;

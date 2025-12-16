@@ -1,4 +1,4 @@
-﻿main > section#react {
+main > section#react {
   background-color: var(--react-background-color);
   color: var(--react-text-color);
   font-size: var(--font-size-lg);
@@ -9,7 +9,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: var(--spacing-5xl);
+  -moz-column-gap: var(--spacing-5xl);
+       column-gap: var(--spacing-5xl);
   row-gap: var(--spacing-7xl);
   margin-top: var(--spacing-7xl);
 }
@@ -73,6 +74,8 @@
 }
 .react-detail__format .color-box {
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: var(--spacing-xs);
   overflow: hidden;
