@@ -32,17 +32,8 @@
 
 
   /* ########## LAYOUT ########## */
-  html {
-    overflow-x: hidden;
-  }
   body {
     font-size: var(--font-size-body-mobile);
-    max-width: 100vw;
-    overflow-x: hidden;
-  }
-  .container {
-    max-width: 100%;
-    overflow-x: hidden;
   }
   main>section {
     padding: var(--section-padding-mobile);
@@ -59,11 +50,9 @@
 
   /* ########## SECTION - HEADER ########## */
   header {
-    position: sticky;
-    top: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: auto;
     padding: var(--spacing-md) var(--spacing-xl);
   }
   .header-inner {
