@@ -15,9 +15,6 @@
 /* ----- Web App (React) 섹션 ----- */
 @import url(./sections/react.css);
 
-/* ----- Mobile Web 섹션 ----- */
-@import url(./sections/mobile-web.css);
-
 /* ----- 하단 섹션 (Practical, Epilogue) ----- */
 @import url(./sections/sections-bottom.css);
 
