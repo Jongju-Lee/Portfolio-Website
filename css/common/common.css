@@ -142,6 +142,11 @@ img {
 .uk-lightbox {
   background: var(--color-background-white);
 }
+.uk-lightbox-items,
+.uk-lightbox-items > * {
+  width: 100%;
+  height: 100%;
+}
 .uk-lightbox-toolbar {
   background-color: transparent;
 }
