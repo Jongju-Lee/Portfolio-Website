@@ -469,7 +469,6 @@
     font-size: var(--spacing-3xl);
   }
   .web-project__title.new::after {
-    left: 100%;
     width: 8px;
     height: 8px;
   }
