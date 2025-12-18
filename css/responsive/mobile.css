@@ -241,7 +241,6 @@
   .resume-main__desc,
   .resume-sub__desc {
     font-size: var(--font-size-md);
-    word-break: keep-all;
     text-align: left;
   }
   .resume-main__caption,

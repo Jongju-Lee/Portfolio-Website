@@ -26,7 +26,7 @@
   flex-wrap: wrap;
   justify-content: center;
   -moz-column-gap: var(--spacing-3xl);
-       column-gap: var(--spacing-3xl);
+  column-gap: var(--spacing-3xl);
   row-gap: var(--spacing-5xl);
 }
 
@@ -229,7 +229,14 @@
 }
 .edu-timeline .title {
   margin-bottom: var(--spacing-sm);
-  font-weight: 600;
+  font-weight: 500;
+}
+.edu-timeline .title.strong {
+  font-weight: 700;
+}
+.edu-timeline .title b {
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 /* ----- edu-timeline__peroid ----- */
@@ -238,12 +245,17 @@
   width: 220px;
   text-align: right;
 }
-.edu-timeline__peroid-title {
+.edu-timeline .title.edu-timeline__peroid-title {
   font-size: 22px;
+  font-weight: 400;
 }
 .edu-timeline__peroid-content {
   font-weight: 400;
   text-align: right;
+}
+.edu-timeline__peroid-content b {
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 /* ----- edu-timeline__line-box ----- */
@@ -273,13 +285,20 @@
 }
 
 /* ----- edu-timeline__desc ----- */
-.edu-timeline__desc-title {
+.edu-timeline .title.edu-timeline__desc-title {
   font-size: var(--font-size-xl);
+  /* font-weight: 400; */
 }
 .edu-timeline__desc-content {
-  font-weight: 500;
-  color: var(--color-primary);
+  font-weight: 400;
   word-break: keep-all;
+}
+.edu-timeline__desc-content b {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+.edu-timeline__desc-content.font-en b {
+  font-weight: 600;
 }
 .edu-timeline__desc .regular {
   font-weight: 400;
@@ -301,28 +320,51 @@
   padding-left: var(--spacing-sm);
 }
 .resume-main__title {
-  margin: 0 0 var(--spacing-lg);
-  padding-left: var(--spacing-md);
-  border-left: 5px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin: 0 0 var(--spacing-2xl);
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1em;
   letter-spacing: 0.2px;
   color: var(--text-color-title);
 }
+.resume-main__title::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+}
 .resume-main__desc {
-  margin-bottom: var(--spacing-xl);
+  display: inline-block;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-left: 4px solid var(--text-color-dark-gray);
+  border-radius: 6px;
   font-size: var(--font-size-lg);
   line-height: 1.5em;
-  color: var(--text-color-gray);
+  background-color: var(--color-background-light-gray);
+  color: var(--text-color-body);
+}
+.resume-main__desc p {
+  font-weight: 500;
 }
 .resume-main__caption {
-  font-size: var(--font-size-sm);
-  color: var(--text-color-light);
+  display: flex;
+  gap: 6px;
+  font-size: var(--font-size-md);
+  font-weight: 400;
 }
 .resume-main__caption i {
-  margin-right: var(--spacing-xs);
-  font-style: normal;
+  flex-shrink: 0;
+  display: inline-block;
+  margin-top: 6px;
+  width: calc(28px / 2);
+  height: calc(28px / 2);
+  background-image: url(../../images/resume/resume-info-icon.png);
+  background-size: 100% 100%;
 }
 
 /* ----- resume-hero ----- */
@@ -455,14 +497,22 @@
   padding-left: var(--spacing-sm);
 }
 .resume-sub__title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
   margin: 0 0 var(--spacing-lg);
-  padding-left: var(--spacing-md);
-  border-left: 5px solid var(--color-primary);
-  font-size: var(--font-size-2xl);
+  font-size: 28px;
   font-weight: 700;
   line-height: 1em;
   letter-spacing: 0.2px;
   color: var(--text-color-title);
+}
+.resume-sub__title::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
 }
 .resume-sub__desc {
   margin-bottom: var(--spacing-2xl);
