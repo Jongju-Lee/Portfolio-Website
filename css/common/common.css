@@ -112,11 +112,20 @@ img {
 .regular {
   font-weight: 400 !important;
 }
-.s-bold {
+.medium {
   font-weight: 500 !important;
 }
-.bold {
+.s-bold {
   font-weight: 600 !important;
+}
+.bold {
+  font-weight: 700 !important;
+}
+.e-bold {
+  font-weight: 800 !important;
+}
+.black {
+  font-weight: 900 !important;
 }
 .under-line {
   text-decoration: underline;

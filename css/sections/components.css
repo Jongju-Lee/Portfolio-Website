@@ -407,10 +407,8 @@
   opacity: 1;
 }
 
-/* 페이지 최초 로드 시 주목 애니메이션 (4.5초간) */
 .mockup-box__open-btn--initial-attention {
   animation: pulseGlow 1.5s ease-in-out 3;
-  /* ease-in-out: 우아한 느낌 */
   animation-delay: 0.5s;
 }
 
@@ -424,7 +422,6 @@
   opacity: 1;
   background-color: var(--color-primary);
 }
-
 .mockup-box--on .mockup-box__open-btn:hover {
   opacity: 0.7;
   transform: translateY(0);
@@ -447,7 +444,6 @@
   width: 100%;
   height: 100%;
 }
-
 .mockup-box__action-btn {
   opacity: 0;
   visibility: hidden;
@@ -456,12 +452,10 @@
   top: 7px;
   left: 7px;
   width: 40px;
-  /* 36px와 46px의 중간 */
   height: 40px;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
 }
-
 .mockup-box__action-btn img {
   position: absolute;
   top: 50%;
@@ -474,7 +468,6 @@
   background-color: #72e3ad;
   transition-delay: 0.3s;
 }
-
 .mockup-box__action-btn.mobile img {
   width: calc(28px / 1.8);
   height: calc(40px / 1.8);
@@ -485,7 +478,6 @@
   background-color: #1da1f2;
   transition-delay: 0.15s;
 }
-
 .mockup-box__action-btn.tablet img {
   width: calc(40px / 1.8);
   height: calc(32px / 1.8);
@@ -496,13 +488,10 @@
   background-color: var(--color-negative);
   transition-delay: 0.45s;
 }
-
 .mockup-box__action-btn.close img {
   width: calc(28px / 1.8);
   height: calc(28px / 1.8);
 }
-
-
 /* 목업 박스 열릴 때 액션버튼 동작 */
 .mockup-box--on .mockup-box__action-btn {
   opacity: 1;
@@ -510,27 +499,22 @@
   pointer-events: all;
   box-shadow: var(--shadow-util-btn);
 }
-
 .mockup-box__action-btn:hover {
   animation: actionBtnHover 0.2s ease-in-out forwards;
 }
-
 /* 모바일 */
 .mockup-box--on .mockup-box__action-btn.mobile {
   top: -56px;
   left: 0;
 }
-
 /* 태블릿 버튼 */
 .mockup-box--on .mockup-box__action-btn.tablet {
   top: -36px;
   left: calc(100% + -4px);
 }
-
 /* 닫기 버튼 */
 .mockup-box--on .mockup-box__action-btn.close {
   top: calc(100% - 40px);
-  /* 41px 버튼에 맞춰 조정 */
   left: calc(100% + 16px);
 }
 
@@ -539,7 +523,6 @@
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0.7;
   }
@@ -547,13 +530,11 @@
 
 /* 펄스 + 글로우 애니메이션 (초기 주목용) - ease-in-out으로 우아하게 */
 @keyframes pulseGlow {
-
   0%,
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 transparent;
   }
-
   50% {
     /* 최대 지점 */
     transform: scale(1.05);
@@ -562,7 +543,6 @@
       0 0 30px 12px rgba(255, 184, 77, 0.55),
       0 0 45px 18px rgba(255, 184, 77, 0.3);
   }
-
   /* 75% 키프레임 제거 - ease-in-out이 자연스럽게 페이드 아웃 처리 */
 }
 
@@ -584,11 +564,9 @@
   max-width: 440px;
   animation: reveal-toast 1s ease-in-out 0.5s forwards;
 }
-
 .accessibility-modal:focus-visible {
   outline: 1px solid var(--color-primary);
 }
-
 /* 모달 닫힘 애니메이션 */
 .accessibility-modal--close {
   animation: close-toast 1s ease-in-out forwards;
@@ -596,9 +574,8 @@
 
 /* ----- accessibility-modal__title ----- */
 .accessibility-modal__title {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
   text-align: center;
-  font-weight: 700;
 }
 
 /* ----- accessibility-modal__list-box ----- */
@@ -608,14 +585,11 @@
   gap: var(--spacing-sm);
   margin-top: var(--spacing-xl);
 }
-
 .accessibility-modal__list-item {
   display: flex;
   gap: var(--spacing-sm);
   font-size: var(--font-size-md);
-  font-weight: 400;
 }
-
 .accessibility-modal__list-item::before {
   content: "";
   flex-shrink: 0;
@@ -627,10 +601,6 @@
   background-color: var(--color-primary);
 }
 
-.accessibility-modal__list-item b {
-  font-weight: 700;
-}
-
 /* ----- accessibility-modal__tip ----- */
 .accessibility-modal__tip {
   display: flex;
@@ -640,7 +610,6 @@
   color: var(--color-primary);
   font-size: var(--font-size-sm);
 }
-
 .accessibility-modal__tip::before {
   content: "";
   flex-shrink: 0;
@@ -658,7 +627,6 @@
   gap: var(--spacing-sm);
   margin-top: var(--spacing-md);
 }
-
 .accessibility-modal__btn {
   flex: 1;
   font-size: var(--font-size-sm);
@@ -669,15 +637,12 @@
   line-height: 1em;
   transition: opacity 0.2s;
 }
-
 .accessibility-modal__btn:hover {
   opacity: 0.7;
 }
-
 .accessibility-modal__btn.dismiss-btn {
   background-color: #aaa;
 }
-
 .accessibility-modal__btn.ok-btn {
   background-color: var(--color-primary);
 }
@@ -688,7 +653,6 @@
     opacity: 0;
     visibility: hidden;
   }
-
   100% {
     opacity: 1;
     visibility: visible;
@@ -701,7 +665,6 @@
     opacity: 1;
     visibility: visible;
   }
-
   100% {
     opacity: 0;
     visibility: hidden;

@@ -196,6 +196,7 @@
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
   transition: max-height 0.4s, padding 0.2s;
   pointer-events: none;
+  word-break: break-all;
 }
 .skill-item--on .skill-item__text-box-desc {
   max-height: 500px;
