@@ -245,7 +245,7 @@
   text-align: right;
 }
 .edu-timeline .title.edu-timeline__peroid-title {
-  font-size: 22px;
+  font-size: var(--font-size-xl);
   font-weight: 400;
 }
 .edu-timeline__peroid-content {
