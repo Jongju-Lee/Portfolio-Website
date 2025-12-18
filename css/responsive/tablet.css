@@ -141,18 +141,14 @@
   .resume-main__title {
     font-size: var(--font-size-2xl);
   }
-  .resume-main__caption {
+  .resume-main__caption,
+  .resume-sub__caption {
     font-size: var(--font-size-sm);
   }
-  .resume-main__caption i {
+  .resume-main__caption i,
+  .resume-sub__caption i {
     width: 13px;
     height: 13px;
-    /* display: inline-block;
-    margin-top: 6px;
-    width: calc(28px / 2);
-    height: calc(28px / 2);
-    background-image: url(../../images/resume/resume-info-icon.png);
-    background-size: 100% 100%; */
     margin-top: 5px;
   }
   /* resume-hero */

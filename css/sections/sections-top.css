@@ -6,16 +6,16 @@
 
 /* ########## About Section ########## */
 #about {
-  padding: var(--section-padding);
   margin-top: 74px;
+  padding: var(--section-padding);
   height: calc(100vh - 74px);
 }
 #about .inner {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: var(--spacing-5xl);
+  height: 100%;
   padding-bottom: var(--spacing-4xl);
 }
 
@@ -37,15 +37,15 @@
   padding-left: var(--spacing-6xl);
 }
 .about-intro__title {
-  color: var(--color-primary);
   font-family: var(--font-slogan);
   font-size: var(--font-size-slogan-title);
+  color: var(--color-primary);
 }
 .about-intro__text {
   margin-top: var(--spacing-md);
-  text-align: justify;
-  line-height: 1.8em;
   font-size: var(--font-size-xl);
+  line-height: 1.8em;
+  text-align: justify;
   word-break: keep-all;
 }
 .about-intro__text span {
@@ -61,13 +61,13 @@
   margin-top: var(--spacing-4xl);
 }
 .about-intro__name span {
-  line-height: 1.2em;
   font-size: var(--font-size-xl);
+  line-height: 1.2em;
 }
 .about-intro__name em {
-  line-height: 1em;
   font-size: var(--font-size-4xl);
   font-weight: 700;
+  line-height: 1em;
   letter-spacing: var(--spacing-lg);
 }
 
@@ -92,11 +92,11 @@
 }
 .about-info__item h5 {
   width: 90px;
-  line-height: 1em;
-  font-size: var(--font-size-2xl);
   font-family: var(--font-EN);
-  text-align: right;
+  font-size: var(--font-size-2xl);
   font-weight: 400;
+  line-height: 1em;
+  text-align: right;
   color: var(--color-primary);
 }
 .about-info__item span {
@@ -124,11 +124,11 @@
   position: relative;
   width: 390px;
   padding: var(--spacing-2xl);
-  box-shadow: var(--shadow-color-box-light);
   border-radius: var(--spacing-lg);
   background-color: var(--color-skill-item-bg);
-  cursor: pointer;
+  box-shadow: var(--shadow-color-box-light);
   transition: transform 0.2s;
+  cursor: pointer;
 }
 .skill-item:hover {
   transform: scale(1.05);
@@ -140,14 +140,13 @@
   transform: none;
 }
 
-/* ----- skill-item__icon-box ----- */
 .skill-item__icon-box {
-  width: 100%;
-  flex-shrink: 0;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   gap: 36px;
+  width: 100%;
   padding: var(--spacing-lg);
   border-radius: var(--spacing-md);
   background-color: var(--color-background-white);
@@ -178,37 +177,37 @@
   display: flex;
   justify-content: center;
   gap: var(--spacing-sm);
+  font-family: var(--font-EN);
   font-size: var(--font-size-2xl);
   font-weight: 600;
   text-align: center;
-  font-family: var(--font-EN);
 }
 .skill-item__text-box-desc {
   position: absolute;
   top: calc(100% - 12px);
   left: 0;
+  z-index: 1;
   width: 100%;
   max-height: 0;
-  overflow: hidden;
   padding: 0 var(--spacing-2xl) 0;
   border-radius: 0 0 var(--spacing-lg) var(--spacing-lg);
+  overflow: hidden;
   background-color: var(--color-skill-item-bg);
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
   transition: max-height 0.4s, padding 0.2s;
-  z-index: 1;
   pointer-events: none;
 }
 .skill-item--on .skill-item__text-box-desc {
-  padding: 0 var(--spacing-2xl) var(--spacing-2xl);
   max-height: 500px;
+  padding: 0 var(--spacing-2xl) var(--spacing-2xl);
 }
 .skill-item__text-box-desc p {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--spacing-lg);
+  background-color: var(--color-background-white);
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
   font-size: var(--font-size-lg);
   line-height: 1.6em;
-  background-color: var(--color-background-white);
-  border-radius: var(--spacing-lg);
-  padding: var(--spacing-md) var(--spacing-lg);
-  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -260,10 +259,10 @@
 
 /* ----- edu-timeline__line-box ----- */
 .edu-timeline__line-box {
-  flex-shrink: 0;
   position: relative;
   top: 4px;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: start;
   align-items: center;
@@ -279,23 +278,22 @@
 }
 .edu-timeline__line-box .line {
   display: inline-block;
-  width: 2px;
   flex: 1;
+  width: 2px;
   background-color: var(--color-line);
 }
 
 /* ----- edu-timeline__desc ----- */
 .edu-timeline .title.edu-timeline__desc-title {
   font-size: var(--font-size-xl);
-  /* font-weight: 400; */
 }
 .edu-timeline__desc-content {
   font-weight: 400;
   word-break: keep-all;
 }
 .edu-timeline__desc-content b {
-  color: var(--color-primary);
   font-weight: 700;
+  color: var(--color-primary);
 }
 .edu-timeline__desc-content.font-en b {
   font-weight: 600;
@@ -343,13 +341,17 @@
   padding: var(--spacing-md) var(--spacing-lg);
   border-left: 4px solid var(--text-color-dark-gray);
   border-radius: 6px;
+  background-color: var(--color-background-light-gray);
   font-size: var(--font-size-lg);
   line-height: 1.5em;
-  background-color: var(--color-background-light-gray);
   color: var(--text-color-body);
 }
 .resume-main__desc p {
+  margin-bottom: 4px;
   font-weight: 500;
+}
+.resume-main__desc b {
+  font-weight: 700;
 }
 .resume-main__caption {
   display: flex;
@@ -358,8 +360,8 @@
   font-weight: 400;
 }
 .resume-main__caption i {
-  flex-shrink: 0;
   display: inline-block;
+  flex-shrink: 0;
   margin-top: 6px;
   width: calc(28px / 2);
   height: calc(28px / 2);
@@ -424,9 +426,9 @@
   margin-bottom: var(--spacing-xl);
 }
 .resume-hero__list li strong {
+  background-color: var(--text-highlight-bg);
   font-weight: 600;
   color: var(--text-color-title);
-  background-color: var(--text-highlight-bg);
 }
 
 /* ----- resume-hero__meta ----- */
@@ -493,9 +495,6 @@
 .resume-sub {
   margin-top: var(--spacing-7xl);
 }
-.resume-sub__heading {
-  padding-left: var(--spacing-sm);
-}
 .resume-sub__title {
   display: flex;
   align-items: center;
@@ -515,23 +514,36 @@
   background-color: var(--color-primary);
 }
 .resume-sub__desc {
-  margin-bottom: var(--spacing-2xl);
+  display: inline-block;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-left: 4px solid var(--text-color-dark-gray);
+  border-radius: 6px;
   font-size: var(--font-size-lg);
-  line-height: 1.6;
-  color: var(--text-color-gray);
+  line-height: 1.5em;
+  background-color: var(--color-background-light-gray);
+  color: var(--text-color-body);
+}
+.resume-sub__desc p {
+  font-weight: 500;
 }
 .resume-sub__desc b {
-  font-weight: 600;
+  font-weight: 700;
 }
 .resume-sub__caption {
-  display: block;
-  margin-top: var(--spacing-xs);
-  font-size: var(--font-size-sm);
-  color: var(--text-color-light);
+  display: flex;
+  gap: 6px;
+  font-size: var(--font-size-md);
+  font-weight: 400;
 }
 .resume-sub__caption i {
-  margin-right: var(--spacing-xs);
-  font-style: normal;
+  flex-shrink: 0;
+  display: inline-block;
+  margin-top: 6px;
+  width: calc(28px / 2);
+  height: calc(28px / 2);
+  background-image: url(../../images/resume/resume-info-icon.png);
+  background-size: 100% 100%;
 }
 
 /* ----- resume-sub__list ----- */

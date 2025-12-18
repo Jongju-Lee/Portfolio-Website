@@ -14,6 +14,7 @@
   --color-foreground: #333333;
   --color-background-white: #ffffff;
   --color-background-light-gray: #fafafa;
+  --color-background-even-champagne: #f9f7f1;
   --color-positive: #00ad53;
   --color-negative: #D32F2F;
   --color-line: #dfdfdf;
@@ -21,10 +22,12 @@
   --color-mockup-box-btn: var(--color-primary);
   --color-attention-glow: rgba(255, 184, 77, 0.7);
 
+  /* SKILL SECTION */
+  --color-skill-item-bg: #f5f5f5;
 
-  /* skill-section */
-  --color-background-even-champagne: #f9f7f1;
-  --color-skill-item-bg: #F5F5F5;
+  /* WEB SECTION */
+  --color-background-web-section: #e6e7f2;
+  --color-well-life-primary: #19248C;
 
   /* --------- TEXT COLOR --------- */
   --text-color-title: #333333;
