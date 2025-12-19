@@ -28,21 +28,6 @@ header.hide {
   width: 100%;
 }
 
-/* ----- header__functional-btn ----- */
-.header__functional-btn {
-  order: 0;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: 2px solid #00ad53;
-  color: var(--color-primary);
-  border-radius: var(--spacing-sm);
-  transition: background-color 0.2s ease, color 0.2s ease;
-  font-weight: 400;
-}
-.header__functional-btn:hover {
-  background-color: var(--color-primary);
-  color: var(--text-color-white);
-}
-
 /* ----- header__gnb ----- */
 .header__gnb {
   order: 1;
@@ -103,24 +88,6 @@ header.hide {
 .header__gnb-item:hover::after {
   opacity: 1;
   top: 4px;
-}
-
-/* ----- header__gnb-help-btn ----- */
-.header__gnb-help-btn {
-  width: 28px;
-  height: 28px;
-  border: 2px solid var(--color-primary);
-  border-radius: 50%;
-  color: var(--color-primary);
-  background-image: url(../../images/icon/header-gnb-help-btn-icon.png);
-  background-size: calc(20px / 2) calc(32px / 2);
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: background-color 0.2s, background-image 0.2s;
-}
-.header__gnb-help-btn:hover {
-  background-color: var(--color-primary);
-  background-image: url(../../images/icon/header-gnb-help-btn-icon--white.png);
 }
 
 
