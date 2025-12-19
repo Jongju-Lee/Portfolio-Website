@@ -55,6 +55,11 @@
   .header__gnb {
     display: none;
   }
+  /* header__logo */
+  .header__logo {
+    height: 52px;
+    margin: -6px 0;
+  }
   /* ########## sidebar 추가 예정 ########## */
 
   /* ########## END - HEADER ########## */

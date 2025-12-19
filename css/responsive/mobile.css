@@ -77,6 +77,12 @@
     display: none;
   }
 
+  /* header__logo */
+  .header__logo {
+    height: 48px;
+    margin: -5px 0;
+  }
+
   /* ########## sidebar 추가 예정 ########## */
   /* ########## END - HEADER ########## */
 
