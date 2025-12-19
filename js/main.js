@@ -11,7 +11,6 @@ const UtilButtons = {
     $(".trigger").removeClass("active trigger--on");
     $(".fullscreen-nav").stop().fadeOut();
     $(".sidebar-nav").stop().fadeOut();
-    $(".header__sidebar-btn").removeClass("header__sidebar-btn--active");
     $(".sidebar-nav-inner").removeClass("sidebar-nav-inner--active");
     $("body").removeClass("sidebar--on fullscreen-nav--on");
   }
@@ -108,11 +107,10 @@ $(function () {
     UtilButtons.resetButtons();
   });
 
-  // 헤더 사이드바 버튼 토글 (새로운 심플 버튼)
+  // 헤더 사이드바 버튼 토글
   $(".header__sidebar-btn").click(function () {
-    const isActive = $(this).toggleClass("header__sidebar-btn--active").hasClass("header__sidebar-btn--active");
     UtilButtons.toggleNavigation(".sidebar-nav", "sidebar--on");
-    $(".sidebar-nav-inner").toggleClass("sidebar-nav-inner--active", isActive);
+    $(".sidebar-nav-inner").toggleClass("sidebar-nav-inner--active");
   });
 
   // 사이드바 링크

@@ -140,18 +140,6 @@ header.hide {
   top: 100%;
   transform: translateY(-100%);
 }
-/* 활성화 상태 - X 모양 */
-.header__sidebar-btn--active .header__sidebar-btn-line:nth-child(1) {
-  top: 50%;
-  transform: rotate(45deg);
-}
-.header__sidebar-btn--active .header__sidebar-btn-line:nth-child(2) {
-  opacity: 0;
-}
-.header__sidebar-btn--active .header__sidebar-btn-line:nth-child(3) {
-  top: 50%;
-  transform: rotate(-45deg);
-}
 .header__sidebar-btn:hover .header__sidebar-btn-line {
   background-color: var(--color-primary);
 }
@@ -358,7 +346,7 @@ body.sidebar--on {
   position: relative;
   font-size: var(--spacing-2xl);
   font-family: var(--font-EN);
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
   transition: opacity 0.2s, color 0.2s;
 }
