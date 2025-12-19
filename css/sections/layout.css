@@ -108,6 +108,51 @@ header.hide {
   top: 4px;
 }
 
+/* ----- header__sidebar-btn ----- */
+/* PC에서는 숨김, 태블릿/모바일에서만 표시 */
+.header__sidebar-btn {
+  display: none;
+  position: relative;
+  width: 28px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.header__sidebar-btn-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--text-color-body);
+  transition: transform 0.3s, opacity 0.3s, top 0.3s;
+}
+.header__sidebar-btn-line:nth-child(1) {
+  top: 0;
+}
+.header__sidebar-btn-line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header__sidebar-btn-line:nth-child(3) {
+  top: 100%;
+  transform: translateY(-100%);
+}
+/* 활성화 상태 - X 모양 */
+.header__sidebar-btn--active .header__sidebar-btn-line:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.header__sidebar-btn--active .header__sidebar-btn-line:nth-child(2) {
+  opacity: 0;
+}
+.header__sidebar-btn--active .header__sidebar-btn-line:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
 
 /* ########## Footer ########## */
 

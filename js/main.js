@@ -11,7 +11,7 @@ const UtilButtons = {
     $(".trigger").removeClass("active trigger--on");
     $(".fullscreen-nav").stop().fadeOut();
     $(".sidebar-nav").stop().fadeOut();
-    $(".sidebar-btn").removeClass("sidebar-btn--active sidebar-btn--on");
+    $(".header__sidebar-btn").removeClass("header__sidebar-btn--active");
     $(".sidebar-nav-inner").removeClass("sidebar-nav-inner--active");
     $("body").removeClass("sidebar--on fullscreen-nav--on");
   }
@@ -77,10 +77,11 @@ $(function () {
   // 스크롤에 따른 header 및 버튼 표시/숨김
   $(window).scroll(function () {
     const scrolled = window.scrollY >= 500;
-    $("header").toggleClass("hide", scrolled);
+    // PC에서만 헤더 숨김 (태블릿/모바일에서는 항상 표시)
+    const isPC = window.innerWidth > 1024;
+    $("header").toggleClass("hide", scrolled && isPC);
     $(".trigger").toggleClass("trigger--on", scrolled);
     $(".top-btn").toggleClass("top-btn--on", scrolled);
-    $(".sidebar-btn").toggleClass("sidebar-btn--on", scrolled);
   });
 
   // 상단 이동 버튼 클릭시
@@ -107,15 +108,11 @@ $(function () {
     UtilButtons.resetButtons();
   });
 
-  // 사이드바 토글
-  $(".sidebar-btn").click(function () {
-    const isActive = $(this).toggleClass("sidebar-btn--active").hasClass("sidebar-btn--active");
+  // 헤더 사이드바 버튼 토글 (새로운 심플 버튼)
+  $(".header__sidebar-btn").click(function () {
+    const isActive = $(this).toggleClass("header__sidebar-btn--active").hasClass("header__sidebar-btn--active");
     UtilButtons.toggleNavigation(".sidebar-nav", "sidebar--on");
     $(".sidebar-nav-inner").toggleClass("sidebar-nav-inner--active", isActive);
-
-    if (isActive) {
-      $(this).removeClass("sidebar-btn--on");
-    }
   });
 
   // 사이드바 링크
@@ -130,12 +127,10 @@ $(function () {
   $(".practical-slider__item").click(function () {
     $(".trigger").removeClass("trigger--on");
     $(".top-btn").removeClass("top-btn--on");
-    $(".sidebar-btn").addClass("sidebar-btn--hide");
   });
 
-  // 라이트박스 닫힐 때 sidebar-btn 숨김 해제
+  // 라이트박스 닫힐 때 버튼 표시
   $(document).on('hidden.uk.lightbox', function () {
-    $('.sidebar-btn').removeClass('sidebar-btn--hide');
     $(".trigger").addClass("trigger--on");
     $(".top-btn").addClass("top-btn--on");
   });
