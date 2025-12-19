@@ -609,6 +609,12 @@
   .sidebar-nav-inner {
     padding-bottom: 20%;
   }
+
+  /* ----- sidebar-nav__header ----- */
+  .sidebar-nav__logo {
+    height: 18px;
+  }
+
   .sidebar-nav__item span {
     font-size: var(--spacing-xl);
   }

@@ -63,9 +63,15 @@
   .header__logo {
     height: 24px;
   }
+  
   /* header__sidebar-btn */
   .header__sidebar-btn {
     display: block;
+  }
+
+  /* sidebar-nav__logo */
+  .sidebar-nav__logo {
+    height: 20px;
   }
 
   /* ########## END - HEADER ########## */
