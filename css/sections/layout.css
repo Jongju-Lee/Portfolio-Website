@@ -261,9 +261,9 @@ body.sidebar--on {
   position: absolute;
   top: 0;
   right: -100%;
-  width: 50%;
+  width: 60%;
   height: 100vh;
-  max-width: 260px;
+  max-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -278,7 +278,7 @@ body.sidebar--on {
   justify-content: center;
   align-items: center;
   flex: 1;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) var(--spacing-5xl);
   overflow-y: auto;
 }
 
@@ -293,7 +293,7 @@ body.sidebar--on {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: var(--spacing-lg) var(--spacing-xl);
+  padding: var(--spacing-lg) var(--spacing-2xl);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 .sidebar-nav__logo {
@@ -335,7 +335,6 @@ body.sidebar--on {
 }
 .sidebar-nav__item {
   width: 100%;
-  text-align: center;
   padding: var(--spacing-lg) 0;
 }
 .sidebar-nav__item:hover {

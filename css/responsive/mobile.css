@@ -607,12 +607,19 @@
 
   /* sidebar-nav */
   .sidebar-nav-inner {
+    max-width: 230px;
     padding-bottom: 20%;
   }
 
   /* ----- sidebar-nav__header ----- */
   .sidebar-nav__logo {
     height: 18px;
+  }
+
+  /* ----- sidebar-nav__links ----- */
+  .sidebar-nav__links {
+    padding-left: var(--spacing-4xl);
+    padding-right: 0;
   }
 
   .sidebar-nav__item span {
