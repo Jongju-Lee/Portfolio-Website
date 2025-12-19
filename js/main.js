@@ -121,6 +121,11 @@ $(function () {
     UtilButtons.resetButtons();
   });
 
+  // 사이드바 닫기 버튼
+  $(".sidebar-nav__close-btn").click(function () {
+    UtilButtons.resetButtons();
+  });
+
 
   /* ############### 모바일 목업 스크롤바 제거 ############### */
   // 라이트박스 링크 클릭시 버튼 숨김

@@ -127,7 +127,7 @@ header.hide {
   height: 3px;
   border-radius: 2px;
   background-color: var(--text-color-body);
-  transition: transform 0.3s, opacity 0.3s, top 0.3s;
+  transition: transform 0.3s, opacity 0.3s, top 0.3s, background-color 0.2s;
 }
 .header__sidebar-btn-line:nth-child(1) {
   top: 0;
@@ -151,6 +151,9 @@ header.hide {
 .header__sidebar-btn--active .header__sidebar-btn-line:nth-child(3) {
   top: 50%;
   transform: rotate(-45deg);
+}
+.header__sidebar-btn:hover .header__sidebar-btn-line {
+  background-color: var(--color-primary);
 }
 
 
@@ -284,6 +287,38 @@ body.sidebar--on {
 /* --active -> 사이드바 오픈 */
 .sidebar-nav-inner--active {
   right: 0;
+}
+
+/* ----- sidebar-nav__close-btn ----- */
+.sidebar-nav__close-btn {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.sidebar-nav__close-btn span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--text-color-body);
+  transition: background-color 0.2s;
+}
+.sidebar-nav__close-btn span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.sidebar-nav__close-btn span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.sidebar-nav__close-btn:hover span {
+  background-color: var(--color-primary);
 }
 .sidebar-nav__item {
   width: 100%;
