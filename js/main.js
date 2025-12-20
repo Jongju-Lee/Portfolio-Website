@@ -3,7 +3,7 @@ const UtilButtons = {
   // 네비게이션 토글 공통 로직
   toggleNavigation: function (selector, bodyClass) {
     $(selector).stop().fadeToggle();
-    $("body").toggleClass(bodyClass);
+    $("html, body").toggleClass(bodyClass);
   },
 
   // 버튼 상태 초기화
@@ -12,7 +12,7 @@ const UtilButtons = {
     $(".fullscreen-nav").stop().fadeOut();
     $(".sidebar-nav").stop().fadeOut();
     $(".sidebar-nav-inner").removeClass("sidebar-nav-inner--active");
-    $("body").removeClass("sidebar--on fullscreen-nav--on");
+    $("html, body").removeClass("sidebar--on fullscreen-nav--on");
   }
 };
 

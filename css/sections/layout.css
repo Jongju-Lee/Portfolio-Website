@@ -231,6 +231,7 @@ body.fullscreen-nav--on {
 /* ########## Sidebar Navigation ########## */
 
 /* 사이드바가 열렸을 때 body 스크롤 방지 */
+html.sidebar--on,
 body.sidebar--on {
   overflow: hidden;
 }
