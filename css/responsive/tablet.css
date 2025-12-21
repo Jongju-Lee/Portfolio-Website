@@ -1,4 +1,5 @@
 @media (max-width: 1024px) {
+
   /* ########## 변수 재정의 ########## */
   :root {
     /* ----- TABLET - FONT SIZE 재정의 ----- */
@@ -16,12 +17,10 @@
     --font-size-5xl: 56px;
     /* 기존 --font-size-6xl: 80px; */
     --font-size-6xl: 72px;
-    
     /* ----- TABLET 전용 FONT SIZE ----- */
     --font-size-body-tablet: 15px;
     --font-size-slogan-title-tablet: 48px;
     --font-size-section-title-tablet: 32px;
-
     /* ----- TABLET - LAYOUT ----- */
     --container-width-tablet: 1024px;
     --section-padding-tablet: 120px 60px;
@@ -39,6 +38,7 @@
   .inner {
     max-width: (var(--container-width-tablet));
   }
+
   /* ---------- COMMON ---------- */
   .inner > h2 {
     font-size: var(--font-size-section-title-tablet);
@@ -54,7 +54,6 @@
   .header-inner {
     height: 40px;
   }
-
   /* header__gnb */
   .header__gnb {
     display: none;
@@ -63,19 +62,16 @@
   .header__logo {
     height: 22px;
   }
-  
   /* header__sidebar-btn */
   .header__sidebar-btn {
     display: block;
   }
-
   /* sidebar-nav__logo */
   .sidebar-nav__logo {
     height: 20px;
   }
-
   /* ########## END - HEADER ########## */
-  
+
 
   /* ########## SECTION - ABOUT ########## */
   #about {
@@ -107,8 +103,8 @@
     height: calc(450px / 1.2);
   }
   /* ########## END - ABOUT ########## */
-  
-  
+
+
   /* ########## SECTION - SKILL ########## */
   /* skill-item */
   .skill-item {
@@ -136,8 +132,8 @@
     width: calc(114px / 2.2);
   }
   /* ########## END - SKILL ########## */
-  
-  
+
+
   /* ########## SECTION - EDU ########## */
   .edu-content {
     padding-left: 0;
@@ -145,7 +141,7 @@
   /* edu-timeline__peroid */
   .edu-timeline__peroid-title {
     font-size: 20px;
-  } 
+  }
   /* ########## END - EDU ########## */
 
 
@@ -205,14 +201,13 @@
     grid-template-columns: 50% 15% 17% 18%;
   }
   /* ########## END - RESUME ########## */
-  
-  
+
+
   /* ########## SECTION - REACT ########## */
   /* react-mockup */
   .react-mockup {
     margin-top: var(--spacing-6xl);
   }
-
   /* react-detail__title */
   .react-detail__title {
     font-size: var(--font-size-section-title-tablet);
@@ -229,8 +224,8 @@
     display: none;
   }
   /* ########## END - REACT ########## */
-  
-  
+
+
   /* ########## SECTION - WEB ########## */
   .web-project__thumbnail {
     width: 100%;
@@ -251,8 +246,8 @@
     content: attr(data-label-tablet);
   }
   /* ########## END - WEB ########## */
-  
-  
+
+
   /* ########## SECTION - PRACTICAL ########## */
   /* practical-slider */
   .practical-slider__title {
@@ -261,33 +256,30 @@
   .practical-slider__title::before {
     top: 0;
   }
-  .practical-slider__item {
-    height: 160px;
-  }
   /* ########## END - PRACTICAL ########## */
-  
-  
+
+
   /* ########## SECTION - EPILOGUE ########## */
   /* epilogue-heading */
   .epilogue-job-strength__item-text {
     font-size: var(--font-size-lg);
   }
   /* ########## END - EPILOGUE ########## */
-  
-  
+
+
   /* ########## 유틸리티 버튼 ########## */
   /* 풀스크린 네비게이션 버튼 */
   .trigger {
     display: none;
   }
   /* 상단 이동 버튼 */
-    .top-btn--on {
+  .top-btn--on {
     width: 56px;
     height: 56px;
     bottom: 28px;
     right: 28px;
   }
-    .top-btn img {
+  .top-btn img {
     width: calc(56px / 2.2);
     height: calc(32px / 2.2);
   }

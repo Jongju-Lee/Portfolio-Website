@@ -43,13 +43,22 @@
 
 /* ----- practical-slider__item ----- */
 .practical-slider__item {
+  position: relative;
   display: block;
-  width: inherit;
-  height: 200px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 62.5%;
   border-radius: var(--spacing-sm);
   overflow: hidden;
   box-shadow: var(--shadow-color-box-light);
   transition: transform 0.3s;
+}
+@supports (aspect-ratio: 16 / 10) {
+  .practical-slider__item {
+    height: auto;
+    padding-bottom: 0;
+    aspect-ratio: 16 / 10;
+  }
 }
 .practical-slider__item:not(:last-child) {
   margin-right: var(--spacing-xl);
@@ -61,54 +70,74 @@
   transform: scale(0.95);
 }
 
-/* ---------- Slick.js 수정 ---------- */
+/* ---------- Swiper.js 스타일 ---------- */
 /* practical-slider__box */
-.practical-slider__box .slick-track {
-  padding: var(--spacing-md);
+.practical-slider__box {
+  position: relative;
+  overflow: hidden;
+  padding: var(--spacing-md) 0;
+}
+.practical-slider__box .swiper-wrapper {
+  padding: var(--spacing-md) 0;
 }
 
-/* 슬라이더 좌, 우 arrow button */
-.practical-slider__box .slick-prev:before,
-.practical-slider__box .slick-next:before {
-  font-family: "bootstrap-icons";
-  font-size: 30px;
+/* 슬라이더 좌, 우 arrow button - 모던 스타일 */
+.practical-slider__box .swiper-button-prev,
+.practical-slider__box .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  top: calc(50% - 20px);
+  transform: translateY(-50%);
+  margin-top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.practical-slider__box .swiper-button-prev:hover,
+.practical-slider__box .swiper-button-next:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 173, 83, 0.3);
+}
+.practical-slider__box .swiper-button-prev::after,
+.practical-slider__box .swiper-button-next::after {
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1;
-  opacity: 1;
-  color: #ddd;
-  -webkit-font-smoothing: antialiased;
+  color: #888;
+  transition: color 0.3s ease;
 }
-.practical-slider__box .slick-prev {
-  left: -50px;
+.practical-slider__box .swiper-button-prev:hover::after,
+.practical-slider__box .swiper-button-next:hover::after {
+  color: #fff;
 }
-.practical-slider__box .slick-prev:before {
-  content: "\F284";
+.practical-slider__box .swiper-button-prev {
+  left: 10px;
 }
-.practical-slider__box .slick-next:before {
-  content: "\F285";
+.practical-slider__box .swiper-button-next {
+  right: 10px;
 }
 
-/* 슬라이더 하단 dot-slider */
-.practical-slider__box .slick-dots {
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -40px;
+/* 슬라이더 하단 pagination - pill 스타일 */
+.practical-slider__box .swiper-pagination {
+  position: relative;
+  bottom: auto;
+  margin-top: var(--spacing-lg);
 }
-.practical-slider__box .slick-dots li {
-  margin: 0 var(--spacing-sm);
-}
-.practical-slider__box .slick-dots li button::before {
-  font-size: var(--font-size-xs);
-}
-.practical-slider__box .slick-dots li button:hover::before {
-  opacity: 0.5;
-}
-.practical-slider__box .slick-dots li.slick-active {
-  pointer-events: none;
-}
-.practical-slider__box .slick-dots li.slick-active button::before {
+.practical-slider__box .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 6px;
+  background-color: #ddd;
   opacity: 1;
-  color: #00ad53;
+  transition: all 0.3s ease;
+}
+.practical-slider__box .swiper-pagination-bullet:hover {
+  background-color: #aaa;
+}
+.practical-slider__box .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 4px;
+  background-color: var(--color-primary);
 }
 
 

@@ -179,32 +179,45 @@ $(function () {
   }
 
 
-  /* ############### Slick Slider 관련 함수 ############### */
-  // Practical Coding
-  $(".practical-slider__box").slick({
-    dots: true,
-    arrows: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
+
+  /* ############### Swiper Slider 관련 함수 ############### */
+  // Practical Coding - 각 슬라이더에 Swiper 초기화
+  document.querySelectorAll('.practical-slider__box').forEach(function (el) {
+    new Swiper(el, {
+      slidesPerView: 4,
+      slidesPerGroup: 1,
+      spaceBetween: 24,
+      loop: true,
+      speed: 300,
+      pagination: {
+        el: el.querySelector('.swiper-pagination'),
+        clickable: true
       },
-      {
-        breakpoint: 560,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
+      navigation: {
+        nextEl: el.querySelector('.swiper-button-next'),
+        prevEl: el.querySelector('.swiper-button-prev')
       },
-    ],
+      breakpoints: {
+        // 모바일: 0~768px
+        0: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+          spaceBetween: 16
+        },
+        // 태블릿: 769px~1024px
+        769: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+          spaceBetween: 20
+        },
+        // PC: 1025px~
+        1025: {
+          slidesPerView: 4,
+          slidesPerGroup: 1,
+          spaceBetween: 24
+        }
+      }
+    });
   });
 
   /* ############### AOS.js ############### */

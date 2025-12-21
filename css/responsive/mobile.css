@@ -17,17 +17,14 @@
     --font-size-5xl: 48px;
     /* 기존 --font-size-6xl: 80px; */
     --font-size-6xl: 60px;
-
     /* ----- MOBILE 전용 FONT SIZE ----- */
     --font-size-body-mobile: 14px;
     --font-size-slogan-title-mobile: 36px;
     --font-size-section-title-mobile: 28px;
-
     /* ----- TABLET - LAYOUT ----- */
     --container-width-mobile: 768px;
     --section-padding-mobile: 100px 20px;
   }
-
   /* ########## END - 변수 재정의 ########## */
 
 
@@ -47,13 +44,11 @@
   main>section {
     padding: var(--section-padding-mobile);
   }
-
   /* ---------- COMMON ---------- */
   .inner>h2 {
     font-size: var(--font-size-section-title-mobile);
     margin: 0 auto;
   }
-
   /* ########## END - LAYOUT ########## */
 
 
@@ -72,12 +67,10 @@
     max-width: 100%;
     gap: var(--spacing-lg);
   }
-
   /* header__gnb */
   .header__gnb {
     display: none;
   }
-
   /* header__logo */
   .header__logo {
     height: 22px;
@@ -86,7 +79,6 @@
   .header__sidebar-btn {
     display: block;
   }
-
   /* ########## END - HEADER ########## */
 
 
@@ -100,7 +92,6 @@
     gap: var(--spacing-3xl);
     padding-bottom: var(--spacing-3xl);
   }
-
   /* about-intro */
   .about-intro {
     margin-top: var(--spacing-3xl);
@@ -129,7 +120,6 @@
     margin-top: var(--spacing-3xl);
     gap: var(--spacing-xl);
   }
-
   /* about-info */
   .about-info__item {
     gap: var(--spacing-xl);
@@ -140,7 +130,6 @@
   .about-info__item h5 {
     width: 80px;
   }
-
   /* ########## END - ABOUT ########## */
 
 
@@ -148,7 +137,6 @@
   .skill-content {
     margin-top: var(--spacing-6xl);
   }
-
   /* ########## END - SKILL ########## */
 
 
@@ -157,7 +145,6 @@
     margin-top: var(--spacing-6xl);
     padding: 0 var(--spacing-sm);
   }
-
   /* edu-timeline */
   .edu-timeline {
     position: relative;
@@ -172,7 +159,6 @@
   .edu-timeline:not(:last-child) {
     margin-bottom: var(--spacing-8xl);
   }
-
   /* edu-timeline__peroid */
   .edu-timeline__peroid {
     width: -webkit-fit-content;
@@ -186,7 +172,6 @@
   .edu-timeline__peroid-content {
     text-align: center;
   }
-
   /* edu-timeline__line-box */
   .edu-timeline__line-box {
     position: absolute;
@@ -195,12 +180,10 @@
     transform: translateX(-50%);
     height: 108px;
   }
-
   /* 마지막 time-line의 circle 숨김 */
   .edu-timeline:last-child .circle {
     display: none;
   }
-
   /* edu-timeline__desc */
   .edu-timeline__desc-title {
     line-height: 1.4em;
@@ -221,7 +204,6 @@
   .edu-timeline__desc-content em {
     display: block;
   }
-
   /* ########## END - EDU ########## */
 
 
@@ -233,7 +215,6 @@
   .resume-content {
     margin-top: var(--spacing-6xl);
   }
-
   /* resume-main */
   .resume-main__title,
   .resume-sub__title {
@@ -249,7 +230,6 @@
   .resume-sub__caption {
     display: flex;
   }
-
   /* resume-hero */
   .resume-hero__card {
     padding: var(--spacing-2xl);
@@ -284,7 +264,6 @@
   .resume-hero__meta-tags {
     gap: var(--spacing-sm);
   }
-
   /* resume-sub - 카드형 변환 */
   .resume-sub {
     margin-top: var(--spacing-6xl);
@@ -311,7 +290,6 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-
   /* 라벨-값 가로 배치 */
   .resume-sub__col-period,
   .resume-sub__col-vol,
@@ -337,7 +315,6 @@
     font-size: var(--font-size-md);
     text-align: center;
   }
-
   /* ########## END - RESUME ########## */
 
 
@@ -350,14 +327,12 @@
     flex-direction: column;
     row-gap: var(--spacing-6xl);
   }
-
   /* react-mockup */
   .react-mockup {
     width: 100%;
     margin-top: var(--spacing-md);
     gap: var(--spacing-3xl);
   }
-
   /* react-mockup__item */
   .react-mockup__item-box:first-child {
     flex-direction: column;
@@ -381,7 +356,6 @@
     width: calc(1280px / 4);
     height: calc(1066px / 4);
   }
-
   /* react-detail */
   .react-detail {
     width: 100%;
@@ -394,13 +368,11 @@
     align-items: center;
     gap: var(--spacing-3xl);
   }
-
   /* react-detail-bottom-wrapper */
   .react-detail-bottom-wrapper {
     top: auto;
     margin-top: var(--spacing-3xl);
   }
-
   /* react-detail__function */
   .react-detail__function {
     width: -webkit-fit-content;
@@ -408,7 +380,6 @@
     width: fit-content;
     margin: 0 auto;
   }
-
   /* react-detail__work-list */
   .react-detail__work-list {
     margin-top: var(--spacing-6xl);
@@ -436,7 +407,6 @@
     display: block;
     text-align: center;
   }
-
   /* react-detail__btn-box */
   .react-detail__btn-box {
     gap: var(--spacing-xl);
@@ -449,7 +419,6 @@
   .react-detail__btn::before {
     font-size: var(--font-size-sm);
   }
-
   /* ########## END - REACT ########## */
 
 
@@ -499,7 +468,6 @@
   .web-project__link--pc::before {
     content: attr(data-label-mobile);
   }
-
   /* ########## END - WEB ########## */
 
 
@@ -507,7 +475,6 @@
   .practical-content {
     margin-top: var(--spacing-7xl);
   }
-
   /* practical-slider */
   .practical-slider:not(:last-child) {
     margin-bottom: var(--spacing-8xl);
@@ -521,16 +488,17 @@
   .practical-slider__item:not(:last-child) {
     margin-right: var(--spacing-lg);
   }
-  .practical-slider__item {
-    height: 100px;
+  /* Swiper 모바일 스타일 */
+  .practical-slider__box .swiper-pagination {
+    margin-top: var(--spacing-md);
   }
-  .practical-slider__box .slick-dots {
-    bottom: -28px;
+  .practical-slider__box .swiper-pagination-bullet {
+    margin: 0 4px;
   }
-  .practical-slider__box .slick-dots li {
-    margin: 0 6px;
+  .practical-slider__box .swiper-button-prev,
+  .practical-slider__box .swiper-button-next {
+    display: none;
   }
-
   /* ########## END - PRACTICAL ########## */
 
 
@@ -545,12 +513,10 @@
   .epilogue-heading {
     width: 100%;
   }
-
   /* epilogue-heading */
   .epilogue-heading__title {
     font-size: 24px;
   }
-
   /* epilogue-job-strength */
   .epilogue-job-strength {
     width: 100%;
@@ -566,7 +532,6 @@
     font-size: var(--font-size-xl);
     margin-top: var(--spacing-md)
   }
-
   /* ########## END - EPILOGUE ########## */
 
 
@@ -574,7 +539,6 @@
   .footer__ending {
     margin-bottom: var(--spacing-6xl);
   }
-
   /* ########## END - FOOTER ########## */
 
 
@@ -586,7 +550,6 @@
   .trigger.on {
     top: var(--spacing-xl);
   }
-
   /* 맨 위로 가기 버튼 */
   .top-btn {
     right: var(--spacing-xl);
@@ -604,24 +567,20 @@
     width: calc(56px / 2.5);
     height: calc(32px / 2.5);
   }
-
   /* sidebar-nav */
   .sidebar-nav-inner {
     max-width: 230px;
     padding-bottom: 20%;
   }
-
   /* ----- sidebar-nav__header ----- */
   .sidebar-nav__logo {
     height: 18px;
   }
-
   /* ----- sidebar-nav__links ----- */
   .sidebar-nav__links {
     padding-left: var(--spacing-4xl);
     padding-right: 0;
   }
-
   .sidebar-nav__item span {
     font-size: var(--spacing-xl);
   }
@@ -629,7 +588,6 @@
     top: -4px;
     left: 100%;
   }
-
   /* ########## END - 유틸리티 버튼 ########## */
 
 
@@ -637,11 +595,9 @@
   .fullscreen-nav-inner {
     padding-left: var(--spacing-2xl);
   }
-
   /* fullscreen-nav__item */
   .fullscreen-nav__item {
     font-size: 28px;
   }
-
   /* ########## END - 풀스크린 네비게이션 ########## */
 }
