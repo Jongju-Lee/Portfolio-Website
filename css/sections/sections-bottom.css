@@ -20,25 +20,24 @@
   margin-bottom: 120px;
 }
 .practical-slider__title {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-sm);
   font-family: var(--font-EN);
   font-size: var(--font-size-2xl);
-  font-weight: 500;
-  margin-bottom: var(--spacing-sm);
-  margin-left: var(--spacing-xl);
-  z-index: 0;
+  font-weight: 600;
+  line-height: 1em;
+  color: var(--text-color-title);
 }
 .practical-slider__title::before {
   content: "";
-  position: absolute;
-  top: 2px;
-  left: -5px;
-  width: 14px;
-  height: 14px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
   background-color: var(--color-primary);
-  border-radius: 50%;
-  opacity: 0.5;
-  z-index: -1;
+  flex-shrink: 0;
 }
 
 /* ----- practical-slider__item ----- */
@@ -51,7 +50,7 @@
   border-radius: var(--spacing-sm);
   overflow: hidden;
   box-shadow: var(--shadow-color-box-light);
-  transition: transform 0.3s;
+  transition: opacity 0.2s, transform 0.2s;
 }
 @supports (aspect-ratio: 16 / 10) {
   .practical-slider__item {
@@ -64,7 +63,8 @@
   margin-right: var(--spacing-xl);
 }
 .practical-slider__item:hover {
-  transform: scale(1.05)
+  opacity: 0.8;
+  transform: scale(1.02)
 }
 .practical-slider__item:active {
   transform: scale(0.95);
@@ -75,7 +75,7 @@
 .practical-slider__box {
   position: relative;
   overflow: hidden;
-  padding: var(--spacing-md) 0;
+  padding: 0 var(--spacing-sm);
 }
 .practical-slider__box .swiper-wrapper {
   padding: var(--spacing-md) 0;
@@ -91,24 +91,24 @@
   margin-top: 0;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-util-btn);
   transition: all 0.3s ease;
 }
 .practical-slider__box .swiper-button-prev:hover,
 .practical-slider__box .swiper-button-next:hover {
   background-color: var(--color-primary);
-  box-shadow: 0 4px 12px rgba(0, 173, 83, 0.3);
+  box-shadow: var(--shadow-accent);
 }
 .practical-slider__box .swiper-button-prev::after,
 .practical-slider__box .swiper-button-next::after {
   font-size: 16px;
   font-weight: 700;
-  color: #888;
+  color: var(--text-color-gray);
   transition: color 0.3s ease;
 }
 .practical-slider__box .swiper-button-prev:hover::after,
 .practical-slider__box .swiper-button-next:hover::after {
-  color: #fff;
+  color: var(--text-color-white);
 }
 .practical-slider__box .swiper-button-prev {
   left: 10px;
@@ -127,12 +127,12 @@
   width: 8px;
   height: 8px;
   margin: 0 6px;
-  background-color: #ddd;
+  background-color: var(--color-line);
   opacity: 1;
   transition: all 0.3s ease;
 }
 .practical-slider__box .swiper-pagination-bullet:hover {
-  background-color: #aaa;
+  background-color: var(--text-color-light);
 }
 .practical-slider__box .swiper-pagination-bullet-active {
   width: 24px;

@@ -25,6 +25,7 @@
     --container-width-tablet: 1024px;
     --section-padding-tablet: 120px 60px;
   }
+
   /* ########## END - 변수 재정의 ########## */
 
 
@@ -32,18 +33,21 @@
   body {
     font-size: var(--font-size-body-tablet);
   }
-  main > section {
+
+  main>section {
     padding: var(--section-padding-tablet);
   }
+
   .inner {
     max-width: (var(--container-width-tablet));
   }
 
   /* ---------- COMMON ---------- */
-  .inner > h2 {
+  .inner>h2 {
     font-size: var(--font-size-section-title-tablet);
     padding-left: 0;
   }
+
   /* ########## END - LAYOUT ########## */
 
 
@@ -51,25 +55,31 @@
   header {
     padding: var(--spacing-md) var(--spacing-2xl);
   }
+
   .header-inner {
     height: 40px;
   }
+
   /* header__gnb */
   .header__gnb {
     display: none;
   }
+
   /* header__logo */
   .header__logo {
     height: 22px;
   }
+
   /* header__sidebar-btn */
   .header__sidebar-btn {
     display: block;
   }
+
   /* sidebar-nav__logo */
   .sidebar-nav__logo {
     height: 20px;
   }
+
   /* ########## END - HEADER ########## */
 
 
@@ -79,29 +89,35 @@
     margin-top: 65px;
     height: auto;
   }
+
   #about .inner {
     gap: var(--spacing-3xl);
     padding-bottom: var(--spacing-3xl);
   }
+
   .about-content {
     -moz-column-gap: var(--spacing-4xl);
     column-gap: var(--spacing-4xl);
     margin-top: 0;
   }
+
   /* about-intro */
   .about-intro {
     margin: 0;
     margin-top: var(--spacing-5xl);
     max-width: 480px;
   }
+
   .about-intro__title {
     font-size: var(--font-size-slogan-title-tablet);
   }
+
   /* about-photo */
   .about-photo {
     width: calc(320px / 1.2);
     height: calc(450px / 1.2);
   }
+
   /* ########## END - ABOUT ########## */
 
 
@@ -110,27 +126,34 @@
   .skill-item {
     width: 380px;
   }
+
   .skill-item__icon-box {
     padding: var(--spacing-md);
     gap: var(--spacing-3xl);
   }
+
   /* skill-item__icon */
   .skill-item__icon {
     width: calc(84px / 2.2);
     height: calc(84px / 2.2);
   }
+
   .skill-item__icon.mini {
     width: calc(74px / 2.2);
   }
+
   .skill-item__icon.react {
     width: calc(94px / 2.2);
   }
+
   .skill-item__icon.git {
     width: calc(158px / 2.2);
   }
+
   .skill-item__icon.svn {
     width: calc(114px / 2.2);
   }
+
   /* ########## END - SKILL ########## */
 
 
@@ -138,10 +161,12 @@
   .edu-content {
     padding-left: 0;
   }
+
   /* edu-timeline__peroid */
   .edu-timeline__peroid-title {
     font-size: 20px;
   }
+
   /* ########## END - EDU ########## */
 
 
@@ -150,34 +175,42 @@
   .resume-content {
     margin-top: var(--spacing-6xl);
   }
+
   /* resume-main */
   .resume-main__title {
     font-size: var(--font-size-2xl);
   }
+
   .resume-main__caption,
   .resume-sub__caption {
     font-size: var(--font-size-sm);
   }
+
   .resume-main__caption i,
   .resume-sub__caption i {
     width: 13px;
     height: 13px;
     margin-top: 5px;
   }
+
   /* resume-hero */
   .resume-hero__card {
     padding: var(--spacing-3xl) var(--spacing-4xl);
   }
+
   .resume-hero__body {
     flex-direction: column;
     gap: var(--spacing-3xl);
   }
+
   .resume-hero__list li {
     padding-left: 14px;
   }
+
   .resume-hero__list li::before {
     top: 12px;
   }
+
   .resume-hero__meta {
     width: 100%;
     padding-left: 0;
@@ -188,18 +221,22 @@
     flex-wrap: wrap;
     gap: var(--spacing-2xl);
   }
+
   .resume-hero__meta-group {
     flex: 1;
     min-width: 120px;
   }
+
   /* resume-sub */
   .resume-sub__title {
     font-size: var(--font-size-2xl);
   }
+
   .resume-sub__header,
   .resume-sub__item {
     grid-template-columns: 50% 15% 17% 18%;
   }
+
   /* ########## END - RESUME ########## */
 
 
@@ -208,21 +245,26 @@
   .react-mockup {
     margin-top: var(--spacing-6xl);
   }
+
   /* react-detail__title */
   .react-detail__title {
     font-size: var(--font-size-section-title-tablet);
   }
+
   /* react-detail__btn */
   .react-detail__btn-box {
     justify-content: center;
     gap: var(--spacing-2xl);
   }
+
   .react-detail__btn::before {
     content: attr(data-label-tablet);
   }
+
   .react-detail__btn.only-pc {
     display: none;
   }
+
   /* ########## END - REACT ########## */
 
 
@@ -232,30 +274,35 @@
     max-width: 560px;
     height: 380px;
   }
+
   .web-project__content {
     max-width: 560px;
   }
+
   .web-project__title {
     font-size: 30px;
   }
+
   .web-project__link--mobile,
   .web-project__link--tablet {
     display: none;
   }
+
   .web-project__link--pc::before {
     content: attr(data-label-tablet);
   }
+
   /* ########## END - WEB ########## */
 
 
   /* ########## SECTION - PRACTICAL ########## */
   /* practical-slider */
   .practical-slider__title {
+    gap: var(--spacing-sm);
     margin-bottom: var(--spacing-xs);
+    padding-left: var(--spacing-sm);
   }
-  .practical-slider__title::before {
-    top: 0;
-  }
+
   /* ########## END - PRACTICAL ########## */
 
 
@@ -264,6 +311,7 @@
   .epilogue-job-strength__item-text {
     font-size: var(--font-size-lg);
   }
+
   /* ########## END - EPILOGUE ########## */
 
 
@@ -272,6 +320,7 @@
   .trigger {
     display: none;
   }
+
   /* 상단 이동 버튼 */
   .top-btn--on {
     width: 56px;
@@ -279,13 +328,16 @@
     bottom: 28px;
     right: 28px;
   }
+
   .top-btn img {
     width: calc(56px / 2.2);
     height: calc(32px / 2.2);
   }
+
   /* mockup-box 버튼 */
   .mockup-box {
     display: none;
   }
+
   /* ########## END - 유틸리티 버튼 ########## */
 }

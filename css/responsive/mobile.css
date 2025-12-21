@@ -480,10 +480,12 @@
     margin-bottom: var(--spacing-8xl);
   }
   .practical-slider__title {
-    margin-bottom: 0;
+    gap: 6px;
+    font-size: var(--font-size-2xl);
   }
   .practical-slider__title::before {
-    top: -2px;
+    width: 7px;
+    height: 7px;
   }
   .practical-slider__item:not(:last-child) {
     margin-right: var(--spacing-lg);
