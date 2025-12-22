@@ -16,9 +16,7 @@ const UtilButtons = {
   }
 };
 
-/* ############### Featherlight 기본 설정 ############### */
-// 닫기 버튼 텍스트를 "뒤로 가기"로 변경 (목업 페이지와 통일)
-$.featherlight.defaults.closeIcon = '뒤로 가기';
+/* ############### Featherlight 설정 제거됨 - UIkit Lightbox 사용 ############### */
 
 /* ############### UIKit Lightbox 버튼 커스터마이징 ############### */
 // Lightbox 열릴 때 닫기 버튼 텍스트 변경
@@ -222,37 +220,6 @@ $(function () {
 
   /* ############### AOS.js ############### */
   AOS.init();
-
-  /* ############### Featherlight 커스텀 클래스 ############### */
-  let lastClickedLink = null;
-
-  $(document).on('click', 'a[data-featherlight]', function () {
-    lastClickedLink = this;
-  });
-
-  const observer = new MutationObserver(function (mutations) {
-    mutations.forEach(function (mutation) {
-      mutation.addedNodes.forEach(function (node) {
-        if (node.nodeType === Node.ELEMENT_NODE && $(node).hasClass('featherlight')) {
-          setTimeout(function () {
-            const $content = $(node).find('.featherlight-content');
-
-            if (lastClickedLink && $content.length) {
-              const customClass = $(lastClickedLink).data('custom');
-              if (customClass) {
-                $content.addClass(customClass);
-              }
-            }
-          }, 500);
-        }
-      });
-    });
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
 
 
   /* ############### SKILL 섹션 SKILL-ITEM 클릭 기능 ############### */

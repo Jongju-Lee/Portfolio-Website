@@ -41,11 +41,11 @@
     max-width: 100%;
     overflow-x: hidden;
   }
-  main>section {
+  main > section {
     padding: var(--section-padding-mobile);
   }
   /* ---------- COMMON ---------- */
-  .inner>h2 {
+  .inner > h2 {
     font-size: var(--font-size-section-title-mobile);
     margin: 0 auto;
   }
@@ -92,6 +92,7 @@
     gap: var(--spacing-3xl);
     padding-bottom: var(--spacing-3xl);
   }
+
   /* about-intro */
   .about-intro {
     margin-top: var(--spacing-3xl);
@@ -120,6 +121,7 @@
     margin-top: var(--spacing-3xl);
     gap: var(--spacing-xl);
   }
+
   /* about-info */
   .about-info__item {
     gap: var(--spacing-xl);
@@ -145,6 +147,7 @@
     margin-top: var(--spacing-6xl);
     padding: 0 var(--spacing-sm);
   }
+
   /* edu-timeline */
   .edu-timeline {
     position: relative;
@@ -159,6 +162,7 @@
   .edu-timeline:not(:last-child) {
     margin-bottom: var(--spacing-8xl);
   }
+
   /* edu-timeline__peroid */
   .edu-timeline__peroid {
     width: -webkit-fit-content;
@@ -172,6 +176,7 @@
   .edu-timeline__peroid-content {
     text-align: center;
   }
+
   /* edu-timeline__line-box */
   .edu-timeline__line-box {
     position: absolute;
@@ -184,6 +189,7 @@
   .edu-timeline:last-child .circle {
     display: none;
   }
+  
   /* edu-timeline__desc */
   .edu-timeline__desc-title {
     line-height: 1.4em;
@@ -320,7 +326,7 @@
 
   /* ########## SECTION - REACT ########## */
   /* #REACT */
-  main>section#react {
+  main > section#react {
     padding-top: var(--spacing-8xl);
   }
   .react-content {

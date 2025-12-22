@@ -33,21 +33,16 @@
   body {
     font-size: var(--font-size-body-tablet);
   }
-
-  main>section {
+  main > section {
     padding: var(--section-padding-tablet);
   }
-
   .inner {
     max-width: (var(--container-width-tablet));
   }
-
-  /* ---------- COMMON ---------- */
-  .inner>h2 {
+  .inner > h2 {
     font-size: var(--font-size-section-title-tablet);
     padding-left: 0;
   }
-
   /* ########## END - LAYOUT ########## */
 
 
@@ -55,7 +50,6 @@
   header {
     padding: var(--spacing-md) var(--spacing-2xl);
   }
-
   .header-inner {
     height: 40px;
   }
@@ -89,12 +83,10 @@
     margin-top: 65px;
     height: auto;
   }
-
   #about .inner {
     gap: var(--spacing-3xl);
     padding-bottom: var(--spacing-3xl);
   }
-
   .about-content {
     -moz-column-gap: var(--spacing-4xl);
     column-gap: var(--spacing-4xl);
@@ -107,7 +99,6 @@
     margin-top: var(--spacing-5xl);
     max-width: 480px;
   }
-
   .about-intro__title {
     font-size: var(--font-size-slogan-title-tablet);
   }
@@ -137,23 +128,18 @@
     width: calc(84px / 2.2);
     height: calc(84px / 2.2);
   }
-
   .skill-item__icon.mini {
     width: calc(74px / 2.2);
   }
-
   .skill-item__icon.react {
     width: calc(94px / 2.2);
   }
-
   .skill-item__icon.git {
     width: calc(158px / 2.2);
   }
-
   .skill-item__icon.svn {
     width: calc(114px / 2.2);
   }
-
   /* ########## END - SKILL ########## */
 
 
@@ -166,7 +152,6 @@
   .edu-timeline__peroid-title {
     font-size: 20px;
   }
-
   /* ########## END - EDU ########## */
 
 
@@ -180,12 +165,10 @@
   .resume-main__title {
     font-size: var(--font-size-2xl);
   }
-
   .resume-main__caption,
   .resume-sub__caption {
     font-size: var(--font-size-sm);
   }
-
   .resume-main__caption i,
   .resume-sub__caption i {
     width: 13px;
@@ -197,20 +180,16 @@
   .resume-hero__card {
     padding: var(--spacing-3xl) var(--spacing-4xl);
   }
-
   .resume-hero__body {
     flex-direction: column;
     gap: var(--spacing-3xl);
   }
-
   .resume-hero__list li {
     padding-left: 14px;
   }
-
   .resume-hero__list li::before {
     top: 12px;
   }
-
   .resume-hero__meta {
     width: 100%;
     padding-left: 0;
@@ -221,7 +200,6 @@
     flex-wrap: wrap;
     gap: var(--spacing-2xl);
   }
-
   .resume-hero__meta-group {
     flex: 1;
     min-width: 120px;
@@ -231,12 +209,10 @@
   .resume-sub__title {
     font-size: var(--font-size-2xl);
   }
-
   .resume-sub__header,
   .resume-sub__item {
     grid-template-columns: 50% 15% 17% 18%;
   }
-
   /* ########## END - RESUME ########## */
 
 
@@ -256,15 +232,12 @@
     justify-content: center;
     gap: var(--spacing-2xl);
   }
-
   .react-detail__btn::before {
     content: attr(data-label-tablet);
   }
-
   .react-detail__btn.only-pc {
     display: none;
   }
-
   /* ########## END - REACT ########## */
 
 
@@ -274,24 +247,19 @@
     max-width: 560px;
     height: 380px;
   }
-
   .web-project__content {
     max-width: 560px;
   }
-
   .web-project__title {
     font-size: 30px;
   }
-
   .web-project__link--mobile,
   .web-project__link--tablet {
     display: none;
   }
-
   .web-project__link--pc::before {
     content: attr(data-label-tablet);
   }
-
   /* ########## END - WEB ########## */
 
 
@@ -302,7 +270,6 @@
     margin-bottom: var(--spacing-xs);
     padding-left: var(--spacing-sm);
   }
-
   /* ########## END - PRACTICAL ########## */
 
 
@@ -311,7 +278,6 @@
   .epilogue-job-strength__item-text {
     font-size: var(--font-size-lg);
   }
-
   /* ########## END - EPILOGUE ########## */
 
 
@@ -328,7 +294,6 @@
     bottom: 28px;
     right: 28px;
   }
-
   .top-btn img {
     width: calc(56px / 2.2);
     height: calc(32px / 2.2);
@@ -338,6 +303,5 @@
   .mockup-box {
     display: none;
   }
-
   /* ########## END - 유틸리티 버튼 ########## */
 }

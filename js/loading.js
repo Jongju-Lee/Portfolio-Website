@@ -86,21 +86,4 @@ class LoadingManager {
 const loadingManager = new LoadingManager();
 window.loadingManager = loadingManager;
 
-// Featherlight 모달 로딩 훅 등록
-$.extend($.featherlight.defaults, {
-  beforeOpen: function(event) {
-    const container = this.$instance.find('.featherlight-inner')[0];
-    if (container && window.loadingManager) {
-      window.loadingManager.showInline(container, {
-        text: '페이지 로딩 중...',
-        variant: 'light'
-      });
-    }
-  },
-  afterContent: function(event) {
-    window.loadingManager.hide();
-  },
-  afterClose: function(event) {
-    window.loadingManager.hide();
-  }
-});
+// Featherlight 모달 로딩 훅 제거됨 - UIkit 이벤트로 Stage 4에서 교체 예정

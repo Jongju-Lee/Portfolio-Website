@@ -10,6 +10,7 @@ html {
   scroll-behavior: smooth;
   width: 100%;
 }
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -20,14 +21,17 @@ body {
   color: var(--text-color-body);
   overflow-x: hidden;
 }
+
 .container {
   width: 100%;
 }
+
 .inner {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
 }
+
 main > section {
   padding: var(--section-padding);
   background-color: var(--color-background-white);
@@ -38,7 +42,8 @@ main > section {
   box-sizing: border-box;
   outline: none;
 }
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -48,7 +53,12 @@ button {
   color: inherit;
   background-color: transparent;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2em;
 }
 p {
@@ -66,6 +76,7 @@ em {
   color: inherit;
   font-style: normal;
 }
+
 /* img 태그 부모 크기에 맞게 */
 img {
   display: block;
@@ -98,6 +109,7 @@ img {
   letter-spacing: 1px;
   border-radius: 8px;
 }
+
 /* 키보드 탭키 focus 이동 표시 */
 *:focus-visible {
   outline: 2px solid var(--color-primary);
@@ -133,6 +145,7 @@ img {
 .color-main {
   color: var(--color-primary);
 }
+
 /* 스크린 리더 에만 인식(보이지 않음) */
 .sr-only {
   position: absolute;
@@ -149,11 +162,13 @@ img {
 /* ---------- UIKit ---------- */
 /* Light Box */
 .uk-lightbox {
+  z-index: 3000;
   background: var(--color-background-white);
 }
 .uk-lightbox-toolbar {
   background-color: transparent;
 }
+
 /* UIKit Lightbox 닫기 버튼 - Featherlight와 동일한 스타일 */
 .uk-lightbox .uk-lightbox-toolbar-icon.custom-back-btn {
   position: fixed;
@@ -161,6 +176,7 @@ img {
   left: 26px;
   right: auto;
   bottom: auto;
+  z-index: 10000;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -177,6 +193,7 @@ img {
   background-color: var(--color-background-white);
   transition: background-color 0.2s, color 0.2s;
 }
+
 /* SVG 아이콘 숨기기 */
 .uk-lightbox .uk-lightbox-toolbar-icon.custom-back-btn svg {
   display: none;
@@ -187,6 +204,7 @@ img {
   transform: none;
   box-shadow: none;
 }
+
 /* 닫기 버튼 컨테이너 위치 재설정 */
 .uk-lightbox .uk-position-top {
   width: -webkit-fit-content;
@@ -282,22 +300,27 @@ img {
     scale: 1;
     opacity: 1;
   }
+
   50% {
     scale: 0.95;
-    opacity: 0.5; 
+    opacity: 0.5;
   }
+
   100% {
     scale: 1;
     opacity: 1;
   }
 }
+
 @keyframes blink2 {
   0% {
     opacity: 1;
   }
+
   50% {
-    opacity: 0.7; 
+    opacity: 0.7;
   }
+
   100% {
     opacity: 1;
   }

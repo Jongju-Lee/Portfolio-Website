@@ -34,12 +34,7 @@
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
 
-  <!-- ########## Featherlight.js ########## -->
-  <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css"
-    rel="stylesheet" />
-  <!-- <link rel="stylesheet" href="css/sections/loading.css" /> -->
-  <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript"
-    charset="utf-8"></script>
+  <!-- ########## Featherlight.js 제거됨 - UIkit Lightbox 사용 ########## -->
 
   <!-- ########## AOS.js ########## -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -738,9 +733,11 @@
                 </ul>
                 <!-- 웰라이프내과의원 - web-project__links -->
                 <div class="web-project__links">
-                  <a class="web-project__link web-project__link--pc font-en" href="./portfolio/well-life/index.html"
-                    data-featherlight="iframe" data-label-pc="PC" data-label-tablet="Tablet" data-label-mobile="Mobile"
-                    data-custom="close-bottom-right"></a>
+                  <div uk-lightbox>
+                    <a class="web-project__link web-project__link--pc font-en" href="./portfolio/well-life/index.html"
+                      data-type="iframe" data-label-pc="PC" data-label-tablet="Tablet" data-label-mobile="Mobile"
+                      data-custom="close-bottom-right"></a>
+                  </div>
                   <a class="web-project__link web-project__link--mobile"
                     href="./portfolio/well-life/mockup/mobile.html">Mobile</a>
                   <a class="web-project__link web-project__link--tablet"
@@ -937,10 +934,11 @@
                       data-label-pc="Mobile"></a>
                     <a class="react-detail__btn only-pc font-en" href="./portfolio/taskflow/mockup/tablet.html"
                       data-label-pc="Tablet"></a>
-                    <a class="react-detail__btn font-en" href="https://taskflow-todo-list.netlify.app/"
-                      data-label-pc="PC" data-label-tablet="View-App" data-featherlight="iframe"
-                      data-custom="close-bottom-left"></a>
-                    <a class="react-detail__btn font-en" href="#none" data-label-pc="준비중" data-label-tablet="준비중"></a>
+                    <div uk-lightbox>
+                      <a class="react-detail__btn font-en" href="https://taskflow-todo-list.netlify.app/"
+                        data-label-pc="PC" data-label-tablet="View-App" data-type="iframe"
+                        data-custom="close-bottom-left"></a>
+                    </div>
                   </div>
                 </section>
               </div>
