@@ -40,6 +40,7 @@ const UtilButtons = {
   }
 };
 
+
 /* ############### UIKit Lightbox 버튼 커스터마이징 ############### */
 UIkit.util.on(document, 'show', '.uk-lightbox', function (e) {
   const lightbox = e.target;
@@ -261,7 +262,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-
   /* ############### Swiper Slider 관련 함수 ############### */
   // Practical Coding - 각 슬라이더에 Swiper 초기화
   document.querySelectorAll('.practical-slider__box').forEach(function (el) {
@@ -301,6 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
 
   /* ############### AOS.js ############### */
   AOS.init();
