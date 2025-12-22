@@ -157,8 +157,6 @@ body.fullscreen-nav--on {
   overflow: hidden;
 }
 .fullscreen-nav {
-  display: none;
-  /* display: none; jQuery로 fade 조작 */
   position: fixed;
   top: 0;
   bottom: 0;
@@ -166,8 +164,15 @@ body.fullscreen-nav--on {
   right: 0;
   background-color: rgba(0, 0, 0, 0.9);
   -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.fullscreen-nav.fade-in {
+  opacity: 1;
+  visibility: visible;
 }
 .fullscreen-nav-inner {
   position: absolute;
@@ -189,7 +194,7 @@ body.fullscreen-nav--on {
   font-weight: 600;
   white-space: nowrap;
   color: var(--text-color-light);
-  transition:  color 0.3s;
+  transition: color 0.3s;
 }
 .fullscreen-nav__item:hover {
   color: var(--text-color-white);
@@ -238,8 +243,6 @@ body.sidebar--on {
 
 /* 사이드 바 배경 딤처리 */
 .sidebar-nav {
-  display: none;
-  /* display: none; jQuery로 fade 조작 */
   position: fixed;
   top: 0;
   bottom: 0;
@@ -247,8 +250,15 @@ body.sidebar--on {
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.sidebar-nav.fade-in {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* 사이드 바(최초 숨김처리) */
