@@ -85,5 +85,3 @@ class LoadingManager {
 // 전역 인스턴스 생성
 const loadingManager = new LoadingManager();
 window.loadingManager = loadingManager;
-
-// Featherlight 모달 로딩 훅 제거됨 - UIkit 이벤트로 Stage 4에서 교체 예정
