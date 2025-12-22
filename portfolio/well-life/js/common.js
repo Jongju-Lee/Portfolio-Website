@@ -68,73 +68,106 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ########## END - 사이드 바 기능 ########## */
 
 
-  /* ########## Slick.js ########## */
-  /* ----- 슬라이드 카운터 함수 (반응형 지원) ----- */
-  function updateCounter(event, slick, currentSlide) {
-    // 현재 슬라이드 인덱스
-    const current = currentSlide !== undefined ? currentSlide : slick.currentSlide;
-    // 한 번에 스크롤되는 슬라이드 개수 (반응형에 따라 변경)
-    const slidesToScroll = slick.options.slidesToScroll;
-    // 전체 슬라이드 개수
-    const totalSlides = slick.slideCount;
+  /* ########## Swiper.js ########## */
 
-    // 전체 페이지 수 계산 (전체 슬라이드 / 스크롤 개수, 올림 처리)
-    const totalPages = Math.ceil(totalSlides / slidesToScroll);
-    // 현재 페이지 계산 ((현재 슬라이드 인덱스 + 1) / 스크롤 개수, 올림 처리)
-    const currentPage = Math.ceil((current + 1) / slidesToScroll);
+  /* ----- Gallery Slider (둘러보기) ----- */
+  const gallerySwiper = new Swiper('.gallery-swiper', {
+    centeredSlides: true,
+    slidesPerView: 1.5,
+    spaceBetween: 20,
+    loop: true,
+    speed: 400,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.gallery-swiper .swiper-button-next',
+      prevEl: '.gallery-swiper .swiper-button-prev',
+    },
+    breakpoints: {
+      // Mobile
+      0: {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 16,
+      },
+      // Tablet
+      768: {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 20,
+      },
+      // PC
+      1280: {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 24,
+      },
+    },
+    on: {
+      init: updateGalleryProgress,
+      slideChange: updateGalleryProgress,
+    },
+  });
 
-    // 카운터 텍스트 업데이트
-    const $container = $(slick.$slider).parent();
-    $container.find(".current").text(currentPage);
-    $container.find(".total").text(totalPages);
+  // Progress Bar 업데이트 함수
+  function updateGalleryProgress(swiper) {
+    if (!swiper) swiper = gallerySwiper;
+    const progressBar = document.querySelector('.gallery-swiper__progress-bar');
+    if (progressBar) {
+      const progress = (swiper.realIndex + 1) / swiper.slides.length;
+      progressBar.style.width = (progress * 100) + '%';
+    }
   }
-  // 초기화(init), 재초기화(reInit - 반응형), 슬라이드 변경(afterChange) 시 카운터 업데이트
-  $(".subject-department__slick-box").on("init reInit afterChange", updateCounter);
 
-  /* ----- SECTION - SUBJECT ----- */
-  $(".subject-department__slick-box").slick({
-    autoplay: true,
-    autoplaySpeed: 4000,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+  /* ----- Subject Slider (진료과목 - Tablet/Mobile 전용) ----- */
+  // 실제 슬라이드 수 (HTML에서 6개)
+  const SUBJECT_TOTAL_SLIDES = 6;
+
+  // Fraction Counter 업데이트 함수
+  function updateSubjectCounter(swiper) {
+    const currentEl = document.querySelector('.subject-swiper__counter .swiper-pagination-current');
+    const totalEl = document.querySelector('.subject-swiper__counter .swiper-pagination-total');
+    if (currentEl && totalEl) {
+      const slidesPerGroup = swiper.params.slidesPerGroup || 1;
+      const totalPages = Math.ceil(SUBJECT_TOTAL_SLIDES / slidesPerGroup);
+      // loop 모드에서는 realIndex 사용
+      const currentPage = Math.floor(swiper.realIndex / slidesPerGroup) + 1;
+      currentEl.textContent = currentPage;
+      totalEl.textContent = totalPages;
+    }
+  }
+
+  const subjectSwiper = new Swiper('.subject-swiper', {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 0,
+    loop: true,
+    speed: 400,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      // Mobile
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
       },
-    ],
+      // Tablet
+      600: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+    },
+    on: {
+      init: updateSubjectCounter,
+      slideChange: updateSubjectCounter,
+    },
   });
 
-  /* ----- SECTION - GALLERY ----- */
-  // 초기화(init), 재초기화(reInit - 반응형), 슬라이드 변경(afterChange) 시 카운터 업데이트
-  $(".gallery-content__box").on("init reInit afterChange", updateCounter);
-
-  $(".gallery-content__box").slick({
-    centerMode: true,
-    centerPadding: '25%',
-    autoplay: true,
-    autoplaySpeed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          centerPadding: '20%',
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          centerPadding: '6%',
-        },
-      },
-    ],
-  });
-  /* ########## END - Slick.js ########## */
+  /* ########## END - Swiper.js ########## */
 
   /* ########## AOS.js ########## */
   AOS.init();
