@@ -321,10 +321,10 @@
     background-size: calc(96px / 2.5);
   }
   .gallery-swiper .swiper-button-prev {
-    left: calc(20% - 24px);
+    left: 18.5%;
   }
   .gallery-swiper .swiper-button-next {
-    right: calc(20% - 24px);
+    right: 18.5%;
   }
   /* ----- END - GALLERY ----- */
 
@@ -826,16 +826,16 @@
   /* ----- GALLERY - Swiper.js ----- */
   .gallery-swiper .swiper-button-prev,
   .gallery-swiper .swiper-button-next {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
     background-size: calc(96px / 3.5);
   }
   .gallery-swiper .swiper-button-prev {
-    left: calc(10% - 18px);
+    left: 7%;
   }
   .gallery-swiper .swiper-button-next {
-    right: calc(10% - 18px);
+    right: 7%;
   }
   /* ----- END - GALLERY ----- */
 

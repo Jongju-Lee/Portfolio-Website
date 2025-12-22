@@ -487,8 +487,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--spacing-24);
-  padding: var(--spacing-24) 0;
+  gap: var(--spacing-28);
+  padding: 0 0 var(--spacing-24);
 }
 .sidebar-gnb__item a {
   position: relative;
@@ -533,7 +533,7 @@ footer {
   content: "";
   position: relative;
   display: inline-block;
-  top: -3px;
+  top: -4px;
   width: 5px;
   height: 5px;
   margin-right: 6px;

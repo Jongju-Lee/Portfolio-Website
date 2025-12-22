@@ -130,13 +130,16 @@
     flex-wrap: wrap;
     justify-content: center;
     -moz-column-gap: var(--spacing-4);
-         column-gap: var(--spacing-4);
+    column-gap: var(--spacing-4);
     row-gap: var(--spacing-8);
   }
   /* ---------- END - FOOTER ----------  */
 
 
   /* ---------- SIDEBAR ----------  */
+  .sidebar-container {
+    max-width: 260px;
+  }
   .sidebar-inner {
     padding: var(--section-padding-h-mobile);
   }
@@ -164,6 +167,7 @@
   /* sidebar-gnb */
   .sidebar-gnb {
     max-height: 360px;
+    gap: var(--spacing-24);
   }
   .sidebar-gnb__item a {
     font-size: var(--font-size-Medium);
@@ -174,7 +178,7 @@
     gap: var(--spacing-8);
   }
   .sidebar-etc__item span {
-    width: 56px;
+    width: 60px;
   }
   /* ---------- END - SIDEBAR ----------  */
 
