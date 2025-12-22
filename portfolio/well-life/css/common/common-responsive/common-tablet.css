@@ -44,6 +44,12 @@
     height: 64px;
   }
 
+  /* header-logo */
+  .header-logo {
+    width: calc(350px / 2.2);
+    height: calc(72px / 2.2);
+  }
+
   /* header-gnb */
   .header-gnb {
     display: none;

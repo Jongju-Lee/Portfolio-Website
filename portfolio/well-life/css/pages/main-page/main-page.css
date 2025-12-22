@@ -867,6 +867,7 @@
   border-radius: 12px;
   box-shadow: var(--shadow-gallery);
   transition: transform 0.5s;
+  user-select: none;
 }
 .gallery-content__item:not(.swiper-slide-active) img {
   opacity: 0.3;

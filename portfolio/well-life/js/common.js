@@ -122,8 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ----- Subject Slider (진료과목 - Tablet/Mobile 전용) ----- */
-  // 실제 슬라이드 수 (HTML에서 6개)
-  const SUBJECT_TOTAL_SLIDES = 6;
+  // HTML 기준으로 실제 슬라이드 수 자동 계산 (loop 모드 복제 슬라이드 제외)
+  const subjectSlides = document.querySelectorAll('.subject-swiper .swiper-slide:not(.swiper-slide-duplicate)');
+  const SUBJECT_TOTAL_SLIDES = subjectSlides.length;
 
   // Fraction Counter 업데이트 함수
   function updateSubjectCounter(swiper) {
