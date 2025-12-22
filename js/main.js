@@ -177,6 +177,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // 사이드바 딤 영역 클릭 시 닫기
+  const sidebarNav = document.querySelector('.sidebar-nav');
+  if (sidebarNav) {
+    sidebarNav.addEventListener('click', function (e) {
+      // 딤 영역(sidebar-nav 자체)만 클릭했을 때 닫기, 내부 요소 클릭은 무시
+      if (e.target === sidebarNav) {
+        UtilButtons.resetButtons();
+      }
+    });
+  }
+
   // 사이드바 링크
   document.querySelectorAll('.sidebar-nav__item').forEach(function (item) {
     item.addEventListener('click', function (e) {
