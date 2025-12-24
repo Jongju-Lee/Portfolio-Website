@@ -475,7 +475,7 @@
 .appointment-form__item-subject-select:not(.input--error):focus {
   outline: none;
   border: 2px solid var(--theme-primary);
-  background-color: var(--theme-surface);
+  background-color: var(--color-white);
 }
 /* 체크박스 에러 상태 */
 .appointment-form__terms-check.terms-check--error label {
