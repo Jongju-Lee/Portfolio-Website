@@ -12,7 +12,8 @@ html {
 }
 body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; /* 폴백 */
+  min-height: 100dvh; /* iOS Safari 동적 뷰포트 */
   line-height: 1.4em;
   font-size: var(--font-size-body);
   font-weight: 300;
@@ -36,8 +37,17 @@ main > section {
 /* ---------- COMMON ---------- */
 * {
   box-sizing: border-box;
+}
+
+/* 키보드 접근성: 마우스 클릭 시 outline 제거, 키보드 Tab 시 outline 표시 */
+*:focus:not(:focus-visible) {
   outline: none;
 }
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 a,
 a:hover {
   text-decoration: none;
@@ -104,12 +114,6 @@ img {
   font-size: var(--font-size-sm);
   letter-spacing: 1px;
   border-radius: 8px;
-}
-
-/* 키보드 탭키 focus 이동 표시 */
-*:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
 }
 .font-kr {
   font-family: var(--font-KR) !important;

@@ -267,7 +267,8 @@ body.sidebar--on {
   top: 0;
   right: -100%;
   width: 60%;
-  height: 100vh;
+  height: 100vh; /* 폴백 */
+  height: 100dvh; /* iOS Safari 동적 뷰포트 */
   max-width: 280px;
   display: flex;
   flex-direction: column;
