@@ -12,6 +12,8 @@
     padding: 80px 0;
     color: #1e2723;
 }
+/* ---------- END - Container ---------- */
+
 
 /* ---------- Mobile Mockup ---------- */
 .mockup {
@@ -20,7 +22,6 @@
     height: 923px;
     background-image: url(/images/mockup/mobile-mockup.png);
 }
-
 .mockup-container {
     top: 23px;
     left: 35px;
@@ -28,7 +29,6 @@
     height: 852px;
     border-radius: 54px;
 }
-
 .mockup-header {
     position: relative;
     left: 50%;
@@ -38,7 +38,6 @@
     height: calc(100px / 2);
     z-index: 1;
 }
-
 .mockup-header img {
     display: block;
     width: 100%;
@@ -46,15 +45,17 @@
     -o-object-fit: contain;
     object-fit: contain;
 }
-
 .mockup-iframe__wrap {
     border-radius: 0 0 54px 54px;
 }
+/* ---------- END - Mobile Mockup ---------- */
 
-/* ---------- Scale Control Position ---------- */
+
+/* ---------- 스케일 컨트롤 ---------- */
 .scale-control {
     position: absolute;
     top: 50%;
     left: 78%;
     transform: translate(-50%, -50%);
 }
+/* ---------- END - 스케일 컨트롤 ---------- */
