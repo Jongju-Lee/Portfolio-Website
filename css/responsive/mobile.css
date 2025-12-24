@@ -463,9 +463,11 @@
   .web-project__links {
     flex-wrap: wrap;
     justify-content: center;
+    gap: var(--spacing-md);
   }
   .web-project__link {
     width: 90px;
+    height: 30px;
   }
   .web-project__link--mobile,
   .web-project__link--tablet {

@@ -174,21 +174,68 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 헤더 사이드바 버튼 토글
   const sidebarBtn = document.querySelector('.header__sidebar-btn');
+  const sidebarNav = document.querySelector('.sidebar-nav');
+  const sidebarInner = document.querySelector('.sidebar-nav-inner');
+  const sidebarCloseBtn = document.querySelector('.sidebar-nav__close-btn');
+
+  // 사이드바 열기/닫기 함수
+  function openSidebar() {
+    UtilButtons.toggleNavigation('.sidebar-nav', 'sidebar--on');
+    if (sidebarInner) sidebarInner.classList.toggle('sidebar-nav-inner--active');
+
+    // 포커스 트랩: 열릴 때 첫 번째 메뉴로 포커스 이동
+    setTimeout(function () {
+      if (!sidebarNav) return;
+      const firstLink = sidebarNav.querySelector('.sidebar-nav__item');
+      if (firstLink) firstLink.focus();
+    }, 100);
+  }
+
+  function closeSidebar() {
+    UtilButtons.resetButtons();
+    // 포커스 복귀: 닫힐 때 사이드바 버튼으로 포커스 이동
+    if (sidebarBtn) sidebarBtn.focus();
+  }
+
   if (sidebarBtn) {
-    sidebarBtn.addEventListener('click', function () {
-      UtilButtons.toggleNavigation('.sidebar-nav', 'sidebar--on');
-      const sidebarInner = document.querySelector('.sidebar-nav-inner');
-      if (sidebarInner) sidebarInner.classList.toggle('sidebar-nav-inner--active');
-    });
+    sidebarBtn.addEventListener('click', openSidebar);
   }
 
   // 사이드바 딤 영역 클릭 시 닫기
-  const sidebarNav = document.querySelector('.sidebar-nav');
   if (sidebarNav) {
     sidebarNav.addEventListener('click', function (e) {
-      // 딤 영역(sidebar-nav 자체)만 클릭했을 때 닫기, 내부 요소 클릭은 무시
-      if (e.target === sidebarNav) {
-        UtilButtons.resetButtons();
+      if (e.target === sidebarNav) closeSidebar();
+    });
+
+    // 포커스 트랩: Tab 키로 사이드바 내에서만 순환
+    sidebarNav.addEventListener('keydown', function (e) {
+      if (!document.body.classList.contains('sidebar--on')) return;
+
+      // ESC 키로 닫기
+      if (e.key === 'Escape') {
+        closeSidebar();
+        return;
+      }
+
+      // Tab 키 처리
+      if (e.key !== 'Tab') return;
+
+      const focusableElements = sidebarNav.querySelectorAll(
+        'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusableElements.length === 0) return;
+
+      const firstEl = focusableElements[0];
+      const lastEl = focusableElements[focusableElements.length - 1];
+
+      if (e.shiftKey && document.activeElement === firstEl) {
+        // Shift+Tab: 첫 번째 → 마지막
+        e.preventDefault();
+        lastEl.focus();
+      } else if (!e.shiftKey && document.activeElement === lastEl) {
+        // Tab: 마지막 → 첫 번째
+        e.preventDefault();
+        firstEl.focus();
       }
     });
   }
@@ -197,16 +244,13 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.sidebar-nav__item').forEach(function (item) {
     item.addEventListener('click', function (e) {
       e.stopPropagation();
-      UtilButtons.resetButtons();
+      closeSidebar();
     });
   });
 
   // 사이드바 닫기 버튼
-  const sidebarCloseBtn = document.querySelector('.sidebar-nav__close-btn');
   if (sidebarCloseBtn) {
-    sidebarCloseBtn.addEventListener('click', function () {
-      UtilButtons.resetButtons();
-    });
+    sidebarCloseBtn.addEventListener('click', closeSidebar);
   }
 
 

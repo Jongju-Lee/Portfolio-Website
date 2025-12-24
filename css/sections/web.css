@@ -45,6 +45,7 @@
   max-height: 460px;
   margin-top: var(--spacing-sm);
 }
+
 /* ----- web-project__header ----- */
 .web-project__title {
   position: relative;
@@ -75,6 +76,7 @@
   line-height: 1.6em;
   font-size: var(--font-size-lg);
 }
+
 /* ----- web-project__details ----- */
 .web-project__details {
   flex: 1;
@@ -97,19 +99,25 @@
 .web-project__details li p {
   text-align: left;
 }
+
 /* ----- web-project__links ----- */
 .web-project__links {
   display: flex;
   gap: var(--spacing-sm);
 }
 .web-project__link {
-  display: inline-block;
+  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
-  padding: var(--spacing-xs) 0;
+  height: 32px;
+  padding-bottom: 1px;
+  line-height: 1;
   border: 1px solid transparent;
   border-radius: 6px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
   font-family: var(--font-EN);
   transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
@@ -122,38 +130,36 @@
 }
 .web-project__link--pc:hover {
   background-color: var(--color-background-white);
-  border: 1px solid var(--color-well-life-primary);
+  border-color: var(--color-well-life-primary);
   color: var(--color-well-life-primary);
 }
 .web-project__link--mobile,
 .web-project__link--tablet {
   background-color: var(--color-background-white);
   color: var(--color-well-life-primary);
-  border: 1px solid var(--color-well-life-primary);
+  border-color: var(--color-well-life-primary);
 }
 .web-project__link--mobile:hover,
 .web-project__link--tablet:hover {
   background-color: var(--color-well-life-primary);
   color: var(--text-color-white);
-  border: 1px solid transparent;
+  border-color: transparent;
 }
 .web-project__link--design {
-  padding: 4px 0;
-  background-color: var(--color-background-white);
-  border: 2px solid var(--text-color-body);
-  color: var(--text-color-body);
+  border-color: transparent;
+  color: var(--text-color-white);
   text-transform: uppercase;
-  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: var(--text-color-body);
 }
 .web-project__link--design:hover {
-  background-color: var(--text-color-body);
-  color: var(--text-color-white);
-  border: 2px solid transparent;
+  background-color: var(--color-background-white);
+  color: var(--text-color-body);
+  border-color: var(--text-color-body);
 }
 
 /* 1420px 반응형 적용 */
 @media (max-width: 1420px) {
-
   /* ########## SECTION - WEB ########## */
   .web-project {
     flex-direction: column;
@@ -168,6 +174,5 @@
     max-width: 624px;
     max-height: none;
   }
-
   /* ########## END - WEB ########## */
 }
