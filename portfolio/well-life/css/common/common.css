@@ -111,19 +111,19 @@ h5 {
 
 h1,
 h2 {
-  font-size: var(--font-size-XXXL);
+  font-size: var(--font-size-3xl);
 }
 
 h3 {
-  font-size: var(--font-size-XXL);
+  font-size: var(--font-size-2xl);
 }
 
 h4 {
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-xl);
 }
 
 h5 {
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
 }
 
 /* 미니 타이틀 */
@@ -237,7 +237,6 @@ header {
   max-width: 920px;
   padding: 0 64px;
 }
-
 .header-gnb__link {
   position: relative;
   display: flex;
@@ -245,7 +244,6 @@ header {
   height: 100%;
   font-family: var(--font-KR-medium);
 }
-
 .header-gnb__link::after {
   content: "";
   position: absolute;
@@ -257,13 +255,11 @@ header {
   background-color: var(--theme-primary);
   transition: 0.2s;
 }
-
 .header-gnb__link:hover,
 .header-gnb__link:focus {
   opacity: 0.7;
   color: var(--theme-primary);
 }
-
 .header-gnb__link:hover::after,
 .header-gnb__link:focus::after {
   width: 100%;
@@ -312,7 +308,6 @@ footer {
   max-width: var(--max-width-pc);
   margin: 0 auto;
 }
-
 .footer-wrap {
   display: flex;
   justify-content: space-between;
@@ -340,7 +335,6 @@ footer {
   display: flex;
   gap: var(--spacing-32);
 }
-
 .footer-link__item:hover {
   color: var(--color-white);
 }
@@ -353,35 +347,28 @@ footer {
   margin-top: var(--spacing-48);
   line-height: var(--line-height-high);
 }
-
 .footer-info__item {
   flex: 1;
   max-width: 340px;
   word-break: keep-all;
 }
-
 .footer-info__item-label {
   color: var(--color-white);
 }
-
 .footer-info__item-text {
   margin-top: var(--spacing-16);
 }
-
 .footer-info__item-list {
   margin-top: var(--spacing-16);
 }
-
 .footer-info__item-list li span {
   display: inline-block;
   width: 48px;
 }
-
 .footer-info__item-list li b {
   color: var(--theme-secondary);
   font-family: var(--font-number-bold);
 }
-
 .footer-info__item-list li em {
   color: var(--color-white);
   font-family: var(--font-number-bold);
@@ -393,7 +380,6 @@ footer {
   padding: var(--spacing-24);
   text-align: center;
 }
-
 .footer-copyright::after {
   content: "";
   position: absolute;
@@ -403,7 +389,6 @@ footer {
   width: 100vw;
   border-top: 1px solid var(--border-opaque);
 }
-
 .footer-copyright__text {
   color: var(--color-white);
   font-size: 14px;
@@ -453,7 +438,6 @@ footer {
 .sidebar--active .sidebar-container {
   right: 0%;
 }
-
 .sidebar-inner {
   display: flex;
   flex-direction: column;
@@ -469,7 +453,6 @@ footer {
   border-bottom: 1px solid var(--border-transparent);
   padding-bottom: var(--spacing-24);
 }
-
 .sidebar-header__logo {
   display: inline-block;
   width: calc(350px / 2);
@@ -530,7 +513,7 @@ footer {
 .sidebar-gnb__item a {
   position: relative;
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   transition: color 0.2s;
 }
 .sidebar-gnb__item a:hover,

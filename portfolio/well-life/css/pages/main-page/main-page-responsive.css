@@ -25,7 +25,7 @@
   .hero-badge-icon {
     width: 220px;
     height: 68px;
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   .hero-badge-icon:not(:last-child) {
     margin-right: -32px;
@@ -63,7 +63,7 @@
     padding-left: var(--spacing-24);
   }
   .intro-image__desc b {
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   /* ---------- END - INTRO ----------  */
 
@@ -85,7 +85,7 @@
     gap: var(--spacing-16);
   }
   .why-heading__title-hash-tag span {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
 
   /* why-badge */
@@ -173,6 +173,12 @@
   .doctor-info__face {
     display: none;
   }
+
+  /* doctor-info__stats */
+  .doctor-info__stats {
+    gap: var(--spacing-32);
+    margin-top: var(--spacing-32);
+  }
   /* ---------- END - DOCTOR ----------  */
 
 
@@ -199,7 +205,7 @@
     margin: var(--spacing-24) auto 0;
   }
   .disease-heading__content-badge {
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   .disease-heading__content-desc {
     margin: var(--spacing-24) auto 0 ;
@@ -239,7 +245,7 @@
     padding: 0;
   }
   .disease-test__item span {
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   /* ----- END - DISEASE ----- */
 
@@ -290,7 +296,7 @@
   }
   .gallery-heading__desc {
     margin-top: var(--spacing-16);
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
   
   /* gallery-content__wrap */
@@ -301,7 +307,7 @@
     right: 28px;
     bottom: 24px;
     padding: var(--spacing-4) var(--spacing-12);
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
   .gallery-content__item:not(.swiper-slide-active)::after {
     right: 56px;
@@ -365,7 +371,7 @@
   }
   .info-heading__content--time li .badge {
     width: 120px;
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
   .info-heading__content--time li p span {
     display: inline-block;
@@ -425,7 +431,7 @@
     transform: none;
     max-width: 100%;
     padding: var(--spacing-12);
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
     border-radius: 0;
   }
   .direction-map__img {
@@ -481,7 +487,7 @@
   }
   /* hero-title */
   .hero-title {
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   /* ---------- END - HERO ----------  */
 
@@ -535,7 +541,7 @@
     min-width: 280px;
   }
   .intro-image__desc b {
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   .intro-image__desc p {
     margin-top: var(--spacing-4);
@@ -590,7 +596,7 @@
 
   /* why-slogan */
   .why-slogan {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
   .why-slogan span {
     display: block;
@@ -636,7 +642,7 @@
     margin-top: -4px;
   }
   .doctor-heading__name span em {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
 
   /* doctor-info */
@@ -654,6 +660,17 @@
   /* doctor-info__career-published */
   .doctor-info__career-published .badge {
     padding: var(--spacing-4) var(--spacing-28);
+  }
+
+  /* doctor-info__stats */
+  .doctor-info__stats {
+    gap: var(--spacing-24);
+  }
+  .doctor-info__stats-number {
+    font-size: var(--font-size-2xl);
+  }
+  .doctor-info__stats-unit {
+    font-size: var(--font-size-large);
   }
   /* ---------- END - DOCTOR ----------  */
 
@@ -683,7 +700,7 @@
   }
   .disease-heading__content-badge {
     padding: var(--spacing-8) var(--spacing-24);
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
     word-break: keep-all;
   }
   .disease-heading__content-desc {
@@ -694,7 +711,7 @@
   /* disease-sub-title */
   .disease-types__title,
   .disease-test__title {
-    font-size: var(--font-size-XL);
+    font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-16);
   }
   /* ----- disease-types, disease-test 공통 ----- */
@@ -720,7 +737,7 @@
     align-items: start;
   }
   .disease-types__item-desc b {
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   .disease-types__item-desc p {
     text-align: left;
@@ -751,7 +768,7 @@
     margin: var(--spacing-12) 0;
   }
   .subject-heading__text {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
 
   /* subject-clinic */
@@ -771,7 +788,7 @@
     height: calc(83px / 1.2);
   }
   .subject-clinic__item-text b {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
 
   /* Slick 슬라이더 카운터 */
@@ -811,7 +828,7 @@
   }
   .gallery-content__item::after {
     padding: var(--spacing-4) var(--spacing-12);
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
   .gallery-content__item:not(.swiper-slide-active)::after {
     right: 56px;
@@ -882,7 +899,7 @@
     line-height: var(--line-height-medium);
   }
   .info-heading__content--time li p b {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
   .info-heading__content--time li p span {
     margin-left: 0;
@@ -933,7 +950,7 @@
     z-index: 1;
   }
   .direction-heading__way-top-title {
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   
   /* direction-map */
@@ -944,7 +961,7 @@
     -moz-column-gap: var(--spacing-4);
     column-gap: var(--spacing-4);
     padding: var(--spacing-12);
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
   .direction-map__img {
     height: 50vh;

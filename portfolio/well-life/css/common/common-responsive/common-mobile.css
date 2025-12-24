@@ -1,6 +1,7 @@
 /* ---------- 컴포넌트 반응형 UI - 모바일 ---------- */
 
 @media (max-width: 768px) {
+
   /* ---------- LAYOUT ---------- */
   body {
     font-size: var(--font-size-mobile-body);
@@ -23,14 +24,15 @@
   }
 
   /* HEADING */
-  h1, h2 {
-    font-size: var(--font-size-XL);
+  h1,
+  h2 {
+    font-size: var(--font-size-xl);
   }
   h3 {
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   h4 {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
   h5 {
     font-size: var(--font-size-mobile-body);
@@ -55,7 +57,6 @@
     padding: 0 var(--section-padding-h-mobile);
   }
   .header-inner {
-    /* height: 48px; */
     height: 56px;
   }
 
@@ -66,6 +67,7 @@
     background-image: url(../../../images/includes/header-logo-mobile.png);
     transition: background-image 0.5s linear;
   }
+
   /* 다크모드 시 이미지 교체 */
   [data-theme="dark"] .header-logo {
     background-image: url(../../../images/includes/header-logo-mobile-dark.png);
@@ -153,6 +155,7 @@
     height: 28px;
     background-image: url(../../../images/includes/header-logo-mobile.png);
   }
+
   /* 다크모드 시 로고 교체 */
   [data-theme="dark"] .sidebar-header__logo {
     background-image: url(../../../images/includes/header-logo-mobile-dark.png);
@@ -170,7 +173,7 @@
     gap: var(--spacing-24);
   }
   .sidebar-gnb__item a {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
 
   /* sidebar-etc */

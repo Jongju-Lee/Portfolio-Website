@@ -38,7 +38,7 @@
   }
   .appointment-main-title {
     margin-bottom: var(--spacing-48);
-    font-size: var(--font-size-XL);
+    font-size: var(--font-size-xl);
   }
 
   /* ---------- APPOINTMENT-FORM ---------- */
@@ -76,7 +76,7 @@
     gap: var(--spacing-4);
   }
   .appointment-form__item-patient-input-wrap label {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
   .appointment-form__item-patient-input-box {
     height: 36px;

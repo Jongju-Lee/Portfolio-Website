@@ -16,16 +16,16 @@
 
   /* ---------- COMMON ----------  */
   h1, h2 {
-    font-size: var(--font-size-XXL);
+    font-size: var(--font-size-2xl);
   }
   h3 {
-    font-size: var(--font-size-XL);
+    font-size: var(--font-size-xl);
   }
   h4 {
-    font-size: var(--font-size-Large);
+    font-size: var(--font-size-large);
   }
   h5 {
-    font-size: var(--font-size-Medium);
+    font-size: var(--font-size-medium);
   }
 
   /* HEADING-BG */

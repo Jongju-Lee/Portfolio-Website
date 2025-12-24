@@ -44,7 +44,7 @@
   height: 90px;
   border-radius: 45px;
   font-family: var(--font-KR-bold);
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-xl);
 }
 .hero-badge-icon:not(:last-child) {
   margin-right: -28px;
@@ -151,7 +151,7 @@
 }
 .intro-image__desc b {
   font-family: var(--font-KR-heavy);
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-xl);
   line-height: 1.2em;
   color: var(--theme-primary);
 }
@@ -218,7 +218,7 @@
 }
 .why-heading__title-hash-tag span {
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   line-height: var(--line-height-medium);
 }
 .why-heading__title-main {
@@ -248,7 +248,7 @@
   border: 6px solid var(--theme-secondary);
   border-radius: 200px;
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   line-height: var(--line-height-medium);
   text-align: center;
   word-break: keep-all;
@@ -274,7 +274,7 @@
 /* why-slogan */
 .why-slogan {
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   line-height: var(--line-height-high);
   text-align: center;
 }
@@ -337,7 +337,7 @@
 .doctor-heading__name span {
   margin-left: var(--spacing-16);
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   color: var(--theme-primary);
 }
 .doctor-heading__name span em {
@@ -401,7 +401,7 @@
   gap: var(--spacing-8);
   margin-top: var(--spacing-32);
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Medium);
+  font-size: var(--font-size-medium);
 }
 .doctor-info__career-published .badge {
   flex-shrink: 0;
@@ -423,7 +423,7 @@
 .doctor-info__stats {
   display: flex;
   gap: var(--spacing-48);
-  margin-top: var(--spacing-32);
+  margin-top: var(--spacing-48);
 }
 .doctor-info__stats-item {
   display: flex;
@@ -434,19 +434,18 @@
 }
 .doctor-info__stats-number {
   font-family: var(--font-number-medium);
-  font-size: 56px;
+  font-size: var(--font-size-3xl);
   font-weight: 700;
   line-height: 1;
 }
 .doctor-info__stats-unit {
   font-family: var(--font-KR-semibold);
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-xl);
 }
 .doctor-info__stats-label {
   width: 100%;
-  margin-top: var(--spacing-4);
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Medium);
+  font-size: var(--font-size-medium);
   text-align: center;
   opacity: 0.8;
 }
@@ -521,7 +520,7 @@
   border-radius: 8px;
   background-color: var(--theme-primary);
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-xl);
   color: var(--color-white);
 }
 .disease-heading__content-desc {
@@ -638,7 +637,7 @@
 }
 .disease-types__item-desc b {
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   color: var(--theme-primary);
 }
 .disease-types__item-desc p {
@@ -669,7 +668,7 @@
   top: 50%;
   left: 50%;
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-xl);
   color: var(--color-white);
   white-space: nowrap;
   transform: translate(-50%, -50%);
@@ -703,7 +702,7 @@
 }
 .subject-heading__text {
   opacity: 0.6;
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   line-height: var(--line-height-medium);
 }
 .subject-heading__text span {
@@ -765,7 +764,7 @@
 }
 .subject-clinic__item-text b {
   font-family: var(--font-KR-bold);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   color: var(--theme-primary);
 }
 .subject-clinic__item-text p {
@@ -802,7 +801,7 @@
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Medium);
+  font-size: var(--font-size-medium);
   line-height: 1em;
   color: var(--color-black);
 }
@@ -822,7 +821,7 @@
 }
 .subject-department__item-text-box b {
   font-family: var(--font-KR-bold);
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-xl);
 }
 .subject-department__item-text-box p {
   margin-top: var(--spacing-16);
@@ -862,7 +861,7 @@
 }
 .gallery-heading__desc {
   margin-top: var(--spacing-32);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   line-height: var(--line-height-medium);
   text-align: center;
   color: var(--contents-secondary);
@@ -888,7 +887,7 @@
   padding: var(--spacing-8) var(--spacing-16);
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.6);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   color: var(--color-white);
   transition: bottom 0.5s, right 0.5s, opacity 0.5s;
 }
@@ -1055,7 +1054,7 @@
   border-radius: 100px;
   background-color: var(--theme-primary);
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
   line-height: 1em;
   color: var(--color-white);
 }
@@ -1066,7 +1065,7 @@
 }
 .info-heading__content--time li p b {
   font-family: var(--font-number-bold);
-  font-size: var(--font-size-Large);
+  font-size: var(--font-size-large);
 }
 .info-heading__content--time li p span {
   display: block;
@@ -1140,7 +1139,7 @@
 }
 .direction-heading__way-bottom-label {
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-Medium);
+  font-size: var(--font-size-medium);
   line-height: var(--line-height-medium);
 }
 
@@ -1198,7 +1197,7 @@
   border-radius: 12px;
   background-color: var(--theme-primary);
   font-family: var(--font-KR-bold);
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-xl);
   line-height: var(--line-height-normal);
   text-align: center;
   color: var(--color-white);
