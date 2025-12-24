@@ -59,12 +59,17 @@ UIkit.util.on(document, 'show', '.uk-lightbox', function (e) {
 
     // 커스텀 닫기 버튼 생성
     const customBtn = document.createElement('button');
-    customBtn.className = 'custom-close-btn';
+    customBtn.className = 'custom-close-btn custom-close-btn--attention';
     customBtn.textContent = '뒤로 가기';
     customBtn.type = 'button';
     customBtn.onclick = function () {
       if (originalBtn) originalBtn.click();
     };
+
+    // 애니메이션 종료 후 attention 클래스 제거
+    setTimeout(function () {
+      customBtn.classList.remove('custom-close-btn--attention');
+    }, 3800);
 
     lightbox.appendChild(customBtn);
   }, 50);

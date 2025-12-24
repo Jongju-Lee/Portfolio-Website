@@ -296,7 +296,7 @@
 }
 
 .mockup-box__open-btn--initial-attention {
-  animation: pulseGlow 1.5s ease-in-out 3;
+  animation: pulseGlowScale 1.5s ease-in-out 3;
   animation-delay: 0.5s;
 }
 
@@ -415,8 +415,8 @@
   }
 }
 
-/* 펄스 + 글로우 애니메이션 (초기 주목용) - ease-in-out으로 우아하게 */
-@keyframes pulseGlow {
+/* 펄스 + 글로우 애니메이션  */
+@keyframes pulseGlowScale {
   0%,
   100% {
     transform: scale(1);
@@ -430,5 +430,4 @@
       0 0 30px 12px rgba(255, 184, 77, 0.55),
       0 0 45px 18px rgba(255, 184, 77, 0.3);
   }
-  /* 75% 키프레임 제거 - ease-in-out이 자연스럽게 페이드 아웃 처리 */
 }
