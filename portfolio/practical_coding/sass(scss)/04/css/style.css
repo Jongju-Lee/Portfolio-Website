@@ -37,7 +37,7 @@ body {
 }
 .frame .btn_tab {
   position: absolute;
-  bottom: 60px;
+  bottom: 140px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -57,10 +57,10 @@ body {
   border-radius: 13px;
 }
 .frame input[id=slider1]:checked ~ .btn_tab label {
-  border-color: #d49921;
+  border-color: #ff8516;
 }
 .frame input[id=slider1]:checked ~ .btn_tab label[for=slider1], .frame input[id=slider1]:checked ~ .btn_tab label:hover {
-  background-color: #d49921;
+  background-color: #ff8516;
 }
 .frame input[id=slider1]:checked ~ .items .photo1 img {
   clip-path: circle(150% at 0% 100%);
