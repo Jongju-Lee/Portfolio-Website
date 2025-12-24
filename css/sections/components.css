@@ -1,36 +1,11 @@
 @charset "utf-8";
 
 /* ========== COMPONENTS.CSS ==========
- * 유틸리티 컴포넌트 스타일 (로딩, 버튼, 모달)
+ * 유틸리티 컴포넌트 스타일 (로딩, 버튼)
  * ==================================== */
 
 
 /* ########## Loading Component ########## */
-
-/* ---------- 애니메이션 ---------- */
-@keyframes loading__spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes loading__pulse {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.6;
-  }
-}
-
-/* ---------- 기본 블록 ---------- */
 .loading {
   position: relative;
   display: flex;
@@ -39,7 +14,6 @@
   justify-content: center;
 }
 
-/* ---------- 엘리먼트 ---------- */
 /* 오버레이 */
 .loading__overlay {
   position: fixed;
@@ -86,7 +60,6 @@
   letter-spacing: 0.5px;
 }
 
-/* ---------- 모디파이어 ---------- */
 /* 배경 변형 */
 .loading__overlay--dark {
   background-color: rgba(0, 0, 0, 0.8);
@@ -110,12 +83,10 @@
   border-width: 3px;
   margin-bottom: 10px;
 }
-
 .loading--small .loading__text {
   font-size: 14px;
 }
 
-/* ---------- 접근성 ---------- */
 /* 스크린 리더 전용 텍스트 */
 .loading__sr-text {
   position: absolute;
@@ -129,30 +100,7 @@
   border: 0;
 }
 
-/* Featherlight 모달 내 인라인 로딩 시 스크린 리더용 텍스트 숨김 */
-.featherlight-inner .loading__sr-text {
-  display: none !important;
-}
-
-/* Featherlight 인라인 로딩 시 화면용 텍스트만 보여주고, 스크린리더용 중복 텍스트는 숨김 */
-.featherlight-inner .loading__overlay--inline .loading__sr-text {
-  display: none !important;
-}
-
-/* 모달 내부 인라인 로딩을 뷰포트 기준으로 고정 위치 중앙 배치 */
-.featherlight .loading__overlay--inline {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  width: auto !important;
-  height: auto !important;
-  z-index: 10000 !important;
-  /* Featherlight content 위에 표시 */
-}
-
-
-/* ---------- 반응형 ---------- */
+/* ---------- 로딩 애니메이션 - Mobile ---------- */
 @media (max-width: 768px) {
   .loading__spinner {
     width: 40px;
@@ -160,27 +108,16 @@
     border-width: 3px;
     margin-bottom: 12px;
   }
-
   .loading__text {
     font-size: 14px;
   }
-
-  .featherlight.loading .featherlight-content::before {
-    width: 40px;
-    height: 40px;
-    border-width: 3px;
-    padding: 15px;
-  }
-
-  .featherlight.loading .featherlight-content::after {
-    font-size: 14px;
-    top: calc(50% + 75px);
-  }
 }
+/* ---------- END - 로딩 애니메이션 - Mobile ---------- */
+/* ########## END - Loading Component ########## */
+
 
 
 /* ########## Utility Buttons ########## */
-
 /* ----- util-btn 공통 ----- */
 .util-btn {
   opacity: 0;
@@ -196,11 +133,9 @@
   z-index: 1000;
   box-shadow: var(--shadow-util-btn);
 }
-
 .util-btn:hover {
   transform: translateY(-4px);
 }
-
 .util-btn:active {
   transform: translateY(-4px) scale(0.9);
 }
@@ -213,13 +148,14 @@
   visibility: visible;
   pointer-events: all;
 }
+/* ----- END - util-btn 공통 ----- */
 
-/* ----- 풀스크린 네비게이션 버튼(trigger) ----- */
+
+/* ----- 풀스크린 네비게이션 버튼 ----- */
 .trigger {
   top: 0;
   left: var(--spacing-3xl);
 }
-
 .trigger.active {
   opacity: 1;
   background-color: var(--color-primary);
@@ -232,7 +168,6 @@
 .trigger.active:active {
   transform: scale(0.9);
 }
-
 .trigger--on {
   top: var(--spacing-3xl);
 }
@@ -243,27 +178,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(56px / 1.9);
-  /* 28% 증가 (23.3px → 30px) */
   height: calc(56px / 1.9);
 }
+/* ----- END - 풀스크린 네비게이션 버튼 ----- */
+
 
 /* ----- 맨 위로 가기 버튼(top-btn) ----- */
 .top-btn {
   bottom: 0;
   right: var(--spacing-3xl);
 }
-
 .top-btn--on {
   bottom: var(--spacing-3xl);
 }
-
 .top-btn img {
   position: absolute;
   top: calc(50% - 2px);
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(56px / 2);
-  /* 28% 증가 (22.4px → 28.7px) */
   height: calc(32px / 2);
 }
 
@@ -277,7 +210,6 @@
   transition: bottom 0.2s ease-in-out, left 0.2s ease-in-out;
   z-index: 1000;
 }
-
 .mockup-box--on {
   bottom: var(--spacing-5xl);
   left: var(--spacing-5xl);
@@ -294,7 +226,6 @@
   background-color: var(--color-mockup-box-btn);
   opacity: 1;
 }
-
 .mockup-box__open-btn--initial-attention {
   animation: pulseGlowScale 1.5s ease-in-out 3;
   animation-delay: 0.5s;
@@ -314,7 +245,6 @@
   opacity: 0.7;
   transform: translateY(0);
 }
-
 .mockup-box__open-btn img {
   position: absolute;
   top: 50%;
@@ -404,6 +334,33 @@
   top: calc(100% - 40px);
   left: calc(100% + 16px);
 }
+/* ----- END - mockup-box 버튼 ----- */
+/* ########## END - Utility Buttons ########## */
+
+
+/* ---------- Keyframes ---------- */
+/* 로딩 애니에미션 */
+@keyframes loading__spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading__pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
 
 /* 액션버튼 호버 애니메이션 */
 @keyframes actionBtnHover {
@@ -431,3 +388,5 @@
       0 0 45px 18px rgba(255, 184, 77, 0.3);
   }
 }
+
+/* ---------- END - Keyframes ---------- */

@@ -239,7 +239,7 @@ img {
   pointer-events: all;
 }
 .uk-position-bottom {
-  padding-bottom: 25px;
+  padding-bottom: 96px;
   font-size: 22px;
   font-weight: 700;
   color: #aaa;
@@ -262,55 +262,6 @@ img {
 }
 /* ---------- END - UIKit ---------- */
 
-
-/* ---------- Featherlight.js ---------- */
-.featherlight .featherlight-content {
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  margin: 0;
-  padding: 0;
-}
-.featherlight .featherlight-inner {
-  width: 100%;
-  height: 100%;
-}
-.featherlight .featherlight-close-icon {
-  /* 목업 페이지의 back-btn 스타일과 통일 */
-  top: 14px;
-  left: 26px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  padding: var(--spacing-md) var(--spacing-xl);
-  border: 1px solid var(--color-primary);
-  border-radius: var(--spacing-xs);
-  font-size: var(--font-size-lg);
-  font-weight: 700;
-  font-family: inherit;
-  line-height: 1em;
-  color: var(--color-primary);
-  background-color: var(--color-background-white);
-  opacity: 1;
-  transition: background-color 0.2s, color 0.2s;
-  z-index: 10000;
-}
-.featherlight .featherlight-close-icon:hover {
-  background-color: var(--color-primary);
-  color: var(--text-color-white);
-  transform: none;
-}
-.close-bottom-left .featherlight-close-icon {
-  top: auto;
-  bottom: var(--spacing-xl);
-}
-.close-bottom-right .featherlight-close-icon {
-  top: auto;
-  left: auto;
-  right: 26px;
-  bottom: var(--spacing-xl);
-}
 
 /* ---------- @keyframes ---------- */
 @keyframes blink {
