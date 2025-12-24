@@ -900,6 +900,9 @@
   border-radius: 12px;
   box-shadow: var(--shadow-gallery);
   transition: transform 0.5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 .gallery-content__item:not(.swiper-slide-active) img {

@@ -33,7 +33,15 @@ main {
 /* ---------- COMMON ---------- */
 * {
   box-sizing: border-box;
+}
+
+/* 키보드 접근성: 마우스 클릭 시 outline 제거, 키보드 Tab 시 outline 표시 */
+*:focus:not(:focus-visible) {
   outline: none;
+}
+*:focus-visible {
+  outline: 2px solid var(--theme-primary);
+  outline-offset: 2px;
 }
 
 main>section,
