@@ -51,11 +51,11 @@
   <!-- ########## CONTAINER ########## -->
   <div class="container">
     <!-- ########## HEADER(INCLUDES) ########## -->
-    <header></header>
+    <header role="banner"></header>
     <!-- ########## SIDE-BAR(INCLUDES) ########## -->
     <aside class="sidebar"></aside>
     <!-- ########## MAIN ########## -->
-    <main id="main-content">
+    <main id="main-content" role="main">
       <!-- ########## SECTION - HERO ########## -->
       <section id="hero" class="hero">
         <!-- hero-inner -->
@@ -591,7 +591,7 @@
           </div>
           <!-- gallery-content__wrap -->
           <div class="gallery-content__wrap">
-            <div class="gallery-swiper swiper">
+            <div class="gallery-swiper swiper" aria-label="시설 둘러보기 슬라이더" role="region">
               <div class="swiper-wrapper">
                 <div class="swiper-slide gallery-content__item img-box" data-text="안내 데스크">
                   <img src="./images/main-page/gallery/gallery-lobby-img-01.png" alt="안내 데스크">
@@ -622,8 +622,8 @@
                 </div>
               </div>
               <!-- Navigation -->
-              <div class="swiper-button-prev gallery-swiper__nav"></div>
-              <div class="swiper-button-next gallery-swiper__nav"></div>
+              <button class="swiper-button-prev gallery-swiper__nav" aria-label="이전 슬라이드"></button>
+              <button class="swiper-button-next gallery-swiper__nav" aria-label="다음 슬라이드"></button>
             </div>
             <!-- Progress Bar -->
             <div class="gallery-swiper__progress">
@@ -767,7 +767,7 @@
       </section>
 
       <!-- ########## FOOTER(INCLUDES) ########## -->
-      <footer></footer>
+      <footer role="contentinfo"></footer>
     </main>
     <!-- 다크모드 버튼 -->
     <button class="dark-mode-btn dark-mode-btn--dark" aria-label="다크모드 전환"></button>

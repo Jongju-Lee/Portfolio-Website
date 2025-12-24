@@ -168,6 +168,22 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // Swiper hover 시 자동재생 일시정지 공통 함수
+  function addHoverPause(selector, swiperInstance) {
+    var el = document.querySelector(selector);
+    if (el && swiperInstance) {
+      el.addEventListener('mouseenter', function () {
+        swiperInstance.autoplay.stop();
+      });
+      el.addEventListener('mouseleave', function () {
+        swiperInstance.autoplay.start();
+      });
+    }
+  }
+
+  addHoverPause('.gallery-swiper', gallerySwiper);
+  addHoverPause('.subject-swiper', subjectSwiper);
+
   /* ########## END - Swiper.js ########## */
 
   /* ########## AOS.js ########## */
