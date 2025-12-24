@@ -172,5 +172,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ########## AOS.js ########## */
   AOS.init();
+
+
+  /* ########## Top Button ########## */
+  const topBtn = document.querySelector(".top-btn");
+
+  if (topBtn) {
+    // 스크롤 시 버튼 표시/숨김
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        topBtn.classList.add("show");
+      } else {
+        topBtn.classList.remove("show");
+      }
+    });
+
+    // 클릭 시 부드럽게 최상단으로 이동
+    topBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+  /* ########## END - Top Button ########## */
 });
 

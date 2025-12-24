@@ -483,7 +483,6 @@ footer {
 [data-theme="dark"] .sidebar-header__logo {
   background-image: url(../../images/includes/header-logo-pc-dark.png);
 }
-
 .sidebar-header__logo:hover {
   opacity: 0.7;
 }
@@ -494,7 +493,6 @@ footer {
   width: 24px;
   height: 24px;
 }
-
 .sidebar-header__close-btn span {
   position: absolute;
   top: 50%;
@@ -504,11 +502,9 @@ footer {
   border-radius: 10px;
   background-color: var(--theme-primary);
 }
-
 .sidebar-header__close-btn span:nth-child(1) {
   transform: translate(-50%, -50%) rotate(45deg);
 }
-
 .sidebar-header__close-btn span:nth-child(2) {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
@@ -531,19 +527,16 @@ footer {
   gap: var(--spacing-28);
   padding: 0 0 var(--spacing-24);
 }
-
 .sidebar-gnb__item a {
   position: relative;
   font-family: var(--font-KR-medium);
   font-size: var(--font-size-Large);
   transition: color 0.2s;
 }
-
 .sidebar-gnb__item a:hover,
 .sidebar-gnb__item--active {
   color: var(--theme-primary);
 }
-
 .sidebar-gnb__item a::after {
   content: "";
   position: absolute;
@@ -554,7 +547,6 @@ footer {
   background-color: var(--theme-primary);
   transition: width 0.2s;
 }
-
 .sidebar-gnb__item a:hover::after {
   width: 100%;
 }
@@ -565,18 +557,15 @@ footer {
   flex-direction: column;
   gap: var(--spacing-8);
 }
-
 .sidebar-etc__item {
   display: flex;
   font-family: var(--font-KR-medium);
 }
-
 .sidebar-etc__item span {
   display: inline-block;
   width: 68px;
   flex-shrink: 0;
 }
-
 .sidebar-etc__item>span::before {
   content: "";
   position: relative;
@@ -588,42 +577,70 @@ footer {
   border-radius: 50%;
   background-color: var(--theme-primary);
 }
-
 .sidebar-etc__item p {
   word-break: keep-all;
 }
-
 /* ---------- END - SIDEBAR ----------  */
 
 
 /* ---------- 유틸리티 버튼 ----------  */
+/* 다크모드 버튼 */
 .dark-mode-btn {
-  opacity: 0.8;
   position: fixed;
-  bottom: 48px;
-  left: 48px;
-  width: 60px;
-  height: 60px;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1000;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-size: calc(75px / 2) calc(72px / 2);
+  background-size: 38px 36px;
   background-position: center center;
+  opacity: 0.8;
   transition: background-color 0.2s, background-image 0.2s, transform 0.2s, opacity 0.2s;
-  z-index: 1000;
 }
-
 .dark-mode-btn:hover {
   opacity: 0.5;
 }
-
 .dark-mode-btn--dark {
   background-color: var(--border-opaque);
   background-image: url(../../images/includes/util-btn-dark.png);
 }
-
 .dark-mode-btn--light {
   background-color: var(--color-white);
   background-image: url(../../images/includes/util-btn-light.png);
 }
 
+/* 위로 이동하기 버튼 */
+.top-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  padding-bottom: 3px;
+  border-radius: 50%;
+  background-color: var(--border-opaque);
+  opacity: 0;
+  visibility: hidden;
+  transition: bottom 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+.top-btn.show {
+  bottom: 30px;
+  opacity: 0.8;
+  visibility: visible;
+  pointer-events: all;
+}
+.top-btn:hover {
+  opacity: 0.5;
+}
+.top-btn img {
+  width: 28px;
+  height: auto;
+}
 /* ---------- END - 유틸리티 버튼 ----------  */

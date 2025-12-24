@@ -124,12 +124,26 @@
 
 
   /* ---------- 유틸리티 버튼 ----------  */
+  /* 다크모드 버튼 */
   .dark-mode-btn {
-    bottom: 32px;
-    left: 32px;
-    width: 50px;
-    height: 50px;
-    background-size: 31px 30px;
+    bottom: 28px;
+    left: 28px;
+    width: 56px;
+    height: 56px;
+    background-size: 33px 32px;
+  }
+
+  /* 위로 이동하기 버튼 */
+  .top-btn {
+    right: 28px;
+    width: 56px;
+    height: 56px;
+  }
+  .top-btn.show {
+    bottom: 28px;
+  }
+  .top-btn img {
+    width: 25px;
   }
   /* ---------- END - 유틸리티 버튼 ----------  */
 }

@@ -184,12 +184,26 @@
 
 
   /* ---------- 유틸리티 버튼 ----------  */
+  /* 다크모드 버튼 */
   .dark-mode-btn {
-    bottom: 24px;
-    left: 24px;
-    width: 44px;
-    height: 44px;
-    background-size: 27px 26px;
+    bottom: 20px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    background-size: 28px 27px;
+  }
+
+  /* 위로 이동하기 버튼 */
+  .top-btn {
+    right: 20px;
+    width: 48px;
+    height: 48px;
+  }
+  .top-btn.show {
+    bottom: 20px;
+  }
+  .top-btn img {
+    width: 22px;
   }
   /* ---------- END - 유틸리티 버튼 ----------  */
 }
