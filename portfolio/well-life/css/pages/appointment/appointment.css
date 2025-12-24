@@ -12,6 +12,12 @@
   text-align: center;
   color: var(--theme-primary);
 }
+/* 페이지 공통 - 필수 입력 마크 */
+.required-mark {
+  color: var(--color-negative);
+  margin-left: 2px;
+  line-height: 1;
+}
 
 /* ---------- APPOINTMENT-FORM ---------- */
 .appointment-form {
@@ -46,12 +52,19 @@
   background-color: var(--border-transparent);
 }
 .appointment-form__item-title {
+  position: relative;
   display: block;
+  width: fit-content;
   font-family: var(--font-KR-medium);
   font-size: var(--font-size-Large);
   line-height: var(--line-height-medium);
   margin-bottom: var(--spacing-16);
   color: var(--theme-primary);
+}
+.appointment-form__item-title .required-mark {
+  position: absolute;
+  left: 100%;
+  font-size: var(--font-size-Medium);
 }
 
 /* appointment-form__item - 날짜 선택 */
@@ -276,6 +289,12 @@
   flex-shrink: 0;
   width: 120px;
 }
+.appointment-form__item-patient-input-wrap label .required-mark {
+  position: relative;
+  top: -4px;
+  margin-left: 2px;
+  font-size: var(--font-size-Medium);
+}
 .appointment-form__item-patient-input-box {
   flex: 1;
   height: 40px;
@@ -333,7 +352,7 @@
   height: calc(100% - 2px);
   box-sizing: border-box;
   font-family: var(--font-KR-medium);
-  background-color: var(--contents-tertiary);
+  background-color: var(--theme-primary);
   color: var(--color-white);
   border-radius: 4px;
   border: none;
@@ -404,6 +423,12 @@
 }
 .appointment-form__terms-check label span {
   line-height: 1em;
+}
+.appointment-form__terms-check label span .required-mark {
+  position: relative;
+  top: -4px;
+  margin-left: 2px;
+  font-size: var(--font-size-Medium);
 }
 
 /* 예약 완료하기 버튼 */
