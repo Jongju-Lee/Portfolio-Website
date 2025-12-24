@@ -419,6 +419,38 @@
   content: "-";
 }
 
+/* doctor-info__stats */
+.doctor-info__stats {
+  display: flex;
+  gap: var(--spacing-48);
+  margin-top: var(--spacing-32);
+}
+.doctor-info__stats-item {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+.doctor-info__stats-number {
+  font-family: var(--font-number-medium);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+}
+.doctor-info__stats-unit {
+  font-family: var(--font-KR-semibold);
+  font-size: var(--font-size-XL);
+}
+.doctor-info__stats-label {
+  width: 100%;
+  margin-top: var(--spacing-4);
+  font-family: var(--font-KR-medium);
+  font-size: var(--font-size-Medium);
+  text-align: center;
+  opacity: 0.8;
+}
+
 /* doctor-info__face */
 .doctor-info__face {
   flex-shrink: 0;
@@ -429,7 +461,6 @@
   height: fit-content;
   margin-top: -160px;
 }
-
 /* ----- END - DOCTOR ----- */
 
 

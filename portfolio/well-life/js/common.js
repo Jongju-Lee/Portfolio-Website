@@ -210,5 +210,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   /* ########## END - Top Button ########## */
+
+
+  /* ########## Count Up Animation ########## */
+  const countUpElements = document.querySelectorAll(".doctor-info__stats-number");
+
+  if (countUpElements.length > 0) {
+    // 카운트업 애니메이션 함수
+    function animateCountUp(el) {
+      const target = parseInt(el.getAttribute("data-count"), 10);
+      const duration = 1500; // 1.5초
+      const startTime = performance.now();
+
+      function updateCount(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // easeOutQuad 이징 함수
+        const easeProgress = 1 - (1 - progress) * (1 - progress);
+        const currentValue = Math.floor(easeProgress * target);
+
+        el.textContent = currentValue;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCount);
+        } else {
+          el.textContent = target;
+        }
+      }
+
+      requestAnimationFrame(updateCount);
+    }
+
+    // Intersection Observer로 화면에 보일 때 실행
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCountUp(entry.target);
+          observer.unobserve(entry.target); // 한 번만 실행
+        }
+      });
+    }, { threshold: 0.5 });
+
+    countUpElements.forEach((el) => observer.observe(el));
+  }
+  /* ########## END - Count Up Animation ########## */
 });
 
