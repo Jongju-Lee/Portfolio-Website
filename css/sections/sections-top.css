@@ -547,11 +547,17 @@
 
 /* ----- resume-sub__list ----- */
 .resume-sub__list {
+  display: block;
+  width: 100%;
   overflow: hidden;
   border: 1px solid var(--color-line);
   border-radius: var(--spacing-md);
   background-color: var(--color-background-white);
   box-shadow: var(--shadow-accent-light);
+}
+.resume-sub__list thead,
+.resume-sub__list tbody {
+  display: block;
 }
 .resume-sub__header,
 .resume-sub__item {
@@ -568,7 +574,7 @@
   color: var(--color-primary);
   background-color: var(--text-highlight-bg);
 }
-.resume-sub__header span:not(:first-child) {
+.resume-sub__header th:not(:first-child) {
   text-align: center;
 }
 .resume-sub__item {

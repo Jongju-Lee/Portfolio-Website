@@ -274,18 +274,23 @@
   .resume-sub {
     margin-top: var(--spacing-6xl);
   }
+  .resume-sub__item,
+  .resume-sub__col-info,
+  .resume-sub__col-period,
+  .resume-sub__col-vol,
+  .resume-sub__col-role {
+    display: block;
+    width: 100%;
+  }
   .resume-sub__header {
     display: none;
   }
   .resume-sub__item {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
     padding: var(--spacing-xl);
   }
   .resume-sub__col-info {
-    padding-bottom: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     border-bottom: 1px dashed var(--color-line);
   }
   .resume-sub__pj-name {
