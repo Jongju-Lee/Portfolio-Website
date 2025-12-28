@@ -61,16 +61,6 @@
 .web-project__title.font-kr {
   font-weight: 700;
 }
-.web-project__title.new::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: calc(100% + 2px);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-negative);
-}
 .web-project__description {
   margin-top: var(--spacing-lg);
   line-height: 1.6em;
