@@ -143,7 +143,10 @@ img {
   text-decoration: underline;
 }
 .color-main {
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
+}
+.color-black {
+  color: var(--color-text-body) !important;
 }
 
 /* 스크린 리더 에만 인식(보이지 않음) */

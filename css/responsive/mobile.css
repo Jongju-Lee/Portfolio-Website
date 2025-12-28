@@ -519,7 +519,7 @@
 
   /* ########## SECTION - EPILOGUE ########## */
   .epilogue-content {
-    padding: 0;
+    /* padding: 0; */
   }
   .epilogue-content-inner {
     flex-direction: column;
@@ -538,7 +538,6 @@
   }
   .epilogue-job-strength__item-title {
     font-size: 18px;
-    text-align: center;
   }
   .epilogue-job-strength__item:not(:last-child) {
     margin-bottom: var(--spacing-4xl);
