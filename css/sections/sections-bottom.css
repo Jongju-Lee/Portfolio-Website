@@ -181,7 +181,7 @@
   font-size: var(--font-size-xl);
 }
 .epilogue-heading__text:nth-child(2) {
-  margin-top: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
 }
 
 /* ----- epilogue-job-strength ----- */
