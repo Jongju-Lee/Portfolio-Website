@@ -79,12 +79,13 @@
 .web-project__details li {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2xl);
+  gap: var(--spacing-3xl);
   font-size: var(--font-size-lg);
 }
 .web-project__details li h5 {
   font-weight: 500;
   line-height: inherit;
+  color: var(--text-color-dark-gray);
 }
 .web-project__details li p {
   text-align: left;

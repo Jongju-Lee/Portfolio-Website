@@ -459,7 +459,7 @@
     height: 8px;
   }
   .web-project__details li {
-    align-items: start;
+    gap: var(--spacing-2xl);
   }
   .web-project__details li h5 {
     flex-shrink: 0;
