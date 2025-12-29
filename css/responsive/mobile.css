@@ -338,12 +338,14 @@
     flex-direction: column;
     row-gap: var(--spacing-6xl);
   }
+
   /* react-mockup */
   .react-mockup {
     width: 100%;
     margin-top: var(--spacing-md);
     gap: var(--spacing-3xl);
   }
+
   /* react-mockup__item */
   .react-mockup__item-box:first-child {
     flex-direction: column;
@@ -367,23 +369,35 @@
     width: calc(1280px / 4);
     height: calc(1066px / 4);
   }
+
   /* react-detail */
   .react-detail {
     width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
   }
   .react-detail__title {
     font-size: var(--font-size-section-title-mobile);
   }
+
+  /* react-detail__app-intro */
+  .react-detail__app-intro {
+    word-break: break-all;
+  }
+
+  /* react-detail__format */
   .react-detail__format {
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-3xl);
   }
+
   /* react-detail-bottom-wrapper */
   .react-detail-bottom-wrapper {
     top: auto;
     margin-top: var(--spacing-3xl);
   }
+
   /* react-detail__function */
   .react-detail__function {
     width: -webkit-fit-content;
@@ -391,16 +405,15 @@
     width: fit-content;
     margin: 0 auto;
   }
+
   /* react-detail__work-list */
   .react-detail__work-list {
     margin-top: var(--spacing-6xl);
   }
   .react-detail__work-list-table :is(th, td) {
-    /* table 안의 모든 요소 font-size 14px */
     font-size: var(--font-size-body-mobile);
-    line-height: 1.4em;
+    line-height: 1.6em;
     padding: var(--spacing-sm);
-    text-align: center;
   }
   .react-detail__work-list-table th {
     width: -webkit-max-content;
@@ -412,12 +425,16 @@
     line-height: 1.5em;
   }
   .react-detail__work-list-table td {
-    width: 70%;
-  }
-  .react-detail__work-list-table tr:last-child td span:last-child {
-    display: block;
+    width: 72%;
     text-align: center;
   }
+  .react-detail__work-list-table tr:nth-child(2) td .text-wrap:last-child {
+    display: block;
+  }
+  .react-detail__work-list-table tr:last-child td .text-wrap {
+    display: block;
+  }
+
   /* react-detail__btn-box */
   .react-detail__btn-box {
     gap: var(--spacing-xl);
@@ -441,11 +458,15 @@
     gap: var(--spacing-2xl);
     padding: 0 var(--spacing-sm);
   }
+
+  /* web-project__thumbnail */
   .web-project__thumbnail {
     width: 100%;
     height: auto;
     padding-bottom: 65%;
   }
+
+  /* web-project__content */
   .web-project__content {
     width: 100%;
     height: auto;
@@ -458,6 +479,10 @@
     width: 8px;
     height: 8px;
   }
+  .web-project__description {
+    word-break: break-all;
+  }
+  /* web-project__details */
   .web-project__details li {
     gap: var(--spacing-2xl);
   }
@@ -465,6 +490,7 @@
     flex-shrink: 0;
     line-height: 1.6em;
   }
+  /* web-project__links */
   .web-project__links {
     flex-wrap: wrap;
     justify-content: center;

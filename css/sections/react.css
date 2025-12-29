@@ -55,13 +55,16 @@ main > section#react {
 .react-detail {
   width: 590px;
 }
-
 .react-detail__title {
   font-size: var(--font-size-section-title);
 }
-
 .react-detail__inner {
   margin-top: var(--spacing-sm);
+}
+
+/* react-detail__app-intro */
+.react-detail__app-intro p {
+  line-height: 1.6em;
 }
 
 /* ----- react-detail-format ----- */
@@ -272,6 +275,9 @@ main > section#react {
 
 .react-detail__work-list-table td {
   padding: var(--spacing-sm) var(--spacing-3xl);
+}
+.react-detail__work-list-table tr:last-child td .text-wrap:first-child {
+  display: block;
 }
 
 .react-detail__work-list-table tbody tr:not(:last-child) {
