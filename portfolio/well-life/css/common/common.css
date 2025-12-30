@@ -305,6 +305,7 @@ header {
 /* ---------- FOOTER ----------  */
 footer {
   background-color: var(--color-black);
+  border-top: 1px solid var(--contents-tertiary);
   padding: var(--section-padding-h-pc) var(--section-padding-h-pc) 0;
 }
 
