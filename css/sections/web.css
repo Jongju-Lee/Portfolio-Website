@@ -4,7 +4,7 @@
 
 /* ----- web-content ----- */
 .web-content {
-  margin-top: var(--spacing-7xl);
+  margin-top: var(--spacing-8xl);
 }
 
 /* ----- web-project ----- */
@@ -12,7 +12,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--spacing-5xl);
   width: 100%;
 }
 
@@ -69,313 +68,25 @@
   height: auto;
 }
 
-.web-project__mockup-mobiles-item--1 {
+.web-project__mockup-mobiles-item--fir {
   transform: translateX(54px);
 }
 
-/* ----- web-project__info (2단 레이아웃) ----- */
-.web-project__info {
-  display: flex;
-  gap: var(--spacing-4xl);
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--spacing-4xl);
-  background-color: var(--color-background-light);
-  border-radius: var(--spacing-md);
-}
-
-/* ----- web-project__desc (왼쪽 설명) ----- */
-.web-project__desc {
-  flex: 1;
-}
-
-.web-project__title {
-  font-size: var(--font-size-3xl);
-  font-weight: 800;
-  line-height: 1.2em;
-  margin-bottom: var(--spacing-md);
-}
-
-.web-project__subtitle {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  color: var(--text-color-dark-gray);
-  margin-bottom: var(--spacing-lg);
-}
-
-.web-project__text {
-  font-size: var(--font-size-md);
-  line-height: 1.8em;
-  color: var(--text-color-body);
-}
-
-/* ----- web-project__overview (오른쪽 표) ----- */
-.web-project__overview {
-  flex-shrink: 0;
-  width: 400px;
-}
-
-.web-project__overview-title {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  margin-bottom: var(--spacing-lg);
-  text-align: center;
-}
-
-.web-project__overview-table-wrapper {
-  overflow: hidden;
-  border: 1px solid var(--color-well-life-primary);
-  border-radius: var(--spacing-md);
-  box-shadow: var(--shadow-normal);
-}
-
-.web-project__overview-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--font-size-md);
-}
-
-.web-project__overview-table th,
-.web-project__overview-table td {
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-bottom: 1px solid var(--color-line);
-}
-
-.web-project__overview-table thead th {
-  background-color: var(--color-well-life-primary);
-  color: var(--text-color-white);
-  font-weight: 600;
-  text-align: center;
-}
-
-.web-project__overview-table thead th:first-child {
-  border-right: 1px solid var(--border-color-white);
-}
-
-.web-project__overview-table tbody th {
-  background-color: var(--color-well-life-table-th-bg);
-  font-weight: 500;
-  text-align: center;
-  width: 100px;
-  border-right: 1px solid var(--color-line);
-}
-
-.web-project__overview-table tbody td {
-  background-color: var(--color-background-white);
-}
-
-/* ----- web-project__color-theme ----- */
-.web-project__color-theme {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4xl);
-  width: 100%;
-  max-width: 1200px;
-  margin: var(--spacing-4xl) auto 0;
-  padding: var(--spacing-4xl);
-  background-color: var(--color-background-light);
-  border-radius: var(--spacing-md);
-}
-
-.web-project__color-mockup {
-  flex-shrink: 0;
-  width: 320px;
-}
-
-.web-project__color-mockup img {
-  width: 100%;
-  height: auto;
-}
-
-.web-project__color-info {
-  flex: 1;
-}
-
-.web-project__color-title {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
-  margin-bottom: var(--spacing-xl);
-}
-
-.web-project__color-circles {
-  display: flex;
-  gap: var(--spacing-3xl);
-  margin-bottom: var(--spacing-xl);
-}
-
-.web-project__color-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.web-project__color-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.web-project__color-label {
-  font-size: var(--font-size-sm);
-  color: var(--text-color-dark-gray);
-  text-align: center;
-  line-height: 1.3em;
-}
-
-.web-project__color-code {
-  font-size: var(--font-size-sm);
-  color: var(--text-color-light-gray);
-}
-
-.web-project__color-subtitle {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  margin-bottom: var(--spacing-md);
-}
-
-.web-project__color-desc {
-  font-size: var(--font-size-md);
-  line-height: 1.8em;
-  color: var(--text-color-body);
-}
-
-/* ----- web-project__typography ----- */
-.web-project__typography {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4xl);
-  width: 100%;
-  max-width: 1200px;
-  margin: var(--spacing-4xl) auto 0;
-  padding: var(--spacing-4xl);
-  background-color: var(--color-background-light);
-  border-radius: var(--spacing-md);
-}
-
-.web-project__typo-info {
-  flex: 1;
-}
-
-.web-project__typo-title {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
-  margin-bottom: var(--spacing-xl);
-  text-align: center;
-}
-
-.web-project__typo-circles {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-3xl);
-  margin-bottom: var(--spacing-xl);
-}
-
-.web-project__typo-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.web-project__typo-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.web-project__typo-label {
-  font-size: var(--font-size-sm);
-  color: var(--text-color-dark-gray);
-  text-align: center;
-  line-height: 1.3em;
-}
-
-.web-project__typo-code {
-  font-size: var(--font-size-sm);
-  color: var(--text-color-light-gray);
-}
-
-.web-project__typo-subtitle {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  margin-bottom: var(--spacing-md);
-  text-align: center;
-}
-
-.web-project__typo-desc {
-  font-size: var(--font-size-md);
-  line-height: 1.8em;
-  color: var(--text-color-body);
-}
-
-.web-project__typo-mockups {
-  display: flex;
-  gap: var(--spacing-lg);
-  flex-shrink: 0;
-}
-
-.web-project__typo-mockups img {
-  width: 140px;
-  height: auto;
-}
-
 /* ----- web-project__links ----- */
 .web-project__links {
   display: flex;
   justify-content: center;
   gap: var(--spacing-sm);
-  margin-top: var(--spacing-3xl);
-}
-
-/* ----- web-project__description (기존 호환) ----- */
-.web-project__description {
-  margin-top: var(--spacing-lg);
-  line-height: 1.6em;
-  font-size: var(--font-size-lg);
-}
-
-/* ----- web-project__details ----- */
-.web-project__details {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  gap: var(--spacing-md);
-  padding: var(--spacing-2xl) 0;
-}
-
-.web-project__details li {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-3xl);
-  font-size: var(--font-size-lg);
-}
-
-.web-project__details li h5 {
-  font-weight: 500;
-  line-height: inherit;
-  color: var(--text-color-dark-gray);
-}
-
-.web-project__details li p {
-  text-align: left;
-}
-
-/* ----- web-project__links ----- */
-.web-project__links {
-  display: flex;
-  gap: var(--spacing-sm);
+  margin-top: var(--spacing-2xl);
 }
 
 .web-project__link {
-  display: inline-flex;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100px;
   height: 32px;
+  /* font-size: var(--font-size-lg); */
   padding-bottom: 1px;
   line-height: 1;
   border: 1px solid transparent;
@@ -429,38 +140,331 @@
   border-color: var(--text-color-body);
 }
 
-/* 1420px 반응형 적용 */
-@media (max-width: 1420px) {
+/* ----- web-project__info ----- */
+.web-project__info {
+  display: flex;
+  gap: var(--spacing-7xl);
+  width: 100%;
+  max-width: 1120px;
+  margin: var(--spacing-7xl) auto 0;
+  background-color: var(--color-background-light);
+  border-radius: var(--spacing-md);
+}
 
-  /* ########## SECTION - WEB ########## */
-  /* .web-project {
-    flex-direction: column;
-    align-items: center;
-  }
+/* ----- web-project__desc ----- */
+.web-project__desc {
+  flex: 1;
+}
 
-  .web-project__mockup {
-    flex-wrap: wrap;
-    gap: var(--spacing-lg);
-  }
+.web-project__title {
+  font-size: var(--font-size-section-title);
+  font-weight: 800;
+  line-height: 1.2em;
+  margin-bottom: var(--spacing-2xl);
+}
 
-  .web-project__mockup-item--pc {
-    width: 100%;
-    max-width: 500px;
-  }
+.web-project__subtitle {
+  display: inline-block;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--text-color-dark-gray);
+  margin-bottom: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+}
 
-  .web-project__mockup-item--tablet {
-    width: 200px;
-  }
+.web-project__text {
+  font-size: var(--font-size-xl);
+  line-height: 1.8em;
+  padding-right: var(--spacing-md);
+  text-align: left;
+  word-break: keep-all;
+}
 
-  .web-project__mockup-item--mobile {
-    width: 100px;
-  }
+/* ----- web-project__overview (오른쪽 표) ----- */
+.web-project__overview {
+  flex-shrink: 0;
+  width: 520px;
+  margin-top: var(--spacing-7xl);
+}
 
-  .web-project__content {
-    width: 100%;
-    max-width: 624px;
-    max-height: none;
-  } */
+.web-project__overview-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
 
-  /* ########## END - WEB ########## */
+.web-project__overview-table-wrapper {
+  display: flex;
+  overflow: hidden;
+  border-radius: var(--spacing-md);
+  box-shadow: var(--shadow-normal);
+}
+
+.web-project__overview-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-md);
+}
+
+.web-project__overview-table th,
+.web-project__overview-table td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.web-project__overview-table thead th {
+  background-color: var(--color-well-life-primary);
+  color: var(--text-color-white);
+  font-weight: 600;
+  text-align: center;
+}
+
+.web-project__overview-table thead th:first-child {
+  border-right: 1px solid var(--color-line-white);
+  width: 28%;
+}
+
+.web-project__overview-table tbody th {
+  background-color: var(--color-well-life-table-th-bg);
+  font-weight: 500;
+  text-align: center;
+  width: 100px;
+  border-right: 1px solid var(--color-line);
+}
+
+.web-project__overview-table tbody td {
+  background-color: var(--color-background-white);
+}
+
+.web-project__overview-table tbody tr:hover th,
+.web-project__overview-table tbody tr:hover td {
+  background-color: var(--color-well-life-hover);
+}
+
+/* ----- web-project__color-theme ----- */
+.web-project__color-theme {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-7xl);
+  width: 100%;
+  max-width: 1200px;
+  margin: var(--spacing-7xl) auto 0;
+  padding: 0 var(--spacing-4xl);
+  background-color: var(--color-background-light);
+}
+
+.web-project__color-mockup {
+  position: relative;
+  flex-shrink: 0;
+  width: 520px;
+  height: auto;
+}
+
+.web-project__color-mockup img {
+  width: 100%;
+  height: auto;
+  box-shadow: var(--shadow-well-life);
+  border-radius: 28px;
+}
+
+.web-project__color-info {
+  flex: 1;
+}
+
+.web-project__color-title {
+  margin-bottom: var(--spacing-3xl);
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  text-align: center;
+}
+
+.web-project__color-circles {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-5xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.web-project__color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.web-project__color-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.web-project__color-circle--primary {
+  background-color: var(--color-well-life-primary);
+}
+
+.web-project__color-circle--secondary {
+  background-color: var(--color-well-life-secondary);
+}
+
+.web-project__color-circle--bg {
+  background-color: var(--color-background-white);
+  border: 1px solid var(--color-line);
+}
+
+.web-project__color-label {
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  color: var(--text-color-dark-gray);
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.web-project__color-code {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-light-gray);
+}
+
+.web-project__color-subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.web-project__color-desc {
+  font-size: var(--font-size-lg);
+  line-height: 1.8em;
+  text-align: left;
+  word-break: keep-all;
+}
+
+/* ----- web-project__typography ----- */
+.web-project__typography {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-7xl);
+  width: 100%;
+  max-width: 1200px;
+  margin: var(--spacing-7xl) auto 0;
+  padding: 0 var(--spacing-4xl);
+}
+
+.web-project__typo-info {
+  flex: 1;
+}
+
+.web-project__typo-title {
+  margin-bottom: var(--spacing-3xl);
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  text-align: center;
+}
+
+.web-project__typo-circles {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-5xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.web-project__typo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.web-project__typo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.web-project__typo-circle--primary {
+  background-color: var(--color-well-life-text-primary);
+}
+
+.web-project__typo-circle--secondary {
+  background-color: var(--color-well-life-text-secondary);
+}
+
+.web-project__typo-circle--tertiary {
+  background-color: var(--color-well-life-text-tertiary);
+}
+
+.web-project__typo-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-dark-gray);
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.web-project__typo-code {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-light);
+}
+
+.web-project__typo-subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.web-project__typo-desc {
+  font-size: var(--font-size-lg);
+  line-height: 1.8em;
+  text-align: left;
+  word-break: keep-all;
+}
+
+.web-project__typo-mockups {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 520px;
+}
+
+.web-project__typo-mockups img {
+  width: 144px;
+  height: 293px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-well-life);
+}
+
+.web-project__typo-mockups img:nth-child(2) {
+  margin-top: 130px;
+}
+
+/* ----- web-project__description (기존 호환) ----- */
+.web-project__description {
+  margin-top: var(--spacing-lg);
+  line-height: 1.6em;
+  font-size: var(--font-size-lg);
+}
+
+/* ----- web-project__details ----- */
+.web-project__details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: var(--spacing-md);
+  padding: var(--spacing-2xl) 0;
+}
+
+.web-project__details li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3xl);
+  font-size: var(--font-size-lg);
+}
+
+.web-project__details li h5 {
+  font-weight: 500;
+  line-height: inherit;
+  color: var(--text-color-dark-gray);
+}
+
+.web-project__details li p {
+  text-align: left;
 }

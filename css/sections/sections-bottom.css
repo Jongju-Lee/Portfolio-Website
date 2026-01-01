@@ -12,12 +12,12 @@
 
 /* ----- practical-content ----- */
 .practical-content {
-  margin-top: 120px;
+  margin-top: var(--spacing-8xl);
 }
 
 /* ----- practical-slider ----- */
 .practical-slider:not(:last-child) {
-  margin-bottom: 120px;
+  margin-bottom: var(--spacing-8xl);
 }
 
 .practical-slider__title {
@@ -160,7 +160,7 @@
 
 /* ----- epilogue-content ----- */
 .epilogue-content {
-  margin-top: var(--spacing-7xl);
+  margin-top: var(--spacing-8xl);
   padding: 0 var(--spacing-4xl);
 }
 

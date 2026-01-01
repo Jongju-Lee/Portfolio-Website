@@ -2,7 +2,7 @@ main > section#react {
   background-color: var(--react-background-color);
   color: var(--react-text-color);
   font-size: var(--font-size-lg);
-  padding-top: 150px;
+  padding-top: 160px;
   padding-bottom: 100px;
 }
 
@@ -13,7 +13,7 @@ main > section#react {
   -moz-column-gap: var(--spacing-5xl);
   column-gap: var(--spacing-5xl);
   row-gap: var(--spacing-7xl);
-  margin-top: var(--spacing-7xl);
+  margin-top: var(--spacing-8xl);
 }
 
 .react-content :is(h3, h4) {
@@ -55,9 +55,11 @@ main > section#react {
 .react-detail {
   width: 590px;
 }
+
 .react-detail__title {
   font-size: var(--font-size-section-title);
 }
+
 .react-detail__inner {
   margin-top: var(--spacing-sm);
 }
@@ -65,6 +67,8 @@ main > section#react {
 /* react-detail__app-intro */
 .react-detail__app-intro p {
   line-height: 1.6em;
+  text-align: left;
+  word-break: keep-all;
 }
 
 /* ----- react-detail-format ----- */
@@ -75,7 +79,7 @@ main > section#react {
   flex-wrap: wrap;
 }
 
-.react-detail__format > div {
+.react-detail__format>div {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
@@ -276,12 +280,18 @@ main > section#react {
 .react-detail__work-list-table td {
   padding: var(--spacing-sm) var(--spacing-3xl);
 }
+
 .react-detail__work-list-table tr:last-child td .text-wrap:first-child {
   display: block;
 }
 
 .react-detail__work-list-table tbody tr:not(:last-child) {
   border-bottom: 1px solid var(--react-color-primary);
+}
+
+.react-detail__work-list-table tbody tr:hover th,
+.react-detail__work-list-table tbody tr:hover td {
+  background-color: var(--react-background-color);
 }
 
 /* ----- react-detail__btn-box ----- */
@@ -291,6 +301,7 @@ main > section#react {
   gap: var(--spacing-xl);
   margin-top: var(--spacing-2xl);
 }
+
 .react-detail__btn {
   opacity: 1;
   display: inline-block;
@@ -302,10 +313,12 @@ main > section#react {
   box-shadow: var(--shadow-color-box-light);
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
 .react-detail__btn:hover {
   opacity: 0.7;
   transform: scale(1.05);
 }
+
 .react-detail__btn::before {
   content: attr(data-label-pc);
   font-size: var(--font-size-lg);

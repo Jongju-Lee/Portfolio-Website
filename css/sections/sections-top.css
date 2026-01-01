@@ -117,7 +117,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--spacing-5xl);
-  margin-top: var(--spacing-7xl);
+  margin-top: var(--spacing-8xl);
 }
 
 /* ----- skill-item ----- */

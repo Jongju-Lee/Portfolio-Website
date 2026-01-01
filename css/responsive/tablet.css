@@ -170,11 +170,6 @@
 
 
   /* ########## SECTION - RESUME ########## */
-  /* resume-content */
-  .resume-content {
-    margin-top: var(--spacing-6xl);
-  }
-
   /* resume-main */
   .resume-main__title {
     font-size: var(--font-size-2xl);
@@ -240,11 +235,6 @@
 
 
   /* ########## SECTION - REACT ########## */
-  /* react-mockup */
-  .react-mockup {
-    margin-top: var(--spacing-6xl);
-  }
-
   /* react-detail__title */
   .react-detail__title {
     font-size: var(--font-size-section-title-tablet);
