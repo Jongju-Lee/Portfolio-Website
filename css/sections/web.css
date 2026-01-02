@@ -77,6 +77,7 @@
   display: flex;
   justify-content: center;
   gap: var(--spacing-sm);
+  width: 100%;
   margin-top: var(--spacing-2xl);
 }
 
@@ -143,9 +144,12 @@
 /* ----- web-project__info ----- */
 .web-project__info {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-7xl);
   width: 100%;
   max-width: 1120px;
+  min-height: 360px;
   margin: var(--spacing-7xl) auto 0;
   background-color: var(--color-background-light);
   border-radius: var(--spacing-md);
@@ -154,8 +158,9 @@
 /* ----- web-project__desc ----- */
 .web-project__desc {
   flex: 1;
+  max-width: 560px;
+  min-width: 460px;
 }
-
 .web-project__title {
   font-size: var(--font-size-section-title);
   font-weight: 800;
@@ -164,12 +169,22 @@
 }
 
 .web-project__subtitle {
-  display: inline-block;
+  position: relative;
   font-size: var(--font-size-2xl);
+  padding-left: 14px;
   font-weight: 600;
-  color: var(--text-color-dark-gray);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
   padding-top: var(--spacing-sm);
+}
+
+.web-project__subtitle::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 4px;
+  height: 20px;
+  background-color: var(--color-well-life-primary);
 }
 
 .web-project__text {
@@ -180,11 +195,12 @@
   word-break: keep-all;
 }
 
-/* ----- web-project__overview (오른쪽 표) ----- */
+/* ----- web-project__overview ----- */
 .web-project__overview {
-  flex-shrink: 0;
-  width: 520px;
-  margin-top: var(--spacing-7xl);
+  flex: 1;
+  align-self: end;
+  max-width: 560px;
+  min-width: 460px;
 }
 
 .web-project__overview-title {
