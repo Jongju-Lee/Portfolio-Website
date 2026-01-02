@@ -447,7 +447,7 @@
   font-weight: 600;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: var(--text-color-light);
+  color: var(--text-color-light-gray);
 }
 .resume-hero__tag--filled {
   display: inline-block;

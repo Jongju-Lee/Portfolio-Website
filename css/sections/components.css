@@ -283,7 +283,7 @@
 
 /* 모바일 목업 버튼 */
 .mockup-box__action-btn.mobile {
-  background-color: var(--text-color-light);
+  background-color: var(--text-color-light-gray);
   transition-delay: 0.3s;
 }
 .mockup-box__action-btn.mobile img {
@@ -292,7 +292,7 @@
 }
 /* 태블릿 목업 버튼 */
 .mockup-box__action-btn.tablet {
-  background-color: var(--text-color-light);
+  background-color: var(--text-color-light-gray);
   transition-delay: 0.15s;
 }
 .mockup-box__action-btn.tablet img {

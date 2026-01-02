@@ -146,7 +146,7 @@
 }
 
 .practical-slider__box .swiper-pagination-bullet:hover {
-  background-color: var(--text-color-light);
+  background-color: var(--text-color-light-gray);
 }
 
 .practical-slider__box .swiper-pagination-bullet-active {

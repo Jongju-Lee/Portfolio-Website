@@ -141,7 +141,7 @@ header.hide {
   margin-bottom: var(--spacing-8xl);
   text-align: center;
   font-size: var(--font-size-3xl);
-  color: var(--text-color-light);
+  color: var(--text-color-light-gray);
 }
 
 
@@ -188,7 +188,7 @@ body.fullscreen-nav--on {
   font-size: var(--font-size-4xl);
   font-weight: 600;
   white-space: nowrap;
-  color: var(--text-color-light);
+  color: var(--text-color-light-gray);
   transition: color 0.3s;
 }
 .fullscreen-nav__item:hover {
