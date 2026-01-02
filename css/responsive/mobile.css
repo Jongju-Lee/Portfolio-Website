@@ -389,7 +389,7 @@
   /* react-detail */
   .react-detail {
     width: 100%;
-    max-width: 480px;
+    /* max-width: 480px; */
     margin: 0 auto;
   }
   .react-detail__title {
@@ -424,23 +424,7 @@
 
   /* react-detail__work-list */
   .react-detail__work-list {
-    margin-top: var(--spacing-6xl);
-  }
-  .react-detail__work-list-table :is(th, td) {
-    font-size: var(--font-size-body-mobile);
-    line-height: 1.6em;
-    padding: var(--spacing-sm);
-  }
-  .react-detail__work-list-table th {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
-  .react-detail__work-list-table tr:nth-child(2) td .text-wrap:last-child {
-    display: block;
-  }
-  .react-detail__work-list-table tr:last-child td .text-wrap {
-    display: block;
+    margin-top: var(--spacing-4xl);
   }
 
   /* react-detail__btn-box */

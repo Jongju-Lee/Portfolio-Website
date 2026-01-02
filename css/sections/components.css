@@ -165,6 +165,10 @@
   background-color: var(--color-background-white);
   word-break: keep-all;
 }
+.project-table tbody td .nowrap {
+  white-space: nowrap;
+}
+
 
 /* ----- project-achievement-list ----- */
 .project-achievement-list {
