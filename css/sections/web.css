@@ -24,8 +24,22 @@
   width: 100%;
   margin: 0 auto;
 }
-.web-project__mockup-item img {
+
+/* web-project__mockup-total */
+.web-project__mockup-total {
+  max-width: 1200px;
+}
+.web-project__mockup-total img {
   display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* web-project__mockup-item */
+.web-project__mockup-item {
+  display: none;
+}
+.web-project__mockup-item img {
   width: 100%;
   height: auto;
 }
@@ -47,11 +61,11 @@
 
 /* ----- web-project__mockup-mobiles ----- */
 .web-project__mockup-mobiles {
+  display: none;
   position: absolute;
   bottom: 0;
   left: calc(50% - -300px);
   transform: translateX(-50%);
-  display: flex;
   z-index: 2;
 }
 .web-project__mockup-mobiles-item {
