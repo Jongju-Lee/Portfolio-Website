@@ -94,7 +94,7 @@
   --color-well-life-text-primary: #000000;
   --color-well-life-text-secondary: #6B6B6B;
   --color-well-life-text-tertiary: #A6A6A6;
-  --shadow-well-life: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+  --shadow-well-life: 0 10px 20px rgba(0, 0, 0, 0.2);
 
   /* React 섹션 전용 */
   --react-text-color: #1E2723;
