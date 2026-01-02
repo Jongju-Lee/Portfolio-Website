@@ -468,56 +468,79 @@
 
 
   /* ########## SECTION - WEB ########## */
+  /* ========== 공통 클래스 ========== */
+  /* Flex 아이템 공통 크기 */
+  .web-project__flex-item {
+    max-width: 560px;
+    min-width: 320px;
+  }
+
+  /* 컬러, 타이포 서브타이틀 공통 스타일 */
+  .web-project__section-subtitle {
+    padding-left: var(--spacing-md);
+  }
+  .web-project__section-subtitle::before {
+    top: calc(50% - 1px);
+  }
+
+  /* 원형 아이콘 공통 스타일 */
+  .web-project__circles-container {
+    gap: var(--spacing-4xl);
+  }
+  .web-project__circle-item {
+    width: 60px;
+    font-size: var(--font-size-xs);
+  }
+  .web-project__circle-base {
+    width: 50px;
+    height: 50px;
+  } 
+  .web-project__circle-code {
+    line-height: 1em;
+  }
+
+  /* web-content */
   .web-content {
     margin-top: var(--spacing-6xl);
   }
-  .web-project {
-    gap: var(--spacing-2xl);
-  }
 
-  /* web-project__mockup */
-  .web-project__mockup-item--pc {
+  /* ----- web-project__mockup ----- */
+  /* web-project__mockup-items */
+  .web-project__mockup-items {
+    display: block;
+  }
+  .web-project__mockup-item {
+    margin: 0 auto;
+  }
+  .web-project__mockup-item img {
+    display: block;
     width: 100%;
+    height: auto;
+  }
+  .web-project__mockup-item--pc {
+    width: calc(100% + 40px);
+    transform: translateX(-20px);
+  }
+  .web-project__mockup-item--tablet {
+    width: 90%;
   }
 
-  .web-project__mockup-item--tablet,
   .web-project__mockup-item--mobile {
+    width: 80%;
+  }
+
+  /* web-project__mockup-total */
+  .web-project__mockup-total {
     display: none;
   }
 
-  /* web-project__content */
-  .web-project__content {
-    width: 100%;
-    height: auto;
-    max-height: none;
-  }
-  .web-project__title {
-    font-size: var(--spacing-3xl);
-  }
-  .web-project__title.new::after {
-    width: 8px;
-    height: 8px;
-  }
-  .web-project__description {
-    word-break: break-all;
-  }
-
-  /* web-project__details */
-  .web-project__details li {
-    gap: var(--spacing-2xl);
-  }
-  .web-project__details li h5 {
-    flex-shrink: 0;
-    line-height: 1.6em;
-  }
-
-  /* web-project__links */
+  /* ----- web-project__links ----- */
   .web-project__links {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-md);
   }
-  .web-project__link {
+  .web-project__link { 
     width: 90px;
     height: 30px;
   }
@@ -529,6 +552,15 @@
     content: attr(data-label-mobile);
   }
 
+  /* ----- web-project__info ----- */
+  /* web-project__desc */
+  .web-project__title {
+    font-size: var(--spacing-3xl);
+    text-align: center;
+  }
+  .web-project__subtitle::before {
+    top: 19px;
+  }
   /* ########## END - WEB ########## */
 
 

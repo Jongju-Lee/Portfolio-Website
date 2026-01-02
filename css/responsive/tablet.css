@@ -239,6 +239,21 @@
 
 
   /* ########## SECTION - WEB ########## */
+  /* ========== 공통 클래스 ========== */
+  /* 컬러, 타이포 서브타이틀 공통 스타일 */
+  .web-project__section-subtitle {
+    padding-left: var(--spacing-md);
+  }
+  .web-project__section-subtitle::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* 설명 텍스트 공통 스타일 */
+  .web-project__section-desc {
+    padding-left: var(--spacing-md);
+  }
+
   /* .web-project__link */
   .web-project__link--mobile,
   .web-project__link--tablet {
@@ -246,6 +261,15 @@
   }
   .web-project__link--pc::before {
     content: attr(data-label-tablet);
+  }
+
+  /* web-project__desc */
+  .web-project__subtitle {
+    padding-left: var(--spacing-lg);
+  }
+  .web-project__subtitle::before {
+    width: 7px;
+    height: 7px;
   }
   /* ########## END - WEB ########## */
 

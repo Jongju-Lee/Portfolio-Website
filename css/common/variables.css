@@ -20,21 +20,7 @@
   --color-util-btn: #777777;
   --color-attention: #ff771f;
   --color-mockup-box-btn: var(--color-primary);
-  --color-attention-glow: rgba(255, 184, 77, 0.7);
-
-  /* SKILL SECTION */
-  --color-skill-item-bg: #f5f5f5;
-
-  /* WEB SECTION */
-  --color-background-web-section: #e6e7f2;
-  --color-well-life-primary: #19248C;
-  --color-well-life-secondary: #4CB9E7;
-  --color-well-life-table-th-bg: #f5f5f5;
-  --color-well-life-hover: #f0f1f8;
-  --color-well-life-text-primary: #000000;
-  --color-well-life-text-secondary: #6B6B6B;
-  --color-well-life-text-tertiary: #A6A6A6;
-  --shadow-well-life: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+  --color-attention-glow: rgba(255, 184, 77, 0.7); 
 
   /* --------- TEXT COLOR --------- */
   --text-color-title: #333333;
@@ -49,15 +35,8 @@
   --color-line: #dfdfdf;
   --color-line-white: #ffffff;
 
-  /* --------- SECTION COLOR --------- */
-  /* REACT Web App */
-  --react-text-color: #1E2723;
-  --react-color-primary: #72E3AD;
-  --react-background-color: #f1fdf7;
-
-
   /* --------- SHADOW --------- */
-  --shadow-normal: 0 0 12px rgba(0, 0, 0, 0.1);
+  --shadow-normal: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-light: 0 0 12px rgba(0, 0, 0, 0.03);
   --shadow-color-box: 0 0 8px rgba(0, 0, 0, 0.3);
   --shadow-color-box-light: 0 0 8px rgba(0, 0, 0, 0.2);
@@ -101,4 +80,24 @@
   /* font-size - title */
   --font-size-slogan-title: 56px;
   --font-size-section-title: 36px;
+  
+  /* --------- 섹션별 전용 속성 --------- */
+  /* SKILL 섹션 전용 */
+  --color-skill-item-bg: #f5f5f5;
+  
+  /* WEB 섹션 전용 */
+  --color-background-web-section: #e6e7f2;
+  --color-well-life-primary: #19248C;
+  --color-well-life-secondary: #4CB9E7;
+  --color-well-life-table-th-bg: #f5f5f5;
+  --color-well-life-hover: #f0f1f8;
+  --color-well-life-text-primary: #000000;
+  --color-well-life-text-secondary: #6B6B6B;
+  --color-well-life-text-tertiary: #A6A6A6;
+  --shadow-well-life: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+
+  /* React 섹션 전용 */
+  --react-text-color: #1E2723;
+  --react-color-primary: #72E3AD;
+  --react-background-color: #f1fdf7;
 }
