@@ -20,7 +20,8 @@
   --color-util-btn: #777777;
   --color-attention: #ff771f;
   --color-mockup-box-btn: var(--color-primary);
-  --color-attention-glow: rgba(255, 184, 77, 0.7); 
+  --color-attention-glow: rgba(255, 184, 77, 0.7);
+  --color-table-th-bg: #f5f5f5; 
 
   /* --------- TEXT COLOR --------- */
   --text-color-title: #333333;
@@ -89,7 +90,6 @@
   --color-background-web-section: #e6e7f2;
   --color-well-life-primary: #19248C;
   --color-well-life-secondary: #4CB9E7;
-  --color-well-life-table-th-bg: #f5f5f5;
   --color-well-life-hover: #f0f1f8;
   --color-well-life-text-primary: #000000;
   --color-well-life-text-secondary: #6B6B6B;

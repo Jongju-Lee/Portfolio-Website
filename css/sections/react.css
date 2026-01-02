@@ -6,6 +6,7 @@ main > section#react {
   padding-bottom: 100px;
 }
 
+/* ----- react-content ----- */
 .react-content {
   display: flex;
   flex-wrap: wrap;
@@ -15,7 +16,6 @@ main > section#react {
   row-gap: var(--spacing-7xl);
   margin-top: var(--spacing-8xl);
 }
-
 .react-content :is(h3, h4) {
   font-weight: 700;
 }
@@ -24,28 +24,25 @@ main > section#react {
 .react-mockup {
   flex-shrink: 0;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   gap: var(--spacing-lg);
 }
 
-/* ----- react-mockup__item ----- */
+/* react-mockup__item */
 .react-mockup__item-box:first-child {
   display: flex;
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
 }
-
 .react-mockup__item-tablet {
   width: calc(912px / 1.7);
   height: calc(670px / 1.7);
 }
-
 .react-mockup__item-mobile {
   width: calc(344px / 1.7);
   height: calc(670px / 1.7);
 }
-
 .react-mockup__item-pc {
   width: calc(1280px / 1.7);
   height: calc(1066px / 1.7);
@@ -55,11 +52,9 @@ main > section#react {
 .react-detail {
   width: 590px;
 }
-
 .react-detail__title {
   font-size: var(--font-size-section-title);
 }
-
 .react-detail__inner {
   margin-top: var(--spacing-sm);
 }
@@ -71,24 +66,21 @@ main > section#react {
   word-break: keep-all;
 }
 
-/* ----- react-detail-format ----- */
+/* ----- react-detail__format ----- */
 .react-detail__format {
-  margin-top: var(--spacing-3xl);
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: var(--spacing-3xl);
 }
-
-.react-detail__format>div {
+.react-detail__format > div {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
 }
-
 .react-detail__format .title {
   font-size: var(--font-size-2xl);
 }
-
 .react-detail__format .color-box {
   display: flex;
   width: -webkit-fit-content;
@@ -98,30 +90,26 @@ main > section#react {
   overflow: hidden;
   box-shadow: var(--shadow-color-box);
 }
-
 .react-detail__format .color-item {
   width: 90px;
   padding: var(--spacing-xs) 0;
-  font-size: var(--font-size-xs);
-  text-align: center;
-  font-weight: 500;
   font-family: var(--font-EN);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
   line-height: 1em;
+  text-align: center;
 }
 
-/* ----- react-detail-theme ----- */
+/* ----- react-detail__theme ----- */
 .react-detail__theme {
   width: 270px;
 }
-
 .react-detail__theme-color-item:nth-child(1) {
   background-color: var(--react-color-primary);
 }
-
 .react-detail__theme-color-item:nth-child(2) {
   background-color: #FCFCFC;
 }
-
 .react-detail__theme-color-item:nth-child(3) {
   background-color: #DFDFDF;
 }
@@ -130,58 +118,49 @@ main > section#react {
 .react-detail__typo-color-item {
   color: var(--text-color-white);
 }
-
 .react-detail__typo-color-item:nth-child(1) {
   background-color: #1E2723;
 }
-
 .react-detail__typo-color-item:nth-child(2) {
   background-color: #707070;
 }
-
 .react-detail__typo-color-item:nth-child(3) {
   background-color: #8F8FA4;
 }
 
+/* react-detail__typo-desc */
 .react-detail__typo-desc {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
 }
-
 .react-detail__typo-desc-title {
   font-family: var(--font-EN);
   font-size: var(--font-size-xl);
   font-weight: 600;
 }
-
 .react-detail__typo-desc-title .text-small {
-  font-size: var(--font-size-sm);
   margin-left: var(--spacing-xs);
+  font-size: var(--font-size-sm);
   color: var(--text-color-gray);
 }
-
 .react-detail__typo-desc-list {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
   margin-top: var(--spacing-xs);
 }
-
 .react-detail__typo-desc-list-item {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
 }
-
 .react-detail__typo-desc-list-item b {
   font-weight: 500;
 }
-
 .react-detail__typo-desc-list-item b.font-kr {
   font-weight: 600;
 }
-
 .react-detail__typo-desc-list-item::before {
   content: "";
   display: inline-block;
@@ -196,7 +175,6 @@ main > section#react {
   position: relative;
   top: -72px;
 }
-
 .react-detail-bottom-wrapper .title {
   font-size: var(--font-size-2xl);
 }
@@ -208,13 +186,11 @@ main > section#react {
   gap: var(--spacing-xs);
   margin-top: var(--spacing-sm);
 }
-
 .react-detail__function-list-item {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
 }
-
 .react-detail__function-list-item .dot {
   display: inline-block;
   width: calc(18px / 2);
@@ -231,114 +207,49 @@ main > section#react {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-3xl);
 }
-
 .react-detail__work-list-title {
   text-align: center;
 }
-
 .react-detail__work-list-title .text-light {
   font-weight: 400;
 }
 
-.react-detail__work-list-table-wrapper {
-  display: flex;
-  overflow: hidden;
-  border: 1px solid var(--react-color-primary);
-  border-radius: var(--spacing-md);
-  background-color: #FCFCFC;
-  box-shadow: var(--shadow-normal);
-}
-
-.react-detail__work-list-table {
-  flex: 1;
-  border-collapse: collapse;
-}
-
-.react-detail__work-list-table :is(th, td) {
-  line-height: 1.5em;
-  vertical-align: middle;
-}
-
-.react-detail__work-list-table th {
-  padding: var(--spacing-sm) var(--spacing-2xl);
-  font-weight: 600;
-}
-
+/* react-detail__work-list-table - 색상 전용 */
 .react-detail__work-list-table thead th {
   background-color: var(--react-color-primary);
 }
-
-.react-detail__work-list-table thead th:first-child {
-  border-right: 1px solid var(--react-background-color);
-}
-
-.react-detail__work-list-table tbody th {
-  border-right: 1px solid var(--react-color-primary);
-  font-weight: 500;
-}
-
-.react-detail__work-list-table td {
-  padding: var(--spacing-sm) var(--spacing-3xl);
-}
-
-.react-detail__work-list-table tr:last-child td .text-wrap:first-child {
-  display: block;
-}
-
-.react-detail__work-list-table tbody tr:not(:last-child) {
-  border-bottom: 1px solid var(--react-color-primary);
-}
-
 .react-detail__work-list-table tbody tr:hover th,
 .react-detail__work-list-table tbody tr:hover td {
   background-color: var(--react-background-color);
 }
 
-/* react-detail__achievement-list */
-.react-detail__achievement-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-}
-.react-detail__achievement-list li {
-  position: relative;
-  padding-left: var(--spacing-md);
-}
+/* react-detail__achievement-list - 색상 전용 */
 .react-detail__achievement-list li::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
   background-color: var(--react-color-primary);
 }
+
+/* ----- react-detail__btn-box ----- */
 .react-detail__btn-box {
   display: flex;
   justify-content: center;
   gap: var(--spacing-xl);
   margin-top: var(--spacing-2xl);
 }
-
 .react-detail__btn {
-  opacity: 1;
   display: inline-block;
   width: 130px;
   padding: var(--spacing-sm) 0;
   border-radius: var(--spacing-sm);
   background-color: var(--react-color-primary);
-  text-align: center;
   box-shadow: var(--shadow-color-box-light);
+  text-align: center;
+  opacity: 1;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
-
 .react-detail__btn:hover {
   opacity: 0.7;
   transform: scale(1.05);
 }
-
 .react-detail__btn::before {
   content: attr(data-label-pc);
   font-size: var(--font-size-lg);

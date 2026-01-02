@@ -436,14 +436,6 @@
     width: -moz-max-content;
     width: max-content;
   }
-  .react-detail__work-list-table thead th {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    line-height: 1.5em;
-  }
-  .react-detail__work-list-table td {
-    width: 72%;
-    text-align: center;
-  }
   .react-detail__work-list-table tr:nth-child(2) td .text-wrap:last-child {
     display: block;
   }
@@ -733,18 +725,18 @@
 
 /* ########## SMALL MOBILE (480px 이하) ########## */
 @media (max-width: 480px) {
-  /* ########## SECTION - WEB ########## */
-  /* web-project__overview */
-  .web-project__overview-table {
+
+  /* ########## Project Table 공통 반응형 ########## */
+  .project-table {
     font-size: var(--font-size-sm);
   }
-  .web-project__overview-table th,
-  .web-project__overview-table td {
+  .project-table th,
+  .project-table td {
     padding: var(--spacing-md) var(--spacing-lg);
   }
-  .web-project__overview-table thead th:first-child {
+  .project-table thead th:first-child {
     width: 30%;
   }
-  /* ########## END - WEB ########## */
+  /* ########## END - Project Table ########## */
 
 }
