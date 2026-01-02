@@ -729,3 +729,22 @@
 
   /* ########## END - 풀스크린 네비게이션 ########## */
 }
+
+
+/* ########## SMALL MOBILE (480px 이하) ########## */
+@media (max-width: 480px) {
+  /* ########## SECTION - WEB ########## */
+  /* web-project__overview */
+  .web-project__overview-table {
+    font-size: var(--font-size-sm);
+  }
+  .web-project__overview-table th,
+  .web-project__overview-table td {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  .web-project__overview-table thead th:first-child {
+    width: 30%;
+  }
+  /* ########## END - WEB ########## */
+
+}

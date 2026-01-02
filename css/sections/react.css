@@ -294,7 +294,27 @@ main > section#react {
   background-color: var(--react-background-color);
 }
 
-/* ----- react-detail__btn-box ----- */
+/* react-detail__achievement-list */
+.react-detail__achievement-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+.react-detail__achievement-list li {
+  position: relative;
+  padding-left: var(--spacing-md);
+}
+.react-detail__achievement-list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--react-color-primary);
+}
 .react-detail__btn-box {
   display: flex;
   justify-content: center;
