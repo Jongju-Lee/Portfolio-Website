@@ -487,7 +487,7 @@
   }
   .web-project__mockup-item {
     margin: 0 auto;
-    filter: drop-shadow(var(--shadow-well-life));
+    filter: drop-shadow(var(--shadow-mockup));
   }
   .web-project__mockup-item:not(:last-child) {
     margin-bottom: var(--spacing-3xl);

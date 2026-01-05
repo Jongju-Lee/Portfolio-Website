@@ -102,7 +102,6 @@ img {
   font-family: var(--font-EN);
   font-size: var(--font-size-section-title);
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 .inner > h2.new::after {
   content: "";

@@ -249,6 +249,10 @@
 }
 
 /* ----- web-project__color-theme ----- */
+.web-project__color-theme {
+  align-items: center;
+}
+
 /* web-project__color-mockup */
 .web-project__color-mockup {
   height: auto;
@@ -256,7 +260,7 @@
 .web-project__color-mockup img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(var(--shadow-well-life));
+  filter: drop-shadow(var(--shadow-mockup));
 }
 
 /* web-project__color-circles */
@@ -275,6 +279,7 @@
 /* ----- web-project__typography ----- */
 .web-project__typography {
   flex-wrap: wrap-reverse;
+  align-items: center;
 }
 
 /* web-project__typo-circles */
@@ -299,5 +304,5 @@
 .web-project__typo-mockups img {
   width: 211px;
   height: 430px;
-  filter: drop-shadow(var(--shadow-well-life));
+  filter: drop-shadow(var(--shadow-mockup));
 }

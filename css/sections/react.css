@@ -11,9 +11,8 @@ main > section#react {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  -moz-column-gap: var(--spacing-5xl);
-  column-gap: var(--spacing-5xl);
-  row-gap: var(--spacing-7xl);
+  -moz-column-gap: var(--spacing-7xl);
+  column-gap: var(--spacing-7xl);
   margin-top: var(--spacing-8xl);
 }
 .react-content :is(h3, h4) {
@@ -22,37 +21,65 @@ main > section#react {
 
 /* ----- react-mockup ----- */
 .react-mockup {
-  flex-shrink: 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-7xl);
+  /* max-width: 720px; */
 }
 
 /* react-mockup__item */
 .react-mockup__item-box:first-child {
   display: flex;
   justify-content: space-between;
+  gap: var(--spacing-3xl);
   width: 100%;
 }
+.react-mockup__item-box img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(var(--shadow-mockup));
+}
 .react-mockup__item-tablet {
-  width: calc(912px / 1.7);
-  height: calc(670px / 1.7);
+  /* width: 75%; */
+  flex: 1;
+  max-width: 500px;
 }
 .react-mockup__item-mobile {
-  width: calc(344px / 1.7);
-  height: calc(670px / 1.7);
+  /* width: 25%; */
+  flex: 1;
+  max-width: 175px;
 }
 .react-mockup__item-pc {
-  width: calc(1280px / 1.7);
-  height: calc(1066px / 1.7);
+  width: 100%;
+}
+
+/* ----- react-detail ----- */
+.react-detail {
+  width: 600px;
+}
+.react-detail__title {
+  font-size: var(--font-size-section-title);
+}
+.react-detail__inner {
+  margin-top: var(--spacing-sm);
+}
+
+/* ----- react-detail__app-intro ----- */
+.react-detail__app-intro p {
+  font-size: var(--font-size-xl);
+  line-height: 1.6em;
+  text-align: left;
+  word-break: keep-all;
 }
 
 /* react-detail__btn-box */
 .react-detail__btn-box {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-3xl);
+  margin-top: var(--spacing-2xl);
 }
 .react-detail__btn {
   display: inline-block;
@@ -73,25 +100,6 @@ main > section#react {
   content: attr(data-label-pc);
   font-size: var(--font-size-lg);
   font-weight: 500;
-}
-
-/* ----- react-detail ----- */
-.react-detail {
-  width: 590px;
-}
-.react-detail__title {
-  font-size: var(--font-size-section-title);
-}
-.react-detail__inner {
-  margin-top: var(--spacing-sm);
-}
-
-/* react-detail__app-intro */
-.react-detail__app-intro p {
-  font-size: var(--font-size-xl);
-  line-height: 1.6em;
-  text-align: left;
-  word-break: keep-all;
 }
 
 /* ----- react-detail__format ----- */
@@ -235,17 +243,10 @@ main > section#react {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-3xl);
 }
-.react-detail__work-list-title {
-  text-align: center;
-}
-.react-detail__work-list-title .text-light {
-  font-weight: 400;
-}
 
 /* react-detail__work-list-table */
 .react-detail__work-list-table-wrapper {
   width: 100%;
-  max-width: 560px;
   margin: 0 auto;
 }
 .react-detail__work-list-table thead th {

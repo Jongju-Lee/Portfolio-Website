@@ -44,6 +44,7 @@
   --shadow-util-btn: 0 2px 8px rgba(0, 0, 0, 0.2);
   --shadow-accent: 0 0 12px rgba(0, 173, 83, 0.3);
   --shadow-accent-light: 0 10px 25px rgba(0, 173, 83, 0.06), 0 4px 10px rgba(0, 0, 0, 0.02);
+  --shadow-mockup: 0 10px 10px rgba(0, 0, 0, 0.2);
 
   /* --------- SPACING --------- */
   --spacing-xs: 4px;
@@ -94,7 +95,6 @@
   --color-well-life-text-primary: #000000;
   --color-well-life-text-secondary: #6B6B6B;
   --color-well-life-text-tertiary: #A6A6A6;
-  --shadow-well-life: 0 10px 20px rgba(0, 0, 0, 0.2);
 
   /* React 섹션 전용 */
   --react-text-color: #1E2723;

@@ -907,22 +907,14 @@
                 <div class="react-mockup__item-mobile">
                   <img src="./images/react/mockup-mobile.png" alt="모바일 프리뷰" loading="lazy">
                 </div>
+                <!-- <img class="react-mockup__item-img--mobile" src="./images/react/mockup-mobile.png" alt="모바일 프리뷰" loading="lazy">
+                <img class="react-mockup__item-img--tablet" src="./images/react/mockup-tablet.png" alt="태블릿 프리뷰" loading="lazy"> -->
               </div>
               <div class="react-mockup__item-box">
                 <div class="react-mockup__item-pc">
                   <img src="./images/react/mockup-pc.png" alt="노트북 프리뷰" loading="lazy">
                 </div>
-              </div>
-              <!-- react-detail__btn-box -->
-              <div class="react-detail__btn-box">
-                <a class="react-detail__btn only-pc font-en" href="./portfolio/taskflow/mockup/mobile.html"
-                  data-label-pc="Mobile"></a>
-                <a class="react-detail__btn only-pc font-en" href="./portfolio/taskflow/mockup/tablet.html"
-                  data-label-pc="Tablet"></a>
-                <div uk-lightbox>
-                  <a class="react-detail__btn font-en" href="https://taskflow-todo-list.netlify.app/"
-                    data-label-pc="PC" data-label-tablet="View-App" data-type="iframe"></a>
-                </div>
+                <!-- <img class="react-mockup__item-img--pc" src="./images/react/mockup-pc.png" alt="PC 프리뷰" loading="lazy"> -->
               </div>
             </figure>
             <!-- ########## react-detail ########## -->
@@ -931,6 +923,7 @@
                 <span>TaskFlow</span>
               </h3>
               <div class="react-detail__inner">
+                <!-- react-detail__app-intro -->
                 <section class="react-detail__app-intro">
                   <p>
                     누구나, 언제 어디서나 어떤 기기에서도 편리하게 사용 가능하도록 설계한 <b class="font-en">React</b>기반의 <b
@@ -940,7 +933,19 @@
                       & Drop</b><span class="font-en">(dnd-kit)</span>으로 할 일의 순서를 직관적으로 변경이 가능합니다. 또한, 키보드 사용자 편의성을 위해
                     단축키로 <b class="font-kr">빠르고 편리한 조작</b>이 가능하도록 제작한 웹 앱 입니다.
                   </p>
+                  <!-- react-detail__btn-box -->
+                  <div class="react-detail__btn-box">
+                    <a class="react-detail__btn only-pc font-en" href="./portfolio/taskflow/mockup/mobile.html"
+                      data-label-pc="Mobile"></a>
+                    <a class="react-detail__btn only-pc font-en" href="./portfolio/taskflow/mockup/tablet.html"
+                      data-label-pc="Tablet"></a>
+                    <div uk-lightbox>
+                      <a class="react-detail__btn font-en" href="https://taskflow-todo-list.netlify.app/"
+                        data-label-pc="PC" data-label-tablet="View-App" data-type="iframe"></a>
+                    </div>
+                  </div>
                 </section>
+
                 <!-- ########## react-detail__format ########## -->
                 <section class="react-detail__format">
                   <div class="react-detail__theme">
@@ -975,17 +980,16 @@
                         </ul>
                       </div>
                       <div class="react-detail__typo-desc-list-box">
-                        <h5 class="react-detail__typo-desc-title">Font-Size<span class="text-small">(1.0rem =
-                            10px)</span></h5>
+                        <h5 class="react-detail__typo-desc-title">Font-Size</h5>
                         <ul class="react-detail__typo-desc-list">
                           <li class="react-detail__typo-desc-list-item">
-                            <span class="font-en">PC</span>-<b class="font-en">1.8rem</b>
+                            <span class="font-en">PC</span>-<b class="font-en">1.125 rem</b>
                           </li>
                           <li class="react-detail__typo-desc-list-item">
-                            <span class="font-en">Tablet</span>-<b class="font-en">1.6rem</b>
+                            <span class="font-en">Tablet</span>-<b class="font-en">1 rem</b>
                           </li>
                           <li class="react-detail__typo-desc-list-item">
-                            <span class="font-en">Mobile</span>-<b class="font-en">1.4rem</b>
+                            <span class="font-en">Mobile</span>-<b class="font-en">0.875 rem</b>
                           </li>
                         </ul>
                       </div>
@@ -1002,17 +1006,7 @@
                     <ul class="react-detail__function-list">
                       <li class="react-detail__function-list-item">
                         <em class="dot"></em>
-                        <p><b><span class="font-kr">반응형</span> <span class="font-en">UI</span></b><span
-                            class="font-en">(Mobile,
-                            Tablet, PC)</span></p>
-                      </li>
-                      <li class="react-detail__function-list-item">
-                        <em class="dot"></em>
                         <p><b class="font-kr">달력을 연동</b>하여 날짜별로 <span class="font-en">List</span> 관리</p>
-                      </li>
-                      <li class="react-detail__function-list-item">
-                        <em class="dot"></em>
-                        <p><b class="font-en">Drag & Drop</b>으로 할 일 순서 변경</p>
                       </li>
                       <li class="react-detail__function-list-item">
                         <em class="dot"></em>
@@ -1024,11 +1018,9 @@
                       </li>
                     </ul>
                   </div>
+
                   <!-- ########## react-detail__work-list ########## -->
                   <div class="react-detail__work-list">
-                    <h4 class="react-detail__work-list-title title"><span class="font-en">TaskFlow</span>
-                      <span class="text-light">프로젝트 개요</span>
-                    </h4>
                     <div class="react-detail__work-list-table-wrapper project-table-wrapper">
                       <!-- react-detail__work-list-table -->
                       <table class="react-detail__work-list-table project-table">
