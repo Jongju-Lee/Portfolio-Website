@@ -54,6 +54,15 @@
   /* ########## END - LAYOUT ########## */
 
 
+  /* ########## COMMON COMPONENTS ########## */
+  .project-row__left,
+  .project-row__right {
+    max-width: 90%;
+    min-width: 320px;
+  }
+  /* ########## END - COMMON COMPONENTS ########## */
+
+
   /* ########## SECTION - HEADER ########## */
   header {
     position: fixed;
@@ -401,15 +410,14 @@
     gap: var(--spacing-4xl);
   }
   .react-row__mockup-item {
-    max-width: 120px;
+    /* max-width: 120px; */
   }
   .react-row__mockup-item:nth-child(2) {
     margin-top: 0;
   }
 
   /* react-function */
-  .react-function {
-    margin: 0 auto;
+  .react-function__list-item .dot {
   }
 
   /* react-table */
@@ -470,14 +478,13 @@
   /* ----- web-content__mockup ----- */
   /* web-content__mockup-items */
   .web-content__mockup-items {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4xl);
   }
   .web-content__mockup-item {
     margin: 0 auto;
     filter: drop-shadow(var(--shadow-mockup));
-  }
-  .web-content__mockup-item:not(:last-child) {
-    margin-bottom: var(--spacing-3xl);
   }
   .web-content__mockup-item img {
     display: block;
@@ -522,7 +529,7 @@
     font-size: var(--spacing-3xl);
     text-align: center;
   }
-  .web-content__subtitle::before {
+  .project-subtitle::before {
     top: 20px;
   }
 
@@ -695,7 +702,6 @@
 
 /* ########## SMALL MOBILE (480px 이하) ########## */
 @media (max-width: 480px) {
-
   /* ########## Project Table 공통 반응형 ########## */
   .project-table {
     font-size: var(--font-size-sm);

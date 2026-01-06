@@ -141,10 +141,13 @@
   max-width: 1200px;
   margin: var(--spacing-7xl) auto 0;
 }
+.project-row.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
 .project-row__left,
 .project-row__right {
   flex: 1;
-  max-width: 560px;
+  max-width: 600px;
   min-width: 460px;
 }
 
@@ -154,6 +157,14 @@
   overflow: hidden;
   border-radius: var(--spacing-md);
   box-shadow: var(--shadow-normal);
+}
+
+/* ----- project-table-caption ----- */
+.project-table-caption {
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  text-align: center;
 }
 
 /* ----- project-table ----- */
@@ -189,6 +200,7 @@
   text-align: center;
   width: 100px;
   border-right: 1px solid var(--color-line);
+  white-space: nowrap;
 }
 .project-table tbody td {
   background-color: var(--color-background-white);
@@ -229,6 +241,32 @@
 .project-mockup-label {
   font-size: var(--font-size-lg);
   color: var(--text-color-gray);
+}
+
+/* ----- project-subtitle ----- */
+.project-subtitle {
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  padding-left: 18px;
+  word-break: keep-all;
+}
+.project-subtitle::before {
+  content: "";
+  position: absolute;
+  top: calc(50% + 4px);
+  transform: translateY(-50%);
+  left: 0;
+  width: 8px;
+  height: 8px;
+}
+
+/* ----- project-mockup-mobile-items ----- */
+/* PC에서 숨김, Mobile에서 표시 (반응형에서 처리) */
+.project-mockup-mobile-items {
+  display: none;
 }
 /* ########## END - Project Common Components ########## */
 

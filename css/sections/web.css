@@ -36,7 +36,6 @@
   line-height: 1.8em;
   text-align: left;
   word-break: keep-all;
-  padding-left: var(--spacing-lg);
 }
 
 /* 원형 아이콘 공통 스타일 */
@@ -172,29 +171,13 @@
   line-height: 1.2em;
   margin-bottom: var(--spacing-3xl);
 }
-.web-content__subtitle {
-  position: relative;
-  font-size: var(--font-size-2xl);
-  font-weight: 600;
-  margin-bottom: var(--spacing-md);
-  padding-top: var(--spacing-sm);
-  padding-left: 18px;
-  word-break: keep-all;
-}
+/* web-content__subtitle - 색상 */
 .web-content__subtitle::before {
-  content: "";
-  position: absolute;
-  top: calc(50% + 3px);
-  transform: translateY(-50%);
-  left: 0;
-  width: 8px;
-  height: 8px;
   background-color: var(--color-well-life-primary);
 }
 .web-content__text {
   font-size: var(--font-size-xl);
   line-height: 1.8em;
-  padding-left: 18px;
   text-align: left;
   word-break: keep-all;
 }
@@ -234,7 +217,6 @@
 }
 
 /* web-content__color-circles */
-
 .web-content__color-circle--primary {
   background-color: var(--color-well-life-primary);
 }
@@ -248,7 +230,6 @@
 
 /* ----- web-content__typography ----- */
 .web-content__typography {
-  flex-wrap: wrap-reverse;
   align-items: center;
 }
 

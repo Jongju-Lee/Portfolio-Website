@@ -233,23 +233,13 @@
     display: none;
   }
 
-  /* project-row 반응형 */
-  .project-row {
-    flex-direction: column;
-    align-items: center;
+  /* react-function */
+  .react-function__list-item {
+    gap: var(--spacing-sm);
   }
-  .project-row__left,
-  .project-row__right {
-    min-width: auto;
-    max-width: 100%;
-    width: 100%;
+  .react-function__list-item .dot {
+    margin-bottom: 1px;
   }
-
-  /* react-row__mockups--mobile */
-  .react-row__mockup-item {
-    max-width: 140px;
-  }
-
   /* ########## END - REACT ########## */
 
 
@@ -264,11 +254,6 @@
     height: 6px;
   }
 
-  /* 설명 텍스트 공통 스타일 */
-  .web-content__section-desc {
-    padding-left: var(--spacing-md);
-  }
-
   /* .web-content__link */
   .web-content__link--mobile,
   .web-content__link--tablet {
@@ -279,10 +264,10 @@
   }
 
   /* web-project__desc */
-  .web-content__subtitle {
+  .project-subtitle {
     padding-left: var(--spacing-lg);
   }
-  .web-content__subtitle::before {
+  .project-subtitle::before {
     width: 7px;
     height: 7px;
   }
