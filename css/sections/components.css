@@ -236,11 +236,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
+  filter: drop-shadow(var(--shadow-mockup));
+}
+.project-mockup-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* ----- project-mockup-item ----- */
+.project-mockup-item--pc {
+  width: 90%;
+}
+.project-mockup-item--tablet {
+  width: 85%;
+}
+.project-mockup-item--mobile {
+  width: 70%;
 }
 .project-mockup-label {
   font-size: var(--font-size-lg);
   color: var(--text-color-gray);
+}
+
+/* ----- project-title ----- */
+.project-title {
+  font-size: var(--font-size-section-title);
+  font-weight: 800;
+  line-height: 1.2em;
+  margin-bottom: var(--spacing-3xl);
 }
 
 /* ----- project-subtitle ----- */
@@ -263,8 +287,16 @@
   height: 8px;
 }
 
+/* ----- project-desc ----- */
+.project-desc {
+  font-size: var(--font-size-xl);
+  line-height: 1.7em;
+  text-align: left;
+  word-break: keep-all;
+}
+
 /* ----- project-mockup-mobile-items ----- */
-/* PC에서 숨김, Mobile에서 표시 (반응형에서 처리) */
+/* PC에서 숨김, Mobile에서 표시 */
 .project-mockup-mobile-items {
   display: none;
 }

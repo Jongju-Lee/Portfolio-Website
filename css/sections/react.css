@@ -24,9 +24,6 @@ main > section#react {
   height: auto;
   filter: drop-shadow(var(--shadow-mockup));
 }
-.react-mockup__mobile-items {
-  display: none;
-}
 
 /* react-mockup__btn-box */
 .react-mockup__btn-box {
@@ -73,21 +70,10 @@ main > section#react {
 .react-info__right {
   align-self: end;
 }
-.react-intro__title {
-  font-size: var(--font-size-section-title);
-  font-weight: 800;
-  line-height: 1.2em;
-  margin-bottom: var(--spacing-3xl);
-}
+
 /* react-intro__subtitle - 색상 */
 .react-intro__subtitle::before {
   background-color: var(--color-react-primary);
-}
-.react-intro__desc {
-  font-size: var(--font-size-xl);
-  line-height: 1.7em;
-  text-align: left;
-  word-break: keep-all;
 }
 
 /* react-function(App 주요 기능) */

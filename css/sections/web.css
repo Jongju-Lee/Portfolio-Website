@@ -91,11 +91,6 @@
   height: auto;
 }
 
-/* web-content__mockup-items */
-.web-content__mockup-items {
-  display: none;
-}
-
 /* ----- web-content__links ----- */
 .web-content__links {
   display: flex;
@@ -164,22 +159,9 @@
   border-radius: var(--spacing-md);
 }
 
-/* web-content__desc */
-.web-content__title {
-  font-size: var(--font-size-section-title);
-  font-weight: 800;
-  line-height: 1.2em;
-  margin-bottom: var(--spacing-3xl);
-}
 /* web-content__subtitle - 색상 */
 .web-content__subtitle::before {
   background-color: var(--color-well-life-primary);
-}
-.web-content__text {
-  font-size: var(--font-size-xl);
-  line-height: 1.8em;
-  text-align: left;
-  word-break: keep-all;
 }
 
 /* web-content__overview */
@@ -252,8 +234,7 @@
   max-width: 520px;
   min-width: 460px;
 }
-.web-content__typo-mockup-item img {
+.web-content__typo-mockup-item {
   width: 200px;
   height: auto;
-  filter: drop-shadow(var(--shadow-mockup));
 }

@@ -54,13 +54,32 @@
   /* ########## END - LAYOUT ########## */
 
 
-  /* ########## COMMON COMPONENTS ########## */
+  /* ########## 공통 COMPONENTS ########## */
   .project-row__left,
   .project-row__right {
     max-width: 90%;
     min-width: 320px;
   }
-  /* ########## END - COMMON COMPONENTS ########## */
+
+  /* project-mockup-mobile-items */
+  .project-mockup-mobile-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-4xl);
+  }
+
+  /* project-title */
+  .project-title {
+    font-size: var(--font-size-section-title-mobile);
+    text-align: center;
+  }
+
+  /* project-subtitle */
+  .project-subtitle::before {
+    top: 20px;
+  }
+  /* ########## END - 공통 COMPONENTS ########## */
 
 
   /* ########## SECTION - HEADER ########## */
@@ -369,27 +388,8 @@
   .react-mockup__total {
     display: none;
   }
-  .react-mockup__mobile-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-xl);
-  }
-  .react-mockup__mobile-items img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    filter: drop-shadow(var(--shadow-mockup));
-  }
-  .react-mockup__btn-box {
-    gap: var(--spacing-lg);
-  }
   .react-mockup__btn {
     width: 120px;
-    padding: 6px 0;
-  }
-  .react-mockup__btn::before {
-    font-size: var(--font-size-sm);
   }
 
   /* react-row */
@@ -397,27 +397,20 @@
     margin-top: var(--spacing-6xl);
   }
 
-  /* react-intro */
-  .react-intro__title {
-    font-size: var(--font-size-section-title-mobile);
-    text-align: center;
-  }
-
   /* react-row__mockups--mobile */
   .react-row__mockups--mobile {
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: var(--spacing-4xl);
-  }
-  .react-row__mockup-item {
-    /* max-width: 120px; */
   }
   .react-row__mockup-item:nth-child(2) {
     margin-top: 0;
   }
 
-  /* react-function */
-  .react-function__list-item .dot {
+  /* react-row__mockup--tablet */
+  .react-row__mockup--tablet {
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   /* react-table */
@@ -433,13 +426,6 @@
   .react-format__color-box {
     margin: var(--spacing-md) auto 0;
   }
-
-  /* react-row__mockup--tablet */
-  .react-row__mockup--tablet {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
   /* ########## END - REACT ########## */
 
 
@@ -475,32 +461,6 @@
     margin-top: var(--spacing-6xl);
   }
 
-  /* ----- web-content__mockup ----- */
-  /* web-content__mockup-items */
-  .web-content__mockup-items {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-4xl);
-  }
-  .web-content__mockup-item {
-    margin: 0 auto;
-    filter: drop-shadow(var(--shadow-mockup));
-  }
-  .web-content__mockup-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .web-content__mockup-item--pc {
-    width: 100%;
-  }
-  .web-content__mockup-item--tablet {
-    width: 90%;
-  }
-  .web-content__mockup-item--mobile {
-    width: 70%;
-  }
-
   /* web-content__mockup-total */
   .web-content__mockup-total {
     display: none;
@@ -512,8 +472,7 @@
     margin-top: var(--spacing-4xl);
   }
   .web-content__link { 
-    width: 90px;
-    height: 30px;
+    width: 100px;
   }
   .web-content__link--mobile,
   .web-content__link--tablet {
@@ -521,16 +480,6 @@
   }
   .web-content__link--pc::before {
     content: attr(data-label-mobile);
-  }
-
-  /* ----- web-content__info ----- */
-  /* web-content__desc */
-  .web-content__title {
-    font-size: var(--spacing-3xl);
-    text-align: center;
-  }
-  .project-subtitle::before {
-    top: 20px;
   }
 
   /* ----- web-content__color-theme ----- */
