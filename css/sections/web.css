@@ -4,7 +4,7 @@
 
 /* ========== 공통 클래스 ========== */
 /* 섹션 컨테이너 레이아웃 */
-.web-project__section-container {
+.web-content__section-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,21 +16,21 @@
 }
 
 /* Flex 아이템 공통 크기 */
-.web-project__flex-item {
+.web-content__flex-item {
   flex: 1;
   max-width: 560px;
   min-width: 460px;
 }
 
 /* 컬러, 타이포 서브타이틀 공통 스타일 */
-.web-project__section-subtitle {
+.web-content__section-subtitle {
   position: relative;
   font-size: var(--font-size-xl);
   font-weight: 600;
   margin-bottom: var(--spacing-md);
   padding-left: var(--spacing-lg);
 }
-.web-project__section-subtitle::before {
+.web-content__section-subtitle::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -42,7 +42,7 @@
 }
 
 /* 섹션 타이틀 공통 스타일 */
-.web-project__section-title {
+.web-content__section-title {
   margin-bottom: var(--spacing-3xl);
   font-size: var(--font-size-3xl);
   font-weight: 600;
@@ -50,7 +50,7 @@
 }
 
 /* 설명 텍스트 공통 스타일 */
-.web-project__section-desc {
+.web-content__section-desc {
   font-size: var(--font-size-lg);
   line-height: 1.8em;
   text-align: left;
@@ -59,13 +59,13 @@
 }
 
 /* 원형 아이콘 공통 스타일 */
-.web-project__circles-container {
+.web-content__circles-container {
   display: flex;
   justify-content: center;
   gap: var(--spacing-5xl);
   margin-bottom: var(--spacing-3xl);
 }
-.web-project__circle-item {
+.web-content__circle-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,38 +73,31 @@
   width: 66px;
   font-size: var(--font-size-sm);
 }
-.web-project__circle-base {
+.web-content__circle-base {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   box-shadow: var(--shadow-normal);
 }
-.web-project__circle-label {
+.web-content__circle-label {
   font-weight: 400;
   color: var(--text-color-dark-gray);
   text-align: center;
   line-height: 1.3em;
 }
-.web-project__circle-code {
+.web-content__circle-code {
   color: var(--text-color-light-gray);
 }
 /* ========== END - 공통 클래스 ========== */
 
 /* ----- web-content ----- */
 .web-content {
-  margin-top: var(--spacing-8xl);
-}
-
-/* ----- web-project ----- */
-.web-project {
-  display: flex;
+  /* 공통 스타일은 .project-content 참고 */
   flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
 }
 
-/* ----- web-project__mockup ----- */
-.web-project__mockup {
+/* ----- web-content__mockup ----- */
+.web-content__mockup {
   position: relative;
   display: flex;
   justify-content: center;
@@ -113,30 +106,30 @@
   margin: 0 auto;
 }
 
-/* web-project__mockup-total */
-.web-project__mockup-total {
+/* web-content__mockup-total */
+.web-content__mockup-total {
   max-width: 1200px;
 }
-.web-project__mockup-total img {
+.web-content__mockup-total img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* web-project__mockup-items */
-.web-project__mockup-items {
+/* web-content__mockup-items */
+.web-content__mockup-items {
   display: none;
 }
 
-/* ----- web-project__links ----- */
-.web-project__links {
+/* ----- web-content__links ----- */
+.web-content__links {
   display: flex;
   justify-content: center;
   gap: var(--spacing-sm);
   width: 100%;
   margin-top: var(--spacing-2xl);
 }
-.web-project__link {
+.web-content__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,58 +144,58 @@
   font-family: var(--font-EN);
   transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
-.web-project__link--pc {
+.web-content__link--pc {
   background-color: var(--color-well-life-primary);
   color: var(--text-color-white);
 }
-.web-project__link--pc::before {
+.web-content__link--pc::before {
   content: attr(data-label-pc);
 }
-.web-project__link--pc:hover {
+.web-content__link--pc:hover {
   background-color: var(--color-background-white);
   border-color: var(--color-well-life-primary);
   color: var(--color-well-life-primary);
 }
-.web-project__link--mobile,
-.web-project__link--tablet {
+.web-content__link--mobile,
+.web-content__link--tablet {
   background-color: var(--color-background-white);
   color: var(--color-well-life-primary);
   border-color: var(--color-well-life-primary);
 }
-.web-project__link--mobile:hover,
-.web-project__link--tablet:hover {
+.web-content__link--mobile:hover,
+.web-content__link--tablet:hover {
   background-color: var(--color-well-life-primary);
   color: var(--text-color-white);
   border-color: transparent;
 }
-.web-project__link--design {
+.web-content__link--design {
   border-color: transparent;
   color: var(--text-color-white);
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: var(--text-color-body);
 }
-.web-project__link--design:hover {
+.web-content__link--design:hover {
   background-color: var(--color-background-white);
   color: var(--text-color-body);
   border-color: var(--text-color-body);
 }
 
-/* ----- web-project__info ----- */
-.web-project__info {
+/* ----- web-content__info ----- */
+.web-content__info {
   min-height: 390px;
   background-color: var(--color-background-light);
   border-radius: var(--spacing-md);
 }
 
-/* web-project__desc */
-.web-project__title {
+/* web-content__desc */
+.web-content__title {
   font-size: var(--font-size-section-title);
   font-weight: 800;
   line-height: 1.2em;
   margin-bottom: var(--spacing-2xl);
 }
-.web-project__subtitle {
+.web-content__subtitle {
   position: relative;
   font-size: var(--font-size-2xl);
   font-weight: 600;
@@ -211,7 +204,7 @@
   padding-left: 18px;
   word-break: keep-all;
 }
-.web-project__subtitle::before {
+.web-content__subtitle::before {
   content: "";
   position: absolute;
   top: calc(50% + 3px);
@@ -221,7 +214,7 @@
   height: 8px;
   background-color: var(--color-well-life-primary);
 }
-.web-project__text {
+.web-content__text {
   font-size: var(--font-size-xl);
   line-height: 1.8em;
   padding-left: 18px;
@@ -229,79 +222,79 @@
   word-break: keep-all;
 }
 
-/* web-project__overview */
-.web-project__overview {
+/* web-content__overview */
+.web-content__overview {
   align-self: end;
 }
 
-/* web-project__overview-table - 색상 전용 */
-.web-project__overview-table thead th {
+/* web-content__overview-table - 색상 전용 */
+.web-content__overview-table thead th {
   background-color: var(--color-well-life-primary);
 }
-.web-project__overview-table tbody tr:hover th,
-.web-project__overview-table tbody tr:hover td {
+.web-content__overview-table tbody tr:hover th,
+.web-content__overview-table tbody tr:hover td {
   background-color: var(--color-well-life-hover);
 }
 
-/* web-project__achievement-list - 색상 전용 */
-.web-project__achievement-list li::before {
+/* web-content__achievement-list - 색상 전용 */
+.web-content__achievement-list li::before {
   background-color: var(--color-well-life-primary);
 }
 
-/* ----- web-project__color-theme ----- */
-.web-project__color-theme {
+/* ----- web-content__color-theme ----- */
+.web-content__color-theme {
   align-items: center;
 }
 
-/* web-project__color-mockup */
-.web-project__color-mockup {
+/* web-content__color-mockup */
+.web-content__color-mockup {
   height: auto;
 }
-.web-project__color-mockup img {
+.web-content__color-mockup img {
   width: 100%;
   height: auto;
   filter: drop-shadow(var(--shadow-mockup));
 }
 
-/* web-project__color-circles */
+/* web-content__color-circles */
 
-.web-project__color-circle--primary {
+.web-content__color-circle--primary {
   background-color: var(--color-well-life-primary);
 }
-.web-project__color-circle--secondary {
+.web-content__color-circle--secondary {
   background-color: var(--color-well-life-secondary);
 }
-.web-project__color-circle--bg {
+.web-content__color-circle--bg {
   background-color: var(--color-background-white);
   border: 1px solid var(--color-line);
 }
 
-/* ----- web-project__typography ----- */
-.web-project__typography {
+/* ----- web-content__typography ----- */
+.web-content__typography {
   flex-wrap: wrap-reverse;
   align-items: center;
 }
 
-/* web-project__typo-circles */
-.web-project__typo-circle--primary {
+/* web-content__typo-circles */
+.web-content__typo-circle--primary {
   background-color: var(--color-well-life-text-primary);
 }
-.web-project__typo-circle--secondary {
+.web-content__typo-circle--secondary {
   background-color: var(--color-well-life-text-secondary);
 }
-.web-project__typo-circle--tertiary {
+.web-content__typo-circle--tertiary {
   background-color: var(--color-well-life-text-tertiary);
 }
 
-/* web-project__typo-mockups */
-.web-project__typo-mockups {
+/* web-content__typo-mockups */
+.web-content__typo-mockups {
   flex: 1;
   display: flex;
   justify-content: space-between;
   max-width: 520px;
   min-width: 460px;
 }
-.web-project__typo-mockups img {
+.web-content__typo-mockups img {
   width: 211px;
   height: 430px;
   filter: drop-shadow(var(--shadow-mockup));

@@ -1,3 +1,4 @@
+/* ########## Section - React ########## */
 main > section#react {
   background-color: var(--react-background-color);
   color: var(--react-text-color);
@@ -8,94 +9,37 @@ main > section#react {
 
 /* ----- react-content ----- */
 .react-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  -moz-column-gap: var(--spacing-7xl);
-  column-gap: var(--spacing-7xl);
-  margin-top: var(--spacing-8xl);
-}
-.react-content :is(h3, h4) {
-  font-weight: 700;
+  /* 공통 스타일은 .project-content 참고 */
 }
 
-/* ----- react-mockup ----- */
+/* ########## react-mockup (메인 목업) ########## */
 .react-mockup {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-7xl);
-  max-width: 1200px;
+  gap: var(--spacing-3xl);
+  width: 100%;
+  max-width: 900px;
 }
-
-/* react-mockup__item */
-.react-mockup__item-box {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--spacing-6xl);
+.react-mockup__total {
   width: 100%;
 }
-.react-mockup__item-box img {
+.react-mockup__total img {
   width: 100%;
   height: auto;
   filter: drop-shadow(var(--shadow-mockup));
 }
-
-
-.react-mockup__item-box-mobile {
-  justify-content: space-around;
-}
-.react-mockup__item-mobile {
-  max-width: 240px;
-}
-.react-mockup__item-mobile:nth-child(1) {
-
-}
-.react-mockup__item-mobile:nth-child(2) {
-  margin-top: var(--spacing-6xl);
+.react-mockup__mobile-items {
+  display: none;
 }
 
-
-/* .react-mockup__item-tablet {
-  flex: 1;
-  max-width: 500px;
-}
-.react-mockup__item-mobile {
-  flex: 1;
-  max-width: 280px;
-}
-.react-mockup__item-pc {
-  width: 100%;
-} */
-
-/* ----- react-detail ----- */
-.react-detail {
-  flex: 1;
-}
-.react-detail__title {
-  font-size: var(--font-size-section-title);
-}
-.react-detail__inner {
-  margin-top: var(--spacing-sm);
-}
-
-/* ----- react-detail__app-intro ----- */
-.react-detail__app-intro p {
-  font-size: var(--font-size-xl);
-  line-height: 1.6em;
-  text-align: left;
-  word-break: keep-all;
-}
-
-/* react-detail__btn-box */
-.react-detail__btn-box {
+/* react-mockup__btn-box */
+.react-mockup__btn-box {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-3xl);
-  margin-top: var(--spacing-2xl);
+  gap: var(--spacing-xl);
 }
-.react-detail__btn {
+.react-mockup__btn {
   display: inline-block;
   width: 130px;
   padding: var(--spacing-sm) 0;
@@ -106,41 +50,130 @@ main > section#react {
   opacity: 1;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
-.react-detail__btn:hover {
+.react-mockup__btn:hover {
   opacity: 0.7;
   transform: scale(1.05);
 }
-.react-detail__btn::before {
+.react-mockup__btn::before {
   content: attr(data-label-pc);
   font-size: var(--font-size-lg);
   font-weight: 500;
 }
 
-/* ----- react-detail__format ----- */
-.react-detail__format {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: var(--spacing-3xl);
+/* ########## react-row (Row 1~3 공통) ########## */
+.react-row {
+  margin-top: var(--spacing-8xl);
 }
-.react-detail__format > div {
+.react-row img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(var(--shadow-mockup));
+}
+
+/* ########## Row 1: react-intro + 모바일 목업 ########## */
+.react-intro__title {
+  font-size: var(--font-size-section-title);
+  font-weight: 700;
+}
+.react-intro__subtitle {
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  color: var(--react-color-primary);
+}
+.react-intro__desc {
+  margin-top: var(--spacing-xl);
+  font-size: var(--font-size-lg);
+  line-height: 1.7em;
+  word-break: keep-all;
+}
+
+/* react-row__mockups--mobile */
+.react-row__mockups--mobile {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+.react-row__mockup-item {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  align-items: center;
+  gap: var(--spacing-sm);
+  max-width: 160px;
 }
-.react-detail__format .title {
+.react-row__mockup-item:nth-child(2) {
+  margin-top: var(--spacing-5xl);
+}
+.react-row__mockup-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-gray);
+}
+
+/* ########## Row 2: PC 목업 + 주요기능/테이블 ########## */
+.react-row__mockup--pc img {
+  border-radius: var(--spacing-md);
+}
+
+/* react-function */
+.react-function {
+  margin-bottom: var(--spacing-3xl);
+}
+.react-function__title {
   font-size: var(--font-size-2xl);
+  font-weight: 700;
 }
-.react-detail__format .color-box {
+.react-function__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+}
+.react-function__list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+.react-function__list-item .dot {
+  display: inline-block;
+  width: calc(18px / 2);
+  height: calc(18px / 2);
+  background-image: url(../../images/react/dot.png);
+  background-size: 100% 100%;
+}
+
+/* react-table - 색상 전용 */
+.react-table__content thead th {
+  background-color: var(--react-color-primary);
+}
+.react-table__content tbody tr:hover th,
+.react-table__content tbody tr:hover td {
+  background-color: var(--react-background-color);
+}
+.react-table__achievement-list li::before {
+  background-color: var(--react-color-primary);
+}
+
+/* ########## Row 3: 컬러/타이포 + 태블릿 목업 ########## */
+.react-format {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+}
+.react-format__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+}
+.react-format__color-box {
   display: flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: var(--spacing-md);
   border-radius: var(--spacing-xs);
   overflow: hidden;
   box-shadow: var(--shadow-color-box);
 }
-.react-detail__format .color-item {
+.react-format__color-item {
   width: 90px;
   padding: var(--spacing-xs) 0;
   font-family: var(--font-EN);
@@ -149,129 +182,62 @@ main > section#react {
   line-height: 1em;
   text-align: center;
 }
-
-/* ----- react-detail__theme ----- */
-.react-detail__theme {
-  width: 270px;
-}
-.react-detail__theme-color-item:nth-child(1) {
+.react-format__color-item:nth-child(1) {
   background-color: var(--react-color-primary);
 }
-.react-detail__theme-color-item:nth-child(2) {
+.react-format__color-item:nth-child(2) {
   background-color: #FCFCFC;
 }
-.react-detail__theme-color-item:nth-child(3) {
+.react-format__color-item:nth-child(3) {
   background-color: #DFDFDF;
 }
-
-/* ----- react-detail__typo ----- */
-.react-detail__typo-color-item {
-  color: var(--text-color-white);
-}
-.react-detail__typo-color-item:nth-child(1) {
-  background-color: #1E2723;
-}
-.react-detail__typo-color-item:nth-child(2) {
-  background-color: #707070;
-}
-.react-detail__typo-color-item:nth-child(3) {
-  background-color: #8F8FA4;
-}
-
-/* react-detail__typo-desc */
-.react-detail__typo-desc {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-}
-.react-detail__typo-desc-title {
-  font-family: var(--font-EN);
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-}
-.react-detail__typo-desc-title .text-small {
-  margin-left: var(--spacing-xs);
-  font-size: var(--font-size-sm);
+.react-format__desc {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-md);
+  line-height: 1.6em;
   color: var(--text-color-gray);
 }
-.react-detail__typo-desc-list {
+
+/* react-format__typo */
+.react-format__typo-item {
+  width: 90px;
+  padding: var(--spacing-xs) 0;
+  font-family: var(--font-EN);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  line-height: 1em;
+  text-align: center;
+  color: var(--text-color-white);
+}
+.react-format__typo-item:nth-child(1) {
+  background-color: #1E2723;
+}
+.react-format__typo-item:nth-child(2) {
+  background-color: #707070;
+}
+.react-format__typo-item:nth-child(3) {
+  background-color: #8F8FA4;
+}
+.react-format__typo-desc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+.react-format__typo-list-title {
+  font-family: var(--font-EN);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+.react-format__typo-list {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
   margin-top: var(--spacing-xs);
-}
-.react-detail__typo-desc-list-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-.react-detail__typo-desc-list-item b {
-  font-weight: 500;
-}
-.react-detail__typo-desc-list-item b.font-kr {
-  font-weight: 600;
-}
-.react-detail__typo-desc-list-item::before {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: var(--react-color-primary);
+  font-size: var(--font-size-md);
 }
 
-/* ----- react-detail-bottom-wrapper ----- */
-.react-detail-bottom-wrapper {
-  position: relative;
-  top: -72px;
-}
-.react-detail-bottom-wrapper .title {
-  font-size: var(--font-size-2xl);
-}
-
-/* ----- react-detail__function ----- */
-.react-detail__function-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-  margin-top: var(--spacing-sm);
-}
-.react-detail__function-list-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-.react-detail__function-list-item .dot {
-  display: inline-block;
-  width: calc(18px / 2);
-  height: calc(18px / 2);
-  background-image: url(../../images/react/dot.png);
-  background-size: 100% 100%;
-}
-
-/* ----- react-detail__work-list ----- */
-.react-detail__work-list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-3xl);
-}
-
-/* react-detail__work-list-table */
-.react-detail__work-list-table-wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-.react-detail__work-list-table thead th {
-  background-color: var(--react-color-primary);
-}
-.react-detail__work-list-table tbody tr:hover th,
-.react-detail__work-list-table tbody tr:hover td {
-  background-color: var(--react-background-color);
-}
-
-/* react-detail__achievement-list */
-.react-detail__achievement-list li::before {
-  background-color: var(--react-color-primary);
+/* react-row__mockup--tablet */
+.react-row__mockup--tablet img {
+  border-radius: var(--spacing-md);
 }
