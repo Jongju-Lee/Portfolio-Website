@@ -98,7 +98,6 @@ img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding-left: var(--spacing-md);
   font-family: var(--font-EN);
   font-size: var(--font-size-section-title);
   font-weight: 700;
