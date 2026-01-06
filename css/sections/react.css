@@ -1,25 +1,20 @@
 /* ########## Section - React ########## */
 main > section#react {
-  background-color: var(--react-background-color);
-  color: var(--react-text-color);
+  background-color: var(--color-react-bg);
+  color: var(--color-react-text);
   font-size: var(--font-size-lg);
   padding-top: 160px;
   padding-bottom: 100px;
 }
 
 /* ----- react-content ----- */
-.react-content {
-  /* 공통 스타일은 .project-content 참고 */
-}
-
-/* ########## react-mockup (메인 목업) ########## */
+/* ########## react-mockup ########## */
 .react-mockup {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-3xl);
   width: 100%;
-  max-width: 900px;
 }
 .react-mockup__total {
   width: 100%;
@@ -37,14 +32,15 @@ main > section#react {
 .react-mockup__btn-box {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-4xl);
 }
 .react-mockup__btn {
   display: inline-block;
   width: 130px;
   padding: var(--spacing-sm) 0;
   border-radius: var(--spacing-sm);
-  background-color: var(--react-color-primary);
+  background-color: var(--color-react-primary);
   box-shadow: var(--shadow-color-box-light);
   text-align: center;
   opacity: 1;
@@ -52,18 +48,13 @@ main > section#react {
 }
 .react-mockup__btn:hover {
   opacity: 0.7;
-  transform: scale(1.05);
 }
 .react-mockup__btn::before {
   content: attr(data-label-pc);
-  font-size: var(--font-size-lg);
   font-weight: 500;
 }
 
 /* ########## react-row (Row 1~3 공통) ########## */
-.react-row {
-  margin-top: var(--spacing-8xl);
-}
 .react-row img {
   width: 100%;
   height: auto;
@@ -71,52 +62,55 @@ main > section#react {
 }
 
 /* ########## Row 1: react-intro + 모바일 목업 ########## */
+/* react-content-info */
+.react-content-info {
+  min-height: 500px;
+}
+
+/* react-row__right-mockups-wrapper */
+.react-row__right-mockups-wrapper {
+  align-self: end;
+}
 .react-intro__title {
   font-size: var(--font-size-section-title);
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1.2em;
+  margin-bottom: var(--spacing-3xl);
 }
 .react-intro__subtitle {
-  margin-top: var(--spacing-sm);
-  font-size: var(--font-size-xl);
-  font-weight: 500;
-  color: var(--react-color-primary);
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  padding-left: 18px;
+  word-break: keep-all;
+}
+.react-intro__subtitle::before {
+  content: "";
+  position: absolute;
+  top: calc(50% + 3px);
+  transform: translateY(-50%);
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-react-primary);
 }
 .react-intro__desc {
-  margin-top: var(--spacing-xl);
-  font-size: var(--font-size-lg);
+  padding-left: 18px;
+  font-size: var(--font-size-xl);
   line-height: 1.7em;
+  text-align: left;
   word-break: keep-all;
 }
 
-/* react-row__mockups--mobile */
-.react-row__mockups--mobile {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-lg);
-}
-.react-row__mockup-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-sm);
-  max-width: 160px;
-}
-.react-row__mockup-item:nth-child(2) {
-  margin-top: var(--spacing-5xl);
-}
-.react-row__mockup-label {
-  font-size: var(--font-size-sm);
-  color: var(--text-color-gray);
-}
-
-/* ########## Row 2: PC 목업 + 주요기능/테이블 ########## */
-.react-row__mockup--pc img {
-  border-radius: var(--spacing-md);
-}
-
-/* react-function */
+/* react-function(App 주요 기능) */
 .react-function {
-  margin-bottom: var(--spacing-3xl);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: var(--spacing-4xl);
+  margin-left: 18px;
 }
 .react-function__title {
   font-size: var(--font-size-2xl);
@@ -125,32 +119,51 @@ main > section#react {
 .react-function__list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
-  margin-top: var(--spacing-md);
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
 }
 .react-function__list-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
+  font-size: var(--font-size-xl);
 }
 .react-function__list-item .dot {
   display: inline-block;
-  width: calc(18px / 2);
-  height: calc(18px / 2);
+  width: 10px;
+  height: 10px;
   background-image: url(../../images/react/dot.png);
   background-size: 100% 100%;
 }
 
+/* react-row__mockups--mobile */
+.react-row__mockups--mobile {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+.react-row__mockup-item {
+  max-width: 160px;
+}
+.react-row__mockup-item:nth-child(2) {
+  margin-top: var(--spacing-6xl);
+}
+
+/* ########## Row 2: PC 목업 ########## */
+.react-row__mockup--pc img {
+  border-radius: var(--spacing-md);
+}
+
 /* react-table - 색상 전용 */
 .react-table__content thead th {
-  background-color: var(--react-color-primary);
+  background-color: var(--color-react-primary);
 }
 .react-table__content tbody tr:hover th,
 .react-table__content tbody tr:hover td {
-  background-color: var(--react-background-color);
+  background-color: var(--color-react-bg);
 }
 .react-table__achievement-list li::before {
-  background-color: var(--react-color-primary);
+  background-color: var(--color-react-primary);
 }
 
 /* ########## Row 3: 컬러/타이포 + 태블릿 목업 ########## */
@@ -183,7 +196,7 @@ main > section#react {
   text-align: center;
 }
 .react-format__color-item:nth-child(1) {
-  background-color: var(--react-color-primary);
+  background-color: var(--color-react-primary);
 }
 .react-format__color-item:nth-child(2) {
   background-color: #FCFCFC;

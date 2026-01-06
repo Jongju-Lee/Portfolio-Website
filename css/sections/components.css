@@ -119,10 +119,10 @@
 /* ########## Project Common Components ########## */
 /* 프로젝트 섹션 공통 스타일 (React, Web 공통) */
 
-/* ----- project-content ----- */
-/* 프로젝트 섹션 컨텐츠 래퍼 (max-width: 1200px) */
+/* ----- project-content(wrapper) ----- */
 .project-content {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -131,7 +131,6 @@
 }
 
 /* ----- project-row ----- */
-/* 프로젝트 섹션 2열 레이아웃 */
 .project-row {
   display: flex;
   flex-wrap: wrap;
@@ -139,7 +138,7 @@
   column-gap: var(--spacing-7xl);
   row-gap: var(--spacing-4xl);
   width: 100%;
-  max-width: 1120px;
+  max-width: 1200px;
   margin: var(--spacing-7xl) auto 0;
 }
 .project-row__left,
@@ -150,7 +149,6 @@
 }
 
 /* ----- project-table-wrapper ----- */
-/* 프로젝트 개요 테이블 래퍼 */
 .project-table-wrapper {
   display: flex;
   overflow: hidden;
@@ -159,7 +157,6 @@
 }
 
 /* ----- project-table ----- */
-/* 프로젝트 개요 테이블 (색상 제외) */
 .project-table {
   width: 100%;
   border-collapse: collapse;
@@ -202,7 +199,6 @@
 }
 
 /* ----- project-achievement-list ----- */
-/* 프로젝트 주요 성과 리스트 */
 .project-achievement-list {
   display: flex;
   flex-direction: column;
@@ -221,6 +217,18 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
+}
+
+/* ----- project-mockup-item ----- */
+.project-mockup-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+.project-mockup-label {
+  font-size: var(--font-size-lg);
+  color: var(--text-color-gray);
 }
 /* ########## END - Project Common Components ########## */
 

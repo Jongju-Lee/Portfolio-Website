@@ -217,21 +217,37 @@
 
 
   /* ########## SECTION - REACT ########## */
-  /* react-detail__title */
-  .react-detail__title {
+  /* react-intro */
+  .react-intro__title {
     font-size: var(--font-size-section-title-tablet);
   }
 
-  /* react-detail__btn */
-  .react-detail__btn-box {
-    justify-content: center;
+  /* react-mockup__btn */
+  .react-mockup__btn-box {
     gap: var(--spacing-2xl);
   }
-  .react-detail__btn::before {
+  .react-mockup__btn::before {
     content: attr(data-label-tablet);
   }
-  .react-detail__btn.only-pc {
+  .react-mockup__btn.only-pc {
     display: none;
+  }
+
+  /* project-row 반응형 */
+  .project-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-row__left,
+  .project-row__right {
+    min-width: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* react-row__mockups--mobile */
+  .react-row__mockup-item {
+    max-width: 140px;
   }
 
   /* ########## END - REACT ########## */

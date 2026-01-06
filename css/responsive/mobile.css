@@ -346,97 +346,90 @@
 
 
   /* ########## SECTION - REACT ########## */
-  /* #REACT */
   main > section#react {
     padding-top: var(--spacing-8xl);
   }
   .react-content {
-    flex-direction: column;
-    row-gap: var(--spacing-6xl);
     margin-top: var(--spacing-6xl);
   }
 
-  /* react-mockup */
+  /* react-mockup (메인) */
   .react-mockup {
-    width: 100%;
-    gap: var(--spacing-3xl);
-  }
-
-  /* react-mockup__item */
-  .react-mockup__item-box:first-child {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-3xl);
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .react-mockup__item-tablet {
-    order: 1;
-    width: calc(912px / 2.8);
-    height: calc(670px / 2.8);
-  }
-  .react-mockup__item-mobile {
-    order: 0;
-    width: calc(344px / 1.8);
-    height: calc(670px / 1.8);
-  }
-  .react-mockup__item-pc {
-    width: calc(1280px / 4);
-    height: calc(1066px / 4);
-  }
-
-  /* react-detail */
-  .react-detail {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .react-detail__title {
-    font-size: var(--font-size-section-title-mobile);
-  }
-
-  /* react-detail__app-intro */
-  .react-detail__app-intro {
-    word-break: break-all;
-  }
-
-  /* react-detail__format */
-  .react-detail__format {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-3xl);
-  }
-
-  /* react-detail-bottom-wrapper */
-  .react-detail-bottom-wrapper {
-    top: auto;
-    margin-top: var(--spacing-3xl);
-  }
-
-  /* react-detail__function */
-  .react-detail__function {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto;
-  }
-
-  /* react-detail__work-list */
-  .react-detail__work-list {
-    margin-top: var(--spacing-4xl);
-  }
-
-  /* react-detail__btn-box */
-  .react-detail__btn-box {
     gap: var(--spacing-xl);
-    margin-top: var(--spacing-xl);
   }
-  .react-detail__btn {
+  .react-mockup__total {
+    display: none;
+  }
+  .react-mockup__mobile-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+  }
+  .react-mockup__mobile-items img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(var(--shadow-mockup));
+  }
+  .react-mockup__btn-box {
+    gap: var(--spacing-lg);
+  }
+  .react-mockup__btn {
     width: 120px;
     padding: 6px 0;
   }
-  .react-detail__btn::before {
+  .react-mockup__btn::before {
     font-size: var(--font-size-sm);
+  }
+
+  /* react-row */
+  .react-row {
+    margin-top: var(--spacing-6xl);
+  }
+
+  /* react-intro */
+  .react-intro__title {
+    font-size: var(--font-size-section-title-mobile);
+    text-align: center;
+  }
+
+  /* react-row__mockups--mobile */
+  .react-row__mockups--mobile {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-4xl);
+  }
+  .react-row__mockup-item {
+    max-width: 120px;
+  }
+  .react-row__mockup-item:nth-child(2) {
+    margin-top: 0;
+  }
+
+  /* react-function */
+  .react-function {
+    margin: 0 auto;
+  }
+
+  /* react-table */
+  .react-table {
+    margin-top: var(--spacing-3xl);
+  }
+
+  /* react-format */
+  .react-format {
+    align-items: center;
+    text-align: center;
+  }
+  .react-format__color-box {
+    margin: var(--spacing-md) auto 0;
+  }
+
+  /* react-row__mockup--tablet */
+  .react-row__mockup--tablet {
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   /* ########## END - REACT ########## */
@@ -444,11 +437,6 @@
 
   /* ########## SECTION - WEB ########## */
   /* ========== 공통 클래스 ========== */
-  /* Flex 아이템 공통 크기 */
-  .web-content__flex-item {
-    max-width: 560px;
-    min-width: 320px;
-  }
 
   /* 컬러, 타이포 서브타이틀 공통 스타일 */
   .web-content__section-subtitle {
@@ -551,9 +539,8 @@
     min-width: 320px;
     padding: 0 var(--spacing-md);
   }
-  .web-content__typo-mockups img {
-    width: 42%;
-    height: auto;
+  .web-content__typo-mockup-item {
+    max-width: 42%;
   }
   /* ########## END - WEB ########## */
 

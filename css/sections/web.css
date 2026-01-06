@@ -1,27 +1,8 @@
 #web {
-  background-color: var(--color-background-web-section);
+  background-color: var(--color-well-life-bg);
 }
 
 /* ========== 공통 클래스 ========== */
-/* 섹션 컨테이너 레이아웃 */
-.web-content__section-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: var(--spacing-7xl);
-  row-gap: var(--spacing-4xl);
-  width: 100%;
-  max-width: 1120px;
-  margin: var(--spacing-7xl) auto 0;
-}
-
-/* Flex 아이템 공통 크기 */
-.web-content__flex-item {
-  flex: 1;
-  max-width: 560px;
-  min-width: 460px;
-}
-
 /* 컬러, 타이포 서브타이틀 공통 스타일 */
 .web-content__section-subtitle {
   position: relative;
@@ -90,11 +71,6 @@
 }
 /* ========== END - 공통 클래스 ========== */
 
-/* ----- web-content ----- */
-.web-content {
-  /* 공통 스타일은 .project-content 참고 */
-  flex-wrap: wrap;
-}
 
 /* ----- web-content__mockup ----- */
 .web-content__mockup {
@@ -125,24 +101,25 @@
 .web-content__links {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-lg);
   width: 100%;
-  margin-top: var(--spacing-2xl);
+  margin-top: var(--spacing-4xl);
 }
 .web-content__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 32px;
-  padding-bottom: 1px;
+  width: 120px;
+  padding: var(--spacing-sm) 0;
   line-height: 1;
   border: 1px solid transparent;
   border-radius: 6px;
   text-align: center;
+  font-size: var(--font-size-lg);
   font-weight: 500;
   font-family: var(--font-EN);
   transition: background-color 0.3s, border 0.3s, color 0.3s;
+  box-shadow: var(--shadow-color-box-light);
 }
 .web-content__link--pc {
   background-color: var(--color-well-life-primary);
@@ -183,7 +160,7 @@
 
 /* ----- web-content__info ----- */
 .web-content__info {
-  min-height: 390px;
+  min-height: 400px;
   background-color: var(--color-background-light);
   border-radius: var(--spacing-md);
 }
@@ -193,7 +170,7 @@
   font-size: var(--font-size-section-title);
   font-weight: 800;
   line-height: 1.2em;
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
 }
 .web-content__subtitle {
   position: relative;
@@ -294,8 +271,8 @@
   max-width: 520px;
   min-width: 460px;
 }
-.web-content__typo-mockups img {
-  width: 211px;
-  height: 430px;
+.web-content__typo-mockup-item img {
+  width: 200px;
+  height: auto;
   filter: drop-shadow(var(--shadow-mockup));
 }

@@ -88,7 +88,7 @@
   --color-skill-item-bg: #f5f5f5;
   
   /* WEB 섹션 전용 */
-  --color-background-web-section: #e6e7f2;
+  --color-well-life-bg: #e6e7f2;
   --color-well-life-primary: #19248C;
   --color-well-life-secondary: #4CB9E7;
   --color-well-life-hover: #f0f1f8;
@@ -97,7 +97,7 @@
   --color-well-life-text-tertiary: #A6A6A6;
 
   /* React 섹션 전용 */
-  --react-text-color: #1E2723;
-  --react-color-primary: #72E3AD;
-  --react-background-color: #f1fdf7;
+  --color-react-text: #1E2723;
+  --color-react-primary: #72E3AD;
+  --color-react-bg: #f1fdf7;
 }
