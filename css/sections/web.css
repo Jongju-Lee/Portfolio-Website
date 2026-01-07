@@ -24,7 +24,7 @@
 
 /* 섹션 타이틀 공통 스타일 */
 .web-content__section-title {
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: var(--spacing-4xl);
   font-size: var(--font-size-3xl);
   font-weight: 600;
   text-align: center;
@@ -177,16 +177,6 @@
   align-items: center;
 }
 
-/* web-content__color-mockup */
-.web-content__color-mockup {
-  height: auto;
-}
-.web-content__color-mockup img {
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(var(--shadow-mockup));
-}
-
 /* web-content__color-circles */
 .web-content__color-circle--primary {
   background-color: var(--color-well-life-primary);
@@ -217,11 +207,8 @@
 
 /* web-content__typo-mockups */
 .web-content__typo-mockups {
-  flex: 1;
   display: flex;
-  justify-content: space-between;
-  max-width: 520px;
-  min-width: 460px;
+  justify-content: space-around;
 }
 .web-content__typo-mockup-item {
   width: 200px;

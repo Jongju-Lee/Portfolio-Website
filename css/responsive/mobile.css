@@ -482,12 +482,6 @@
     content: attr(data-label-mobile);
   }
 
-  /* ----- web-content__color-theme ----- */
-  /* web-content__color-mockup */
-  .web-content__color-mockup {
-    padding: 0 var(--spacing-md);
-  }
-
   /* ----- web-content__typography ----- */
   /* web-content__typo-mockups */
   .web-content__typo-mockups {
