@@ -65,7 +65,10 @@
     min-width: 320px;
   }
 
-  /* project-mockup__mobile-items */
+  /* project-mockup */
+  .project-mockup__total {
+    display: none;
+  }
   .project-mockup__mobile-items {
     display: flex;
     flex-direction: column;
@@ -390,10 +393,10 @@
   .react-mockup {
     gap: var(--spacing-xl);
   }
-  .react-mockup__total {
+  .react-content__mockup-total {
     display: none;
   }
-  .react-mockup__btn {
+  .react-content__link {
     width: 120px;
   }
 
@@ -461,11 +464,6 @@
   /* web-content */
   .web-content {
     margin-top: var(--spacing-6xl);
-  }
-
-  /* web-content__mockup-total */
-  .web-content__mockup-total {
-    display: none;
   }
 
   /* ----- web-content__links ----- */

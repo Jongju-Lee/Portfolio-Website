@@ -7,32 +7,31 @@ main > section#react {
   padding-bottom: 100px;
 }
 
-/* ---------- react-content ---------- */
-/* ----- react-mockup ----- */
-.react-mockup {
+/* ----- react-content__mockup ----- */
+.react-content__mockup {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-3xl);
   width: 100%;
 }
-.react-mockup__total {
+.react-content__mockup-total {
   width: 100%;
 }
-.react-mockup__total img {
+.react-content__mockup-total img {
   width: 100%;
   height: auto;
   filter: drop-shadow(var(--shadow-mockup));
 }
 
-/* react-mockup__btn-box */
-.react-mockup__btn-box {
+/* react-content__links */
+.react-content__links {
   display: flex;
   justify-content: center;
   gap: var(--spacing-2xl);
   margin-top: var(--spacing-4xl);
 }
-.react-mockup__btn {
+.react-content__link {
   display: inline-block;
   width: 130px;
   padding: var(--spacing-sm) 0;
@@ -43,10 +42,10 @@ main > section#react {
   opacity: 1;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
-.react-mockup__btn:hover {
+.react-content__link:hover {
   opacity: 0.7;
 }
-.react-mockup__btn::before {
+.react-content__link::before {
   content: attr(data-label-pc);
   font-weight: 500;
 }

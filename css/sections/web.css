@@ -81,16 +81,6 @@
   margin: 0 auto;
 }
 
-/* web-content__mockup-total */
-.web-content__mockup-total {
-  max-width: 1200px;
-}
-.web-content__mockup-total img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 /* ----- web-content__links ----- */
 .web-content__links {
   display: flex;

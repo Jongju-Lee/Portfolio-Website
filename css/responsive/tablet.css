@@ -217,11 +217,11 @@
 
 
   /* ########## SECTION - REACT ########## */
-  /* react-mockup__btn */
-  .react-mockup__btn::before {
+  /* react-content__link */
+  .react-content__link::before {
     content: attr(data-label-tablet);
   }
-  .react-mockup__btn.only-pc {
+  .react-content__link.only-pc {
     display: none;
   }
 
