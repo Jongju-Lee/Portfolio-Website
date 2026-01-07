@@ -156,7 +156,6 @@
 .web-content__info {
   min-height: 400px;
   background-color: var(--color-background-light);
-  border-radius: var(--spacing-md);
 }
 
 /* web-content__subtitle - 색상 */

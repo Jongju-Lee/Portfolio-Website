@@ -226,11 +226,16 @@
   }
 
   /* react-function */
-  .react-function__list-item {
+  .react-info__function-list-item {
     gap: var(--spacing-sm);
   }
-  .react-function__list-item .dot {
+  .react-info__function-list-item .dot {
     margin-bottom: 1px;
+  }
+
+  /* react-format__typo-desc */
+  .react-format__typo-desc {
+    max-width: 324px;
   }
   /* ########## END - REACT ########## */
 

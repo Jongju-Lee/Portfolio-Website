@@ -116,9 +116,7 @@
 /* ########## END - Loading Component ########## */
 
 
-/* ########## Project Common Components ########## */
-/* 프로젝트 섹션 공통 스타일 (React, Web 공통) */
-
+/* ########## Web, React 공통 컴포넌트 ########## */
 /* ----- project-content(wrapper) ----- */
 .project-content {
   display: flex;
@@ -210,17 +208,17 @@
   white-space: nowrap;
 }
 
-/* ----- project-achievement-list ----- */
-.project-achievement-list {
+/* ----- project-achievement__list ----- */
+.project-achievement__list {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
 }
-.project-achievement-list li {
+.project-achievement__list li {
   position: relative;
   padding-left: var(--spacing-md);
 }
-.project-achievement-list li::before {
+.project-achievement__list li::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -231,27 +229,27 @@
   border-radius: 50%;
 }
 
-/* ----- project-mockup-item ----- */
-.project-mockup-item {
+/* ----- project-mockup__item ----- */
+.project-mockup__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-lg);
   filter: drop-shadow(var(--shadow-mockup));
 }
-.project-mockup-item img {
+.project-mockup__item img {
     display: block;
     width: 100%;
     height: auto;
 }
-/* ----- project-mockup-item ----- */
-.project-mockup-item--pc {
+/* ----- project-mockup__item ----- */
+.project-mockup__item--pc {
   width: 90%;
 }
-.project-mockup-item--tablet {
+.project-mockup__item--tablet {
   width: 85%;
 }
-.project-mockup-item--mobile {
+.project-mockup__item--mobile {
   width: 70%;
 }
 .project-mockup-label {
@@ -295,9 +293,9 @@
   word-break: keep-all;
 }
 
-/* ----- project-mockup-mobile-items ----- */
+/* ----- project-mockup__mobile-items ----- */
 /* PC에서 숨김, Mobile에서 표시 */
-.project-mockup-mobile-items {
+.project-mockup__mobile-items {
   display: none;
 }
 /* ########## END - Project Common Components ########## */
@@ -574,5 +572,4 @@
       0 0 45px 18px rgba(255, 184, 77, 0.3);
   }
 }
-
 /* ---------- END - Keyframes ---------- */

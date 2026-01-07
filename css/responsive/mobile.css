@@ -54,15 +54,19 @@
   /* ########## END - LAYOUT ########## */
 
 
-  /* ########## 공통 COMPONENTS ########## */
+  /* ########## Web, React 공통 컴포넌트 ########## */
+  /* ----- project-row ----- */
+  .project-row {
+    margin: var(--spacing-6xl) auto 0;
+  }
   .project-row__left,
   .project-row__right {
     max-width: 90%;
     min-width: 320px;
   }
 
-  /* project-mockup-mobile-items */
-  .project-mockup-mobile-items {
+  /* project-mockup__mobile-items */
+  .project-mockup__mobile-items {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +75,7 @@
 
   /* project-title */
   .project-title {
+    margin-bottom: var(--spacing-2xl);
     font-size: var(--font-size-section-title-mobile);
     text-align: center;
   }
@@ -79,7 +84,7 @@
   .project-subtitle::before {
     top: 20px;
   }
-  /* ########## END - 공통 COMPONENTS ########## */
+  /* ########## END - Web, React 공통 컴포넌트 ########## */
 
 
   /* ########## SECTION - HEADER ########## */
@@ -392,39 +397,36 @@
     width: 120px;
   }
 
-  /* react-row */
-  .react-row {
-    margin-top: var(--spacing-6xl);
+  /* react-info__function */
+  .react-info__function {
+    margin-top: var(--spacing-3xl);
   }
 
-  /* react-row__mockups--mobile */
-  .react-row__mockups--mobile {
+  /* react-mockups */
+  .react-mockups {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-4xl);
   }
-  .react-row__mockup-item:nth-child(2) {
+  .react-mockup--mobile:nth-child(2) {
     margin-top: 0;
   }
 
-  /* react-row__mockup--tablet */
-  .react-row__mockup--tablet {
+  /* react-mockup--tablet */
+  .react-mockup--tablet {
     max-width: 400px;
     margin: 0 auto;
   }
 
-  /* react-table */
-  .react-table {
-    margin-top: var(--spacing-3xl);
-  }
-
   /* react-format */
-  .react-format {
+  .react-format__wrapper {
     align-items: center;
+  }
+  .react-format__title {
     text-align: center;
   }
   .react-format__color-box {
-    margin: var(--spacing-md) auto 0;
+    margin: var(--spacing-xl) auto var(--spacing-lg);
   }
   /* ########## END - REACT ########## */
 
