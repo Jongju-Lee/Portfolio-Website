@@ -58,6 +58,11 @@
   .appointment-form__item-calendar-title {
     margin-bottom: var(--spacing-16);
   }
+  .appointment-form__item-calendar-title .prev-btn,
+  .appointment-form__item-calendar-title .next-btn {
+    width: 28px;
+    height: 28px;
+  }
 
   /* appointment-form__item-time-box - 시간 선택 */
   .appointment-form__item-time-box {

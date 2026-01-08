@@ -77,12 +77,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: var(--spacing-4);
   margin-bottom: var(--spacing-24);
 }
 .appointment-form__item-calendar-title .prev-btn,
 .appointment-form__item-calendar-title .next-btn {
-  width: calc(48px / 2);
-  height: calc(48px / 2);
+  width: 30px;
+  height: 30px;
   background-image: url(../../../images/appointment/appointment-next-btn.png);
   background-size: 100% 100%;
 }
@@ -140,6 +141,7 @@
   height: 32px;
   border-radius: 50%;
   color: var(--color-black);
+  line-height: 1em;
 }
 .appointment-form__item-calendar-day-name {
   font-family: var(--font-KR-medium);
@@ -153,6 +155,7 @@
 .appointment-form__item-calendar-date {
   font-family: var(--font-number-light);
   transition: background-color 0.2s, color 0.2s;
+  font-weight: 600;
 }
 /* 일요일은 선택 불가(병원 휴일) */
 .appointment-form__item-calendar-date:nth-child(7n + 1) {
@@ -168,6 +171,7 @@
 .appointment-form__item-calendar-date--current {
   color: var(--color-white) !important;
   font-family: var(--font-KR-medium);
+  font-weight: inherit;
 }
 .appointment-form__item-calendar-date:hover {
   opacity: 1;

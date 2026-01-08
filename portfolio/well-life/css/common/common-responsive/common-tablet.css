@@ -9,7 +9,7 @@
   }
   
   main {
-    padding-top: var(--spacing-64);
+    padding-top: var(--spacing-68);
   }
   /* ---------- END - LAYOUT ---------- */
 
@@ -41,7 +41,7 @@
     padding: 0 var(--section-padding-h-tablet);
   }
   .header-inner {
-    height: 64px;
+    height: 68px;
   }
 
   /* header-logo */
