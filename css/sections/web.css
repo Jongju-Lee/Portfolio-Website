@@ -71,8 +71,8 @@
 /* ========== END - 공통 클래스 ========== */
 
 
-/* ----- web-content__mockup ----- */
-.web-content__mockup {
+/* ----- web-mockup__main ----- */
+.web-mockup__main {
   position: relative;
   display: flex;
   justify-content: center;
@@ -142,32 +142,60 @@
   border-color: var(--text-color-body);
 }
 
-/* ----- web-content__info ----- */
-.web-content__info {
+/* ----- web-info ----- */
+.web-info {
   min-height: 400px;
   background-color: var(--color-background-light);
 }
 
-/* web-content__subtitle - 색상 */
-.web-content__subtitle::before {
+/* web-info__intro-subtitle - 색상 */
+.web-info__intro-subtitle::before {
   background-color: var(--color-well-life-primary);
 }
 
-/* web-content__overview */
-.web-content__overview {
+/* web-info__accessibility(웹 접근성 점수) */
+.web-info__accessibility {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2xl);
+}
+.web-info__accessibility-icon {
+  width: 100px;
+  height: 100px;
+}
+.web-info__accessibility-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+.web-info__accessibility-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+}
+.web-info__accessibility-list-item::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+/* web-info__overview */
+.web-info__overview {
   align-self: end;
 }
-
-/* web-content__overview-table - 색상 전용 */
-.web-content__overview-table thead th {
+.web-info__overview-table thead th {
   background-color: var(--color-well-life-primary);
 }
-.web-content__overview-table tbody tr:hover th,
-.web-content__overview-table tbody tr:hover td {
+.web-info__overview-table tbody tr:hover th,
+.web-info__overview-table tbody tr:hover td {
   background-color: var(--color-well-life-hover);
 }
 
-/* web-content__achievement-list - 색상 전용 */
+/* web-content__achievement-list */
 .web-content__achievement-list li::before {
   background-color: var(--color-well-life-primary);
 }

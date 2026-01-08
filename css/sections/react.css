@@ -7,18 +7,18 @@ main > section#react {
   padding-bottom: 100px;
 }
 
-/* ----- react-content__mockup ----- */
-.react-content__mockup {
+/* ----- react-mockup__main ----- */
+.react-mockup__main {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-3xl);
   width: 100%;
 }
-.react-content__mockup-total {
+.react-mockup__main-total {
   width: 100%;
 }
-.react-content__mockup-total img {
+.react-mockup__main-total img {
   width: 100%;
   height: auto;
   filter: drop-shadow(var(--shadow-mockup));
@@ -100,16 +100,16 @@ main > section#react {
   background-size: 100% 100%;
 }
 
-/* react-mockups */
-.react-mockups {
+/* react-info__mockup-items */
+.react-info__mockup-items {
   display: flex;
   justify-content: space-between;
   gap: var(--spacing-3xl);
 }
-.react-mockup--mobile {
+.react-info__mockup-item--mobile {
   max-width: 160px;
 }
-.react-mockup--mobile:nth-child(2) {
+.react-info__mockup-item--mobile:nth-child(2) {
   margin-top: var(--spacing-6xl);
 }
 

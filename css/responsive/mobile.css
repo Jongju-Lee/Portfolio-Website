@@ -393,7 +393,7 @@
   .react-mockup {
     gap: var(--spacing-xl);
   }
-  .react-content__mockup-total {
+  .react-mockup__main-total {
     display: none;
   }
   .react-content__link {
@@ -405,13 +405,13 @@
     margin-top: var(--spacing-3xl);
   }
 
-  /* react-mockups */
-  .react-mockups {
+  /* react-info__mockup-items */
+  .react-info__mockup-items {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-4xl);
   }
-  .react-mockup--mobile:nth-child(2) {
+  .react-info__mockup-item--mobile:nth-child(2) {
     margin-top: 0;
   }
 

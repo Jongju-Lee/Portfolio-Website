@@ -712,14 +712,14 @@
           <h2 class="new" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Web Publishing</h2>
             <!-- ########## web-content - 웰라이프내과의원 ########## -->
             <div class="web-content project-content" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0">
-              <!-- 웰라이프내과의원 - web-content__mockup -->
-              <figure class="web-content__mockup">
-                <!-- web-content__mockup-total -->
-                <div class="web-content__mockup-total project-mockup__item project-mockup__total">
+              <!-- 웰라이프내과의원 - web-mockup__main -->
+              <figure class="web-mockup__main">
+                <!-- web-mockup__main-total -->
+                <div class="web-mockup__main-total project-mockup__item project-mockup__total">
                   <img src="./images/website_pub/well-life-mockup-total.png" alt="웰라이프 전체 목업 화면">
                 </div>
-                <!-- web-content__mockup-items -->
-                <div class="web-content__mockup-items project-mockup__mobile-items">
+                <!-- web-mockup__main-items -->
+                <div class="web-mockup__main-items project-mockup__mobile-items">
                   <div class="project-mockup__item project-mockup__item--pc">
                     <img src="./images/website_pub/well-life-mockup-pc-01.png" alt="웰라이프 PC 화면" loading="lazy">
                   </div>
@@ -744,26 +744,39 @@
                 </div>
               </div>
 
-              <!-- Row 1 - web-content__info -->
-              <div class="web-content__info project-row">
-                <!-- web-content__desc -->
-                <div class="web-content__desc project-row__left">
-                  <h3 class="web-content__title project-title font-kr">웰라이프내과의원</h3>
-                  <h4 class="web-content__subtitle project-subtitle">확장성을 고려한 <span class="font-en">UI</span> 시스템 설계 및 테마 구축</h4>
-                  <p class="web-content__text project-desc">
-                    <b class="font-en">Figma Design Token</b>과 <b class="font-en">CSS 변수</b>를 연동한
-                    <b class="font-kr">디자인 시스템</b>을 구축하여 다크모드/라이트모드 전환을 구현하고,
-                    디자인-개발 간 일관성을 확보했습니다.
-                    <b class="font-en">Semantic Mark-up</b> 기반의 <b class="font-kr">공통 컴포넌트</b>를 설계하여
-                    <b class="font-en">Lighthouse</b> <b class="font-kr">접근성 100점</b>을 달성했으며,
-                    <b class="font-kr">폼 유효성 검사</b>와 <b class="font-kr">사용자 피드백 시스템</b>으로
-                    완성도 높은 UI를 제공합니다.
-                  </p>
+              <!--########## Row 1 - web-info ########## -->
+              <div class="web-info project-row">
+                <!-- web-info__intro-wrapper -->
+                <div class="web-info__intro-wrapper project-row__left">
+                  <div class="web-info__intro">
+                    <h3 class="web-info__intro-title project-title font-kr">웰라이프내과의원</h3>
+                    <h4 class="web-info__intro-subtitle project-subtitle">확장성을 고려한 <span class="font-en">UI</span> 시스템 설계 및 테마 구축</h4>
+                    <p class="web-info__intro-desc project-desc">
+                      <b class="font-en">Figma Design Token</b>과 <b class="font-en">CSS 변수</b>를 연동한 <b class="font-kr">디자인 시스템</b>을 구축하여 다크모드/라이트모드 토글 기능을 구현하고, 디자인-개발 간 일관성을 확보했습니다. <b class="font-en">Semantic Markup</b> 기반의 <b class="font-kr">공통 컴포넌트</b>를 설계하였고, <b class="font-kr">폼 유효성 검사</b>와 <b class="font-kr">피드백 시스템</b>으로 완성도 높은 <span class="font-en">UI/UX</span>를 제공합니다.
+                    </p>
+                  </div>
+                  <!-- web-info__accessibility(웹 접근성 점수) -->
+                  <div class="web-info__accessibility">
+                    <img class="web-info__accessibility-icon" src="./images/website_pub/web-row1-accessibility.png" alt="접근성 100점" loading="lazy">
+                    <ul class="web-info__accessibility-list">
+                      <li class="web-info__accessibility-list-item">
+                        <p>
+                          <span class="font-en">Lighthouse Score</span> <b class="font-kr">100점</b>
+                        </p>
+                      </li>
+                      <li class="web-info__accessibility-list-item">
+                        <p>
+                          <span class="font-en">OpenWAX(KWCAG)</span> <b class="font-kr">접근성 오류 0개</b>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <!-- web-content__overview -->
-                <div class="web-content__overview project-row__right">
-                  <div class="web-content__overview-table-wrapper project-table-wrapper">
-                    <table class="web-content__overview-table project-table">
+
+                <!-- web-info__overview -->
+                <div class="web-info__overview project-row__right">
+                  <div class="web-info__overview-table-wrapper project-table-wrapper">
+                    <table class="web-info__overview-table project-table">
                       <!-- caption -->
                       <caption class="sr-only">웰라이프내과의원 프로젝트 개요 입니다.</caption>
                       <!-- thead -->
@@ -813,13 +826,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Row 2 - web-content__full-mockup(PC 목업) -->
-              <!-- <div class="web-content__full-mockup project-row">
-                <div class="web-content__mockup--pc project-mockup__item">
-                  <img src="./images/website_pub/well-life-mockup-pc-02.png" alt="웰라이프 모바일 라이트모드" loading="lazy">
-                </div>
-              </div> -->
 
               <!-- Row 3 - web-content__color-theme -->
               <div class="web-content__color-theme project-row">
@@ -913,14 +919,14 @@
           <h2 class="section-title new" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">React Web App
           </h2>
           <div class="react-content project-content">
-            <!-- ########## react-content__mockup ########## -->
-            <figure class="react-content__mockup" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0">
-              <!-- react-content__mockup-total -->
-              <div class="react-content__mockup-total project-mockup__item project-mockup__total">
+            <!-- ########## react-mockup__main ########## -->
+            <figure class="react-mockup__main" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0">
+              <!-- react-mockup__main-total -->
+              <div class="react-mockup__main-total project-mockup__item project-mockup__total">
                 <img src="./images/react/mockup-total.png" alt="TaskFlow 전체 프리뷰" loading="lazy">
               </div>
-              <!-- react-content__mockup-items -->
-              <div class="react-content__mockup-items project-mockup__mobile-items">
+              <!-- react-mockup__main-items -->
+              <div class="react-mockup__main-items project-mockup__mobile-items">
                 <div class="project-mockup__item project-mockup__item--mobile">
                   <img src="./images/react/mockup-main-1.png" alt="TaskFlow 모바일 프리뷰 1" loading="lazy">
                 </div>
@@ -943,17 +949,15 @@
 
             <!-- ########## Row 1: react-info ########## -->
             <div class="react-info project-row" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0">
-              <!-- 좌측: 제목 + 설명 -->
-              <div class="react-info__left project-row__left">
+              <!-- react-info__left -->
+              <div class="react-info__intro-wrapper project-row__left">
                 <div class="react-info__intro">
                   <h3 class="react-info__intro-title project-title font-en">TaskFlow</h3>
                   <h4 class="react-info__intro-subtitle project-subtitle">언제 어디서나, 어떤 기기에서도</h4>
                   <p class="react-info__intro-desc project-desc">
-                    편리함과 접근성을 최우선으로 설계한 <b class="font-en">React</b> 기반의 <b class="font-en">Todo-List</b>
-                    <b class="font-kr">웹 앱</b> 입니다. <b class="font-en">React Calendar</b> 연동을 통해 날짜별 일정 관리 및 실시간 할 일 검색이 가능하고 <b class="font-kr">터치</b> <b class="font-en">Drag & Drop</b><span class="font-en">(dnd-kit)</span>으로 할 일의 순서를 직관적으로 변경이 가능합니다. 또한, 키보드 사용자 편의성을 위해 단축키로 <b class="font-kr">빠르고 편리한 조작</b>이 가능하도록 제작한 웹 앱 입니다.
+                    편리함과 접근성을 최우선으로 설계한 <b class="font-en">React</b> 기반의 <b class="font-en">Todo-List</b> <b class="font-kr">웹 앱</b> 입니다. <b class="font-en">React Calendar</b> 연동을 통해 날짜별 일정 관리 및 실시간 할 일 검색이 가능하고 <b class="font-kr">터치</b> <b class="font-en">Drag & Drop</b><span class="font-en">(dnd-kit)</span>으로 할 일의 순서를 직관적으로 변경이 가능합니다. 또한, 키보드 사용자 편의성을 위해 단축키로 <b class="font-kr">빠르고 편리한 조작</b>이 가능하도록 제작한 웹 앱 입니다.
                   </p>
                 </div>
-
                 <!-- react-info__function(주요 기능) -->
                 <div class="react-info__function">
                   <h4 class="react-info__function-title title">
@@ -975,18 +979,19 @@
                   </ul>
                 </div>
               </div>
-              <!-- mobile 목업 박스 -->
-              <div class="react-info__right project-row__right">
-                <div class="react-mockups">
-                  <div class="react-mockup--mobile project-mockup__item">
+
+              <!-- react-info__mockup(모바일 목업) -->
+              <div class="react-info__mockup project-row__right">
+                <div class="react-info__mockup-items">
+                  <div class="react-info__mockup-item--mobile project-mockup__item">
                     <img src="./images/react/mockup-mobile-edit.png" alt="할 일 수정 화면" loading="lazy">
                     <span class="react-mockup__label project-mockup-label">할 일 수정</span>
                   </div>
-                  <div class="react-mockup--mobile project-mockup__item">
+                  <div class="react-info__mockup-item--mobile project-mockup__item">
                     <img src="./images/react/mockup-mobile-delete.png" alt="할 일 삭제 화면" loading="lazy">
                     <span class="react-mockup__label project-mockup-label">할 일 삭제</span>
                   </div>
-                  <div class="react-mockup--mobile project-mockup__item">
+                  <div class="react-info__mockup-item--mobile project-mockup__item">
                     <img src="./images/react/mockup-mobile-calendar.png" alt="캘린더 연동 화면" loading="lazy">
                     <span class="react-mockup__label project-mockup-label">캘린더 연동</span>
                   </div>
