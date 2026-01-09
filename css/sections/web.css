@@ -4,14 +4,14 @@
 
 /* ========== 공통 클래스 ========== */
 /* 컬러, 타이포 서브타이틀 공통 스타일 */
-.web-content__section-subtitle {
+.web-row__info-subtitle {
   position: relative;
   font-size: var(--font-size-xl);
   font-weight: 600;
   margin-bottom: var(--spacing-md);
   padding-left: var(--spacing-lg);
 }
-.web-content__section-subtitle::before {
+.web-row__info-subtitle::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -23,29 +23,21 @@
 }
 
 /* 섹션 타이틀 공통 스타일 */
-.web-content__section-title {
+.web-row__info-title {
   margin-bottom: var(--spacing-4xl);
   font-size: var(--font-size-3xl);
   font-weight: 600;
   text-align: center;
 }
 
-/* 설명 텍스트 공통 스타일 */
-.web-content__section-desc {
-  font-size: var(--font-size-lg);
-  line-height: 1.8em;
-  text-align: left;
-  word-break: keep-all;
-}
-
-/* 원형 아이콘 공통 스타일 */
-.web-content__circles-container {
+/* 색상 아이템 공통 스타일 */
+.web-row__circle-items {
   display: flex;
   justify-content: center;
   gap: var(--spacing-5xl);
   margin-bottom: var(--spacing-3xl);
 }
-.web-content__circle-item {
+.web-row__circle-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,20 +45,29 @@
   width: 66px;
   font-size: var(--font-size-sm);
 }
-.web-content__circle-base {
+.web-theme__circle,
+.web-typo__circle {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   box-shadow: var(--shadow-normal);
 }
-.web-content__circle-label {
+.web-row__circle-label {
   font-weight: 400;
   color: var(--text-color-dark-gray);
   text-align: center;
   line-height: 1.3em;
 }
-.web-content__circle-code {
+.web-row__circle-code {
   color: var(--text-color-light-gray);
+}
+
+/* 설명 텍스트 공통 스타일 */
+.web-row__info-desc {
+  font-size: var(--font-size-lg);
+  line-height: 1.8em;
+  text-align: left;
+  word-break: keep-all;
 }
 /* ========== END - 공통 클래스 ========== */
 
@@ -144,24 +145,28 @@
 
 /* ----- web-info ----- */
 .web-info {
-  min-height: 400px;
-  background-color: var(--color-background-light);
+  align-items: end;
 }
-
-/* web-info__intro-subtitle - 색상 */
 .web-info__intro-subtitle::before {
   background-color: var(--color-well-life-primary);
+}
+.web-info__intro-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
 }
 
 /* web-info__accessibility(웹 접근성 점수) */
 .web-info__accessibility {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--spacing-2xl);
 }
 .web-info__accessibility-icon {
   width: 100px;
-  height: 100px;
+  height: auto;
 }
 .web-info__accessibility-list {
   display: flex;
@@ -176,6 +181,7 @@
 }
 .web-info__accessibility-list-item::before {
   content: "";
+  flex-shrink: 0;
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -185,7 +191,7 @@
 
 /* web-info__overview */
 .web-info__overview {
-  align-self: end;
+  /* align-self: end; */
 }
 .web-info__overview-table thead th {
   background-color: var(--color-well-life-primary);
@@ -200,29 +206,29 @@
   background-color: var(--color-well-life-primary);
 }
 
-/* ----- web-content__color-theme ----- */
-.web-content__color-theme {
+/* ----- web-theme ----- */
+.web-theme {
   align-items: center;
 }
 
-/* web-content__color-circles */
-.web-content__color-circle--primary {
+/* web-theme__circle-items */
+.web-theme__circle--primary {
   background-color: var(--color-well-life-primary);
 }
-.web-content__color-circle--secondary {
+.web-theme__circle--secondary {
   background-color: var(--color-well-life-secondary);
 }
-.web-content__color-circle--bg {
+.web-theme__circle--bg {
   background-color: var(--color-background-white);
   border: 1px solid var(--color-line);
 }
 
-/* ----- web-content__typography ----- */
-.web-content__typography {
+/* ----- web-typo ----- */
+.web-typo {
   align-items: center;
 }
 
-/* web-content__typo-circles */
+/* web-typo__circle-items */
 .web-content__typo-circle--primary {
   background-color: var(--color-well-life-text-primary);
 }
@@ -233,12 +239,12 @@
   background-color: var(--color-well-life-text-tertiary);
 }
 
-/* web-content__typo-mockups */
-.web-content__typo-mockups {
+/* web-theme__mockup-items */
+.web-theme__mockup-items {
   display: flex;
   justify-content: space-around;
 }
-.web-content__typo-mockup-item {
+.web-theme__mockup-item {
   width: 200px;
   height: auto;
 }

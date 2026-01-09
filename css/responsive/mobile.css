@@ -62,7 +62,7 @@
   .project-row__left,
   .project-row__right {
     max-width: 90%;
-    min-width: 320px;
+    /* min-width: 320px; */
   }
 
   /* project-mockup */
@@ -381,6 +381,71 @@
   /* ########## END - RESUME ########## */
 
 
+  /* ########## SECTION - WEB ########## */
+  /* ----- 컬러, 타이포 공통 스타일 ----- */
+  /* 서브 타이틀 */
+  .web-row__info-subtitle {
+    padding-left: var(--spacing-md);
+  }
+  .web-row__info-subtitle::before {
+    top: calc(50% - 1px);
+  }
+
+  /* 원형 아이콘 공통 스타일 */
+  .web-row__circle-items {
+    gap: var(--spacing-4xl);
+  }
+  .web-row__circle-item {
+    width: 60px;
+    font-size: var(--font-size-xs);
+  }
+  .web-theme__circle,
+  .web-typo__circle {
+    width: 50px;
+    height: 50px;
+  } 
+  .web-row__circle-code {
+    line-height: 1em;
+  }
+
+  /* ----- web-content ----- */
+  .web-content {
+    margin-top: var(--spacing-6xl);
+  }
+
+  /* ----- web-content__links ----- */
+  .web-content__links {
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-4xl);
+  }
+  .web-content__link { 
+    width: 100px;
+  }
+  .web-content__link--mobile,
+  .web-content__link--tablet {
+    display: none;
+  }
+  .web-content__link--pc::before {
+    content: attr(data-label-mobile);
+  }
+
+  /* ----- web-info ----- */
+
+
+
+  /* ----- web-typo ----- */
+  /* web-theme__mockup-items */
+  .web-theme__mockup-items {
+    justify-content: space-between;
+    min-width: 320px;
+    padding: 0 var(--spacing-md);
+  }
+  .web-theme__mockup-item {
+    max-width: 42%;
+  }
+  /* ########## END - WEB ########## */
+
+
   /* ########## SECTION - REACT ########## */
   main > section#react {
     padding-top: var(--spacing-8xl);
@@ -415,14 +480,14 @@
     margin-top: 0;
   }
 
-  /* react-mockup--tablet */
-  .react-mockup--tablet {
+  /* react-overview__mockup--tablet */
+  .react-overview__mockup--tablet {
     max-width: 400px;
     margin: 0 auto;
   }
 
   /* react-format */
-  .react-format__wrapper {
+  .react-format__inner {
     align-items: center;
   }
   .react-format__title {
@@ -433,66 +498,6 @@
   }
   /* ########## END - REACT ########## */
 
-
-  /* ########## SECTION - WEB ########## */
-  /* ========== 공통 클래스 ========== */
-
-  /* 컬러, 타이포 서브타이틀 공통 스타일 */
-  .web-content__section-subtitle {
-    padding-left: var(--spacing-md);
-  }
-  .web-content__section-subtitle::before {
-    top: calc(50% - 1px);
-  }
-
-  /* 원형 아이콘 공통 스타일 */
-  .web-content__circles-container {
-    gap: var(--spacing-4xl);
-  }
-  .web-content__circle-item {
-    width: 60px;
-    font-size: var(--font-size-xs);
-  }
-  .web-content__circle-base {
-    width: 50px;
-    height: 50px;
-  } 
-  .web-content__circle-code {
-    line-height: 1em;
-  }
-
-  /* web-content */
-  .web-content {
-    margin-top: var(--spacing-6xl);
-  }
-
-  /* ----- web-content__links ----- */
-  .web-content__links {
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-4xl);
-  }
-  .web-content__link { 
-    width: 100px;
-  }
-  .web-content__link--mobile,
-  .web-content__link--tablet {
-    display: none;
-  }
-  .web-content__link--pc::before {
-    content: attr(data-label-mobile);
-  }
-
-  /* ----- web-content__typography ----- */
-  /* web-content__typo-mockups */
-  .web-content__typo-mockups {
-    justify-content: space-between;
-    min-width: 320px;
-    padding: 0 var(--spacing-md);
-  }
-  .web-content__typo-mockup-item {
-    max-width: 42%;
-  }
-  /* ########## END - WEB ########## */
 
   /* ########## SECTION - PRACTICAL ########## */
   .practical-content {
@@ -645,7 +650,15 @@
 
 /* ########## SMALL MOBILE (480px 이하) ########## */
 @media (max-width: 480px) {
-  /* ########## Project Table 공통 반응형 ########## */
+  /* ########## Web, React 공통 컴포넌트 ########## */
+  /* project-row */
+  .project-row__left,
+  .project-row__right {
+    max-width: 95%;
+    min-width: 320px;
+  }
+
+  /* .project-table */
   .project-table {
     font-size: var(--font-size-sm);
   }
@@ -656,6 +669,11 @@
   .project-table thead th:first-child {
     width: 30%;
   }
-  /* ########## END - Project Table ########## */
+
+  /* ----- web-info ----- */
+  .web-info__accessibility {
+    justify-content: center;
+  }
+  /* ########## END - Web, React 공통 컴포넌트 ########## */
 
 }

@@ -49,6 +49,24 @@
   /* ########## END - LAYOUT ########## */
 
 
+  /* ########## Web, React 공통 컴포넌트 ########## */
+  /* project-row */
+  .project-row__left,
+  .project-row__right {
+    min-width: 420px;
+  }
+
+  /* project-subtitle */
+  .project-subtitle {
+    padding-left: var(--spacing-lg);
+  }
+  .project-subtitle::before {
+    width: 7px;
+    height: 7px;
+  }
+  /* ########## END - Web, React 공통 컴포넌트 ########## */
+
+
   /* ########## SECTION - HEADER ########## */
   header {
     padding: var(--spacing-md) var(--spacing-2xl);
@@ -216,6 +234,44 @@
   /* ########## END - RESUME ########## */
 
 
+  /* ########## SECTION - WEB ########## */
+  /* ----- 컬러, 타이포 공통 스타일 ----- */
+  /* 서브 타이틀 */
+  .web-row__info-subtitle {
+    padding-left: var(--spacing-md);
+  }
+  .web-row__info-subtitle::before {
+    width: 6px;
+    height: 6px;
+  }
+
+   /* ----- web-content__link ----- */
+  .web-content__link--mobile,
+  .web-content__link--tablet {
+    display: none;
+  }
+  .web-content__link--pc::before {
+    content: attr(data-label-tablet);
+  }
+
+  /* ----- web-info ----- */
+  /* web-info__intro */
+  .web-info__intro-inner {
+    min-height: auto;
+    gap: var(--spacing-2xl);
+  }
+
+  /* web-info__accessibility(웹 접근성 점수) */
+  .web-info__accessibility-icon {
+    width: 90px;
+  }
+  .web-info__accessibility-list-item::before {
+    margin-top: 2px;
+  }
+
+  /* ########## END - WEB ########## */
+
+
   /* ########## SECTION - REACT ########## */
   /* react-content__link */
   .react-content__link::before {
@@ -238,37 +294,6 @@
     max-width: 324px;
   }
   /* ########## END - REACT ########## */
-
-
-  /* ########## SECTION - WEB ########## */
-  /* ========== 공통 클래스 ========== */
-  /* 컬러, 타이포 서브타이틀 공통 스타일 */
-  .web-content__section-subtitle {
-    padding-left: var(--spacing-md);
-  }
-  .web-content__section-subtitle::before {
-    width: 6px;
-    height: 6px;
-  }
-
-  /* .web-content__link */
-  .web-content__link--mobile,
-  .web-content__link--tablet {
-    display: none;
-  }
-  .web-content__link--pc::before {
-    content: attr(data-label-tablet);
-  }
-
-  /* web-project__desc */
-  .project-subtitle {
-    padding-left: var(--spacing-lg);
-  }
-  .project-subtitle::before {
-    width: 7px;
-    height: 7px;
-  }
-  /* ########## END - WEB ########## */
 
 
   /* ########## SECTION - PRACTICAL ########## */

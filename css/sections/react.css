@@ -121,20 +121,20 @@ main > section#react {
 }
 
 /* react-table - 색상 */
-.react-table__content thead th {
+.react-overview__table thead th {
   background-color: var(--color-react-primary);
 }
-.react-table__content tbody tr:hover th,
-.react-table__content tbody tr:hover td {
+.react-overview__table tbody tr:hover th,
+.react-overview__table tbody tr:hover td {
   background-color: var(--color-react-bg);
 }
-.react-table__achievement-list li::before {
+.react-overview__table-list li::before {
   background-color: var(--color-react-primary);
 }
 
 
 /* ----- Row 3: 컬러/타이포 ----- */
-.react-format__wrapper {
+.react-format__inner {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-4xl);
@@ -151,7 +151,7 @@ main > section#react {
   overflow: hidden;
   box-shadow: var(--shadow-color-box);
 }
-.color-item {
+.react-format__color-item {
   width: 100px;
   padding: var(--spacing-xs) 0;
   font-family: var(--font-EN);
@@ -166,16 +166,16 @@ main > section#react {
   font-weight: 600;
 }
 
-.react-format__color-item:nth-child(1) {
+.react-format__theme-item:nth-child(1) {
   background-color: var(--color-react-primary);
 }
-.react-format__color-item:nth-child(2) {
+.react-format__theme-item:nth-child(2) {
   background-color: #FCFCFC;
 }
-.react-format__color-item:nth-child(3) {
+.react-format__theme-item:nth-child(3) {
   background-color: #DFDFDF;
 }
-.react-format__desc {
+.react-format__theme-desc {
   line-height: 1.6em;
   text-align: left;
   word-break: keep-all;
