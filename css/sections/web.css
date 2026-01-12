@@ -71,19 +71,26 @@
 }
 /* ========== END - 공통 클래스 ========== */
 
-/* 임시 작업 */
-.web-mockup-total {
+/* ---------- 임시 작업 ---------- */
+/* ----- web-mockup-total(메인 모달 컨테이너) ----- */
+.web-mockup__total {
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.web-mockup-total-item {
+
+/* .web-mockup__total-item(개별 목업) */
+.web-mockup__total-item {
   position: relative;
 }
-.web-mockup-total-item img {
+/* 목업 hover시 filter 처리 */
+.web-mockup__total-item > img {
   filter: drop-shadow(var(--shadow-mockup)) brightness(1);
   transition: filter 0.5s;
+}
+.web-mockup__total-item:hover > img {
+  filter: drop-shadow(var(--shadow-mockup)) brightness(0.5);
 }
 .web-mockup-total--pc {
   max-width: 70%;
@@ -100,30 +107,37 @@
   left: 0;
   width: 32%;
 }
-.web-mockup-total-item-label {
+
+/* web-mockup__total-item-label(목업 hover 라벨) */
+.web-mockup__total-item-label {
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
   font-size: var(--font-size-2xl);
   font-weight: 400;
   text-align: center;
+  color: var(--text-color-white);
   transition: opacity 0.5s;
+  white-space: nowrap;
 }
-.web-mockup-total-item-label--pc {
+.web-mockup__total-item-label .view-icon {
+  width: 26px;
+  height: auto;
+}
+.web-mockup__total-item-label--pc {
   top: 21%;
 }
-.web-mockup-total-item:hover .web-mockup-total-item-label {
+.web-mockup__total-item:hover .web-mockup__total-item-label {
   opacity: 1;
 }
-.web-mockup-total-item:hover img {
-  filter: drop-shadow(var(--shadow-mockup)) brightness(0.5);
-}
 
 
-/* ----- web-content__links ----- */
+/* ----- web-content__links(링크 버튼 박스) ----- */
 .web-content__links {
   display: flex;
   justify-content: center;
@@ -131,6 +145,8 @@
   width: 100%;
   margin-top: var(--spacing-6xl);
 }
+
+/* 링크 버튼 공통 디자인 */
 .web-content__link {
   display: flex;
   justify-content: center;
@@ -267,6 +283,11 @@
 /* ---------- Row 3 - web-typo ---------- */
 .web-typo {
   align-items: center;
+}
+
+/* web-typo__info-desc */
+.web-typo__info-desc {
+  padding-right: 10px;
 }
 
 /* web-typo__circle-items */

@@ -92,7 +92,7 @@ img {
   object-fit: cover;
 }
 
-/* section title */
+/* 섹션 타이틀 */
 .inner > h2 {
   position: relative;
   width: -webkit-fit-content;
@@ -112,11 +112,22 @@ img {
   background-color: var(--color-attention);
   border-radius: 50%;
 }
+
+/* Font */
 .font-kr {
   font-family: var(--font-KR) !important;
 }
 .font-en {
   font-family: var(--font-EN) !important;
+}
+.font-scdream {
+  font-family: var(--font-scdream) !important;
+}
+.font-mont {
+  font-family: var(--font-mont) !important;
+}
+.font-gmarket {
+  font-family: var(--font-gmarket) !important;
 }
 .regular {
   font-weight: 400 !important;

@@ -27,17 +27,27 @@
   font-style: normal;
 }
 
-/* 국민연금체 */
+
+/* S-CoreDream (에스코어드림) */
 @font-face {
-  font-family: "NPSfontBold";
-  src: url("../../font/NPSfont_bold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: "SCDream";
+  src: url("../../font/SCDream5.otf") format("opentype");
+  font-weight: 500;
   font-style: normal;
 }
 
+/* Gmarket Sans */
 @font-face {
-  font-family: "NPSfontExtraBold";
-  src: url("../../font/NPSfont_extrabold.ttf") format("truetype");
-  font-weight: 800;
+  font-family: "GmarketSans";
+  src: url("../../font/GmarketSansMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Montserrat */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../font/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }

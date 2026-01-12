@@ -65,6 +65,10 @@
   --font-EN: "OutfitVariable", "PretendardVariable", sans-serif;
   --font-slogan: "Caveat-Regular", "OutfitVariable", cursive;
   --font-mobile-section: "NPSfontExtraBold", "PretendardVariable", sans-serif;
+  /* 웰라이프 프로젝트 폰트 */
+  --font-scdream: "SCDream", "PretendardVariable", sans-serif;
+  --font-gmarket: "GmarketSans", "PretendardVariable", sans-serif;
+  --font-mont: "Montserrat", "OutfitVariable", sans-serif;
 
   /* --------- FONT SIZE --------- */
   --font-size-xs: 12px;
