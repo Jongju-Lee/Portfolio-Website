@@ -69,7 +69,7 @@ UIkit.util.on(document, 'show', '.uk-lightbox', function (e) {
     // 애니메이션 종료 후 attention 클래스 제거
     setTimeout(function () {
       customBtn.classList.remove('custom-close-btn--attention');
-    }, 3800);
+    }, 2300);
 
     lightbox.appendChild(customBtn);
   }, 50);

@@ -716,18 +716,37 @@
               <figure class="web-mockup__main">
                 <!-- web-mockup__main-total -->
                 <div class="web-mockup__main-total project-mockup__item project-mockup__total">
-                  <img src="./images/website_pub/well-life-mockup-total.png" alt="웰라이프 전체 목업 화면">
+                  <img src="./images/website_pub/web-mockup-main-total.png" alt="웰라이프 전체 목업 화면">
                 </div>
+
+                <!-- 임시 작업 -->
+                <div class="web-mockup-total">
+                  <a class="web-mockup-total-item web-mockup-total--pc">
+                    <img src="./images/website_pub/web-mockup-main-pc.png" alt="웰라이프 PC 화면" loading="lazy">
+                    <span class="web-mockup-total-item-label web-mockup-total-item-label--pc font-en">PC View</span>
+                  </a>
+                  <a class="web-mockup-total-item web-mockup-total--tablet">
+                    <img src="./images/website_pub/web-mockup-main-tablet.png" alt="웰라이프 태블릿 화면" loading="lazy">
+                    <span class="web-mockup-total-item-label web-mockup-total-item-label font-en">Tablet View</span>
+                  </a>
+                  <a class="web-mockup-total-item web-mockup-total--mobile" href="./portfolio/well-life/mockup/mobile.html">
+                    <img src="./images/website_pub/web-mockup-main-mobile.png" alt="웰라이프 모바일 화면" loading="lazy">
+                    <span class="web-mockup-total-item-label web-mockup-total-item-label font-en">Mobile View</span>
+                  </a>
+                </div>
+                <!-- 임시 작업 -->
+
+
                 <!-- web-mockup__main-items -->
                 <div class="web-mockup__main-items project-mockup__mobile-items">
                   <div class="project-mockup__item project-mockup__item--pc">
-                    <img src="./images/website_pub/well-life-mockup-pc-01.png" alt="웰라이프 PC 화면" loading="lazy">
+                    <img src="./images/website_pub/web-mockup-main-pc.png" alt="웰라이프 PC 화면" loading="lazy">
                   </div>
                   <div class="project-mockup__item project-mockup__item--tablet">
-                    <img src="./images/website_pub/well-life-mockup-tablet-02.png" alt="웰라이프 태블릿 화면" loading="lazy">
+                    <img src="./images/website_pub/web-mockup-main-tablet.png" alt="웰라이프 태블릿 화면" loading="lazy">
                   </div>
                   <div class="project-mockup__item project-mockup__item--mobile">
-                    <img src="./images/website_pub/well-life-mockup-mobiles.png" alt="웰라이프 모바일 화면 1" loading="lazy">
+                    <img src="./images/website_pub/web-mockup-main-mobile.png" alt="웰라이프 모바일 화면" loading="lazy">
                   </div>
                 </div>
               </figure>
@@ -759,7 +778,7 @@
 
                     <!-- web-info__accessibility(웹 접근성 점수) -->
                     <div class="web-info__accessibility">
-                      <img class="web-info__accessibility-icon" src="./images/website_pub/web-row1-accessibility.png" alt="접근성 100점" loading="lazy">
+                      <img class="web-info__accessibility-icon" src="./images/website_pub/web-info-accessibility.png" alt="접근성 100점 아이콘" loading="lazy">
                       <ul class="web-info__accessibility-list">
                         <li class="web-info__accessibility-list-item">
                           <p>
@@ -778,7 +797,7 @@
 
                 <!-- web-info__overview -->
                 <div class="web-info__overview project-row__right">
-                  <div class="web-info__overview-table-wrapper project-table-wrapper">
+                  <div class="web-info__overview-table-wrapper project-table__wrapper">
                     <table class="web-info__overview-table project-table">
                       <!-- caption -->
                       <caption class="sr-only">웰라이프내과의원 프로젝트 개요 입니다.</caption>
@@ -832,15 +851,13 @@
 
               <!-- ########## Row 2 - web-theme ########## -->
               <div class="web-theme project-row">
-                <!-- web-theme__mockup-items(모바일 목업) -->
-                <div class="web-theme__mockup-items project-row__left">
-                  <div class="web-theme__mockup-item project-mockup__item">
-                    <img src="./images/website_pub/well-life-mockup-mobile-01.png" alt="웰라이프 모바일 라이트모드" loading="lazy">
-                    <span class="web-content__typo-mockup-label project-mockup-label font-en">Light Mode</span>
-                  </div>
-                  <div class="web-theme__mockup-item project-mockup__item">
-                    <img src="./images/website_pub/well-life-mockup-mobile-02.png" alt="웰라이프 모바일 다크모드" loading="lazy">
-                    <span class="web-content__typo-mockup-label project-mockup-label font-en">Dark Mode</span>
+                <!-- web-theme__mockup(다크모드 목업) -->
+                <div class="web-theme__mockup project-row__left">
+                  <div class="web-theme__mockup--pc project-mockup__item">
+                    <img src="./images/website_pub/web-mockup-dark-mode.png" alt="PC 다크모드 목업" loading="lazy">
+                    <span class="react-theme__mockup-label project-mockup__label">
+                      <span class="font-en">Light / Dark Mode</span>
+                    </span>
                   </div>
                 </div>
 
@@ -900,11 +917,38 @@
                   </p>
                 </div>
 
-                <!-- web-content__color-mockup(태블릿 목업) -->
-                <div class="web-typo__mockup project-row__right">
-                  <div class="web-typo__mockup--tablet project-mockup__item">
-                    <img src="./images/website_pub/well-life-mockup-tablet-02.png" alt="웰라이프 태블릿 사이드바" loading="lazy">
+                <!-- web-typo__mockup-items(유효성 검사, 날짜 선택 목업) -->
+                <div class="web-typo__mockup-items project-row__right">
+                  <div class="web-typo__mockup-item project-mockup__item">
+                    <img src="./images/website_pub/well-life-mockup-mobile-01.png" alt="모바일 폼 유효성검사 목업" loading="lazy">
+                    <span class="web-typo__mockup-label project-mockup__label font-en">Form Validation</span>
                   </div>
+                  <div class="web-typo__mockup-item project-mockup__item">
+                    <img src="./images/website_pub/well-life-mockup-mobile-02.png" alt="모바일 날짜 선택 목업" loading="lazy">
+                    <span class="web-typo__mockup-label project-mockup__label font-en">Date Picker</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ########## Row 4 - web-responsive ########## -->
+              <div class="web-responsive project-row-responsive" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0" uk-lightbox>
+                <div class="web-responsive__mockup--pc project-row__fill">
+                  <a class="web-responsive__mockup project-mockup__item" href="./portfolio/practical_coding/sass(scss)/01/index.html" data-caption="Heartbeat Animation with SCSS" data-type="iframe">
+                    <img src="./images/website_pub/web-mockup-responisve-pc.png" alt="PC 반응형 화면" loading="lazy">
+                    <span class="web-responsive__mockup-label project-mockup__label font-en">PC</span>
+                  </a>
+                </div>
+                <div class="web-responsive__mockup--mobile project-row__fill">
+                  <a class="web-responsive__mockup project-mockup__item" href="./portfolio/practical_coding/sass(scss)/02/index.html" data-caption="Heartbeat Animation with SCSS" data-type="iframe">
+                    <img src="./images/website_pub/web-mockup-responisve-mobile.png" alt="모바일 반응형 화면" loading="lazy">
+                    <span class="web-responsive__mockup-label project-mockup__label font-en">Mobile</span>
+                  </a>
+                </div>
+                <div class="web-responsive__mockup--tablet project-row__fill">
+                  <a class="web-responsive__mockup project-mockup__item" href="./portfolio/practical_coding/sass(scss)/03/index.html" data-caption="Heartbeat Animation with SCSS" data-type="iframe">
+                    <img src="./images/website_pub/web-mockup-responisve-tablet.png" alt="태블릿 반응형 화면" loading="lazy">
+                    <span class="web-responsive__mockup-label project-mockup__label font-en">Tablet</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -935,15 +979,16 @@
                   <img src="./images/react/mockup-main-3.png" alt="TaskFlow 모바일 프리뷰 3" loading="lazy">
                 </div>
               </div>
-              <!-- react-content__links -->
-              <div class="react-content__links">
-                <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/mobile.html" data-label-pc="Mobile"></a>
-                <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/tablet.html" data-label-pc="Tablet"></a>
-                <div uk-lightbox>
-                  <a class="react-content__link font-en" href="https://taskflow-todo-list.netlify.app/" data-label-pc="PC" data-label-tablet="View-App" data-type="iframe"></a>
-                </div>
-              </div>
             </figure>
+            
+            <!-- ########## react-content__links ########## -->
+            <div class="react-content__links">
+              <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/mobile.html" data-label-pc="Mobile"></a>
+              <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/tablet.html" data-label-pc="Tablet"></a>
+              <div uk-lightbox>
+                <a class="react-content__link font-en" href="https://taskflow-jongju.vercel.app/" data-label-pc="PC" data-label-tablet="View-App" data-type="iframe"></a>
+              </div>
+            </div>
 
             <!-- ########## Row 1: react-info ########## -->
             <div class="react-info project-row" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0">
@@ -983,15 +1028,15 @@
                 <div class="react-info__mockup-items">
                   <div class="react-info__mockup-item--mobile project-mockup__item">
                     <img src="./images/react/mockup-mobile-edit.png" alt="할 일 수정 화면" loading="lazy">
-                    <span class="react-info__mockup-label project-mockup-label">할 일 수정</span>
+                    <span class="react-info__mockup-label project-mockup__label">할 일 수정</span>
                   </div>
                   <div class="react-info__mockup-item--mobile project-mockup__item">
                     <img src="./images/react/mockup-mobile-delete.png" alt="할 일 삭제 화면" loading="lazy">
-                    <span class="react-info__mockup-label project-mockup-label">할 일 삭제</span>
+                    <span class="react-info__mockup-label project-mockup__label">할 일 삭제</span>
                   </div>
                   <div class="react-info__mockup-item--mobile project-mockup__item">
                     <img src="./images/react/mockup-mobile-calendar.png" alt="캘린더 연동 화면" loading="lazy">
-                    <span class="react-info__mockup-label project-mockup-label">캘린더 연동</span>
+                    <span class="react-info__mockup-label project-mockup__label">캘린더 연동</span>
                   </div>
                 </div>
               </div>
@@ -1003,14 +1048,14 @@
               <div class="react-overview__mockup project-row__left">
                 <div class="react-overview__mockup--tablet project-mockup__item">
                   <img src="./images/react/mockup-tablet-dnd.png" alt="드래그 드롭 화면" loading="lazy">
-                  <span class="react-overview__mockup-label project-mockup-label">할 일 순서 변경</span>
+                  <span class="react-overview__mockup-label project-mockup__label">할 일 순서 변경</span>
                 </div>
               </div>
               
               <!-- react-overview__table-container(테이블) -->
               <div class="react-overview__table-container project-row__right">
-                <h4 class="react-overview__table-caption project-table-caption"><span class="font-en">TaskFlow</span> 프로젝트 개요</h4>
-                <div class="react-overview__table-wrapper project-table-wrapper">
+                <h4 class="react-overview__table-caption project-table__caption"><span class="font-en">TaskFlow</span> 프로젝트 개요</h4>
+                <div class="react-overview__table-wrapper project-table__wrapper">
                   <table class="react-overview__table project-table">
                     <caption class="sr-only">TaskFlow 프로젝트 개요 입니다.</caption>
                     <thead>
@@ -1104,11 +1149,10 @@
               <div class="react-format__mockup project-row__right">
                 <div class="react-format__mockup--pc project-mockup__item">
                   <img src="./images/react/mockup-pc-shortcut.png" alt="단축키 모달 화면" loading="lazy">
-                  <span class="react-format__mockup-label project-mockup-label">키보드 도움말</span>
+                  <span class="react-format__mockup-label project-mockup__label">키보드 도움말</span>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -1126,28 +1170,22 @@
               <!-- ##### practical-slider__box - JavaScript ##### -->
               <div class="practical-slider__box swiper" uk-lightbox>
                 <div class="swiper-wrapper">
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/01/index.html"
-                    data-caption="Calculator with JavaScript" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/01/index.html" data-caption="Calculator with JavaScript" data-type="iframe">
                     <img src="./images/prac_js/prac_js_01.png" alt="자바스크립트 1 : 계산기 " />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/02/index.html"
-                    data-caption="Stop Watch with JavaScript" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/02/index.html" data-caption="Stop Watch with JavaScript" data-type="iframe">
                     <img src="./images/prac_js/prac_js_02.png" alt="자바스크립트 2 : 타이머" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/03/index.html"
-                    data-caption="Scissors Rock Paper Game" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/03/index.html" data-caption="Scissors Rock Paper Game" data-type="iframe">
                     <img src="./images/prac_js/prac_js_03.png" alt="자바스크립트 3 : 가위바위보 게임" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/04/index.html"
-                    data-caption="Drag &amp; Drop Item with JavaScript" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/04/index.html" data-caption="Drag &amp; Drop Item with JavaScript" data-type="iframe">
                     <img src="./images/prac_js/prac_js_04.png" alt="자바스크립트 4 : 드래그 앤 드롭" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/05/index.html"
-                    data-caption="AutoSave TO-DO LIST with JavaScript" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/05/index.html" data-caption="AutoSave TO-DO LIST with JavaScript" data-type="iframe">
                     <img src="./images/prac_js/prac_js_05.png" alt="자바스크립트 5 : 투두리스트 프로토타입" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/06/index.html"
-                    data-caption="Countdown with JavaScript" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/06/index.html" data-caption="Countdown with JavaScript" data-type="iframe">
                     <img src="./images/prac_js/prac_js_06.png" alt="자바스크립트 6 : 점검 페이지 프로토타입" />
                   </a>
                 </div>
@@ -1164,33 +1202,27 @@
               <div class="practical-slider__box swiper" uk-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/sass(scss)/01/index.html"
-                    data-caption="Heartbeat Animation with SCSS" data-type="iframe">
+                    href="./portfolio/practical_coding/sass(scss)/01/index.html" data-caption="Heartbeat Animation with SCSS" data-type="iframe">
                     <img src="./images/prac_sass/prac_sass_01.png" alt="에스씨에스에스 1 : 하트비트 애니메이션" />
                   </a>
                   <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/sass(scss)/02/index.html"
-                    data-caption="Responsive Gallery with SCSS" data-type="iframe">
+                    href="./portfolio/practical_coding/sass(scss)/02/index.html" data-caption="Responsive Gallery with SCSS" data-type="iframe">
                     <img src="./images/prac_sass/prac_sass_02.jpg" alt="에스씨에스에스 2 : 반응형 그리드 갤러리" />
                   </a>
                   <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/sass(scss)/03/index.html" data-caption="Glowing Icon with SCSS"
-                    data-type="iframe">
+                    href="./portfolio/practical_coding/sass(scss)/03/index.html" data-caption="Glowing Icon with SCSS" data-type="iframe">
                     <img src="./images/prac_sass/prac_sass_03.png" alt="에스씨에스에스 3 : 글로우 아이콘 박스" />
                   </a>
                   <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/sass(scss)/04/index.html"
-                    data-caption="Fullscreen Photo slider with SCSS" data-type="iframe">
+                    href="./portfolio/practical_coding/sass(scss)/04/index.html" data-caption="Fullscreen Photo slider with SCSS" data-type="iframe">
                     <img src="./images/prac_sass/prac_sass_04.jpg" alt="에스씨에스에스 4 : 풀스크린 포토 슬라이더" />
                   </a>
                   <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/sass(scss)/05/index.html" data-caption="Mobile Mockup with SCSS"
-                    data-type="iframe">
+                    href="./portfolio/practical_coding/sass(scss)/05/index.html" data-caption="Mobile Mockup with SCSS" data-type="iframe">
                     <img src="./images/prac_sass/prac_sass_05.png" alt="에스씨에스에스 5 : 모바일 목업 디자인" />
                   </a>
                   <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/sass(scss)/06/index.html" data-caption="Tablet Mockup with SCSS"
-                    data-type="iframe">
+                    href="./portfolio/practical_coding/sass(scss)/06/index.html" data-caption="Tablet Mockup with SCSS" data-type="iframe">
                     <img src="./images/prac_sass/prac_sass_06.png" alt="에스씨에스에스 6 : 태블릿 목업 디자인" />
                   </a>
                 </div>
@@ -1207,28 +1239,19 @@
               <div class="practical-slider__box swiper" uk-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/navigation/02/index.html" data-caption="Glass Sidebar"
-                    data-type="iframe">
+                    href="./portfolio/practical_coding/navigation/02/index.html" data-caption="Glass Sidebar" data-type="iframe">
                     <img src="./images/prac_nav/prac_nav_02.png" alt="네비게이션 1 : 글래스 스타일 사이드바" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/navigation/01/index.html" data-caption="Overlay Navigation"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/navigation/01/index.html" data-caption="Overlay Navigation" data-type="iframe">
                     <img src="./images/prac_nav/prac_nav_01.png" alt="네비게이션 2 : 오버레이 네비게이션" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/navigation/03/index.html" data-caption="Dark Mode Navigation"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/navigation/03/index.html" data-caption="Dark Mode Navigation" data-type="iframe">
                     <img src="./images/prac_nav/prac_nav_03.png" alt="네비게이션 3 : 다크모드 기능 헤더 네비게이션" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/navigation/04/index.html" data-caption="Use Attr Navigation"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/navigation/04/index.html" data-caption="Use Attr Navigation" data-type="iframe">
                     <img src="./images/prac_nav/prac_nav_04.png" alt="네비게이션 4 : 호버 애니메이션 헤더 " />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/navigation/05/index.html" data-caption="Animation Indicator Nav"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/navigation/05/index.html" data-caption="Animation Indicator Nav" data-type="iframe">
                     <img src="./images/prac_nav/prac_nav_05.png" alt="네비게이션 5 : 인디케이터 네비게이션" />
                   </a>
                 </div>
@@ -1245,28 +1268,19 @@
               <div class="practical-slider__box swiper" uk-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/tab_menu/01/index.html"
-                    data-caption="Pure CSS Tab Slide Indicator" data-type="iframe">
+                    href="./portfolio/practical_coding/tab_menu/01/index.html" data-caption="Pure CSS Tab Slide Indicator" data-type="iframe">
                     <img src="./images/prac_tab/prac_tab_01.png" alt="탭 메뉴 및 아코디언 메뉴 1 : 탭 슬라이드 인디케이터" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/tab_menu/02/index.html" data-caption="Pure CSS Accordion"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/tab_menu/02/index.html" data-caption="Pure CSS Accordion" data-type="iframe">
                     <img src="./images/prac_tab/prac_tab_02.png" alt="탭 메뉴 및 아코디언 메뉴 2 : 큐엔에이 아코디언 메뉴" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/tab_menu/03/index.html" data-caption="Pure CSS Tab Navigation"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/tab_menu/03/index.html" data-caption="Pure CSS Tab Navigation" data-type="iframe">
                     <img src="./images/prac_tab/prac_tab_03.png" alt="탭 메뉴 및 아코디언 메뉴 3 : 탭 메뉴 네비게이션" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/tab_menu/04/index.html" data-caption="Pure CSS Vertical Slider"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/tab_menu/04/index.html" data-caption="Pure CSS Vertical Slider" data-type="iframe">
                     <img src="./images/prac_tab/prac_tab_04.png" alt="탭 메뉴 및 아코디언 메뉴 4 : 세로 슬라이더 탭 메뉴" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/tab_menu/05/index.html" data-caption="Pure CSS Tab Menu"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/tab_menu/05/index.html" data-caption="Pure CSS Tab Menu" data-type="iframe">
                     <img src="./images/prac_tab/prac_tab_05.png" alt="탭 메뉴 및 아코디언 메뉴 5 : 가로 슬라이더 탭 메뉴" />
                   </a>
                 </div>
@@ -1281,29 +1295,19 @@
               <!-- ##### practical-slider__box - CARD UI ##### -->
               <div class="practical-slider__box swiper" uk-lightbox>
                 <div class="swiper-wrapper">
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/card_ui/01/index.html" data-caption="Product Card"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/card_ui/01/index.html" data-caption="Product Card" data-type="iframe">
                     <img src="./images/prac_card/prac_card_01.png" alt="카드 유아이 1 : 제품 디자인 카드" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/card_ui/02/index.html"
-                    data-caption="Hover Animation Card(z-index)" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/card_ui/02/index.html" data-caption="Hover Animation Card(z-index)" data-type="iframe">
                     <img src="./images/prac_card/prac_card_02.png" alt="카드 유아이 2 : 호버 애니메이션 프로필 카드 1" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/card_ui/03/index.html"
-                    data-caption="Hover Animation Profile Card" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/card_ui/03/index.html" data-caption="Hover Animation Profile Card" data-type="iframe">
                     <img src="./images/prac_card/prac_card_03.png" alt="카드 유아이 3 : 호버 애니메이션 프로필 카드 2" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/card_ui/04/index.html" data-caption="Website Card UI"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/card_ui/04/index.html" data-caption="Website Card UI" data-type="iframe">
                     <img src="./images/prac_card/prac_card_04.png" alt="카드 유아이 4 : 이커머스 웹사이트 카드 유아이" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/card_ui/05/index.html" data-caption="Profile Card"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/card_ui/05/index.html" data-caption="Profile Card" data-type="iframe">
                     <img src="./images/prac_card/prac_card_05.png" alt="카드 유아이 5 : 프로필 카드 디자인" />
                   </a>
                 </div>
@@ -1318,25 +1322,19 @@
               <!-- ##### practical-slider__box - FORM ##### -->
               <div class="practical-slider__box swiper" uk-lightbox>
                 <div class="swiper-wrapper">
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/form/01/index.html"
-                    data-caption="Register Form" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/form/01/index.html" data-caption="Register Form" data-type="iframe">
                     <img src="./images/prac_form/prac_form_01.png" alt="폼 유아이 1 : 회원가입 폼" />
                   </a>
-                  <a class="practical-slider__item swiper-slide caption_white"
-                    href="./portfolio/practical_coding/form/02/index.html" data-caption="Glass Login Form"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide caption_white" href="./portfolio/practical_coding/form/02/index.html" data-caption="Glass Login Form" data-type="iframe">
                     <img src="./images/prac_form/prac_form_02.png" alt="폼 유아이 2 : 글래스 스타일 로그인 폼" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/form/03/index.html"
-                    data-caption="Naver Sign-up Form" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/form/03/index.html" data-caption="Naver Sign-up Form" data-type="iframe">
                     <img src="./images/prac_form/prac_form_03.png" alt="폼 유아이 3 : 네이버 로그인 폼 클론코딩" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/form/04/index.html"
-                    data-caption="Custom Radio Button" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/form/04/index.html" data-caption="Custom Radio Button" data-type="iframe">
                     <img src="./images/prac_form/prac_form_04.png" alt="폼 유아이 4 : 커스텀 라디오 버튼 박스 디자인" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/form/05/index.html"
-                    data-caption="Search Box Button" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/form/05/index.html" data-caption="Search Box Button" data-type="iframe">
                     <img src="./images/prac_form/prac_form_05.png" alt="폼 유아이 5 : 커스텀 검색 박스 디자인" />
                   </a>
                 </div>
@@ -1351,29 +1349,19 @@
               <!-- ##### practical-slider__box - OTHER ##### -->
               <div class="practical-slider__box swiper" uk-lightbox>
                 <div class="swiper-wrapper">
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/prototype/01/index.html" data-caption="Video Landing Page"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/prototype/01/index.html" data-caption="Video Landing Page" data-type="iframe">
                     <img src="./images/prac_proto/prac_proto_01.png" alt="프로토타입 1 : 비디오 랜딩 페이지 프로토타입" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/prototype/02/index.html" data-caption="Star Rating"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/prototype/02/index.html" data-caption="Star Rating" data-type="iframe">
                     <img src="./images/prac_proto/prac_proto_02.png" alt="프로토타입 2 : 별점 평가 프로토타입" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/prototype/03/index.html" data-caption="Multi Button Box"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/prototype/03/index.html" data-caption="Multi Button Box" data-type="iframe">
                     <img src="./images/prac_proto/prac_proto_03.png" alt="프로토타입 3 : 멀티 버튼 박스 프로토타입" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/prototype/04/index.html" data-caption="Hamburger Button"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/prototype/04/index.html" data-caption="Hamburger Button" data-type="iframe">
                     <img src="./images/prac_proto/prac_proto_04.png" alt="프로토타입 4 : 햄버거 버튼 프로토타입" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/prototype/05/index.html" data-caption="SNS Tooltip"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/prototype/05/index.html" data-caption="SNS Tooltip" data-type="iframe">
                     <img src="./images/prac_proto/prac_proto_05.png" alt="프로토타입 5 : SNS 툴팁 프로토타입" loading="lazy" />
                   </a>
                 </div>
@@ -1389,29 +1377,19 @@
               <!-- ##### practical-slider__box - ANIMATION(KEYFRAMES) ##### -->
               <div class="practical-slider__box swiper" uk-lightbox>
                 <div class="swiper-wrapper">
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/animation/01/index.html" data-caption="Color Change Loading"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/animation/01/index.html" data-caption="Color Change Loading" data-type="iframe">
                     <img src="./images/prac_ani/prac_ani_01.png" alt="애니메이션 1 : 컴러 체인지 로딩 애니메이션" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/animation/02/index.html" data-caption="Toast Notification"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/animation/02/index.html" data-caption="Toast Notification" data-type="iframe">
                     <img src="./images/prac_ani/prac_ani_02.png" alt="애니메이션 2 : 토스트 알림 애니메이션" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/animation/03/index.html" data-caption="Text Animation Loading"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/animation/03/index.html" data-caption="Text Animation Loading" data-type="iframe">
                     <img src="./images/prac_ani/prac_ani_03.png" alt="애니메이션 3 : 텍스트 로딩 애니메이션" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/animation/04/index.html" data-caption="Pebble Rotate Animation"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/animation/04/index.html" data-caption="Pebble Rotate Animation" data-type="iframe">
                     <img src="./images/prac_ani/prac_ani_04.png" alt="애니메이션 4 : 로테이트 UI 애니메이션" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide"
-                    href="./portfolio/practical_coding/animation/05/index.html" data-caption="Plane Animation Loading"
-                    data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/animation/05/index.html" data-caption="Plane Animation Loading" data-type="iframe">
                     <img src="./images/prac_ani/prac_ani_05.png" alt="애니메이션 5 : 항공사 웹사이트 로딩 애니메이션" loading="lazy" />
                   </a>
                 </div>
@@ -1427,24 +1405,19 @@
               <!-- ##### practical-slider__box - HOVER EFFECT ##### -->
               <div class="practical-slider__box swiper" uk-lightbox>
                 <div class="swiper-wrapper">
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/01/index.html"
-                    data-caption="Accordion Gallery" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/01/index.html" data-caption="Accordion Gallery" data-type="iframe">
                     <img src="./images/prac_hover/prac_hover_01.png" alt="호버 이펙트 1 : 아코디언 갤러리" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/02/index.html"
-                    data-caption="SNS Button" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/02/index.html" data-caption="SNS Button" data-type="iframe">
                     <img src="./images/prac_hover/prac_hover_02.png" alt="호버 이펙트 2 : SNS 버튼 박스" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/03/index.html"
-                    data-caption="Background Change Navigation" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/03/index.html" data-caption="Background Change Navigation" data-type="iframe">
                     <img src="./images/prac_hover/prac_hover_03.png" alt="호버 이펙트 3 : 배경 전환 네비게이션" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/04/index.html"
-                    data-caption="3D Hover Effect" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/04/index.html" data-caption="3D Hover Effect" data-type="iframe">
                     <img src="./images/prac_hover/prac_hover_04.png" alt="호버 이펙트 4 : 쓰리디 호버 이펙트" loading="lazy" />
                   </a>
-                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/05/index.html"
-                    data-caption="Strike Hover Effect" data-type="iframe">
+                  <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/05/index.html" data-caption="Strike Hover Effect" data-type="iframe">
                     <img src="./images/prac_hover/prac_hover_05.png" alt="호버 이펙트 5 : 인트로 호버 이펙트" loading="lazy" />
                   </a>
                 </div>

@@ -434,13 +434,13 @@
 
 
   /* ----- web-typo ----- */
-  /* web-theme__mockup-items */
-  .web-theme__mockup-items {
+  /* web-typo__mockup-items */
+  .web-typo__mockup-items {
     justify-content: space-between;
     min-width: 320px;
     padding: 0 var(--spacing-md);
   }
-  .web-theme__mockup-item {
+  .web-typo__mockup-item {
     max-width: 42%;
   }
   /* ########## END - WEB ########## */
@@ -454,13 +454,7 @@
     margin-top: var(--spacing-6xl);
   }
 
-  /* react-mockup (메인) */
-  .react-mockup {
-    gap: var(--spacing-xl);
-  }
-  .react-mockup__main-total {
-    display: none;
-  }
+  /* react-content__link */
   .react-content__link {
     width: 120px;
   }

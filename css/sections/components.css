@@ -145,20 +145,33 @@
 .project-row__left,
 .project-row__right {
   flex: 1;
-  max-width: 600px;
+  max-width: 630px;
   min-width: 460px;
 }
 
-/* ----- project-table-wrapper ----- */
-.project-table-wrapper {
+/* project-row-responsive(반응형 목업 row) */
+.project-row-responsive {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--spacing-7xl);
+  margin: var(--spacing-7xl) auto 0;
+}
+.project-row__fill {
+  display: flex;
+  align-items: end;
+}
+
+/* ----- project-table__wrapper ----- */
+.project-table__wrapper {
   display: flex;
   overflow: hidden;
   border-radius: var(--spacing-md);
   box-shadow: var(--shadow-normal);
 }
 
-/* ----- project-table-caption ----- */
-.project-table-caption {
+/* ----- project-table__caption ----- */
+.project-table__caption {
   margin-bottom: var(--spacing-xl);
   font-size: var(--font-size-2xl);
   font-weight: 600;
@@ -252,7 +265,7 @@
 .project-mockup__item--mobile {
   width: 70%;
 }
-.project-mockup-label {
+.project-mockup__label {
   font-size: var(--font-size-lg);
   color: var(--text-color-gray);
 }

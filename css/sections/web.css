@@ -71,16 +71,57 @@
 }
 /* ========== END - 공통 클래스 ========== */
 
-
-/* ----- web-mockup__main ----- */
-.web-mockup__main {
+/* 임시 작업 */
+.web-mockup-total {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   width: 100%;
-  margin: 0 auto;
 }
+.web-mockup-total-item {
+  position: relative;
+}
+.web-mockup-total-item img {
+  filter: drop-shadow(var(--shadow-mockup)) brightness(1);
+  transition: filter 0.5s;
+}
+.web-mockup-total--pc {
+  max-width: 70%;
+}
+.web-mockup-total--tablet {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 44%;
+}
+.web-mockup-total--mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32%;
+}
+.web-mockup-total-item-label {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: var(--font-size-2xl);
+  font-weight: 400;
+  text-align: center;
+  transition: opacity 0.5s;
+}
+.web-mockup-total-item-label--pc {
+  top: 21%;
+}
+.web-mockup-total-item:hover .web-mockup-total-item-label {
+  opacity: 1;
+}
+.web-mockup-total-item:hover img {
+  filter: drop-shadow(var(--shadow-mockup)) brightness(0.5);
+}
+
 
 /* ----- web-content__links ----- */
 .web-content__links {
@@ -88,7 +129,7 @@
   justify-content: center;
   gap: var(--spacing-lg);
   width: 100%;
-  margin-top: var(--spacing-4xl);
+  margin-top: var(--spacing-6xl);
 }
 .web-content__link {
   display: flex;
@@ -143,7 +184,7 @@
   border-color: var(--text-color-body);
 }
 
-/* ----- web-info ----- */
+/* ---------- Row 1 - web-info ---------- */
 .web-info {
   align-items: end;
 }
@@ -206,7 +247,7 @@
   background-color: var(--color-well-life-primary);
 }
 
-/* ----- web-theme ----- */
+/* ---------- Row 2 - web-theme ---------- */
 .web-theme {
   align-items: center;
 }
@@ -223,7 +264,7 @@
   border: 1px solid var(--color-line);
 }
 
-/* ----- web-typo ----- */
+/* ---------- Row 3 - web-typo ---------- */
 .web-typo {
   align-items: center;
 }
@@ -239,12 +280,26 @@
   background-color: var(--color-well-life-text-tertiary);
 }
 
-/* web-theme__mockup-items */
-.web-theme__mockup-items {
+/* web-typo__mockup-items */
+.web-typo__mockup-items {
   display: flex;
   justify-content: space-around;
 }
-.web-theme__mockup-item {
+.web-typo__mockup-item {
   width: 200px;
   height: auto;
+}
+
+/* ---------- Row 4 - web-responsive ---------- */
+.web-responsive__mockup--pc {
+  flex: 4.6;
+  max-width: 460px;
+}
+.web-responsive__mockup--mobile {
+  flex: 1.6;
+  max-width: 160px;
+}
+.web-responsive__mockup--tablet {
+  flex: 4.2;
+  max-width: 420px;
 }

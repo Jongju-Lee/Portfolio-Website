@@ -15,21 +15,13 @@ main > section#react {
   gap: var(--spacing-3xl);
   width: 100%;
 }
-.react-mockup__main-total {
-  width: 100%;
-}
-.react-mockup__main-total img {
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(var(--shadow-mockup));
-}
 
 /* react-content__links */
 .react-content__links {
   display: flex;
   justify-content: center;
   gap: var(--spacing-2xl);
-  margin-top: var(--spacing-4xl);
+  margin-top: var(--spacing-6xl);
 }
 .react-content__link {
   display: inline-block;
