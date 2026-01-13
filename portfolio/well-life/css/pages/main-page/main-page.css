@@ -1146,8 +1146,11 @@
   background-color: var(--theme-secondary);
 }
 .direction-heading__way-top-title {
+  display: inline-block;
   margin-top: var(--spacing-24);
+  font-family: var(--font-KR-bold);
   font-size: var(--font-size-xl);
+  line-height: 1.4em;
   color: var(--theme-secondary);
 }
 .direction-heading__way-bottom {
