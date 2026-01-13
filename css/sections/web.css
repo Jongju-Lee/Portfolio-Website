@@ -71,13 +71,14 @@
 }
 /* ========== END - 공통 클래스 ========== */
 
-/* ---------- 임시 작업 ---------- */
-/* ----- web-mockup-total(메인 모달 컨테이너) ----- */
+
+/* ----- web-mockup__main(메인 목업 컨테이너) ----- */
 .web-mockup__total {
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: var(--spacing-5xl);
 }
 
 /* .web-mockup__total-item(개별 목업) */
@@ -85,125 +86,130 @@
   position: relative;
 }
 /* 목업 hover시 filter 처리 */
-.web-mockup__total-item > img {
+.web-mockup__total-item img {
   filter: drop-shadow(var(--shadow-mockup)) brightness(1);
   transition: filter 0.5s;
 }
-.web-mockup__total-item:hover > img {
+.web-mockup__total-item:hover img {
   filter: drop-shadow(var(--shadow-mockup)) brightness(0.5);
 }
-.web-mockup-total--pc {
+.web-mockup__total--pc {
   max-width: 70%;
 }
-.web-mockup-total--tablet {
+.web-mockup__total--tablet {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 44%;
 }
-.web-mockup-total--mobile {
+.web-mockup__total--mobile {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 32%;
 }
 
-/* web-mockup__total-item-label(목업 hover 라벨) */
+/* web-mockup__total-item-label(목업 하단 라벨) */
 .web-mockup__total-item-label {
-  opacity: 0;
   position: absolute;
-  top: 50%;
+  top: calc(100% + var(--spacing-2xl));
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  font-size: var(--font-size-2xl);
-  font-weight: 400;
-  text-align: center;
-  color: var(--text-color-white);
-  transition: opacity 0.5s;
-  white-space: nowrap;
-}
-.web-mockup__total-item-label .view-icon {
-  width: 26px;
-  height: auto;
-}
-.web-mockup__total-item-label--pc {
-  top: 21%;
-}
-.web-mockup__total-item:hover .web-mockup__total-item-label {
-  opacity: 1;
-}
-
-
-/* ----- web-content__links(링크 버튼 박스) ----- */
-.web-content__links {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-lg);
-  width: 100%;
-  margin-top: var(--spacing-6xl);
-}
-
-/* 링크 버튼 공통 디자인 */
-.web-content__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  padding: var(--spacing-sm) 0;
-  line-height: 1;
-  border: 1px solid transparent;
-  border-radius: 6px;
-  text-align: center;
-  font-size: var(--font-size-lg);
+  padding: 6px var(--spacing-md);
+  font-size: var(--font-size-xl);
   font-weight: 500;
-  font-family: var(--font-EN);
-  transition: background-color 0.3s, border 0.3s, color 0.3s;
-  box-shadow: var(--shadow-color-box-light);
+  text-align: center;
+  color: var(--color-well-life-primary);
+  border-radius: 4px;
+  transition: background-color 0.5s, color 0.5s;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 10;
 }
-.web-content__link--pc {
+.web-mockup__total-item-label:hover,
+.web-mockup__total-item:hover .web-mockup__total-item-label {
   background-color: var(--color-well-life-primary);
   color: var(--text-color-white);
 }
-.web-content__link--pc::before {
-  content: attr(data-label-pc);
+/* 라벨 아이콘 (CSS 변수로 관리) */
+.web-mockup__total-item-label .view-icon {
+  --icon-default: url("../../images/icon/view-icon.png");
+  --icon-hover: url("../../images/icon/view-icon-hover.png");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: var(--icon-default);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.5s;
 }
-.web-content__link--pc:hover {
-  background-color: var(--color-background-white);
-  border-color: var(--color-well-life-primary);
-  color: var(--color-well-life-primary);
+.web-mockup__total-item:hover .view-icon {
+  background-image: var(--icon-hover);
 }
-.web-content__link--mobile,
-.web-content__link--tablet {
-  background-color: var(--color-background-white);
-  color: var(--color-well-life-primary);
-  border-color: var(--color-well-life-primary);
-}
-.web-content__link--mobile:hover,
-.web-content__link--tablet:hover {
-  background-color: var(--color-well-life-primary);
-  color: var(--text-color-white);
-  border-color: transparent;
-}
-.web-content__link--design {
-  border-color: transparent;
-  color: var(--text-color-white);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+
+/* 툴팁 기본 스타일 */
+.web-mockup__total-item-label::after {
+  position: absolute;
+  bottom: calc(100% + var(--spacing-xs));
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--spacing-xs) var(--spacing-md);
   background-color: var(--text-color-body);
+  color: var(--text-color-white);
+  font-size: var(--font-size-sm);
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
 }
-.web-content__link--design:hover {
-  background-color: var(--color-background-white);
-  color: var(--text-color-body);
-  border-color: var(--text-color-body);
+.web-mockup__total-item:hover .web-mockup__total-item-label::after {
+  opacity: 1;
 }
 
 /* ---------- Row 1 - web-info ---------- */
 .web-info {
+  position: relative;
   align-items: end;
 }
+
+/* web-info__design(디자인 보러가기 버튼) */
+.web-info__design {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.web-info__design-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 12px;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color-body);
+}
+.web-info__design-link::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url("../../images/website_pub/figma-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.web-info__design-link:hover {
+  background-color: var(--text-color-body);
+  color: var(--text-color-white);
+}
+
 .web-info__intro-subtitle::before {
   background-color: var(--color-well-life-primary);
 }
@@ -247,9 +253,6 @@
 }
 
 /* web-info__overview */
-.web-info__overview {
-  /* align-self: end; */
-}
 .web-info__overview-table thead th {
   background-color: var(--color-well-life-primary);
 }

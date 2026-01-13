@@ -408,6 +408,111 @@
     line-height: 1em;
   }
 
+  /* ----- web-mockup__main(메인 목업 컨테이너) ----- */
+  .web-mockup__main {
+    margin-bottom: var(--spacing-5xl);
+  }
+
+  /* web-mockup__total(목업 세로 배치) */
+  .web-mockup__total {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-7xl);
+    margin-bottom: var(--spacing-4xl);
+  }
+  .web-mockup__total--pc,
+  .web-mockup__total--tablet,
+  .web-mockup__total--mobile {
+    position: relative;
+    width: 85%;
+    min-width: 280px;
+  }
+  .web-mockup__total--pc {
+    width: 90%;
+    max-width: 100%;
+    min-width: 300px;
+  }
+  /* 모바일에서 PC, Tablet 비활성화 (Mobile만 활성화) */
+  .web-mockup__total--pc a,
+  .web-mockup__total--tablet a {
+    pointer-events: none;
+  }
+  .web-mockup__total--pc,
+  .web-mockup__total--tablet {
+    cursor: default;
+  }
+  .web-mockup__total--pc .web-mockup__total-item-label,
+  .web-mockup__total--tablet .web-mockup__total-item-label {
+    color: var(--text-color-light-gray);
+    cursor: default;
+    pointer-events: auto;
+  }
+  /* 비활성화 라벨 hover 시 배경 변경 안 함 */
+  .web-mockup__total--pc .web-mockup__total-item-label:hover,
+  .web-mockup__total--tablet .web-mockup__total-item-label:hover,
+  .web-mockup__total--pc:hover .web-mockup__total-item-label,
+  .web-mockup__total--tablet:hover .web-mockup__total-item-label {
+    background-color: transparent;
+    color: var(--text-color-light-gray);
+  }
+  /* 비활성화 아이콘 (CSS 변수 덮어쓰기) */
+  .web-mockup__total--pc .view-icon,
+  .web-mockup__total--tablet .view-icon {
+    --icon-default: url("../../images/icon/view-icon-disabled.png");
+    --icon-hover: url("../../images/icon/view-icon-disabled.png");
+  }
+  /* 비활성화 목업 이미지 hover() */
+  .web-mockup__total--pc:hover img,
+  .web-mockup__total--tablet:hover img {
+    filter: drop-shadow(var(--shadow-mockup)) brightness(1);
+  }
+
+  /* web-mockup__total-item-label(목업 하단 라벨) */
+  .web-mockup__total-item-label {
+    font-size: var(--font-size-2xl);
+  }
+  .web-mockup__total-item-label .view-icon {
+    width: 20px;
+    height: 20px;
+  }
+  /* 비활성화 라벨 툴팁 (content만 정의, 베이스 스타일은 web.css) */
+  .web-mockup__total--pc .web-mockup__total-item-label::after,
+  .web-mockup__total--tablet .web-mockup__total-item-label::after {
+    content: "화면을 키워서 확인하세요";
+  }
+  .web-mockup__total--pc:hover .web-mockup__total-item-label::after,
+  .web-mockup__total--tablet:hover .web-mockup__total-item-label::after {
+    opacity: 1;
+  }
+
+  /* Mobile 활성화 (tablet 활성화 덮어쓰기) */
+  .web-mockup__total--mobile a {
+    pointer-events: auto;
+  }
+  .web-mockup__total--mobile {
+    cursor: pointer;
+  }
+  .web-mockup__total--mobile .web-mockup__total-item-label {
+    color: var(--color-well-life-primary);
+    cursor: pointer;
+  }
+  /* Mobile 활성화 아이콘 (CSS 변수 덮어쓰기) */
+  .web-mockup__total--mobile .view-icon {
+    --icon-default: url("../../images/icon/view-icon.png");
+    --icon-hover: url("../../images/icon/view-icon-hover.png");
+  }
+  .web-mockup__total--mobile:hover img {
+    filter: drop-shadow(var(--shadow-mockup)) brightness(0.5);
+  }
+  .web-mockup__total--mobile:hover .web-mockup__total-item-label,
+  .web-mockup__total--mobile .web-mockup__total-item-label:hover {
+    background-color: var(--color-well-life-primary);
+    color: var(--text-color-white);
+  }
+  /* 툴팁 숨기기(Mobile은 활성화 상태) */
+  .web-mockup__total--mobile .web-mockup__total-item-label::after {
+    display: none;
+  }
   /* ----- web-content ----- */
   .web-content {
     margin-top: var(--spacing-6xl);
@@ -430,11 +535,13 @@
   }
 
   /* ----- web-info ----- */
-
-
+  .web-info__design {
+    top: auto;
+    bottom: calc(100% + var(--spacing-4xl));
+    right: 0;
+  }
 
   /* ----- web-typo ----- */
-  /* web-typo__mockup-items */
   .web-typo__mockup-items {
     justify-content: space-between;
     min-width: 320px;

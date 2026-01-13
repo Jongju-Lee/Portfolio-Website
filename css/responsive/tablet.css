@@ -235,6 +235,61 @@
 
 
   /* ########## SECTION - WEB ########## */
+  /* ----- web-mockup__main ----- */
+  /* 태블릿에서 Tablet만 활성화, PC/Mobile 비활성화 */
+  .web-mockup__total--pc a,
+  .web-mockup__total--mobile a {
+    pointer-events: none;
+  }
+  .web-mockup__total--pc,
+  .web-mockup__total--mobile {
+    cursor: default;
+  }
+  .web-mockup__total--pc .web-mockup__total-item-label,
+  .web-mockup__total--mobile .web-mockup__total-item-label {
+    color: var(--text-color-light-gray);
+    cursor: default;
+    pointer-events: auto;
+  }
+  /* 비활성화 라벨 hover 시 배경 변경 안 함 */
+  .web-mockup__total--pc .web-mockup__total-item-label:hover,
+  .web-mockup__total--mobile .web-mockup__total-item-label:hover,
+  .web-mockup__total--pc:hover .web-mockup__total-item-label,
+  .web-mockup__total--mobile:hover .web-mockup__total-item-label {
+    background-color: transparent;
+    color: var(--text-color-light-gray);
+  }
+  /* 비활성화 아이콘 (CSS 변수 덮어쓰기) */
+  .web-mockup__total--pc .view-icon,
+  .web-mockup__total--mobile .view-icon {
+    --icon-default: url("../../images/icon/view-icon-disabled.png");
+    --icon-hover: url("../../images/icon/view-icon-disabled.png");
+  }
+  /* 비활성화 목업 이미지 hover 시 filter 처리 안 함 */
+  .web-mockup__total--pc:hover img,
+  .web-mockup__total--mobile:hover img {
+    filter: drop-shadow(var(--shadow-mockup)) brightness(1);
+  }
+  /* .web-mockup__total-item-label(목업 하단 라벨) */
+  .web-mockup__total-item-label {
+    top: calc(100% + var(--spacing-lg));
+  }
+  .web-mockup__total-item-label .view-icon {
+    width: 18px;
+    height: 18px;
+  }
+  /* 비활성화 라벨 툴팁 (content만 정의, 베이스 스타일은 web.css) */
+  .web-mockup__total--pc .web-mockup__total-item-label::after {
+    content: "화면을 키워서 확인하세요";
+  }
+  .web-mockup__total--mobile .web-mockup__total-item-label::after {
+    content: "화면을 줄여서 확인하세요";
+  }
+  .web-mockup__total--pc:hover .web-mockup__total-item-label::after,
+  .web-mockup__total--mobile:hover .web-mockup__total-item-label::after {
+    opacity: 1;
+  }
+
   /* ----- 컬러, 타이포 공통 스타일 ----- */
   /* 서브 타이틀 */
   .web-row__info-subtitle {
@@ -255,6 +310,15 @@
   }
 
   /* ----- web-info ----- */
+  /* web-info__design */
+  .web-info__design-link {
+    font-size: var(--font-size-xl);
+  }
+  .web-info__design-link::before {
+    width: 26px;
+    height: 26px;
+  }
+  
   /* web-info__intro */
   .web-info__intro-inner {
     min-height: auto;

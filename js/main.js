@@ -80,6 +80,92 @@ UIkit.util.on(document, 'hidden', '.uk-lightbox', function (e) {
   if (customBtn) customBtn.remove();
 });
 
+
+/* ############### 웰라이프 목업 Lightbox 동적 제어 ############### */
+const MockupLightbox = {
+  // 기본 href 저장 (초기값)
+  originalHrefs: {
+    pc: './portfolio/well-life/index.html',
+    tablet: './portfolio/well-life/mockup/tablet.html',
+    mobile: './portfolio/well-life/mockup/mobile.html'
+  },
+
+  // PC 버전 lightbox용 href
+  lightboxHref: './portfolio/well-life/index.html',
+
+  // 요소 선택
+  getElements: function () {
+    return {
+      pcMockup: document.querySelector('.web-mockup__total--pc'),
+      tabletMockup: document.querySelector('.web-mockup__total--tablet'),
+      mobileMockup: document.querySelector('.web-mockup__total--mobile')
+    };
+  },
+
+  // lightbox 속성 적용
+  applyLightbox: function (element) {
+    if (element && !element.hasAttribute('uk-lightbox')) {
+      element.setAttribute('uk-lightbox', '');
+      // href를 PC 버전으로 변경 (iframe)
+      const link = element.querySelector('a');
+      if (link) {
+        link.href = this.lightboxHref;
+        link.setAttribute('data-type', 'iframe');
+      }
+    }
+  },
+
+  // lightbox 속성 제거 및 원래 href 복원
+  removeLightbox: function (element, type) {
+    if (element && element.hasAttribute('uk-lightbox')) {
+      element.removeAttribute('uk-lightbox');
+      // 원래 href 복원
+      const link = element.querySelector('a');
+      if (link) {
+        link.href = this.originalHrefs[type];
+        link.removeAttribute('data-type');
+      }
+    }
+  },
+
+  // 화면 크기에 따라 lightbox 동적 적용
+  update: function () {
+    const elements = this.getElements();
+    if (!elements.pcMockup) return; // 요소가 없으면 종료
+
+    const isMobile = window.innerWidth < 768;
+    const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+
+    if (isMobile) {
+      // 모바일: Mobile만 lightbox
+      this.removeLightbox(elements.pcMockup, 'pc');
+      this.removeLightbox(elements.tabletMockup, 'tablet');
+      this.applyLightbox(elements.mobileMockup);
+    } else if (isTablet) {
+      // 태블릿: Tablet만 lightbox
+      this.removeLightbox(elements.pcMockup, 'pc');
+      this.applyLightbox(elements.tabletMockup);
+      this.removeLightbox(elements.mobileMockup, 'mobile');
+    } else {
+      // PC: PC만 lightbox, Tablet/Mobile은 일반 링크
+      this.applyLightbox(elements.pcMockup);
+      this.removeLightbox(elements.tabletMockup, 'tablet');
+      this.removeLightbox(elements.mobileMockup, 'mobile');
+    }
+  },
+
+  // 초기화
+  init: function () {
+    this.update();
+    // 리사이즈 이벤트에 debounce 적용
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => this.update(), 100);
+    });
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   /* ########## 페이지 진입시 로딩 화면 표시 ########## */
   if (window.loadingManager) {
@@ -96,6 +182,9 @@ document.addEventListener('DOMContentLoaded', function () {
       window.addEventListener('load', () => window.loadingManager.hide());
     }
   }
+
+  /* ########## 웰라이프 목업 Lightbox 초기화 ########## */
+  MockupLightbox.init();
 
   /* ########## ALT + N 단축키 사용시 GNB로 포커스 ########## */
   document.addEventListener('keydown', function (event) {
