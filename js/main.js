@@ -128,6 +128,22 @@ const MockupLightbox = {
     }
   },
 
+  // 비활성화 클래스 적용
+  setDisabled: function (element, disabled, shrink = false) {
+    if (!element) return;
+    if (disabled) {
+      element.classList.add('web-mockup__total-item--disabled');
+      if (shrink) {
+        element.classList.add('web-mockup__total-item--shrink');
+      } else {
+        element.classList.remove('web-mockup__total-item--shrink');
+      }
+    } else {
+      element.classList.remove('web-mockup__total-item--disabled');
+      element.classList.remove('web-mockup__total-item--shrink');
+    }
+  },
+
   // 화면 크기에 따라 lightbox 동적 적용
   update: function () {
     const elements = this.getElements();
@@ -137,20 +153,32 @@ const MockupLightbox = {
     const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
 
     if (isMobile) {
-      // 모바일: Mobile만 lightbox
+      // 모바일: Mobile만 활성화
       this.removeLightbox(elements.pcMockup, 'pc');
       this.removeLightbox(elements.tabletMockup, 'tablet');
       this.applyLightbox(elements.mobileMockup);
+      // 비활성화 클래스 관리
+      this.setDisabled(elements.pcMockup, true, false); // 화면 키워서
+      this.setDisabled(elements.tabletMockup, true, false); // 화면 키워서
+      this.setDisabled(elements.mobileMockup, false);
     } else if (isTablet) {
-      // 태블릿: Tablet만 lightbox
+      // 태블릿: Tablet만 활성화
       this.removeLightbox(elements.pcMockup, 'pc');
       this.applyLightbox(elements.tabletMockup);
       this.removeLightbox(elements.mobileMockup, 'mobile');
+      // 비활성화 클래스 관리
+      this.setDisabled(elements.pcMockup, true, false); // 화면 키워서
+      this.setDisabled(elements.tabletMockup, false);
+      this.setDisabled(elements.mobileMockup, true, true); // 화면 줄여서
     } else {
-      // PC: PC만 lightbox, Tablet/Mobile은 일반 링크
+      // PC: 모두 활성화 (PC만 lightbox)
       this.applyLightbox(elements.pcMockup);
       this.removeLightbox(elements.tabletMockup, 'tablet');
       this.removeLightbox(elements.mobileMockup, 'mobile');
+      // 비활성화 클래스 제거
+      this.setDisabled(elements.pcMockup, false);
+      this.setDisabled(elements.tabletMockup, false);
+      this.setDisabled(elements.mobileMockup, false);
     }
   },
 

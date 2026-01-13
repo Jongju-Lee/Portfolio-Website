@@ -7,10 +7,6 @@
   body::-webkit-scrollbar {
     display: none;
   }
-  
-  main {
-    padding-top: var(--spacing-68);
-  }
   /* ---------- END - LAYOUT ---------- */
 
 
@@ -157,10 +153,6 @@
   /* ---------- LAYOUT ---------- */
   body {
     font-size: var(--font-size-mobile-body);
-  }
-  main {
-    /* 헤더 높이만큼 하단 이동 */
-    padding-top: var(--spacing-56);
   }
   /* ---------- END - LAYOUT ---------- */
 

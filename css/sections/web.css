@@ -129,7 +129,6 @@
   cursor: pointer;
   z-index: 10;
 }
-.web-mockup__total-item-label:hover,
 .web-mockup__total-item:hover .web-mockup__total-item-label {
   background-color: var(--color-well-life-primary);
   color: var(--text-color-white);
@@ -168,6 +167,44 @@
   pointer-events: none;
 }
 .web-mockup__total-item:hover .web-mockup__total-item-label::after {
+  opacity: 1;
+}
+
+/* ========== 비활성화 스타일 (JS에서 --disabled 클래스 토글) ========== */
+.web-mockup__total-item--disabled a {
+  pointer-events: none;
+}
+.web-mockup__total-item--disabled {
+  cursor: default;
+}
+.web-mockup__total-item--disabled .web-mockup__total-item-label {
+  color: var(--text-color-light-gray);
+  cursor: default;
+  pointer-events: auto;
+}
+/* 비활성화 라벨 hover 시 배경 변경 안 함 */
+.web-mockup__total-item--disabled:hover .web-mockup__total-item-label {
+  background-color: transparent;
+  color: var(--text-color-light-gray);
+}
+/* 비활성화 아이콘 */
+.web-mockup__total-item--disabled .view-icon {
+  --icon-default: url("../../images/icon/view-icon-disabled.png");
+  --icon-hover: url("../../images/icon/view-icon-disabled.png");
+}
+/* 비활성화 목업 이미지 hover 효과 제거 */
+.web-mockup__total-item--disabled:hover img {
+  filter: drop-shadow(var(--shadow-mockup)) brightness(1);
+}
+/* 비활성화 툴팁 - 화면 키워서 확인 (기본) */
+.web-mockup__total-item--disabled .web-mockup__total-item-label::after {
+  content: "화면을 키워서 확인하세요";
+}
+/* 비활성화 툴팁 - 화면 줄여서 확인 (모바일용) */
+.web-mockup__total-item--disabled.web-mockup__total-item--shrink .web-mockup__total-item-label::after {
+  content: "화면을 줄여서 확인하세요";
+}
+.web-mockup__total-item--disabled:hover .web-mockup__total-item-label::after {
   opacity: 1;
 }
 
@@ -312,18 +349,4 @@
 .web-typo__mockup-item {
   width: 200px;
   height: auto;
-}
-
-/* ---------- Row 4 - web-responsive ---------- */
-.web-responsive__mockup--pc {
-  flex: 4.6;
-  max-width: 460px;
-}
-.web-responsive__mockup--mobile {
-  flex: 1.6;
-  max-width: 160px;
-}
-.web-responsive__mockup--tablet {
-  flex: 4.2;
-  max-width: 420px;
 }

@@ -153,6 +153,7 @@
 .skill-item__icon {
   width: calc(84px / 2);
   height: calc(84px / 2);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .skill-item__icon.mini {
   width: calc(74px / 2);
