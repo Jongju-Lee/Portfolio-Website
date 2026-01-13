@@ -107,6 +107,7 @@
   font-family: var(--font-KR-light);
   line-height: var(--line-height-normal);
   text-align: center;
+  font-size: var(--font-size-2xl);
 }
 .intro-heading__title b {
   font-family: var(--font-KR-bold);
@@ -123,8 +124,23 @@
   display: block;
 }
 .intro-heading__bg {
-  top: calc(50% + 24px);
+  position: absolute;
+  top: calc(50% + var(--spacing-24));
   left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  padding: 0 var(--section-padding-h-pc);
+  font-size: 140px;
+  font-family: var(--font-EN-black);
+  text-align: center;
+  letter-spacing: 12px;
+  line-height: 1em;
+  color: var(--bg-text-background);
+  pointer-events: none;
+  z-index: -1;
+}
+.intro-heading__bg::after {
+  content: "LUNG CLINIC";
 }
 
 /* intro-image */
@@ -1131,6 +1147,7 @@
 }
 .direction-heading__way-top-title {
   margin-top: var(--spacing-24);
+  font-size: var(--font-size-xl);
   color: var(--theme-secondary);
 }
 .direction-heading__way-bottom {

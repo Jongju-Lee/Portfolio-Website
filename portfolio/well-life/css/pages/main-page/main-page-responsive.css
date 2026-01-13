@@ -52,6 +52,14 @@
   .intro-heading {
     gap: var(--spacing-24);
   }
+  .intro-heading__title {
+    font-size: var(--font-size-xl);
+  }
+  .intro-heading__bg {
+    font-size: 100px;
+    padding: 0 var(--section-padding-h-tablet);
+    top: calc(50% + var(--spacing-8));
+  }
 
   /* intro-image */
   .intro-image {
@@ -403,6 +411,7 @@
   }
   .direction-heading__way-top-title {
     margin-top: var(--spacing-12);
+    font-size: var(--font-size-large);
   }
   .direction-heading__way-bottom {
     gap: var(--spacing-8);
@@ -504,6 +513,9 @@
   .intro-heading {
     gap: var(--spacing-16);
   }
+  .intro-heading__title {
+    font-size: var(--font-size-large);
+  }
   .intro-heading__title .mobile-flex-box {
     display: flex;
     justify-content: center;
@@ -527,7 +539,10 @@
     flex-wrap: wrap;
   }
   .intro-heading__bg {
-    top: calc(50% - -12px);
+    top: calc(50% - 8px);
+    padding: 0 var(--section-padding-h-mobile);
+    font-size: 64px;
+    line-height: 1em;
   }
   
   /* intro-image */
@@ -573,7 +588,7 @@
     flex-wrap: wrap;
     justify-content: center;
     -moz-column-gap: var(--spacing-8);
-         column-gap: var(--spacing-8);
+    column-gap: var(--spacing-8);
   }
 
   /* why-badge */

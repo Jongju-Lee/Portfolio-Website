@@ -137,22 +137,6 @@ h5 {
   line-height: var(--line-height-high);
 }
 
-/* HEADING-BG */
-.heading-bg {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  padding: 0 var(--section-padding-h-pc);
-  font-size: 120px;
-  font-family: var(--font-EN-black);
-  text-align: center;
-  letter-spacing: 12px;
-  line-height: 1em;
-  color: var(--bg-text-background);
-  pointer-events: none;
-  z-index: -1;
-}
-
 /* img-box */
 .img-box img {
   display: block;

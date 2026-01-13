@@ -23,12 +23,6 @@
   h5 {
     font-size: var(--font-size-medium);
   }
-
-  /* HEADING-BG */
-  .heading-bg {
-    font-size: 100px;
-    padding: 0 var(--section-padding-h-tablet);
-  }
   /* ---------- END - COMMON ----------  */
 
   
@@ -185,13 +179,6 @@
   /* 미니 타이틀 */
   .title-sm {
     font-size: 12px;
-  }
-
-  /* HEADING-BG */
-  .heading-bg {
-    font-size: 64px;
-    padding: 0 var(--section-padding-h-mobile);
-    line-height: 1.2em;
   }
   /* ---------- END - COMMON ----------  */
 
