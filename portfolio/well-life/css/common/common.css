@@ -13,13 +13,16 @@ body {
 }
 
 body {
-  min-height: 100vh;
-  /* 폴백 */
+  min-height: 100vh; /* 폴백 */
   min-height: 100dvh;
-  /* iOS Safari 동적 뷰포트 */
   line-height: var(--line-height-high);
   font-family: var(--font-KR-light);
   color: var(--contents-primary);
+}
+
+main {
+  /* 헤더 높이만큼 하단 이동 */
+  padding-top: 72px;
 }
 /* ---------- END - LAYOUT ---------- */
 
@@ -171,7 +174,7 @@ h5 {
 /* #################### 컴포넌트 UI #################### */
 /* ---------- HEADER ----------  */
 header {
-  position: sticky;
+  position: fixed;
   width: 100%;
   background-color: var(--bg-primary);
   padding: 0 var(--section-padding-h-pc);
