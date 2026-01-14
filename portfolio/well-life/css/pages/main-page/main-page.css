@@ -475,6 +475,7 @@
   height: -moz-fit-content;
   height: fit-content;
   margin-top: -160px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
 }
 /* ----- END - DOCTOR ----- */
 

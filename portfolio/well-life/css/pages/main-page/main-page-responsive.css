@@ -159,6 +159,7 @@
     width: 400px;
     border-radius: 60px 0 60px 0;
     overflow: hidden;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
   }
   .doctor-heading__name span em {
     margin-left: 0;
@@ -648,6 +649,7 @@
   }
   .doctor-heading__face {
     width: 100%;
+    max-width: 400px;
     border-radius: 40px 0 40px 0;
   }
   .doctor-heading__name {
