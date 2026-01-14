@@ -30,7 +30,6 @@ header.hide {
   gap: var(--spacing-48);
   width: 100%;
   max-width: var(--container-width);
-  height: 50px;
   margin: 0 auto;
 }
 
@@ -55,10 +54,10 @@ header.hide {
   display: flex;
   justify-content: center;
   align-items: center;
-  -moz-column-gap: 66px;
-  column-gap: 66px;
-  row-gap: 0;
   flex-wrap: wrap;
+  -moz-column-gap: var(--spacing-64);
+  column-gap: var(--spacing-64);
+  row-gap: 0;
 }
 .header__gnb:focus {
   outline: 2px solid var(--color-primary);

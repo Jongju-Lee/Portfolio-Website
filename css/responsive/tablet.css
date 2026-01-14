@@ -1,5 +1,21 @@
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
+  /* ===== Header 부분 1280px 반응형 UI ===== */
+  header {
+    padding: 0 var(--spacing-32);
+  }
+  /* header__gnb */
+  .header__gnb {
+    display: none;
+  }
 
+  /* header__sidebar-btn */
+  .header__sidebar-btn {
+    display: block;
+  }
+}
+
+
+@media (max-width: 1024px) {
   /* ########## 변수 재정의 ########## */
   :root {
     /* ----- TABLET LAYOUT ----- */
@@ -60,33 +76,14 @@
 
 
   /* ########## SECTION - HEADER ########## */
-  header {
-    padding: 0 var(--spacing-24);
-  }
-  .header-inner {
-    height: 40px;
-  }
-
-  /* header__gnb */
-  .header__gnb {
-    display: none;
-  }
-
   /* header__logo */
   .header__logo {
     height: 22px;
   }
-
-  /* header__sidebar-btn */
-  .header__sidebar-btn {
-    display: block;
-  }
-
   /* sidebar-nav__logo */
   .sidebar-nav__logo {
     height: 20px;
   }
-
   /* ########## END - HEADER ########## */
 
 

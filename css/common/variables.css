@@ -40,7 +40,7 @@
   --shadow-normal: 0 4px 10px rgba(0, 0, 0, 0.08);
   --shadow-light: 0 0 12px rgba(0, 0, 0, 0.05);
   --shadow-color-box: 0 0 8px rgba(0, 0, 0, 0.3);
-  --shadow-color-box-light: 0 0 8px rgba(0, 0, 0, 0.2);
+  --shadow-color-box-light: 0 0 12px rgba(0, 0, 0, 0.15);
   --shadow-util-btn: 0 2px 8px rgba(0, 0, 0, 0.2);
   --shadow-accent: 0 0 12px rgba(0, 173, 83, 0.3);
   --shadow-accent-light: 0 10px 25px rgba(0, 173, 83, 0.06), 0 4px 10px rgba(0, 0, 0, 0.02);
