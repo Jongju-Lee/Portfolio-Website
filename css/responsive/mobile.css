@@ -414,14 +414,13 @@
 
   /* ----- web-mockup__main(메인 목업 컨테이너) ----- */
   .web-mockup__main {
-    margin-bottom: var(--spacing-5xl);
+    margin-bottom: var(--spacing-6xl);
   }
   /* web-mockup__total(목업 세로 배치) */
   .web-mockup__total {
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-4xl);
-    margin-bottom: var(--spacing-4xl);
+    gap: var(--spacing-3xl);
   }
   .web-mockup__total-item {
     position: relative;
@@ -433,7 +432,7 @@
     max-width: 100%;
     min-width: 300px;
   }
-
+  
   /* web-mockup__total-item-label(목업 하단 라벨) 크기 조정 */
   .web-mockup__total-item-label {
     font-size: var(--font-size-2xl);
@@ -446,8 +445,13 @@
   /* ----- web-info ----- */
   .web-info__design {
     top: auto;
-    bottom: calc(100% + var(--spacing-4xl));
-    right: 0;
+    right: auto;
+    bottom: calc(100% + var(--spacing-5xl));
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .web-info__design-link {
+    font-size: var(--font-size-2xl);
   }
 
   /* ----- web-typo ----- */

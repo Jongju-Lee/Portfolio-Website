@@ -73,18 +73,20 @@
 
 
 /* ----- web-mockup__main(메인 목업 컨테이너) ----- */
+.web-mockup__main {
+  margin-bottom: var(--spacing-xl);
+}
 .web-mockup__total {
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: var(--spacing-5xl);
 }
 
 /* .web-mockup__total-item(개별 목업) */
 .web-mockup__total-item {
   position: relative;
-  padding-bottom: var(--spacing-5xl);
+  padding-bottom: var(--spacing-6xl);
 }
 /* 목업 hover시 filter 처리 */
 .web-mockup__total-item img {
@@ -228,7 +230,7 @@
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 12px;
   font-size: var(--font-size-xl);
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
   transition: background-color 0.3s, color 0.3s;
   color: var(--text-color-body);

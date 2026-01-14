@@ -246,7 +246,14 @@
   }
 
   /* ----- web-mockup__main ----- */
-  /* 목업 하단 라벨 위치/크기 조정 */
+  .web-mockup__main {
+    margin-bottom: 0;
+  }
+  
+  /* web-mockup__total-item */
+  .web-mockup__total-item {
+    padding-bottom: var(--spacing-5xl);
+  }
   .web-mockup__total-item-label .view-icon {
     width: 18px;
     height: 18px;
