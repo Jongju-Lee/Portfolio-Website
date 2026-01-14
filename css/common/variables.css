@@ -13,15 +13,12 @@
   --color-primary: #00ad53;
   --color-foreground: #333333;
   --color-background-white: #ffffff;
-  --color-background-light-gray: #fafafa;
+  --color-background-light-gray: #f5f5f5;
   --color-background-even-champagne: #f9f7f1;
   --color-positive: #00ad53;
   --color-negative: #D32F2F;
   --color-util-btn: #777777;
   --color-attention: #ff771f;
-  --color-mockup-box-btn: var(--color-primary);
-  --color-attention-glow: rgba(255, 184, 77, 0.7);
-  --color-table-th-bg: #f5f5f5; 
 
   /* --------- TEXT COLOR --------- */
   --text-color-title: #333333;

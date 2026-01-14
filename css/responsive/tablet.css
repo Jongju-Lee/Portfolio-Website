@@ -29,6 +29,15 @@
   /* ########## END - 변수 재정의 ########## */
 
 
+  /* ########## COMMON ########## */
+  /* 섹션 타이틀 */
+  .inner > h2.new::after {
+    width: 8px;
+    height: 8px;
+  }
+  /* ########## END - COMMON ########## */
+
+
   /* ########## LAYOUT ########## */
   body {
     font-size: var(--font-size-body-tablet);

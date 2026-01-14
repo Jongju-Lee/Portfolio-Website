@@ -109,6 +109,9 @@
   text-align: center;
   font-size: var(--font-size-2xl);
 }
+.intro-heading__title .mobile-flex-box {
+  display: block;
+}
 .intro-heading__title b {
   font-family: var(--font-KR-bold);
 }
