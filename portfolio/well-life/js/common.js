@@ -197,9 +197,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // 스크롤 시 버튼 표시/숨김
     window.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
-        topBtn.classList.add("show");
+        topBtn.classList.add("top-btn--active");
       } else {
-        topBtn.classList.remove("show");
+        topBtn.classList.remove("top-btn--active");
       }
     });
 

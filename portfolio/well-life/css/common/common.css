@@ -4,7 +4,7 @@
 @import url(./variables.css);
 
 
-/* ---------- LAYOUT ---------- */
+/* ########## LAYOUT ########## */
 html,
 body {
   width: 100%;
@@ -24,10 +24,10 @@ main {
   /* 헤더 높이만큼 하단 이동 */
   padding-top: 72px;
 }
-/* ---------- END - LAYOUT ---------- */
+/* ########## END - LAYOUT ########## */
 
 
-/* ---------- COMMON ---------- */
+/* ########## 공통 스타일 ########## */
 * {
   box-sizing: border-box;
 }
@@ -41,12 +41,24 @@ main {
   outline-offset: 2px;
 }
 
+/* 스크린 리더 전용 (숨김 처리) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 main>section,
 header,
 .sidebar {
   transition: background-color 0.5s;
 }
-
 input,
 button,
 select {
@@ -54,11 +66,11 @@ select {
   font-size: inherit;
 }
 
+/* INPUT */
 input {
   border: 1px solid var(--border-transparent);
   border-radius: 4px;
 }
-
 input[type="checkbox"] {
   display: inline-flex;
   justify-content: center;
@@ -70,7 +82,6 @@ input[type="checkbox"] {
   height: 18px;
   border: 1px solid var(--border-opaque);
 }
-
 input[type="checkbox"]:checked::after {
   content: "";
   display: inline-block;
@@ -80,11 +91,12 @@ input[type="checkbox"]:checked::after {
   border-radius: 2px;
 }
 
-/* 체크박스를 포함하는 라벨 - :has() 대신 클래스 사용 (Safari 15.4 미만 호환) */
+/* checkbox 의 label 태그에 적용 */
 .checkbox-label {
   cursor: pointer;
 }
 
+/* 버튼 및 링크 태그 관련 공통 스타일 */
 button {
   border: none;
   cursor: pointer;
@@ -93,18 +105,16 @@ button {
   background-color: transparent;
   transition: transform 0.2s, opacity 0.2s;
 }
-
 button:hover {
   opacity: 0.7;
 }
-
 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.2s;
 }
 
-/* HEADING */
+/* HEADING 태그 공통 스타일 */
 h1,
 h2,
 h3,
@@ -113,7 +123,6 @@ h5 {
   font-family: var(--font-KR-bold);
   line-height: var(--line-height-normal);
 }
-
 h1,
 h2 {
   font-size: var(--font-size-3xl);
@@ -148,9 +157,11 @@ h5 {
   -o-object-fit: cover;
   object-fit: cover;
 }
+/* ########## END - 공통 스타일 ########## */
 
 
-/* ---------- 스킵 네비게이션 ---------- */
+/* ########## 컴포넌트 UI ########## */
+/* ------------ 스킵 네비게이션 ------------ */
 .skip-nav {
   position: absolute;
   top: -100px;
@@ -168,11 +179,8 @@ h5 {
 .skip-nav:focus {
   top: 0;
 }
-/* ---------- END - 스킵 네비게이션 ---------- */
 
-
-/* #################### 컴포넌트 UI #################### */
-/* ---------- HEADER ----------  */
+/* ------------ HEADER ------------ */
 header {
   position: fixed;
   width: 100%;
@@ -181,12 +189,10 @@ header {
   box-shadow: var(--shadow-normal);
   z-index: 1000;
 }
-
 /* 다크모드시 shadow 색상 변경 */
 [data-theme="dark"] header {
   box-shadow: var(--shadow-dark);
 }
-
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -196,7 +202,6 @@ header {
   height: 72px;
   margin: 0 auto;
 }
-
 /* header-logo */
 .header-logo {
   flex-shrink: 0;
@@ -207,16 +212,12 @@ header {
   background-size: 100% 100%;
   transition: opacity 0.2s, background-image 0.5s linear;
 }
-
-/* 다크모드 시 이미지 교체 */
 [data-theme="dark"] .header-logo {
   background-image: url(../../images/includes/header-logo-pc-dark.png);
 }
-
 .header-logo:hover {
   opacity: 0.7;
 }
-
 /* header-gnb */
 .header-gnb {
   flex: 1;
@@ -253,14 +254,11 @@ header {
 .header-gnb__link:focus::after {
   width: 100%;
 }
-
 /* header-right__box */
 .header-right__box {
   display: flex;
   gap: var(--spacing-24);
 }
-
-/* header-right__tel */
 .header-right__tel {
   flex-shrink: 0;
   width: calc(600px / 4);
@@ -269,27 +267,21 @@ header {
   background-size: 100% 100%;
   transition: background-image 0.5s linear, opacity 0.2s;
 }
-
 /* 다크모드 시 이미지 교체 */
 [data-theme="dark"] .header-right__tel {
   background-image: url(../../images/includes/header-tel-dark.png);
 }
-
 /* header-right__hamburger-btn */
 .header-right__hamburger-btn {
   display: none;
 }
 
-/* ---------- END - HEADER ----------  */
-
-
-/* ---------- FOOTER ----------  */
+/* ----------- FOOTER -----------  */
 footer {
   background-color: var(--color-black);
   border-top: 1px solid var(--contents-tertiary);
   padding: var(--section-padding-h-pc) var(--section-padding-h-pc) 0;
 }
-
 .footer-inner {
   display: flex;
   flex-direction: column;
@@ -326,6 +318,7 @@ footer {
   gap: var(--spacing-32);
 }
 .footer-link__item:hover {
+  opacity: 1;
   color: var(--color-white);
 }
 
@@ -385,9 +378,6 @@ footer {
   line-height: 1em;
 }
 
-/* ---------- END - FOOTER ----------  */
-
-
 /* ---------- SIDEBAR ----------  */
 .sidebar {
   visibility: hidden;
@@ -398,32 +388,26 @@ footer {
   transition: opacity 0.5s, visibility 0.5s;
   z-index: 2000;
 }
-
 /* 다크모드 시 딤 처리 색상 변경 */
 [data-theme="dark"] .sidebar {
   background-color: rgba(255, 255, 255, 0.5);
 }
-
 /* 사이드 바 동작 시 딤 처리 */
 .sidebar--active {
   visibility: visible;
   opacity: 1;
 }
-
 .sidebar-container {
   position: absolute;
   top: 0;
   right: -100%;
   width: 70%;
   max-width: 380px;
-  height: 100vh;
-  /* 폴백 */
-  height: 100dvh;
-  /* iOS Safari 동적 뷰포트 */
+  height: 100vh; /* 폴백 */
+  height: 100dvh; /* iOS Safari 동적 뷰포트 */
   background-color: var(--bg-primary);
   transition: right 0.5s;
 }
-
 /* 사이드 바 우측에서 좌측으로 나옴 */
 .sidebar--active .sidebar-container {
   right: 0%;
@@ -451,7 +435,6 @@ footer {
   background-size: 100% 100%;
   transition: opacity 0.2s;
 }
-
 /* 다크모드 시 로고 교체 */
 [data-theme="dark"] .sidebar-header__logo {
   background-image: url(../../images/includes/header-logo-pc-dark.png);
@@ -553,8 +536,6 @@ footer {
 .sidebar-etc__item p {
   word-break: keep-all;
 }
-/* ---------- END - SIDEBAR ----------  */
-
 
 /* ---------- 유틸리티 버튼 ----------  */
 /* 다크모드 버튼 */
@@ -603,7 +584,7 @@ footer {
   transition: bottom 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   pointer-events: none;
 }
-.top-btn.show {
+.top-btn--active {
   bottom: 30px;
   opacity: 0.8;
   visibility: visible;
@@ -616,4 +597,3 @@ footer {
   width: 28px;
   height: auto;
 }
-/* ---------- END - 유틸리티 버튼 ----------  */
