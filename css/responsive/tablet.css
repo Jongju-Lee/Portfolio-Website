@@ -2,7 +2,12 @@
 
   /* ########## 변수 재정의 ########## */
   :root {
-    /* ----- TABLET - FONT SIZE 재정의 ----- */
+    /* ----- TABLET LAYOUT ----- */
+    --container-width: 1024px;
+    --header-height: 64px; 
+    --section-padding: 120px 60px;
+
+    /* ----- TABLET 폰트 사이즈 ----- */
     /* 기존 --font-size-lg: 18px */
     --font-size-lg: 16px;
     /* 기존 --font-size-xl: 20px; */
@@ -17,13 +22,11 @@
     --font-size-5xl: 56px;
     /* 기존 --font-size-6xl: 80px; */
     --font-size-6xl: 72px;
-    /* ----- TABLET 전용 FONT SIZE ----- */
-    --font-size-body-tablet: 15px;
-    --font-size-slogan-title-tablet: 48px;
-    --font-size-section-title-tablet: 32px;
-    /* ----- TABLET - LAYOUT ----- */
-    --container-width-tablet: 1024px;
-    --section-padding-tablet: 120px 60px;
+
+    /* 주요 폰트 사이즈 */
+    --font-size-body: 15px;
+    --font-size-section-title: 32px;
+    --font-size-slogan-title: 48px;
   }
 
   /* ########## END - 변수 재정의 ########## */
@@ -38,26 +41,6 @@
   /* ########## END - COMMON ########## */
 
 
-  /* ########## LAYOUT ########## */
-  body {
-    font-size: var(--font-size-body-tablet);
-  }
-
-  main > section {
-    padding: var(--section-padding-tablet);
-  }
-
-  .inner {
-    max-width: (var(--container-width-tablet));
-  }
-
-  .inner > h2 {
-    font-size: var(--font-size-section-title-tablet);
-  }
-
-  /* ########## END - LAYOUT ########## */
-
-
   /* ########## Web, React 공통 컴포넌트 ########## */
   /* project-row */
   .project-row__left,
@@ -67,7 +50,7 @@
 
   /* project-subtitle */
   .project-subtitle {
-    padding-left: var(--spacing-lg);
+    padding-left: var(--spacing-16);
   }
   .project-subtitle::before {
     width: 7px;
@@ -78,7 +61,7 @@
 
   /* ########## SECTION - HEADER ########## */
   header {
-    padding: var(--spacing-md) var(--spacing-2xl);
+    padding: 0 var(--spacing-24);
   }
   .header-inner {
     height: 40px;
@@ -109,28 +92,24 @@
 
   /* ########## SECTION - ABOUT ########## */
   #about {
-    padding: 80px 60px 100px;
-    margin-top: 65px;
+    padding: var(--spacing-80) var(--spacing-60) var(--spacing-100);
     height: auto;
   }
   #about .inner {
-    gap: var(--spacing-3xl);
-    padding-bottom: var(--spacing-3xl);
+    gap: var(--spacing-32);
+    padding-bottom: var(--spacing-32);
   }
   .about-content {
-    -moz-column-gap: var(--spacing-4xl);
-    column-gap: var(--spacing-4xl);
+    -moz-column-gap: var(--spacing-40);
+    column-gap: var(--spacing-40);
     margin-top: 0;
   }
 
   /* about-intro */
   .about-intro {
     margin: 0;
-    margin-top: var(--spacing-5xl);
+    margin-top: var(--spacing-48);
     max-width: 480px;
-  }
-  .about-intro__title {
-    font-size: var(--font-size-slogan-title-tablet);
   }
 
   /* about-photo */
@@ -148,8 +127,8 @@
     width: 380px;
   }
   .skill-item__icon-box {
-    padding: var(--spacing-md);
-    gap: var(--spacing-3xl);
+    padding: var(--spacing-12);
+    gap: var(--spacing-32);
   }
 
   /* skill-item__icon */
@@ -204,11 +183,11 @@
 
   /* resume-hero */
   .resume-hero__card {
-    padding: var(--spacing-3xl) var(--spacing-4xl);
+    padding: var(--spacing-32) var(--spacing-40);
   }
   .resume-hero__body {
     flex-direction: column;
-    gap: var(--spacing-3xl);
+    gap: var(--spacing-28);
   }
   .resume-hero__list li {
     padding-left: 14px;
@@ -219,12 +198,12 @@
   .resume-hero__meta {
     width: 100%;
     padding-left: 0;
-    padding-top: var(--spacing-2xl);
+    padding-top: var(--spacing-24);
     border-left: none;
     border-top: 1px dashed var(--color-line);
     flex-direction: row;
     flex-wrap: wrap;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-24);
   }
   .resume-hero__meta-group {
     flex: 1;
@@ -247,7 +226,7 @@
   /* ----- 컬러, 타이포 공통 스타일 ----- */
   /* 서브 타이틀 */
   .web-row__info-subtitle {
-    padding-left: var(--spacing-md);
+    padding-left: var(--spacing-12);
   }
   .web-row__info-subtitle::before {
     width: 6px;
@@ -261,7 +240,7 @@
   
   /* web-mockup__total-item */
   .web-mockup__total-item {
-    padding-bottom: var(--spacing-5xl);
+    padding-bottom: var(--spacing-48);
   }
   .web-mockup__total-item-label .view-icon {
     width: 18px;
@@ -281,7 +260,7 @@
   /* web-info__intro */
   .web-info__intro-inner {
     min-height: auto;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-24);
   }
 
   /* web-info__accessibility(웹 접근성 점수) */
@@ -306,7 +285,7 @@
 
   /* react-function */
   .react-info__function-list-item {
-    gap: var(--spacing-sm);
+    gap: var(--spacing-8);
   }
   .react-info__function-list-item .dot {
     margin-bottom: 1px;
@@ -322,9 +301,9 @@
   /* ########## SECTION - PRACTICAL ########## */
   /* practical-slider */
   .practical-slider__title {
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-xs);
-    padding-left: var(--spacing-sm);
+    gap: var(--spacing-8);
+    margin-bottom: var(--spacing-4);
+    padding-left: var(--spacing-8);
   }
 
   /* ########## END - PRACTICAL ########## */

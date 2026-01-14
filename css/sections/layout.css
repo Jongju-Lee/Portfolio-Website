@@ -10,8 +10,11 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
   width: 100%;
-  padding: var(--spacing-12) var(--spacing-60);
+  padding: 0 var(--spacing-64);
+  height: var(--header-height);
   box-shadow: var(--shadow-normal);
   transition: transform 0.3s;
   background-color: var(--color-background-white);
@@ -26,7 +29,7 @@ header.hide {
   justify-content: space-between;
   gap: var(--spacing-48);
   width: 100%;
-  max-width: 1400px;
+  max-width: var(--container-width);
   height: 50px;
   margin: 0 auto;
 }
@@ -150,6 +153,10 @@ header.hide {
   font-weight: 500;
 }
 
+/* ########## MAIN ########## */
+main {
+  margin-top: var(--header-height);
+}
 
 /* ########## Fullscreen Navigation ########## */
 
@@ -259,7 +266,7 @@ body.sidebar--on {
   position: absolute;
   top: 0;
   right: -100%;
-  width: 60%;
+  width: 65%;
   height: 100vh; /* 폴백 */
   height: 100dvh; /* iOS Safari 동적 뷰포트 */
   max-width: 280px;
@@ -274,10 +281,9 @@ body.sidebar--on {
 .sidebar-nav__links {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   flex: 1;
-  padding: var(--spacing-20) var(--spacing-48);
+  padding: var(--spacing-48) var(--spacing-48) 0;
   overflow-y: auto;
 }
 
@@ -292,8 +298,9 @@ body.sidebar--on {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: var(--spacing-16) var(--spacing-24);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 0 var(--spacing-24);
+  height: var(--header-height);
+  box-shadow: var(--shadow-normal);
 }
 .sidebar-nav__logo {
   height: 24px;
@@ -324,10 +331,10 @@ body.sidebar--on {
   transition: background-color 0.2s;
 }
 .sidebar-nav__close-btn span:nth-child(1) {
-  transform: rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
 }
 .sidebar-nav__close-btn span:nth-child(2) {
-  transform: rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
 }
 .sidebar-nav__close-btn:hover span {
   background-color: var(--color-primary);

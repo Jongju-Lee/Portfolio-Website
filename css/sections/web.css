@@ -1,4 +1,4 @@
-#web {
+﻿#web {
   background-color: var(--color-well-life-bg);
 }
 
@@ -8,8 +8,8 @@
   position: relative;
   font-size: var(--font-size-xl);
   font-weight: 600;
-  margin-bottom: var(--spacing-md);
-  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-12);
+  padding-left: var(--spacing-16);
 }
 .web-row__info-subtitle::before {
   content: "";
@@ -24,7 +24,7 @@
 
 /* 섹션 타이틀 공통 스타일 */
 .web-row__info-title {
-  margin-bottom: var(--spacing-4xl);
+  margin-bottom: var(--spacing-40);
   font-size: var(--font-size-3xl);
   font-weight: 600;
   text-align: center;
@@ -34,14 +34,14 @@
 .web-row__circle-items {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-5xl);
-  margin-bottom: var(--spacing-3xl);
+  gap: var(--spacing-48);
+  margin-bottom: var(--spacing-32);
 }
 .web-row__circle-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-8);
   width: 66px;
   font-size: var(--font-size-sm);
 }
@@ -74,7 +74,7 @@
 
 /* ----- web-mockup__main(메인 목업 컨테이너) ----- */
 .web-mockup__main {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-20);
 }
 .web-mockup__total {
   position: relative;
@@ -86,7 +86,7 @@
 /* .web-mockup__total-item(개별 목업) */
 .web-mockup__total-item {
   position: relative;
-  padding-bottom: var(--spacing-6xl);
+  padding-bottom: var(--spacing-60);
 }
 /* 목업 hover시 filter 처리 */
 .web-mockup__total-item img {
@@ -120,8 +120,8 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: 6px var(--spacing-md);
+  gap: var(--spacing-8);
+  padding: 6px var(--spacing-12);
   font-size: var(--font-size-xl);
   font-weight: 500;
   text-align: center;
@@ -156,10 +156,10 @@
 /* 툴팁 기본 스타일 */
 .web-mockup__total-item-label::after {
   position: absolute;
-  bottom: calc(100% + var(--spacing-xs));
+  bottom: calc(100% + var(--spacing-4));
   left: 50%;
   transform: translateX(-50%);
-  padding: var(--spacing-xs) var(--spacing-md);
+  padding: var(--spacing-4) var(--spacing-12);
   background-color: var(--text-color-body);
   color: var(--text-color-white);
   font-size: var(--font-size-sm);
@@ -226,8 +226,8 @@
 .web-info__design-link {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
+  gap: var(--spacing-8);
+  padding: var(--spacing-8) var(--spacing-12);
   border-radius: 12px;
   font-size: var(--font-size-xl);
   font-weight: 500;
@@ -265,7 +265,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--spacing-2xl);
+  gap: var(--spacing-24);
 }
 .web-info__accessibility-icon {
   width: 100px;
@@ -274,12 +274,12 @@
 .web-info__accessibility-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-16);
 }
 .web-info__accessibility-list-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-8);
   font-size: var(--font-size-xl);
 }
 .web-info__accessibility-list-item::before {

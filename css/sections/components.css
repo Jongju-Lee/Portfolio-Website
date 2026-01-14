@@ -125,7 +125,7 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin: var(--spacing-8xl) auto 0;
+  margin: var(--spacing-100) auto 0;
 }
 
 /* ----- project-row ----- */
@@ -133,11 +133,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: var(--spacing-7xl);
-  row-gap: var(--spacing-4xl);
+  column-gap: var(--spacing-80);
+  row-gap: var(--spacing-40);
   width: 100%;
   max-width: 1200px;
-  margin: var(--spacing-7xl) auto 0;
+  margin: var(--spacing-80) auto 0;
 }
 .project-row.wrap-reverse {
   flex-wrap: wrap-reverse;
@@ -154,8 +154,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: var(--spacing-7xl);
-  margin: var(--spacing-7xl) auto 0;
+  gap: var(--spacing-80);
+  margin: var(--spacing-80) auto 0;
 }
 .project-row__fill {
   display: flex;
@@ -166,13 +166,13 @@
 .project-table__wrapper {
   display: flex;
   overflow: hidden;
-  border-radius: var(--spacing-md);
+  border-radius: var(--spacing-12);
   box-shadow: var(--shadow-normal);
 }
 
 /* ----- project-table__caption ----- */
 .project-table__caption {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-20);
   font-size: var(--font-size-2xl);
   font-weight: 600;
   text-align: center;
@@ -186,7 +186,7 @@
 }
 .project-table th,
 .project-table td {
-  padding: var(--spacing-md) var(--spacing-2xl);
+  padding: var(--spacing-12) var(--spacing-24);
   border-bottom: 1px solid var(--color-line);
   vertical-align: middle;
 }
@@ -225,11 +225,11 @@
 .project-achievement__list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-12);
 }
 .project-achievement__list li {
   position: relative;
-  padding-left: var(--spacing-md);
+  padding-left: var(--spacing-12);
 }
 .project-achievement__list li::before {
   content: "";
@@ -247,7 +247,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-16);
   filter: drop-shadow(var(--shadow-mockup));
 }
 .project-mockup__item img {
@@ -275,7 +275,7 @@
   font-size: var(--font-size-section-title);
   font-weight: 800;
   line-height: 1.2em;
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: var(--spacing-32);
 }
 
 /* ----- project-subtitle ----- */
@@ -283,8 +283,8 @@
   position: relative;
   font-size: var(--font-size-2xl);
   font-weight: 600;
-  margin-bottom: var(--spacing-md);
-  padding-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-12);
+  padding-top: var(--spacing-8);
   padding-left: 18px;
   word-break: keep-all;
 }
@@ -351,7 +351,7 @@
 /* ----- 풀스크린 네비게이션 버튼 ----- */
 .trigger {
   top: 0;
-  left: var(--spacing-3xl);
+  left: var(--spacing-32);
 }
 .trigger.active {
   opacity: 1;
@@ -366,7 +366,7 @@
   transform: scale(0.9);
 }
 .trigger--on {
-  top: var(--spacing-3xl);
+  top: var(--spacing-32);
 }
 
 .trigger img {
@@ -383,10 +383,10 @@
 /* ----- 맨 위로 가기 버튼(top-btn) ----- */
 .top-btn {
   bottom: 0;
-  right: var(--spacing-3xl);
+  right: var(--spacing-32);
 }
 .top-btn--on {
-  bottom: var(--spacing-3xl);
+  bottom: var(--spacing-32);
 }
 .top-btn img {
   position: absolute;
@@ -400,16 +400,16 @@
 /* ----- mockup-box 버튼 ----- */
 .mockup-box {
   position: fixed;
-  bottom: var(--spacing-3xl);
-  left: var(--spacing-3xl);
+  bottom: var(--spacing-32);
+  left: var(--spacing-32);
   width: var(--size-util-btn);
   height: var(--size-util-btn);
   transition: bottom 0.2s ease-in-out, left 0.2s ease-in-out;
   z-index: 1000;
 }
 .mockup-box--on {
-  bottom: var(--spacing-5xl);
-  left: var(--spacing-5xl);
+  bottom: var(--spacing-48);
+  left: var(--spacing-48);
 }
 
 /* mockup-box__open-btn */

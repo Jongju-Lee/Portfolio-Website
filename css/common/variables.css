@@ -1,12 +1,15 @@
 :root {
   /* --------- LAYOUT --------- */
-  /* container width */
+  /* 컨테이너 width 값 */
   --container-width: 1400px;
 
-  /* section padding */
+  /* 헤더 height 값 */
+  --header-height: 74px; 
+
+  /* 섹션 별 padding 값 */
   --section-padding: 160px 80px;
 
-  /* util-btn width, height */
+  /* 유틸리티 버튼 width, height 값 */
   --size-util-btn: 64px;
 
   /* --------- THEME COLOR --------- */
@@ -34,8 +37,8 @@
   --color-line-white: #ffffff;
 
   /* --------- SHADOW --------- */
-  --shadow-normal: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --shadow-light: 0 0 12px rgba(0, 0, 0, 0.03);
+  --shadow-normal: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-light: 0 0 12px rgba(0, 0, 0, 0.05);
   --shadow-color-box: 0 0 8px rgba(0, 0, 0, 0.3);
   --shadow-color-box-light: 0 0 8px rgba(0, 0, 0, 0.2);
   --shadow-util-btn: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -43,25 +46,39 @@
   --shadow-accent-light: 0 10px 25px rgba(0, 173, 83, 0.06), 0 4px 10px rgba(0, 0, 0, 0.02);
   --shadow-mockup: 0 10px 10px rgba(0, 0, 0, 0.2);
 
-  /* --------- SPACING --------- */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 12px;
-  --spacing-lg: 16px;
-  --spacing-xl: 20px;
-  --spacing-2xl: 24px;
-  --spacing-3xl: 30px;
-  --spacing-4xl: 40px;
-  --spacing-5xl: 50px;
-  --spacing-6xl: 60px;
-  --spacing-7xl: 80px;
-  --spacing-8xl: 100px;
+  /* --------- SPACING (4px Grid System) --------- */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-36: 36px;
+  --spacing-40: 40px;
+  --spacing-44: 44px;
+  --spacing-48: 48px;
+  --spacing-52: 52px;
+  --spacing-56: 56px;
+  --spacing-60: 60px;
+  --spacing-64: 64px;
+  --spacing-68: 68px;
+  --spacing-72: 72px;
+  --spacing-76: 76px;
+  --spacing-80: 80px;
+  --spacing-84: 84px;
+  --spacing-88: 88px;
+  --spacing-92: 92px;
+  --spacing-96: 96px;
+  --spacing-100: 100px;
 
   /* --------- FONT FAMILY --------- */
   --font-KR: "PretendardVariable", sans-serif;
   --font-EN: "OutfitVariable", "PretendardVariable", sans-serif;
   --font-slogan: "Caveat-Regular", "OutfitVariable", cursive;
   --font-mobile-section: "NPSfontExtraBold", "PretendardVariable", sans-serif;
+  
   /* 웰라이프 프로젝트 폰트 */
   --font-scdream: "SCDream", "PretendardVariable", sans-serif;
   --font-gmarket: "GmarketSans", "PretendardVariable", sans-serif;
@@ -78,11 +95,11 @@
   --font-size-4xl: 40px;
   --font-size-5xl: 60px;
   --font-size-6xl: 80px;
+  
+  /* 주요 폰트 사이즈 */
   --font-size-body: 16px;
-
-  /* font-size - title */
-  --font-size-slogan-title: 56px;
   --font-size-section-title: 36px;
+  --font-size-slogan-title: 56px;
   
   /* --------- 섹션별 전용 속성 --------- */
   /* SKILL 섹션 전용 */
