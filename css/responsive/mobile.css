@@ -420,7 +420,7 @@
   .web-mockup__total {
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-7xl);
+    gap: var(--spacing-4xl);
     margin-bottom: var(--spacing-4xl);
   }
   .web-mockup__total-item {
