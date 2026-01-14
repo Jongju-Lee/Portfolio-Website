@@ -483,7 +483,11 @@
   letter-spacing: 0.2px;
   color: var(--text-color-dark-gray);
   background-color: var(--color-background-white);
-  box-shadow: var(--shadow-light);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s;
+}
+.resume-hero__meta-tags span:hover {
+  background-color: var(--color-background-light-gray);
 }
 
 /* ----- resume-sub ----- */
