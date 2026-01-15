@@ -101,12 +101,11 @@
 
   /* ########## SECTION - ABOUT ########## */
   #about {
-    padding: var(--spacing-60) var(--spacing-24);
-    padding: var(--section-padding);
+    padding: var(--spacing-64) var(--spacing-24);
     height: auto;
   }
   #about .inner {
-    gap: var(--spacing-32);
+    gap: var(--spacing-16);
     padding-bottom: var(--spacing-32);
   }
 

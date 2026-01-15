@@ -248,7 +248,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-16);
-  filter: drop-shadow(var(--shadow-mockup));
+  filter: drop-shadow(var(--drop-shadow-mockup));
 }
 .project-mockup__item--pc {
   width: 90%;
@@ -319,7 +319,7 @@
   height: var(--util-btn-size);
   border-radius: 50%;
   background-color: var(--color-util-btn);
-  transition: all 0.5s, opacity 0.3s;
+  transition: all 0.5s, transform 1s, opacity 0.3s;
   cursor: pointer;
   z-index: 1000;
   box-shadow: var(--shadow-util-btn);
@@ -333,8 +333,7 @@
 
 /* 각 요소별 on 상태 정의 */
 .full-nav__open-btn--on,
-.top-btn--on,
-.sidebar-btn--on {
+.top-btn--on {
   opacity: 0.7;
   visibility: visible;
   pointer-events: all;
@@ -355,14 +354,21 @@
 .full-nav__open-btn--active {
   opacity: 1;
   background-color: var(--color-primary);
-  transform: rotate(135deg);
 }
 .full-nav__open-btn--active:hover {
   opacity: 0.7;
-  transform: rotate(135deg);
 }
 .full-nav__open-btn--active:active {
   transform: scale(0.9);
+}
+.full-nav__open-btn img {
+  transition: transform 0.5s;
+}
+.full-nav__open-btn--active img {
+  transform: rotate(135deg);
+}
+.full-nav__open-btn--active:hover img {
+  transform: rotate(135deg);
 }
 /* ----- END - 풀스크린 네비게이션 버튼 ----- */
 
@@ -377,14 +383,16 @@
   transform: translateY(0);
 }
 
-/* ----- mockup-box 버튼 ----- */
+/* ----- mockup-box(목업 버튼 모음) ----- */
 .mockup-box {
+  opacity: 0;
   position: fixed;
   bottom: var(--util-btn-offset);
   left: var(--util-btn-offset);
   width: var(--util-btn-size);
   height: var(--util-btn-size);
-  transition: transform 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: mockupBoxReveal 1.5s linear forwards;
   z-index: 1000;
 }
 .mockup-box--on {
@@ -532,6 +540,21 @@
       0 0 15px 5px rgba(255, 119, 31, 0.7),
       0 0 30px 12px rgba(255, 119, 31, 0.45),
       0 0 45px 18px rgba(255, 119, 31, 0.2);
+  }
+}
+
+/* mockup-box(목업 모음 버튼) */
+@keyframes mockupBoxReveal {
+  0% {
+    opacity: 0;
+    bottom: calc(0px - var(--util-btn-size));
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: var(--util-btn-offset);
   }
 }
 /* ---------- END - Keyframes ---------- */

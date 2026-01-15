@@ -7,7 +7,7 @@
 
 /* ########## Practical Section ########## */
 #practical {
-  background-color: var(--color-background-even-champagne);
+  background-color: var(--color-background-champagne);
 }
 
 /* ----- practical-content ----- */
@@ -54,7 +54,7 @@
   box-shadow: var(--shadow-color-box-light);
   transition: opacity 0.2s, transform 0.2s;
 }
-
+/* aspect-ratio 지원하는 브라우저에만 적용 */
 @supports (aspect-ratio: 16 / 10) {
   .practical-slider__item {
     height: auto;

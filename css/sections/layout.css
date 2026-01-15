@@ -16,11 +16,14 @@ header {
   padding: 0 var(--spacing-64);
   height: var(--header-height);
   box-shadow: var(--shadow-normal);
-  transition: transform 0.3s;
   background-color: var(--color-background-white);
+  transition: transform 1s;
   z-index: 2000;
 }
-header.hide {
+.header--reveal {
+  animation: headerReveal 1.5s 0.5s forwards;
+}
+.header--hide {
   transform: translateY(-100%);
 }
 .header-inner {
@@ -340,4 +343,15 @@ body.sidebar--on {
   height: 6px;
   border-radius: 50%;
   background-color: var(--color-attention);
+}
+
+/* ========== KEY FRAMES ========== */
+/* header 생성 애니메이션 */
+@keyframes headerReveal {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

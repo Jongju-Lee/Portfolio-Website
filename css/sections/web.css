@@ -90,11 +90,11 @@
 }
 /* 목업 hover시 filter 처리 */
 .web-mockup__total-item img {
-  filter: drop-shadow(var(--shadow-mockup)) brightness(1);
+  filter: drop-shadow(var(--drop-shadow-mockup)) brightness(1);
   transition: filter 0.5s;
 }
 .web-mockup__total-item:hover img {
-  filter: drop-shadow(var(--shadow-mockup)) brightness(0.5);
+  filter: drop-shadow(var(--drop-shadow-mockup)) brightness(0.5);
 }
 .web-mockup__total--pc {
   max-width: 70%;
@@ -197,7 +197,7 @@
 }
 /* 비활성화 목업 이미지 hover 효과 제거 */
 .web-mockup__total-item--disabled:hover img {
-  filter: drop-shadow(var(--shadow-mockup)) brightness(1);
+  filter: drop-shadow(var(--drop-shadow-mockup)) brightness(1);
 }
 /* 비활성화 툴팁 - 화면 키워서 확인 (기본) */
 .web-mockup__total-item--disabled .web-mockup__total-item-label::after {
@@ -269,7 +269,7 @@
 }
 .web-info__accessibility-icon {
   width: 100px;
-  height: auto;
+  filter: drop-shadow(var(--drop-shadow-light));
 }
 .web-info__accessibility-list {
   display: flex;
@@ -351,5 +351,4 @@
 }
 .web-typo__mockup-item {
   width: 200px;
-  height: auto;
 }

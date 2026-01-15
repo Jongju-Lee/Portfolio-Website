@@ -115,8 +115,7 @@
 
   /* about-photo */
   .about-photo {
-    width: calc(320px / 1.2);
-    height: calc(450px / 1.2);
+    width: 268px;
   }
 
   /* ########## END - ABOUT ########## */

@@ -74,7 +74,6 @@
 .about-photo {
   flex-shrink: 0;
   width: 320px;
-  height: 450px;
 }
 
 /* ----- about-info ----- */
@@ -106,7 +105,7 @@
 
 /* ########## Skill Section ########## */
 #skill {
-  background-color: var(--color-background-even-champagne);
+  background-color: var(--color-background-champagne);
 }
 
 /* ----- skill-content ----- */
@@ -138,7 +137,6 @@
 }
 .skill-item__icon-box {
   display: flex;
-  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   gap: 36px;
@@ -150,8 +148,7 @@
 }
 .skill-item__icon {
   width: calc(84px / 2);
-  height: calc(84px / 2);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(var(--drop-shadow-normal));
 }
 .skill-item__icon.mini {
   width: calc(74px / 2);

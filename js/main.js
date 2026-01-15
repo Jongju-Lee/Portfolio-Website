@@ -211,6 +211,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  /* ########## 헤더 Reveal 애니메이션 ########## */
+  const header = document.querySelector('header');
+  if (header) {
+    header.classList.add('header--reveal');
+    // 애니메이션 완료 후 클래스 제거 (다음 프레임에서 transition 적용되도록)
+    header.addEventListener('animationend', function () {
+      requestAnimationFrame(function () {
+        header.classList.remove('header--reveal');
+      });
+    });
+  }
+
   /* ########## 웰라이프 목업 Lightbox 초기화 ########## */
   MockupLightbox.init();
 
@@ -224,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const navElement = document.querySelector('.header__gnb');
       // 네비게이션에 포커스 설정
       if (navElement) {
-        document.querySelector('header').classList.remove('hide');
+        document.querySelector('header').classList.remove('header--hide');
         navElement.focus();
         // 헤더 영역에서 포커스가 완전히 벗어날 때만 헤더 숨김 처리
         const focusHandler = function (e) {
@@ -232,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const isInHeader = e.target.closest('header') !== null;
           // 헤더 외부로 포커스가 이동했을 때만 헤더 숨김
           if (!isInHeader && window.scrollY >= 500) {
-            document.querySelector('header').classList.add('hide');
+            document.querySelector('header').classList.add('header--hide');
           }
           document.removeEventListener('focusin', focusHandler);
         };
@@ -252,9 +264,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
     const topBtn = document.querySelector('.top-btn');
 
-    if (header) header.classList.toggle('hide', scrolled && isPC);
-    if (fullNavOpenBtn) fullNavOpenBtn.classList.toggle('full-nav__open-btn--on', scrolled);
-    if (topBtn) topBtn.classList.toggle('top-btn--on', scrolled);
+    // header reveal 애니메이션 중에는 hide/버튼 표시 건너뛰기
+    const isRevealing = header && header.classList.contains('header--reveal');
+
+    if (header && !isRevealing) {
+      header.classList.toggle('header--hide', scrolled && isPC);
+    }
+    if (fullNavOpenBtn && !isRevealing) {
+      fullNavOpenBtn.classList.toggle('full-nav__open-btn--on', scrolled);
+    }
+    if (topBtn && !isRevealing) {
+      topBtn.classList.toggle('top-btn--on', scrolled);
+    }
   });
 
   // 상단 이동 버튼 클릭시
