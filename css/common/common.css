@@ -91,6 +91,9 @@ em {
 img {
   display: block;
   width: 100%;
+  height: auto;
+}
+.img-box img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;

@@ -321,24 +321,24 @@
   visibility: hidden;
   pointer-events: none;
   position: fixed;
-  width: var(--size-util-btn);
-  height: var(--size-util-btn);
+  width: var(--util-btn-size);
+  height: var(--util-btn-size);
   border-radius: 50%;
   background-color: var(--color-util-btn);
-  transition: 0.3s;
+  transition: all 0.5s, opacity 0.3s;
   cursor: pointer;
   z-index: 1000;
   box-shadow: var(--shadow-util-btn);
 }
 .util-btn:hover {
-  transform: translateY(-4px);
+  opacity: 0.5;
 }
 .util-btn:active {
-  transform: translateY(-4px) scale(0.9);
+  transform: scale(0.9);
 }
 
 /* 각 요소별 on 상태 정의 */
-.trigger--on,
+.full-nav__open-btn--on,
 .top-btn--on,
 .sidebar-btn--on {
   opacity: 0.7;
@@ -349,67 +349,61 @@
 
 
 /* ----- 풀스크린 네비게이션 버튼 ----- */
-.trigger {
-  top: 0;
-  left: var(--spacing-32);
+.full-nav__open-btn {
+  top: var(--util-btn-offset);
+  left: var(--util-btn-offset);
+  transform: translateY(var(--util-btn-offset-minus));
+  padding: 0;
 }
-.trigger.active {
+.full-nav__open-btn--on {
+  transform: translateY(0);
+}
+.full-nav__open-btn--active {
   opacity: 1;
   background-color: var(--color-primary);
-  transform: translateY(-4px) rotate(135deg);
+  transform: rotate(135deg);
 }
-.trigger.active:hover {
+.full-nav__open-btn--active:hover {
   opacity: 0.7;
-  transform: translateY(-8px) rotate(135deg);
+  transform: rotate(135deg);
 }
-.trigger.active:active {
+.full-nav__open-btn--active:active {
   transform: scale(0.9);
 }
-.trigger--on {
-  top: var(--spacing-32);
-}
 
-.trigger img {
+/* .full-nav__open-btn img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(56px / 1.9);
   height: calc(56px / 1.9);
-}
+} */
 /* ----- END - 풀스크린 네비게이션 버튼 ----- */
 
 
 /* ----- 맨 위로 가기 버튼(top-btn) ----- */
 .top-btn {
-  bottom: 0;
-  right: var(--spacing-32);
+  bottom: var(--util-btn-offset);
+  right: var(--util-btn-offset);
+  transform: translateY(var(--util-btn-offset));
 }
 .top-btn--on {
-  bottom: var(--spacing-32);
-}
-.top-btn img {
-  position: absolute;
-  top: calc(50% - 2px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(56px / 2);
-  height: calc(32px / 2);
+  transform: translateY(0);
 }
 
 /* ----- mockup-box 버튼 ----- */
 .mockup-box {
   position: fixed;
-  bottom: var(--spacing-32);
-  left: var(--spacing-32);
-  width: var(--size-util-btn);
-  height: var(--size-util-btn);
-  transition: bottom 0.2s ease-in-out, left 0.2s ease-in-out;
+  bottom: var(--util-btn-offset);
+  left: var(--util-btn-offset);
+  width: var(--util-btn-size);
+  height: var(--util-btn-size);
+  transition: transform 0.2s ease-in-out;
   z-index: 1000;
 }
 .mockup-box--on {
-  bottom: var(--spacing-48);
-  left: var(--spacing-48);
+  transform: translate(16px, -16px);
 }
 
 /* mockup-box__open-btn */
@@ -425,7 +419,7 @@
 }
 .mockup-box__open-btn--initial-attention {
   animation: pulseGlowScale 1.5s ease-in-out 3;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 
 /* 애니메이션 동작 중 비활성화 */
@@ -469,7 +463,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .mockup-box__action-btn img {
   position: absolute;
@@ -580,9 +574,9 @@
     /* 최대 지점 */
     transform: scale(1.05);
     box-shadow:
-      0 0 15px 5px rgba(255, 119, 31, 0.85),
-      0 0 30px 12px rgba(255, 119, 31, 0.55),
-      0 0 45px 18px rgba(255, 119, 31, 0.3);
+      0 0 15px 5px rgba(255, 119, 31, 0.7),
+      0 0 30px 12px rgba(255, 119, 31, 0.45),
+      0 0 45px 18px rgba(255, 119, 31, 0.2);
   }
 }
 /* ---------- END - Keyframes ---------- */

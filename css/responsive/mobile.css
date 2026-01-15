@@ -7,6 +7,12 @@
     --header-height: 60px; 
     --section-padding: 100px 24px;
 
+    /* 유틸리티 버튼 */
+    --util-btn-size: 48px;
+    --util-btn-offset: 20px;
+    --util-btn-offset-minus: -20px;
+
+
     /* ----- MOBILE 폰트 사이즈 ----- */
     /* 기존 --font-size-lg: 18px */
     --font-size-lg: 15px;
@@ -541,7 +547,7 @@
   .epilogue-content {
     padding: 0 var(--spacing-20);
   }
-  .epilogue-content-inner {
+  .epilogue-content__inner {
     flex-direction: column;
     row-gap: var(--spacing-60);
   }
@@ -587,35 +593,8 @@
   /* ########## END - FOOTER ########## */
 
 
-  /* ########## 유틸리티 버튼 ########## */
-  /* 풀스크린 네비게이션 버튼 */
-  .trigger {
-    left: var(--spacing-20);
-  }
-  .trigger.on {
-    top: var(--spacing-20);
-  }
-
-  /* 맨 위로 가기 버튼 */
-  .top-btn {
-    right: var(--spacing-20);
-  }
-  .top-btn.on {
-    bottom: var(--spacing-20);
-  }
-  .top-btn--on {
-    width: 48px;
-    height: 48px;
-    bottom: 20px;
-    right: 20px;
-  }
-  .top-btn img {
-    width: calc(56px / 2.5);
-    height: calc(32px / 2.5);
-  }
-
-  /* sidebar-nav */
-  .sidebar-nav-inner {
+  /* ########## 사이드 바 ########## */
+  .sidebar-nav__inner {
     max-width: 240px;
     padding-bottom: 20%;
   }
@@ -626,7 +605,7 @@
     padding-right: 0;
   }
   .sidebar-nav__item span {
-    font-size: var(--spacing-20);
+    font-size: var(--font-size-2xl);
   }
   .sidebar-nav__item.new span::after {
     top: 1px;
@@ -635,7 +614,7 @@
 
 
   /* ########## 풀스크린 네비게이션 ########## */
-  .fullscreen-nav-inner {
+  .fullscreen-nav__inner {
     padding-left: var(--spacing-28);
   }
 

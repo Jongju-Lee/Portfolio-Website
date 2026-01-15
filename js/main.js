@@ -17,8 +17,8 @@ const UtilButtons = {
 
   // 버튼 상태 초기화
   resetButtons: function () {
-    const trigger = document.querySelector('.trigger');
-    if (trigger) trigger.classList.remove('active', 'trigger--on');
+    const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
+    if (fullNavOpenBtn) fullNavOpenBtn.classList.remove('full-nav__open-btn--active', 'full-nav__open-btn--on');
 
     const fullscreenNav = document.querySelector('.fullscreen-nav');
     if (fullscreenNav) {
@@ -32,8 +32,8 @@ const UtilButtons = {
       sidebarNav.classList.add('fade-out');
     }
 
-    const sidebarInner = document.querySelector('.sidebar-nav-inner');
-    if (sidebarInner) sidebarInner.classList.remove('sidebar-nav-inner--active');
+    const sidebarInner = document.querySelector('.sidebar-nav__inner');
+    if (sidebarInner) sidebarInner.classList.remove('sidebar-nav__inner--active');
 
     document.documentElement.classList.remove('sidebar--on', 'fullscreen-nav--on');
     document.body.classList.remove('sidebar--on', 'fullscreen-nav--on');
@@ -249,11 +249,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // PC에서만 헤더 숨김 (태블릿/모바일에서는 항상 표시)
     const isPC = window.innerWidth > 1024;
     const header = document.querySelector('header');
-    const trigger = document.querySelector('.trigger');
+    const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
     const topBtn = document.querySelector('.top-btn');
 
     if (header) header.classList.toggle('hide', scrolled && isPC);
-    if (trigger) trigger.classList.toggle('trigger--on', scrolled);
+    if (fullNavOpenBtn) fullNavOpenBtn.classList.toggle('full-nav__open-btn--on', scrolled);
     if (topBtn) topBtn.classList.toggle('top-btn--on', scrolled);
   });
 
@@ -268,15 +268,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 풀스크린 네비게이션 토글
-  const trigger = document.querySelector('.trigger');
-  if (trigger) {
-    trigger.addEventListener('click', function () {
-      this.classList.toggle('active');
+  const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
+  if (fullNavOpenBtn) {
+    fullNavOpenBtn.addEventListener('click', function () {
+      this.classList.toggle('full-nav__open-btn--active');
       UtilButtons.toggleNavigation('.fullscreen-nav', 'fullscreen-nav--on');
 
       // 최상단에서 비활성 시 숨김
-      if (window.scrollY <= 50 && !this.classList.contains('active')) {
-        this.classList.remove('trigger--on');
+      if (window.scrollY <= 50 && !this.classList.contains('full-nav__open-btn--active')) {
+        this.classList.remove('full-nav__open-btn--on');
       }
     });
   }
@@ -292,13 +292,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // 헤더 사이드바 버튼 토글
   const sidebarBtn = document.querySelector('.header__sidebar-btn');
   const sidebarNav = document.querySelector('.sidebar-nav');
-  const sidebarInner = document.querySelector('.sidebar-nav-inner');
+  const sidebarInner = document.querySelector('.sidebar-nav__inner');
   const sidebarCloseBtn = document.querySelector('.sidebar-nav__close-btn');
 
   // 사이드바 열기/닫기 함수
   function openSidebar() {
     UtilButtons.toggleNavigation('.sidebar-nav', 'sidebar--on');
-    if (sidebarInner) sidebarInner.classList.toggle('sidebar-nav-inner--active');
+    if (sidebarInner) sidebarInner.classList.toggle('sidebar-nav__inner--active');
 
     // 포커스 트랩: 열릴 때 첫 번째 메뉴로 포커스 이동
     setTimeout(function () {
@@ -375,18 +375,18 @@ document.addEventListener('DOMContentLoaded', function () {
   // 라이트박스 링크 클릭시 버튼 숨김
   document.querySelectorAll('.practical-slider__item').forEach(function (item) {
     item.addEventListener('click', function () {
-      const trigger = document.querySelector('.trigger');
+      const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
       const topBtn = document.querySelector('.top-btn');
-      if (trigger) trigger.classList.remove('trigger--on');
+      if (fullNavOpenBtn) fullNavOpenBtn.classList.remove('full-nav__open-btn--on');
       if (topBtn) topBtn.classList.remove('top-btn--on');
     });
   });
 
   // 라이트박스 닫힐 때 버튼 표시
   document.addEventListener('hidden.uk.lightbox', function () {
-    const trigger = document.querySelector('.trigger');
+    const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
     const topBtn = document.querySelector('.top-btn');
-    if (trigger) trigger.classList.add('trigger--on');
+    if (fullNavOpenBtn) fullNavOpenBtn.classList.add('full-nav__open-btn--on');
     if (topBtn) topBtn.classList.add('top-btn--on');
   });
 
@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const startMockupAnimation = () => {
     if (mockupOpenBtn) {
       mockupOpenBtn.classList.add('mockup-box__open-btn--initial-attention');
-      setTimeout(() => mockupOpenBtn.classList.remove('mockup-box__open-btn--initial-attention'), 5000); // 4.5초 애니메이션 + 0.5초 delay
+      setTimeout(() => mockupOpenBtn.classList.remove('mockup-box__open-btn--initial-attention'), 5500); // 4.5초 애니메이션 + 1초 delay
     }
   };
 

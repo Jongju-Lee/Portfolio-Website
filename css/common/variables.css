@@ -9,8 +9,10 @@
   /* 섹션 별 padding 값 */
   --section-padding: 160px 80px;
 
-  /* 유틸리티 버튼 width, height 값 */
-  --size-util-btn: 64px;
+  /* 유틸리티 버튼 */
+  --util-btn-size: 64px;
+  --util-btn-offset: 32px;
+  --util-btn-offset-minus: -32px;
 
   /* --------- THEME COLOR --------- */
   --color-primary: #00ad53;

@@ -164,7 +164,7 @@
   padding: 0 var(--spacing-40);
 }
 
-.epilogue-content-inner {
+.epilogue-content__inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

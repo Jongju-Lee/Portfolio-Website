@@ -109,30 +109,16 @@ header.hide {
 /* PC에서는 숨김, 태블릿/모바일에서만 표시 */
 .header__sidebar-btn {
   display: none;
-  position: relative;
+  width: 28px;
   height: 20px;
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+  background-image: url(../../images/icon/sidebar-btn.png);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s;
 }
-.header__sidebar-btn img {
-  display: block;
-  height: 100%;
-  width: auto;
-  transition: opacity 0.2s;
-}
-.header__sidebar-btn .sidebar-btn--hover {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.header__sidebar-btn:hover .sidebar-btn--normal {
-  opacity: 0;
-}
-.header__sidebar-btn:hover .sidebar-btn--hover {
-  opacity: 1;
+.header__sidebar-btn:hover {
+  background-image: url(../../images/icon/sidebar-btn-hover.png);
 }
 
 
@@ -181,7 +167,7 @@ body.fullscreen-nav--on {
   opacity: 1;
   visibility: visible;
 }
-.fullscreen-nav-inner {
+.fullscreen-nav__inner {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -253,7 +239,7 @@ body.sidebar--on {
   z-index: 3000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 .sidebar-nav.fade-in {
   opacity: 1;
@@ -261,10 +247,11 @@ body.sidebar--on {
 }
 
 /* 사이드 바(최초 숨김처리) */
-.sidebar-nav-inner {
-  position: absolute;
+.sidebar-nav__inner {
+  position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
+  transform: translateX(100%);
   width: 65%;
   height: 100vh; /* 폴백 */
   height: 100dvh; /* iOS Safari 동적 뷰포트 */
@@ -273,7 +260,10 @@ body.sidebar--on {
   flex-direction: column;
   align-items: stretch;
   background-color: var(--color-background-white);
-  transition: right 0.3s;
+  transition: transform 0.5s ease-in-out;
+}
+.sidebar-nav__inner--active {
+  transform: translateX(0);
 }
 
 /* ----- sidebar-nav__links ----- */
@@ -286,10 +276,6 @@ body.sidebar--on {
   overflow-y: auto;
 }
 
-/* --active -> 사이드바 오픈 */
-.sidebar-nav-inner--active {
-  right: 0;
-}
 
 /* ----- sidebar-nav__header ----- */
 .sidebar-nav__header {

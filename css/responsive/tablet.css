@@ -1,5 +1,6 @@
+/* ========== 1280px 반응형 ========== */
 @media (max-width: 1280px) {
-  /* ===== Header 부분 1280px 반응형 UI ===== */
+  /* ----- Header ----- */
   header {
     padding: 0 var(--spacing-32);
   }
@@ -15,6 +16,7 @@
 }
 
 
+/* ========== 1024px 반응형 ========== */
 @media (max-width: 1024px) {
   /* ########## 변수 재정의 ########## */
   :root {
@@ -22,6 +24,12 @@
     --container-width: 1024px;
     --header-height: 64px; 
     --section-padding: 120px 60px;
+
+     /* 유틸리티 버튼 */
+    --util-btn-size: 56px;
+    --util-btn-offset: 28px;
+    --util-btn-offset-minus: -28px;
+
 
     /* ----- TABLET 폰트 사이즈 ----- */
     /* 기존 --font-size-lg: 18px */
@@ -317,21 +325,8 @@
 
   /* ########## 유틸리티 버튼 ########## */
   /* 풀스크린 네비게이션 버튼 */
-  .trigger {
+  .full-nav__open-btn {
     display: none;
-  }
-
-  /* 상단 이동 버튼 */
-  .top-btn--on {
-    width: 56px;
-    height: 56px;
-    bottom: 28px;
-    right: 28px;
-  }
-
-  .top-btn img {
-    width: calc(56px / 2.2);
-    height: calc(32px / 2.2);
   }
 
   /* mockup-box 버튼 */
