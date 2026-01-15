@@ -94,22 +94,7 @@
 
   /* ########## SECTION - HEADER ########## */
   header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: auto;
     padding: 0 var(--spacing-24);
-  }
-
-  /* header__gnb */
-  .header__gnb {
-    display: none;
-  }
-
-  /* header__logo */
-  .header__logo {
-    height: 22px;
   }
   /* ########## END - HEADER ########## */
 

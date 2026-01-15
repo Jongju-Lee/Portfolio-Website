@@ -35,7 +35,7 @@
 /* 인라인용 오버레이 */
 .loading__overlay--inline {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--color-background-white);
 }
 
 /* 스피너 */
@@ -250,12 +250,6 @@
   gap: var(--spacing-16);
   filter: drop-shadow(var(--shadow-mockup));
 }
-.project-mockup__item img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-/* ----- project-mockup__item ----- */
 .project-mockup__item--pc {
   width: 90%;
 }
@@ -370,15 +364,6 @@
 .full-nav__open-btn--active:active {
   transform: scale(0.9);
 }
-
-/* .full-nav__open-btn img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(56px / 1.9);
-  height: calc(56px / 1.9);
-} */
 /* ----- END - 풀스크린 네비게이션 버튼 ----- */
 
 
@@ -436,16 +421,6 @@
   opacity: 0.7;
   transform: translateY(0);
 }
-.mockup-box__open-btn img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  left: calc(50% - 1px);
-  transform: translate(-50%, -50%);
-  width: calc(58px / 1.6);
-  /* 28% 증가 (29px → 37px) */
-  height: calc(58px / 1.6);
-}
 
 /* mockup-box__inner */
 .mockup-box__inner {
@@ -464,41 +439,21 @@
   height: 40px;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
+  background-color: var(--text-color-light-gray);
 }
-.mockup-box__action-btn img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /* 모바일 목업 버튼 */
 .mockup-box__action-btn.mobile {
-  background-color: var(--text-color-light-gray);
   transition-delay: 0.3s;
-}
-.mockup-box__action-btn.mobile img {
-  width: calc(28px / 1.8);
-  height: calc(40px / 1.8);
+  padding-left: 1px;
 }
 /* 태블릿 목업 버튼 */
 .mockup-box__action-btn.tablet {
-  background-color: var(--text-color-light-gray);
   transition-delay: 0.15s;
 }
-.mockup-box__action-btn.tablet img {
-  width: calc(40px / 1.8);
-  height: calc(32px / 1.8);
-}
-
 /* 닫기 버튼 */
 .mockup-box__action-btn.close {
   background-color: var(--color-negative);
   transition-delay: 0.45s;
-}
-.mockup-box__action-btn.close img {
-  width: calc(28px / 1.8);
-  height: calc(28px / 1.8);
 }
 /* 목업 박스 열릴 때 액션버튼 동작 */
 .mockup-box--on .mockup-box__action-btn {

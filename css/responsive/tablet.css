@@ -86,11 +86,7 @@
   /* ########## SECTION - HEADER ########## */
   /* header__logo */
   .header__logo {
-    height: 22px;
-  }
-  /* sidebar-nav__logo */
-  .sidebar-nav__logo {
-    height: 20px;
+    width: 48px;
   }
   /* ########## END - HEADER ########## */
 

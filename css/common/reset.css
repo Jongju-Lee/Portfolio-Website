@@ -45,4 +45,8 @@ table {
 }
 button {
 	padding: 0;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
 }
