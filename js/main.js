@@ -3,14 +3,7 @@ const UtilButtons = {
   // 네비게이션 토글 공통 로직
   toggleNavigation: function (selector, bodyClass) {
     const el = document.querySelector(selector);
-    if (el) {
-      const isVisible = el.classList.contains('fade-in');
-      if (isVisible) {
-        el.classList.remove('fade-in');
-      } else {
-        el.classList.add('fade-in');
-      }
-    }
+    if (el) el.classList.toggle('fade-in');
     document.documentElement.classList.toggle(bodyClass);
     document.body.classList.toggle(bodyClass);
   },
@@ -195,6 +188,18 @@ const MockupLightbox = {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+  /* ########## 공통 요소 캐싱 ########## */
+  const header = document.querySelector('header');
+  const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
+  const topBtn = document.querySelector('.top-btn');
+  const mockupBox = document.querySelector('.mockup-box');
+
+  // 유틸리티 버튼 표시/숨김 함수
+  function setUtilButtonsVisible(visible) {
+    if (fullNavOpenBtn) fullNavOpenBtn.classList.toggle('full-nav__open-btn--on', visible);
+    if (topBtn) topBtn.classList.toggle('top-btn--on', visible);
+  }
+
   /* ########## 페이지 진입시 로딩 화면 표시 ########## */
   if (window.loadingManager) {
     window.loadingManager.show({
@@ -212,7 +217,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ########## 헤더 Reveal 애니메이션 ########## */
-  const header = document.querySelector('header');
   if (header) {
     header.classList.add('header--reveal');
     // 애니메이션 완료 후 클래스 제거 (다음 프레임에서 transition 적용되도록)
@@ -235,8 +239,8 @@ document.addEventListener('DOMContentLoaded', function () {
       // GNB 요소
       const navElement = document.querySelector('.header__gnb');
       // 네비게이션에 포커스 설정
-      if (navElement) {
-        document.querySelector('header').classList.remove('header--hide');
+      if (navElement && header) {
+        header.classList.remove('header--hide');
         navElement.focus();
         // 헤더 영역에서 포커스가 완전히 벗어날 때만 헤더 숨김 처리
         const focusHandler = function (e) {
@@ -244,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const isInHeader = e.target.closest('header') !== null;
           // 헤더 외부로 포커스가 이동했을 때만 헤더 숨김
           if (!isInHeader && window.scrollY >= 500) {
-            document.querySelector('header').classList.add('header--hide');
+            header.classList.add('header--hide');
           }
           document.removeEventListener('focusin', focusHandler);
         };
@@ -260,9 +264,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrolled = window.scrollY >= 500;
     // PC에서만 헤더 숨김 (태블릿/모바일에서는 항상 표시)
     const isPC = window.innerWidth > 1024;
-    const header = document.querySelector('header');
-    const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
-    const topBtn = document.querySelector('.top-btn');
 
     // header reveal 애니메이션 중에는 hide/버튼 표시 건너뛰기
     const isRevealing = header && header.classList.contains('header--reveal');
@@ -270,16 +271,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (header && !isRevealing) {
       header.classList.toggle('header--hide', scrolled && isPC);
     }
-    if (fullNavOpenBtn && !isRevealing) {
-      fullNavOpenBtn.classList.toggle('full-nav__open-btn--on', scrolled);
-    }
-    if (topBtn && !isRevealing) {
-      topBtn.classList.toggle('top-btn--on', scrolled);
+    if (!isRevealing) {
+      setUtilButtonsVisible(scrolled);
     }
   });
 
   // 상단 이동 버튼 클릭시
-  const topBtn = document.querySelector('.top-btn');
   if (topBtn) {
     topBtn.addEventListener('click', function (e) {
       e.preventDefault(); // href="#" 기본 동작 방지 (iframe 내에서 부모 스크롤 방지)
@@ -289,7 +286,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 풀스크린 네비게이션 토글
-  const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
   if (fullNavOpenBtn) {
     fullNavOpenBtn.addEventListener('click', function () {
       this.classList.toggle('full-nav__open-btn--active');
@@ -396,19 +392,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // 라이트박스 링크 클릭시 버튼 숨김
   document.querySelectorAll('.practical-slider__item').forEach(function (item) {
     item.addEventListener('click', function () {
-      const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
-      const topBtn = document.querySelector('.top-btn');
-      if (fullNavOpenBtn) fullNavOpenBtn.classList.remove('full-nav__open-btn--on');
-      if (topBtn) topBtn.classList.remove('top-btn--on');
+      setUtilButtonsVisible(false);
     });
   });
 
   // 라이트박스 닫힐 때 버튼 표시
   document.addEventListener('hidden.uk.lightbox', function () {
-    const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
-    const topBtn = document.querySelector('.top-btn');
-    if (fullNavOpenBtn) fullNavOpenBtn.classList.add('full-nav__open-btn--on');
-    if (topBtn) topBtn.classList.add('top-btn--on');
+    setUtilButtonsVisible(true);
   });
 
 
@@ -434,7 +424,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // 목업박스 열기/닫기 기능
   if (mockupOpenBtn) {
     mockupOpenBtn.addEventListener('click', function () {
-      const mockupBox = document.querySelector('.mockup-box');
       if (mockupBox) mockupBox.classList.toggle('mockup-box--on');
       this.classList.add('mockup-box__open-btn--disabled');
       setTimeout(() => this.classList.remove('mockup-box__open-btn--disabled'), 600);
@@ -443,7 +432,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.mockup-box__action-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      const mockupBox = document.querySelector('.mockup-box');
       if (mockupBox) mockupBox.classList.remove('mockup-box--on');
     });
   });

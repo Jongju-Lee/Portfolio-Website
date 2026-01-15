@@ -370,6 +370,9 @@
 .full-nav__open-btn--active:hover img {
   transform: rotate(135deg);
 }
+.full-nav__open-btn--active:active img {
+  transform: rotate(0);
+}
 /* ----- END - 풀스크린 네비게이션 버튼 ----- */
 
 
