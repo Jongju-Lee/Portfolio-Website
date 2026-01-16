@@ -29,14 +29,17 @@ body {
   line-height: 1.5em;
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   color: #333;
   background-color: #f4f4f4;
 }
 /* ########## FAQ Accordion ########## */
 .accordion_outer {
+  min-height: 100vh;
+  min-height: 100dvh;
   width: 50%;
   margin: auto;
-  padding: 70px 0;
+  padding: 100px 0;
 }
 .accordion_outer h1 {
   text-align: center;

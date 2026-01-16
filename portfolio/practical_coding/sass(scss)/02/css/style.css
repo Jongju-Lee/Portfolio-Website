@@ -37,18 +37,20 @@ body {
 /* Grid Responsive Layout(Blog Post Style) */
 .portfolio {
   position: relative;
-  padding: 0 20px;
-  padding-top: 60px;
+  padding: 60px 20px;
+}
+.header_box {
+  margin-bottom: 60px;
 }
 
-.portfolio .btn_responsive {
-  position: absolute;
+/* btn_responsive */
+.btn_responsive {
+  position: fixed;
   top: 20px;
   right: 20px;
 }
-
-.portfolio .btn_responsive .mobile,
-.portfolio .btn_responsive .tablet {
+.btn_responsive .mobile,
+.btn_responsive .tablet {
   display: inline-block;
   padding: 10px 20px;
   font-size: 18px;
@@ -56,64 +58,61 @@ body {
   border: 1px solid #3dc1d3;
   transition: 0.35s;
 }
-
-.portfolio .btn_responsive .mobile {
+.btn_responsive .mobile {
   color: #3dc1d3;
   margin-right: 5px;
 }
-
-.portfolio .btn_responsive .mobile:hover {
+.btn_responsive .mobile:hover {
   color: #fff;
   background-color: #3dc1d3;
 }
 
-.portfolio .btn_responsive .tablet {
+.btn_responsive .tablet {
   color: #fff;
   background-color: #3dc1d3;
 }
 
-.portfolio .btn_responsive .tablet:hover {
+.btn_responsive .tablet:hover {
   color: #3dc1d3;
   background-color: #fff;
 }
 
-.portfolio h1 {
+/* main_title */
+.main_title {
   position: relative;
   text-align: center;
-  margin-bottom: 50px;
   font-weight: 500;
   text-decoration: underline;
   text-decoration-color: #3dc1d3;
   pointer-events: none;
   font-size: 55.5px;
 }
-
-.portfolio h1 span {
+.main_title span {
   color: #3dc1d3;
 }
 
-.portfolio .items {
+/* items */
+.items {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 15px;
 }
-
-.portfolio .items div {
+.items div {
   position: relative;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.portfolio .items div a img {
+.items div a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.portfolio .items div span,
-.portfolio .items div::before,
-.portfolio .items div::after {
+.items div span,
+.items div::before,
+.items div::after {
   position: absolute;
   transition: 0.5s;
   opacity: 0;
@@ -121,7 +120,7 @@ body {
   pointer-events: none;
 }
 
-.portfolio .items div span {
+.items div span {
   bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
@@ -131,7 +130,7 @@ body {
   font-size: 18px;
 }
 
-.portfolio .items div::before {
+.items div::before {
   content: "";
   top: 0;
   left: 0;
@@ -140,7 +139,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.portfolio .items div::after {
+.items div::after {
   content: "\f64d";
   font-family: "bootstrap-icons";
   top: 50%;
@@ -151,26 +150,26 @@ body {
   font-weight: 700;
 }
 
-.portfolio .items div:hover::before,
-.portfolio .items div:hover::after,
-.portfolio .items div:hover span {
+.items div:hover::before,
+.items div:hover::after,
+.items div:hover span {
   opacity: 1;
   visibility: visible;
 }
 
-.portfolio .items div:hover::after {
+.items div:hover::after {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.portfolio .items div:hover span {
+.items div:hover span {
   bottom: 30px;
 }
 
-.portfolio .items .focus {
+.items .focus {
   grid-area: span 2/span 2;
 }
 
-/* ##### Featherlight ##### */
+/* ========== Featherlight 관련 ========== */
 .featherlight-iframe .featherlight-content {
   width: 100%;
   height: 100%;

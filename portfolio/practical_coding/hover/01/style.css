@@ -44,10 +44,11 @@ body {
   flex: 1;
   transition: 0.5s;
   overflow: hidden;
+  filter: grayscale(1);
 }
 .item:hover {
   flex: 2;
-  filter: grayscale(1);
+  filter: grayscale(0);
 }
 .item:not(:last-child) {
   border-right: 5px solid #000;

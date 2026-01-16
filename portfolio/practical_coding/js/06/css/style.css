@@ -41,7 +41,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 50px 0;
+  padding: 120px 0;
 }
 header .logo {
   width: 150px;
@@ -53,8 +53,8 @@ header .logo img {
 }
 .heading {
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 52%;
+  left: 36px;
   transform: translateY(-50%);
 }
 .heading h3 {

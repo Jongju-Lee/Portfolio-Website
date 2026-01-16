@@ -3,7 +3,7 @@ const $hours = document.querySelector(".hours");
 const $minutes = document.querySelector(".minutes");
 const $seconds = document.querySelector(".seconds");
 
-const countDownDate = new Date("December 30, 2025 00:00:00").getTime();
+const countDownDate = new Date("March 31, 2026 00:00:00").getTime();
 const secondInterval = setInterval(() => {
   let now = new Date().getTime();
   let distance = countDownDate - now;
