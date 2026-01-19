@@ -26,18 +26,22 @@ h6 {
 }
 
 body {
-  font-size: 15px;
+  display: flex;
   line-height: 1.6em;
   margin: 0;
   color: #777;
   background-color: #f8f8f8;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 /* Grid Responsive Layout(Blog Post Style) */
+.container {
+  display: flex;
+}
 .portfolio {
   position: relative;
-  padding: 60px 20px;
+  padding: 60px 24px 0;
 }
 .header_box {
   margin-bottom: 60px;

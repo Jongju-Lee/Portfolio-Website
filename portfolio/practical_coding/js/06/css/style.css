@@ -14,7 +14,6 @@
 * {
   box-sizing: border-box;
   outline: none;
-  font-family: "Pretendard-Regular";
 }
 h2,
 h3 {
@@ -23,16 +22,19 @@ h3 {
 body {
   margin: 0;
   height: 100vh;
-  background: url(../images/background.jpg) no-repeat center center / cover;
+  font-family: "Pretendard-Regular";
   color: #fff;
   overflow: hidden;
 }
 .container {
+  display: flex;
   height: 100%;
+  background: url(../images/background.jpg) no-repeat center center / cover;
 }
 .container .inner {
+  flex: 1;
   position: relative;
-  width: 1280px;
+  max-width: 1280px;
   margin: auto;
   height: 100%;
 }
@@ -41,7 +43,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 120px 0;
+  padding-top: 120px;
 }
 header .logo {
   width: 150px;
@@ -55,7 +57,9 @@ header .logo img {
   position: absolute;
   top: 52%;
   left: 36px;
+  left: 0;
   transform: translateY(-50%);
+  font-size: 30px;
 }
 .heading h3 {
   font-size: 40px;
@@ -63,8 +67,7 @@ header .logo img {
 }
 .heading span {
   display: block;
-  margin-bottom: 20px;
-  font-size: 20px;
+  margin-bottom: 12px;
 }
 .heading h3 em {
   color: #fff;
@@ -73,9 +76,9 @@ header .logo img {
   font-size: 30px;
 }
 .remain_date {
-  display: flex;
+  display: inline-flex;
   margin-bottom: 20px;
-  gap: 30px;
+  gap: 20px;
 }
 .remain_date h2 {
   display: flex;
@@ -97,20 +100,24 @@ header .logo img {
   font-weight: 300;
 }
 .heading .bottom {
+  display: inline-block;
   color: #fff;
   font-weight: 400;
   font-size: 30px;
+  margin-left: 4px;
 }
 .heading .btn_learn_more {
-  font-family: "Poppins", sans-serif;
+  display: block;
   margin-top: 30px;
   padding: 10px 30px;
   padding-top: 5px;
   color: #fff;
   background-color: transparent;
+  font-family: "Poppins", sans-serif;
   border: 2px solid #fff;
   cursor: pointer;
   transition: 0.35s;
+  font-size: 16px;
 }
 .heading .btn_learn_more:hover {
   background-color: #fff;

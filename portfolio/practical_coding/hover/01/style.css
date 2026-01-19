@@ -42,7 +42,8 @@ body {
 .item {
   position: relative;
   flex: 1;
-  transition: 0.5s;
+  transition: flex 0.5s, filter 0.5s;
+  transition-delay: 0.3s;
   overflow: hidden;
   filter: grayscale(1);
 }

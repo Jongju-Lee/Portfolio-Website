@@ -55,11 +55,11 @@
   transition: opacity 0.2s, transform 0.2s;
 }
 /* aspect-ratio 지원하는 브라우저에만 적용 */
-@supports (aspect-ratio: 16 / 10) {
+@supports (aspect-ratio: 16 / 9) {
   .practical-slider__item {
     height: auto;
     padding-bottom: 0;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
   }
 }
 

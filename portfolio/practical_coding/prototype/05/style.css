@@ -21,24 +21,27 @@ button {
 body {
   margin: 0;
   height: 100vh;
+  overflow: hidden;
 }
 /* ##### SNS LNB ##### */
 .container {
-  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   background-color: #25b8f7;
 }
 input[id="share"] {
   display: none;
 }
 .btn_share {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  transform: translateY(75%);
   width: 150px;
   height: 60px;
   background-color: #fff;
   border-radius: 30px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
 }
 .btn_share::before {
   content: "Click Here!";
@@ -107,7 +110,6 @@ label[for="share"] {
   border-radius: 30px;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
 }
 label[for="share"]::before,
 label[for="share"]::after {
