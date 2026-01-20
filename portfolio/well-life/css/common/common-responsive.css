@@ -3,14 +3,16 @@
 
 /* ########## 태블릿(1280px) 반응형 ########## */
 @media (max-width: 1280px) {
-  /* ---------- LAYOUT ---------- */
-  body::-webkit-scrollbar {
-    display: none;
+  /* ========== 변수 재정의 ========== */
+  :root {
+    /* 헤더 높이 값 */
+    --header-height: 68px;
   }
 
-  /* 헤더 높이만큼 하단 이동 */
-  main {
-    padding-top: var(--spacing-68);
+  /* ---------- LAYOUT ---------- */
+  /* 스크롤바는 PC에서만 보이게 */
+  body::-webkit-scrollbar {
+    display: none;
   }
   /* ---------- END - LAYOUT ---------- */
 
@@ -34,9 +36,6 @@
   /* ---------- HEADER ----------  */
   header {
     padding: 0 var(--section-padding-h-tablet);
-  }
-  .header-inner {
-    height: 68px;
   }
 
   /* header-logo */
@@ -147,18 +146,14 @@
 
 /* ########## 모바일(768px) 반응형 ########## */
 @media (max-width: 768px) {
+  /* ========== 변수 재정의 ========== */
+  :root {
+    /* 헤더 높이 값 */
+    --header-height: 56px;
 
-  /* ---------- LAYOUT ---------- */
-  body {
-    font-size: var(--font-size-mobile-body);
+    /* 기본 폰트 사이즈 */
+    --font-size-body: 14px;
   }
-
-  /* 헤더 높이만큼 하단 이동 */
-  main {
-    padding-top: var(--spacing-56);
-  }
-  /* ---------- END - LAYOUT ---------- */
-
 
   /* ---------- COMMON ----------  */
   input[type="checkbox"] {
@@ -195,9 +190,6 @@
   /* ---------- HEADER ----------  */
   header {
     padding: 0 var(--section-padding-h-mobile);
-  }
-  .header-inner {
-    height: 56px;
   }
 
   /* header-logo */

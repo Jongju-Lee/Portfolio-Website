@@ -74,8 +74,8 @@
 
 
   /* ############### LAYOUT ############### */
-  /* MAX-WIDTH */
   --max-width-pc: 1400px;
+  --header-height: 74px;
 
   
   /* ############### TYPOGRAPHY ############### */
@@ -88,8 +88,8 @@
   --font-size-medium: 1rem; /* 16px */
   --font-size-small: 0.75rem; /* 12px */
 
-  /* Mobile 기본 폰트 사이즈 */
-  --font-size-mobile-body: 14px;
+  /* 기본 폰트 사이즈 */
+  --font-size-body: var(--font-size-medium);
 
   /* ---------- FONT FAMILY ---------- */
   /* 한글 폰트 */

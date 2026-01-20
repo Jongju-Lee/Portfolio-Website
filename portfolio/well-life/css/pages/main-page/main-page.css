@@ -4,9 +4,9 @@
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100vh - 64px);
+  height: calc(100vh - var(--header-height));
   /* 폴백 */
-  height: calc(100dvh - 64px);
+  height: calc(100dvh - var(--header-height));
   /* iOS Safari 동적 뷰포트 */
   padding: var(--section-padding-v-pc) var(--section-padding-h-pc);
   background-image: url(../../../images/main-page/hero/hero-bg-pc.png);

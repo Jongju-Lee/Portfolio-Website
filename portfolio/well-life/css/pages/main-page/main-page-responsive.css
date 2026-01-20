@@ -8,9 +8,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
-    min-height: calc(100vh - 64px); /* 폴백 */
-    min-height: calc(100dvh - 64px); /* iOS Safari 동적 뷰포트 */
     padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
   }
   .hero-inner {
@@ -466,6 +463,7 @@
 @media (max-width: 768px) {
   /* ---------- SECTION - HERO ----------  */
   .hero {
+    height: auto;
     min-height: auto;
     padding: var(--section-padding-v-pc) var(--section-padding-h-mobile);
     background-image: url(../../../images/main-page/hero/hero-bg-mobile.png);
