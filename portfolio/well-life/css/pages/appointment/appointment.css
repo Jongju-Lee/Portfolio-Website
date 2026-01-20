@@ -1,7 +1,7 @@
 /* ---------- 진료 예약 페이지 ---------- */
 .appointment-inner {
   background-color: var(--bg-primary);
-  padding: var(--section-padding-v-pc);
+  padding: var(--section-padding-v);
   transition: background-color 0.5s;
 }
 .appointment-main-title {

@@ -8,7 +8,7 @@
   /* 폴백 */
   height: calc(100dvh - var(--header-height));
   /* iOS Safari 동적 뷰포트 */
-  padding: var(--section-padding-v-pc) var(--section-padding-h-pc);
+  padding: var(--section-padding-v) var(--section-padding-h);
   background-image: url(../../../images/main-page/hero/hero-bg-pc.png);
   background-size: cover;
   background-position: center top;
@@ -81,7 +81,7 @@
 
 /* ----- SECTION - INTRO ----- */
 .intro {
-  padding: var(--section-padding-v-pc) var(--section-padding-h-pc);
+  padding: var(--section-padding-v) var(--section-padding-h);
   background-color: var(--bg-primary);
 }
 .intro-inner {
@@ -132,7 +132,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100vw;
-  padding: 0 var(--section-padding-h-pc);
+  padding: 0 var(--section-padding-h);
   font-size: 140px;
   font-family: var(--font-EN-black);
   text-align: center;
@@ -193,7 +193,7 @@
 .why {
   position: relative;
   width: 100%;
-  padding: var(--section-padding-v-pc) var(--section-padding-h-pc);
+  padding: var(--section-padding-v) var(--section-padding-h);
   background-image: url(../../../images/main-page/why/why-bg.png);
   background-size: cover;
   background-position: center top;
@@ -306,7 +306,7 @@
 /* ----- SECTION - DOCTOR ----- */
 .doctor {
   position: relative;
-  padding: var(--section-padding-v-pc) 0;
+  padding: var(--section-padding-v) 0;
   background-color: var(--bg-primary);
 }
 .doctor-bg-icon {
@@ -369,7 +369,7 @@
   width: 85%;
   margin-top: var(--spacing-64);
   margin-left: auto;
-  padding: var(--section-padding-h-pc);
+  padding: var(--section-padding-h);
   border-radius: 80px 0 0 0;
   background-color: var(--theme-primary);
   color: var(--color-white);
@@ -485,7 +485,7 @@
 
 /* ----- SECTION - DISEASE ----- */
 .disease {
-  padding: 0 var(--section-padding-h-pc) var(--section-padding-v-pc);
+  padding: 0 var(--section-padding-h) var(--section-padding-v);
   background-color: var(--bg-primary);
 }
 
@@ -699,7 +699,7 @@
 
 /* ----- SECTION - SUBJECT ----- */
 .subject-banner {
-  padding: var(--section-padding-v-pc) var(--section-padding-h-pc);
+  padding: var(--section-padding-v) var(--section-padding-h);
   background-image: url(../../../images/main-page/subject/subject-banner.jpg);
   background-size: 100% auto;
   background-position: center top;
@@ -856,7 +856,7 @@
 
 /* ----- SECTION - GALLERY ----- */
 .gallery {
-  padding: var(--section-padding-v-pc) 0;
+  padding: var(--section-padding-v) 0;
   background-color: var(--bg-primary);
 }
 
@@ -985,7 +985,7 @@
 
 /* ----- SECTION - INFO ----- */
 .info {
-  padding: var(--section-padding-v-pc);
+  padding: var(--section-padding-v);
   background-color: var(--bg-tertiary);
   color: var(--color-black);
 }
@@ -1100,7 +1100,7 @@
 /* ----- SECTION - DIRECTION ----- */
 .direction {
   position: relative;
-  padding-top: var(--section-padding-v-pc);
+  padding-top: var(--section-padding-v);
   background-color: var(--bg-primary);
 }
 .direction::after {

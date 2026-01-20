@@ -3,9 +3,16 @@
 
 /* #################### TABLET #################### */
 @media (max-width: 1280px) {
+  /* ========== 변수 재정의 ========== */
+  :root {
+    /* Padding 값 */
+    --section-padding-h: 32px;
+    --section-padding-v: 64px;
+  }
+
   /* ---------- 진료 예약 페이지 ---------- */
   .appointment-inner {
-    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
+    padding: var(--section-padding-v) var(--section-padding-h);
   }
   .appointment-main-title {
     margin-bottom: var(--spacing-48);
@@ -32,10 +39,14 @@
 
 /* #################### MOBILE #################### */
 @media (max-width: 768px) {
-  /* ---------- 진료 예약 페이지 ---------- */
-  .appointment-inner {
-    padding: var(--section-padding-v-mobile) var(--section-padding-h-mobile);
+  /* ========== 변수 재정의 ========== */
+  :root {
+    /* padding 값 */
+    --section-padding-h: 24px;
+    --section-padding-v: 48px;
   }
+
+  /* ---------- 진료 예약 페이지 ---------- */
   .appointment-main-title {
     margin-bottom: var(--spacing-48);
     font-size: var(--font-size-xl);

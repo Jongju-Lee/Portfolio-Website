@@ -188,7 +188,7 @@ header {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  padding: 0 var(--section-padding-h-pc);
+  padding: 0 var(--section-padding-h);
   background-color: var(--bg-primary);
   box-shadow: var(--shadow-normal);
   z-index: 1000;
@@ -206,6 +206,7 @@ header {
   height: 100%;
   margin: 0 auto;
 }
+
 /* header-logo */
 .header-logo {
   flex-shrink: 0;
@@ -214,7 +215,7 @@ header {
   height: calc(72px / 2);
   background-image: url(../../images/includes/header-logo-pc.png);
   background-size: 100% 100%;
-  transition: opacity 0.2s, background-image 0.5s linear;
+  transition: opacity 0.2s;
 }
 [data-theme="dark"] .header-logo {
   background-image: url(../../images/includes/header-logo-pc-dark.png);
@@ -222,6 +223,7 @@ header {
 .header-logo:hover {
   opacity: 0.7;
 }
+
 /* header-gnb */
 .header-gnb {
   flex: 1;
@@ -257,6 +259,7 @@ header {
 .header-gnb__link:focus::after {
   width: 100%;
 }
+
 /* header-right__box */
 .header-right__box {
   display: flex;
@@ -268,12 +271,13 @@ header {
   height: calc(152px / 4);
   background-image: url(../../images/includes/header-tel.png);
   background-size: 100% 100%;
-  transition: background-image 0.5s linear, opacity 0.2s;
+  transition: opacity 0.2s;
 }
 /* 다크모드 시 이미지 교체 */
 [data-theme="dark"] .header-right__tel {
   background-image: url(../../images/includes/header-tel-dark.png);
 }
+
 /* header-right__hamburger-btn */
 .header-right__hamburger-btn {
   display: none;
@@ -283,7 +287,7 @@ header {
 footer {
   background-color: var(--color-black);
   border-top: 1px solid var(--contents-tertiary);
-  padding: var(--section-padding-h-pc) var(--section-padding-h-pc) 0;
+  padding: var(--section-padding-h) var(--section-padding-h) 0;
 }
 .footer-inner {
   display: flex;
@@ -419,7 +423,7 @@ footer {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: var(--section-padding-h-tablet);
+  padding: var(--section-padding-h);
 }
 
 /* sidebar-header */
@@ -532,7 +536,7 @@ footer {
   top: -4px;
   width: 5px;
   height: 5px;
-  margin-right: 6px;
+  margin-right: var(--spacing-8);
   border-radius: 50%;
   background-color: var(--theme-primary);
 }

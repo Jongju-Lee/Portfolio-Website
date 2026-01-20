@@ -60,21 +60,16 @@
 
 
   /* ############### PADDING ############### */
-  /* PC */
-  --section-padding-h-pc: 64px;
-  --section-padding-v-pc: 120px;
-
-  /* TABLET */
-  --section-padding-h-tablet: 32px;
-  --section-padding-v-tablet: 64px;
-
-  /* MOBILE */
-  --section-padding-h-mobile: 24px;
-  --section-padding-v-mobile: 48px;
+  /* 섹션 공통 Padding */
+  --section-padding-h: 64px;
+  --section-padding-v: 120px;
 
 
   /* ############### LAYOUT ############### */
+  /* pc 레이아웃 max-width */
   --max-width-pc: 1400px;
+
+  /* header 높이 값 */
   --header-height: 74px;
 
   

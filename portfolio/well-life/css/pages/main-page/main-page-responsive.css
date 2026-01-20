@@ -3,12 +3,18 @@
 
 /* #################### TABLET #################### */
 @media (max-width: 1280px) {
+  /* ========== 변수 재정의 ========== */
+  :root {
+    /* Padding 값 */
+    --section-padding-h: 32px;
+    --section-padding-v: 64px;
+  }
+
   /* ---------- SECTION - HERO ----------  */
   .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
   }
   .hero-inner {
     position: relative;
@@ -38,9 +44,6 @@
 
 
   /* ---------- SECTION - INTRO ----------  */
-  .intro {
-    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
-  }
   .intro-inner {
     gap: var(--spacing-48);
   }
@@ -54,7 +57,6 @@
   }
   .intro-heading__bg {
     font-size: 100px;
-    padding: 0 var(--section-padding-h-tablet);
     top: calc(50% + var(--spacing-8));
   }
 
@@ -74,9 +76,6 @@
 
 
   /* ---------- SECTION - WHY ----------  */
-  .why {
-    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
-  }
   .why-inner {
     gap: var(--spacing-48);
   }
@@ -114,8 +113,7 @@
 
   /* ---------- SECTION - DOCTOR ----------  */
   .doctor {
-    padding: 0;
-    padding-top: var(--section-padding-v-tablet);
+    padding: var(--section-padding-v) 0 0;
   }
   .doctor-bg-icon {
     top: var(--spacing-64);
@@ -128,7 +126,7 @@
   /* doctor-heading */
   .doctor-heading {
     width: 100%;
-    padding: 0 var(--section-padding-h-tablet);
+    padding: 0 var(--section-padding-h);
   }
   .doctor-heading__title {
     margin-top: var(--spacing-12);
@@ -166,7 +164,7 @@
   .doctor-info {
     width: 100%;
     border-radius: 0;
-    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
+    padding: var(--section-padding-v) var(--section-padding-h);
   }
   .doctor-info__career-text-container {
     max-width: 840px;
@@ -189,10 +187,6 @@
 
 
   /* ----- SECTION - DISEASE ----- */
-  .disease {
-    padding: 0 var(--section-padding-h-tablet) var(--section-padding-v-tablet);
-  }
-
   /* disease-banner */
   .disease-banner__img {
     margin-left: -32px;
@@ -257,10 +251,6 @@
 
 
   /* ----- SECTION - SUBJECT ----- */
-  .subject-banner {
-    padding: var(--section-padding-v-tablet) var(--section-padding-h-tablet);
-  }
-
   /* subject-heading */
   .subject-heading__title {
     margin: var(--spacing-24) 0;
@@ -292,10 +282,6 @@
 
 
   /* ----- SECTION - GALLERY ----- */
-  .gallery {
-    padding: var(--section-padding-v-tablet) 0;
-  }
-
   /* gallery-heading */
   .gallery-heading__title {
     margin-top: var(--spacing-8);
@@ -342,10 +328,6 @@
 
 
   /* ---------- SECTION - INFO ----------  */
-  .info {
-    padding: var(--section-padding-v-tablet);
-  }
-
   /* info-heading-wrap */
   .info-heading-wrap {
     flex-direction: column;
@@ -392,9 +374,6 @@
 
 
   /* ---------- SECTION - DIRECTION ----------  */
-  .direction {
-    padding-top: var(--section-padding-v-tablet);
-  }
   .direction::after {
     top: 170px;
   }
@@ -461,12 +440,16 @@
 
 /* #################### MOBILE #################### */
 @media (max-width: 768px) {
+  /* ========== 변수 재정의 ========== */
+  :root {
+    /* padding 값 */
+    --section-padding-h: 24px;
+    --section-padding-v: 48px;
+  }
+
   /* ---------- SECTION - HERO ----------  */
   .hero {
     height: auto;
-    min-height: auto;
-    padding: var(--section-padding-v-pc) var(--section-padding-h-mobile);
-    background-image: url(../../../images/main-page/hero/hero-bg-mobile.png);
   }
   .hero-inner {
     gap: var(--spacing-36);
@@ -501,9 +484,6 @@
 
 
   /* ---------- SECTION - INTRO ----------  */
-  .intro {
-    padding: var(--section-padding-v-mobile) var(--section-padding-h-mobile);
-  }
   .intro-inner {
     gap: var(--spacing-32);
   }
@@ -539,9 +519,7 @@
   }
   .intro-heading__bg {
     top: calc(50% - 8px);
-    padding: 0 var(--section-padding-h-mobile);
     font-size: 64px;
-    line-height: 1em;
   }
   
   /* intro-image */
@@ -564,9 +542,6 @@
 
 
   /* ---------- SECTION - WHY ----------  */
-  .why {
-    padding: var(--section-padding-v-mobile) var(--section-padding-h-mobile);
-  }
   .why-inner {
     gap: var(--spacing-32);
   }
@@ -619,9 +594,6 @@
 
 
   /* ---------- SECTION - DOCTOR ----------  */
-  .doctor {
-    padding-top: var(--section-padding-v-mobile);
-  }
   .doctor-bg-icon {
     top: var(--spacing-32);
     right: var(--spacing-20);
@@ -630,9 +602,6 @@
   }
 
   /* doctor-heading */
-  .doctor-heading {
-    padding: 0 var(--section-padding-h-mobile);
-  }
   .doctor-heading__title {
     display: flex;
     flex-wrap: wrap;
@@ -663,7 +632,6 @@
   /* doctor-info */
   .doctor-info {
     margin-top: var(--spacing-32);
-    padding: var(--section-padding-v-mobile) var(--section-padding-h-mobile);
   }
   .doctor-info__career-text-wrap {
     gap: var(--spacing-24);
@@ -691,10 +659,6 @@
 
 
   /* ----- SECTION - DISEASE ----- */
-  .disease {
-    padding: 0 var(--section-padding-h-mobile) var(--section-padding-v-mobile);
-  }
-
   /* disease-banner */
   .disease-banner__img {
     margin-left: -24px;
@@ -774,10 +738,6 @@
 
 
   /* ----- SECTION - SUBJECT ----- */
-  .subject-banner {
-    padding: var(--section-padding-v-mobile) var(--section-padding-h-mobile);
-  }
-
   /* subject-heading */
   .subject-heading__title {
     margin: var(--spacing-12) 0;
@@ -817,10 +777,6 @@
 
 
   /* ----- SECTION - GALLERY ----- */
-  .gallery {
-    padding: var(--section-padding-v-mobile) 0;
-  }
-  
   /* gallery-heading */
   .gallery-heading {
     margin-bottom: var(--spacing-16);
@@ -873,10 +829,6 @@
 
 
   /* ---------- SECTION - INFO ----------  */
-  .info {
-    padding: var(--section-padding-v-mobile);
-  }
-
   /* info-heading-wrap */
   .info-heading {
     gap: var(--spacing-24);
@@ -923,9 +875,6 @@
 
 
   /* ---------- SECTION - DIRECTION ----------  */
-  .direction {
-    padding-top: var(--section-padding-v-mobile);
-  }
   .direction::after {
     display: none;
   }
@@ -937,7 +886,7 @@
     justify-content: center;
     -moz-column-gap: var(--spacing-8);
     column-gap: var(--spacing-8);
-    padding: 0 var(--section-padding-h-mobile);
+    padding: 0 var(--section-padding-h);
   }
 
   /* direction-heading__way */

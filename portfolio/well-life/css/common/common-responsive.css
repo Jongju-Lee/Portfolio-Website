@@ -7,6 +7,10 @@
   :root {
     /* 헤더 높이 값 */
     --header-height: 68px;
+    
+    /* Padding 값 */
+    --section-padding-h: 32px;
+    --section-padding-v: 64px;
   }
 
   /* ---------- LAYOUT ---------- */
@@ -34,10 +38,6 @@
 
   
   /* ---------- HEADER ----------  */
-  header {
-    padding: 0 var(--section-padding-h-tablet);
-  }
-
   /* header-logo */
   .header-logo {
     width: calc(350px / 2.2);
@@ -54,7 +54,6 @@
     width: 38px;
     height: 38px;
     background-image: url(../../images/includes/header-icon-tel.png);
-    transition: background-image 0.5s linear;
   }
   /* 다크모드 시 이미지 교체 */
   [data-theme="dark"] .header-right__tel {
@@ -68,7 +67,6 @@
     height: 38px;
     background-image: url(../../images/includes/header-icon-hamburger.png);
     background-size: 100% 100%;
-    transition: background-image 0.5s linear;
   }
   /* 다크모드 시 이미지 교체 */
   [data-theme="dark"] .header-right__hamburger-btn {
@@ -78,9 +76,6 @@
 
 
   /* ---------- FOOTER ----------  */
-  footer {
-  padding: var(--section-padding-h-tablet) var(--section-padding-h-tablet) 0;
-  }
   .footer-inner {
     gap: var(--spacing-32);
   }
@@ -114,10 +109,10 @@
   .footer-copyright__text {
     font-size: 12px;
   }
-  /* ---------- END - FOOTER ----------  */
+  /* ---------- END - FOOTER ---------- */
 
 
-  /* ---------- 유틸리티 버튼 ----------  */
+  /* ---------- 유틸리티 버튼 ---------- */
   /* 다크모드 버튼 */
   .dark-mode-btn {
     bottom: 28px;
@@ -153,6 +148,10 @@
 
     /* 기본 폰트 사이즈 */
     --font-size-body: 14px;
+
+    /* padding 값 */
+    --section-padding-h: 24px;
+    --section-padding-v: 48px;
   }
 
   /* ---------- COMMON ----------  */
@@ -188,18 +187,12 @@
 
 
   /* ---------- HEADER ----------  */
-  header {
-    padding: 0 var(--section-padding-h-mobile);
-  }
-
   /* header-logo */
   .header-logo {
     width: 33px;
     height: 28px;
     background-image: url(../../images/includes/header-logo-mobile.png);
-    transition: background-image 0.5s linear;
   }
-
   /* 다크모드 시 이미지 교체 */
   [data-theme="dark"] .header-logo {
     background-image: url(../../images/includes/header-logo-mobile-dark.png);
@@ -221,9 +214,6 @@
 
 
   /* ---------- FOOTER ----------  */
-  footer {
-    padding: var(--section-padding-h-mobile) var(--section-padding-h-mobile) 0;
-  }
   .footer-inner {
     gap: var(--spacing-24);
   }
@@ -256,9 +246,6 @@
   }
 
   /* footer-copyright */
-  .footer-copyright {
-    padding: var(--spacing-16);
-  }
   .footer-copyright__text {
     display: flex;
     flex-wrap: wrap;
@@ -273,9 +260,6 @@
   /* ---------- SIDEBAR ----------  */
   .sidebar-container {
     max-width: 260px;
-  }
-  .sidebar-inner {
-    padding: var(--section-padding-h-mobile);
   }
 
   /* sidebar-header */
