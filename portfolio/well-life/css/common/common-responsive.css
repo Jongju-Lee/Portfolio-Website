@@ -172,11 +172,8 @@
   h3 {
     font-size: var(--font-size-large);
   }
-  h4 {
+  h4, h5 {
     font-size: var(--font-size-medium);
-  }
-  h5 {
-    font-size: var(--font-size-mobile-body);
   }
 
   /* 미니 타이틀 */

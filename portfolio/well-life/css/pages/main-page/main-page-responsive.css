@@ -464,7 +464,7 @@
   .hero-badge-icon {
     flex: 1;
     height: 40px;
-    font-size: var(--font-size-mobile-body);
+    font-size: var(--font-size-body);
   }
   .hero-badge-icon:not(:last-child) {
     margin-right: -3%;
@@ -555,7 +555,7 @@
     gap: var(--spacing-12);
   }
   .why-heading__title-hash-tag span {
-    font-size: var(--font-size-mobile-body);
+    font-size: var(--font-size-body);
   }
   .why-heading__title-main {
     display: flex;
@@ -781,13 +781,21 @@
   .gallery-heading {
     margin-bottom: var(--spacing-16);
   }
+  .gallery-heading__title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    -moz-column-gap: var(--spacing-8);
+    column-gap: var(--spacing-8);
+    padding: 0 var(--section-padding-h);
+  }
   .gallery-heading__desc {
-    font-size: var(--font-size-mobile-body);
     padding: 0 var(--spacing-24);
   }
   .gallery-heading__desc span {
     display: inline;
     word-break: keep-all;
+    font-size: var(--font-size-body);
   }
   
   /* gallery-content__box */
