@@ -89,6 +89,12 @@
   .project-subtitle::before {
     top: 20px;
   }
+
+  /* project-achievement */
+  .project-achievement__list li::before {
+    top: 7px;
+    transform: none;
+  }
   /* ########## END - Web, React 공통 컴포넌트 ########## */
 
 
@@ -632,13 +638,9 @@
     width: 30%;
   }
 
-  /* project-achievement__list */
+  /* project-achievement */
   .project-achievement__list li {
     padding-left: calc(var(--spacing-12) - 1px);
-  }
-  .project-achievement__list li::before {
-    top: 7px;
-    transform: none;
   }
 
   /* ----- web-info ----- */

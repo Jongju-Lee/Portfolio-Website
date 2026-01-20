@@ -621,6 +621,7 @@
               </div>
               <!-- ########## resume-sub ########## -->
               <div class="resume-sub">
+                <!-- resume-sub__heading -->
                 <div class="resume-sub__heading">
                   <h3 class="resume-sub__title font-en">Other Projects History</h3>
                   <div class="resume-sub__desc">
@@ -633,19 +634,19 @@
                 </div>
                 <!-- resume-sub__list -->
                 <table class="resume-sub__list">
-                  <!-- resume-sub__header -->
+                  <caption class="sr-only">아이스캔디 프로젝트 이력</caption>
                   <thead>
                     <tr class="resume-sub__header">
-                      <th class="resume-sub__col-info font-en">Project Name</th>
-                      <th class="resume-sub__col-period font-en">Period</th>
-                      <th class="resume-sub__col-vol font-en">Volume</th>
-                      <th class="resume-sub__col-role font-en">Contribution</th>
+                      <th scope="col" id="resume-th-name" class="resume-sub__col-info font-en">Project Name</th>
+                      <th scope="col" id="resume-th-period" class="resume-sub__col-period font-en">Period</th>
+                      <th scope="col" id="resume-th-volume" class="resume-sub__col-vol font-en">Volume</th>
+                      <th scope="col" id="resume-th-contribution" class="resume-sub__col-role font-en">Contribution</th>
                     </tr>
                   </thead>
                   <tbody>
                     <!-- resume-sub__item -->
                     <tr class="resume-sub__item">
-                      <td class="resume-sub__col-info">
+                      <td headers="resume-th-name" class="resume-sub__col-info">
                         <span class="resume-sub__pj-name">천재 초등 수학 3, 4학년 학생용 전자교과서</span>
                         <div class="resume-sub__pj-tags">
                           <span class="resume-sub__pj-client">스크린리더</span>
@@ -653,15 +654,15 @@
                           <span class="resume-sub__pj-task font-en">Cross-Browser</span>
                         </div>
                       </td>
-                      <td class="resume-sub__col-period">
+                      <td headers="resume-th-period" class="resume-sub__col-period">
                         <span class="resume-sub__label font-en">Period</span>
                         <span class="resume-sub__value font-en">4 Months</span>
                       </td>
-                      <td class="resume-sub__col-vol">
+                      <td headers="resume-th-volume" class="resume-sub__col-vol">
                         <span class="resume-sub__label font-en">Volume</span>
                         <span class="resume-sub__stat-value resume-sub__stat-value--volume font-en">2,900p</span>
                       </td>
-                      <td class="resume-sub__col-role">
+                      <td headers="resume-th-contribution" class="resume-sub__col-role">
                         <span class="resume-sub__label font-en">Contribution</span>
                         <span class="resume-sub__stat-value font-en">20%</span>
                       </td>
@@ -669,7 +670,7 @@
 
                     <!-- resume-sub__item -->
                     <tr class="resume-sub__item">
-                      <td class="resume-sub__col-info">
+                      <td headers="resume-th-name" class="resume-sub__col-info">
                         <span class="resume-sub__pj-name">천재 초등 사회 5, 6학년 교사용 전자저작물</span>
                         <div class="resume-sub__pj-tags">
                           <span class="resume-sub__pj-client font-en">인터랙션</span>
@@ -677,15 +678,15 @@
                           <span class="resume-sub__pj-task font-en">SCSS</span>
                         </div>
                       </td>
-                      <td class="resume-sub__col-period">
+                      <td headers="resume-th-period" class="resume-sub__col-period">
                         <span class="resume-sub__label font-en">Period</span>
                         <span class="resume-sub__value font-en">2 Months</span>
                       </td>
-                      <td class="resume-sub__col-vol">
+                      <td headers="resume-th-volume" class="resume-sub__col-vol">
                         <span class="resume-sub__label font-en">Volume</span>
                         <span class="resume-sub__stat-value resume-sub__stat-value--volume font-en">2,100p</span>
                       </td>
-                      <td class="resume-sub__col-role">
+                      <td headers="resume-th-contribution" class="resume-sub__col-role">
                         <span class="resume-sub__label font-en">Contribution</span>
                         <span class="resume-sub__stat-value font-en">25%</span>
                       </td>
@@ -693,7 +694,7 @@
 
                     <!-- resume-sub__item -->
                     <tr class="resume-sub__item">
-                      <td class="resume-sub__col-info">
+                      <td headers="resume-th-name" class="resume-sub__col-info">
                         <span class="resume-sub__pj-name">동아 초등 수학 5, 6학년 학생용 전자교과서</span>
                         <div class="resume-sub__pj-tags">
                           <span class="resume-sub__pj-client">스크린리더</span>
@@ -701,15 +702,15 @@
                           <span class="resume-sub__pj-task font-en">Cross-Browser</span>
                         </div>
                       </td>
-                      <td class="resume-sub__col-period">
+                      <td headers="resume-th-period" class="resume-sub__col-period">
                         <span class="resume-sub__label font-en">Period</span>
                         <span class="resume-sub__value font-en">2 Months</span>
                       </td>
-                      <td class="resume-sub__col-vol">
+                      <td headers="resume-th-volume" class="resume-sub__col-vol">
                         <span class="resume-sub__label font-en">Volume</span>
                         <span class="resume-sub__stat-value resume-sub__stat-value--volume font-en">3,000p</span>
                       </td>
-                      <td class="resume-sub__col-role">
+                      <td headers="resume-th-contribution" class="resume-sub__col-role">
                         <span class="resume-sub__label font-en">Contribution</span>
                         <span class="resume-sub__stat-value font-en">15%</span>
                       </td>
@@ -717,22 +718,22 @@
 
                     <!-- resume-sub__item -->
                     <tr class="resume-sub__item">
-                      <td class="resume-sub__col-info">
+                      <td headers="resume-th-name" class="resume-sub__col-info">
                         <span class="resume-sub__pj-name">동아 초등 수학 3, 4학년 교사용 전자저작물</span>
                         <div class="resume-sub__pj-tags">
                           <span class="resume-sub__pj-client font-en">인터랙션</span>
                           <span class="resume-sub__pj-task font-en">Cross-Browser</span>
                         </div>
                       </td>
-                      <td class="resume-sub__col-period">
+                      <td headers="resume-th-period" class="resume-sub__col-period">
                         <span class="resume-sub__label font-en">Period</span>
                         <span class="resume-sub__value font-en">1 Month</span>
                       </td>
-                      <td class="resume-sub__col-vol">
+                      <td headers="resume-th-volume" class="resume-sub__col-vol">
                         <span class="resume-sub__label font-en">Volume</span>
                         <span class="resume-sub__stat-value resume-sub__stat-value--volume font-en">300p</span>
                       </td>
-                      <td class="resume-sub__col-role">
+                      <td headers="resume-th-contribution" class="resume-sub__col-role">
                         <span class="resume-sub__label font-en">Contribution</span>
                         <span class="resume-sub__stat-value font-en">25%</span>
                       </td>
@@ -822,45 +823,45 @@
               <!-- web-info__overview -->
               <div class="web-info__overview project-row__right">
                 <div class="web-info__overview-table-wrapper project-table__wrapper">
-                  <table class="web-info__overview-table project-table">
+                    <table class="web-info__overview-table project-table">
                     <!-- caption -->
                     <caption class="sr-only">웰라이프내과의원 프로젝트 개요 입니다.</caption>
                     <!-- thead -->
                     <thead>
                       <tr>
-                        <th scope="col">항목</th>
-                        <th scope="col">내용</th>
+                        <th scope="col" id="welllife-th-label">항목</th>
+                        <th scope="col" id="welllife-th-content">내용</th>
                       </tr>
                     </thead>
                     <!-- tbody -->
                     <tbody>
                       <tr>
-                        <th scope="row">작업 기간</th>
-                        <td>
+                        <th scope="row" id="welllife-th-period">작업 기간</th>
+                        <td headers="welllife-th-content welllife-th-period">
                           <b class="font-kr">14 일</b>
                         </td>
                       </tr>
                       <tr>
-                        <th scope="row">담당 역할</th>
-                        <td>
+                        <th scope="row" id="welllife-th-role">담당 역할</th>
+                        <td headers="welllife-th-content welllife-th-role">
                           <span class="font-kr">기획 / 디자인 / 퍼블리싱</span>
                         </td>
                       </tr>
                       <tr>
-                        <th scope="row">기술 스택</th>
-                        <td class="font-en">
+                        <th scope="row" id="welllife-th-stack">기술 스택</th>
+                        <td class="font-en" headers="welllife-th-content welllife-th-stack">
                           <b>HTML</b> + <b>CSS</b> + <b>JS</b>
                         </td>
                       </tr>
                       <tr>
-                        <th scope="row">라이브러리</th>
-                        <td>
+                        <th scope="row" id="welllife-th-library">라이브러리</th>
+                        <td headers="welllife-th-content welllife-th-library">
                           <span class="font-en">Swiper.js, AOS.js</span>
                         </td>
                       </tr>
                       <tr>
-                        <th scope="row">주요 성과</th>
-                        <td>
+                        <th scope="row" id="welllife-th-result">주요 성과</th>
+                        <td headers="welllife-th-content welllife-th-result">
                           <ul class="web-content__achievement-list project-achievement__list">
                             <li>
                               <span class="font-en">W3C HTML / CSS Validate</span> <b class="font-kr">에러 0개 달성</b>
@@ -1069,30 +1070,30 @@
                     <caption class="sr-only">TaskFlow 프로젝트 개요 입니다.</caption>
                     <thead>
                       <tr>
-                        <th scope="col">항목</th>
-                        <th scope="col">내용</th>
+                        <th scope="col" id="taskflow-th-label">항목</th>
+                        <th scope="col" id="taskflow-th-content">내용</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">작업 기간</th>
-                        <td><b>10 일</b></td>
+                        <th scope="row" id="taskflow-th-period">작업 기간</th>
+                        <td headers="taskflow-th-content taskflow-th-period"><b>10 일</b></td>
                       </tr>
                       <tr>
-                        <th scope="row">담당 역할</th>
-                        <td><span class="font-kr">기획 / 디자인 / 개발</span></td>
+                        <th scope="row" id="taskflow-th-role">담당 역할</th>
+                        <td headers="taskflow-th-content taskflow-th-role"><span class="font-kr">기획 / 디자인 / 개발</span></td>
                       </tr>
                       <tr>
-                        <th scope="row">기술 스택</th>
-                        <td><b class="font-en">React</b> + <b class="font-en">Vite</b> + <b class="nowrap font-en">Styled-Components</b></td>
+                        <th scope="row" id="taskflow-th-stack">기술 스택</th>
+                        <td headers="taskflow-th-content taskflow-th-stack"><b class="font-en">React</b> + <b class="font-en">Vite</b> + <b class="nowrap font-en">Styled-Components</b></td>
                       </tr>
                       <tr>
-                        <th scope="row">라이브러리</th>
-                        <td><span class="font-en">React Calendar, dnd-kit</span></td>
+                        <th scope="row" id="taskflow-th-library">라이브러리</th>
+                        <td headers="taskflow-th-content taskflow-th-library"><span class="font-en">React Calendar, dnd-kit</span></td>
                       </tr>
                       <tr>
-                        <th scope="row">주요 성과</th>
-                        <td>
+                        <th scope="row" id="taskflow-th-result">주요 성과</th>
+                        <td headers="taskflow-th-content taskflow-th-result">
                           <ul class="react-overview__table-list project-achievement__list">
                             <li><b class="font-en">Drag & Drop</b> <b class="font-kr">일정 관리 구현</b></li>
                             <li><b class="font-en">PC/Tablet/Mobile</b> 반응형</li>
