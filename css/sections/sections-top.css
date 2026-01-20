@@ -88,7 +88,7 @@
 .about-info__item:not(:last-child) {
   margin-bottom: var(--spacing-24);
 }
-.about-info__item h5 {
+.about-info__item-label {
   width: 90px;
   font-family: var(--font-EN);
   font-size: var(--font-size-2xl);
@@ -233,21 +233,21 @@
   color: var(--color-primary);
 }
 
-/* ----- edu-timeline__peroid ----- */
-.edu-timeline__peroid {
+/* ----- edu-timeline__period ----- */
+.edu-timeline__period {
   flex-shrink: 0;
   width: 220px;
   text-align: right;
 }
-.edu-timeline .title.edu-timeline__peroid-title {
+.edu-timeline .title.edu-timeline__period-title {
   font-size: var(--font-size-xl);
   font-weight: 400;
 }
-.edu-timeline__peroid-content {
+.edu-timeline__period-content {
   font-weight: 400;
   text-align: right;
 }
-.edu-timeline__peroid-content b {
+.edu-timeline__period-content b {
   font-weight: 700;
   color: var(--color-primary);
 }

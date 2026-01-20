@@ -28,6 +28,7 @@ main > section#react {
   border-radius: var(--spacing-8);
   background-color: var(--color-react-primary);
   box-shadow: var(--shadow-color-box-light);
+  font-weight: 500;
   text-align: center;
   opacity: 1;
   transition: transform 0.2s ease, opacity 0.2s ease;
@@ -35,9 +36,8 @@ main > section#react {
 .react-content__link:hover {
   opacity: 0.7;
 }
-.react-content__link::before {
-  content: attr(data-label-pc);
-  font-weight: 500;
+.react-content__link .expect-pc {
+  display: none;
 }
 
 

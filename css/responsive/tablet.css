@@ -157,8 +157,8 @@
     padding-left: 0;
   }
 
-  /* edu-timeline__peroid */
-  .edu-timeline__peroid-title {
+  /* edu-timeline__period */
+  .edu-timeline__period-title {
     font-size: 20px;
   }
 
@@ -275,12 +275,12 @@
 
 
   /* ########## SECTION - REACT ########## */
-  /* react-content__link */
-  .react-content__link::before {
-    content: attr(data-label-tablet);
-  }
-  .react-content__link.only-pc {
+  .react-content__link.only-pc,
+  .react-content__link .only-pc {
     display: none;
+  }
+  .react-content__link .expect-pc {
+    display: block;
   }
 
   /* react-function */
