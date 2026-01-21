@@ -187,7 +187,11 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ########## END - Swiper.js ########## */
 
   /* ########## AOS.js ########## */
-  AOS.init();
+  AOS.init({
+    duration: 600, // 기본 600ms (hero는 inline으로 800ms)
+    once: true,    // 한 번만 실행
+    easing: 'ease-out-cubic'
+  });
 
 
   /* ########## Top Button ########## */

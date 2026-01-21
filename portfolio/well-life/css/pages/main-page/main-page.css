@@ -76,6 +76,44 @@
 .hero-title span {
   display: block;
 }
+
+/* hero-stats (우하단 글래스 통계 카드) */
+.hero-stats {
+  position: absolute;
+  right: var(--spacing-64);
+  bottom: var(--spacing-48);
+  z-index: 1;
+  display: flex;
+  padding: var(--spacing-24) var(--spacing-32);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hero-stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8);
+  line-height: 1.2;
+}
+.hero-stats__item:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding-right: var(--spacing-32);
+  margin-right: var(--spacing-32);
+}
+.hero-stats__number {
+  font-family: var(--font-number-bold);
+  font-size: var(--font-size-2xl);
+  color: var(--color-white);
+}
+.hero-stats__label {
+  font-family: var(--font-KR-medium);
+  font-size: var(--font-size-medium);
+  color: var(--color-white);
+  opacity: 0.9;
+}
 /* ----- END - HERO ----- */
 
 
@@ -490,6 +528,10 @@
 }
 
 /* disease-banner */
+.disease-banner {
+  position: relative;
+  padding-bottom: 200px;
+}
 .disease-banner__img {
   position: relative;
   width: 100vw;
@@ -505,10 +547,14 @@
 
 /* disease-heading */
 .disease-heading {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
+  width: calc(100% - var(--section-padding-h) * 2);
   max-width: var(--max-width-pc);
-  margin: -200px auto 0;
+  margin: 0 auto;
   padding: var(--spacing-48);
   border-radius: 20px;
   background-color: var(--bg-primary);
