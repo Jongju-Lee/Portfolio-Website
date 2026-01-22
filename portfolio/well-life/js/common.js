@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ########## AOS.js ########## */
   AOS.init({
     duration: 600,
-    // once: true,
+    once: true,
     easing: 'ease-out-cubic'
   });
 
@@ -222,9 +222,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ########## Count Up Animation ########## */
-  const countUpElements = document.querySelectorAll(".doctor-info__stats-number");
+  const countUpElements = document.querySelectorAll(
+    ".doctor-info__stats-number, .hero-stats__number"
+  );
 
   if (countUpElements.length > 0) {
+    // 숫자 포맷팅 함수 (천 단위 콤마)
+    function formatNumber(num) {
+      return num.toLocaleString('ko-KR');
+    }
+
     // 카운트업 애니메이션 함수
     function animateCountUp(el) {
       const target = parseInt(el.getAttribute("data-count"), 10);
@@ -239,12 +246,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const easeProgress = 1 - (1 - progress) * (1 - progress);
         const currentValue = Math.floor(easeProgress * target);
 
-        el.textContent = currentValue;
+        el.textContent = formatNumber(currentValue);
 
         if (progress < 1) {
           requestAnimationFrame(updateCount);
         } else {
-          el.textContent = target;
+          el.textContent = formatNumber(target);
         }
       }
 
@@ -255,7 +262,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          animateCountUp(entry.target);
+          // hero-stats는 AOS 애니메이션 완료 후 시작 (delay 800ms + duration 800ms = 1600ms)
+          const isHeroStats = entry.target.closest('.hero-stats');
+          const delay = isHeroStats ? 1600 : 0;
+
+          setTimeout(() => {
+            animateCountUp(entry.target);
+          }, delay);
+
           observer.unobserve(entry.target); // 한 번만 실행
         }
       });

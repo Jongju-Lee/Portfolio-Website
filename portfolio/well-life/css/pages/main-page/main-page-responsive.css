@@ -11,23 +11,15 @@
   }
 
   /* ---------- SECTION - HERO ----------  */
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .hero-inner {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    gap: var(--spacing-48);
+    margin-top: -5%;
+    gap: var(--spacing-36);
   }
 
   /* hero-badge-icon */
   .hero-badge-icon {
-    width: 220px;
-    height: 68px;
+    width: 210px;
+    height: 64px;
     font-size: var(--font-size-large);
   }
   .hero-badge-icon:not(:last-child) {
@@ -39,6 +31,28 @@
     width: calc(658px / 2);
     height: calc(168px / 2);
     background-image: url(../../../images/main-page/hero/hero-logo-tablet.png);
+  }
+
+  /* hero-stats */
+  .hero-stats {
+    padding: var(--spacing-20) var(--spacing-28);
+  }
+  .hero-stats__item:first-child {
+    padding-right: var(--spacing-24);
+    margin-right: var(--spacing-24);
+  }
+  .hero-stats__item:first-child .hero-stats__number-box {
+    min-width: 70px;
+  }
+  .hero-stats__item:last-child .hero-stats__number-box {
+    min-width: 110px;
+  }
+  .hero-stats__number,
+  .hero-stats__unit {
+    font-size: var(--font-size-xl);
+  }
+  .hero-stats__label {
+    font-size: var(--font-size-body);
   }
   /* ---------- END - HERO ----------  */
 
@@ -450,9 +464,11 @@
   /* ---------- SECTION - HERO ----------  */
   .hero {
     height: auto;
+    padding: 80px var(--section-padding-h) var(--section-padding-v) ;
   }
   .hero-inner {
-    gap: var(--spacing-36);
+    margin-top: 0;
+    gap: var(--spacing-24);
   }
   
   /* hero-badge-box */
@@ -478,6 +494,27 @@
   }
   /* hero-title */
   .hero-title {
+    font-size: var(--font-size-large);
+  }
+
+  /* hero-stats */
+  .hero-stats {
+    position: static;
+    margin-top: var(--spacing-24);
+    padding: var(--spacing-16) var(--spacing-24);
+  }
+  .hero-stats__item:first-child {
+    padding-right: var(--spacing-16);
+    margin-right: var(--spacing-16);
+  }
+  .hero-stats__item:first-child .hero-stats__number-box {
+    min-width: 55px;
+  }
+  .hero-stats__item:last-child .hero-stats__number-box {
+    min-width: 90px;
+  }
+  .hero-stats__number,
+  .hero-stats__unit {
     font-size: var(--font-size-large);
   }
   /* ---------- END - HERO ----------  */

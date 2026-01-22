@@ -490,7 +490,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* ############### AOS.js ############### */
-  AOS.init();
+  AOS.init({
+    duration: 1500,
+    once: true,
+  });
+
 
 
   /* ############### SKILL 섹션 SKILL-ITEM 클릭 기능 ############### */
