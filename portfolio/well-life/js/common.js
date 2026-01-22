@@ -188,9 +188,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ########## AOS.js ########## */
   AOS.init({
-    duration: 600, // 기본 600ms (hero는 inline으로 800ms)
-    once: true,    // 한 번만 실행
+    duration: 600,
+    // once: true,
     easing: 'ease-out-cubic'
+  });
+
+  // 이미지 로드 완료 후 AOS 위치 재계산 (새로고침 타이밍 일관성 확보)
+  window.addEventListener('load', () => {
+    AOS.refresh();
   });
 
 
