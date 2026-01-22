@@ -85,6 +85,11 @@
   .appointment-form__item-time-item span {
     transform: translateY(1px);
   }
+
+  /* appointment-form__item - 담당 의료진 */
+  .appointment-form__item-doctor {
+    gap: var(--spacing-24);
+  }
   
   /* appointment-form__item - 환자 정보 */
   .appointment-form__item-patient-input-wrap {
