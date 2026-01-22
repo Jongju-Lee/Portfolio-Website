@@ -11,6 +11,10 @@
     /* Padding 값 */
     --section-padding-h: 32px;
     --section-padding-v: 64px;
+
+    /* 유틸리티 버튼 값 */
+    --util-btn-offset: 28px;
+    --util-btn-size: 56px;
   }
 
   /* ---------- LAYOUT ---------- */
@@ -115,24 +119,12 @@
   /* ---------- 유틸리티 버튼 ---------- */
   /* 다크모드 버튼 */
   .dark-mode-btn {
-    bottom: 28px;
-    left: 28px;
-    width: 56px;
-    height: 56px;
-    background-size: 33px 32px;
+    background-size: 33px auto;
   }
 
   /* 위로 이동하기 버튼 */
-  .top-btn {
-    right: 28px;
-    width: 56px;
-    height: 56px;
-  }
-  .top-btn--active {
-    bottom: 28px;
-  }
   .top-btn img {
-    width: 25px;
+    width: 24px;
   }
   /* ---------- END - 유틸리티 버튼 ----------  */
 }
@@ -152,6 +144,10 @@
     /* padding 값 */
     --section-padding-h: 24px;
     --section-padding-v: 48px;
+
+    /* 유틸리티 버튼 값 */
+    --util-btn-offset: 20px;
+    --util-btn-size: 48px;
   }
 
   /* ---------- COMMON ----------  */
@@ -302,22 +298,10 @@
   /* ---------- 유틸리티 버튼 ----------  */
   /* 다크모드 버튼 */
   .dark-mode-btn {
-    bottom: 20px;
-    left: 20px;
-    width: 48px;
-    height: 48px;
-    background-size: 28px 27px;
+    background-size: 28px auto;
   }
 
   /* 위로 이동하기 버튼 */
-  .top-btn {
-    right: 20px;
-    width: 48px;
-    height: 48px;
-  }
-  .top-btn--active {
-    bottom: 20px;
-  }
   .top-btn img {
     width: 22px;
   }

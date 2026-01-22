@@ -548,14 +548,14 @@ footer {
 /* 다크모드 버튼 */
 .dark-mode-btn {
   position: fixed;
-  bottom: 30px;
-  left: 30px;
+  bottom: var(--util-btn-offset);
+  left: var(--util-btn-offset);
   z-index: 1000;
-  width: 64px;
-  height: 64px;
+  width: var(--util-btn-size);
+  height: var(--util-btn-size);
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-size: 38px 36px;
+  background-size: 38px auto;
   background-position: center center;
   opacity: 0.8;
   transition: background-color 0.2s, background-image 0.2s, transform 0.2s, opacity 0.2s;
@@ -575,14 +575,14 @@ footer {
 /* 위로 이동하기 버튼 */
 .top-btn {
   position: fixed;
-  right: 30px;
+  right: var(--util-btn-offset);
   bottom: 0;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 64px;
-  height: 64px;
+  width: var(--util-btn-size);
+  height: var(--util-btn-size);
   padding-bottom: 3px;
   border-radius: 50%;
   background-color: var(--border-opaque);
@@ -592,7 +592,7 @@ footer {
   pointer-events: none;
 }
 .top-btn--active {
-  bottom: 30px;
+  bottom: var(--util-btn-offset);
   opacity: 0.8;
   visibility: visible;
   pointer-events: all;
@@ -601,6 +601,6 @@ footer {
   opacity: 0.5;
 }
 .top-btn img {
-  width: 28px;
+  width: 68px;
   height: auto;
 }

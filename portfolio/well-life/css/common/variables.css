@@ -72,8 +72,9 @@
   /* header 높이 값 */
   --header-height: 74px;
 
-  /* 유틸리티 버튼 위치 값 */
+  /* 유틸리티 버튼 값 */
   --util-btn-offset: 32px;
+  --util-btn-size: 64px;
 
   
   /* ############### TYPOGRAPHY ############### */
