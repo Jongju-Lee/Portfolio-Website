@@ -14,7 +14,7 @@
   .appointment-inner {
     padding: var(--section-padding-v) var(--section-padding-h);
   }
-  .appointment-main-title {
+  .appointment-title {
     margin-bottom: var(--spacing-48);
   }
 
@@ -47,7 +47,7 @@
   }
 
   /* ---------- 진료 예약 페이지 ---------- */
-  .appointment-main-title {
+  .appointment-title {
     margin-bottom: var(--spacing-48);
     font-size: var(--font-size-xl);
   }

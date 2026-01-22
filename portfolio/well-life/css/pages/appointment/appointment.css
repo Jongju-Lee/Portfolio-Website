@@ -4,7 +4,7 @@
   padding: var(--section-padding-v);
   transition: background-color 0.5s;
 }
-.appointment-main-title {
+.appointment-title {
   margin-bottom: 80px;
   font-size: var(--font-size-2xl);
   text-align: center;
