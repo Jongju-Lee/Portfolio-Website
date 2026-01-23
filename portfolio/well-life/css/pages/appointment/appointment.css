@@ -9,13 +9,10 @@
 /* appointment */
 .appointment {
   padding: var(--section-padding-v) var(--section-padding-h);
-  background-color: var(--bg-primary);
-  transition: background-color 0.5s;
 }
 .appointment-inner {
   max-width: var(--max-width-pc);
   margin: 0 auto;
-  transition: background-color 0.5s;
 }
 /* appointment-title */
 .appointment-title {

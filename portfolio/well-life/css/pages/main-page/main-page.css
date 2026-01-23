@@ -133,7 +133,6 @@
 /* ----- SECTION - INTRO ----- */
 .intro {
   padding: var(--section-padding-v) var(--section-padding-h);
-  background-color: var(--bg-primary);
 }
 .intro-inner {
   display: flex;
@@ -358,7 +357,6 @@
 .doctor {
   position: relative;
   padding: var(--section-padding-v) 0;
-  background-color: var(--bg-primary);
 }
 .doctor-bg-icon {
   position: absolute;
@@ -537,7 +535,6 @@
 /* ----- SECTION - DISEASE ----- */
 .disease {
   padding: 0 var(--section-padding-h) var(--section-padding-v);
-  background-color: var(--bg-primary);
 }
 
 /* disease-banner */
@@ -792,6 +789,7 @@
   padding: var(--spacing-32) var(--spacing-48);
   border-radius: 12px 0 0 12px;
   background-color: var(--bg-primary);
+  transition: background-color 0.5s;
 }
 .subject-clinic::after {
   content: "";
@@ -801,6 +799,7 @@
   width: 50%;
   height: 100%;
   background-color: var(--bg-primary);
+  transition: inherit;
 }
 .subject-clinic .partition {
   width: 60px;
@@ -908,7 +907,6 @@
 /* ----- SECTION - GALLERY ----- */
 .gallery {
   padding: var(--section-padding-v) 0;
-  background-color: var(--bg-primary);
 }
 
 /* gallery-heading */
@@ -1153,7 +1151,6 @@
 .direction {
   position: relative;
   padding-top: var(--section-padding-v);
-  background-color: var(--bg-primary);
 }
 .direction::after {
   content: "";

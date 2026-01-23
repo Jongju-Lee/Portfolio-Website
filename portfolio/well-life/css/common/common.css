@@ -24,6 +24,8 @@ body {
 main {
   /* 헤더 높이만큼 하단 이동 */
   margin-top: var(--header-height);
+  background-color: var(--bg-primary);
+  transition: background-color 0.5s;
 }
 /* ########## END - LAYOUT ########## */
 
