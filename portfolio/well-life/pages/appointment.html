@@ -14,7 +14,9 @@
   <link rel="apple-touch-icon" href="./favicon.png" />
   <title>웰라이프내과의원 | 상담 및 예약</title>
 
-  <!-- ########## Open Graph 추가 필요 ########## -->
+  <!-- ########## AOS.js ########## -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
   <!-- ########## CSS ########## -->
   <!-- 공통 CSS -->
@@ -26,11 +28,11 @@
 
   <!-- ########## JS ########## -->
   <!-- 컴포넌트(INCLUDES) 호출 로직 -->
-  <script src="../js/includes.js"></script>
+  <script src="../js/includes.js" defer></script>
   <!-- 공통 JS -->
-  <script src="../js/common.js"></script>
+  <script src="../js/common.js" defer></script>
   <!-- 예약 페이지 JS -->
-  <script src="../js/appointment.js"></script>
+  <script src="../js/appointment.js" defer></script>
 </head>
 
 <body>
@@ -39,20 +41,37 @@
 
   <!-- ########## CONTAINER ########## -->
   <div class="container">
-
     <!-- ########## HEADER(INCLUDES) ########## -->
     <header role="banner"></header>
-
     <!-- ########## SIDE-BAR(INCLUDES) ########## -->
     <aside class="sidebar"></aside>
-
-    <!-- ########## MAIN ########## -->
-    <main id="main-content" role="main">
+    <!-- ########## APPOINTMENT - MAIN ########## -->
+    <main id="main-content" class="appointment" role="main">
       <article class="appointment-inner">
+        <!-- ===== appointment-title ===== -->
         <div class="appointment-title">
+          <span class="appointment-title__mini">Medical appointment</span>
           <h1>상담 및 예약</h1>
         </div>
-        <!-- ########## APPOINTMENT-FORM ########## -->
+
+        <!-- ===== appointment-banner ===== -->
+        <div class="appointment-banner">
+          <div class="appointment-banner__inner">
+            <div class="appointment-banner__info">
+              <h2 class="appointment-banner__title">전화 상담</h2>
+              <p class="appointment-banner__tel">02.1234.1234</p>
+              <p class="appointment-banner__desc">
+                전화상담은 진료시간 외에도 가능합니다.<br/>
+                혹시 전화를 못받을 경우 순차적으로 다시 전화드리겠습니다.
+              </p>
+            </div>
+            <div class="appointment-banner__image img-box">
+              <img src="../images/appointment/banner-image.png" alt="의료진 상담 이미지" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== APPOINTMENT-FORM ===== -->
         <form class="appointment-form" novalidate>
           <!-- appointment-form__field -->
           <div class="appointment-form__field">
@@ -253,8 +272,8 @@
 
           <!-- appointment-form__terms-wrap -->
           <div class="appointment-form__terms-wrap">
-            <!-- appointment-form__terms -->
-            <div class="appointment-form__terms">
+            <!-- 고유식별정보 처리 -->
+            <div class="appointment-form__terms appointment-form__terms-origin">
               <b class="appointment-form__terms-title">고유식별정보 처리에 대한 이용자 동의사항</b>
               <div class="appointment-form__terms-desc">
                 <div class="appointment-form__terms-text">
@@ -274,7 +293,7 @@
                   </ul>
                 </div>
                 <div class="appointment-form__terms-check">
-                  <label for="agree-1" class="checkbox-label">
+                  <label for="agree-1" class="checkbox-label origin-checkbox-label">
                     <input type="checkbox" id="agree-1" required>
                     <span>
                       고유식별정보의 수집과 이용에 동의합니다.<span class="required-mark">*</span>
@@ -284,8 +303,8 @@
               </div>
             </div>
 
-            <!-- appointment-form__terms -->
-            <div class="appointment-form__terms">
+            <!-- 개인정보의 수집·이용 동의 -->
+            <div class="appointment-form__terms appointment-form__terms-personal">
               <b class="appointment-form__terms-title">개인정보의 수집·이용 동의</b>
               <div class="appointment-form__terms-desc">
                 <div class="appointment-form__terms-text">
@@ -325,10 +344,11 @@
         </form>
       </article>
 
-      <!-- ########## FOOTER(INCLUDES) ########## -->
-      <footer role="contentinfo"></footer>
     </main>
-
+    
+    <!-- ########## FOOTER(INCLUDES) ########## -->
+    <footer role="contentinfo"></footer>
+    
     <!-- 다크모드 버튼 -->
     <button class="dark-mode-btn dark-mode-btn--dark" aria-label="다크모드 전환"></button>
     <!-- 위로 가기 버튼 -->

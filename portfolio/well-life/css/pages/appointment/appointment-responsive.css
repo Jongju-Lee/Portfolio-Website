@@ -12,10 +12,24 @@
 
   /* ---------- 상담 및 예약 페이지 ---------- */
   .appointment-inner {
-    padding: var(--section-padding-v) var(--section-padding-h);
+    width: 95%;
+    max-width: 900px;
   }
   .appointment-title {
-    margin-bottom: var(--spacing-48);
+    margin-bottom: var(--spacing-64);
+  }
+
+  /* appointment-banner */
+  .appointment-banner__title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-12);
+  }
+  .appointment-banner__tel {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-16);
+  }
+  .appointment-banner__image {
+    min-width: 260px;
   }
 
   /* ----- appointment-form__field ----- */
@@ -24,7 +38,7 @@
   }
   .appointment-form__box {
     flex: 1;
-    min-width: 500px;
+    min-width: 520px;
   }
 
   /* ----- appointment-form__terms-wrap ----- */
@@ -49,22 +63,49 @@
   /* ---------- 상담 및 예약 페이지 ---------- */
   .appointment-title {
     margin-bottom: var(--spacing-48);
-    font-size: var(--font-size-xl);
+  }
+
+  /* appointment-banner */
+  .appointment-banner {
+    padding: var(--spacing-36);
+    border-radius: 12px;
+    margin-bottom: var(--spacing-48);
+  }
+  .appointment-banner__inner {
+    flex-direction: column;
+    gap: var(--spacing-36);
+  }
+  .appointment-banner__info {
+    order: 2;
+    text-align: center;
+  }
+  .appointment-banner__tel {
+    margin-bottom: var(--spacing-16);
+  }
+  .appointment-banner__image {
+    order: 1;
+    width: 100%;
+    min-width: auto;
+    max-width: 360px;
+    margin: 0 auto;
   }
 
   /* ---------- APPOINTMENT-FORM ---------- */
   .appointment-form {
+    gap: var(--spacing-48);
+  }
+  .appointment-form__field {
     gap: var(--spacing-32);
   }
   .appointment-form__box {
     min-width: 100%;
-    padding: var(--spacing-24);
+    padding: var(--spacing-36);
     border-radius: 12px;
   }
 
   /* appointment-form__item - 날짜 선택 */
   .appointment-form__item-calendar {
-    padding: var(--spacing-24) var(--spacing-12) var(--spacing-12);
+    padding: var(--spacing-24) var(--spacing-4) var(--spacing-12);
   }
   .appointment-form__item-calendar-title {
     margin-bottom: var(--spacing-16);
@@ -113,25 +154,75 @@
     font-family: var(--font-KR-light);
   }
 
-  /* ----- appointment-form__terms-wrap ----- */
+  /* appointment-form__terms-wrap */
   .appointment-form__terms {
     min-width: 100%;
   }
   .appointment-form__terms-title {
+    justify-content: center;
     margin-bottom: var(--spacing-12);
   }
   .appointment-form__terms-text {
     height: auto;
+    max-height: 260px;
   }
-  .appointment-form__terms-check label {
-    font-family: var(--font-KR-light);
-  }
-
+  
   /* 예약 완료하기 버튼 */
   .appointment-form__finish-btn {
     margin: 0 auto;
     font-size: inherit;
     max-width: 300px;
     padding: var(--spacing-8);
+  }
+}
+
+
+/* #################### SMALL MOBILE(480px) #################### */
+@media (max-width: 480px) {
+  /* ---------- 상담 및 예약 페이지 ---------- */
+  .appointment-inner {
+    width: 100%;
+  }
+
+  /* appointment-title */
+  .appointment-title h1 {
+    font-size: var(--font-size-xl);
+  }
+  .appointment-title__mini {
+    font-size: var(--font-size-small);
+  }
+
+  /* appointment-banner */
+  .appointment-banner {
+    padding: var(--spacing-24);
+  }
+  .appointment-banner__inner {
+    gap: var(--spacing-24);
+  }
+  .appointment-banner__title {
+    font-size: var(--font-size-large);
+  }
+  .appointment-banner__tel {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-12);
+  }
+  .appointment-banner__image {
+    max-width: 100%;
+  }
+
+  /* ----- APPOINTMENT-FORM ----- */
+  .appointment-form__box {
+    padding: var(--spacing-24);
+  }
+
+  /* appointment-form__terms-wrap */
+  .appointment-form__terms-check label.origin-checkbox-label {
+    margin-left: calc(0px - var(--spacing-8));
+  }
+  .appointment-form__terms-check label span {
+    letter-spacing: -0.2px;
+  }
+  .appointment-form__terms-check label span .required-mark {
+    left: calc(100% - 2px);
   }
 }

@@ -1,25 +1,78 @@
 /* ---------- 상담 및 예약 페이지 ---------- */
 /* ===== 페이지 공통 - 필수 입력 마크 ===== */
 .required-mark {
-  color: var(--color-negative);
+  color: var(--color-red);
   margin-left: 2px;
   line-height: 1;
 }
 
+
+/* appointment */
+.appointment {
+  padding: var(--section-padding-v) var(--section-padding-h);
+}
 .appointment-inner {
+  max-width: var(--max-width-pc);
+  margin: 0 auto;
   background-color: var(--bg-primary);
-  padding: var(--section-padding-v);
   transition: background-color 0.5s;
 }
+/* appointment-title */
 .appointment-title {
   margin-bottom: 100px;
-  padding-bottom: 100px;
   text-align: center;
-  border-bottom: 1px solid var(--border-transparent);
+}
+.appointment-title__mini {
+  margin-bottom: var(--spacing-8);
+  color: var(--contents-secondary);
+  font-family: var(--font-EN-medium);
+  letter-spacing: 1px;
 }
 .appointment-title h1 {
   font-size: var(--font-size-2xl);
   color: var(--theme-primary);
+}
+
+/* appointment-banner */
+.appointment-banner {
+  margin: 0 auto var(--spacing-64);
+  padding: var(--spacing-48);
+  background-color: var(--bg-tertiary);
+  border-radius: 20px;
+}
+.appointment-banner__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-32);
+}
+.appointment-banner__info {
+  flex: 1;
+}
+.appointment-banner__title {
+  font-family: var(--font-KR-bold);
+  font-size: var(--font-size-2xl);
+  color: var(--color-indigo);
+  margin-bottom: var(--spacing-16);
+}
+.appointment-banner__tel {
+  font-family: var(--font-number-bold);
+  font-size: var(--font-size-3xl);
+  color: var(--color-indigo);
+  margin-bottom: var(--spacing-24);
+  line-height: 1;
+  letter-spacing: 2px;
+}
+.appointment-banner__desc {
+  color: var(--color-gray);
+  line-height: var(--line-height-high);
+}
+.appointment-banner__image {
+  flex-shrink: 0;
+  width: 35%;
+  min-width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 /* ---------- APPOINTMENT-FORM ---------- */
@@ -27,22 +80,22 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-64);
-  max-width: var(--max-width-pc);
   margin: 0 auto;
 }
 
 /* ----- appointment-form__field ----- */
 .appointment-form__field {
   display: flex;
-  gap: var(--spacing-32);
+  column-gap: var(--spacing-64);
+  row-gap: var(--spacing-48);
   color: var(--color-black);
 }
 .appointment-form__box {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-32);
-  width: calc(50% - 16px);
-  padding: var(--spacing-32);
+  gap: var(--spacing-48);
+  min-width: calc(50% - var(--spacing-32));
+  padding: var(--spacing-36) var(--spacing-48);
   border-radius: 20px;
   background-color: var(--bg-tertiary);
 }
@@ -51,7 +104,7 @@
   display: block;
   width: 100%;
   height: 1px;
-  margin-top: var(--spacing-32);
+  margin-top: var(--spacing-48);
   background-color: var(--border-transparent);
 }
 .appointment-form__item-title {
@@ -62,7 +115,7 @@
   font-size: var(--font-size-large);
   line-height: var(--line-height-medium);
   margin-bottom: var(--spacing-16);
-  color: var(--theme-primary);
+  color: var(--color-indigo);
 }
 .appointment-form__item-title .required-mark {
   position: absolute;
@@ -146,7 +199,7 @@
   height: 32px;
   border-radius: 50%;
   color: var(--color-black);
-  line-height: 1em;
+  line-height: 1;
 }
 .appointment-form__item-calendar-day-name {
   font-family: var(--font-KR-medium);
@@ -186,7 +239,7 @@
   background-color: var(--theme-secondary) !important;
 }
 .appointment-form__item-calendar-date--selected {
-  background-color: var(--theme-primary) !important;
+  background-color: var(--color-indigo) !important;
 }
 .appointment-form__item-calendar-date--disabled {
   color: var(--contents-tertiary) !important;
@@ -212,9 +265,9 @@
   width: 80px;
   height: 36px;
   border-radius: 4px;
-  line-height: 1em;
-  border: 1px solid var(--theme-primary);
-  color: var(--theme-primary);
+  line-height: 1;
+  border: 1px solid var(--color-indigo);
+  color: var(--color-indigo);
   transition: background-color 0.2s, color 0.2s;
   font-family: var(--font-number-light);
 }
@@ -225,7 +278,7 @@
   color: var(--color-white);
 }
 .appointment-form__item-time-item--selected {
-  background-color: var(--theme-primary) !important;
+  background-color: var(--color-indigo) !important;
   border: 1px solid transparent;
   color: var(--color-white);
 }
@@ -273,13 +326,13 @@
 .appointment-form__item-doctor-info b {
   font-family: var(--font-KR-medium);
   font-size: var(--font-size-large);
-  color: var(--theme-primary);
+  color: var(--color-indigo);
 }
 .appointment-form__item-doctor-info span {
   font-family: var(--font-KR-medium);
 }
 .appointment-form__item-doctor-info em {
-  color: var(--contents-secondary);
+  color: var(--color-gray);
 }
 
 /* appointment-form__item - 환자 정보 */
@@ -328,7 +381,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: var(--spacing-8);
+  gap: var(--spacing-12);
   min-width: 0;
 }
 .appointment-form__item-patient-list-item--address {
@@ -360,7 +413,7 @@
   height: calc(100% - 2px);
   box-sizing: border-box;
   font-family: var(--font-KR-medium);
-  background-color: var(--theme-primary);
+  background-color: var(--color-indigo);
   color: var(--color-white);
   border-radius: 4px;
   border: none;
@@ -369,7 +422,8 @@
 /* ----- appointment-form__terms-wrap ----- */
 .appointment-form__terms-wrap {
   display: flex;
-  gap: var(--spacing-32);
+  column-gap: var(--spacing-64);
+  row-gap: var(--spacing-48);
 }
 .appointment-form__terms {
   flex: 1;
@@ -431,13 +485,16 @@
   font-family: var(--font-KR-medium);
 }
 .appointment-form__terms-check label span {
-  line-height: 1em;
+  position: relative;
+  line-height: 1;
 }
 .appointment-form__terms-check label span .required-mark {
-  position: relative;
-  top: -4px;
+  position: absolute;
+  top: -6px;
+  left: 100%;
   margin-left: 2px;
   font-size: var(--font-size-medium);
+  color: var(--color-negative);
 }
 
 /* 예약 완료하기 버튼 */
@@ -470,7 +527,7 @@
 }
 /* 에러 상태 */
 .appointment-form__item-patient-input-box.input--error input {
-  border: 2px solid var(--color-negative);
+  border: 2px solid var(--color-red);
   background-color: var(--color-negative-transparent);
 }
 /* 흔들림 애니메이션 */
@@ -497,7 +554,7 @@
 }
 /* select 에러 상태 */
 .appointment-form__item-subject-select.input--error {
-  border: 2px solid var(--color-negative);
+  border: 2px solid var(--color-red);
   background-color: var(--color-negative-transparent);
   animation: shake 0.4s ease-in-out;
 }
