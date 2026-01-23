@@ -1,38 +1,46 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* ########## 상수 정의 ########## */
+  const TOP_BTN_SHOW_THRESHOLD = 300; // Top 버튼 표시 스크롤 위치(px)
+  const COUNT_UP_DURATION = 1500; // 카운트업 애니메이션 지속 시간(ms)
+  const HERO_STATS_AOS_DELAY = 1600; // Hero Stats AOS 완료 대기 시간 (delay 800ms + duration 800ms)
+  const SWIPER_AUTOPLAY_DELAY = 4000; // Swiper 자동재생 딜레이(ms)
+  const SWIPER_SPEED = 400; // Swiper 슬라이드 전환 속도(ms)
+
+
   /* ########## 다크모드 기능 ########## */
   const root = document.documentElement;
   const darkModeBtn = document.querySelector(".dark-mode-btn");
 
-  if (!darkModeBtn) return; // 버튼 없으면 바로 종료
-
-  /**
-   * 현재 테마와 버튼 클래스 동기화 함수
-   * @param {string} theme 'dark' | 'light'
-   * theme이 'dark'면 버튼은 'light'아이콘, 반대도 마찬가지
-   */
-  function setTheme(theme) {
-    if (theme === "dark") {
-      root.setAttribute("data-theme", "dark");
-      darkModeBtn.classList.remove("dark-mode-btn--dark");
-      darkModeBtn.classList.add("dark-mode-btn--light"); // 라이트모드로 전환하는 버튼
-      localStorage.setItem("theme", "dark");
-    } else {
-      root.removeAttribute("data-theme");
-      darkModeBtn.classList.remove("dark-mode-btn--light");
-      darkModeBtn.classList.add("dark-mode-btn--dark"); // 다크모드로 전환하는 버튼
-      localStorage.setItem("theme", "light");
+  if (darkModeBtn) {
+    /**
+     * 현재 테마와 버튼 클래스 동기화 함수
+     * @param {string} theme 'dark' | 'light'
+     * theme이 'dark'면 버튼은 'light'아이콘, 반대도 마찬가지
+     */
+    function setTheme(theme) {
+      if (theme === "dark") {
+        root.setAttribute("data-theme", "dark");
+        darkModeBtn.classList.remove("dark-mode-btn--dark");
+        darkModeBtn.classList.add("dark-mode-btn--light"); // 라이트모드로 전환하는 버튼
+        localStorage.setItem("theme", "dark");
+      } else {
+        root.removeAttribute("data-theme");
+        darkModeBtn.classList.remove("dark-mode-btn--light");
+        darkModeBtn.classList.add("dark-mode-btn--dark"); // 다크모드로 전환하는 버튼
+        localStorage.setItem("theme", "light");
+      }
     }
+
+    // 페이지 로드 시 localStorage 기준으로 버튼/테마 동기화. 값이 없으면 light(기본)
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+
+    // 버튼 클릭 시 테마 및 버튼 상태 모두 토글
+    darkModeBtn.addEventListener("click", () => {
+      const isDark = root.getAttribute("data-theme") === "dark";
+      setTheme(isDark ? "light" : "dark");
+    });
   }
-
-  // 페이지 로드 시 localStorage 기준으로 버튼/테마 동기화. 값이 없으면 light(기본)
-  const savedTheme = localStorage.getItem("theme") || "light";
-  setTheme(savedTheme);
-
-  // 버튼 클릭 시 테마 및 버튼 상태 모두 토글
-  darkModeBtn.addEventListener("click", () => {
-    const isDark = root.getAttribute("data-theme") === "dark";
-    setTheme(isDark ? "light" : "dark");
-  });
   /* ########## END - 다크모드 기능 ########## */
 
 
@@ -49,19 +57,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const sidebarContainer = e.target.closest(".sidebar-container");
 
     // 햄버거 버튼 클릭 시 사이드바 열기
-    if (hamburgerBtn) {
+    if (hamburgerBtn && $sideBar) {
       $sideBar.classList.add("sidebar--active");
       return;
     }
 
     // 닫기 버튼 또는 링크 클릭 시 사이드바 닫기
-    if (closeBtn || linkBtn) {
+    if ((closeBtn || linkBtn) && $sideBar) {
       $sideBar.classList.remove("sidebar--active");
       return;
     }
 
     // 사이드바 배경(dim) 클릭 시 닫기
-    if (sidebar && !sidebarContainer) {
+    if (sidebar && !sidebarContainer && $sideBar) {
       $sideBar.classList.remove("sidebar--active");
     }
   });
@@ -70,122 +78,120 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ########## Swiper.js ########## */
   if (typeof Swiper !== 'undefined') {
+    // Progress Bar 업데이트 함수 (선언을 사용 전에 배치)
+    function updateGalleryProgress(swiper) {
+      const progressBar = document.querySelector('.gallery-swiper__progress-bar');
+      if (progressBar && swiper) {
+        const progress = (swiper.realIndex + 1) / swiper.slides.length;
+        progressBar.style.width = (progress * 100) + '%';
+      }
+    }
+
+    // Fraction Counter 업데이트 함수 (선언을 사용 전에 배치)
+    const subjectSlides = document.querySelectorAll('.subject-swiper .swiper-slide:not(.swiper-slide-duplicate)');
+    const SUBJECT_TOTAL_SLIDES = subjectSlides.length;
+
+    function updateSubjectCounter(swiper) {
+      const currentEl = document.querySelector('.subject-swiper__counter .swiper-pagination-current');
+      const totalEl = document.querySelector('.subject-swiper__counter .swiper-pagination-total');
+      if (currentEl && totalEl) {
+        const slidesPerGroup = swiper.params.slidesPerGroup || 1;
+        const totalPages = Math.ceil(SUBJECT_TOTAL_SLIDES / slidesPerGroup);
+        // loop 모드에서는 realIndex 사용
+        const currentPage = Math.floor(swiper.realIndex / slidesPerGroup) + 1;
+        currentEl.textContent = currentPage;
+        totalEl.textContent = totalPages;
+      }
+    }
+
+    // Swiper hover 시 자동재생 일시정지 공통 함수 (선언을 사용 전에 배치)
+    function addHoverPause(selector, swiperInstance) {
+      const el = document.querySelector(selector);
+      if (el && swiperInstance) {
+        el.addEventListener('mouseenter', () => {
+          swiperInstance.autoplay.stop();
+        });
+        el.addEventListener('mouseleave', () => {
+          swiperInstance.autoplay.start();
+        });
+      }
+    }
+
     /* ----- Gallery Slider (둘러보기) ----- */
     const gallerySwiper = new Swiper('.gallery-swiper', {
-    centeredSlides: true,
-    slidesPerView: 1.5,
-    spaceBetween: 20,
-    loop: true,
-    speed: 400,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: '.gallery-swiper .swiper-button-next',
-      prevEl: '.gallery-swiper .swiper-button-prev',
-    },
-    breakpoints: {
-      // Mobile
-      0: {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 16,
+      centeredSlides: true,
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+      loop: true,
+      speed: SWIPER_SPEED,
+      autoplay: {
+        delay: SWIPER_AUTOPLAY_DELAY,
+        disableOnInteraction: false,
       },
-      // Tablet
-      768: {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 20,
+      navigation: {
+        nextEl: '.gallery-swiper .swiper-button-next',
+        prevEl: '.gallery-swiper .swiper-button-prev',
       },
-      // PC
-      1280: {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 24,
+      breakpoints: {
+        // Mobile
+        0: {
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          spaceBetween: 16,
+        },
+        // Tablet
+        768: {
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          spaceBetween: 20,
+        },
+        // PC
+        1280: {
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          spaceBetween: 24,
+        },
       },
-    },
-    on: {
-      init: updateGalleryProgress,
-      slideChange: updateGalleryProgress,
-    },
-  });
+      on: {
+        init: updateGalleryProgress,
+        slideChange: updateGalleryProgress,
+      },
+    });
 
-  // Progress Bar 업데이트 함수
-  function updateGalleryProgress(swiper) {
-    if (!swiper) swiper = gallerySwiper;
-    const progressBar = document.querySelector('.gallery-swiper__progress-bar');
-    if (progressBar) {
-      const progress = (swiper.realIndex + 1) / swiper.slides.length;
-      progressBar.style.width = (progress * 100) + '%';
-    }
+    /* ----- Subject Slider (진료과목 - Tablet/Mobile 전용) ----- */
+    const subjectSwiper = new Swiper('.subject-swiper', {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 0,
+      loop: true,
+      speed: SWIPER_SPEED,
+      autoplay: {
+        delay: SWIPER_AUTOPLAY_DELAY,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        // Mobile
+        0: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        // Tablet
+        600: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+      },
+      on: {
+        init: updateSubjectCounter,
+        slideChange: updateSubjectCounter,
+      },
+    });
+
+    addHoverPause('.gallery-swiper', gallerySwiper);
+    addHoverPause('.subject-swiper', subjectSwiper);
   }
-
-  /* ----- Subject Slider (진료과목 - Tablet/Mobile 전용) ----- */
-  // HTML 기준으로 실제 슬라이드 수 자동 계산 (loop 모드 복제 슬라이드 제외)
-  const subjectSlides = document.querySelectorAll('.subject-swiper .swiper-slide:not(.swiper-slide-duplicate)');
-  const SUBJECT_TOTAL_SLIDES = subjectSlides.length;
-
-  // Fraction Counter 업데이트 함수
-  function updateSubjectCounter(swiper) {
-    const currentEl = document.querySelector('.subject-swiper__counter .swiper-pagination-current');
-    const totalEl = document.querySelector('.subject-swiper__counter .swiper-pagination-total');
-    if (currentEl && totalEl) {
-      const slidesPerGroup = swiper.params.slidesPerGroup || 1;
-      const totalPages = Math.ceil(SUBJECT_TOTAL_SLIDES / slidesPerGroup);
-      // loop 모드에서는 realIndex 사용
-      const currentPage = Math.floor(swiper.realIndex / slidesPerGroup) + 1;
-      currentEl.textContent = currentPage;
-      totalEl.textContent = totalPages;
-    }
-  }
-
-  const subjectSwiper = new Swiper('.subject-swiper', {
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-    spaceBetween: 0,
-    loop: true,
-    speed: 400,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      // Mobile
-      0: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-      },
-      // Tablet
-      600: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-    },
-    on: {
-      init: updateSubjectCounter,
-      slideChange: updateSubjectCounter,
-    },
-  });
-
-  // Swiper hover 시 자동재생 일시정지 공통 함수
-  function addHoverPause(selector, swiperInstance) {
-    var el = document.querySelector(selector);
-    if (el && swiperInstance) {
-      el.addEventListener('mouseenter', function () {
-        swiperInstance.autoplay.stop();
-      });
-      el.addEventListener('mouseleave', function () {
-        swiperInstance.autoplay.start();
-      });
-    }
-  }
-
-  addHoverPause('.gallery-swiper', gallerySwiper);
-  addHoverPause('.subject-swiper', subjectSwiper);
-
-  } // END - if (typeof Swiper !== 'undefined')
   /* ########## END - Swiper.js ########## */
+
 
   /* ########## AOS.js ########## */
   if (typeof AOS !== 'undefined') {
@@ -200,20 +206,21 @@ document.addEventListener("DOMContentLoaded", () => {
       AOS.refresh();
     });
   }
+  /* ########## END - AOS.js ########## */
 
 
   /* ########## Top Button ########## */
   const topBtn = document.querySelector(".top-btn");
 
   if (topBtn) {
-    // 스크롤 시 버튼 표시/숨김
+    // 스크롤 시 버튼 표시/숨김 (passive: true로 스크롤 성능 최적화)
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > TOP_BTN_SHOW_THRESHOLD) {
         topBtn.classList.add("top-btn--active");
       } else {
         topBtn.classList.remove("top-btn--active");
       }
-    });
+    }, { passive: true });
 
     // 클릭 시 부드럽게 최상단으로 이동
     topBtn.addEventListener("click", (e) => {
@@ -238,12 +245,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // 카운트업 애니메이션 함수
     function animateCountUp(el) {
       const target = parseInt(el.getAttribute("data-count"), 10);
-      const duration = 1500; // 1.5초
       const startTime = performance.now();
 
       function updateCount(currentTime) {
         const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
+        const progress = Math.min(elapsed / COUNT_UP_DURATION, 1);
 
         // easeOutQuad 이징 함수
         const easeProgress = 1 - (1 - progress) * (1 - progress);
@@ -265,9 +271,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // hero-stats는 AOS 애니메이션 완료 후 시작 (delay 800ms + duration 800ms = 1600ms)
+          // hero-stats는 AOS 애니메이션 완료 후 시작
           const isHeroStats = entry.target.closest('.hero-stats');
-          const delay = isHeroStats ? 1600 : 0;
+          const delay = isHeroStats ? HERO_STATS_AOS_DELAY : 0;
 
           setTimeout(() => {
             animateCountUp(entry.target);
@@ -282,4 +288,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   /* ########## END - Count Up Animation ########## */
 });
-
