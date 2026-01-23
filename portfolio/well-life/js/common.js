@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ########## Swiper.js ########## */
-
-  /* ----- Gallery Slider (둘러보기) ----- */
-  const gallerySwiper = new Swiper('.gallery-swiper', {
+  if (typeof Swiper !== 'undefined') {
+    /* ----- Gallery Slider (둘러보기) ----- */
+    const gallerySwiper = new Swiper('.gallery-swiper', {
     centeredSlides: true,
     slidesPerView: 1.5,
     spaceBetween: 20,
@@ -184,19 +184,22 @@ document.addEventListener("DOMContentLoaded", () => {
   addHoverPause('.gallery-swiper', gallerySwiper);
   addHoverPause('.subject-swiper', subjectSwiper);
 
+  } // END - if (typeof Swiper !== 'undefined')
   /* ########## END - Swiper.js ########## */
 
   /* ########## AOS.js ########## */
-  AOS.init({
-    duration: 600,
-    once: true,
-    easing: 'ease-out-cubic'
-  });
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 600,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
 
-  // 이미지 로드 완료 후 AOS 위치 재계산 (새로고침 타이밍 일관성 확보)
-  window.addEventListener('load', () => {
-    AOS.refresh();
-  });
+    // 이미지 로드 완료 후 AOS 위치 재계산 (새로고침 타이밍 일관성 확보)
+    window.addEventListener('load', () => {
+      AOS.refresh();
+    });
+  }
 
 
   /* ########## Top Button ########## */
