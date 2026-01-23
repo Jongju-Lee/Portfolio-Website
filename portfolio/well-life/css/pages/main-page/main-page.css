@@ -188,7 +188,7 @@
   font-family: var(--font-EN-black);
   text-align: center;
   letter-spacing: 12px;
-  line-height: 1em;
+  line-height: 1;
   color: var(--bg-text-background);
   pointer-events: none;
   z-index: -1;
@@ -222,7 +222,7 @@
 .intro-image__desc b {
   font-family: var(--font-KR-heavy);
   font-size: var(--font-size-xl);
-  line-height: 1.2em;
+  line-height: 1.2;
   color: var(--theme-primary);
 }
 .intro-image__desc p {
@@ -873,7 +873,7 @@
   backdrop-filter: blur(10px);
   font-family: var(--font-KR-medium);
   font-size: var(--font-size-medium);
-  line-height: 1em;
+  line-height: 1;
   color: var(--color-black);
 }
 .subject-department__item {
@@ -955,12 +955,13 @@
   position: absolute;
   right: 32px;
   bottom: 32px;
-  padding: var(--spacing-8) var(--spacing-16);
+  padding: var(--spacing-12) var(--spacing-16);
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.6);
   font-size: var(--font-size-large);
   color: var(--color-white);
   transition: bottom 0.5s, right 0.5s, opacity 0.5s;
+  line-height: 1;
 }
 .gallery-content__item:not(.swiper-slide-active)::after {
   right: 84px;
@@ -1129,7 +1130,7 @@
   background-color: var(--theme-primary);
   font-family: var(--font-KR-medium);
   font-size: var(--font-size-large);
-  line-height: 1em;
+  line-height: 1;
   color: var(--color-white);
 }
 .info-heading__content--time li p {
@@ -1205,7 +1206,7 @@
   margin-top: var(--spacing-24);
   font-family: var(--font-KR-bold);
   font-size: var(--font-size-xl);
-  line-height: 1.4em;
+  line-height: 1.4;
   color: var(--theme-secondary);
 }
 .direction-heading__way-bottom {
@@ -1233,7 +1234,7 @@
   padding: var(--spacing-8) var(--spacing-16);
   border-radius: 100px;
   background-color: #697215;
-  line-height: 1em;
+  line-height: 1;
   color: var(--color-white);
 }
 
@@ -1249,7 +1250,7 @@
 .direction-heading__way-bottom-badge--bus {
   padding: var(--spacing-8) var(--spacing-16);
   border-radius: 100px;
-  line-height: 1em;
+  line-height: 1;
   color: var(--color-white);
 }
 .direction-heading__way-bottom-badge--bus:nth-child(1) {
