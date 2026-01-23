@@ -545,62 +545,52 @@ footer {
 }
 
 /* ---------- 유틸리티 버튼 ----------  */
-/* 다크모드 버튼 */
-.dark-mode-btn {
+/* ===== 유틸리티 버튼 공통 ===== */
+.util-btn {
   position: fixed;
   bottom: var(--util-btn-offset);
-  left: var(--util-btn-offset);
-  z-index: 1000;
   width: var(--util-btn-size);
   height: var(--util-btn-size);
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-size: 38px auto;
+  background-size: 100% 100%;
   background-position: center center;
+  background-color: var(--border-opaque);
+  transition: all 0.5s;
+  z-index: 1000;
+}
+
+/* 다크모드 버튼 */
+.dark-mode-btn {
+  left: var(--util-btn-offset);
   opacity: 0.8;
-  transition: background-color 0.2s, background-image 0.2s, transform 0.2s, opacity 0.2s;
 }
 .dark-mode-btn:hover {
   opacity: 0.5;
 }
 .dark-mode-btn--dark {
-  background-color: var(--border-opaque);
-  background-image: url(../../images/includes/util-btn-dark.png);
+  background-image: url(../../images/includes/theme-btn-dark.png);
 }
 .dark-mode-btn--light {
   background-color: var(--color-white);
-  background-image: url(../../images/includes/util-btn-light.png);
+  background-image: url(../../images/includes/theme-btn-light.png);
 }
 
 /* 위로 이동하기 버튼 */
 .top-btn {
-  position: fixed;
-  right: var(--util-btn-offset);
-  bottom: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: var(--util-btn-size);
-  height: var(--util-btn-size);
-  padding-bottom: 3px;
-  border-radius: 50%;
-  background-color: var(--border-opaque);
   opacity: 0;
-  visibility: hidden;
-  transition: bottom 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-  pointer-events: none;
+  right: var(--util-btn-offset);
+  transform: translateY(calc(var(--util-btn-offset) + var(--util-btn-size)));
+  background-image: url(../../images/includes/top-btn-icon.png);
+}
+/* top-btn 다크모드 디자인 */
+[data-theme="dark"] .top-btn {
+  background-color: var(--color-white);
+  background-image: url(../../images/includes/top-btn-icon--dark.png);
 }
 .top-btn--active {
-  bottom: var(--util-btn-offset);
+  transform: translateY(0);
   opacity: 0.8;
-  visibility: visible;
-  pointer-events: all;
 }
 .top-btn:hover {
   opacity: 0.5;
-}
-.top-btn img {
-  width: 28px;
-  height: auto;
 }

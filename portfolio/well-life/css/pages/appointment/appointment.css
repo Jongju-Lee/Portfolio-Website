@@ -10,6 +10,7 @@
 .appointment {
   padding: var(--section-padding-v) var(--section-padding-h);
   background-color: var(--bg-primary);
+  transition: background-color 0.5s;
 }
 .appointment-inner {
   max-width: var(--max-width-pc);
@@ -456,6 +457,7 @@
   padding: var(--spacing-32);
   background-color: var(--bg-text-background);
   overflow-y: auto;
+  transition: background-color 0.5s;
 }
 .appointment-form__terms-text p:not(:first-child) {
   margin-top: var(--spacing-8);
