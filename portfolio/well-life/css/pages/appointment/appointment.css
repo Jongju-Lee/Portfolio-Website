@@ -68,8 +68,7 @@
   flex-shrink: 0;
   width: 35%;
   min-width: 400px;
-  border-radius: 20px;
-  overflow: hidden;
+  filter: var(--drop-shadow-normal);
 }
 
 /* ---------- APPOINTMENT-FORM ---------- */
@@ -307,9 +306,8 @@
 .appointment-form__item-doctor-face {
   width: calc(400px / 4);
   height: calc(400px / 4);
-  border-radius: 8px;
   overflow: hidden;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+  filter: var(--drop-shadow-normal);
 }
 .appointment-form__item-doctor-info {
   display: flex;

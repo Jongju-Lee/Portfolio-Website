@@ -100,7 +100,11 @@
   .appointment-form__box {
     min-width: 100%;
     padding: var(--spacing-36);
+    gap: var(--spacing-36);
     border-radius: 12px;
+  }
+  .appointment-form__item:not(:last-child)::after {
+    margin-top: var(--spacing-36);
   }
 
   /* appointment-form__item - 날짜 선택 */
