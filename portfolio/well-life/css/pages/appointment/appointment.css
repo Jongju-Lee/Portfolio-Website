@@ -1,20 +1,25 @@
-/* ---------- 진료 예약 페이지 ---------- */
+/* ---------- 상담 및 예약 페이지 ---------- */
+/* ===== 페이지 공통 - 필수 입력 마크 ===== */
+.required-mark {
+  color: var(--color-negative);
+  margin-left: 2px;
+  line-height: 1;
+}
+
 .appointment-inner {
   background-color: var(--bg-primary);
   padding: var(--section-padding-v);
   transition: background-color 0.5s;
 }
 .appointment-title {
-  margin-bottom: 80px;
-  font-size: var(--font-size-2xl);
+  margin-bottom: 100px;
+  padding-bottom: 100px;
   text-align: center;
-  color: var(--theme-primary);
+  border-bottom: 1px solid var(--border-transparent);
 }
-/* 페이지 공통 - 필수 입력 마크 */
-.required-mark {
-  color: var(--color-negative);
-  margin-left: 2px;
-  line-height: 1;
+.appointment-title h1 {
+  font-size: var(--font-size-2xl);
+  color: var(--theme-primary);
 }
 
 /* ---------- APPOINTMENT-FORM ---------- */

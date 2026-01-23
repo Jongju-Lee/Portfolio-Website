@@ -1,4 +1,4 @@
-/* ########## 진료 예약 페이지 반응형 UI ########## */
+/* ########## 상담 및 예약 페이지 반응형 UI ########## */
 
 
 /* #################### TABLET #################### */
@@ -10,7 +10,7 @@
     --section-padding-v: 64px;
   }
 
-  /* ---------- 진료 예약 페이지 ---------- */
+  /* ---------- 상담 및 예약 페이지 ---------- */
   .appointment-inner {
     padding: var(--section-padding-v) var(--section-padding-h);
   }
@@ -46,7 +46,7 @@
     --section-padding-v: 48px;
   }
 
-  /* ---------- 진료 예약 페이지 ---------- */
+  /* ---------- 상담 및 예약 페이지 ---------- */
   .appointment-title {
     margin-bottom: var(--spacing-48);
     font-size: var(--font-size-xl);
