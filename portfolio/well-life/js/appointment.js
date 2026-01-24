@@ -209,7 +209,27 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------- 시간 선택 기능 ---------- */
   // 시간 선택 관련 DOM 요소
   const timeBox = document.querySelector(".appointment-form__item-time-box");
-  const timeItems = timeBox.querySelectorAll(".appointment-form__item-time-item");
+  const timeItems = timeBox.querySelectorAll(".appointment-form__item-time");
+
+  // 비활성화할 시간대 (09:00 ~ 11:30)
+  const disabledTimes = ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30"];
+
+  /**
+   * 시간 버튼 비활성화 처리
+   * 09:00 ~ 11:30 시간대에 disabled 클래스 및 속성 추가
+   */
+  function initTimeDisabled() {
+    for (const item of timeItems) {
+      const timeText = item.querySelector("span").textContent.trim();
+      if (disabledTimes.includes(timeText)) {
+        item.classList.add("appointment-form__item-time--disabled");
+        item.disabled = true;
+      }
+    }
+  }
+
+  // 시간 버튼 비활성화 초기화
+  initTimeDisabled();
 
   /**
    * 시간 버튼 선택 처리
@@ -217,26 +237,26 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   function selectTimeItem(targetBtn) {
     // 기존 선택 제거
-    const prevSelected = timeBox.querySelector(".appointment-form__item-time-item--selected");
+    const prevSelected = timeBox.querySelector(".appointment-form__item-time--selected");
     if (prevSelected) {
-      prevSelected.classList.remove("appointment-form__item-time-item--selected");
+      prevSelected.classList.remove("appointment-form__item-time--selected");
     }
 
     // 새 선택 추가
-    targetBtn.classList.add("appointment-form__item-time-item--selected");
+    targetBtn.classList.add("appointment-form__item-time--selected");
   }
 
   // 각 시간 버튼에 클릭 이벤트 추가 및 첫 번째 선택 가능한 시간 자동 선택
   for (const item of timeItems) {
     // --disabled가 없는 버튼만 처리
-    if (!item.classList.contains("appointment-form__item-time-item--disabled")) {
+    if (!item.classList.contains("appointment-form__item-time--disabled")) {
       // 클릭 이벤트 추가
       item.addEventListener("click", () => {
         selectTimeItem(item);
       });
 
       // 첫 번째 선택 가능한 시간 자동 선택
-      if (!timeBox.querySelector(".appointment-form__item-time-item--selected")) {
+      if (!timeBox.querySelector(".appointment-form__item-time--selected")) {
         selectTimeItem(item);
       }
     }

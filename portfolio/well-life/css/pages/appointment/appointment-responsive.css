@@ -124,10 +124,10 @@
   .appointment-form__item-time-box {
     grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
   }
-  .appointment-form__item-time-item {
+  .appointment-form__item-time {
     width: 72px;
   }
-  .appointment-form__item-time-item span {
+  .appointment-form__item-time span {
     transform: translateY(1px);
   }
 

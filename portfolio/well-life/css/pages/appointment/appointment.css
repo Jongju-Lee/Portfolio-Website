@@ -254,7 +254,7 @@
   border-radius: 8px;
   background-color: var(--color-white);
 }
-.appointment-form__item-time-item {
+.appointment-form__item-time {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,24 +267,24 @@
   transition: background-color 0.2s, color 0.2s;
   font-family: var(--font-number-light);
 }
-.appointment-form__item-time-item:hover {
+.appointment-form__item-time:hover {
   opacity: 1;
   background-color: var(--theme-secondary);
   border: 1px solid transparent;
   color: var(--color-white);
 }
-.appointment-form__item-time-item--selected {
+.appointment-form__item-time--selected {
   background-color: var(--color-indigo) !important;
   border: 1px solid transparent;
   color: var(--color-white);
 }
-.appointment-form__item-time-item--disabled {
+.appointment-form__item-time--disabled {
   border: 1px solid var(--border-transparent);
   color: var(--contents-tertiary);
   background-color: var(--color-light-gray);
   pointer-events: none;
 }
-.appointment-form__item-time-item span {
+.appointment-form__item-time span {
   display: inline-block;
   transform: translateY(2px);
 }
