@@ -205,7 +205,7 @@
                   <div class="appointment-form__item-patient-input-wrap">
                     <label for="name">이름 <span class="required-mark">*</span></label>
                     <div
-                      class="appointment-form__item-patient-input-box--name appointment-form__item-patient-input-box">
+                      class="appointment-form__item-patient-input--name appointment-form__item-patient-input-box">
                       <input type="text" id="name" required>
                     </div>
                   </div>
@@ -214,13 +214,10 @@
                     <label id="resident-label" for="resident-num-front">
                       주민등록번호 <span class="required-mark">*</span>
                     </label>
-                    <div
-                      class="appointment-form__item-patient-input-box--resident-num appointment-form__item-patient-input-box">
-                      <input type="text" id="resident-num-front" aria-labelledby="resident-label" aria-label="앞자리 6자리"
-                        required>
+                    <div class="appointment-form__item-patient-input--resident appointment-form__item-patient-input-box">
+                      <input type="text" id="resident-num-front" aria-labelledby="resident-label" aria-label="앞자리 6자리" title="주민등록번호 앞자리 6자리" required>
                       <span>-</span>
-                      <input type="text" id="resident-num-back" aria-labelledby="resident-label" aria-label="뒷자리 7자리"
-                        required>
+                      <input type="text" id="resident-num-back" aria-labelledby="resident-label" aria-label="뒷자리 7자리" title="주민등록번호 뒷자리 7자리" required>
                     </div>
                   </div>
                   <!-- 전화번호 -->
@@ -228,13 +225,12 @@
                     <label id="phone-label" for="phone-front">
                       전화번호 <span class="required-mark">*</span>
                     </label>
-                    <div
-                      class="appointment-form__item-patient-input-box--phone appointment-form__item-patient-input-box">
-                      <input type="text" id="phone-front" aria-labelledby="phone-label" aria-label="앞자리" required>
+                    <div class="appointment-form__item-patient-input--phone appointment-form__item-patient-input-box">
+                      <input type="text" id="phone-front" aria-labelledby="phone-label" aria-label="앞자리" title="전화번호 앞자리" required>
                       <span>-</span>
-                      <input type="text" id="phone-center" aria-labelledby="phone-label" aria-label="중간자리" required>
+                      <input type="text" id="phone-center" aria-labelledby="phone-label" aria-label="중간자리" title="전화번호 중간자리" required>
                       <span>-</span>
-                      <input type="text" id="phone-back" aria-labelledby="phone-label" aria-label="뒷자리" required>
+                      <input type="text" id="phone-back" aria-labelledby="phone-label" aria-label="뒷자리" title="전화번호 뒷자리" required>
                     </div>
                   </div>
                   <!-- 주소 -->
@@ -242,17 +238,14 @@
                     <label id="address-label" for="post">주소</label>
                     <ul class="appointment-form__item-patient-list-box--address">
                       <li class="appointment-form__item-patient-list-item--address">
-                        <input type="text" id="post" aria-labelledby="address-label" aria-label="우편번호"
-                          placeholder="우편번호" required>
+                        <input type="text" id="post" aria-labelledby="address-label" aria-label="우편번호" title="우편번호" placeholder="우편번호" required>
                         <button type="button" class="post-btn" disabled>우편번호찾기</button>
                       </li>
                       <li class="appointment-form__item-patient-list-item--address">
-                        <input type="text" id="address" aria-labelledby="address-label" aria-label="주소" placeholder="주소"
-                          required>
+                        <input type="text" id="address" aria-labelledby="address-label" aria-label="주소" title="주소" placeholder="주소" required>
                       </li>
                       <li class="appointment-form__item-patient-list-item--address">
-                        <input type="text" id="address-detail" aria-labelledby="address-label" aria-label="상세주소"
-                          placeholder="상세주소">
+                        <input type="text" id="address-detail" aria-labelledby="address-label" aria-label="상세주소" title="상세주소" placeholder="상세주소">
                       </li>
                     </ul>
                   </div>
@@ -344,7 +337,9 @@
     <button class="dark-mode-btn dark-mode-btn--dark util-btn" aria-label="다크모드 전환"></button>
     
     <!-- 위로 이동 버튼 -->
-    <a class="top-btn util-btn" href="#main-content" aria-label="위로 이동 버튼"></a>
+    <a class="top-btn util-btn" href="#main-content">
+      <span class="sr-only">위로 이동</span>
+    </a>
   </div>
 </body>
 

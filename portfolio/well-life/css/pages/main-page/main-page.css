@@ -167,7 +167,7 @@
 }
 .intro-heading__title em {
   font-family: var(--font-KR-bold);
-  color: var(--theme-secondary);
+  color: var(--theme-tertiary);
 }
 .intro-heading__desc {
   text-align: center;
