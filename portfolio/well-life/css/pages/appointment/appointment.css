@@ -204,12 +204,14 @@
   color: var(--color-negative);
 }
 .appointment-form__item-calendar-day-name:last-child {
-  color: var(--theme-secondary);
+  color: var(--theme-tertiary);
 }
 .appointment-form__item-calendar-date {
   font-family: var(--font-number-light);
   transition: background-color 0.2s, color 0.2s;
   font-weight: 600;
+  line-height: 1;
+  padding-top: calc(var(--spacing-4) - 1px);
 }
 /* 일요일은 선택 불가(병원 휴일) */
 .appointment-form__item-calendar-date:nth-child(7n + 1) {
@@ -218,14 +220,12 @@
 }
 /* 토요일은 선택 가능 */
 .appointment-form__item-calendar-date:nth-child(7n) {
-  color: var(--theme-secondary);
+  color: var(--theme-tertiary);
 }
 .appointment-form__item-calendar-date:hover,
 .appointment-form__item-calendar-date--selected,
 .appointment-form__item-calendar-date--current {
   color: var(--color-white) !important;
-  font-family: var(--font-KR-medium);
-  font-weight: inherit;
 }
 .appointment-form__item-calendar-date:hover {
   opacity: 1;
