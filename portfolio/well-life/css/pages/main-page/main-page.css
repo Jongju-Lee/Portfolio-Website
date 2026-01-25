@@ -1068,7 +1068,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: var(--theme-primary);
+  background-color: var(--color-indigo);
 }
 .info-heading__title {
   text-align: center;
@@ -1090,7 +1090,8 @@
 }
 .info-heading__content--tel h3 {
   font-family: var(--font-number-bold);
-  color: var(--theme-primary);
+  color: var(--color-indigo);
+  letter-spacing: 2px;
 }
 .info-heading__content--tel p {
   margin-top: var(--spacing-4);
@@ -1125,7 +1126,7 @@
   width: 160px;
   padding: var(--spacing-12);
   border-radius: 100px;
-  background-color: var(--theme-primary);
+  background-color: var(--color-indigo);
   font-family: var(--font-KR-medium);
   font-size: var(--font-size-large);
   line-height: 1;
@@ -1143,7 +1144,6 @@
 .info-heading__content--time li p span {
   display: block;
 }
-
 /* ----- END - INFO ----- */
 
 
