@@ -150,7 +150,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-32);
+  gap: var(--spacing-24);
 }
 .intro-heading__title-mini {
   color: var(--theme-primary);
@@ -177,6 +177,7 @@
 }
 .intro-heading__desc span {
   display: block;
+  line-height: 1.8;
 }
 .intro-heading__bg {
   position: absolute;
@@ -1311,22 +1312,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-8);
-  width: calc(648px / 2);
-  height: calc(288px / 2);
-  padding-bottom: var(--spacing-36);
+  gap: var(--spacing-4);
+  width: 260px;
+  height: 116px;
+  padding-bottom: var(--spacing-28);
   background-image: url(../../../images/main-page/directions/directions-map-balloon.png);
   background-size: 100% 100%;
   transition: background-image 0.5s;
   transform: translate(-50%, -50%);
 }
-
 /* 다크모드 시 이미지 변환 */
 [data-theme="dark"] .direction-map__img-balloon {
   background-image: url(../../../images/main-page/directions/directions-map-balloon-dark.png);
 }
+.direction-map__img-balloon-title-mini {
+  color: var(--color-white);
+  line-height: 1;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
 .direction-map__img-balloon-logo {
-  width: 248px;
-  height: 46px;
+  width: 200px;
 }
 /* ----- END - DIRECTION ----- */

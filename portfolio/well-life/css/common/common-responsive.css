@@ -38,6 +38,10 @@
   h5 {
     font-size: var(--font-size-medium);
   }
+  /* 미니 타이틀 */
+  .title-sm {
+    letter-spacing: 3px;
+  }
   /* ---------- END - COMMON ----------  */
 
   
@@ -162,6 +166,7 @@
   /* 미니 타이틀 */
   .title-sm {
     font-size: 12px;
+    letter-spacing: 2px;
   }
   /* ---------- END - COMMON ----------  */
 
