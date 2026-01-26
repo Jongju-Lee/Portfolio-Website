@@ -20,7 +20,7 @@
   text-align: center;
 }
 .appointment-title__mini {
-  margin-bottom: var(--spacing-8);
+  display: block;
   color: var(--contents-secondary);
   font-family: var(--font-EN-medium);
   letter-spacing: 1px;
