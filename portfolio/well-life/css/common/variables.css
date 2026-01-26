@@ -38,6 +38,7 @@
   /* BOX-SHADOW */
   --shadow-normal: 0 4px 8px rgba(0, 0, 0, 0.1);
   --shadow-deep: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-deep-hover: 0 8px 16px rgba(0, 0, 0, 0.25);
   --shadow-dark: 0 4px 4px rgba(255, 255, 255, 0.2);
   --shadow-gallery: 0 4px 8px rgba(0, 0, 0, 0.25);
   --drop-shadow-normal: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
@@ -61,6 +62,14 @@
   --spacing-60: 60px;
   --spacing-64: 64px;
   --spacing-68: 68px;
+  --spacing-72: 72px;
+  --spacing-76: 76px;
+  --spacing-80: 80px;
+  --spacing-84: 84px;
+  --spacing-88: 88px;
+  --spacing-92: 92px;
+  --spacing-96: 96px;
+  --spacing-100: 100px;
 
 
   /* ############### PADDING ############### */
@@ -142,5 +151,6 @@
   /* BOX-SHADOW */
   --shadow-normal: 0 4px 8px rgba(255, 255, 255, 0.2);
   --shadow-deep: 0 4px 20px rgba(255, 255, 255, 0.3);
+  --shadow-deep-hover: 0 8px 24px rgba(255, 255, 255, 0.4);
   --shadow-gallery: 0 4px 8px rgba(255, 255, 255, 0.3);
 }

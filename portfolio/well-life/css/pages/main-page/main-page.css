@@ -132,13 +132,15 @@
 
 /* ----- SECTION - INTRO ----- */
 .intro {
-  padding: var(--section-padding-v) var(--section-padding-h);
+  padding: var(--section-padding-v);
 }
 .intro-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-64);
+  gap: var(--spacing-100);
+  max-width: var(--max-width-pc);
+  margin: 0 auto;
 }
 
 /* intro-heading */
@@ -199,43 +201,61 @@
 /* intro-image */
 .intro-image {
   display: flex;
-  gap: var(--spacing-32);
-  max-width: var(--max-width-pc);
+  flex-direction: column;
+  gap: var(--spacing-100);
 }
 .intro-image__wrap {
-  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+  margin: 0 auto;
 }
-.intro-image__desc {
-  position: relative;
-  width: 80%;
-  min-width: 283px;
-  margin-top: -80px;
-  margin-left: auto;
-  padding-top: var(--spacing-32);
-  padding-left: var(--spacing-32);
-  border-radius: 24px 0 0 0;
-  background-color: var(--bg-primary);
+/* 짝수번째 아이템은 좌우 반전 */
+.intro-image__wrap:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.intro-image__wrap:nth-child(even) .intro-image__desc {
   text-align: right;
+}
+
+/* intro-image__box */
+.intro-image__box {
+  flex: 1;
+  filter: drop-shadow(var(--shadow-deep));
+  overflow: hidden;
+  transition: transform 0.3s, filter 0.3s;
+}
+.intro-image__box:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(var(--shadow-deep-hover));
+}
+
+/* intro-image__desc */
+.intro-image__desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   word-break: keep-all;
 }
 .intro-image__desc b {
+  display: block;
   font-family: var(--font-KR-heavy);
   font-size: var(--font-size-xl);
   line-height: 1.2;
   color: var(--theme-primary);
 }
+.intro-image__desc b span {
+  letter-spacing: 1px;
+}
 .intro-image__desc p {
-  max-width: 290px;
-  margin-top: var(--spacing-12);
-  margin-left: auto;
+  margin-top: var(--spacing-16);
   font-family: var(--font-KR-medium);
-  line-height: var(--line-height-medium);
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-high);
   color: var(--contents-secondary);
 }
-.intro-image__wrap:nth-child(3) .intro-image__desc p {
-  max-width: 260px;
-}
-
 /* ----- END - INTRO ----- */
 
 
