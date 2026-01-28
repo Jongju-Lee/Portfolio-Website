@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 닫기 애니메이션을 위한 이전 활성 아이템 위치 저장
   let lastActiveRect = null;
   
+  // 애니메이션 진행 중 플래그 (클릭 방지용)
+  let isAnimating = false;
+  
   // 공통 오버레이 요소 생성 (없는 경우에만)
   let overlay = document.querySelector('.bento-overlay');
   let backdrop = document.querySelector('.bento-backdrop');
@@ -36,21 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Open Handler
   gridItems.forEach(item => {
     item.addEventListener('click', () => {
-      // 1. 원본 아이템 위치 저장
-      const rect = item.getBoundingClientRect();
-      lastActiveRect = rect;
+      // 애니메이션 진행 중이면 클릭 무시
+      if (isAnimating) return;
       
-      // 2. 콘텐츠 복제
+      isAnimating = true;
+      
+      // 1. 콘텐츠 복제
       contentContainer.innerHTML = item.innerHTML;
       
-      // 3. 초기 상태 설정 (클릭한 아이템 바로 위에 위치)
-      overlay.style.top = `${rect.top}px`;
-      overlay.style.left = `${rect.left}px`;
-      overlay.style.width = `${rect.width}px`;
-      overlay.style.height = `${rect.height}px`;
-      overlay.style.transform = 'none';
-      
-      // 원본 스타일(배경색, 테두리 등) 복사 적용
+      // 2. 원본 스타일(배경색, 테두리 등) 복사 적용
       const computedStyle = window.getComputedStyle(item);
       overlay.style.backgroundColor = computedStyle.backgroundColor;
       overlay.style.borderColor = computedStyle.borderColor;
@@ -67,21 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
       backdrop.classList.add('visible');
       body.style.overflow = 'hidden';
       
-      // 4. 확장 애니메이션 실행 (다음 프레임에서 클래스 추가)
+      // 3. 확장 애니메이션 실행 (다음 프레임에서 클래스 추가)
       requestAnimationFrame(() => {
-        overlay.classList.add('expanded');
-        // CSS 클래스(expanded)가 중앙 정렬을 제어하도록 인라인 스타일 초기화
-        overlay.style.top = '';
-        overlay.style.left = '';
-        overlay.style.width = '';
-        overlay.style.height = '';
-        overlay.style.transform = '';
+        requestAnimationFrame(() => {
+          overlay.classList.add('expanded');
+          
+          // 애니메이션 완료 후 플래그 해제
+          setTimeout(() => {
+            isAnimating = false;
+          }, 700);
+        });
       });
     });
   });
   
   // Close Function
   function closeOverlay() {
+    // 이미 애니메이션 중이면 무시
+    if (isAnimating) return;
+    
+    isAnimating = true;
+    
     // 1. 투명도 0으로 변경 (Fade Out)
     overlay.classList.remove('visible');
     backdrop.classList.remove('visible');
@@ -101,7 +104,10 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.style.width = '';
         overlay.style.height = '';
         overlay.style.transform = '';
-    }, 500); // CSS transition-duration과 일치 (0.5s)
+        
+        // 애니메이션 완료 후 플래그 해제
+        isAnimating = false;
+    }, 700); // CSS transition-duration과 일치 (0.7s)
   }
   
   // Close Handlers

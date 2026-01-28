@@ -103,9 +103,8 @@
 
 /* ########## Skill Section ########## */
 #skill {
-  background-color: var(--color-background-champagne);
+  background-color: #f5f5f5;
 }
-
 /* ----- skill-content ----- */
 .skill-content {
   display: flex;

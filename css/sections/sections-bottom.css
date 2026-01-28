@@ -4,10 +4,6 @@
 
 
 /* ########## Practical Section ########## */
-#practical {
-  background-color: var(--color-background-champagne);
-}
-
 /* ----- practical-content ----- */
 .practical-content {
   margin-top: var(--spacing-100);
