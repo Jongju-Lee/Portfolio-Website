@@ -8,7 +8,7 @@
   gap: var(--spacing-24);
   max-width: 1200px;
   margin: var(--spacing-60) auto 0;
-  aspect-ratio: 6 / 4;
+  /* aspect-ratio: 6 / 4; */
 }
 
 /* ----- .bento-item(기본 카드) ----- */
@@ -147,7 +147,7 @@
   opacity: 0.8;
 }
 
-/* 태블릿 반응형 */
+/* ========== TABLET SIZE ========== */
 @media (max-width: 1024px) {
   .skill2-content {
     position: relative;
@@ -198,7 +198,10 @@
     aspect-ratio: auto;
   }
 }
+/* ========== END - TABLET SIZE ========== */
 
+
+/* ========== MOBILE SIZE ========== */
 @media (max-width: 768px) {
   .skill2-content {
     display: grid;
@@ -275,7 +278,7 @@
   
   /* Title adjustments */
   .bento-title {
-    font-size: var(--font-size-lg);
+    /* font-size: var(--font-size-2xl); */
     text-align: left;
     margin: 0;
   }
@@ -325,13 +328,12 @@
     padding: var(--spacing-4) var(--spacing-12);
   }
 }
+/* ========== END - MOBILE SIZE ========== */
 
 
+/* ========== SMALL MOBILE SIZE ========== */
 @media (max-width: 480px) {
   .skill2-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: var(--spacing-16);
     gap: var(--spacing-12);
   }
@@ -384,9 +386,11 @@
     gap: var(--spacing-8);
   }
 }
+/* ========== END - SMALL MOBILE SIZE ========== */
+
 
 /* --------------------------------------------------------------------------
-   Overlay Expansion Styles
+   아이템 모달 스타일
    -------------------------------------------------------------------------- */
 .bento-backdrop {
   position: fixed;
@@ -642,12 +646,12 @@
   gap: var(--spacing-16);
 }
 .bento-overlay .bento-title {
-  font-size: var(--font-size-4xl); /* 40px */
+  font-size: var(--font-size-4xl);
   margin-bottom: 0;
   color: var(--text-color-title);
 }
 .bento-overlay .bento-desc {
   display: block;
-  font-size: var(--font-size-xl); /* 20px */
+  font-size: var(--font-size-xl);
   opacity: 1;
 }
