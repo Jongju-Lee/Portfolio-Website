@@ -29,7 +29,7 @@ body {
 }
 main > section {
   padding: var(--section-padding);
-  background-color: var(--color-background-white);
+  background-color: var(--color-bg-white);
 }
 
 /* ---------- COMMON ---------- */
@@ -196,7 +196,7 @@ img {
 /* Light Box */
 .uk-lightbox {
   z-index: 3000;
-  background: var(--color-background-white);
+  background: var(--color-bg-white);
 }
 .uk-lightbox-toolbar {
   background-color: transparent;

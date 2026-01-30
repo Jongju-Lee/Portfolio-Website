@@ -14,7 +14,7 @@ header {
   padding: 0 var(--spacing-64);
   height: var(--header-height);
   box-shadow: var(--shadow-normal);
-  background-color: var(--color-background-white);
+  background-color: var(--color-bg-white);
   transition: transform 1s;
   z-index: 2000;
 }
@@ -255,7 +255,7 @@ body.sidebar--on {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  background-color: var(--color-background-white);
+  background-color: var(--color-bg-white);
   transition: transform 0.5s ease-in-out;
 }
 .sidebar-nav__inner--active {

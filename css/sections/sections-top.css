@@ -140,7 +140,7 @@
   width: 100%;
   padding: var(--spacing-16);
   border-radius: var(--spacing-12);
-  background-color: var(--color-background-white);
+  background-color: var(--color-bg-white);
   box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
 }
 .skill-item__icon {
@@ -196,7 +196,7 @@
 .skill-item__text-box-desc p {
   padding: var(--spacing-12) var(--spacing-16);
   border-radius: var(--spacing-16);
-  background-color: var(--color-background-white);
+  background-color: var(--color-bg-white);
   box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
   font-size: var(--font-size-lg);
   line-height: 1.6em;
@@ -326,7 +326,7 @@
   padding: var(--spacing-16) var(--spacing-24);
   border-left: 4px solid var(--text-color-dark-gray);
   border-radius: 6px;
-  background-color: var(--color-background-light-gray);
+  background-color: var(--color-bg-light-gray);
   font-size: var(--font-size-lg);
   line-height: 1.5em;
   color: var(--text-color-dark-gray);
@@ -369,7 +369,7 @@
   padding: var(--spacing-40) var(--spacing-48);
   border: 1px solid var(--color-line);
   border-radius: var(--spacing-12);
-  background-color: var(--color-background-white);
+  background-color: var(--color-bg-white);
   box-shadow: var(--shadow-accent-light);
 }
 .resume-hero__header {
@@ -477,12 +477,12 @@
   line-height: 1em;
   letter-spacing: 0.2px;
   color: var(--text-color-dark-gray);
-  background-color: var(--color-background-white);
+  background-color: var(--color-bg-white);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   transition: background-color 0.2s;
 }
 .resume-hero__meta-tags span:hover {
-  background-color: var(--color-background-light-gray);
+  background-color: var(--color-bg-light-gray);
 }
 
 /* ----- resume-sub ----- */
@@ -498,7 +498,7 @@
   overflow: hidden;
   border: 1px solid var(--color-line);
   border-radius: var(--spacing-12);
-  background-color: var(--color-background-white);
+  background-color: var(--color-bg-white);
   box-shadow: var(--shadow-accent-light);
 }
 .resume-sub__list thead,
@@ -533,7 +533,7 @@
   border-bottom: none;
 }
 .resume-sub__item:hover {
-  background-color: var(--color-background-light-gray);
+  background-color: var(--color-bg-light-gray);
 }
 .resume-sub__col-period,
 .resume-sub__col-vol,
@@ -577,10 +577,10 @@
 .resume-sub__pj-task {
   border-color: var(--color-line);
   color: var(--text-color-gray);
-  background-color: var(--color-background-light-gray);
+  background-color: var(--color-bg-light-gray);
 }
 .resume-sub__item:hover .resume-sub__pj-task {
-  background-color: var(--color-background-white);
+  background-color: var(--color-bg-white);
 }
 .resume-sub__pj-task:not(.font-en) {
   font-weight: 500;
