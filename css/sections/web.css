@@ -227,11 +227,13 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-8);
-  padding: var(--spacing-8) var(--spacing-12);
-  border-radius: 12px;
+  gap: calc(var(--spacing-8) + 2px);
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: 100px;
   font-size: var(--font-size-xl);
   font-weight: 500;
   white-space: nowrap;
+  line-height: 1;
   transition: background-color 0.3s, color 0.3s;
   color: var(--text-color-body);
 }

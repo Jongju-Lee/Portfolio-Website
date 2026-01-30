@@ -559,6 +559,10 @@
   .web-info__design-link {
     font-size: var(--font-size-2xl);
   }
+  .web-info__design-link::before {
+    width: 28px;
+    height: 28px;
+  }
 
   /* ----- web-typo ----- */
   .web-typo__mockup-items {

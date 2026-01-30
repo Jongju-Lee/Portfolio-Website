@@ -270,9 +270,6 @@
 
   /* ----- web-info ----- */
   /* web-info__design */
-  .web-info__design-link {
-    font-size: var(--font-size-xl);
-  }
   .web-info__design-link::before {
     width: 26px;
     height: 26px;
