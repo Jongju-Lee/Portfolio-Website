@@ -102,6 +102,11 @@
   header {
     padding: 0 var(--spacing-24);
   }
+
+  /* header__logo */
+  .header__logo {
+    width: 32px;
+  }
   /* ########## END - HEADER ########## */
 
 
@@ -159,10 +164,128 @@
 
   /* ########## SECTION - SKILL ########## */
   .skill-content {
-    margin-top: var(--spacing-60);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto) repeat(2, 1fr);
+    gap: var(--spacing-20);
+    max-width: 480px;
+    margin: var(--spacing-60) auto 0;
+  }
+  .skill-item--html {
+    grid-row: 1;
+    grid-column: 1 / -1;
+  }
+  .skill-item--css {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+  .skill-item--js {
+    grid-row: 3;
+    grid-column: 1 / -1;
+  }
+  .skill-item--a11y {
+    grid-row: 4;
+    grid-column: 1 / -1;
+  }
+  .skill-item--rwd {
+    grid-row: 5;
+    grid-column: 1 / -1;
+  }
+  .skill-item--react {
+    grid-row: 6;
+    grid-column: 1 / -1;
+  }
+  .skill-item--git {
+    grid-row: 7;
+    grid-column: 1;
+  }
+  .skill-item--figma {
+    grid-row: 7;
+    grid-column: 2;
+  }
+  .skill-item--rwd,
+  .skill-item--react,
+  .skill-item--git,
+  .skill-item--figma,
+  .skill-item--a11y {
+    min-height: 130px;
+  }
+  .skill-item--html,
+  .skill-item--css,
+  .skill-item--js {
+    aspect-ratio: auto !important;
+    min-height: auto;
+  }
+  .skill-item__visual {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-16);
+  }
+  .skill-item__icon {
+    width: 48px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .skill-item__title {
+    margin: 0;
+    text-align: left;
+  }
+  .skill-item__desc {
+    display: block;
+    margin: 0;
+    font-size: var(--font-size-sm);
+    text-align: left;
   }
 
-  /* ########## END - SKILL ########## */
+  /* ----- Modal: Vertical Stacking ----- */
+  .skill-modal--expanded {
+    width: 90%;
+    height: auto;
+    max-height: 90dvh;
+  }
+  .skill-modal--expanded .skill-modal__content {
+    flex-direction: column;
+    height: auto;
+  }
+  .skill-modal--expanded .skill-item__visual {
+    flex: 0 0 auto;
+    flex-direction: row;
+    height: auto;
+  }
+  .skill-modal--expanded .skill-item__icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  .skill-modal--expanded .skill-item__text {
+    gap: 0;
+  }
+  .skill-modal--expanded .skill-item__title {
+    font-size: var(--font-size-3xl);
+  }
+  .skill-modal--expanded .skill-item__detail {
+    padding: var(--spacing-32);
+  }
+  .skill-item__detail-title {
+    font-size: var(--font-size-2xl);
+  }
+  .skill-modal .skill-item__title {
+    margin-bottom: 0;
+  }
+
+  /* skill-modal__close-btn */
+  .skill-modal__close-btn {
+    top: 24px;
+    right: 24px;
+  }
+
+  .skill-item__keyword {
+    padding: var(--spacing-4) var(--spacing-12);
+  }
+
+  /* ########## END - SKILL (Bento Grid) ########## */
+
 
 
   /* ########## SECTION - EDU ########## */
@@ -589,6 +712,11 @@
     padding-bottom: 20%;
   }
 
+  /* sidebar-nav__logo */
+  .sidebar-nav__logo {
+    width: 32px;
+  }
+
   /* sidebar-nav__links */
   .sidebar-nav__links {
     padding-left: var(--spacing-40);
@@ -642,6 +770,61 @@
   .project-achievement__list li {
     padding-left: calc(var(--spacing-12) - 1px);
   }
+
+
+  /* ########## SECTION - SKILL (Bento Grid) ########## */
+  .skill-content {
+    padding: var(--spacing-16);
+    gap: var(--spacing-12);
+  }
+  .skill-item--html,
+  .skill-item--css,
+  .skill-item--js {
+    aspect-ratio: auto !important;
+  }
+  .skill-item,
+  .skill-item--large {
+    width: 100%;
+    min-height: var(--spacing-100);
+    padding: var(--spacing-20);
+    gap: var(--spacing-16);
+  }
+  .skill-item--a11y {
+    position: static;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto !important;
+    transform: none;
+  }
+  .skill-item__icon {
+    width: 36px;
+  }
+  .skill-item__title {
+    font-size: var(--font-size-md);
+  }
+  .skill-item__desc {
+    font-size: var(--font-size-sm);
+  }
+
+  /* ----- Modal: More compact ----- */
+  .skill-modal--expanded {
+    width: 95%;
+  }
+  .skill-modal--expanded .skill-item__visual {
+    padding: var(--spacing-24);
+  }
+  .skill-modal--expanded .skill-item__detail {
+    padding: var(--spacing-24);
+  }
+  .skill-item__detail-title {
+    font-size: var(--font-size-xl);
+  }
+  .skill-item__keywords {
+    gap: var(--spacing-8);
+  }
+
+  /* ########## END - SKILL (Bento Grid) ########## */
+
 
   /* ----- web-info ----- */
   .web-info__accessibility {

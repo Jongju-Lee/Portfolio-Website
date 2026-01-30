@@ -36,8 +36,8 @@ header {
 
 /* ----- header__logo ----- */
 .header__logo {
-  width: 52px;
-  transition: opacity 0.2s;
+  width: 40px;
+  transition: opacity 0.3s;
 }
 .header__logo:hover {
   opacity: 0.7;
@@ -65,7 +65,7 @@ header {
   font-size: var(--font-size-lg);
   font-weight: 600;
   letter-spacing: 0.4px;
-  transition: color 0.4s ease;
+  transition: color 0.5s;
 }
 .header__gnb-item.new::before {
   content: "";
@@ -94,7 +94,7 @@ header {
   border-radius: 50%;
   background-color: var(--color-primary);
   opacity: 0;
-  transition: top 0.4s ease, opacity 0.2s ease;
+  transition: top 0.5s ease, opacity 0.5s ease;
 }
 .header__gnb-item:hover::after {
   opacity: 1;
@@ -284,7 +284,7 @@ body.sidebar--on {
   box-shadow: var(--shadow-normal);
 }
 .sidebar-nav__logo {
-  width: 43px;
+  width: 36px;
 }
 
 /* ----- sidebar-nav__close-btn ----- */

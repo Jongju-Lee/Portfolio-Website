@@ -494,21 +494,4 @@ document.addEventListener('DOMContentLoaded', function () {
     duration: 1500,
     once: true,
   });
-
-
-
-  /* ############### SKILL 섹션 SKILL-ITEM 클릭 기능 ############### */
-  const skillItems = document.querySelectorAll('.skill-item');
-
-  skillItems.forEach(function (item) {
-    item.addEventListener('click', function () {
-      // 다른 아이템의 활성화 클래스 제거
-      skillItems.forEach(function (other) {
-        if (other !== item) {
-          other.classList.remove('skill-item--on');
-        }
-      });
-      this.classList.toggle('skill-item--on');
-    });
-  });
 });

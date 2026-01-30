@@ -7,6 +7,9 @@
 /* ----- 상단 섹션 (About, Skill, Edu) ----- */
 @import url(./sections/sections-top.css);
 
+/* ----- Skill 섹션 (Bento Grid) ----- */
+@import url(./sections/skill.css);
+
 /* ----- Website Publishing 섹션 ----- */
 @import url(./sections/web.css);
 

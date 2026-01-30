@@ -1,7 +1,7 @@
-/* Skill Bento - Overlay Expansion Logic */
+/* ############### Skill Modal - Overlay Expansion Logic ############### */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const gridItems = document.querySelectorAll('.bento-item');
+  const gridItems = document.querySelectorAll('.skill-item');
   const body = document.body;
   
   // 닫기 애니메이션을 위한 이전 활성 아이템 위치 저장
@@ -11,25 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
   let isAnimating = false;
   
   // 공통 오버레이 요소 생성 (없는 경우에만)
-  let overlay = document.querySelector('.bento-overlay');
-  let backdrop = document.querySelector('.bento-backdrop');
+  let overlay = document.querySelector('.skill-modal');
+  let backdrop = document.querySelector('.skill-modal__backdrop');
   
   if (!overlay) {
     overlay = document.createElement('div');
-    overlay.className = 'bento-overlay';
+    overlay.className = 'skill-modal';
     // 닫기 버튼 및 콘텐츠 복제 영역 추가
-    overlay.innerHTML = '<div class="bento-close-btn">&times;</div><div class="bento-content-clone"></div>';
+    overlay.innerHTML = '<div class="skill-modal__close-btn"></div><div class="skill-modal__content"></div>';
     document.body.appendChild(overlay);
   }
   
   if (!backdrop) {
     backdrop = document.createElement('div');
-    backdrop.className = 'bento-backdrop';
+    backdrop.className = 'skill-modal__backdrop';
     document.body.appendChild(backdrop);
   }
   
-  const contentContainer = overlay.querySelector('.bento-content-clone');
-  const closeBtn = overlay.querySelector('.bento-close-btn');
+  const contentContainer = overlay.querySelector('.skill-modal__content');
+  const closeBtn = overlay.querySelector('.skill-modal__close-btn');
 
   // 스크롤바 너비 계산 (Layout Shift 방지용)
   const getScrollbarWidth = () => {
@@ -60,14 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       // 오버레이 및 배경 표시
-      overlay.classList.add('visible');
-      backdrop.classList.add('visible');
+      overlay.classList.add('skill-modal--visible');
+      backdrop.classList.add('skill-modal__backdrop--visible');
       body.style.overflow = 'hidden';
       
       // 3. 확장 애니메이션 실행 (다음 프레임에서 클래스 추가)
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          overlay.classList.add('expanded');
+          overlay.classList.add('skill-modal--expanded');
           
           // 애니메이션 완료 후 플래그 해제
           setTimeout(() => {
@@ -86,12 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
     isAnimating = true;
     
     // 1. 투명도 0으로 변경 (Fade Out)
-    overlay.classList.remove('visible');
-    backdrop.classList.remove('visible');
+    overlay.classList.remove('skill-modal--visible');
+    backdrop.classList.remove('skill-modal__backdrop--visible');
     
     // 2. CSS Transition(0.5s) 후 상태 초기화
     setTimeout(() => {
-        overlay.classList.remove('expanded');
+        overlay.classList.remove('skill-modal--expanded');
         
         // 스크롤 및 패딩 원상복구
         body.style.overflow = '';

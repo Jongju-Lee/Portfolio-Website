@@ -153,12 +153,12 @@ a {
 }
 .back-btn,
 .move-btn:hover {
-  border-color: #00ad53;
-  color: #00ad53;
+  border-color: #3730a3;
+  color: #3730a3;
   background-color: #ffffff;
 }
 .move-btn,
 .back-btn:hover {
-  background-color: #00ad53;
+  background-color: #3730a3;
   color: #ffffff;
 }
