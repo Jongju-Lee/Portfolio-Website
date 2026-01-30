@@ -387,6 +387,12 @@ document.addEventListener('DOMContentLoaded', function () {
     sidebarCloseBtn.addEventListener('click', closeSidebar);
   }
 
+  // 사이드바 로고 클릭 시 닫기
+  const sidebarLogo = document.querySelector('.sidebar-nav__logo');
+  if (sidebarLogo) {
+    sidebarLogo.addEventListener('click', closeSidebar);
+  }
+
 
   /* ############### 모바일 목업 스크롤바 제거 ############### */
   // 라이트박스 링크 클릭시 버튼 숨김

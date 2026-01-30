@@ -111,9 +111,10 @@ header {
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-image 0.3s;
+  transition: background-image 0.3s, opacity 0.3s;
 }
 .header__sidebar-btn:hover {
+  opacity: 0.7;
   background-image: url(../../images/icon/sidebar-btn-hover.png);
 }
 
@@ -136,7 +137,7 @@ header {
 
 /* ########## MAIN ########## */
 main {
-  margin-top: var(--header-height);
+  padding-top: var(--header-height);
 }
 
 /* ########## Fullscreen Navigation ########## */
@@ -285,6 +286,10 @@ body.sidebar--on {
 }
 .sidebar-nav__logo {
   width: 36px;
+  transition: opacity 0.3s;
+}
+.sidebar-nav__logo:hover {
+  opacity: 0.7;
 }
 
 /* ----- sidebar-nav__close-btn ----- */
@@ -305,7 +310,7 @@ body.sidebar--on {
   height: 3px;
   border-radius: 2px;
   background-color: var(--text-color-body);
-  transition: background-color 0.2s;
+  transition: background-color 0.3s, opacity 0.3s;
 }
 .sidebar-nav__close-btn span:nth-child(1) {
   transform: translateY(-50%) rotate(45deg);
@@ -314,6 +319,7 @@ body.sidebar--on {
   transform: translateY(-50%) rotate(-45deg);
 }
 .sidebar-nav__close-btn:hover span {
+  opacity: 0.7;
   background-color: var(--color-primary);
 }
 .sidebar-nav__item {
