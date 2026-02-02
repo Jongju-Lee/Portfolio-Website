@@ -1,4 +1,4 @@
-/* ---------- 메인 페이지 ---------- */
+/* ---------- 硫붿씤 ?섏씠吏 ---------- */
 
 /* ----- SECTION - HERO ----- */
 .hero {
@@ -10,7 +10,7 @@
   height: calc(100vh - var(--header-height)); /* Fallback */
   height: calc(100dvh - var(--header-height));
   padding: var(--section-padding-v) var(--section-padding-h);
-  background-image: url(../../../images/main-page/hero/hero-bg-pc.png);
+  background-image: url(../../../images/main-page/hero/hero-bg-pc.webp);
   background-size: cover;
   background-position: center top;
 }
@@ -53,7 +53,7 @@
   background-color: var(--theme-tertiary);
 }
 .hero-badge-icon:nth-child(3) {
-  background-color: var(--theme-primary);
+  background-color: var(--color-indigo);
   transition: background-color 0.5s;
 }
 
@@ -61,7 +61,7 @@
 .hero-logo {
   width: calc(788px / 2);
   height: calc(188px / 2);
-  background-image: url(../../../images/main-page/hero/hero-logo-pc.png);
+  background-image: url(../../../images/main-page/hero/hero-logo-pc.webp);
   background-size: 100% 100%;
 }
 
@@ -211,7 +211,7 @@
   gap: var(--spacing-100);
   margin: 0 auto;
 }
-/* 짝수번째 아이템은 좌우 반전 */
+/* 吏앹닔踰덉㎏ ?꾩씠?쒖? 醫뚯슦 諛섏쟾 */
 .intro-image__wrap:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -253,7 +253,6 @@
 .intro-image__desc p {
   margin-top: var(--spacing-16);
   font-family: var(--font-KR-medium);
-  font-size: var(--font-size-large);
   line-height: var(--line-height-high);
   color: var(--contents-secondary);
 }
@@ -265,7 +264,7 @@
   position: relative;
   width: 100%;
   padding: var(--section-padding-v) var(--section-padding-h);
-  background-image: url(../../../images/main-page/why/why-bg.png);
+  background-image: url(../../../images/main-page/why/why-bg.webp);
   background-size: cover;
   background-position: center top;
 }
@@ -385,7 +384,7 @@
   left: var(--spacing-64);
   width: calc(546px / 2);
   height: calc(481px / 2);
-  background-image: url(../../../images/main-page/doctor/doctor-bg--pc.png);
+  background-image: url(../../../images/main-page/doctor/doctor-bg--pc.webp);
   background-size: 100% 100%;
 }
 
@@ -627,7 +626,7 @@
   margin: 80px auto 0;
 }
 
-/* ----- disease-types, disease-test 공통 ----- */
+/* ----- disease-types, disease-test 怨듯넻 ----- */
 /* disease-sub-title */
 .disease-types__title,
 .disease-test__title {
@@ -644,7 +643,7 @@
   font-family: var(--font-KR-light);
 }
 
-/* ----- disease-types, disease-test 공통 ----- */
+/* ----- disease-types, disease-test 怨듯넻 ----- */
 /* disease-types */
 .disease-types__wrap {
   display: flex;
@@ -671,52 +670,52 @@
   transition: background-image 0.5s;
 }
 .disease-types__item-icon.bronchitis {
-  background-image: url(../../../images/main-page/disease/disease-icon-01.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-01.webp);
 }
 [data-theme="dark"] .disease-types__item-icon.bronchitis {
-  background-image: url(../../../images/main-page/disease/disease-icon-dark-01.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-01.webp);
 }
 .disease-types__item-icon.asthma {
-  background-image: url(../../../images/main-page/disease/disease-icon-02.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-02.webp);
 }
 [data-theme="dark"] .disease-types__item-icon.asthma {
-  background-image: url(../../../images/main-page/disease/disease-icon-dark-02.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-02.webp);
 }
 .disease-types__item-icon.pneumonia {
-  background-image: url(../../../images/main-page/disease/disease-icon-03.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-03.webp);
 }
 [data-theme="dark"] .disease-types__item-icon.pneumonia {
-  background-image: url(../../../images/main-page/disease/disease-icon-dark-03.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-03.webp);
 }
 .disease-types__item-icon.rhinitis {
-  background-image: url(../../../images/main-page/disease/disease-icon-04.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-04.webp);
 }
 [data-theme="dark"] .disease-types__item-icon.rhinitis {
-  background-image: url(../../../images/main-page/disease/disease-icon-dark-04.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-04.webp);
 }
 .disease-types__item-icon.cough {
-  background-image: url(../../../images/main-page/disease/disease-icon-05.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-05.webp);
 }
 [data-theme="dark"] .disease-types__item-icon.cough {
-  background-image: url(../../../images/main-page/disease/disease-icon-dark-05.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-05.webp);
 }
 .disease-types__item-icon.obstructive {
-  background-image: url(../../../images/main-page/disease/disease-icon-06.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-06.webp);
 }
 [data-theme="dark"] .disease-types__item-icon.obstructive {
-  background-image: url(../../../images/main-page/disease/disease-icon-dark-06.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-06.webp);
 }
 .disease-types__item-icon.cancer {
-  background-image: url(../../../images/main-page/disease/disease-icon-07.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-07.webp);
 }
 [data-theme="dark"] .disease-types__item-icon.cancer {
-  background-image: url(../../../images/main-page/disease/disease-icon-dark-07.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-07.webp);
 }
 .disease-types__item-icon.flu {
-  background-image: url(../../../images/main-page/disease/disease-icon-08.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-08.webp);
 }
 [data-theme="dark"] .disease-types__item-icon.flu {
-  background-image: url(../../../images/main-page/disease/disease-icon-dark-08.png);
+  background-image: url(../../../images/main-page/disease/disease-icon-dark-08.webp);
 }
 .disease-types__item-desc {
   display: flex;
@@ -769,7 +768,7 @@
 /* ----- SECTION - SUBJECT ----- */
 .subject-banner {
   padding: var(--section-padding-v) var(--section-padding-h);
-  background-image: url(../../../images/main-page/subject/subject-banner.jpg);
+  background-image: url(../../../images/main-page/subject/subject-banner.webp);
   background-size: 100% auto;
   background-position: center top;
 }
@@ -842,16 +841,16 @@
   background-size: 100% 100%;
 }
 .subject-clinic__item-icon.respiratory {
-  background-image: url(../../../images/main-page/subject/subject-icon-01.png);
+  background-image: url(../../../images/main-page/subject/subject-icon-01.webp);
 }
 [data-theme="dark"] .subject-clinic__item-icon.respiratory {
-  background-image: url(../../../images/main-page/subject/subject-icon-dark-01.png);
+  background-image: url(../../../images/main-page/subject/subject-icon-dark-01.webp);
 }
 .subject-clinic__item-icon.chronic {
-  background-image: url(../../../images/main-page/subject/subject-icon-02.png);
+  background-image: url(../../../images/main-page/subject/subject-icon-02.webp);
 }
 [data-theme="dark"] .subject-clinic__item-icon.chronic {
-  background-image: url(../../../images/main-page/subject/subject-icon-dark-02.png);
+  background-image: url(../../../images/main-page/subject/subject-icon-dark-02.webp);
 }
 .subject-clinic__item-text b {
   font-family: var(--font-KR-bold);
@@ -865,12 +864,12 @@
 
 /* subject-department__wrap */
 .subject-department__wrap {
-  /* PC에서만 출력 */
+  /* PC?먯꽌留?異쒕젰 */
   display: flex;
   flex-wrap: wrap;
 }
 .subject-swiper-wrap {
-  /* 태블릿 모바일에서만 출력 */
+  /* ?쒕툝由?紐⑤컮?쇱뿉?쒕쭔 異쒕젰 */
   position: relative;
   display: none;
 }
@@ -1044,11 +1043,11 @@
 }
 .gallery-swiper .swiper-button-prev {
   left: 29%;
-  background-image: url(../../../images/main-page/gallery/gallery-prev-btn.png);
+  background-image: url(../../../images/main-page/gallery/gallery-prev-btn.webp);
 }
 .gallery-swiper .swiper-button-next {
   right: 29%;
-  background-image: url(../../../images/main-page/gallery/gallery-next-btn.png);
+  background-image: url(../../../images/main-page/gallery/gallery-next-btn.webp);
 }
 
 /* ----- END - GALLERY ----- */
@@ -1316,14 +1315,14 @@
   width: 260px;
   height: 116px;
   padding-bottom: var(--spacing-28);
-  background-image: url(../../../images/main-page/directions/directions-map-balloon.png);
+  background-image: url(../../../images/main-page/directions/directions-map-balloon.webp);
   background-size: 100% 100%;
   transition: background-image 0.5s;
   transform: translate(-50%, -50%);
 }
-/* 다크모드 시 이미지 변환 */
+/* ?ㅽ겕紐⑤뱶 ???대?吏 蹂??*/
 [data-theme="dark"] .direction-map__img-balloon {
-  background-image: url(../../../images/main-page/directions/directions-map-balloon-dark.png);
+  background-image: url(../../../images/main-page/directions/directions-map-balloon-dark.webp);
 }
 .direction-map__img-balloon-title-mini {
   color: var(--color-white);

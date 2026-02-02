@@ -1,5 +1,5 @@
-/* ---------- 상담 및 예약 페이지 ---------- */
-/* ===== 페이지 공통 - 필수 입력 마크 ===== */
+/* ---------- ?곷떞 諛??덉빟 ?섏씠吏 ---------- */
+/* ===== ?섏씠吏 怨듯넻 - ?꾩닔 ?낅젰 留덊겕 ===== */
 .required-mark {
   color: var(--color-red);
   margin-left: 2px;
@@ -119,14 +119,14 @@
   font-size: var(--font-size-medium);
 }
 
-/* appointment-form__item - 날짜 선택 */
+/* appointment-form__item - ?좎쭨 ?좏깮 */
 .appointment-form__item-calendar {
   background-color: var(--color-white);
   padding: var(--spacing-32);
   border-radius: 8px;
 }
 
-/* 캘린더 */
+/* 罹섎┛??*/
 .appointment-form__item-calendar-title {
   display: flex;
   justify-content: center;
@@ -138,26 +138,26 @@
 .appointment-form__item-calendar-title .next-btn {
   width: 30px;
   height: 30px;
-  background-image: url(../../../images/appointment/appointment-next-btn.png);
+  background-image: url(../../../images/appointment/appointment-next-btn.webp);
   background-size: 100% 100%;
 }
 .appointment-form__item-calendar-title .prev-btn {
-  background-image: url(../../../images/appointment/appointment-prev-btn.png);
+  background-image: url(../../../images/appointment/appointment-prev-btn.webp);
 }
 .appointment-form__item-calendar-title .next-btn {
-  background-image: url(../../../images/appointment/appointment-next-btn.png);
+  background-image: url(../../../images/appointment/appointment-next-btn.webp);
 }
-/* disabled 상태 */
+/* disabled ?곹깭 */
 .appointment-form__item-calendar-title .prev-btn.btn--disabled,
 .appointment-form__item-calendar-title .next-btn.btn--disabled {
   pointer-events: none;
   opacity: 0.6;
 }
 .appointment-form__item-calendar-title .prev-btn.btn--disabled {
-  background-image: url(../../../images/appointment/appointment-prev-btn-disabled.png);
+  background-image: url(../../../images/appointment/appointment-prev-btn-disabled.webp);
 }
 .appointment-form__item-calendar-title .next-btn.btn--disabled {
-  background-image: url(../../../images/appointment/appointment-next-btn-disabled.png);
+  background-image: url(../../../images/appointment/appointment-next-btn-disabled.webp);
 }
 .appointment-form__item-calendar-title .cur-date {
   display: flex;
@@ -169,7 +169,7 @@
   transform: translateY(2px);
 }
 
-/* 캘린더 박스 */
+/* 罹섎┛??諛뺤뒪 */
 .appointment-form__item-calendar-box {
   max-width: 440px;
   margin: 0 auto;
@@ -213,12 +213,12 @@
   line-height: 1;
   padding-top: calc(var(--spacing-4) - 1px);
 }
-/* 일요일은 선택 불가(병원 휴일) */
+/* ?쇱슂?쇱? ?좏깮 遺덇?(蹂묒썝 ?댁씪) */
 .appointment-form__item-calendar-date:nth-child(7n + 1) {
   color: var(--contents-tertiary);
   pointer-events: none;
 }
-/* 토요일은 선택 가능 */
+/* ?좎슂?쇱? ?좏깮 媛??*/
 .appointment-form__item-calendar-date:nth-child(7n) {
   color: var(--theme-tertiary);
 }
@@ -242,7 +242,7 @@
   pointer-events: none;
 }
 
-/* appointment-form__item-time-box - 시간 선택 */
+/* appointment-form__item-time-box - ?쒓컙 ?좏깮 */
 .appointment-form__item-time-box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -289,7 +289,7 @@
   transform: translateY(2px);
 }
 
-/* appointment-form__item - 진료과목 선택 */
+/* appointment-form__item - 吏꾨즺怨쇰ぉ ?좏깮 */
 .appointment-form__item-subject-select {
   padding: var(--spacing-4) var(--spacing-8);
   border-radius: 4px;
@@ -298,7 +298,7 @@
   color: var(--contents-tertiary);
 }
 
-/* appointment-form__item - 담당 의료진 */
+/* appointment-form__item - ?대떦 ?섎즺吏?*/
 .appointment-form__item-doctor {
   display: flex;
   gap: var(--spacing-32);
@@ -330,7 +330,7 @@
   color: var(--color-gray);
 }
 
-/* appointment-form__item - 환자 정보 */
+/* appointment-form__item - ?섏옄 ?뺣낫 */
 .appointment-form__item-patient {
   display: flex;
   flex-direction: column;
@@ -371,7 +371,7 @@
   color: var(--contents-tertiary);
 }
 
-/* 주소 */
+/* 二쇱냼 */
 .appointment-form__item-patient-list-box--address {
   display: flex;
   width: 100%;
@@ -493,7 +493,7 @@
   color: var(--color-negative);
 }
 
-/* 예약 완료하기 버튼 */
+/* ?덉빟 ?꾨즺?섍린 踰꾪듉 */
 .appointment-form__finish-btn {
   font-family: var(--font-KR-medium);
   font-size: var(--font-size-large);
@@ -505,28 +505,28 @@
   margin: 0 auto;
 }
 
-/* ---------- 폼 검증 스타일 ---------- */
-/* input-box를 relative로 설정 (clear 버튼 배치용) */
+/* ---------- ??寃利??ㅽ???---------- */
+/* input-box瑜?relative濡??ㅼ젙 (clear 踰꾪듉 諛곗튂?? */
 .appointment-form__item-patient-input-box {
   position: relative;
 }
-/* Focus 상태 */
+/* Focus ?곹깭 */
 .appointment-form__item-patient-input-box input:focus,
 .appointment-form__item-patient-list-item--address input:focus {
   outline: none;
   border: 2px solid var(--theme-primary);
 }
-/* 성공 상태 */
+/* ?깃났 ?곹깭 */
 .appointment-form__item-patient-input-box.input--valid input {
   border: 2px solid var(--color-positive);
   background-color: var(--color-positive-transparent);
 }
-/* 에러 상태 */
+/* ?먮윭 ?곹깭 */
 .appointment-form__item-patient-input-box.input--error input {
   border: 2px solid var(--color-red);
   background-color: var(--color-negative-transparent);
 }
-/* 흔들림 애니메이션 */
+/* ?붾뱾由??좊땲硫붿씠??*/
 @keyframes shake {
   0%,
   100% {
@@ -548,7 +548,7 @@
 .input--error {
   animation: shake 0.4s ease-in-out;
 }
-/* select 에러 상태 */
+/* select ?먮윭 ?곹깭 */
 .appointment-form__item-subject-select.input--error {
   border: 2px solid var(--color-red);
   background-color: var(--color-negative-transparent);
@@ -558,17 +558,17 @@
   border: 2px solid var(--color-positive);
   background-color: var(--color-positive-transparent);
 }
-/* select focus 상태 - 에러가 없을 때만 적용 */
+/* select focus ?곹깭 - ?먮윭媛 ?놁쓣 ?뚮쭔 ?곸슜 */
 .appointment-form__item-subject-select:not(.input--error):focus {
   outline: none;
   border: 2px solid var(--theme-primary);
   background-color: var(--color-white);
 }
-/* 체크박스 에러 상태 */
+/* 泥댄겕諛뺤뒪 ?먮윭 ?곹깭 */
 .appointment-form__terms-check.terms-check--error label {
   animation: shake 0.4s ease-in-out;
 }
 .appointment-form__terms-check.terms-check--error label span {
   color: var(--color-negative);
 }
-/* ---------- END - 폼 검증 스타일 ---------- */
+/* ---------- END - ??寃利??ㅽ???---------- */

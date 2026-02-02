@@ -23,7 +23,7 @@
 /* ---------- Tablet Mockup ---------- */
 .mockup {
     flex-shrink: 0;
-    background-image: url(/images/mockup/tablet-mockup.png);
+    background-image: url(/images/mockup/tablet-mockup.webp);
     width: calc(2070px / 1.8);
     height: calc(1436px / 1.8);
 }

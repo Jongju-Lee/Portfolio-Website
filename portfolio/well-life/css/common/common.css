@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  min-height: 100vh; /* 폴백 */
+  min-height: 100vh; /* ?대갚 */
   min-height: 100dvh;
   font-size: var(--font-size-body);
   line-height: var(--line-height-high);
@@ -22,7 +22,7 @@ body {
 }
 
 main {
-  /* 헤더 높이만큼 하단 이동 */
+  /* ?ㅻ뜑 ?믪씠留뚰겮 ?섎떒 ?대룞 */
   padding-top: var(--header-height);
   background-color: var(--bg-primary);
   transition: background-color 0.5s;
@@ -30,12 +30,12 @@ main {
 /* ########## END - LAYOUT ########## */
 
 
-/* ########## 공통 스타일 ########## */
+/* ########## 怨듯넻 ?ㅽ???########## */
 * {
   box-sizing: border-box;
 }
 
-/* 키보드 접근성: 마우스 클릭 시 outline 제거, 키보드 Tab 시 outline 표시 */
+/* ?ㅻ낫???묎렐?? 留덉슦???대┃ ??outline ?쒓굅, ?ㅻ낫??Tab ??outline ?쒖떆 */
 *:focus:not(:focus-visible) {
   outline: none;
 }
@@ -44,7 +44,7 @@ main {
   outline-offset: 2px;
 }
 
-/* 스크린 리더 전용 (숨김 처리) */
+/* ?ㅽ겕由?由щ뜑 ?꾩슜 (?④? 泥섎━) */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -94,12 +94,12 @@ input[type="checkbox"]:checked::after {
   border-radius: 2px;
 }
 
-/* checkbox 의 label 태그에 적용 */
+/* checkbox ??label ?쒓렇???곸슜 */
 .checkbox-label {
   cursor: pointer;
 }
 
-/* 버튼 및 링크 태그 관련 공통 스타일 */
+/* 踰꾪듉 諛?留곹겕 ?쒓렇 愿??怨듯넻 ?ㅽ???*/
 button {
   border: none;
   cursor: pointer;
@@ -117,7 +117,7 @@ a {
   transition: color 0.2s;
 }
 
-/* HEADING 태그 공통 스타일 */
+/* HEADING ?쒓렇 怨듯넻 ?ㅽ???*/
 h1,
 h2,
 h3,
@@ -143,7 +143,7 @@ h5 {
   font-size: var(--font-size-large);
 }
 
-/* 미니 타이틀 */
+/* 誘몃땲 ??댄? */
 .title-sm {
   display: inline-block;
   font-family: var(--font-EN-medium);
@@ -160,11 +160,11 @@ h5 {
   -o-object-fit: cover;
   object-fit: cover;
 }
-/* ########## END - 공통 스타일 ########## */
+/* ########## END - 怨듯넻 ?ㅽ???########## */
 
 
-/* ########## 컴포넌트 UI ########## */
-/* ------------ 스킵 네비게이션 ------------ */
+/* ########## 而댄룷?뚰듃 UI ########## */
+/* ------------ ?ㅽ궢 ?ㅻ퉬寃뚯씠??------------ */
 .skip-nav {
   position: absolute;
   top: -100px;
@@ -195,7 +195,7 @@ header {
   box-shadow: var(--shadow-normal);
   z-index: 1000;
 }
-/* 다크모드시 shadow 색상 변경 */
+/* ?ㅽ겕紐⑤뱶??shadow ?됱긽 蹂寃?*/
 [data-theme="dark"] header {
   box-shadow: var(--shadow-dark);
 }
@@ -215,12 +215,12 @@ header {
   display: inline-block;
   width: calc(350px / 2);
   height: calc(72px / 2);
-  background-image: url(../../images/includes/header-logo-pc.png);
+  background-image: url(../../images/includes/header-logo-pc.webp);
   background-size: 100% 100%;
   transition: opacity 0.2s;
 }
 [data-theme="dark"] .header-logo {
-  background-image: url(../../images/includes/header-logo-pc-dark.png);
+  background-image: url(../../images/includes/header-logo-pc-dark.webp);
 }
 .header-logo:hover {
   opacity: 0.7;
@@ -271,13 +271,13 @@ header {
   flex-shrink: 0;
   width: calc(600px / 4);
   height: calc(152px / 4);
-  background-image: url(../../images/includes/header-tel.png);
+  background-image: url(../../images/includes/header-tel.webp);
   background-size: 100% 100%;
   transition: opacity 0.2s;
 }
-/* 다크모드 시 이미지 교체 */
+/* ?ㅽ겕紐⑤뱶 ???대?吏 援먯껜 */
 [data-theme="dark"] .header-right__tel {
-  background-image: url(../../images/includes/header-tel-dark.png);
+  background-image: url(../../images/includes/header-tel-dark.webp);
 }
 
 /* header-right__hamburger-btn */
@@ -397,11 +397,11 @@ footer {
   transition: opacity 0.5s, visibility 0.5s;
   z-index: 2000;
 }
-/* 다크모드 시 딤 처리 색상 변경 */
+/* ?ㅽ겕紐⑤뱶 ????泥섎━ ?됱긽 蹂寃?*/
 [data-theme="dark"] .sidebar {
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* 사이드 바 동작 시 딤 처리 */
+/* ?ъ씠??諛??숈옉 ????泥섎━ */
 .sidebar--active {
   visibility: visible;
   opacity: 1;
@@ -412,12 +412,12 @@ footer {
   right: -100%;
   width: 70%;
   max-width: 380px;
-  height: 100vh; /* 폴백 */
-  height: 100dvh; /* iOS Safari 동적 뷰포트 */
+  height: 100vh; /* ?대갚 */
+  height: 100dvh; /* iOS Safari ?숈쟻 酉고룷??*/
   background-color: var(--bg-primary);
   transition: right 0.5s;
 }
-/* 사이드 바 우측에서 좌측으로 나옴 */
+/* ?ъ씠??諛??곗륫?먯꽌 醫뚯륫?쇰줈 ?섏샂 */
 .sidebar--active .sidebar-container {
   right: 0%;
 }
@@ -440,19 +440,19 @@ footer {
   display: inline-block;
   width: calc(350px / 2);
   height: calc(68px / 2);
-  background-image: url(../../images/includes/header-logo-pc.png);
+  background-image: url(../../images/includes/header-logo-pc.webp);
   background-size: 100% 100%;
   transition: opacity 0.2s;
 }
-/* 다크모드 시 로고 교체 */
+/* ?ㅽ겕紐⑤뱶 ??濡쒓퀬 援먯껜 */
 [data-theme="dark"] .sidebar-header__logo {
-  background-image: url(../../images/includes/header-logo-pc-dark.png);
+  background-image: url(../../images/includes/header-logo-pc-dark.webp);
 }
 .sidebar-header__logo:hover {
   opacity: 0.7;
 }
 
-/* 사이드 바 닫기 버튼 */
+/* ?ъ씠??諛??リ린 踰꾪듉 */
 .sidebar-header__close-btn {
   position: relative;
   width: 24px;
@@ -546,8 +546,8 @@ footer {
   word-break: keep-all;
 }
 
-/* ---------- 유틸리티 버튼 ----------  */
-/* ===== 유틸리티 버튼 공통 ===== */
+/* ---------- ?좏떥由ы떚 踰꾪듉 ----------  */
+/* ===== ?좏떥由ы떚 踰꾪듉 怨듯넻 ===== */
 .util-btn {
   position: fixed;
   bottom: var(--util-btn-offset);
@@ -561,7 +561,7 @@ footer {
   z-index: 1000;
 }
 
-/* 다크모드 버튼 */
+/* ?ㅽ겕紐⑤뱶 踰꾪듉 */
 .dark-mode-btn {
   left: var(--util-btn-offset);
   opacity: 0.8;
@@ -570,24 +570,24 @@ footer {
   opacity: 0.5;
 }
 .dark-mode-btn--dark {
-  background-image: url(../../images/includes/theme-btn-dark.png);
+  background-image: url(../../images/includes/theme-btn-dark.webp);
 }
 .dark-mode-btn--light {
   background-color: var(--color-white);
-  background-image: url(../../images/includes/theme-btn-light.png);
+  background-image: url(../../images/includes/theme-btn-light.webp);
 }
 
-/* 위로 이동하기 버튼 */
+/* ?꾨줈 ?대룞?섍린 踰꾪듉 */
 .top-btn {
   opacity: 0;
   right: var(--util-btn-offset);
   transform: translateY(calc(var(--util-btn-offset) + var(--util-btn-size)));
-  background-image: url(../../images/includes/top-btn-icon.png);
+  background-image: url(../../images/includes/top-btn-icon.webp);
 }
-/* top-btn 다크모드 디자인 */
+/* top-btn ?ㅽ겕紐⑤뱶 ?붿옄??*/
 [data-theme="dark"] .top-btn {
   background-color: var(--color-white);
-  background-image: url(../../images/includes/top-btn-icon--dark.png);
+  background-image: url(../../images/includes/top-btn-icon--dark.webp);
 }
 .top-btn--active {
   transform: translateY(0);

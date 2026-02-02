@@ -1,11 +1,11 @@
-/* ########## 메인 페이지 반응형 UI ########## */
+/* ########## 硫붿씤 ?섏씠吏 諛섏쓳??UI ########## */
 
 
 /* #################### TABLET #################### */
 @media (max-width: 1280px) {
-  /* ========== 변수 재정의 ========== */
+  /* ========== 蹂???ъ젙??========== */
   :root {
-    /* Padding 값 */
+    /* Padding 媛?*/
     --section-padding-h: 32px;
     --section-padding-v: 64px;
   }
@@ -30,7 +30,7 @@
   .hero-logo {
     width: calc(658px / 2);
     height: calc(168px / 2);
-    background-image: url(../../../images/main-page/hero/hero-logo-tablet.png);
+    background-image: url(../../../images/main-page/hero/hero-logo-tablet.webp);
   }
 
   /* hero-stats */
@@ -84,9 +84,6 @@
   }
   .intro-image__desc b {
     font-size: var(--font-size-large);
-  }
-  .intro-image__desc p {
-    font-size: var(--font-size-medium);
   }
   /* ---------- END - INTRO ----------  */
 
@@ -227,13 +224,13 @@
     margin: var(--spacing-24) auto 0 ;
   }
   
-  /* ----- disease-types, disease-test 공통 ----- */
+  /* ----- disease-types, disease-test 怨듯넻 ----- */
   /* disease-sub-title */
   .disease-types__title,
   .disease-test__title {
     margin-bottom: var(--spacing-24);
   }
-  /* ----- disease-types, disease-test 공통 ----- */
+  /* ----- disease-types, disease-test 怨듯넻 ----- */
 
   /* disease-content */
   .disease-content {
@@ -283,11 +280,11 @@
 
   /* subject-department__wrap */
   .subject-department__wrap {
-    /* PC에서만 출력 */
+    /* PC?먯꽌留?異쒕젰 */
     display: none;
   }
   .subject-swiper-wrap {
-    /* 태블릿 모바일에서만 출력 */
+    /* ?쒕툝由?紐⑤컮?쇱뿉?쒕쭔 異쒕젰 */
     display: block;
     position: relative;
   }
@@ -457,9 +454,9 @@
 
 /* #################### MOBILE #################### */
 @media (max-width: 768px) {
-  /* ========== 변수 재정의 ========== */
+  /* ========== 蹂???ъ젙??========== */
   :root {
-    /* padding 값 */
+    /* padding 媛?*/
     --section-padding-h: 24px;
     --section-padding-v: 48px;
   }
@@ -493,7 +490,7 @@
   .hero-logo {
     width: calc(438px / 2);
     height: calc(128px / 2);
-    background-image: url(../../../images/main-page/hero/hero-logo-mobile.png);
+    background-image: url(../../../images/main-page/hero/hero-logo-mobile.webp);
   }
   /* hero-title */
   .hero-title {
@@ -736,14 +733,14 @@
     margin: var(--spacing-16) auto 0 ;
   }
   
-  /* ----- disease-types, disease-test 공통 ----- */
+  /* ----- disease-types, disease-test 怨듯넻 ----- */
   /* disease-sub-title */
   .disease-types__title,
   .disease-test__title {
     font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-16);
   }
-  /* ----- disease-types, disease-test 공통 ----- */
+  /* ----- disease-types, disease-test 怨듯넻 ----- */
 
   /* disease-content */
   .disease-content {
@@ -816,7 +813,7 @@
     font-size: var(--font-size-medium);
   }
 
-  /* Slick 슬라이더 카운터 */
+  /* Slick ?щ씪?대뜑 移댁슫??*/
   .subject-department__slick-counter {
     bottom: 16px;
     right: 16px;
