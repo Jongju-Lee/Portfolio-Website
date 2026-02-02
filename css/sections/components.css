@@ -323,55 +323,19 @@
   box-shadow: var(--shadow-util-btn);
 }
 .util-btn:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .util-btn:active {
   transform: scale(0.9);
 }
 
 /* 각 요소별 on 상태 정의 */
-.full-nav__open-btn--on,
 .top-btn--on {
   opacity: 0.7;
   visibility: visible;
   pointer-events: all;
 }
 /* ----- END - util-btn 공통 ----- */
-
-
-/* ----- 풀스크린 네비게이션 버튼 ----- */
-.full-nav__open-btn {
-  top: var(--util-btn-offset);
-  left: var(--util-btn-offset);
-  transform: translateY(var(--util-btn-offset-minus));
-  padding: 0;
-}
-.full-nav__open-btn--on {
-  transform: translateY(0);
-}
-.full-nav__open-btn--active {
-  opacity: 1;
-  background-color: var(--color-primary);
-}
-.full-nav__open-btn--active:hover {
-  opacity: 0.7;
-}
-.full-nav__open-btn--active:active {
-  transform: scale(0.9);
-}
-.full-nav__open-btn img {
-  transition: transform 0.5s;
-}
-.full-nav__open-btn--active img {
-  transform: rotate(135deg);
-}
-.full-nav__open-btn--active:hover img {
-  transform: rotate(135deg);
-}
-.full-nav__open-btn--active:active img {
-  transform: rotate(0);
-}
-/* ----- END - 풀스크린 네비게이션 버튼 ----- */
 
 
 /* ----- 맨 위로 가기 버튼(top-btn) ----- */
@@ -453,7 +417,6 @@
 /* 모바일 목업 버튼 */
 .mockup-box__action-btn.mobile {
   transition-delay: 0.3s;
-  padding-left: 1px;
 }
 /* 태블릿 목업 버튼 */
 .mockup-box__action-btn.tablet {

@@ -337,11 +337,6 @@
 
 
   /* ########## 유틸리티 버튼 ########## */
-  /* 풀스크린 네비게이션 버튼 */
-  .full-nav__open-btn {
-    display: none;
-  }
-
   /* mockup-box 버튼 */
   .mockup-box {
     display: none;

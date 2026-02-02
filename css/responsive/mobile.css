@@ -733,18 +733,6 @@
     top: 1px;
   }
   /* ########## END - 유틸리티 버튼 ########## */
-
-
-  /* ########## 풀스크린 네비게이션 ########## */
-  .fullscreen-nav__inner {
-    padding-left: var(--spacing-28);
-  }
-
-  /* fullscreen-nav__item */
-  .fullscreen-nav__item {
-    font-size: 28px;
-  }
-  /* ########## END - 풀스크린 네비게이션 ########## */
 }
 
 

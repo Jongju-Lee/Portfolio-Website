@@ -140,83 +140,8 @@ main {
   padding-top: var(--header-height);
 }
 
-/* ########## Fullscreen Navigation ########## */
-
-/* 모달 열렸을 때 body 스크롤 방지 */
-body.fullscreen-nav--on {
-  overflow: hidden;
-}
-.fullscreen-nav {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-.fullscreen-nav.fade-in {
-  opacity: 1;
-  visibility: visible;
-}
-.fullscreen-nav__inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* ----- fullscreen-nav__item ----- */
-.fullscreen-nav__item {
-  position: relative;
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: var(--spacing-24) var(--spacing-24) var(--spacing-20) 0;
-  font-family: var(--font-EN);
-  font-size: var(--font-size-4xl);
-  font-weight: 600;
-  white-space: nowrap;
-  color: var(--text-color-light-gray);
-  transition: color 0.3s;
-}
-.fullscreen-nav__item:hover {
-  color: var(--text-color-white);
-}
-.fullscreen-nav__item::after {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 0;
-  height: 15%;
-  background-color: var(--color-primary);
-  z-index: -1;
-  transition: width 0.3s;
-}
-.fullscreen-nav__item:hover::after {
-  width: 100%;
-}
-.fullscreen-nav__item.new::before {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: calc(100% + -18px);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-attention);
-}
-
 
 /* ########## Sidebar Navigation ########## */
-
 /* 사이드바가 열렸을 때 body 스크롤 방지 */
 html.sidebar--on,
 body.sidebar--on {

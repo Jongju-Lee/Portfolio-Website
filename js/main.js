@@ -10,15 +10,6 @@ const UtilButtons = {
 
   // 버튼 상태 초기화
   resetButtons: function () {
-    const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
-    if (fullNavOpenBtn) fullNavOpenBtn.classList.remove('full-nav__open-btn--active', 'full-nav__open-btn--on');
-
-    const fullscreenNav = document.querySelector('.fullscreen-nav');
-    if (fullscreenNav) {
-      fullscreenNav.classList.remove('fade-in');
-      fullscreenNav.classList.add('fade-out');
-    }
-
     const sidebarNav = document.querySelector('.sidebar-nav');
     if (sidebarNav) {
       sidebarNav.classList.remove('fade-in');
@@ -28,8 +19,8 @@ const UtilButtons = {
     const sidebarInner = document.querySelector('.sidebar-nav__inner');
     if (sidebarInner) sidebarInner.classList.remove('sidebar-nav__inner--active');
 
-    document.documentElement.classList.remove('sidebar--on', 'fullscreen-nav--on');
-    document.body.classList.remove('sidebar--on', 'fullscreen-nav--on');
+    document.documentElement.classList.remove('sidebar--on');
+    document.body.classList.remove('sidebar--on');
   }
 };
 
@@ -190,13 +181,11 @@ const MockupLightbox = {
 document.addEventListener('DOMContentLoaded', function () {
   /* ########## 공통 요소 캐싱 ########## */
   const header = document.querySelector('header');
-  const fullNavOpenBtn = document.querySelector('.full-nav__open-btn');
   const topBtn = document.querySelector('.top-btn');
   const mockupBox = document.querySelector('.mockup-box');
 
   // 유틸리티 버튼 표시/숨김 함수
   function setUtilButtonsVisible(visible) {
-    if (fullNavOpenBtn) fullNavOpenBtn.classList.toggle('full-nav__open-btn--on', visible);
     if (topBtn) topBtn.classList.toggle('top-btn--on', visible);
   }
 
@@ -239,38 +228,21 @@ document.addEventListener('DOMContentLoaded', function () {
       // GNB 요소
       const navElement = document.querySelector('.header__gnb');
       // 네비게이션에 포커스 설정
-      if (navElement && header) {
-        header.classList.remove('header--hide');
+      if (navElement) {
         navElement.focus();
-        // 헤더 영역에서 포커스가 완전히 벗어날 때만 헤더 숨김 처리
-        const focusHandler = function (e) {
-          // 포커스된 요소가 헤더 내부에 있는지 확인
-          const isInHeader = e.target.closest('header') !== null;
-          // 헤더 외부로 포커스가 이동했을 때만 헤더 숨김
-          if (!isInHeader && window.scrollY >= 500) {
-            header.classList.add('header--hide');
-          }
-          document.removeEventListener('focusin', focusHandler);
-        };
-        document.addEventListener('focusin', focusHandler);
       }
     }
   });
 
 
   /* ############### 유틸 버튼 이벤트 ############### */
-  // 스크롤에 따른 header 및 버튼 표시/숨김
+  // 스크롤에 따른 top-btn 버튼 표시/숨김
   window.addEventListener('scroll', function () {
     const scrolled = window.scrollY >= 500;
-    // PC에서만 헤더 숨김 (태블릿/모바일에서는 항상 표시)
-    const isPC = window.innerWidth > 1024;
 
-    // header reveal 애니메이션 중에는 hide/버튼 표시 건너뛰기
+    // header reveal 애니메이션 중에는 버튼 표시 건너뛰기
     const isRevealing = header && header.classList.contains('header--reveal');
 
-    if (header && !isRevealing) {
-      header.classList.toggle('header--hide', scrolled && isPC);
-    }
     if (!isRevealing) {
       setUtilButtonsVisible(scrolled);
     }
@@ -284,27 +256,6 @@ document.addEventListener('DOMContentLoaded', function () {
       UtilButtons.resetButtons();
     });
   }
-
-  // 풀스크린 네비게이션 토글
-  if (fullNavOpenBtn) {
-    fullNavOpenBtn.addEventListener('click', function () {
-      this.classList.toggle('full-nav__open-btn--active');
-      UtilButtons.toggleNavigation('.fullscreen-nav', 'fullscreen-nav--on');
-
-      // 최상단에서 비활성 시 숨김
-      if (window.scrollY <= 50 && !this.classList.contains('full-nav__open-btn--active')) {
-        this.classList.remove('full-nav__open-btn--on');
-      }
-    });
-  }
-
-  // 풀스크린 네비게이션 링크
-  document.querySelectorAll('.fullscreen-nav__item').forEach(function (item) {
-    item.addEventListener('click', function (e) {
-      e.stopPropagation();
-      UtilButtons.resetButtons();
-    });
-  });
 
   // 헤더 사이드바 버튼 토글
   const sidebarBtn = document.querySelector('.header__sidebar-btn');
