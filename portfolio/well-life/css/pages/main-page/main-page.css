@@ -864,12 +864,12 @@
 
 /* subject-department__wrap */
 .subject-department__wrap {
-  /* PC?먯꽌留?출력 */
+  /* PC에서만 출력 */
   display: flex;
   flex-wrap: wrap;
 }
 .subject-swiper-wrap {
-  /* 태블릿紐⑤컮?쇱뿉?쒕쭔 출력 */
+  /* 태블릿/모바일에서만 출력 */
   position: relative;
   display: none;
 }
@@ -1320,7 +1320,7 @@
   transition: background-image 0.5s;
   transform: translate(-50%, -50%);
 }
-/* ?ㅽ겕紐⑤뱶 ???대?吏 蹂??*/
+/* 다크모드 이미지 변경 */
 [data-theme="dark"] .direction-map__img-balloon {
   background-image: url(../../../images/main-page/directions/directions-map-balloon-dark.webp);
 }

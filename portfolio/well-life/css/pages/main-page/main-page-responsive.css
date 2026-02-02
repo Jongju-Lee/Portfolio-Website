@@ -813,7 +813,7 @@
     font-size: var(--font-size-medium);
   }
 
-  /* Slick ?щ씪?대뜑 移댁슫??*/
+  /* Slick 슬라이더 카운터 */
   .subject-department__slick-counter {
     bottom: 16px;
     right: 16px;

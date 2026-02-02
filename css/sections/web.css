@@ -138,8 +138,8 @@
 }
 /* 라벨 아이콘 (CSS 변수로 관리) */
 .web-mockup__total-item-label .view-icon {
-  --icon-default: url("../../images/icon/view-icon.png");
-  --icon-hover: url("../../images/icon/view-icon-hover.png");
+  --icon-default: url("../../images/icon/view-icon.webp");
+  --icon-hover: url("../../images/icon/view-icon-hover.webp");
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -192,8 +192,8 @@
 }
 /* 비활성화 아이콘 */
 .web-mockup__total-item--disabled .view-icon {
-  --icon-default: url("../../images/icon/view-icon-disabled.png");
-  --icon-hover: url("../../images/icon/view-icon-disabled.png");
+  --icon-default: url("../../images/icon/view-icon-disabled.webp");
+  --icon-hover: url("../../images/icon/view-icon-disabled.webp");
 }
 /* 비활성화 목업 이미지 hover 효과 제거 */
 .web-mockup__total-item--disabled:hover img {

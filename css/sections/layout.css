@@ -109,7 +109,7 @@ header {
   display: none;
   width: 28px;
   height: 20px;
-  background-image: url(../../images/icon/sidebar-btn.png);
+  background-image: url(../../images/icon/sidebar-btn.webp);
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,7 +117,7 @@ header {
 }
 .header__sidebar-btn:hover {
   opacity: 0.7;
-  background-image: url(../../images/icon/sidebar-btn-hover.png);
+  background-image: url(../../images/icon/sidebar-btn-hover.webp);
 }
 
 

@@ -225,14 +225,14 @@
   right: 32px;
   width: 20px;
   height: 20px;
-  background-image: url(../../images/icon/skill-modal-close.png);
+  background-image: url(../../images/icon/skill-modal-close.webp);
   background-size: 100% 100%;
   cursor: pointer;
   transition: background-image 0.3s;
   z-index: 10;
 }
 .skill-modal__close-btn:hover {
-  background-image: url(../../images/icon/skill-modal-close-hover.png);
+  background-image: url(../../images/icon/skill-modal-close-hover.webp);
 }
 
 /* ----- skill-modal 내부 Visual 영역 (좌측 40%) ----- */

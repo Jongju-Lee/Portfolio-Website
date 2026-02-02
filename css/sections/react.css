@@ -86,7 +86,7 @@ main > section#react {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background-image: url(../../images/react/dot.png);
+  background-image: url(../../images/react/dot.webp);
   background-size: 100% 100%;
 }
 
