@@ -134,6 +134,7 @@ header {
   gap: var(--spacing-12);
   font-size: var(--font-size-sm);
   color: var(--text-color-light-gray);
+  color: var(--color-line);
   font-weight: 500;
 }
 
