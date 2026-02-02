@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  min-height: 100vh; /* ?대갚 */
+  min-height: 100vh; /* 폴백 */
   min-height: 100dvh;
   font-size: var(--font-size-body);
   line-height: var(--line-height-high);
@@ -22,7 +22,7 @@ body {
 }
 
 main {
-  /* ?ㅻ뜑 ?믪씠留뚰겮 ?섎떒 ?대룞 */
+  /* 헤더 높이만큼 아래로 이동 */
   padding-top: var(--header-height);
   background-color: var(--bg-primary);
   transition: background-color 0.5s;
@@ -30,12 +30,12 @@ main {
 /* ########## END - LAYOUT ########## */
 
 
-/* ########## 怨듯넻 ?ㅽ???########## */
+/* ########## 공통 스타일 ########## */
 * {
   box-sizing: border-box;
 }
 
-/* ?ㅻ낫???묎렐?? 留덉슦???대┃ ??outline ?쒓굅, ?ㅻ낫??Tab ??outline ?쒖떆 */
+/* 마우스 키보드: 마우스 클릭 시 outline 제거, 키보드 Tab 시 outline 표시 */
 *:focus:not(:focus-visible) {
   outline: none;
 }
@@ -44,7 +44,7 @@ main {
   outline-offset: 2px;
 }
 
-/* ?ㅽ겕由?由щ뜑 ?꾩슜 (?④? 泥섎━) */
+/* 스크린리더 전용 (접근성 처리) */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -94,12 +94,12 @@ input[type="checkbox"]:checked::after {
   border-radius: 2px;
 }
 
-/* checkbox ??label ?쒓렇???곸슜 */
+/* checkbox와 label 태그에 적용 */
 .checkbox-label {
   cursor: pointer;
 }
 
-/* 踰꾪듉 諛?留곹겕 ?쒓렇 愿??怨듯넻 ?ㅽ???*/
+/* 버튼 및 링크 태그 관련 공통 스타일 */
 button {
   border: none;
   cursor: pointer;
@@ -117,7 +117,7 @@ a {
   transition: color 0.2s;
 }
 
-/* HEADING ?쒓렇 怨듯넻 ?ㅽ???*/
+/* HEADING 태그 공통 스타일 */
 h1,
 h2,
 h3,
@@ -143,7 +143,7 @@ h5 {
   font-size: var(--font-size-large);
 }
 
-/* 誘몃땲 ??댄? */
+/* 미니 타이틀 */
 .title-sm {
   display: inline-block;
   font-family: var(--font-EN-medium);
@@ -160,11 +160,11 @@ h5 {
   -o-object-fit: cover;
   object-fit: cover;
 }
-/* ########## END - 怨듯넻 ?ㅽ???########## */
+/* ########## END - 공통 스타일 ########## */
 
 
-/* ########## 而댄룷?뚰듃 UI ########## */
-/* ------------ ?ㅽ궢 ?ㅻ퉬寃뚯씠??------------ */
+/* ########## 컴포넌트 UI ########## */
+/* ------------ 스킵 네비게이션 ------------ */
 .skip-nav {
   position: absolute;
   top: -100px;
@@ -195,7 +195,7 @@ header {
   box-shadow: var(--shadow-normal);
   z-index: 1000;
 }
-/* ?ㅽ겕紐⑤뱶??shadow ?됱긽 蹂寃?*/
+/* 다크모드의 shadow 색상 변경 */
 [data-theme="dark"] header {
   box-shadow: var(--shadow-dark);
 }
@@ -275,7 +275,7 @@ header {
   background-size: 100% 100%;
   transition: opacity 0.2s;
 }
-/* ?ㅽ겕紐⑤뱶 ???대?吏 援먯껜 */
+/* 다크모드 이미지 교체 */
 [data-theme="dark"] .header-right__tel {
   background-image: url(../../images/includes/header-tel-dark.webp);
 }
@@ -397,11 +397,11 @@ footer {
   transition: opacity 0.5s, visibility 0.5s;
   z-index: 2000;
 }
-/* ?ㅽ겕紐⑤뱶 ????泥섎━ ?됱긽 蹂寃?*/
+/* 다크모드 배경 처리 색상 변경 */
 [data-theme="dark"] .sidebar {
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* ?ъ씠??諛??숈옉 ????泥섎━ */
+/* 사이드바 활성화 시 처리 */
 .sidebar--active {
   visibility: visible;
   opacity: 1;
@@ -412,12 +412,12 @@ footer {
   right: -100%;
   width: 70%;
   max-width: 380px;
-  height: 100vh; /* ?대갚 */
-  height: 100dvh; /* iOS Safari ?숈쟻 酉고룷??*/
+  height: 100vh; /* 폴백 */
+  height: 100dvh; /* iOS Safari 호환 비포트 */
   background-color: var(--bg-primary);
   transition: right 0.5s;
 }
-/* ?ъ씠??諛??곗륫?먯꽌 醫뚯륫?쇰줈 ?섏샂 */
+/* 사이드바 우측에서 좌측으로 등장 */
 .sidebar--active .sidebar-container {
   right: 0%;
 }
@@ -444,7 +444,7 @@ footer {
   background-size: 100% 100%;
   transition: opacity 0.2s;
 }
-/* ?ㅽ겕紐⑤뱶 ??濡쒓퀬 援먯껜 */
+/* 다크모드 로고 교체 */
 [data-theme="dark"] .sidebar-header__logo {
   background-image: url(../../images/includes/header-logo-pc-dark.webp);
 }
@@ -452,7 +452,7 @@ footer {
   opacity: 0.7;
 }
 
-/* ?ъ씠??諛??リ린 踰꾪듉 */
+/* 사이드바 닫기 버튼 */
 .sidebar-header__close-btn {
   position: relative;
   width: 24px;
@@ -546,8 +546,8 @@ footer {
   word-break: keep-all;
 }
 
-/* ---------- ?좏떥由ы떚 踰꾪듉 ----------  */
-/* ===== ?좏떥由ы떚 踰꾪듉 怨듯넻 ===== */
+/* ---------- 유틸리티 버튼 ----------  */
+/* ===== 유틸리티 버튼 공통 ===== */
 .util-btn {
   position: fixed;
   bottom: var(--util-btn-offset);
@@ -561,7 +561,7 @@ footer {
   z-index: 1000;
 }
 
-/* ?ㅽ겕紐⑤뱶 踰꾪듉 */
+/* 다크모드 버튼 */
 .dark-mode-btn {
   left: var(--util-btn-offset);
   opacity: 0.8;
@@ -577,14 +577,14 @@ footer {
   background-image: url(../../images/includes/theme-btn-light.webp);
 }
 
-/* ?꾨줈 ?대룞?섍린 踰꾪듉 */
+/* 위로 이동하기 버튼 */
 .top-btn {
   opacity: 0;
   right: var(--util-btn-offset);
   transform: translateY(calc(var(--util-btn-offset) + var(--util-btn-size)));
   background-image: url(../../images/includes/top-btn-icon.webp);
 }
-/* top-btn ?ㅽ겕紐⑤뱶 ?붿옄??*/
+/* top-btn 다크모드 요소들 */
 [data-theme="dark"] .top-btn {
   background-color: var(--color-white);
   background-image: url(../../images/includes/top-btn-icon--dark.webp);

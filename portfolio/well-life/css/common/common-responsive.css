@@ -1,24 +1,24 @@
-/* ---------- 怨듯넻 諛섏쓳??UI ---------- */
+/* ---------- 공통 반응형 UI ---------- */
 
 
-/* ########## ?쒕툝由?1280px) 諛섏쓳??########## */
+/* ########## 태블릿(1280px) 반응형 ########## */
 @media (max-width: 1280px) {
-  /* ========== 蹂???ъ젙??========== */
+  /* ========== 변수 재정의 ========== */
   :root {
-    /* ?ㅻ뜑 ?믪씠 媛?*/
+    /* 헤더 높이 값 */
     --header-height: 68px;
     
-    /* Padding 媛?*/
+    /* Padding 값 */
     --section-padding-h: 32px;
     --section-padding-v: 64px;
 
-    /* ?좏떥由ы떚 踰꾪듉 媛?*/
+    /* 유틸리티 버튼 값 */
     --util-btn-offset: 28px;
     --util-btn-size: 56px;
   }
 
   /* ---------- LAYOUT ---------- */
-  /* ?ㅽ겕濡ㅻ컮??PC?먯꽌留?蹂댁씠寃?*/
+  /* 스크롤바는 PC에서만 보이게 */
   body::-webkit-scrollbar {
     display: none;
   }
@@ -38,7 +38,7 @@
   h5 {
     font-size: var(--font-size-medium);
   }
-  /* 誘몃땲 ??댄? */
+  /* 미니 타이틀 */
   .title-sm {
     letter-spacing: 3px;
   }
@@ -63,7 +63,7 @@
     height: 38px;
     background-image: url(../../images/includes/header-icon-tel.webp);
   }
-  /* ?ㅽ겕紐⑤뱶 ???대?吏 援먯껜 */
+  /* 다크모드 이미지 교체 */
   [data-theme="dark"] .header-right__tel {
     background-image: url(../../images/includes/header-icon-tel-dark.webp);
   }
@@ -76,7 +76,7 @@
     background-image: url(../../images/includes/header-icon-hamburger.webp);
     background-size: 100% 100%;
   }
-  /* ?ㅽ겕紐⑤뱶 ???대?吏 援먯껜 */
+  /* 다크모드 이미지 교체 */
   [data-theme="dark"] .header-right__hamburger-btn {
     background-image: url(../../images/includes/header-icon-hamburger-dark.webp);
   }
@@ -119,24 +119,24 @@
   }
   /* ---------- END - FOOTER ---------- */
 }
-/* ########## END - ?쒕툝由?1280px) 諛섏쓳??########## */
+/* ########## END - 태블릿(1280px) 반응형 ########## */
 
 
-/* ########## 紐⑤컮??768px) 諛섏쓳??########## */
+/* ########## 모바일(768px) 반응형 ########## */
 @media (max-width: 768px) {
-  /* ========== 蹂???ъ젙??========== */
+  /* ========== 변수 재정의 ========== */
   :root {
-    /* ?ㅻ뜑 ?믪씠 媛?*/
+    /* 헤더 높이 값 */
     --header-height: 56px;
 
-    /* 湲곕낯 ?고듃 ?ъ씠利?*/
+    /* 기본 폰트 사이즈 */
     --font-size-body: 14px;
 
-    /* padding 媛?*/
+    /* padding 값 */
     --section-padding-h: 24px;
     --section-padding-v: 48px;
 
-    /* ?좏떥由ы떚 踰꾪듉 媛?*/
+    /* 유틸리티 버튼 값 */
     --util-btn-offset: 20px;
     --util-btn-size: 48px;
   }
@@ -163,7 +163,7 @@
     font-size: var(--font-size-medium);
   }
 
-  /* 誘몃땲 ??댄? */
+  /* 미니 타이틀 */
   .title-sm {
     font-size: 12px;
     letter-spacing: 2px;
@@ -178,7 +178,7 @@
     height: 28px;
     background-image: url(../../images/includes/header-logo-mobile.webp);
   }
-  /* ?ㅽ겕紐⑤뱶 ???대?吏 援먯껜 */
+  /* 다크모드 이미지 교체 */
   [data-theme="dark"] .header-logo {
     background-image: url(../../images/includes/header-logo-mobile-dark.webp);
   }
@@ -257,12 +257,12 @@
     background-image: url(../../images/includes/header-logo-mobile.webp);
   }
 
-  /* ?ㅽ겕紐⑤뱶 ??濡쒓퀬 援먯껜 */
+  /* 다크모드 로고 교체 */
   [data-theme="dark"] .sidebar-header__logo {
     background-image: url(../../images/includes/header-logo-mobile-dark.webp);
   }
 
-  /* ?ъ씠??諛??リ린 踰꾪듉 */
+  /* 사이드바 닫기 버튼 */
   .sidebar-header__close-btn {
     width: 20px;
     height: 20px;
@@ -286,4 +286,4 @@
   }
   /* ---------- END - SIDEBAR ----------  */
 }
-/* ########## END - 紐⑤컮??768px) 諛섏쓳??########## */
+/* ########## END - 모바일(768px) 반응형 ########## */

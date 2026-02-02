@@ -1,4 +1,4 @@
-/* ---------- 硫붿씤 ?섏씠吏 ---------- */
+/* ---------- 메인 페이지 ---------- */
 
 /* ----- SECTION - HERO ----- */
 .hero {
@@ -211,7 +211,7 @@
   gap: var(--spacing-100);
   margin: 0 auto;
 }
-/* 吏앹닔踰덉㎏ ?꾩씠?쒖? 醫뚯슦 諛섏쟾 */
+/* 짝수번째 아이템은 좌우 반전 */
 .intro-image__wrap:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -626,7 +626,7 @@
   margin: 80px auto 0;
 }
 
-/* ----- disease-types, disease-test 怨듯넻 ----- */
+/* ----- disease-types, disease-test 공통 ----- */
 /* disease-sub-title */
 .disease-types__title,
 .disease-test__title {
@@ -643,7 +643,7 @@
   font-family: var(--font-KR-light);
 }
 
-/* ----- disease-types, disease-test 怨듯넻 ----- */
+/* ----- disease-types, disease-test 공통 ----- */
 /* disease-types */
 .disease-types__wrap {
   display: flex;
@@ -864,12 +864,12 @@
 
 /* subject-department__wrap */
 .subject-department__wrap {
-  /* PC?먯꽌留?異쒕젰 */
+  /* PC?먯꽌留?출력 */
   display: flex;
   flex-wrap: wrap;
 }
 .subject-swiper-wrap {
-  /* ?쒕툝由?紐⑤컮?쇱뿉?쒕쭔 異쒕젰 */
+  /* 태블릿紐⑤컮?쇱뿉?쒕쭔 출력 */
   position: relative;
   display: none;
 }

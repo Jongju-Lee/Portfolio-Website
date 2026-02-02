@@ -1,11 +1,11 @@
-/* ########## 硫붿씤 ?섏씠吏 諛섏쓳??UI ########## */
+/* ########## 메인 페이지 반응형UI ########## */
 
 
 /* #################### TABLET #################### */
 @media (max-width: 1280px) {
-  /* ========== 蹂???ъ젙??========== */
+  /* ========== 변수 설정 ========== */
   :root {
-    /* Padding 媛?*/
+    /* Padding 값*/
     --section-padding-h: 32px;
     --section-padding-v: 64px;
   }
@@ -224,13 +224,13 @@
     margin: var(--spacing-24) auto 0 ;
   }
   
-  /* ----- disease-types, disease-test 怨듯넻 ----- */
+  /* ----- disease-types, disease-test 공통 ----- */
   /* disease-sub-title */
   .disease-types__title,
   .disease-test__title {
     margin-bottom: var(--spacing-24);
   }
-  /* ----- disease-types, disease-test 怨듯넻 ----- */
+  /* ----- disease-types, disease-test 공통 ----- */
 
   /* disease-content */
   .disease-content {
@@ -280,11 +280,11 @@
 
   /* subject-department__wrap */
   .subject-department__wrap {
-    /* PC?먯꽌留?異쒕젰 */
+    /* PC에서만 출력 */
     display: none;
   }
   .subject-swiper-wrap {
-    /* ?쒕툝由?紐⑤컮?쇱뿉?쒕쭔 異쒕젰 */
+    /* 태블릿/모바일에서만 출력 */
     display: block;
     position: relative;
   }
@@ -454,9 +454,9 @@
 
 /* #################### MOBILE #################### */
 @media (max-width: 768px) {
-  /* ========== 蹂???ъ젙??========== */
+  /* ========== 변수 재정의 ========== */
   :root {
-    /* padding 媛?*/
+    /* padding 값*/
     --section-padding-h: 24px;
     --section-padding-v: 48px;
   }
@@ -733,14 +733,14 @@
     margin: var(--spacing-16) auto 0 ;
   }
   
-  /* ----- disease-types, disease-test 怨듯넻 ----- */
+  /* ----- disease-types, disease-test 공통 ----- */
   /* disease-sub-title */
   .disease-types__title,
   .disease-test__title {
     font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-16);
   }
-  /* ----- disease-types, disease-test 怨듯넻 ----- */
+  /* ----- disease-types, disease-test 공통 ----- */
 
   /* disease-content */
   .disease-content {
