@@ -9,7 +9,7 @@ node_modules/
 Thumbs.db
 
 # Personal resume files
-resume/
+/resume/
 
 # Build/Development scripts
 scripts/
