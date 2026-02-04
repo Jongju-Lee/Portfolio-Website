@@ -25,45 +25,6 @@ const UtilButtons = {
 };
 
 
-/* ############### UIKit Lightbox 버튼 커스터마이징 ############### */
-UIkit.util.on(document, 'show', '.uk-lightbox', function (e) {
-  const lightbox = e.target;
-
-  // 기존 커스텀 버튼 제거 (중복 방지)
-  const existingBtn = lightbox.querySelector('.custom-close-btn');
-  if (existingBtn) existingBtn.remove();
-
-  setTimeout(function () {
-    // 기존 닫기 버튼 숨기기 (클릭 트리거용으로 보관)
-    const originalBtn = lightbox.querySelector('.uk-lightbox-toolbar-icon.uk-close-large');
-    if (originalBtn) {
-      originalBtn.style.opacity = '0';
-      originalBtn.style.pointerEvents = 'none';
-    }
-
-    // 커스텀 닫기 버튼 생성
-    const customBtn = document.createElement('button');
-    customBtn.className = 'custom-close-btn custom-close-btn--attention';
-    customBtn.textContent = '뒤로 가기';
-    customBtn.type = 'button';
-    customBtn.onclick = function () {
-      if (originalBtn) originalBtn.click();
-    };
-
-    // 애니메이션 종료 후 attention 클래스 제거
-    setTimeout(function () {
-      customBtn.classList.remove('custom-close-btn--attention');
-    }, 2300);
-
-    lightbox.appendChild(customBtn);
-  }, 50);
-});
-
-UIkit.util.on(document, 'hidden', '.uk-lightbox', function (e) {
-  const customBtn = e.target.querySelector('.custom-close-btn');
-  if (customBtn) customBtn.remove();
-});
-
 
 /* ############### 웰라이프 목업 Lightbox 동적 제어 ############### */
 const MockupLightbox = {
@@ -88,21 +49,28 @@ const MockupLightbox = {
 
   // lightbox 속성 적용
   applyLightbox: function (element) {
-    if (element && !element.hasAttribute('uk-lightbox')) {
-      element.setAttribute('uk-lightbox', '');
+    if (element && !element.hasAttribute('data-lightbox')) {
+      element.setAttribute('data-lightbox', '');
       // href를 PC 버전으로 변경 (iframe)
       const link = element.querySelector('a');
       if (link) {
         link.href = this.lightboxHref;
         link.setAttribute('data-type', 'iframe');
+        // CustomLightbox 이벤트 리스너 추가
+        if (typeof CustomLightbox !== 'undefined') {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            CustomLightbox.open(this);
+          });
+        }
       }
     }
   },
 
   // lightbox 속성 제거 및 원래 href 복원
   removeLightbox: function (element, type) {
-    if (element && element.hasAttribute('uk-lightbox')) {
-      element.removeAttribute('uk-lightbox');
+    if (element && element.hasAttribute('data-lightbox')) {
+      element.removeAttribute('data-lightbox');
       // 원래 href 복원
       const link = element.querySelector('a');
       if (link) {

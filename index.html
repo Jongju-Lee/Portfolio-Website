@@ -32,11 +32,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
-  <!-- ########## UIkit CSS & JS ########## -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js" defer></script>
-
   <!-- ########## AOS.js ########## -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
@@ -60,6 +55,7 @@
 
   <!-- ########## JS ########## -->
   <script src="./js/loading.js" defer></script>
+  <script src="./js/lightbox.js" defer></script>
   <script src="./js/main.js" defer></script>
   <script src="./js/skill.js" defer></script>
 </head>
@@ -93,7 +89,7 @@
       <!-- ########## Section - About ########## -->
       <!-- ########## Section - About (Redesign) ########## -->
       <section id="about" class="about-redesign">
-        <div class="about-inner inner">
+        <div class="about-inner">
           <div class="about-redesign-content">
             <!-- Left: Text Content -->
             <article class="about-text" data-aos="fade-right" data-aos-delay="300">
@@ -133,6 +129,8 @@
                 <span class="about-tag__text">반응형 UI & Cross-Browser</span>
               </div>
             </figure>
+
+            <div class="about-mouse"></div>
           </div>
         </div>
       </section>
@@ -802,7 +800,7 @@
             <!-- ########## Row 1 - web-info ########## -->
             <div class="web-info project-row" data-aos="fade-up">
               <!-- 디자인 보러 가기 버튼 -->
-              <div class="web-info__design" data-uk-lightbox>
+              <div class="web-info__design" data-lightbox>
                 <a class="web-info__design-link font-en" href="https://embed.figma.com/design/HHYWT4zB4BDSX5qYcN1DzF/%EC%9B%B0%EB%9D%BC%EC%9D%B4%ED%94%84-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%97%85%EB%A1%9C%EB%93%9C%EC%9A%A9-?node-id=0-1&embed-host=share" data-type="iframe">Design View</a>
               </div>
 
@@ -1010,7 +1008,7 @@
             <div class="react-content__links" data-aos="fade-up">
               <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/mobile.html" data-label-pc="Mobile"><span class="only-pc">Mobile</span></a>
               <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/tablet.html" data-label-pc="Tablet"><span class="only-pc">Tablet</span></a>
-              <div data-uk-lightbox>
+              <div data-lightbox>
                 <a class="react-content__link font-en" href="https://taskflow-jongju.vercel.app/" data-label-pc="PC" data-label-tablet="View-App" data-type="iframe">
                   <span class="only-pc">PC</span>
                   <span class="expect-pc">View App</span>
@@ -1198,7 +1196,7 @@
             <div class="practical-slider">
               <h3 class="practical-slider__title">JavaScript</h3>
               <!-- ##### practical-slider__box - JavaScript ##### -->
-              <div class="practical-slider__box swiper" data-uk-lightbox>
+              <div class="practical-slider__box swiper" data-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/js/01/index.html" data-caption="Calculator with JavaScript" data-type="iframe">
                     <img src="./images/practical/practical-js-01.webp" alt="계산기" />
@@ -1228,7 +1226,7 @@
             <div class="practical-slider">
               <h3 class="practical-slider__title">SCSS</h3>
               <!-- ##### practical-slider__box - SASS(SCSS) ##### -->
-              <div class="practical-slider__box swiper" data-uk-lightbox>
+              <div class="practical-slider__box swiper" data-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/sass(scss)/01/index.html" data-caption="Heartbeat Animation with SCSS" data-type="iframe">
                     <img src="./images/practical/practical-scss-01.webp" alt="하트비트 애니메이션" />
@@ -1264,7 +1262,7 @@
             <div class="practical-slider">
               <h3 class="practical-slider__title">NAVIGATION UI</h3>
               <!-- ##### practical-slider__box - NAVIGATION ##### -->
-              <div class="practical-slider__box swiper" data-uk-lightbox>
+              <div class="practical-slider__box swiper" data-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/navigation/02/index.html" data-caption="Glass Sidebar" data-type="iframe">
                     <picture>
@@ -1294,7 +1292,7 @@
             <div class="practical-slider">
               <h3 class="practical-slider__title">TAB & ACCORDION</h3>
               <!-- ##### practical-slider__box - TAB & ACCORDION ##### -->
-              <div class="practical-slider__box swiper" data-uk-lightbox>
+              <div class="practical-slider__box swiper" data-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/tab_menu/01/index.html" data-caption="Pure CSS Tab Slide Indicator" data-type="iframe">
                     <img src="./images/practical/practical-tab-01.webp" alt="탭 슬라이드 인디케이터" />
@@ -1321,7 +1319,7 @@
             <div class="practical-slider">
               <h3 class="practical-slider__title">CARD UI</h3>
               <!-- ##### practical-slider__box - CARD UI ##### -->
-              <div class="practical-slider__box swiper" data-uk-lightbox>
+              <div class="practical-slider__box swiper" data-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/card_ui/01/index.html" data-caption="Product Card" data-type="iframe">
                     <img src="./images/practical/practical-card-01.webp" alt="제품 디자인 카드" />
@@ -1348,7 +1346,7 @@
             <div class="practical-slider">
               <h3 class="practical-slider__title">FORM UI</h3>
               <!-- ##### practical-slider__box - FORM ##### -->
-              <div class="practical-slider__box swiper" data-uk-lightbox>
+              <div class="practical-slider__box swiper" data-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/form/01/index.html" data-caption="Register Form" data-type="iframe">
                     <img src="./images/practical/practical-form-01.webp" alt="회원가입 폼" />
@@ -1375,7 +1373,7 @@
             <div class="practical-slider">
               <h3 class="practical-slider__title">PROTOTYPE</h3>
               <!-- ##### practical-slider__box - OTHER ##### -->
-              <div class="practical-slider__box swiper" data-uk-lightbox>
+              <div class="practical-slider__box swiper" data-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/prototype/01/index.html" data-caption="Video Landing Page" data-type="iframe">
                     <img src="./images/practical/practical-proto-01.webp" alt="비디오 랜딩 페이지 프로토타입" loading="lazy" />
@@ -1402,7 +1400,7 @@
             <div class="practical-slider">
               <h3 class="practical-slider__title">ANIMATION(KEYFRAMES)</h3>
               <!-- ##### practical-slider__box - ANIMATION(KEYFRAMES) ##### -->
-              <div class="practical-slider__box swiper" data-uk-lightbox>
+              <div class="practical-slider__box swiper" data-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/animation/01/index.html" data-caption="Color Change Loading" data-type="iframe">
                     <img src="./images/practical/practical-ani-01.webp" alt="컬러 체인지 로딩 애니메이션" loading="lazy" />
@@ -1429,7 +1427,7 @@
             <div class="practical-slider">
               <h3 class="practical-slider__title">HOVER EFFECT</h3>
               <!-- ##### practical-slider__box - HOVER EFFECT ##### -->
-              <div class="practical-slider__box swiper" data-uk-lightbox>
+              <div class="practical-slider__box swiper" data-lightbox>
                 <div class="swiper-wrapper">
                   <a class="practical-slider__item swiper-slide" href="./portfolio/practical_coding/hover/03/index.html" data-caption="Background Change Navigation" data-type="iframe">
                     <picture>
