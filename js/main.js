@@ -248,6 +248,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // 헤더 스크롤 감지 (배경 및 테두리 표시)
+  window.addEventListener('scroll', function () {
+    if (header) {
+      if (window.scrollY > 0) {
+        header.classList.add('header--scrolled');
+      } else {
+        header.classList.remove('header--scrolled');
+      }
+    }
+  });
+
   // 상단 이동 버튼 클릭시
   if (topBtn) {
     topBtn.addEventListener('click', function (e) {
@@ -267,6 +278,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function openSidebar() {
     UtilButtons.toggleNavigation('.sidebar-nav', 'sidebar--on');
     if (sidebarInner) sidebarInner.classList.toggle('sidebar-nav__inner--active');
+    
+    // 사이드바 열릴 때 헤더 숨김
+    if (header) header.classList.add('header--hide');
 
     // 포커스 트랩: 열릴 때 첫 번째 메뉴로 포커스 이동
     setTimeout(function () {
@@ -278,6 +292,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function closeSidebar() {
     UtilButtons.resetButtons();
+    
+    // 사이드바 닫힐 때 헤더 보임
+    if (header) header.classList.remove('header--hide');
+
     // 포커스 복귀: 닫힐 때 사이드바 버튼으로 포커스 이동
     if (sidebarBtn) sidebarBtn.focus();
   }

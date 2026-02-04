@@ -4,8 +4,10 @@
 
 /* ########## About Section ########## */
 #about {
-  height: calc(100vh - var(--header-height)); /* 폴백 */
-  height: calc(100dvh - var(--header-height)); /* iOS Safari */
+  height: 100vh; /* Fallback */
+  height: 100dvh;
+  /* height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height)); */
 }
 #about .inner {
   display: flex;

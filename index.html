@@ -46,6 +46,7 @@
   
   <!-- Sections CSS -->
   <link rel="stylesheet" href="./css/sections/layout.css" />
+  <link rel="stylesheet" href="./css/temp_about.css" />
   <link rel="stylesheet" href="./css/sections/sections-top.css" />
   <link rel="stylesheet" href="./css/sections/skill.css" />
   <link rel="stylesheet" href="./css/sections/web.css" />
@@ -76,13 +77,13 @@
         </a>
         <!-- ########## header__gnb ########## -->
         <nav class="header__gnb">
-          <a class="header__gnb-item" href="#skill">SKILL</a>
-          <a class="header__gnb-item" href="#edu">EXPERIENCE</a>
-          <a class="header__gnb-item" href="#resume">RESUME</a>
-          <a class="header__gnb-item new" href="#web">WEBSITE</a>
-          <a class="header__gnb-item new" href="#react">REACT</a>
-          <a class="header__gnb-item" href="#practical">PRACTICAL</a>
-          <a class="header__gnb-item" href="#epilogue">EPILOGUE</a>
+          <a class="header__gnb-item" href="#skill">Skill</a>
+          <a class="header__gnb-item" href="#edu">Experience</a>
+          <a class="header__gnb-item" href="#resume">Resume</a>
+          <a class="header__gnb-item" href="#web">Project</a>
+          <a class="header__gnb-item" href="#react">React</a>
+          <a class="header__gnb-item" href="#practical">Prototype</a>
+          <a class="header__gnb-item" href="#epilogue">Epilogue</a>
         </nav>
         <!-- ########## header__sidebar-btn (tablet/mobile only) ########## -->
         <button class="header__sidebar-btn" type="button" aria-label="사이드 바 열기"></button>
@@ -90,11 +91,57 @@
     </header>
     <main id="main-content" role="main">
       <!-- ########## Section - About ########## -->
-      <section id="about">
+      <!-- ########## Section - About (Redesign) ########## -->
+      <section id="about" class="about-redesign">
+        <div class="about-inner inner">
+          <div class="about-redesign-content">
+            <!-- Left: Text Content -->
+            <article class="about-text" data-aos="fade-right" data-aos-delay="300">
+              <h2 class="about-text__role font-en">Web <span>Publisher</span></h2>
+              <h1 class="about-text__name font-kr">
+                <span class="color-primary">이종주</span> <span class="e-light">입니다.</span>
+              </h1>
+              <div class="about-text__btn-group">
+                <a href="#skill" class="about-btn about-btn--primary">
+                  <span>프로젝트 보러 가기</span>
+                  <i class="about-btn__icon"></i>
+                </a>
+                <a href="#resume" class="about-btn about-btn--secondary">
+                  <span>경력 요약</span>
+                  <i class="about-btn__icon"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Right: Visual Content -->
+            <figure class="about-visual" data-aos="fade-left" data-aos-delay="500">
+              <div class="about-visual__image-box">
+                <img src="./images/about/profile.webp" alt="이종주 프로필 사진" class="about-visual__img">
+              </div>
+              
+              <!-- Floating Tags (Glassmorphism) -->
+              <div class="about-tag about-tag--1 glass">
+                <div class="about-tag__icon"></div>
+                <span class="about-tag__text">웹 접근성 <b>100%</b></span>
+              </div>
+              <div class="about-tag about-tag--2 glass">
+                <div class="about-tag__icon"></div>
+                <span class="about-tag__text"><b>5건</b> 실무 프로젝트 완료</span>
+              </div>
+              <div class="about-tag about-tag--3 glass">
+                <div class="about-tag__icon"></div>
+                <span class="about-tag__text">반응형 UI & Cross-Browser</span>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Existing About Section (Commented Out) -->
+      <!-- <section id="about-old" style="display: none;">
         <div class="about-inner inner">
           <h2 data-aos="fade-right" data-aos-delay="500">About me</h2>
           <div class="about-content">
-            <!-- ########## about-intro ########## -->
             <article class="about-intro" data-aos="fade-right" data-aos-delay="500">
               <h1 class="about-intro__title">
                 " Learn, for a<br />
@@ -110,14 +157,12 @@
                 <span>웹 퍼블리셔</span><em>이종주</em>
               </h2>
             </article>
-            <!-- ########## about-photo ########## -->
             <figure class="about-photo" data-aos="fade-left" data-aos-delay="500">
               <picture>
                 <source media="(max-width: 768px)" srcset="./images/about/profile-mobile.webp">
                 <img src="./images/about/profile.webp" alt="지원자 프로필 사진" />
               </picture>
             </figure>
-            <!-- ########## about-info ########## -->
             <ul class="about-info" data-aos="fade-left" data-aos-delay="500"
               data-aos-offset="-100">
               <li class="about-info__item">
@@ -135,10 +180,9 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
 
-
-
+      <!-- ########## Section - Skill ########## -->
       <section id="skill">
         <div class="skill-inner inner">
           <h2 class="section-title" data-aos="fade-right">Publishing Skill</h2>
@@ -1497,9 +1541,6 @@
       <nav class="sidebar-nav__inner">
         <!-- 사이드바 헤더 -->
         <div class="sidebar-nav__header">
-          <a class="sidebar-nav__logo" href="#main-content">
-            <img src="./images/logo/header-logo.webp" alt="포트폴리오 로고" loading="lazy">
-          </a>
           <button class="sidebar-nav__close-btn" type="button" aria-label="메뉴 닫기">
             <span></span>
             <span></span>
@@ -1507,9 +1548,6 @@
         </div>
         <!-- 사이드바 링크 -->
         <div class="sidebar-nav__links">
-          <a class="sidebar-nav__item" href="#about">
-            <span>About me</span>
-          </a>
           <a class="sidebar-nav__item" href="#skill">
             <span>Skill</span>
           </a>
@@ -1519,14 +1557,14 @@
           <a class="sidebar-nav__item" href="#resume">
             <span>Resume</span>
           </a>
-          <a class="sidebar-nav__item new" href="#web">
-            <span>Web Publishing</span>
+          <a class="sidebar-nav__item" href="#web">
+            <span>Project</span>
           </a>
-          <a class="sidebar-nav__item new" href="#react">
+          <a class="sidebar-nav__item" href="#react">
             <span>React</span>
           </a>
           <a class="sidebar-nav__item" href="#practical">
-            <span>Practical Coding</span>
+            <span>Prototype</span>
           </a>
           <a class="sidebar-nav__item" href="#epilogue">
             <span>Epilogue</span>

@@ -716,11 +716,6 @@
     padding-bottom: 20%;
   }
 
-  /* sidebar-nav__logo */
-  .sidebar-nav__logo {
-    width: 32px;
-  }
-
   /* sidebar-nav__links */
   .sidebar-nav__links {
     padding-left: var(--spacing-40);
@@ -728,9 +723,6 @@
   }
   .sidebar-nav__item span {
     font-size: var(--font-size-2xl);
-  }
-  .sidebar-nav__item.new span::after {
-    top: 1px;
   }
   /* ########## END - 유틸리티 버튼 ########## */
 }
