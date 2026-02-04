@@ -70,11 +70,11 @@ header {
   color: var(--text-color-dark-gray);
   transition: color 0.5s ease-in;
 }
-.header__gnb-item:hover {
-  color: rgba(var(--color-primary-rgb), 0.7);
-}
 .header--scrolled .header__gnb-item {
   color: var(--text-color-body);
+}
+.header__gnb-item:hover {
+  color: var(--color-primary);
 }
 .header__gnb-item::after {
   content: "";
