@@ -67,10 +67,7 @@
   gap: var(--spacing-8);
   padding: var(--spacing-16) var(--spacing-32);
   border-radius: 50px;
-  font-family: var(--font-KR);
-  font-size: var(--font-size-md);
   font-weight: 700;
-  /* text-decoration: none; Default in common.css */
   transition: all 0.3s ease;
 }
 
@@ -137,17 +134,18 @@
 /* ----- 플로팅 태그 ----- */
 .about-tag {
   position: absolute;
+  z-index: 5;
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-12);
   padding: var(--spacing-12) var(--spacing-24);
   border-radius: 16px;
-  background-color: rgba(var(--color-white-rgb), 0.3);
+  background-color: rgba(var(--color-white-rgb), 0.8);
+  background-color: rgba(var(--color-white-rgb), 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
   animation: float 6s ease-in-out infinite;
-  z-index: 5;
 }
 
 .about-tag__text {
@@ -210,6 +208,45 @@
 }
 
 
+/* ########## 마우스 스크롤 애니메이션 ########## */
+.about-mouse {
+  position: absolute;
+  bottom: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8);
+  z-index: 30;
+}
+
+.about-mouse__icon {
+  width: 32px;
+  height: 48px;
+  border: 2px solid var(--color-primary);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-mouse__dot {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  animation: mouseScroll 2s ease-in-out infinite;
+}
+
+.about-mouse__text {
+  font-family: var(--font-EN);
+  font-weight: 500;
+  color: rgba(var(--color-primary-rgb), 0.5);
+  letter-spacing: 1px;
+}
 
 
 /* ########## PC 버전 하단 사선 처리 ########## */
@@ -236,7 +273,8 @@
 @media (max-width: 1280px) {
   .about-redesign {
     height: auto;
-    min-height: 100vh;
+    min-height: 100vh; /* Fallback */
+    min-height: 100dvh;
     padding: 100px 40px;
   }
   .about-redesign::after {
@@ -255,10 +293,6 @@
   .about-tag--1 { left: -5%; }
   .about-tag--2 { left: -10%; bottom: 10%; }
   .about-tag--3 { right: -10%; }
-}
-
-/* Tablet (max-width: 1280px) */
-@media (max-width: 1280px) {
 }
 
 /* Mobile (max-width: 768px) */
@@ -352,4 +386,49 @@
   100% { transform: translateY(0px); }
 }
 
+/* 마우스 스크롤 애니메이션 */
+@keyframes mouseScroll {
+  /* 0% {
+    opacity: 0;
+    transform: translateY(0);
+    height: 6px;
+    border-radius: 50%;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+    height: 6px;
+    border-radius: 50%;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+    height: 14px;
+    border-radius: 4px;
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(8px);
+    height: 6px;
+    border-radius: 50%;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+    height: 6px;
+    border-radius: 50%;
+  } */
+  0% { 
+      opacity: 0; 
+      transform: translate(-50%, 0); 
+  }
+  50% { 
+      opacity: 1; 
+      transform: translate(-50%, 6px); 
+  }
+  100% { 
+      opacity: 0; 
+      transform: translate(-50%, 12px); 
+  }
+}
 
