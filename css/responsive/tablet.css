@@ -44,6 +44,9 @@
   .about-text__name {
     font-size: var(--font-size-5xl);
   }
+  .about-text__name {
+    margin-bottom: var(--spacing-24);
+  }
 
   /* 우측 사진 영역(about-visual) */
   .about-visual__image-box {
@@ -51,13 +54,11 @@
   }
   /* 플로팅 태그 */
   .about-tag--1 { 
-    left: -35%; 
+    top: 24%;
+    left: -43%; 
   }
   .about-tag--2 { 
-    left: -10%; bottom: 10%; 
-  }
-  .about-tag--3 { 
-    right: -10%; 
+    bottom: 10%; 
   }
   /* ========== END - ABOUT SECTION ========== */
 }
@@ -78,23 +79,16 @@
     --util-btn-offset-minus: -28px;
 
     /* ----- TABLET 폰트 사이즈 ----- */
-    /* 기존 --font-size-lg: 18px */
+    --font-size-md: 15px
     --font-size-lg: 16px;
-    /* 기존 --font-size-xl: 20px; */
     --font-size-xl: 18px;
-    /* 기존 --font-size-2xl: 24px; */
     --font-size-2xl: 22px;
-    /* 기존 --font-size-3xl: 32px; */
     --font-size-3xl: 28px;
-    /* 기존 --font-size-4xl: 40px; */
     --font-size-4xl: 36px;
-    /* 기존 --font-size-5xl: 60px; */
     --font-size-5xl: 56px;
-    /* 기존 --font-size-6xl: 80px; */
     --font-size-6xl: 72px;
 
     /* 주요 폰트 사이즈 */
-    --font-size-body: 15px;
     --font-size-section-title: 32px;
     --font-size-slogan-title: 48px;
   }
@@ -141,10 +135,35 @@
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-80);
+    padding: 0 var(--spacing-32);
   }
 
+  /* 좌측 텍스트 영역(about-text) */
   .about-text {
     text-align: center;
+    padding-top: 0;
+  }
+  .about-text__role {
+    margin-bottom: var(--spacing-8);
+    text-shadow: 
+      2px 2px 0 rgba(var(--color-black-rgb), 0.3),
+      3px 3px 0 rgba(var(--color-black-rgb), 0.2),
+      4px 4px 6px rgba(var(--color-black-rgb), 0.1);
+  }
+  .about-text__name {
+    gap: var(--spacing-8);
+  }
+  .about-text__name .color-primary {
+    letter-spacing: 6px;
+  }
+
+  /* 플로팅 태그 */
+  .about-tag--1 {
+    top: 27%;
+  }
+  .about-tag--3 {
+    bottom: 26%;
+    right: -31%;
   }
 
   /* 1025 미만 마우스 애니메이션 숨김 처리 */

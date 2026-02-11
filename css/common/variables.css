@@ -108,15 +108,13 @@
   --font-size-6xl: 80px;
   
   /* 주요 폰트 사이즈 */
-  --font-size-body: 16px;
+  --font-size-body: var(--font-size-md);
   --font-size-section-title: 36px;
   --font-size-slogan-title: 56px;
   
   /* --------- 섹션별 전용 속성 --------- */
   /* SKILL 섹션 전용 */
   --color-skill-item-bg: #f5f5f5;
-  /* --color-skill-item-bg: #F8FAFC; */
-  /* --color-skill-item-bg: #F1F5F9; */
   
   /* WEB 섹션 전용 */
   --color-well-life-bg: #e6e7f2;
