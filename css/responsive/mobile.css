@@ -54,7 +54,6 @@
   .inner > h2 {
     margin: 0 auto;
   }
-
   /* ########## END - LAYOUT ########## */
 
 
@@ -111,54 +110,64 @@
 
 
   /* ########## SECTION - ABOUT ########## */
-  #about {
-    padding: var(--spacing-64) var(--spacing-24);
-    height: auto;
-  }
-  #about .inner {
-    gap: var(--spacing-16);
-    padding-bottom: var(--spacing-32);
-  }
-
-  /* about-intro */
-  .about-intro {
-    margin-top: var(--spacing-32);
-    margin-bottom: var(--spacing-32);
-    padding-left: 0;
-  }
-  .about-intro__title {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto;
-  }
-  .about-intro__text {
-    margin-top: var(--spacing-20);
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-64);
     padding: 0 var(--spacing-32);
   }
-  .about-intro__text span {
-    display: inline;
+
+  /* 좌측 텍스트 부분(about-text) */
+  .about-text {
+    /* max-width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .about-intro__name {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: var(--spacing-32);
-    gap: var(--spacing-20);
+  .about-text__role {
+    margin-bottom: var(--spacing-8);
+  }
+  .about-text__name {
+    margin-bottom: var(--spacing-24);
+  }
+  .about-text__btn-group {
+    justify-content: center;
   }
 
-  /* about-info */
-  .about-info__item {
-    gap: var(--spacing-20);
+  /* 우측 사진 부분(about-visual) */
+  .about-visual {
+    max-width: 100%;
+    justify-content: center;
   }
-  .about-info__item:not(:last-child) {
-    margin-bottom: var(--spacing-16);
-  }
-  .about-info__item-label {
-    width: 80px;
+  .about-visual__image-box {
+    max-width: 280px;
   }
 
+  /* 플로팅 태그(about-tag) */
+  .about-tag {
+    padding: var(--spacing-8) var(--spacing-16);
+    border-radius: 12px;
+  }
+  .about-tag__text {
+    font-size: var(--font-size-sm);
+  }
+  .about-tag__icon {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+  .about-tag--1 { 
+    top: 5%; 
+    left: -10%; 
+  }
+  .about-tag--2 { 
+    bottom: 0%; 
+    left: -10%; 
+  }
+  .about-tag--3 { 
+    bottom: 20%; 
+    right: -10%; 
+  }
   /* ########## END - ABOUT ########## */
 
 
@@ -749,11 +758,39 @@
   .project-table thead th:first-child {
     width: 30%;
   }
+  /* ========== END - Web, React 공통 컴포넌트 ========== */
 
   /* project-achievement */
   .project-achievement__list li {
     padding-left: calc(var(--spacing-12) - 1px);
   }
+
+  /* ========== SECTION - ABOUT ========== */
+  .about-content {
+    gap: var(--spacing-32);
+  }
+
+  /* 좌측 텍스트 영역 */
+  .about-text__role, .about-text__name {
+    font-size: var(--font-size-4xl);
+  }
+  .about-text__btn-group {}
+  .about-btn {
+    padding: var(--spacing-8) var(--spacing-16);
+  }
+  
+
+
+  /* 우측 프로필 사진 영역 */
+  .about-tag__text {
+    display: none;
+  }
+  .about-tag {
+    padding: calc(var(--spacing-8) - 2px);
+    border-radius: 50%;
+    gap: 0;
+  }
+  /* ========== END - SECTION - ABOUT ========== */
 
 
   /* ########## SECTION - SKILL (Bento Grid) ########## */

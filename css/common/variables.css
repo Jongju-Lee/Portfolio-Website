@@ -52,7 +52,7 @@
   --shadow-color-box-light: 0 0 12px rgba(0, 0, 0, 0.15);
   --shadow-util-btn: 0 4px 8px rgba(0, 0, 0, 0.2);
   --shadow-accent: 0 0 12px rgba(var(--color-primary-rgb), 0.3);
-  --shadow-accent-light: 0 10px 25px rgba(0, 173, 83, 0.06), 0 4px 10px rgba(0, 0, 0, 0.02);
+  --shadow-accent-light: 0 8px 24px rgba(var(--color-primary-rgb), 0.1);
   --drop-shadow-mockup: 0 10px 10px rgba(0, 0, 0, 0.2);
   --drop-shadow-normal: 0 4px 4px rgba(0, 0, 0, 0.15);
   --drop-shadow-light: 0 4px 4px rgba(0, 0, 0, 0.1);

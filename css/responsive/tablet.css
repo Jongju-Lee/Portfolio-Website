@@ -1,6 +1,6 @@
 /* ========== 1280px 반응형 ========== */
 @media (max-width: 1280px) {
-  /* ----- Header ----- */
+  /* ========== Header ========== */
   header {
     padding: 0 var(--spacing-32);
   }
@@ -13,6 +13,53 @@
   .header__sidebar-btn {
     display: block;
   }
+
+
+  /* ========== ABOUT SECTION ========== */
+  #about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 100vh; /* Fallback */
+    min-height: 100dvh;
+    padding: 100px 40px;
+  }
+  #about::after {
+    display: none;
+  }
+  .about-inner {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+  .about-content {
+    max-width: none;
+    padding: 0 var(--spacing-64);
+  }
+  
+  /* 좌측 텍스트 영역(about-text) */
+  .about-text__role,
+  .about-text__name {
+    font-size: var(--font-size-5xl);
+  }
+
+  /* 우측 사진 영역(about-visual) */
+  .about-visual__image-box {
+    max-width: 320px;
+  }
+  /* 플로팅 태그 */
+  .about-tag--1 { 
+    left: -35%; 
+  }
+  .about-tag--2 { 
+    left: -10%; bottom: 10%; 
+  }
+  .about-tag--3 { 
+    right: -10%; 
+  }
+  /* ========== END - ABOUT SECTION ========== */
 }
 
 
@@ -29,7 +76,6 @@
     --util-btn-size: 56px;
     --util-btn-offset: 28px;
     --util-btn-offset-minus: -28px;
-
 
     /* ----- TABLET 폰트 사이즈 ----- */
     /* 기존 --font-size-lg: 18px */
@@ -90,35 +136,23 @@
   }
   /* ########## END - HEADER ########## */
 
-
-  /* ########## SECTION - ABOUT ########## */
-  #about {
-    padding: var(--spacing-80) var(--spacing-60) var(--spacing-100);
-    height: auto;
-  }
-  #about .inner {
-    gap: var(--spacing-32);
-    padding-bottom: var(--spacing-32);
-  }
+  /* ========== ABOUT SECTION ========== */
   .about-content {
-    -moz-column-gap: var(--spacing-40);
-    column-gap: var(--spacing-40);
-    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-80);
   }
 
-  /* about-intro */
-  .about-intro {
-    margin: 0;
-    margin-top: var(--spacing-48);
-    max-width: 480px;
+  .about-text {
+    text-align: center;
   }
 
-  /* about-photo */
-  .about-photo {
-    width: 268px;
+  /* 1025 미만 마우스 애니메이션 숨김 처리 */
+  .about-mouse {
+    display: none;
   }
+  /* ========== END - ABOUT SECTION ========== */
 
-  /* ########## END - ABOUT ########## */
 
 
   /* ########## SECTION - SKILL ########## */

@@ -1,111 +1,269 @@
 ﻿/* ========== SECTIONS-TOP.CSS ==========
  * ====================================== */
 
-
-/* ########## About Section ########## */
+/* ========== ABOUT SECTION ========== */
 #about {
+  position: relative;
   height: 100vh; /* Fallback */
   height: 100dvh;
-  /* height: calc(100vh - var(--header-height));
-  height: calc(100dvh - var(--header-height)); */
+  padding: var(--section-padding);
+  padding-top: 220px;
+  background-color: var(--color-bg-light-blue);
 }
-#about .inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--spacing-48);
-  height: 100%;
-  padding-bottom: var(--spacing-36);
+#about::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 17%;
+  background-color: var(--color-bg-white);
+  clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+  z-index: 20;
 }
-
-/* ----- about-content ----- */
+.about-inner {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .about-content {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  -moz-column-gap: var(--spacing-32);
-  column-gap: var(--spacing-32);
-  row-gap: var(--spacing-48);
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 var(--spacing-100);
+  z-index: 10;
 }
 
-/* ----- about-intro ----- */
-.about-intro {
-  margin: 0 auto;
-  margin-top: var(--spacing-32);
-  padding-left: var(--spacing-60);
+
+/* 좌측 텍스트 영역(about-text) */
+.about-text {
+  flex-shrink: 0;
+  z-index: 10;
 }
-.about-intro__title {
-  font-family: var(--font-slogan);
-  font-size: var(--font-size-slogan-title);
-  color: var(--color-primary);
-}
-.about-intro__text {
-  margin-top: var(--spacing-12);
-  font-size: var(--font-size-xl);
-  line-height: 1.8em;
-  text-align: justify;
+.about-text__role {
+  font-size: var(--font-size-6xl);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-color-title);
+  letter-spacing: -1px;
   word-break: keep-all;
-}
-.about-intro__text span {
+  text-shadow: 
+    1px 1px 0 rgba(var(--color-black-rgb), 0.4),
+    2px 2px 0 rgba(var(--color-black-rgb), 0.3),
+    3px 3px 0 rgba(var(--color-black-rgb), 0.2),
+    6px 6px 10px rgba(var(--color-black-rgb), 0.1);
+  }
+.about-text__role span {
   display: block;
 }
-.about-intro__text span b {
-  font-weight: 600;
-}
-.about-intro__name {
-  display: flex;
-  align-items: end;
-  gap: var(--spacing-24);
-  margin-top: var(--spacing-40);
-}
-.about-intro__name span {
-  font-size: var(--font-size-xl);
-  line-height: 1.2em;
-}
-.about-intro__name em {
-  font-size: var(--font-size-4xl);
+.about-text__name {
+  font-size: var(--font-size-6xl);
   font-weight: 700;
-  line-height: 1em;
-  letter-spacing: var(--spacing-16);
+  line-height: 1.2;
+  color: var(--text-color-body);
+  margin-bottom: var(--spacing-32);
+  white-space: nowrap;
+}
+.about-text__name .color-primary {
+  color: var(--color-primary);
+  font-weight: 800;
+  letter-spacing: 8px;
+  /* text-shadow: 
+    1px 1px 0 rgba(var(--color-primary-rgb), 0.4),
+    2px 2px 0 rgba(var(--color-primary-rgb), 0.3),
+    3px 3px 0 rgba(var(--color-primary-rgb), 0.2),
+    6px 6px 10px rgba(var(--color-primary-rgb), 0.1); */
+}
+.about-text__name .e-light {
+  font-weight: 200;
 }
 
-/* ----- about-photo ----- */
-.about-photo {
-  flex-shrink: 0;
-  width: 320px;
-}
-
-/* ----- about-info ----- */
-.about-info {
-  margin-top: auto;
-}
-.about-info__item {
+/* 버튼 그룹(about-text__btn-group) */
+.about-text__btn-group {
   display: flex;
-  align-items: end;
-  gap: var(--spacing-24);
+  gap: var(--spacing-16);
 }
-.about-info__item:not(:last-child) {
-  margin-bottom: var(--spacing-24);
+.about-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-16) var(--spacing-32);
+  border-radius: 50px;
+  /* font-size: var(--font-size-lg); */
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.3s ease;
 }
-.about-info__item-label {
-  width: 90px;
-  font-family: var(--font-EN);
-  font-size: var(--font-size-2xl);
-  font-weight: 400;
-  line-height: 1em;
-  text-align: right;
+
+.about-btn--primary {
+  background: linear-gradient(135deg, #4f46e5 0%, var(--color-primary) 100%);
+  color: var(--text-color-white) !important;
+  box-shadow: 0 8px 16px rgba(var(--color-primary-rgb), 0.3);
+}
+.about-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(var(--color-primary-rgb), 0.4);
+}
+.about-btn--secondary {
+  background-color: var(--color-bg-white);
+  box-shadow: 0 8px 16px rgba(var(--color-primary-rgb), 0.15);
+  border: none;
+}
+.about-btn--secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(var(--color-primary-rgb), 0.25);
+}
+
+/* ----- 프로필 사진 영역(about-visual) ----- */
+.about-visual {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 50%;
+}
+.about-visual__image-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ----- 플로팅 태그 ----- */
+.about-tag {
+  position: absolute;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-12);
+  padding: var(--spacing-12) var(--spacing-24);
+  border-radius: 16px;
+  background-color: rgba(var(--color-white-rgb), 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(var(--color-black-rgb), 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+.about-tag__text {
+  font-family: var(--font-KR);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  color: var(--text-color-title);
+  white-space: nowrap;
+}
+.about-tag__text b {
+  font-weight: 800;
+}
+/* 플로팅 태그 아이콘 */
+.about-tag__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-color-box-light);
+  font-size: 14px;
+}
+.about-tag--1 {
+  top: 22%;
+  left: -22%;
+  animation-delay: 0s;
+}
+.about-tag--1 .about-tag__icon::before {
+  content: 'P';
+  font-weight: 800;
+  color: var(--color-positive);
+}
+.about-tag--2 {
+  bottom: 13%;
+  left: -27%;
+  animation-delay: 1.5s;
+}
+.about-tag--2 .about-tag__icon::before {
+  content: 'A';
+  font-weight: 800;
   color: var(--color-primary);
 }
-.about-info__item span {
-  font-size: var(--font-size-xl);
-  line-height: 1em;
+.about-tag--3 {
+  bottom: 35%;
+  right: -20%;
+  animation-delay: 3s;
+}
+.about-tag--3 .about-tag__icon::before {
+  content: 'C';
+  font-weight: 800;
+  color: var(--color-attention);
 }
 
+/* ########## 마우스 스크롤 애니메이션 ########## */
+.about-mouse {
+  position: absolute;
+  bottom: 6.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8);
+  z-index: 30;
+}
+.about-mouse__icon {
+  width: 36px;
+  height: 52px;
+  border: 2px solid var(--color-primary);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+}
+.about-mouse__dot {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  animation: mouseScroll 2s ease-in-out infinite;
+}
+.about-mouse__text {
+  font-family: var(--font-EN);
+  font-weight: 500;
+  color: rgba(var(--color-primary-rgb), 0.6);
+  letter-spacing: 2px;
+}
+
+/* 태그 플로팅 애니메이션 */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 마우스 스크롤 애니메이션 */
+@keyframes mouseScroll {
+  0% { 
+      opacity: 0; 
+      transform: translate(-50%, 0); 
+  }
+  50% { 
+      opacity: 1; 
+      transform: translate(-50%, 6px); 
+  }
+  100% { 
+      opacity: 0; 
+      transform: translate(-50%, 12px); 
+  }
+}
+/* ========== END - ABOUT SECTION ========== */
 
 
 /* ########## Edu (Experience) Section ########## */
-
 /* ----- edu-content ----- */
 .edu-content {
   margin-top: var(--spacing-100);

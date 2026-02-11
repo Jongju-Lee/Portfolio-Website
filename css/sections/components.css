@@ -605,7 +605,7 @@
   height: var(--spacing-60);
   border: 1px solid rgba(var(--color-white-rgb), 0.3);
   border-radius: var(--spacing-8);
-  background-color: rgba(var(--color-black-rgb), 0.4);
+  background-color: rgba(var(--color-black-rgb), 0.5);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   box-shadow: 0 var(--spacing-4) var(--spacing-16) rgba(var(--color-black-rgb), 0.2);
@@ -656,7 +656,7 @@
   align-items: center;
   width: auto;
   padding: var(--spacing-16) var(--spacing-20);
-  border: 1px solid rgba(var(--color-white-rgb), 0.15);
+  border: 1px solid rgba(var(--color-white-rgb), 0.3);
   border-radius: var(--spacing-8);
   background-color: rgba(var(--color-black-rgb), 0.5);
   backdrop-filter: blur(4px);
