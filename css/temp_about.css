@@ -44,14 +44,14 @@
   line-height: 1.2;
   color: var(--text-color-body);
   margin-bottom: var(--spacing-32);
-  letter-spacing: 3px;
 }
 .about-text__name .color-primary {
   color: var(--color-primary);
   font-weight: 800;
+  letter-spacing: 8px;
 }
-.about-text__name .e-light {
-  font-weight: 200;
+.about-text__name .thin {
+  font-weight: 100;
 }
 
 /* Buttons */
@@ -140,11 +140,10 @@
   gap: var(--spacing-12);
   padding: var(--spacing-12) var(--spacing-24);
   border-radius: 16px;
-  background-color: rgba(var(--color-white-rgb), 0.8);
-  background-color: rgba(var(--color-white-rgb), 0.2);
-  backdrop-filter: blur(10px);
+  background-color: rgba(var(--color-white-rgb), 0.4);
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(var(--color-black-rgb), 0.1);
   animation: float 6s ease-in-out infinite;
 }
 
@@ -188,7 +187,7 @@
 .about-tag--2 {
   bottom: 18%;
   left: -27%;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 .about-tag--2 .about-tag__icon::before {
   content: 'P';
@@ -199,7 +198,7 @@
 .about-tag--3 {
   bottom: 35%;
   right: -30%;
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 .about-tag--3 .about-tag__icon::before {
   content: 'R';
@@ -222,8 +221,8 @@
 }
 
 .about-mouse__icon {
-  width: 32px;
-  height: 48px;
+  width: 36px;
+  height: 52px;
   border: 2px solid var(--color-primary);
   border-radius: 16px;
   display: flex;
@@ -244,8 +243,8 @@
 .about-mouse__text {
   font-family: var(--font-EN);
   font-weight: 500;
-  color: rgba(var(--color-primary-rgb), 0.5);
-  letter-spacing: 1px;
+  color: rgba(var(--color-primary-rgb), 0.6);
+  letter-spacing: 2px;
 }
 
 
