@@ -23,7 +23,7 @@
     height: auto;
     min-height: 100vh; /* Fallback */
     min-height: 100dvh;
-    padding: 100px 40px;
+    padding: var(--spacing-100) var(--spacing-40);
   }
   #about::after {
     display: none;
@@ -35,7 +35,6 @@
     transform: none;
   }
   .about-content {
-    max-width: none;
     padding: 0 var(--spacing-64);
   }
   
@@ -79,7 +78,7 @@
     --util-btn-offset-minus: -28px;
 
     /* ----- TABLET 폰트 사이즈 ----- */
-    --font-size-md: 15px
+    --font-size-md: 15px;
     --font-size-lg: 16px;
     --font-size-xl: 18px;
     --font-size-2xl: 22px;
@@ -126,25 +125,25 @@
   /* ########## SECTION - HEADER ########## */
   /* header__logo */
   .header__logo {
-    width: 36px;
+    width: 32px;
   }
   /* ########## END - HEADER ########## */
 
   /* ========== ABOUT SECTION ========== */
   .about-content {
-    flex-direction: column;
     align-items: center;
-    gap: var(--spacing-80);
-    padding: 0 var(--spacing-32);
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto;
   }
 
   /* 좌측 텍스트 영역(about-text) */
   .about-text {
-    text-align: center;
     padding-top: 0;
   }
   .about-text__role {
     margin-bottom: var(--spacing-8);
+    font-size: var(--font-size-5xl);
     text-shadow: 
       2px 2px 0 rgba(var(--color-black-rgb), 0.3),
       3px 3px 0 rgba(var(--color-black-rgb), 0.2),
@@ -157,18 +156,32 @@
     letter-spacing: 6px;
   }
 
-  /* 플로팅 태그 */
-  .about-tag--1 {
-    top: 27%;
-  }
-  .about-tag--3 {
-    bottom: 26%;
-    right: -31%;
+  /* 우측 프로필 사진 영역(about-visual) */
+  .about-visual__image-box {
+    max-width: 300px;
   }
 
-  /* 1025 미만 마우스 애니메이션 숨김 처리 */
-  .about-mouse {
-    display: none;
+  /* 플로팅 태그 */
+  .about-tag {
+    padding: calc(var(--spacing-12) - 2px) var(--spacing-16);
+    border-radius: 12px;
+  }
+  .about-tag__icon {
+    width: 24px;
+    height: 24px;
+    font-size: var(--font-size-xs);
+  }
+  .about-tag--1 {
+    top: 40%;
+    left: -22%;
+  }
+  .about-tag--2 {
+    bottom: 4%;
+    left: -17%;
+  }
+  .about-tag--3 {
+    bottom: 25%;
+    right: -7%;
   }
   /* ========== END - ABOUT SECTION ========== */
 
@@ -394,6 +407,5 @@
   .mockup-box {
     display: none;
   }
-
   /* ########## END - 유틸리티 버튼 ########## */
 }

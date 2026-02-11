@@ -99,12 +99,16 @@
 
   /* header__logo */
   .header__logo {
-    width: 32px;
+    width: 28px;
   }
   /* ########## END - HEADER ########## */
 
 
   /* ########## SECTION - ABOUT ########## */
+  #about {
+    flex-direction: column;  
+    gap: var(--spacing-48);
+  }
   .about-content {
     flex-direction: column;
     text-align: center;
@@ -113,9 +117,8 @@
 
   /* 좌측 텍스트 부분(about-text) */
   .about-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    padding-top: 0;
   }
   .about-text__role {
     margin-bottom: var(--spacing-8);
@@ -163,6 +166,14 @@
   .about-tag--3 { 
     bottom: 28%;
     right: -17%; 
+  }
+
+  /* 마우스 애니메이션 */
+  .about-mouse {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
   }
   /* ########## END - ABOUT ########## */
 
@@ -784,17 +795,18 @@
     font-size: var(--font-size-md);
     font-weight: 500;
   }
-  
-
 
   /* 우측 프로필 사진 영역 */
+  .about-visual__image-box {
+    max-width: 240px;
+  }
   .about-tag__text {
-    display: none;
+    /* display: none; */
   }
   .about-tag {
-    padding: calc(var(--spacing-8) - 2px);
-    border-radius: 50%;
-    gap: 0;
+    /* padding: calc(var(--spacing-8) - 2px); */
+    /* border-radius: 50%; */
+    /* gap: 0; */
   }
   /* ========== END - SECTION - ABOUT ========== */
 

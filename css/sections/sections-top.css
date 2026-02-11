@@ -61,6 +61,7 @@
 }
 .about-text__name {
   display: flex;
+  justify-content: center;
   gap: var(--spacing-12);
   margin-top: var(--spacing-4);
   font-size: var(--font-size-6xl);
@@ -140,15 +141,15 @@
   gap: var(--spacing-12);
   padding: var(--spacing-12) var(--spacing-24);
   border-radius: 16px;
-  background-color: rgba(var(--color-white-rgb), 0.4);
+  background-color: rgba(var(--color-white-rgb), 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px 0 rgba(var(--color-black-rgb), 0.1);
   animation: float 6s ease-in-out infinite;
+  line-height: 1;
 }
 .about-tag__text {
   font-family: var(--font-KR);
-  font-size: var(--font-size-md);
   font-weight: 500;
   color: var(--text-color-title);
   white-space: nowrap;
@@ -166,7 +167,7 @@
   align-items: center;
   background-color: var(--color-white);
   box-shadow: var(--shadow-color-box-light);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
 }
 .about-tag--1 {
   top: 28%;
