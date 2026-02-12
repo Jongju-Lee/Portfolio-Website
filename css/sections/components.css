@@ -315,15 +315,20 @@
   position: fixed;
   width: var(--util-btn-size);
   height: var(--util-btn-size);
+  border: 1px solid rgba(var(--color-white-rgb), 0.3);
   border-radius: 50%;
-  background-color: var(--color-util-btn);
-  transition: all 0.5s, transform 1s, opacity 0.3s;
+  background-color: rgba(var(--color-black-rgb), 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 var(--spacing-4) var(--spacing-16) rgba(var(--color-black-rgb), 0.2);
+  transition: all 0.3s ease;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: var(--shadow-util-btn);
 }
 .util-btn:hover {
-  opacity: 0.7;
+  background-color: rgba(var(--color-black-rgb), 0.7);
+  box-shadow: 0 6px var(--spacing-24) rgba(var(--color-black-rgb), 0.3);
+  transform: translateY(-4px);
 }
 .util-btn:active {
   transform: scale(0.9);
@@ -331,7 +336,7 @@
 
 /* 각 요소별 on 상태 정의 */
 .top-btn--on {
-  opacity: 0.7;
+  opacity: 1;
   visibility: visible;
   pointer-events: all;
 }
@@ -372,8 +377,13 @@
   opacity: 0.7;
   visibility: visible;
   pointer-events: all;
-  background-color: var(--color-primary);
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-primary-btn);
   opacity: 1;
+}
+.mockup-box__open-btn:hover {
+  box-shadow: var(--shadow-primary-btn-hover);
+  transform: translateY(-4px);
 }
 .mockup-box__open-btn--initial-attention {
   animation: pulseGlowScale 1.5s ease-in-out 3;
@@ -388,7 +398,7 @@
 /* 목업 모음 활성화 시 */
 .mockup-box--on .mockup-box__open-btn {
   opacity: 1;
-  background-color: var(--color-primary);
+  background: var(--gradient-primary);
 }
 .mockup-box--on .mockup-box__open-btn:hover {
   opacity: 0.7;

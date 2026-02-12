@@ -45,16 +45,20 @@
   --color-line: #dfdfdf;
   --color-line-white: #ffffff;
 
+  /* --------- GRADIENT --------- */
+  --gradient-primary: linear-gradient(135deg, #4f46e5 0%, var(--color-primary) 100%);
+
   /* --------- SHADOW --------- */
   --shadow-normal: 0 4px 10px rgba(0, 0, 0, 0.08);
-  --shadow-light: 0 0 12px rgba(0, 0, 0, 0.05);
   --shadow-color-box: 0 0 8px rgba(0, 0, 0, 0.3);
   --shadow-color-box-light: 0 0 12px rgba(0, 0, 0, 0.15);
   --shadow-util-btn: 0 4px 8px rgba(0, 0, 0, 0.2);
-  --shadow-accent: 0 0 12px rgba(var(--color-primary-rgb), 0.3);
   --shadow-accent-light: 0 8px 24px rgba(var(--color-primary-rgb), 0.1);
+  --shadow-glass: 0px 4px 6px -4px rgba(var(--color-primary-rgb), 0.15), 0px 10px 15px -3px rgba(var(--color-primary-rgb), 0.08);
+  --shadow-glass-hover: 0px 8px 12px -4px rgba(var(--color-primary-rgb), 0.25), 0px 16px 24px -3px rgba(var(--color-primary-rgb), 0.15);
+  --shadow-primary-btn: 0 8px 16px rgba(var(--color-primary-rgb), 0.3);
+  --shadow-primary-btn-hover: 0 12px 24px rgba(var(--color-primary-rgb), 0.4);
   --drop-shadow-mockup: 0 10px 10px rgba(0, 0, 0, 0.2);
-  --drop-shadow-normal: 0 4px 4px rgba(0, 0, 0, 0.15);
   --drop-shadow-light: 0 4px 4px rgba(0, 0, 0, 0.1);
 
   /* --------- SPACING (4px Grid System) --------- */

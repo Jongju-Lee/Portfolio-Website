@@ -97,26 +97,20 @@
   font-weight: 700;
   line-height: 1;
   transition: all 0.3s ease;
+  box-shadow: var(--shadow-primary-btn);
 }
-
+.about-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-primary-btn-hover);
+}
 .about-btn--primary {
-  background: linear-gradient(135deg, #4f46e5 0%, var(--color-primary) 100%);
+  background: var(--gradient-primary);
   color: var(--text-color-white) !important;
-  box-shadow: 0 8px 16px rgba(var(--color-primary-rgb), 0.3);
-}
-.about-btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(var(--color-primary-rgb), 0.4);
 }
 .about-btn--secondary {
   background-color: var(--color-bg-white);
-  box-shadow: 0 8px 16px rgba(var(--color-primary-rgb), 0.15);
-  border: none;
 }
-.about-btn--secondary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(var(--color-primary-rgb), 0.25);
-}
+
 
 /* ----- 프로필 사진 영역(about-visual) ----- */
 .about-visual {
@@ -144,7 +138,7 @@
   background-color: rgba(var(--color-white-rgb), 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(var(--color-black-rgb), 0.1);
+  box-shadow: var(--shadow-glass);
   animation: float 6s ease-in-out infinite;
   line-height: 1;
 }
@@ -505,7 +499,7 @@
   font-weight: 700;
   color: var(--text-color-white);
   background-color: var(--color-primary);
-  box-shadow: var(--shadow-accent);
+  box-shadow: var(--shadow-accent-light);
 }
 .resume-hero__tag--text {
   font-size: var(--font-size-md);
@@ -677,18 +671,14 @@
   border: 1px solid rgba(226, 232, 240, 0.6);
   border-radius: 16px;
   background-color: rgba(var(--color-white-rgb), 0.6);
-  box-shadow: 
-    0px 4px 6px -4px rgba(var(--color-primary-rgb), 0.15),
-    0px 10px 15px -3px rgba(var(--color-primary-rgb), 0.08);
+  box-shadow: var(--shadow-glass);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .core-card:hover {
   transform: translateY(-8px);
-  box-shadow: 
-    0px 8px 12px -4px rgba(var(--color-primary-rgb), 0.25),
-    0px 16px 24px -3px rgba(var(--color-primary-rgb), 0.15);
+  box-shadow: var(--shadow-glass-hover);
 }
 .core-card__title {
   font-size: var(--font-size-2xl);
