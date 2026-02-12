@@ -499,6 +499,23 @@
   /* ########## END - RESUME ########## */
 
 
+  /* ########## SECTION - CORE ########## */
+  .core-content {
+    grid-template-columns: 1fr;
+    margin-top: var(--spacing-60);
+    max-width: 80%;
+  }
+
+  /* core-card */
+  .core-card__title {
+    font-size: var(--font-size-2xl);
+  }
+  .core-card__item {
+    font-size: var(--font-size-lg);
+  }
+  /* ########## END - CORE ########## */
+
+
   /* ########## SECTION - WEB ########## */
   /* ----- 컬러, 타이포 공통 스타일 ----- */
   /* 서브 타이틀 */
@@ -800,15 +817,28 @@
   .about-visual__image-box {
     max-width: 240px;
   }
-  .about-tag__text {
-    /* display: none; */
-  }
-  .about-tag {
-    /* padding: calc(var(--spacing-8) - 2px); */
-    /* border-radius: 50%; */
-    /* gap: 0; */
-  }
   /* ========== END - SECTION - ABOUT ========== */
+
+
+  /* ========== CORE SECTION ========== */
+  .core-content {
+    max-width: 95%;
+  }
+
+  /* core-card */
+  .core-card {
+    padding: var(--spacing-24);
+  }
+  .core-card__items {
+    margin-top: var(--spacing-16);
+  }
+  .core-card__title {
+    font-size: var(--font-size-xl);
+  }
+  .core-card__item {
+    font-size: var(--font-size-md);
+  }
+  /* ========== END - CORE SECTION ========== */
 
 
   /* ########## SECTION - SKILL (Bento Grid) ########## */
