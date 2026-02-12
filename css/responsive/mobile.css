@@ -504,7 +504,7 @@
   .core-content {
     grid-template-columns: 1fr;
     margin-top: var(--spacing-60);
-    max-width: 80%;
+    max-width: 460px;
   }
 
   /* core-card */

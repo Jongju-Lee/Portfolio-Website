@@ -552,7 +552,6 @@
   letter-spacing: 0.2px;
   color: var(--text-color-gray);
   background-color: var(--color-bg-white);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   transition: background-color 0.2s;
 }
 .resume-hero__meta-tags span:hover {
@@ -696,25 +695,23 @@
   box-shadow: var(--shadow-glass);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .core-card:hover {
   transform: translateY(-8px);
+  background-color: rgba(var(--color-primary-rgb), 0.03);
   box-shadow: var(--shadow-glass-hover);
 }
 .core-card__title {
   font-size: var(--font-size-2xl);
+  color: var(--text-color-gray);
   line-height: 1;
+}
+.core-card__title b {
   color: var(--text-color-title);
 }
-.core-card__title.font-kr {
-  font-family: var(--font-KR);
-  font-weight: 600;
-}
-.core-card__title.font-en {
-  font-family: var(--font-EN);
-  font-weight: 500;
-  letter-spacing: -0.2px;
+.core-card__title .font-kr {
+  letter-spacing: -0.5px;
 }
 .core-card__items {
   display: flex;
@@ -729,7 +726,7 @@
   font-family: var(--font-EN);
   font-size: var(--font-size-xl);
   line-height: 1;
-  color: #5C5C5C;
+  color: var(--text-color-gray);
 }
 .core-card__dot {
   flex-shrink: 0;

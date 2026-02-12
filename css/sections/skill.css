@@ -9,7 +9,7 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: var(--spacing-24);
-  max-width: 1200px;
+  max-width: 1080px;
   margin: var(--spacing-60) auto 0;
 }
 
@@ -144,7 +144,7 @@
   line-height: 1.4;
   text-align: center;
   word-break: keep-all;
-  color: var(--text-color-gray);
+  color: var(--text-color-light-gray);
 }
 
 
