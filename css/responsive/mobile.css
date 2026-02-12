@@ -743,14 +743,12 @@
 
   /* ########## 사이드 바 ########## */
   .sidebar-nav__inner {
-    max-width: 240px;
-    padding-bottom: 20%;
+    max-width: 280px;
   }
 
   /* sidebar-nav__links */
   .sidebar-nav__links {
-    padding-left: var(--spacing-40);
-    padding-right: 0;
+    padding: var(--spacing-80) var(--spacing-40) 0;
   }
   .sidebar-nav__item span {
     font-size: var(--font-size-2xl);

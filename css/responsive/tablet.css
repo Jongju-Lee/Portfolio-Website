@@ -79,6 +79,7 @@
     margin-top: var(--spacing-20);   
   }
   .core-card__item {
+    gap: var(--spacing-8);
     font-size: var(--font-size-md);
   }
   /* ========== END - CORE SECTION ========== */
