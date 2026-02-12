@@ -54,7 +54,7 @@
 }
 .web-row__circle-label {
   font-weight: 400;
-  color: var(--text-color-dark-gray);
+  color: var(--text-color-gray);
   text-align: center;
   line-height: 1.3em;
 }
@@ -322,7 +322,7 @@
 }
 .web-theme__circle--bg {
   background-color: var(--color-bg-white);
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--border-color-light-gray);
 }
 
 /* ---------- Row 3 - web-typo ---------- */

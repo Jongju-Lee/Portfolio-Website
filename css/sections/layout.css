@@ -67,7 +67,7 @@ header {
   font-family: var(--font-EN);
   font-weight: 400;
   font-size: var(--font-size-lg);
-  color: var(--text-color-dark-gray);
+  color: var(--text-color-gray);
   transition: color 0.5s ease-in;
 }
 .header--scrolled .header__gnb-item {
@@ -125,7 +125,7 @@ header {
   gap: var(--spacing-12);
   font-size: var(--font-size-sm);
   color: var(--text-color-light-gray);
-  color: var(--color-line);
+  color: var(--border-color-light-gray);
   font-weight: 500;
 }
 

@@ -70,11 +70,13 @@
   margin-bottom: var(--spacing-32);
   white-space: nowrap;
 }
-.about-text__name .color-primary {
-  color: var(--color-primary);
+.about-text__name .gradient-text {
   font-weight: 800;
   letter-spacing: 8px;
- 
+  text-shadow: 
+    2px 2px 0 rgba(var(--color-primary-rgb), 0.15),
+    3px 3px 0 rgba(var(--color-primary-rgb), 0.1),
+    6px 6px 10px rgba(var(--color-primary-rgb), 0.05);
 }
 .about-text__name .e-light {
   font-weight: 200;
@@ -134,13 +136,15 @@
   align-items: center;
   gap: var(--spacing-12);
   padding: var(--spacing-12) var(--spacing-24);
+  border: 1px solid rgba(var(--color-white-rgb), 1);
+  border: 1px solid rgba(var(--color-white-rgb), 0.6);
   border-radius: 16px;
+  line-height: 1;
   background-color: rgba(var(--color-white-rgb), 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--shadow-glass);
   animation: float 6s ease-in-out infinite;
-  line-height: 1;
 }
 .about-tag__text {
   font-family: var(--font-KR);
@@ -324,7 +328,7 @@
   display: inline-block;
   flex: 1;
   width: 2px;
-  background-color: var(--color-line);
+  background-color: var(--border-color-light-gray);
 }
 
 /* ----- edu-timeline__desc ----- */
@@ -376,12 +380,12 @@
   display: inline-block;
   margin-bottom: var(--spacing-16);
   padding: var(--spacing-16) var(--spacing-24);
-  border-left: 4px solid var(--text-color-dark-gray);
+  border-left: 4px solid var(--text-color-gray);
   border-radius: 6px;
   background-color: var(--color-bg-light-gray);
   font-size: var(--font-size-lg);
   line-height: 1.5em;
-  color: var(--text-color-dark-gray);
+  color: var(--text-color-gray);
 }
 .resume-main__caption,
 .resume-sub__caption {
@@ -419,14 +423,14 @@
   gap: var(--spacing-24);
   margin-bottom: var(--spacing-32);
   padding: var(--spacing-40) var(--spacing-48);
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--border-color-light-gray);
   border-radius: var(--spacing-12);
   background-color: var(--color-bg-white);
   box-shadow: var(--shadow-accent-light);
 }
 .resume-hero__header {
   padding-bottom: var(--spacing-20);
-  border-bottom: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--border-color-light-gray);
 }
 .resume-hero__title {
   display: block;
@@ -469,7 +473,7 @@
   margin-bottom: var(--spacing-20);
 }
 .resume-hero__list li b {
-  color: var(--text-color-title);
+  color: var(--text-color-dark-gray);
 }
 
 /* ----- resume-hero__meta ----- */
@@ -480,7 +484,7 @@
   gap: var(--spacing-16);
   width: 30%;
   padding-left: var(--spacing-48);
-  border-left: 1px dashed var(--color-line);
+  border-left: 1px dashed var(--border-color-light-gray);
 }
 .resume-hero__meta-label {
   display: block;
@@ -522,13 +526,13 @@
   min-width: -moz-fit-content;
   min-width: fit-content;
   padding: var(--spacing-8) var(--spacing-12);
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--border-color-light-gray);
   border-radius: 4px;
   font-size: var(--font-size-sm);
   font-weight: 400;
   line-height: 1em;
   letter-spacing: 0.2px;
-  color: var(--text-color-dark-gray);
+  color: var(--text-color-gray);
   background-color: var(--color-bg-white);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   transition: background-color 0.2s;
@@ -548,7 +552,7 @@
   display: block;
   width: 100%;
   overflow: hidden;
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--border-color-light-gray);
   border-radius: var(--spacing-12);
   background-color: var(--color-bg-white);
   box-shadow: var(--shadow-accent-light);
@@ -577,8 +581,8 @@
 }
 .resume-sub__item {
   padding: var(--spacing-20) var(--spacing-24);
-  border-bottom: 1px solid var(--color-line);
-  color: var(--text-color-dark-gray);
+  border-bottom: 1px solid var(--border-color-light-gray);
+  color: var(--text-color-gray);
   transition: background-color 0.2s;
 }
 .resume-sub__item:last-child {
@@ -620,16 +624,16 @@
 }
 .resume-sub__pj-client {
   border-color: transparent;
-  color: var(--text-color-white);
   background-color: var(--text-color-gray);
+  color: var(--text-color-white);
 }
 .resume-sub__item:hover .resume-sub__pj-client {
-  background-color: var(--text-color-dark-gray);
+  background-color: var(--text-color-gray);
 }
 .resume-sub__pj-task {
-  border-color: var(--color-line);
-  color: var(--text-color-gray);
+  border-color: var(--border-color-light-gray);
   background-color: var(--color-bg-light-gray);
+  color: var(--text-color-gray);
 }
 .resume-sub__item:hover .resume-sub__pj-task {
   background-color: var(--color-bg-white);

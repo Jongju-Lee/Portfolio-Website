@@ -19,11 +19,20 @@
   --color-white-rgb: 255, 255, 255;
   --color-black: #000000;
   --color-black-rgb: 0, 0, 0;
+  --color-charcoal-100: #d6d6d6;
+  --color-charcoal-200: #adadad;
+  --color-charcoal-300: #858585;
+  --color-charcoal-400: #5c5c5c;
+  --color-charcoal-500: #333333;
+  --color-charcoal-600: #292929;
+  --color-charcoal-700: #1f1f1f;
+  --color-charcoal-800: #141414;
+  --color-charcoal-900: #0a0a0a;
 
   /* --------- THEME COLOR --------- */
   --color-primary: #3730a3;
   --color-primary-rgb: 55, 48, 163;
-  --color-foreground: #333333;
+  --color-foreground: var(--color-charcoal-500);
   --color-bg-white: #ffffff;
   --color-bg-light-gray: #f5f5f5;
   --color-bg-light-blue: #efeef8;
@@ -33,33 +42,34 @@
   --color-attention: #ff771f;
 
   /* --------- TEXT COLOR --------- */
-  --text-color-title: #333333;
-  --text-color-body: #333333;
-  --text-color-dark-gray: #555555;
-  --text-color-gray: #777777;
-  --text-color-light-gray: #999999;
-  --text-color-white: #ffffff;
+  --text-color-body: var(--color-charcoal-500);
+  --text-color-title: var(--color-charcoal-600);
+  --text-color-dark-gray: var(--color-charcoal-600);
+  --text-color-gray: var(--color-charcoal-400);
+  --text-color-light-gray: var(--color-charcoal-300);
+  --text-color-white: var(--color-white);
   --text-highlight-bg: rgba(var(--color-primary-rgb), 0.1);
 
   /* --------- BORDER COLOR --------- */
-  --color-line: #dfdfdf;
-  --color-line-white: #ffffff;
+  --border-color-light-gray: var(--color-charcoal-100);
+  --border-color-white: var(--color-white);
 
   /* --------- GRADIENT --------- */
-  --gradient-primary: linear-gradient(135deg, #4f46e5 0%, var(--color-primary) 100%);
+  --gradient-primary: linear-gradient(135deg, #4b43da 0%, var(--color-primary) 100%);
+  --gradient-primary-text: linear-gradient(135deg, #473fce 0%, var(--color-primary) 100%);
 
   /* --------- SHADOW --------- */
-  --shadow-normal: 0 4px 10px rgba(0, 0, 0, 0.08);
-  --shadow-color-box: 0 0 8px rgba(0, 0, 0, 0.3);
-  --shadow-color-box-light: 0 0 12px rgba(0, 0, 0, 0.15);
-  --shadow-util-btn: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-normal: 0 4px 10px rgba(var(--color-black-rgb), 0.08);
+  --shadow-color-box: 0 0 8px rgba(var(--color-black-rgb), 0.3);
+  --shadow-color-box-light: 0 0 12px rgba(var(--color-black-rgb), 0.15);
+  --shadow-util-btn: 0 4px 8px rgba(var(--color-black-rgb), 0.2);
   --shadow-accent-light: 0 8px 24px rgba(var(--color-primary-rgb), 0.1);
   --shadow-glass: 0px 4px 6px -4px rgba(var(--color-primary-rgb), 0.15), 0px 10px 15px -3px rgba(var(--color-primary-rgb), 0.08);
   --shadow-glass-hover: 0px 8px 12px -4px rgba(var(--color-primary-rgb), 0.25), 0px 16px 24px -3px rgba(var(--color-primary-rgb), 0.15);
   --shadow-primary-btn: 0 8px 16px rgba(var(--color-primary-rgb), 0.3);
   --shadow-primary-btn-hover: 0 12px 24px rgba(var(--color-primary-rgb), 0.4);
-  --drop-shadow-mockup: 0 10px 10px rgba(0, 0, 0, 0.2);
-  --drop-shadow-light: 0 4px 4px rgba(0, 0, 0, 0.1);
+  --drop-shadow-mockup: 0 10px 10px rgba(var(--color-black-rgb), 0.2);
+  --drop-shadow-light: 0 4px 4px rgba(var(--color-black-rgb), 0.1);
 
   /* --------- SPACING (4px Grid System) --------- */
   --spacing-4: 4px;

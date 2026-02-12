@@ -135,7 +135,7 @@
   width: 8px;
   height: 8px;
   margin: 0 6px;
-  background-color: var(--color-line);
+  background-color: var(--border-color-light-gray);
   opacity: 1;
   transition: all 0.3s ease;
 }

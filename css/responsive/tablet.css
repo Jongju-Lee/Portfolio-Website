@@ -175,8 +175,12 @@
   .about-text__name {
     gap: var(--spacing-8);
   }
-  .about-text__name .color-primary {
+  .about-text__name .gradient-text {
     letter-spacing: 6px;
+    text-shadow: 
+      2px 2px 0 rgba(var(--color-primary-rgb), 0.15),
+      3px 3px 0 rgba(var(--color-primary-rgb), 0.1),
+      4px 4px 6px rgba(var(--color-primary-rgb), 0.05);
   }
 
   /* 우측 프로필 사진 영역(about-visual) */
@@ -310,7 +314,7 @@
     padding-left: 0;
     padding-top: var(--spacing-24);
     border-left: none;
-    border-top: 1px dashed var(--color-line);
+    border-top: 1px dashed var(--border-color-light-gray);
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--spacing-24);

@@ -155,6 +155,13 @@ img {
 .color-black {
   color: var(--color-text-body) !important;
 }
+.gradient-text {
+  background: var(--gradient-primary-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
 
 /* 스크린 리더 에만 인식(보이지 않음) */
 .sr-only {
