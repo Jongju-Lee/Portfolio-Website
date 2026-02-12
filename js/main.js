@@ -431,6 +431,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ############### About Tag Toggle ############### */
+  const aboutTags = document.querySelectorAll('.about-tag');
+  
+  // 480px 미만에서 기본적으로 닫힌 상태로 설정
+  function initAboutTags() {
+    const isMobile = window.innerWidth < 480;
+    aboutTags.forEach(function (tag) {
+      if (isMobile) {
+        tag.classList.add('about-tag--collapsed');
+      } else {
+        tag.classList.remove('about-tag--collapsed');
+      }
+    });
+  }
+  
+  // 초기화
+  initAboutTags();
+  
+  // 클릭 이벤트
+  aboutTags.forEach(function (tag) {
+    tag.addEventListener('click', function () {
+      this.classList.toggle('about-tag--collapsed');
+    });
+  });
+  
+  // 리사이즈 이벤트
+  let aboutTagResizeTimeout;
+  window.addEventListener('resize', function () {
+    clearTimeout(aboutTagResizeTimeout);
+    aboutTagResizeTimeout = setTimeout(initAboutTags, 300);
+  });
+
 
   /* ############### AOS.js ############### */
   AOS.init({

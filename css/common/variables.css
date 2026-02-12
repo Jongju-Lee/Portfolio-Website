@@ -65,7 +65,7 @@
   --shadow-util-btn: 0 4px 8px rgba(var(--color-black-rgb), 0.2);
   --shadow-accent-light: 0 8px 24px rgba(var(--color-primary-rgb), 0.1);
   --shadow-glass: 0px 4px 6px -4px rgba(var(--color-primary-rgb), 0.15), 0px 10px 15px -3px rgba(var(--color-primary-rgb), 0.08);
-  --shadow-glass-hover: 0px 8px 12px -4px rgba(var(--color-primary-rgb), 0.25), 0px 16px 24px -3px rgba(var(--color-primary-rgb), 0.15);
+  --shadow-glass-hover: 0px 8px 12px -4px rgba(var(--color-primary-rgb), 0.2), 0px 16px 24px -3px rgba(var(--color-primary-rgb), 0.15);
   --shadow-primary-btn: 0 8px 16px rgba(var(--color-primary-rgb), 0.3);
   --shadow-primary-btn-hover: 0 12px 24px rgba(var(--color-primary-rgb), 0.4);
   --drop-shadow-mockup: 0 10px 10px rgba(var(--color-black-rgb), 0.2);
