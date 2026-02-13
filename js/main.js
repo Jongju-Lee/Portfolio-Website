@@ -348,22 +348,6 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ############### 멀티 박스(목업 모음) 관련 ############### */
   const mockupOpenBtn = document.querySelector('.mockup-box__open-btn');
 
-  // 로딩 완료 후 목업박스 버튼에 주목 애니메이션 적용 (타이밍은 CSS animation-delay로 제어)
-  const startMockupAnimation = () => {
-    if (mockupOpenBtn) {
-      mockupOpenBtn.classList.add('mockup-box__open-btn--initial-attention');
-      setTimeout(() => mockupOpenBtn.classList.remove('mockup-box__open-btn--initial-attention'), 5500); // 4.5초 애니메이션 + 1초 delay
-    }
-  };
-
-  // 로딩이 완료된 후 애니메이션 시작
-  if (window.loadingManager) {
-    window.addEventListener('load', startMockupAnimation);
-  } else {
-    // loadingManager가 없으면 즉시 시작
-    startMockupAnimation();
-  }
-
   // 목업박스 열기/닫기 기능
   if (mockupOpenBtn) {
     mockupOpenBtn.addEventListener('click', function () {

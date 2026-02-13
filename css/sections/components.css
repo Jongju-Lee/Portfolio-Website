@@ -385,10 +385,6 @@
   box-shadow: var(--shadow-primary-btn-hover);
   transform: translateY(-4px);
 }
-.mockup-box__open-btn--initial-attention {
-  animation: pulseGlowScale 1.5s ease-in-out 3;
-  animation-delay: 1s;
-}
 
 /* 애니메이션 동작 중 비활성화 */
 .mockup-box__open-btn--disabled {
@@ -497,23 +493,6 @@
   }
   100% {
     opacity: 0.7;
-  }
-}
-
-/* 펄스 + 글로우 애니메이션  */
-@keyframes pulseGlowScale {
-  0%,
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 transparent;
-  }
-  50% {
-    /* 최대 지점 */
-    transform: scale(1.05);
-    box-shadow:
-      0 0 15px 5px rgba(255, 119, 31, 0.7),
-      0 0 30px 12px rgba(255, 119, 31, 0.45),
-      0 0 45px 18px rgba(255, 119, 31, 0.2);
   }
 }
 
@@ -697,6 +676,18 @@
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+
+/* lightbox 뒤로가기 버튼 - 슬라이드업 애니메이션  */
+@keyframes slideUp {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 30px;
     opacity: 1;
   }
 }
