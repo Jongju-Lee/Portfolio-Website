@@ -23,7 +23,8 @@
   font-family: var(--font-EN);
   font-size: var(--font-size-2xl);
   font-weight: 600;
-  line-height: 1em;
+  line-height: 1;
+  letter-spacing: 0.2px;
   color: var(--text-color-title);
 }
 
