@@ -258,8 +258,7 @@
     aspect-ratio: auto;
   }
 
-  /* ########## END - SKILL (Bento Grid) ########## */
-
+  /* ########## END - SKILL ########## */
 
 
   /* ########## SECTION - EDU ########## */
@@ -271,41 +270,29 @@
   .edu-timeline__period-title {
     font-size: 20px;
   }
-
   /* ########## END - EDU ########## */
 
 
   /* ########## EXP SECTION ########## */
+  /* exp-content */
   .exp-content {
-    padding-left: var(--spacing-40);
+    padding-left: var(--spacing-48);
     margin-top: var(--spacing-60);
   }
-  .exp-timeline__item {
-    /* gap: var(--spacing-32); */
-    /* padding-bottom: var(--spacing-60); */
-  }
-  .exp-timeline__month {
-    width: 100px;
-    font-size: var(--font-size-lg);
-  }
-  .exp-timeline__item--first .exp-timeline__month {
-    font-size: var(--font-size-xl);
+
+  /* exp-timeline */
+  .exp-timeline {
+    gap: var(--spacing-64);
   }
   .exp-timeline__line {
-    left: 118px;
+    left: 152px;
   }
-  .exp-timeline__title h3 {
-    font-size: var(--font-size-xl);
+
+  /* exp-timeline__month */
+  .exp-timeline__month {
+    width: 100px;
   }
-  .exp-timeline__title-box p,
-  .exp-timeline__subtitle {
-    font-size: var(--font-size-lg);
-  }
-  .exp-timeline__date-range,
-  .exp-timeline__act {
-    font-size: var(--font-size-md);
-  }
-  /* ########## END - EXP ########## */
+  /* ########## END - EXP SECTION ########## */
 
   /* ########## SECTION - RESUME ########## */
   /* resume-main */

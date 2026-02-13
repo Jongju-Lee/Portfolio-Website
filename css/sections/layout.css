@@ -115,7 +115,7 @@ header {
 /* ########## Footer ########## */
 .footer {
   padding: var(--spacing-32) 0;
-  background-color: var(--color-foreground);
+  background-color: var(--color-charcoal-500);
   text-align: center;
 }
 .footer__text {

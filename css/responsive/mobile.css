@@ -378,71 +378,88 @@
 
 
   /* ########## EXP SECTION ########## */
+  /* exp-content */
   .exp-content {
     padding-left: 0;
-    margin-top: var(--spacing-48);
+    margin-top: var(--spacing-60);
+    width: 80%;
+    min-width: 400px;
   }
 
-  /* 세로 라인 숨김 */
-  .exp-timeline__line {
-    display: none;
-  }
-
-  /* 카드 레이아웃 */
+  /* exp-timeline */
   .exp-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-20);
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: var(--spacing-20); */
   }
+  .exp-timeline__line {
+    /* display: none; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+  }
+
+  /* exp-timeline__item */
   .exp-timeline__item {
+    position: relative;
     flex-direction: column;
     gap: var(--spacing-16);
     padding: var(--spacing-24);
-    padding-bottom: var(--spacing-24);
-    border: 1px solid rgba(226, 232, 240, 0.6);
+    border: 1px solid rgba(var(--color-black-rgb), 0.05);
     border-radius: 16px;
-    background-color: rgba(var(--color-white-rgb), 0.6);
+    background-color: var(--color-card-white);
     box-shadow: var(--shadow-glass);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  .exp-timeline__item:hover {
+    transform: translateY(-8px);
+    background-color: var(--color-card-white-hover);
+    box-shadow: var(--shadow-glass-hover);
   }
 
-  /* circle 숨김 */
+  /* exp-timeline__circle */
   .exp-timeline__circle {
     display: none;
   }
 
-  /* month → 카드 상단 배지 */
+  /* exp-timeline__month */
   .exp-timeline__month {
-    width: auto;
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    text-align: left;
-    color: var(--text-color-gray);
-  }
-  .exp-timeline__item--first .exp-timeline__month {
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    color: var(--color-primary);
+    display: none;
   }
 
-  /* info */
-  .exp-timeline__info {
-    gap: var(--spacing-12);
-    padding-left: 0;
+  /* exp-timeline__info */
+  .exp-timeline__item--first .exp-timeline__info {
+    gap: var(--spacing-16);
   }
-  .exp-timeline__title h3 {
+
+  /* exp-timeline__title-box */
+  .exp-timeline__title-box {
+    flex-direction: column;
+    align-items: start;
+    gap: var(--spacing-16);
+  }
+  .exp-timeline__item--first .exp-timeline__title-box {
+    gap: var(--spacing-16);
+  }
+  .exp-timeline__title-box h3 {
+    font-size: var(--font-size-2xl);
+  }
+  .exp-timeline__subtitle {
     font-size: var(--font-size-xl);
   }
-  .exp-timeline__title-box p,
-  .exp-timeline__subtitle {
-    font-size: var(--font-size-md);
+
+  /* exp-timeline__desc */
+  .exp-timeline__item--first .exp-timeline__desc {
+    gap: var(--spacing-16);
   }
-  .exp-timeline__date-range,
+  .exp-timeline__date-range {
+    font-size: var(--font-size-xl);
+  }
   .exp-timeline__act {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-xl);
   }
-  /* ########## END - EXP ########## */
+  /* ########## END - EXP SECTION ########## */
+
 
   /* ########## SECTION - RESUME ########## */
   #resume {
@@ -843,12 +860,13 @@
   .project-table thead th:first-child {
     width: 30%;
   }
-  /* ========== END - Web, React 공통 컴포넌트 ========== */
 
-  /* project-achievement */
+   /* project-achievement */
   .project-achievement__list li {
     padding-left: calc(var(--spacing-12) - 1px);
   }
+  /* ========== END - Web, React 공통 컴포넌트 ========== */
+
 
   /* ========== SECTION - ABOUT ========== */
   #about {
@@ -913,7 +931,7 @@
   /* ========== END - CORE SECTION ========== */
 
 
-  /* ########## SECTION - SKILL (Bento Grid) ########## */
+  /* ########## SECTION - SKILL ########## */
   .skill-content {
     padding: var(--spacing-16);
     gap: var(--spacing-12);
@@ -960,10 +978,49 @@
   .skill-item__keywords {
     gap: var(--spacing-8);
   }
+  /* ########## END - SKILL ########## */
 
-  /* ########## END - SKILL (Bento Grid) ########## */
+
+  /* ########## EXP SECTION ########## */
+  /* exp-content */
+  .exp-content {
+    min-width: 100%;
+  }
+
+  /* exp-timeline__item */
+  .exp-timeline__item {
+    padding: var(--spacing-20);
+  }
+  .exp-timeline__item--first .exp-timeline__act {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--spacing-4);
+    row-gap: calc(var(--spacing-4) + 2px);
+  }
+
+  /* exp-timeline__title-box */
+  .exp-timeline__title-box {
+    gap: var(--spacing-12);
+  }
+  .exp-timeline__title-box h3 {
+    font-size: var(--font-size-xl);
+    letter-spacing: -0.3px;
+  }
+  .exp-timeline__subtitle {
+    font-size: var(--font-size-md);
+  }
+
+  /* exp-timeline__desc */
+  .exp-timeline__date-range {
+    font-size: var(--font-size-md);
+  }
+  .exp-timeline__act {
+    font-size: var(--font-size-md);
+  }
+  /* ########## END - EXP SECTION ########## */
 
 
+  /* ########## WEB SECTION ########## */
   /* ----- web-info ----- */
   .web-info__accessibility {
     justify-content: center;
@@ -972,6 +1029,5 @@
     width: 5px;
     height: 5px;
   }
-  /* ########## END - Web, React 공통 컴포넌트 ########## */
-
+  /* ########## END - WEB SECTION ########## */
 }

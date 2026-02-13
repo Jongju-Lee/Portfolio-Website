@@ -32,14 +32,15 @@
   /* --------- THEME COLOR --------- */
   --color-primary: #3730a3;
   --color-primary-rgb: 55, 48, 163;
-  --color-foreground: var(--color-charcoal-500);
-  --color-bg-white: #ffffff;
+  --color-bg-white: var(--color-white);
   --color-bg-light-gray: #f5f5f5;
   --color-bg-light-blue: #efeef8;
   --color-positive: #00ad53;
   --color-negative: #D32F2F;
   --color-util-btn: #777777;
   --color-attention: #ff771f;
+  --color-card-white: var(--color-white);
+  --color-card-white-hover: #f9f8fc;
 
   /* --------- TEXT COLOR --------- */
   --text-color-body: var(--color-charcoal-500);
@@ -56,6 +57,21 @@
   /* --------- GRADIENT --------- */
   --gradient-primary: linear-gradient(135deg, #4b43da 0%, var(--color-primary) 100%);
   --gradient-primary-text: linear-gradient(135deg, #473fce 0%, var(--color-primary) 100%);
+
+   /* --------- 섹션별 전용 컬러 --------- */
+  /* WEB 섹션 전용 */
+  --color-well-life-bg: #e6e7f2;
+  --color-well-life-primary: #19248C;
+  --color-well-life-secondary: #4CB9E7;
+  --color-well-life-hover: #f0f1f8;
+  --color-well-life-text-primary: #000000;
+  --color-well-life-text-secondary: #6B6B6B;
+  --color-well-life-text-tertiary: #A6A6A6;
+
+  /* React 섹션 전용 */
+  --color-react-text: #1E2723;
+  --color-react-primary: #72E3AD;
+  --color-react-bg: #f1fdf7;
 
   /* --------- SHADOW --------- */
   --shadow-normal: 0 4px 10px rgba(var(--color-black-rgb), 0.08);
@@ -124,22 +140,4 @@
   --font-size-body: var(--font-size-md);
   --font-size-section-title: 36px;
   --font-size-slogan-title: 56px;
-  
-  /* --------- 섹션별 전용 속성 --------- */
-  /* SKILL 섹션 전용 */
-  --color-skill-item-bg: #f5f5f5;
-  
-  /* WEB 섹션 전용 */
-  --color-well-life-bg: #e6e7f2;
-  --color-well-life-primary: #19248C;
-  --color-well-life-secondary: #4CB9E7;
-  --color-well-life-hover: #f0f1f8;
-  --color-well-life-text-primary: #000000;
-  --color-well-life-text-secondary: #6B6B6B;
-  --color-well-life-text-tertiary: #A6A6A6;
-
-  /* React 섹션 전용 */
-  --color-react-text: #1E2723;
-  --color-react-primary: #72E3AD;
-  --color-react-bg: #f1fdf7;
 }

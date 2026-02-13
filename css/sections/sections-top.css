@@ -371,20 +371,23 @@
 /* ========== EXP SECTION ========== */
 /* exp-content */
 .exp-content {
-  padding-left: 100px;
-  margin-top: var(--spacing-100);
+  max-width: 1200px;
+  margin: var(--spacing-100) auto 0;
 }
 
 /* exp-timeline */
 .exp-timeline {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-80);
 }
 .exp-timeline__line {
   position: absolute;
   top: 6px;
   left: 172px;
   width: 2px;
-  height: calc(100% - 12px);
+  height: calc(100% - 6px);
   background: linear-gradient(
     180deg,
     var(--color-primary) 0%,
@@ -399,13 +402,7 @@
 .exp-timeline__item {
   position: relative;
   display: flex;
-  align-items: flex-start;
   gap: var(--spacing-48);
-  gap: var(--spacing-48);
-  padding-bottom: var(--spacing-80);
-}
-.exp-timeline__item:last-child {
-  padding-bottom: 0;
 }
 
 /* exp-timeline__month */
@@ -477,7 +474,6 @@
   font-size: var(--font-size-2xl);
 }
 .exp-timeline__title-box p {
-  font-size: var(--font-size-md);
   line-height: 1;
 }
 .exp-timeline__item--first .exp-timeline__title-box p {
@@ -500,6 +496,7 @@
   font-size: var(--font-size-lg);
   line-height: 1;
   color: var(--text-color-gray);
+  color: var(--text-color-light-gray);
   font-family: var(--font-EN);
 }
 .exp-timeline__item--first .exp-timeline__date-range {
@@ -509,7 +506,6 @@
   font-size: var(--font-size-lg);
   font-weight: 400;
   line-height: 1;
-  color: var(--text-color-gray);
 }
 .exp-timeline__item--first .exp-timeline__act {
   font-size: var(--font-size-xl);
@@ -825,13 +821,6 @@
   padding: var(--section-padding);
   background-color: var(--color-bg-white);
 }
-.core-title {
-  font-family: var(--font-EN);
-  font-size: var(--font-size-section-title);
-  font-weight: 700;
-  line-height: 40px;
-  color: var(--text-color-title);
-}
 .core-content {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 576px));
@@ -841,17 +830,15 @@
 }
 .core-card {
   padding: var(--spacing-36);
-  border: 1px solid rgba(226, 232, 240, 0.6);
+  border: 1px solid rgba(var(--color-black-rgb), 0.05);
   border-radius: 16px;
-  background-color: rgba(var(--color-white-rgb), 0.6);
+  background-color: var(--color-card-white);
   box-shadow: var(--shadow-glass);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .core-card:hover {
   transform: translateY(-8px);
-  background-color: rgba(var(--color-primary-rgb), 0.03);
+  background-color: var(--color-card-white-hover);
   box-shadow: var(--shadow-glass-hover);
 }
 .core-card__title {
