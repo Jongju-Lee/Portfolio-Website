@@ -48,7 +48,6 @@
   --text-color-gray: var(--color-charcoal-400);
   --text-color-light-gray: var(--color-charcoal-300);
   --text-color-white: var(--color-white);
-  --text-highlight-bg: rgba(var(--color-primary-rgb), 0.1);
 
   /* --------- BORDER COLOR --------- */
   --border-color-light-gray: var(--color-charcoal-100);

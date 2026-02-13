@@ -100,16 +100,7 @@ img {
   font-family: var(--font-EN);
   font-size: var(--font-size-section-title);
   font-weight: 700;
-}
-.inner > h2.new::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 100%;
-  width: 10px;
-  height: 10px;
-  background-color: var(--color-attention);
-  border-radius: 50%;
+  color: var(--text-color-title);
 }
 
 /* Font */
@@ -149,10 +140,10 @@ img {
 .under-line {
   text-decoration: underline;
 }
-.color-main {
+.color-primary {
   color: var(--color-primary) !important;
 }
-.color-black {
+.color-text-body {
   color: var(--color-text-body) !important;
 }
 .gradient-text {

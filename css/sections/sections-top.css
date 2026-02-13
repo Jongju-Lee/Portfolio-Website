@@ -66,7 +66,7 @@
   margin-top: var(--spacing-4);
   font-size: var(--font-size-6xl);
   font-weight: 700;
-  color: var(--text-color-body);
+  color: var(--text-color-title);
   margin-bottom: var(--spacing-32);
   white-space: nowrap;
 }
@@ -368,6 +368,158 @@
   font-weight: 400;
 }
 
+/* ========== EXP SECTION ========== */
+/* exp-content */
+.exp-content {
+  padding-left: 100px;
+  margin-top: var(--spacing-100);
+}
+
+/* exp-timeline */
+.exp-timeline {
+  position: relative;
+}
+.exp-timeline__line {
+  position: absolute;
+  top: 6px;
+  left: 172px;
+  width: 2px;
+  height: calc(100% - 12px);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-primary) 45%,
+    var(--border-color-light-gray) 67%,
+    var(--border-color-light-gray) 89%,
+    transparent 100%
+  );
+}
+
+/* exp-timeline__item */
+.exp-timeline__item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-48);
+  gap: var(--spacing-48);
+  padding-bottom: var(--spacing-80);
+}
+.exp-timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+/* exp-timeline__month */
+.exp-timeline__month {
+  flex-shrink: 0;
+  width: 120px;
+  font-size: var(--font-size-xl);
+  text-align: right;
+  line-height: 1;
+  color: var(--text-color-light-gray);
+}
+.exp-timeline__item--first .exp-timeline__month {
+  font-size: var(--font-size-2xl);
+  letter-spacing: -0.3px;
+}
+
+/* exp-timeline__circle */
+.exp-timeline__circle {
+  position: relative;
+  top: 6px;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--border-color-light-gray);
+  background-color: var(--color-bg-white);
+}
+.exp-timeline__item--first .exp-timeline__circle {
+  background-color: var(--color-primary);
+}
+.exp-timeline__item--second .exp-timeline__circle,
+.exp-timeline__item--third .exp-timeline__circle {
+  border: 2px solid var(--color-primary);
+}
+.exp-timeline__item--fourth .exp-timeline__circle {
+  background-color: var(--color-charcoal-200);
+}
+.exp-timeline__item--fifth .exp-timeline__circle {
+  border: 2px solid var(--color-charcoal-200);
+}
+
+/* exp-timeline__info */
+.exp-timeline__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+.exp-timeline__item--first .exp-timeline__info {
+  gap: var(--spacing-20);
+}
+
+/* exp-timeline__title-box */
+.exp-timeline__title-box {
+  display: flex;
+  align-items: end;
+  gap: var(--spacing-8);
+}
+.exp-timeline__item--first .exp-timeline__title-box {
+  gap: var(--spacing-12);
+}
+.exp-timeline__title-box h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: var(--text-color-title);
+}
+.exp-timeline__item--first .exp-timeline__title-box h3 {
+  font-size: var(--font-size-2xl);
+}
+.exp-timeline__title-box p {
+  font-size: var(--font-size-md);
+  line-height: 1;
+}
+.exp-timeline__item--first .exp-timeline__title-box p {
+  font-size: var(--font-size-xl);
+}
+.exp-timeline__subtitle {
+  color: var(--text-color-gray);
+}
+
+/* exp-timeline__desc */
+.exp-timeline__desc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+.exp-timeline__item--first .exp-timeline__desc {
+  gap: var(--spacing-20);
+}
+.exp-timeline__date-range {
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  color: var(--text-color-gray);
+  font-family: var(--font-EN);
+}
+.exp-timeline__item--first .exp-timeline__date-range {
+  font-size: var(--font-size-xl);
+}
+.exp-timeline__act {
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-color-gray);
+}
+.exp-timeline__item--first .exp-timeline__act {
+  font-size: var(--font-size-xl);
+}
+.exp-timeline__act.font-kr {
+  letter-spacing: -0.3px;
+}
+/* ########## END - EXP SECTION ########## */
+
+
 /* ########## Resume Section ########## */
 #resume {
   padding-top: var(--spacing-80);
@@ -591,7 +743,7 @@
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-primary);
-  background-color: var(--text-highlight-bg);
+  background-color: rgba(var(--color-primary-rgb), 0.1);
 }
 .resume-sub__header th:not(:first-child) {
   text-align: center;

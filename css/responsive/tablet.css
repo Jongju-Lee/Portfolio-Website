@@ -127,15 +127,6 @@
   /* ########## END - 변수 재정의 ########## */
 
 
-  /* ########## COMMON ########## */
-  /* 섹션 타이틀 */
-  .inner > h2.new::after {
-    width: 8px;
-    height: 8px;
-  }
-  /* ########## END - COMMON ########## */
-
-
   /* ########## Web, React 공통 컴포넌트 ########## */
   /* project-row */
   .project-row__left,
@@ -283,6 +274,38 @@
 
   /* ########## END - EDU ########## */
 
+
+  /* ########## EXP SECTION ########## */
+  .exp-content {
+    padding-left: var(--spacing-40);
+    margin-top: var(--spacing-60);
+  }
+  .exp-timeline__item {
+    /* gap: var(--spacing-32); */
+    /* padding-bottom: var(--spacing-60); */
+  }
+  .exp-timeline__month {
+    width: 100px;
+    font-size: var(--font-size-lg);
+  }
+  .exp-timeline__item--first .exp-timeline__month {
+    font-size: var(--font-size-xl);
+  }
+  .exp-timeline__line {
+    left: 118px;
+  }
+  .exp-timeline__title h3 {
+    font-size: var(--font-size-xl);
+  }
+  .exp-timeline__title-box p,
+  .exp-timeline__subtitle {
+    font-size: var(--font-size-lg);
+  }
+  .exp-timeline__date-range,
+  .exp-timeline__act {
+    font-size: var(--font-size-md);
+  }
+  /* ########## END - EXP ########## */
 
   /* ########## SECTION - RESUME ########## */
   /* resume-main */

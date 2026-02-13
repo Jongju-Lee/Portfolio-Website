@@ -377,6 +377,73 @@
   /* ########## END - EDU ########## */
 
 
+  /* ########## EXP SECTION ########## */
+  .exp-content {
+    padding-left: 0;
+    margin-top: var(--spacing-48);
+  }
+
+  /* 세로 라인 숨김 */
+  .exp-timeline__line {
+    display: none;
+  }
+
+  /* 카드 레이아웃 */
+  .exp-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+  }
+  .exp-timeline__item {
+    flex-direction: column;
+    gap: var(--spacing-16);
+    padding: var(--spacing-24);
+    padding-bottom: var(--spacing-24);
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    border-radius: 16px;
+    background-color: rgba(var(--color-white-rgb), 0.6);
+    box-shadow: var(--shadow-glass);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  /* circle 숨김 */
+  .exp-timeline__circle {
+    display: none;
+  }
+
+  /* month → 카드 상단 배지 */
+  .exp-timeline__month {
+    width: auto;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-align: left;
+    color: var(--text-color-gray);
+  }
+  .exp-timeline__item--first .exp-timeline__month {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  /* info */
+  .exp-timeline__info {
+    gap: var(--spacing-12);
+    padding-left: 0;
+  }
+  .exp-timeline__title h3 {
+    font-size: var(--font-size-xl);
+  }
+  .exp-timeline__title-box p,
+  .exp-timeline__subtitle {
+    font-size: var(--font-size-md);
+  }
+  .exp-timeline__date-range,
+  .exp-timeline__act {
+    font-size: var(--font-size-md);
+  }
+  /* ########## END - EXP ########## */
+
   /* ########## SECTION - RESUME ########## */
   #resume {
     padding-top: var(--spacing-48);
