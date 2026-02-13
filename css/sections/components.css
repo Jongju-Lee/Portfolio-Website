@@ -380,6 +380,8 @@
   background: var(--gradient-primary);
   box-shadow: var(--shadow-primary-btn);
   opacity: 1;
+  animation: gentleBounce 0.6s ease-out 2;
+  animation-delay: 2s;
 }
 .mockup-box__open-btn:hover {
   box-shadow: var(--shadow-primary-btn-hover);
@@ -462,55 +464,6 @@
 /* ########## END - Utility Buttons ########## */
 
 
-/* ---------- Keyframes ---------- */
-/* 로딩 애니에미션 */
-@keyframes loading__spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes loading__pulse {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.6;
-  }
-}
-
-/* 액션버튼 호버 애니메이션 */
-@keyframes actionBtnHover {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
-
-/* mockup-box(목업 모음 버튼) */
-@keyframes mockupBoxReveal {
-  0% {
-    opacity: 0;
-    bottom: calc(0px - var(--util-btn-size));
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    bottom: var(--util-btn-offset);
-  }
-}
-/* ---------- END - Keyframes ---------- */
 
 
 /* ########## Custom Lightbox ########## */
@@ -669,8 +622,70 @@
 .lightbox__close--attention {
   animation: slideUp 0.7s ease-out forwards;
 }
+/* ########## END - Custom Lightbox ########## */
 
-/* ----- Animations ----- */
+
+/* ---------- Keyframes ---------- */
+/* 로딩 애니에미션 */
+@keyframes loading__spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading__pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* 액션버튼 호버 애니메이션 */
+@keyframes actionBtnHover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* mockup-box(목업 모음 버튼) */
+@keyframes mockupBoxReveal {
+  0% {
+    opacity: 0;
+    bottom: calc(0px - var(--util-btn-size));
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: var(--util-btn-offset);
+  }
+}
+
+/* 목업 버튼 바운스 애니메이션 */
+@keyframes gentleBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* lightbox 페이지 등장 애니메이션 */
 @keyframes lightboxFadeIn {
   from {
     opacity: 0;
@@ -691,4 +706,4 @@
     opacity: 1;
   }
 }
-/* ########## END - Custom Lightbox ########## */
+/* ---------- END - Keyframes ---------- */
