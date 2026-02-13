@@ -409,6 +409,9 @@
     border-radius: 16px;
     background-color: var(--color-card-white);
     box-shadow: var(--shadow-glass);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
   .exp-timeline__item:hover {
@@ -592,6 +595,9 @@
   }
 
   /* core-card */
+  .core-card {
+    -webkit-tap-highlight-color: transparent;
+  }
   .core-card__title {
     font-size: var(--font-size-2xl);
   }
@@ -918,6 +924,7 @@
   /* core-card */
   .core-card {
     padding: var(--spacing-24);
+    -webkit-tap-highlight-color: transparent;
   }
   .core-card__items {
     margin-top: var(--spacing-16);
