@@ -39,17 +39,17 @@ header {
   margin: 0 auto;
 }
 
-/* ----- header__logo ----- */
-.header__logo {
+/* ----- header-logo ----- */
+.header-logo {
   width: 36px;
   transition: opacity 0.3s;
 }
-.header__logo:hover {
+.header-logo:hover {
   opacity: 0.7;
 }
 
-/* ----- header__gnb ----- */
-.header__gnb {
+/* ----- header-gnb ----- */
+.header-gnb {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,10 +58,10 @@ header {
   column-gap: var(--spacing-64);
   row-gap: 0;
 }
-.header__gnb:focus {
+.header-gnb:focus {
   outline: 2px solid var(--color-primary);
 }
-.header__gnb-item {
+.header-gnb__item {
   position: relative;
   line-height: var(--spacing-48);
   font-family: var(--font-EN);
@@ -70,13 +70,13 @@ header {
   color: var(--text-color-gray);
   transition: color 0.5s ease-in;
 }
-.header--scrolled .header__gnb-item {
+.header--scrolled .header-gnb__item {
   color: var(--text-color-body);
 }
-.header__gnb-item:hover {
+.header-gnb__item:hover {
   color: var(--color-primary);
 }
-.header__gnb-item::after {
+.header-gnb__item::after {
   content: "";
   position: absolute;
   top: -20px;
@@ -89,14 +89,14 @@ header {
   opacity: 0;
   transition: top 0.5s ease, opacity 0.5s ease;
 }
-.header__gnb-item:hover::after {
+.header-gnb__item:hover::after {
   opacity: 1;
   top: 4px;
 }
 
-/* ----- header__sidebar-btn ----- */
+/* ----- header-sidebar__btn ----- */
 /* PC에서는 숨김, 태블릿/모바일에서만 표시 */
-.header__sidebar-btn {
+.header-sidebar__btn {
   display: none;
   width: 28px;
   height: 20px;
@@ -106,7 +106,7 @@ header {
   background-repeat: no-repeat;
   transition: background-image 0.3s, opacity 0.3s;
 }
-.header__sidebar-btn:hover {
+.header-sidebar__btn:hover {
   opacity: 0.7;
   background-image: url(../../images/icon/sidebar-btn-hover.webp);
 }

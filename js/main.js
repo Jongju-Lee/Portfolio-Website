@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // 브라우저의 기본 동작 방지
       event.preventDefault();
       // GNB 요소
-      const navElement = document.querySelector('.header__gnb');
+      const navElement = document.querySelector('.header-gnb');
       // 네비게이션에 포커스 설정
       if (navElement) {
         navElement.focus();
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 헤더 사이드바 버튼 토글
-  const sidebarBtn = document.querySelector('.header__sidebar-btn');
+  const sidebarBtn = document.querySelector('.header-sidebar__btn');
   const sidebarNav = document.querySelector('.sidebar-nav');
   const sidebarInner = document.querySelector('.sidebar-nav__inner');
   const sidebarCloseBtn = document.querySelector('.sidebar-nav__close-btn');

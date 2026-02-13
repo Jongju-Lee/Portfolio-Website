@@ -4,13 +4,13 @@
   header {
     padding: 0 var(--spacing-32);
   }
-  /* header__gnb */
-  .header__gnb {
+  /* header-gnb */
+  .header-gnb {
     display: none;
   }
 
-  /* header__sidebar-btn */
-  .header__sidebar-btn {
+  /* header-sidebar__btn */
+  .header-sidebar__btn {
     display: block;
   }
 
@@ -147,8 +147,8 @@
 
 
   /* ########## SECTION - HEADER ########## */
-  /* header__logo */
-  .header__logo {
+  /* header-logo */
+  .header-logo {
     width: 32px;
   }
   /* ########## END - HEADER ########## */
