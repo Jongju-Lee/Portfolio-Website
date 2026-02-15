@@ -415,7 +415,7 @@
 
 /* ########## Resume Section ########## */
 #resume {
-  padding-top: var(--spacing-80);
+  padding-top: 0;
 }
 
 /* ----- resume-main, resume-sub 공통 스타일 ----- */

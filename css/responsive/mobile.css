@@ -48,6 +48,7 @@
   /* ---------- COMMON ---------- */
   .inner > h2 {
     margin: 0 auto;
+    letter-spacing: -0.2px;
   }
   /* ########## END - LAYOUT ########## */
 
