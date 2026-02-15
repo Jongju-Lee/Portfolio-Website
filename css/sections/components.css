@@ -380,7 +380,7 @@
   background: var(--gradient-primary);
   box-shadow: var(--shadow-primary-btn);
   opacity: 1;
-  animation: gentleBounce 0.6s ease-out 2;
+  animation: gentleBounce 2s ease-out;
   animation-delay: 2s;
 }
 .mockup-box__open-btn:hover {
@@ -676,12 +676,42 @@
 
 /* 목업 버튼 바운스 애니메이션 */
 @keyframes gentleBounce {
-  0%,
-  100% {
-    transform: translateY(0);
+  /* 첫 번째 바운스 */
+  0% {
+    transform: translateY(0)
   }
-  50% {
-    transform: translateY(-5px);
+  9% {
+    transform: translateY(-6px)
+  }
+  17% {
+    transform: translateY(0)
+  }
+  
+  /* 두 번째 바운스 */
+  26% {
+    transform: translateY(-6px)
+  }
+  
+  /* 휴식 (0.5초) */
+  35%,
+  65% {
+    transform: translateY(0)
+  }
+  
+  /* 세 번째 바운스 */
+  74% {
+    transform: translateY(-6px)
+  }
+  82% {
+    transform: translateY(0)
+  }
+  
+  /* 네 번째 바운스 */
+  91% {
+    transform: translateY(-6px)
+  }
+  100% {
+    transform: translateY(0)
   }
 }
 
