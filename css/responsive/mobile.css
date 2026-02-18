@@ -831,6 +831,7 @@
   /* ========== SECTION - ABOUT ========== */
   #about {
     gap: var(--spacing-36);
+    padding: var(--spacing-80) var(--spacing-48);
   }
   .about-content {
     gap: var(--spacing-40);
@@ -838,7 +839,7 @@
 
   /* 좌측 텍스트 영역 */
   .about-text__role, .about-text__name {
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-5xl);
   }
   .about-text__role {
     letter-spacing: 0;
@@ -862,8 +863,10 @@
 
   /* 우측 프로필 사진 영역 */
   .about-visual__image-box {
-    max-width: 240px;
+    min-width: 220px;
+    max-width: 80%;
   }
+  
   .about-tag--collapsed {
     padding: var(--spacing-8) !important;
   }

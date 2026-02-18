@@ -227,11 +227,11 @@
   align-items: center;
   gap: var(--spacing-12);
   z-index: 30;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: opacity 0.3s ease;
 }
 .scroll-indicator:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 .scroll-indicator__chevrons {
   display: flex;
@@ -256,7 +256,7 @@
 }
 .scroll-indicator__text {
   font-family: var(--font-EN);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   font-weight: 500;
   color: var(--color-primary);
   letter-spacing: 2px;

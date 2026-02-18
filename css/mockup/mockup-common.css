@@ -2,13 +2,16 @@
    Mockup Common Style
    =============================================== */
 
+@import url('../common/variables.css');
+@import url('../common/font.css');
+
 /* ---------- Reset & Base ---------- */
 * {
   box-sizing: border-box;
 }
 body {
-  background-color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg-light-blue);
+  font-family: var(--font-KR);
   font-weight: 300;
 }
 img {
@@ -20,8 +23,8 @@ button {
   display: block;
   background: none;
   border: none;
-  cursor: pointer;
   padding: 0;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
@@ -32,8 +35,8 @@ a {
 .mockup {
   position: relative;
   background-size: 100% 100%;
-  transition: transform 0.3s ease, opacity 0.4s ease;
   opacity: 0; /* 초기 상태: 숨김 */
+  transition: transform 0.3s ease, opacity 0.4s ease;
 }
 .mockup--ready {
   opacity: 1; /* 스크롤 위치 잡힌 후: 표시 */
@@ -42,11 +45,11 @@ a {
   position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: #f5f5f5;
+  background-color: var(--color-bg-light-gray);
 }
 .mockup-iframe__wrap {
   flex: 1;
-  background-color: #ffffff;
+  background-color: var(--color-bg-white);
   overflow: hidden;
 }
 .mockup-iframe__wrap iframe {
@@ -60,7 +63,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #252525;
+  color: var(--text-color-title);
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -78,18 +81,19 @@ a {
   transform: scale(0.9);
 }
 .scale-control__button:disabled {
-  cursor: auto;
   opacity: 0.2;
   transform: none;
+  cursor: auto;
 }
 .scale-control__display {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin: 4px 0;
+  gap: var(--spacing-12);
+  margin: var(--spacing-4) 0;
 }
 .scale-control__text {
-  font-size: 36px;
+  font-family: var(--font-EN);
+  font-size: var(--font-size-section-title);
   font-weight: 400;
 }
 .scale-control__text.bold {
@@ -101,12 +105,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: var(--spacing-16);
 }
 .scale-control__slider-box {
   height: 64px;
-  overflow: hidden;
   min-width: 50px;
+  overflow: hidden;
 }
 .scale-control__slider-box-inner {
   display: flex;
@@ -116,49 +120,59 @@ a {
 .scale-control__slider-box-item {
   display: flex;
   justify-content: center;
-  gap: 4px;
-  line-height: 1em;
+  gap: var(--spacing-4);
+  font-family: var(--font-EN);
   font-size: 64px;
   font-weight: 600;
-  font-family: 'Outfit', sans-serif;
+  line-height: 1em;
 }
 .scale-control__value--adjacent {
-  font-family: 'Outfit', sans-serif;
+  height: 28px;
+  font-family: var(--font-EN);
   font-size: 28px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.3);
-  height: 28px;
   line-height: 28px;
-  transition: color 0.2s ease;
   text-align: center;
+  color: rgba(var(--color-black-rgb), 0.3);
+  transition: color 0.2s ease;
 }
 
 /* ---------- Button Box ---------- */
 .btn-box {
   position: fixed;
-  top: 24px;
-  left: 36px;
+  top: var(--spacing-24);
+  right: var(--spacing-36);
   display: flex;
-  gap: 12px;
+  gap: var(--spacing-12);
   z-index: 1000;
 }
 .back-btn,
 .move-btn {
-  padding: 12px 20px;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-16) var(--spacing-32);
+  border-radius: 50px;
+  font-family: var(--font-KR);
+  font-size: var(--font-size-lg);
   font-weight: 700;
-  transition: background-color 0.2s, color 0.2s;
+  line-height: 1;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-primary-btn);
 }
-.back-btn,
+.back-btn:hover,
 .move-btn:hover {
-  border-color: #3730a3;
-  color: #3730a3;
-  background-color: #ffffff;
+  box-shadow: var(--shadow-primary-btn-hover);
+  transform: translateY(-4px);
 }
-.move-btn,
-.back-btn:hover {
-  background-color: #3730a3;
-  color: #ffffff;
+
+/* move-btn: Primary 스타일 (그라데이션) */
+.move-btn {
+  background: var(--gradient-primary);
+  color: var(--text-color-white);
+}
+
+/* back-btn: Secondary 스타일 (화이트) */
+.back-btn {
+  background-color: var(--color-bg-white);
 }

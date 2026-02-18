@@ -10,7 +10,7 @@
     min-height: 100vh; /* 폴백 */
     min-height: 100dvh; /* iOS Safari 동적 뷰포트 */
     padding: 80px 0;
-    color: #1e2723;
+    color: var(--text-color-title);
 }
 /* ---------- END - Container ---------- */
 
@@ -18,24 +18,24 @@
 /* ---------- Mobile Mockup ---------- */
 .mockup {
     margin: 0 auto;
-    width: 465px;
-    height: 923px;
+    width: 439px;
+    height: 894px;
     background-image: url(/images/mockup/mobile-mockup.webp);
 }
 .mockup-container {
-    top: 23px;
-    left: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 393px;
     height: 852px;
-    border-radius: 54px;
+    border-radius: 52px;
 }
 .mockup-header {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin: 0 auto;
-    width: calc(780px / 2);
-    height: calc(100px / 2);
+    width: 100%;
     z-index: 1;
 }
 .mockup-header img {
@@ -46,7 +46,7 @@
     object-fit: contain;
 }
 .mockup-iframe__wrap {
-    border-radius: 0 0 54px 54px;
+    border-radius: 0 0 52px 52px;
 }
 /* ---------- END - Mobile Mockup ---------- */
 
