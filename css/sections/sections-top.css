@@ -413,9 +413,101 @@
 /* ########## END - EXP SECTION ########## */
 
 
-/* ########## Resume Section ########## */
+/* ########## Resume Section(Ice Candy 경력 요약) ########## */
 #resume {
   padding-top: 0;
+}
+
+/* .resume-inner__title */
+.resume-inner__title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12);
+  line-height: 1;
+  z-index: 2;
+}
+
+/* 사내 보안 규정 안내 */
+.resume-exclamation {
+  position: relative;
+  font-family: var(--font-KR);
+}
+.resume-exclamation__btn {
+  display: block;
+  width: 32px;
+  background-color: var(--color-attention);
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.resume-exclamation__btn--animated {
+  animation: gentleBounce 2s ease-out;
+  animation-delay: 1.5s;
+}
+.resume-exclamation__btn:hover {
+  background-color: var(--color-attention-hover);
+  transform: translateY(-4px);
+}
+
+/* 툴팁 */
+.resume-exclamation__tool-tip {
+  position: absolute;
+  top: 0;
+  left: calc(100% + var(--spacing-16));
+  transform: translateY(-25%);
+  width: max-content;
+  padding: var(--spacing-20) var(--spacing-28);
+  padding-right: var(--spacing-24);
+  border: 1px solid rgba(var(--color-black-rgb), 0.08);
+  border-radius: 16px;
+  background-color: var(--color-card-white);
+  box-shadow: var(--shadow-glass);
+  font-weight: 400;
+  color: var(--text-color-light-gray);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  pointer-events: none;
+}
+.resume-exclamation__tool-tip--active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* 툴팁 info 아이콘 */
+.resume-exclamation__info-icon {
+  flex-shrink: 0;
+  display: inline-block;
+  margin-top: var(--spacing-4);
+  width: 18px;
+  height: 18px;
+  background-image: url(../../images/resume/resume-info-icon.webp);
+  background-size: 100% 100%;
+}
+
+/* 툴팁 텍스트 */
+.resume-exclamation__tool-tip-text p {
+  font-size: var(--font-size-lg);
+}
+.resume-exclamation__tool-tip-text p:first-child {
+  border-bottom: 1px solid rgba(var(--color-black-rgb), 0.12);
+  margin-bottom: var(--spacing-12);
+  padding-bottom: var(--spacing-8);
+  font-size: var(--font-size-xl);
+  text-align: center;
+}
+.resume-exclamation__tool-tip-text p:last-child {
+  display: flex;
+  gap: var(--spacing-8);
+  padding-left: 2px;
+}
+.resume-exclamation__tool-tip-text strong,
+.resume-exclamation__tool-tip-text b {
+  color: var(--text-color-gray);
+}
+.resume-exclamation__tool-tip-text em {
+  display: block;
 }
 
 /* ----- resume-main, resume-sub 공통 스타일 ----- */
@@ -793,5 +885,46 @@
   100% {
     opacity: 0;
     transform: translateY(6px);
+  }
+}
+
+/* 툴팁 버튼 바운스 애니메이션 */
+@keyframes gentleBounce {
+  /* 첫 번째 바운스 */
+  0% {
+    transform: translateY(0)
+  }
+  9% {
+    transform: translateY(-6px)
+  }
+  17% {
+    transform: translateY(0)
+  }
+  
+  /* 두 번째 바운스 */
+  26% {
+    transform: translateY(-6px)
+  }
+  
+  /* 휴식 (0.5초) */
+  35%,
+  65% {
+    transform: translateY(0)
+  }
+  
+  /* 세 번째 바운스 */
+  74% {
+    transform: translateY(-6px)
+  }
+  82% {
+    transform: translateY(0)
+  }
+  
+  /* 네 번째 바운스 */
+  91% {
+    transform: translateY(-6px)
+  }
+  100% {
+    transform: translateY(0)
   }
 }

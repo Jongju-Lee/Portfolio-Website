@@ -303,6 +303,42 @@
   /* ########## END - SKILL ########## */
 
 
+  /* ########## RESUME SECTION(경력 요약) ########## */
+  .resume-inner__title {
+    position: relative;
+    gap: var(--spacing-8);
+  }
+
+  /* 사내 보안 규정 안내 */
+  .resume-exclamation {
+    position: static;
+  }
+  .resume-exclamation__btn {
+    width: 26px;
+  }
+
+  /* 툴팁 */
+  .resume-exclamation__tool-tip {
+    top: calc(100% + var(--spacing-16));
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--spacing-16) var(--spacing-24);
+  }
+
+  /* 툴팁 info 아이콘 */
+  .resume-exclamation__info-icon {
+    width: 16px;
+    height: 16px;
+    margin-top: var(--spacing-4);
+  }
+
+  /* 툴팁 텍스트 */
+  .resume-exclamation__tool-tip-text p:last-child {
+    gap: var(--spacing-8);
+  }
+  /* ########## END - RESUME(경력 요약) ########## */
+
+
   /* ########## EXP SECTION ########## */
   /* exp-content */
   .exp-content {
@@ -311,15 +347,7 @@
     width: 80%;
     min-width: 400px;
   }
-
-  /* exp-timeline */
-  .exp-timeline {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: var(--spacing-20); */
-  }
   .exp-timeline__line {
-    /* display: none; */
     left: 50%;
     transform: translateX(-50%);
     width: 1px;
@@ -951,6 +979,33 @@
     font-size: var(--font-size-md);
   }
   /* ########## END - EXP SECTION ########## */
+
+
+  /* ########## Resume Section(경력 요약) ########## */
+  /* 툴팁 */
+  .resume-exclamation__tool-tip {
+    width: 65vw;
+    min-width: 280px;
+    padding: var(--spacing-16) var(--spacing-20);
+  }
+
+  /* 툴팁 info 아이콘 */
+  .resume-exclamation__info-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* 툴팁 텍스트 */
+  .resume-exclamation__tool-tip-text p:first-child {
+    text-align: center;
+  }
+  .resume-exclamation__tool-tip-text p:first-child span {
+    display: block;
+  }
+  .resume-exclamation__tool-tip-text em {
+    display: inline;
+  }
+  /* ########## END - Resume Section(경력 요약) ########## */
 
 
   /* ########## WEB SECTION ########## */

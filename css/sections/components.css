@@ -321,14 +321,14 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   box-shadow: 0 var(--spacing-4) var(--spacing-16) rgba(var(--color-black-rgb), 0.2);
-  transition: all 0.3s ease;
+  transition: all 0.5s;
   cursor: pointer;
   z-index: 1000;
 }
 .util-btn:hover {
   background-color: rgba(var(--color-black-rgb), 0.7);
   box-shadow: 0 6px var(--spacing-24) rgba(var(--color-black-rgb), 0.3);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 .util-btn:active {
   transform: scale(0.9);
@@ -374,7 +374,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.7;
   visibility: visible;
   pointer-events: all;
   background: var(--gradient-primary);
@@ -384,8 +383,9 @@
   animation-delay: 2s;
 }
 .mockup-box__open-btn:hover {
+  filter: brightness(0.7);
   box-shadow: var(--shadow-primary-btn-hover);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 /* 애니메이션 동작 중 비활성화 */
@@ -400,6 +400,7 @@
 }
 .mockup-box--on .mockup-box__open-btn:hover {
   opacity: 0.7;
+  filter: brightness(1);
   transform: translateY(0);
 }
 
@@ -414,8 +415,8 @@
   visibility: hidden;
   pointer-events: none;
   position: absolute;
-  top: 7px;
-  left: 7px;
+  top: 8px;
+  left: 8px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -443,7 +444,7 @@
   box-shadow: var(--shadow-util-btn);
 }
 .mockup-box__action-btn:hover {
-  animation: actionBtnHover 0.2s ease-in-out forwards;
+  animation: actionBtnHover 0.3s ease-in-out forwards;
 }
 /* 모바일 */
 .mockup-box--on .mockup-box__action-btn.mobile {

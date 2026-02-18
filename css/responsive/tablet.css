@@ -283,7 +283,23 @@
   }
   /* ########## END - EXP SECTION ########## */
 
-  /* ########## SECTION - RESUME ########## */
+
+  /* ########## RESUME SECTION(경력 요약) ########## */
+  /* 사내 보안 규정 안내 */
+  .resume-exclamation__btn {
+    width: 30px;
+  }
+
+  /* 툴팁 info 아이콘 */
+  .resume-exclamation__info-icon {
+    margin-top: 3px;
+  }
+
+  /* 툴팁 텍스트 */
+  .resume-exclamation__tool-tip-text p:last-child {
+    gap: 6px;
+  }
+
   /* resume-main */
   .resume-main__title {
     font-size: var(--font-size-2xl);
@@ -336,8 +352,7 @@
   .resume-sub__item {
     grid-template-columns: 50% 15% 17% 18%;
   }
-
-  /* ########## END - RESUME ########## */
+  /* ########## END - RESUME SECTION(경력 요약) ########## */
 
 
   /* ########## SECTION - WEB ########## */

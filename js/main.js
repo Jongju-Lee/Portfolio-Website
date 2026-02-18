@@ -353,6 +353,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mockupOpenBtn.addEventListener('click', function () {
       if (mockupBox) mockupBox.classList.toggle('mockup-box--on');
       this.classList.add('mockup-box__open-btn--disabled');
+      this.style.animation = 'none';
       setTimeout(() => this.classList.remove('mockup-box__open-btn--disabled'), 600);
     });
   }
@@ -361,6 +362,13 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function () {
       if (mockupBox) mockupBox.classList.remove('mockup-box--on');
     });
+  });
+
+  // util-btn 등장 전환 완료 후 transition 속도 변경 (0.5s → 0.3s)
+  document.querySelectorAll('.util-btn').forEach(function (btn) {
+    btn.addEventListener('transitionend', function () {
+      this.style.transition = 'all 0.3s';
+    }, { once: true });
   });
 
   // 모바일 목업 스크롤바 제거
@@ -446,6 +454,49 @@ document.addEventListener('DOMContentLoaded', function () {
     clearTimeout(aboutTagResizeTimeout);
     aboutTagResizeTimeout = setTimeout(initAboutTags, 300);
   });
+
+
+  /* ############### Resume Exclamation 툴팁 토글 ############### */
+  var exclamationBtn = document.querySelector('.resume-exclamation__btn');
+  var exclamationTooltip = document.querySelector('.resume-exclamation__tool-tip');
+  var exclamationClicked = false;
+
+  if (exclamationBtn && exclamationTooltip) {
+    // 버튼 클릭 토글
+    exclamationBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      exclamationTooltip.classList.toggle('resume-exclamation__tool-tip--active');
+
+      // 클릭 후 바운스 애니메이션 영구 중지
+      if (!exclamationClicked) {
+        exclamationClicked = true;
+        exclamationBtn.classList.remove('resume-exclamation__btn--animated');
+        resumeObserver.unobserve(exclamationBtn);
+      }
+    });
+
+    // 외부 클릭 시 닫기
+    document.addEventListener('click', function (e) {
+      if (!exclamationTooltip.contains(e.target) && !exclamationBtn.contains(e.target)) {
+        exclamationTooltip.classList.remove('resume-exclamation__tool-tip--active');
+      }
+    });
+
+    // 화면 진입/이탈 시 바운스 애니메이션 실행/리셋
+    var resumeObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (exclamationClicked) return;
+
+        if (entry.isIntersecting) {
+          exclamationBtn.classList.add('resume-exclamation__btn--animated');
+        } else {
+          exclamationBtn.classList.remove('resume-exclamation__btn--animated');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    resumeObserver.observe(exclamationBtn);
+  }
 
 
   /* ############### AOS.js ############### */
