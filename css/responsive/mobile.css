@@ -858,9 +858,7 @@
     letter-spacing: 4px;
   }
   .about-btn {
-    padding: calc(var(--spacing-12) - 2px) var(--spacing-16);
-    font-size: var(--font-size-md);
-    font-weight: 500;
+    font-weight: 600;
   }
 
   /* 우측 프로필 사진 영역 */
@@ -871,6 +869,14 @@
   
   .about-tag--collapsed {
     padding: var(--spacing-8) !important;
+  }
+  .about-tag--2 { 
+    bottom: 3%;
+    left: -3%;
+  }
+  .about-tag--3 { 
+    bottom: 21%;
+    right: -10%;
   }
   /* ========== END - SECTION - ABOUT ========== */
 
