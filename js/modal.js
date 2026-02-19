@@ -46,11 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. 콘텐츠 복제
     contentContainer.innerHTML = item.innerHTML;
 
-    // 2. 원본 스타일(배경색, 테두리 등) 복사 적용
-    const computedStyle = window.getComputedStyle(item);
-    overlay.style.backgroundColor = computedStyle.backgroundColor;
-    overlay.style.borderColor = computedStyle.borderColor;
-    overlay.style.borderRadius = computedStyle.borderRadius;
 
     // 스크롤바가 사라지면서 화면이 밀리는 현상 방지
     const scrollbarWidth = getScrollbarWidth();

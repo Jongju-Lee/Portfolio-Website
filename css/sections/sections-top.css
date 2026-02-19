@@ -881,7 +881,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-8);
+  gap: var(--spacing-12);
   padding: var(--spacing-36);
   animation: fadeInLeft 0.6s ease 0.15s both;
 }
@@ -918,16 +918,8 @@
 }
 
 /* ----- modal--core Detail 영역 (우측 60%) ----- */
-.modal--expanded.modal--core .core-card__detail {
-  position: relative;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--spacing-48);
-  background: var(--color-bg-light-blue);
-  overflow-y: auto;
-  animation: slideInRight 0.6s ease 0.25s both;
+.modal--expanded.modal--core .modal__detail-panel {
+  background-color: var(--color-bg-light-blue);
 }
 
 /* ========== Key Frames ========== */

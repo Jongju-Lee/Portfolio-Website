@@ -679,9 +679,11 @@
   width: 85%;
   max-width: 900px;
   height: 420px;
+  max-height: 85vh; /* Fallback */
   max-height: 85dvh;
   padding: 0;
-  background-color: var(--color-bg-white) !important;
+  background-color: var(--color-bg-white);
+  border-radius: 24px;
   overflow: hidden;
   transform: translate(-50%, -50%) scale(1);
 }
@@ -736,6 +738,7 @@
   color: var(--color-primary);
   transition: all 0.3s ease;
   animation: fadeIn 0.5s ease both;
+  font-family: var(--font-EN);
 }
 .modal__keyword:nth-child(1) {
   animation-delay: 0.4s;
@@ -760,6 +763,18 @@
   text-align: left;
   word-break: keep-all;
   color: var(--text-color-body);
+}
+/* ----- modal__detail-panel (모달 우측 상세 패널 공통) ----- */
+.modal--expanded .modal__detail-panel {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--spacing-48);
+  padding-top: var(--spacing-72);
+  overflow-y: auto;
+  animation: slideInRight 0.6s ease 0.25s both;
 }
 /* ########## END - Modal Component ########## */
 

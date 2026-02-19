@@ -28,14 +28,14 @@ body {
   font-size: 15px;
   line-height: 1.5em;
   margin: 0;
-  min-height: 100vh;
+  min-height: 100vh; /* Fallback */
   min-height: 100dvh;
   color: #333;
   background-color: #f4f4f4;
 }
 /* ########## FAQ Accordion ########## */
 .accordion_outer {
-  min-height: 100vh;
+  min-height: 100vh; /* Fallback */
   min-height: 100dvh;
   width: 50%;
   margin: auto;

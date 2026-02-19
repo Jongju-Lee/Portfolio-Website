@@ -253,6 +253,7 @@
   .modal--expanded {
     max-width: 520px;
     height: auto;
+    max-height: 90vh; /* Fallback */
     max-height: 90dvh;
   }
   .modal--expanded .modal__content {
@@ -555,18 +556,17 @@
   .modal--expanded.modal--core .core-card__visual {
     flex: 0 0 auto;
     flex-direction: row;
+    gap: var(--spacing-16);
     height: auto;
+    padding-top: var(--spacing-48);
   }
   .modal--expanded.modal--core .core-card__icon {
-    display: block;
-    width: 60px;
-    height: 60px;
     flex-shrink: 0;
+    display: block;
+    width: 56px;
+    height: 56px;
   }
-  .modal--expanded.modal--core .core-card__title {
-    font-size: var(--font-size-2xl);
-    text-align: left;
-  }
+
   .modal--expanded.modal--core .core-card__detail {
     padding: var(--spacing-32);
   }
@@ -1027,4 +1027,13 @@
     height: 5px;
   }
   /* ########## END - WEB SECTION ########## */
+}
+
+/* ========== 480px 반응형 ========== */
+@media (max-width: 480px) {
+  /* ----- Core Modal: Icon Size ----- */
+  .modal--expanded.modal--core .core-card__icon {
+    width: 48px;
+    height: 48px;
+  }
 }
