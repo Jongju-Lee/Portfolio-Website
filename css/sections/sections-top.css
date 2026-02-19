@@ -910,6 +910,7 @@
   display: block;
   font-weight: 700;
   color: var(--text-color-title);
+  font-family: var(--font-EN);
 }
 
 /* ----- modal--core 카드 내 기존 items 숨김 ----- */
