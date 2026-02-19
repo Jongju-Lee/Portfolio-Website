@@ -262,6 +262,14 @@
   /* ########## END - SKILL ########## */
 
 
+  /* ########## SECTION - MODAL (공통) ########## */
+  .modal__detail-title,
+  .modal__keywords {
+    margin-bottom: var(--spacing-16);
+  }
+  /* ########## END - MODAL ########## */
+
+
   /* ########## EXP SECTION ########## */
   /* exp-content */
   .exp-content {

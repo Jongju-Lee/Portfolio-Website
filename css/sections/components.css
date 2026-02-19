@@ -626,6 +626,144 @@
 /* ########## END - Custom Lightbox ########## */
 
 
+/* ########## Modal Component ########## */
+/* ----- modal__backdrop ----- */
+.modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--color-black-rgb), 0.4);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s ease;
+}
+.modal__backdrop--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ----- modal ----- */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-40);
+  border-radius: var(--spacing-24);
+  background: var(--color-bg-white);
+  box-shadow: 0 20px 50px rgba(var(--color-black-rgb), 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.7s;
+  transform: translate(-50%, -50%) scale(0.9);
+  pointer-events: none;
+}
+.modal--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.modal--expanded {
+  width: 85%;
+  max-width: 900px;
+  height: 420px;
+  max-height: 85dvh;
+  padding: 0;
+  background-color: var(--color-bg-white) !important;
+  overflow: hidden;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ----- modal__content ----- */
+.modal--expanded .modal__content {
+  display: flex;
+  height: 100%;
+}
+
+/* ----- modal__close-btn ----- */
+.modal__close-btn {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../images/icon/skill-modal-close.webp);
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: background-image 0.3s;
+}
+.modal__close-btn:hover {
+  background-image: url(../../images/icon/skill-modal-close-hover.webp);
+}
+
+/* ----- modal__detail-title (모달 상세 제목) ----- */
+.modal__detail-title {
+  margin-bottom: var(--spacing-24);
+  font-size: var(--font-size-3xl);
+  color: var(--text-color-title);
+}
+.modal__detail-title b {
+  font-weight: 600;
+}
+
+/* ----- modal__keywords (키워드 태그 그룹) ----- */
+.modal__keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-12);
+  margin-bottom: var(--spacing-24);
+}
+.modal__keyword {
+  padding: var(--spacing-8) var(--spacing-16);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+  border-radius: 20px;
+  background: rgba(var(--color-primary-rgb), 0.1);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease both;
+}
+.modal__keyword:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.modal__keyword:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.modal__keyword:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.modal__keyword:hover {
+  background: rgba(var(--color-primary-rgb), 0.15);
+  border-color: rgba(var(--color-primary-rgb), 0.3);
+  transform: translateY(-2px);
+}
+
+/* ----- modal__detail-desc (모달 상세 설명) ----- */
+.modal__detail-desc {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  text-align: left;
+  word-break: keep-all;
+  color: var(--text-color-body);
+}
+/* ########## END - Modal Component ########## */
+
+
 /* ---------- Keyframes ---------- */
 /* 로딩 애니에미션 */
 @keyframes loading__spin {
@@ -735,6 +873,38 @@
   100% {
     bottom: 30px;
     opacity: 1;
+  }
+}
+
+/* 모달 애니메이션 */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /* ---------- END - Keyframes ---------- */
