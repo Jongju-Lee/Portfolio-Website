@@ -7,9 +7,13 @@
 /* ---------- Container ---------- */
 .container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh; /* 폴백 */
     min-height: 100dvh; /* iOS Safari 동적 뷰포트 */
-    padding: 80px 0;
+    padding: 40px 0;
     color: var(--text-color-title);
 }
 /* ---------- END - Container ---------- */
@@ -17,7 +21,6 @@
 
 /* ---------- Mobile Mockup ---------- */
 .mockup {
-    margin: 0 auto;
     width: 439px;
     height: 894px;
     background-image: url(/images/mockup/mobile-mockup.webp);
@@ -56,6 +59,6 @@
     position: absolute;
     top: 50%;
     left: 78%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 }
 /* ---------- END - 스케일 컨트롤 ---------- */

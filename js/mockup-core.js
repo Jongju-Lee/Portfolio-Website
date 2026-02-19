@@ -81,7 +81,6 @@
         const sliderBoxInner = document.querySelector('.scale-control__slider-box-inner');
         const nextScaleText = document.querySelector('.scale-control__value--next');
         const previousScaleText = document.querySelector('.scale-control__value--prev');
-        const sliderItem = document.querySelector('.scale-control__slider-box-item');
 
         // 필수 요소 확인
         const hasScaleControls = !!(
@@ -104,7 +103,31 @@
         let currentScale = MAX_SCALE;
         let sliderItemHeight = 64;
 
-        // 슬라이더 아이템 높이 측정
+        // 슬라이더 아이템 동적 생성 (MAX → MIN 순서)
+        const generateSliderItems = () => {
+            sliderBoxInner.innerHTML = '';
+
+            for (let scale = MAX_SCALE; scale >= MIN_SCALE - 0.001; scale -= STEP_SCALE) {
+                const rounded = roundToOneDecimal(scale);
+                const item = document.createElement('div');
+                item.classList.add('scale-control__slider-box-item');
+
+                // 각 자릿수를 개별 <span>으로 생성 (기존 HTML 구조 유지)
+                const scaleStr = rounded.toFixed(1);
+                scaleStr.split('').forEach(char => {
+                    const span = document.createElement('span');
+                    span.textContent = char;
+                    item.appendChild(span);
+                });
+
+                sliderBoxInner.appendChild(item);
+            }
+        };
+
+        generateSliderItems();
+
+        // 슬라이더 아이템 높이 측정 (동적 생성 후 조회)
+        const sliderItem = sliderBoxInner.querySelector('.scale-control__slider-box-item');
         const measureSliderHeight = () => {
             if (sliderItem) {
                 const computedHeight = parseFloat(getComputedStyle(sliderItem).height);
@@ -134,7 +157,7 @@
 
             // 2) Slider 박스 이동
             const getSliderPosition = (scale) => {
-                const scaleIndex = Math.round((1.0 - scale) / STEP_SCALE);
+                const scaleIndex = Math.round((MAX_SCALE - scale) / STEP_SCALE);
                 return -(sliderItemHeight * scaleIndex);
             };
 

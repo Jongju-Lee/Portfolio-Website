@@ -10,19 +10,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
-    padding: 80px 0;
-    padding-left: 5%;
+    padding: 40px 200px 40px 40px;
     min-height: 100vh; /* 폴백 */
     min-height: 100dvh; /* iOS Safari 동적 뷰포트 */
     color: var(--text-color-title);
 }
 /* ---------- END - Container ---------- */
 
+/* ---------- 스케일 컨트롤 ---------- */
+.scale-control {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+/* ---------- END - 스케일 컨트롤 ---------- */
+
 
 /* ---------- Tablet Mockup ---------- */
 .mockup {
-    flex-shrink: 0;
     background-image: url(/images/mockup/tablet-mockup.webp);
     width: 1104px;
     height: 795px;
