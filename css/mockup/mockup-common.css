@@ -46,7 +46,7 @@ a {
   position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-bg-light-gray);
+  background-color: var(--color-bg-light-blue);
 }
 .mockup-iframe__wrap {
   flex: 1;
