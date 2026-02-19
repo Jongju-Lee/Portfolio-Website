@@ -530,33 +530,6 @@
   height: 8px;
   background-color: var(--color-primary);
 }
-.resume-main__desc,
-.resume-sub__desc {
-  display: inline-block;
-  margin-bottom: var(--spacing-16);
-  padding: var(--spacing-16) var(--spacing-24);
-  border-radius: 8px;
-  background-color: var(--color-bg-light-gray);
-  font-size: var(--font-size-lg);
-  line-height: 1.5em;
-  color: var(--text-color-gray);
-}
-.resume-main__caption,
-.resume-sub__caption {
-  display: flex;
-  gap: 6px;
-  font-size: var(--font-size-md);
-}
-.resume-main__caption i,
-.resume-sub__caption i {
-  display: inline-block;
-  flex-shrink: 0;
-  margin-top: 6px;
-  width: calc(28px / 2);
-  height: calc(28px / 2);
-  background-image: url(../../images/resume/resume-info-icon.webp);
-  background-size: 100% 100%;
-}
 
 /* resume-content */
 .resume-content {
@@ -810,11 +783,36 @@
   background-color: var(--color-bg-white);
 }
 .core-content {
+  max-width: 1200px;
+  margin: var(--spacing-100) auto 0;
+}
+.core-content__title {
+  position: relative;
+  margin-bottom: var(--spacing-28);
+  padding-left: var(--spacing-20);
+  font-size: var(--font-size-2xl);
+  letter-spacing: -0.5px;
+  color: var(--text-color-gray);
+}
+.core-content__title::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+}
+.core-content__title b {
+  color: var(--text-color-dark-gray);
+}
+
+/* core-card__box */
+.core-card__box {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 576px));
   gap: var(--spacing-48);
-  max-width: 1200px;
-  margin: var(--spacing-100) auto 0;
 }
 .core-card {
   padding: var(--spacing-36);

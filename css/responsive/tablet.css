@@ -72,7 +72,7 @@
 
 
   /* ========== CORE SECTION ========== */
-  .core-content {
+  .core-card__box {
     gap: var(--spacing-32);
   }
 
@@ -293,6 +293,12 @@
 
 
   /* ########## RESUME SECTION(경력 요약) ########## */
+  /* ----- resume-main, resume-sub 공통 스타일 ----- */
+  .resume-main__title,
+  .resume-sub__title {
+    font-size: var(--font-size-2xl);
+  }
+
   /* 사내 보안 규정 안내 */
   .resume-exclamation__btn {
     width: 30px;
@@ -308,20 +314,7 @@
     gap: 6px;
   }
 
-  /* resume-main */
-  .resume-main__title {
-    font-size: var(--font-size-2xl);
-  }
-  .resume-main__caption,
-  .resume-sub__caption {
-    font-size: var(--font-size-sm);
-  }
-  .resume-main__caption i,
-  .resume-sub__caption i {
-    width: 13px;
-    height: 13px;
-    margin-top: 5px;
-  }
+  
 
   /* resume-hero */
   .resume-hero__card {
@@ -353,9 +346,6 @@
   }
 
   /* resume-sub */
-  .resume-sub__title {
-    font-size: var(--font-size-2xl);
-  }
   .resume-sub__header,
   .resume-sub__item {
     grid-template-columns: 50% 15% 17% 18%;

@@ -420,17 +420,6 @@
   .resume-main__title,
   .resume-sub__title {
     font-size: var(--font-size-2xl);
-    border-left-width: 4px;
-  }
-
-  .resume-main__desc,
-  .resume-sub__desc {
-    font-size: var(--font-size-md);
-    text-align: left;
-  }
-  .resume-main__caption,
-  .resume-sub__caption {
-    display: flex;
   }
 
   /* resume-content */
@@ -536,9 +525,11 @@
 
   /* ########## SECTION - CORE ########## */
   .core-content {
-    grid-template-columns: 1fr;
     margin-top: var(--spacing-60);
     max-width: 460px;
+  }
+  .core-card__box {
+    grid-template-columns: 1fr;
   }
 
   /* core-card */
