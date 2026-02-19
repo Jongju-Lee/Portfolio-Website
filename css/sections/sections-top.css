@@ -777,7 +777,7 @@
   font-weight: 400;
 }
 
-/* ########## Core Section ########## */
+/* ########## CORE SECTION ########## */
 #core {
   padding: var(--section-padding);
   background-color: var(--color-bg-white);
@@ -788,18 +788,18 @@
 }
 .core-content__title {
   position: relative;
-  margin-bottom: var(--spacing-28);
+  margin-bottom: var(--spacing-24);
   padding-left: var(--spacing-20);
   font-size: var(--font-size-2xl);
   letter-spacing: -0.5px;
   color: var(--text-color-gray);
+  line-height: 1.4;
 }
 .core-content__title::before {
   content: "";
   position: absolute;
-  top: calc(50% - 1px);
+  top: 12px;
   left: 0;
-  transform: translateY(-50%);
   width: 8px;
   height: 8px;
   background-color: var(--color-primary);

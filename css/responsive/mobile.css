@@ -416,18 +416,10 @@
     padding-top: var(--spacing-48);
   }
 
-  /* ----- resume-main, resume-sub 공통 스타일 ----- */
-  .resume-main__title,
-  .resume-sub__title {
-    font-size: var(--font-size-2xl);
-  }
-
   /* resume-content */
   .resume-content {
     margin-top: var(--spacing-60);
   }
-
-  /* resume-main */
 
   /* resume-hero */
   .resume-hero__card {
@@ -523,16 +515,23 @@
   /* ########## END - RESUME ########## */
 
 
-  /* ########## SECTION - CORE ########## */
+  /* ########## CORE SECTION ########## */
   .core-content {
     margin-top: var(--spacing-60);
     max-width: 460px;
   }
-  .core-card__box {
-    grid-template-columns: 1fr;
+  .core-content__title {
+    padding-left: var(--spacing-16);
+  }
+  .core-content__title::before {
+    top: 10px;
   }
 
-  /* core-card */
+  /* core-card__box */
+  .core-card__box {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-24);
+  }
   .core-card {
     -webkit-tap-highlight-color: transparent;
   }
@@ -561,7 +560,7 @@
   .modal--expanded.modal--core .core-card__detail {
     padding: var(--spacing-32);
   }
-  /* ########## END - CORE ########## */
+  /* ########## END - CORE SECTION ########## */
 
 
   /* ########## SECTION - WEB ########## */
