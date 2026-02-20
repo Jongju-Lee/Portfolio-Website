@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // 애니메이션 진행 중 플래그 (클릭 방지용)
   let isAnimating = false;
 
+  // 현재 활성 modifier 추적
+  let activeModifier = '';
+
+  // 내비게이션 상태
+  let currentItems = [];
+  let currentIndex = 0;
+
   // 공통 오버레이 요소 생성
   let overlay = document.querySelector('.modal');
   let backdrop = document.querySelector('.modal__backdrop');
@@ -13,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!overlay) {
     overlay = document.createElement('div');
     overlay.className = 'modal';
-    // 닫기 버튼 및 콘텐츠 복제 영역 추가
-    overlay.innerHTML = '<div class="modal__close-btn"></div><div class="modal__content"></div>';
+    overlay.innerHTML =
+      '<div class="modal__close-btn"></div>' +
+      '<div class="modal__content"></div>';
     document.body.appendChild(overlay);
   }
 
@@ -32,20 +40,117 @@ document.addEventListener('DOMContentLoaded', () => {
     return window.innerWidth - document.documentElement.clientWidth;
   };
 
-  // 현재 활성 modifier 추적
-  let activeModifier = '';
+  // 내비게이션 바 HTML 생성
+  function createNavBar() {
+    const nav = document.createElement('div');
+    nav.className = 'modal__nav';
+    nav.innerHTML =
+      '<button class="modal__nav-btn modal__nav-btn--prev" type="button" aria-label="이전"></button>' +
+      '<div class="modal__nav-dots"></div>' +
+      '<span class="modal__nav-counter"></span>' +
+      '<button class="modal__nav-btn modal__nav-btn--next" type="button" aria-label="다음"></button>';
+
+    // 이벤트 바인딩
+    nav.querySelector('.modal__nav-btn--prev').addEventListener('click', (e) => {
+      e.stopPropagation();
+      navigateTo(currentIndex - 1);
+    });
+    nav.querySelector('.modal__nav-btn--next').addEventListener('click', (e) => {
+      e.stopPropagation();
+      navigateTo(currentIndex + 1);
+    });
+
+    return nav;
+  }
+
+  // Detail panel에 내비게이션 바 삽입
+  function appendNavToDetail() {
+    const detailPanel = contentContainer.querySelector('.modal__detail-panel');
+    if (!detailPanel) return;
+
+    const nav = createNavBar();
+    detailPanel.appendChild(nav);
+
+    // Dot 생성
+    renderDots(nav, currentItems.length, currentIndex);
+    // Counter 갱신
+    updateCounter(nav, currentIndex, currentItems.length);
+  }
+
+  // Dot 생성
+  function renderDots(navEl, total, activeIndex) {
+    const dotsContainer = navEl.querySelector('.modal__nav-dots');
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'modal__nav-dot' + (i === activeIndex ? ' modal__nav-dot--active' : '');
+      dot.type = 'button';
+      dot.ariaLabel = `${i + 1}번째 항목`;
+      dot.addEventListener('click', () => navigateTo(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  // Dot 갱신
+  function updateDots(activeIndex) {
+    const dots = contentContainer.querySelectorAll('.modal__nav-dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('modal__nav-dot--active', i === activeIndex);
+    });
+  }
+
+  // Counter 갱신
+  function updateCounter(navEl, current, total) {
+    const counter = navEl.querySelector('.modal__nav-counter');
+    if (counter) {
+      counter.textContent = `${current + 1} / ${total}`;
+    }
+  }
+
+  // 콘텐츠 교체 (fade 애니메이션)
+  function updateContent(item) {
+    contentContainer.style.opacity = '0';
+
+    setTimeout(() => {
+      contentContainer.innerHTML = item.innerHTML;
+      appendNavToDetail();
+      contentContainer.style.opacity = '1';
+    }, 200);
+  }
+
+  // 내비게이션 이동
+  function navigateTo(index) {
+    if (isAnimating) return;
+
+    // 무한 루프
+    if (index < 0) {
+      index = currentItems.length - 1;
+    } else if (index >= currentItems.length) {
+      index = 0;
+    }
+
+    currentIndex = index;
+    updateContent(currentItems[currentIndex]);
+  }
 
   // Open Handler (공통)
-  function openModal(item, modifier) {
+  function openModal(item, modifier, items) {
     // 애니메이션 진행 중이면 클릭 무시
     if (isAnimating) return;
 
     isAnimating = true;
     activeModifier = modifier;
 
+    // 카드 그룹 및 인덱스 설정
+    currentItems = Array.from(items);
+    currentIndex = currentItems.indexOf(item);
+
     // 1. 콘텐츠 복제
     contentContainer.innerHTML = item.innerHTML;
+    contentContainer.style.opacity = '1';
 
+    // 2. 내비게이션 바 삽입
+    appendNavToDetail();
 
     // 스크롤바가 사라지면서 화면이 밀리는 현상 방지
     const scrollbarWidth = getScrollbarWidth();
@@ -107,6 +212,10 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.style.height = '';
         overlay.style.transform = '';
 
+        // 내비게이션 상태 초기화
+        currentItems = [];
+        currentIndex = 0;
+
         // 애니메이션 완료 후 플래그 해제
         isAnimating = false;
     }, 700); // CSS transition-duration과 일치 (0.7s)
@@ -116,11 +225,24 @@ document.addEventListener('DOMContentLoaded', () => {
   closeBtn.addEventListener('click', closeOverlay);
   backdrop.addEventListener('click', closeOverlay);
 
+  // 키보드 좌우 화살표
+  document.addEventListener('keydown', (e) => {
+    if (!overlay.classList.contains('modal--expanded')) return;
+
+    if (e.key === 'ArrowLeft') {
+      navigateTo(currentIndex - 1);
+    } else if (e.key === 'ArrowRight') {
+      navigateTo(currentIndex + 1);
+    } else if (e.key === 'Escape') {
+      closeOverlay();
+    }
+  });
+
   /* ----- Skill Section ----- */
   const skillItems = document.querySelectorAll('.skill-item');
   skillItems.forEach(item => {
     item.addEventListener('click', () => {
-      openModal(item, 'modal--skill');
+      openModal(item, 'modal--skill', skillItems);
     });
   });
 
@@ -128,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const coreCards = document.querySelectorAll('.core-card');
   coreCards.forEach(card => {
     card.addEventListener('click', () => {
-      openModal(card, 'modal--core');
+      openModal(card, 'modal--core', coreCards);
     });
   });
 });

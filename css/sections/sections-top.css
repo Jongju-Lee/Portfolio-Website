@@ -794,6 +794,7 @@
   letter-spacing: -0.5px;
   color: var(--text-color-gray);
   line-height: 1.4;
+  word-break: keep-all;
 }
 .core-content__title::before {
   content: "";
@@ -873,16 +874,6 @@
 }
 
 /* ----- modal--core Visual 영역 (좌측 40%) ----- */
-.modal--expanded.modal--core .core-card__visual {
-  display: flex;
-  flex: 0 0 40%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-12);
-  padding: var(--spacing-36);
-  animation: fadeInLeft 0.6s ease 0.15s both;
-}
 .modal--expanded.modal--core .core-card__icon {
   display: block;
   width: 80px;
@@ -906,7 +897,7 @@
 }
 .modal--expanded.modal--core .core-card__title--modal {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-color-title);
   font-family: var(--font-EN);
 }

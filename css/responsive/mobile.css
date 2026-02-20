@@ -1,3 +1,4 @@
+/* ==================== 768px 반응형 ==================== */
 @media (max-width: 768px) {
 
   /* ########## 변수 재정의 ########## */
@@ -53,7 +54,8 @@
   /* ########## END - LAYOUT ########## */
 
 
-  /* ########## Web, React 공통 컴포넌트 ########## */
+  /* ==================== COMPONENTS.CSS ==================== */
+  /* ########## Web, React 공통 ########## */
   /* ----- project-row ----- */
   .project-row {
     margin: var(--spacing-60) auto 0;
@@ -90,7 +92,51 @@
     top: 7px;
     transform: none;
   }
-  /* ########## END - Web, React 공통 컴포넌트 ########## */
+  /* ########## END - Web, React 공통 ########## */
+
+
+  /* ########## 모달 컴포넌트 ########## */
+  /* 모달 닫기 버튼 */
+  .modal--expanded {
+    max-width: 520px;
+    max-height: 480px;
+  }
+  .modal__close-btn {
+    top: 24px;
+    right: 24px;
+  }
+  .modal--expanded .modal__content {
+    flex-direction: column;
+  }
+
+  /* ----- modal--core Visual ----- */
+  .modal--expanded .modal__visual {
+    flex: 0 0 auto;
+    flex-direction: row;
+    height: auto;
+    padding: var(--spacing-32) var(--spacing-32) var(--spacing-28);
+  }
+
+  /* ----- modal__detail-panel ----- */
+  .modal--expanded .modal__detail-panel {
+    padding: var(--spacing-32) var(--spacing-32) 0;
+  }
+  .modal__detail-title {
+    justify-content: center;
+  }
+  .modal__keywords {
+    justify-content: center;
+  }
+  .modal__keyword {
+    padding: 6px var(--spacing-12);
+  }
+
+  /* ----- 모달 네비게이션 바 ----- */
+  .modal__nav {
+    padding: var(--spacing-16);
+  }
+  /* ########## END - 모달 컴포넌트 ########## */
+  /* ==================== END - COMPONENTS.CSS ==================== */
 
 
   /* ########## SECTION - HEADER ########## */
@@ -188,6 +234,9 @@
     max-width: 480px;
     margin: var(--spacing-60) auto 0;
   }
+  .skill-item {
+    min-height: 120px;
+  }
   .skill-item--html {
     grid-row: 1;
     grid-column: 1 / -1;
@@ -220,18 +269,10 @@
     grid-row: 7;
     grid-column: 2;
   }
-  .skill-item--rwd,
-  .skill-item--react,
-  .skill-item--git,
-  .skill-item--figma,
-  .skill-item--a11y {
-    min-height: 130px;
-  }
   .skill-item--html,
   .skill-item--css,
   .skill-item--js {
     aspect-ratio: auto !important;
-    min-height: auto;
   }
   .skill-item__visual {
     display: flex;
@@ -239,60 +280,36 @@
     align-items: center;
     gap: var(--spacing-16);
   }
+
+  /* 스킬 아이콘 */
   .skill-item__icon {
     width: 48px;
-    height: auto;
-    flex-shrink: 0;
   }
+
+  /* LARGE 아이콘 */
+  .skill-item--large .skill-item__icon {
+    width: 64px;
+  }
+
+  /* skill-item__title */
+  .skill-item__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  /* skill-item__desc */
   .skill-item__desc {
     display: block;
     margin: 0;
   }
 
-  /* ----- Modal: Vertical Stacking ----- */
-  .modal--expanded {
-    max-width: 520px;
-    height: auto;
-    max-height: 90vh; /* Fallback */
-    max-height: 90dvh;
-  }
-  .modal--expanded .modal__content {
-    flex-direction: column;
-    height: auto;
-  }
-  .modal--expanded.modal--skill .skill-item__visual {
-    flex: 0 0 auto;
-    flex-direction: row;
-    height: auto;
-  }
+  /* SKILL SECTION 모달 개별 UI */
   .modal--expanded.modal--skill .skill-item__icon {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
+    width: 64px;
   }
-  .modal--expanded.modal--skill .skill-item__text {
-    gap: 0;
-  }
+  .modal--expanded.modal--skill .skill-item__text,
   .modal--expanded.modal--skill .skill-item__title {
-    font-size: var(--font-size-3xl);
+    display: none;
   }
-  .modal--expanded.modal--skill .skill-item__detail {
-    padding: var(--spacing-32);
-  }
-  .modal--skill .skill-item__title {
-    margin-bottom: 0;
-  }
-
-  /* modal__close-btn */
-  .modal__close-btn {
-    top: 24px;
-    right: 24px;
-  }
-
-  .modal__keyword {
-    padding: 6px var(--spacing-12);
-  }
-
   /* ########## END - SKILL ########## */
 
 
@@ -542,13 +559,9 @@
     font-size: var(--font-size-lg);
   }
 
-  /* ----- Core Modal: Vertical Stacking ----- */
-  .modal--expanded.modal--core .core-card__visual {
-    flex: 0 0 auto;
-    flex-direction: row;
-    gap: var(--spacing-16);
-    height: auto;
-    padding-top: var(--spacing-48);
+  /* CORE SECTION 모달 개별 UI */
+  .modal--expanded .modal__visual.core-card__visual {
+    gap: var(--spacing-20);
   }
   .modal--expanded.modal--core .core-card__icon {
     flex-shrink: 0;
@@ -556,9 +569,8 @@
     width: 56px;
     height: 56px;
   }
-
-  .modal--expanded.modal--core .core-card__detail {
-    padding: var(--spacing-32);
+  .modal--expanded.modal--core .core-card__title {
+    text-align: left;
   }
   /* ########## END - CORE SECTION ########## */
 
@@ -804,9 +816,10 @@
 }
 
 
-/* ########## SMALL MOBILE (480px 이하) ########## */
+/* ==================== 480px 반응형 ==================== */
 @media (max-width: 480px) {
-  /* ========== Web, React 공통 컴포넌트 ========== */
+  /* ==================== COMPONENTS.CSS ==================== */
+  /* ########## Web, React 공통 ########## */
   /* project-row */
   .project-row__left,
   .project-row__right {
@@ -827,7 +840,52 @@
   .project-achievement__list li {
     padding-left: calc(var(--spacing-12) - 1px);
   }
-  /* ========== END - Web, React 공통 컴포넌트 ========== */
+  /* ########## END - Web, React 공통 ########## */
+
+
+  /* ########## 모달 컴포넌트 ########## */
+  /* ----- Modal: More compact ----- */
+  .modal--expanded {
+    min-width: 312px;
+    min-height: 500px;
+  }
+  /* 모달 닫기 버튼 */
+  .modal__close-btn {
+    top: 16px;
+    right: 16px;
+  }
+
+  .modal--expanded .modal__visual {
+    padding: var(--spacing-24);
+    padding-top: var(--spacing-32);
+  }
+  .modal--expanded.modal--skill .skill-item__icon {
+    width: 56px;
+  }
+
+  .modal--expanded .modal__detail-panel {
+    padding: var(--spacing-24) var(--spacing-24) 0;
+  }
+  .modal__keywords {
+    gap: var(--spacing-8);
+  }
+
+
+  /* ----- MODAL 네비게이션 ----- */
+  .modal__nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Dot → Counter */
+  .modal__nav-dots {
+    display: none;
+  }
+  .modal__nav-counter {
+    display: block;
+  }
+  /* ########## END - 모달 컴포넌트 ########## */
+  /* ==================== END - COMPONENTS.CSS ==================== */
 
 
   /* ========== SECTION - ABOUT ========== */
@@ -900,6 +958,12 @@
   .core-card__item {
     font-size: var(--font-size-md);
   }
+
+  /* CORE SECTION 모달 개별 UI */
+  .modal--expanded.modal--core .core-card__icon {
+    width: 48px;
+    height: 48px;
+  }
   /* ========== END - CORE SECTION ========== */
 
 
@@ -908,41 +972,37 @@
     padding: var(--spacing-16);
     gap: var(--spacing-16);
   }
-  .skill-item--html,
-  .skill-item--css,
-  .skill-item--js {
-    aspect-ratio: auto !important;
-  }
-  .skill-item,
-  .skill-item--large {
+  .skill-item {
     width: 100%;
-    min-height: var(--spacing-100);
+    min-height: 100px;
     padding: var(--spacing-20);
     gap: var(--spacing-16);
   }
-  .skill-item--a11y {
-    position: static;
-    width: 100%;
-    height: auto;
-    aspect-ratio: auto !important;
-    transform: none;
-  }
-  .skill-item__icon {
-    width: 32px;
+  .skill-item--large {
+    min-height: 120px;
   }
 
-  /* ----- Modal: More compact ----- */
-  .modal--expanded {
-    min-width: 312px;
+
+  /* skill-item__visual */
+  .skill-item__visual {
+    gap: var(--spacing-12);
   }
-  .modal--expanded.modal--skill .skill-item__visual {
-    padding: var(--spacing-24);
+  .skill-item--large .skill-item__visual {
+    gap: var(--spacing-16);
   }
-  .modal--expanded.modal--skill .skill-item__detail {
-    padding: var(--spacing-24);
+
+  /* 스킬 아이콘 */
+  .skill-item__icon {
+    width: 40px;
   }
-  .modal__keywords {
-    gap: var(--spacing-8);
+  .skill-item--git .skill-item__icon, 
+  .skill-item--figma .skill-item__icon {
+    width: 34px;
+  }
+
+  /* LARGE 아이콘 */
+  .skill-item--large .skill-item__icon {
+    width: 56px;
   }
   /* ########## END - SKILL ########## */
 
@@ -1025,11 +1085,3 @@
   /* ########## END - WEB SECTION ########## */
 }
 
-/* ========== 480px 반응형 ========== */
-@media (max-width: 480px) {
-  /* ----- Core Modal: Icon Size ----- */
-  .modal--expanded.modal--core .core-card__icon {
-    width: 48px;
-    height: 48px;
-  }
-}

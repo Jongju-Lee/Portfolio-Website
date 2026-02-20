@@ -465,8 +465,6 @@
 /* ########## END - Utility Buttons ########## */
 
 
-
-
 /* ########## Custom Lightbox ########## */
 /* ----- Lightbox Overlay ----- */
 .lightbox {
@@ -677,10 +675,10 @@
 }
 .modal--expanded {
   width: 85%;
+  height: 80vh; /* Fallback */
+  height: 80dvh;
   max-width: 900px;
-  height: 420px;
-  max-height: 85vh; /* Fallback */
-  max-height: 85dvh;
+  max-height: 460px;
   padding: 0;
   background-color: var(--color-bg-white);
   border-radius: 24px;
@@ -692,6 +690,82 @@
 .modal--expanded .modal__content {
   display: flex;
   height: 100%;
+  transition: opacity 0.2s ease;
+}
+
+/* ----- modal__nav (내비게이션 바 — detail-panel 하단) ----- */
+.modal__nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-8);
+  width: 100%;
+  padding: var(--spacing-24);
+}
+.modal__nav-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.modal__nav-btn--prev {
+  background-image: url(../../images/icon/modal-btn-prev.svg);
+}
+.modal__nav-btn--next {
+  background-image: url(../../images/icon/modal-btn-next.svg);
+}
+.modal__nav-btn:hover {
+  background-color: rgba(var(--color-primary-rgb), 0.2);
+  transform: scale(1.08);
+}
+.modal__nav-btn:active {
+  transform: scale(0.95);
+}
+.modal__nav-dots {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.modal__nav-dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: rgba(var(--color-primary-rgb), 0.2);
+  transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.modal__nav-dot--active {
+  width: 24px;
+  border-radius: 8px;
+  background: var(--color-primary);
+  pointer-events: none;
+}
+.modal__nav-dot:hover:not(.modal__nav-dot--active) {
+  background: rgba(var(--color-primary-rgb), 0.4);
+  transform: scale(1.2);
+}
+.modal__nav-counter {
+  margin-bottom: 3px;
+  display: none;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  font-family: var(--font-EN);
+  letter-spacing: 2px;
+  color: var(--color-primary);
 }
 
 /* ----- modal__close-btn ----- */
@@ -700,26 +774,32 @@
   top: 32px;
   right: 32px;
   z-index: 10;
-  width: 20px;
-  height: 20px;
-  background-image: url(../../images/icon/skill-modal-close.webp);
+  width: 30px;
+  height: 30px;
+  background-image: url(../../images/icon/skill-modal-close.svg);
   background-size: 100% 100%;
   cursor: pointer;
   transition: background-image 0.3s;
 }
 .modal__close-btn:hover {
-  background-image: url(../../images/icon/skill-modal-close-hover.webp);
+  background-image: url(../../images/icon/skill-modal-close-hover.svg);
 }
 
 /* ----- modal__detail-title (모달 상세 제목) ----- */
 .modal__detail-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-8);
+  row-gap: 0;
   margin-bottom: var(--spacing-24);
   font-size: var(--font-size-3xl);
-  color: var(--text-color-title);
   line-height: 1.3;
 }
 .modal__detail-title b {
   font-weight: 600;
+}
+.modal__detail-title b.font-kr {
+  font-weight: 700;
 }
 
 /* ----- modal__keywords (키워드 태그 그룹) ----- */
@@ -756,15 +836,18 @@
   transform: translateY(-2px);
 }
 
-/* ----- modal__detail-desc (모달 상세 설명) ----- */
-.modal__detail-desc {
-  margin: 0;
-  font-size: var(--font-size-lg);
-  line-height: 1.7;
-  text-align: left;
-  word-break: keep-all;
-  color: var(--text-color-body);
+/* ----- modal__detail-panel (모달 좌측 visual 공통) ----- */
+.modal--expanded .modal__visual {
+  display: flex;
+  flex: 0 0 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-36);
+  animation: fadeInLeft 0.6s ease 0.15s both;
 }
+
 /* ----- modal__detail-panel (모달 우측 상세 패널 공통) ----- */
 .modal--expanded .modal__detail-panel {
   position: relative;
@@ -772,10 +855,22 @@
   flex: 1;
   flex-direction: column;
   justify-content: flex-start;
-  padding: var(--spacing-48);
-  padding-top: var(--spacing-72);
+  padding: var(--spacing-64) var(--spacing-48) 0;
   overflow-y: auto;
   animation: slideInRight 0.6s ease 0.25s both;
+}
+
+/* ----- modal__detail-desc (모달 상세 설명) ----- */
+.modal__detail-desc {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  text-align: left;
+  word-break: keep-all;
+  color: var(--text-color-gray);
+}
+.modal__detail-desc b {
+  color: var(--text-color-body);
 }
 /* ########## END - Modal Component ########## */
 

@@ -151,7 +151,7 @@
             <div class="core-card__box">
               <!-- Card 1: 웹 표준 및 웹 접근성 기반 마크업 -->
               <div class="core-card">
-                <div class="core-card__visual">
+                <div class="core-card__visual modal__visual">
                   <img src="./images/core/core-icon-01.svg" alt="코드 아이콘" class="core-card__icon">
                   <h3 class="core-card__title core-card__title--card"><b class="font-kr">웹 표준 및 웹 접근성 </b><span class="font-kr">기반 마크업</span></h3>
                   <h3 class="core-card__title core-card__title--modal">A11y &<br />Web Standard</h3>
@@ -172,7 +172,7 @@
                     <span class="modal__keyword">Semantic Markup</span>
                     <span class="modal__keyword">WAI-ARIA</span>
                   </div>
-                  <p class="modal__detail-desc font-kr">
+                  <p class="modal__detail-desc">
                     W3C 웹 표준을 준수하여 <b>시맨틱 태그</b>로 구조를 설계하고, <b>WAI-ARIA</b> 속성을 활용하여 스크린 리더 사용자를 포함한 모든 사용자가 콘텐츠에 접근할 수 있도록 구현합니다. OpenWAX 등 접근성 검사 도구를 통해 지속적으로 품질을 검증합니다.
                   </p>
                 </div>
@@ -180,7 +180,7 @@
   
               <!-- Card 2: 멀티 디바이스 최적화 -->
               <div class="core-card">
-                <div class="core-card__visual">
+                <div class="core-card__visual modal__visual">
                   <img src="./images/core/core-icon-02.svg" alt="디바이스 아이콘" class="core-card__icon">
                   <h3 class="core-card__title core-card__title--card"><b class="font-kr">멀티 디바이스 </b><span class="font-kr">최적화</span></h3>
                   <h3 class="core-card__title core-card__title--modal">Multi-Device</h3>
@@ -196,18 +196,18 @@
                   </div>
                 </div>
                 <div class="core-card__detail modal__detail-panel">
-                  <h4 class="modal__detail-title font-kr">멀티 디바이스 최적화</h4>
+                  <h4 class="modal__detail-title"><b>멀티 디바이스</b> 최적화</h4>
                   <div class="modal__keywords">
-                    <span class="modal__keyword"><span class="font-kr bold">반응형 / 적응형</span> UI</span>
+                    <span class="modal__keyword">Responsive UI</span>
                     <span class="modal__keyword">Cross-Browser</span>
                   </div>
-                  <p class="modal__detail-desc font-kr"><b>미디어 쿼리</b>와 유연한 레이아웃을 활용하여 PC, 태블릿, 모바일 등 다양한 디바이스 환경에 최적화된 UI를 구현합니다. Chrome, Safari, Firefox, Edge 등 주요 브라우저에서 동일한 사용자 경험을 제공하기 위해 <b>크로스 브라우저</b> 호환성을 검증합니다.</p>
+                  <p class="modal__detail-desc"><b>미디어 쿼리</b>와 유연한 레이아웃을 활용하여 PC, 태블릿, 모바일 등 다양한 디바이스 환경에 최적화된 UI를 구현합니다. Chrome, Safari, Firefox, Edge 등 주요 브라우저에서 동일한 사용자 경험을 제공하기 위해 <b>크로스 브라우저</b> 호환성을 검증합니다.</p>
                 </div>
               </div>
   
               <!-- Card 3: Pixel-Perfect 시안 구현 -->
               <div class="core-card">
-                <div class="core-card__visual">
+                <div class="core-card__visual modal__visual">
                   <img src="./images/core/core-icon-03.svg" alt="크로스헤어 아이콘" class="core-card__icon">
                   <h3 class="core-card__title core-card__title--card"><b class="font-en">Pixel-Perfect </b><span class="font-kr">시안 구현</span></h3>
                   <h3 class="core-card__title core-card__title--modal">Pixel-Perfect</h3>
@@ -223,7 +223,7 @@
                   </div>
                 </div>
                 <div class="core-card__detail modal__detail-panel">
-                  <h4 class="modal__detail-title">Pixel-Perfect <span class="font-kr">시안 구현</span></h4>
+                  <h4 class="modal__detail-title"><b class="font-en medium">Pixel-Perfect</b> 시안 구현</h4>
                   <div class="modal__keywords">
                     <span class="modal__keyword">CSS Variables</span>
                     <span class="modal__keyword">Figma Tokens</span>
@@ -234,7 +234,7 @@
   
               <!-- Card 4: 인터랙션 및 기능 구현 -->
               <div class="core-card">
-                <div class="core-card__visual">
+                <div class="core-card__visual modal__visual">
                   <img src="./images/core/core-icon-04.svg" alt="클릭 아이콘" class="core-card__icon">
                   <h3 class="core-card__title core-card__title--card"><b class="font-kr">인터랙션 및 기능 </b><span class="font-kr">구현</span></h3>
                   <h3 class="core-card__title core-card__title--modal">Interaction<br />&amp; Motion</h3>
@@ -250,9 +250,9 @@
                   </div>
                 </div>
                 <div class="core-card__detail modal__detail-panel">
-                  <h4 class="modal__detail-title font-kr">인터랙션 및 기능 구현</h4>
+                  <h4 class="modal__detail-title"><b>인터랙션 및 기능</b> 구현</h4>
                   <div class="modal__keywords">
-                    <span class="modal__keyword">JavaScript / jQuery</span>
+                    <span class="modal__keyword">JS / jQuery</span>
                     <span class="modal__keyword">CSS Keyframes</span>
                   </div>
                   <p class="modal__detail-desc font-kr"><b>JavaScript</b>와 <b>CSS 애니메이션</b>을 활용하여 사용자 인터랙션을 구현합니다. 모달, 슬라이더, 스크롤 애니메이션 등 다양한 UI 컴포넌트를 직접 제작하며, 라이브러리 의존도를 낮추고 성능을 최적화합니다.</p>
@@ -270,7 +270,7 @@
           <article class="skill-content" data-aos="fade-up">
             <!-- 1. HTML5 (Top Right) -->
             <div class="skill-item skill-item--large skill-item--html">
-              <div class="skill-item__visual">
+              <div class="skill-item__visual modal__visual">
                 <img src="./images/skill/html-icon.webp" alt="HTML5 아이콘" class="skill-item__icon" loading="lazy">
                 <div class="skill-item__text">
                   <h3 class="skill-item__title font-en">HTML5</h3>
@@ -292,7 +292,7 @@
 
             <!-- 2. CSS3 (Center) -->
             <div class="skill-item skill-item--large skill-item--css">
-              <div class="skill-item__visual">
+              <div class="skill-item__visual modal__visual">
                 <img src="./images/skill/css-icon.webp" alt="CSS3 아이콘" class="skill-item__icon" loading="lazy">
                 <div class="skill-item__text">
                   <h3 class="skill-item__title font-en">CSS3</h3>
@@ -314,7 +314,7 @@
 
             <!-- 3. JS (Bottom Left) -->
             <div class="skill-item skill-item--large skill-item--js">
-              <div class="skill-item__visual">
+              <div class="skill-item__visual modal__visual">
                 <img src="./images/skill/js-icon.webp" alt="JavaScript 아이콘" class="skill-item__icon" loading="lazy">
                 <div class="skill-item__text">
                   <h3 class="skill-item__title font-en">JavaScript</h3>
@@ -336,7 +336,7 @@
 
             <!-- 4. React -->
             <div class="skill-item skill-item--react">
-              <div class="skill-item__visual">
+              <div class="skill-item__visual modal__visual">
                 <img src="./images/skill/react-icon.webp" alt="React 아이콘" class="skill-item__icon" loading="lazy">
                 <h3 class="skill-item__title font-en">React</h3>
               </div>
@@ -355,7 +355,7 @@
 
             <!-- 5. Git -->
             <div class="skill-item skill-item--git">
-              <div class="skill-item__visual">
+              <div class="skill-item__visual modal__visual">
                 <img src="./images/skill/git-icon.webp" alt="Git 아이콘" class="skill-item__icon" loading="lazy">
                 <h3 class="skill-item__title font-en">Git</h3>
               </div>
@@ -374,14 +374,13 @@
 
             <!-- 6. Accessibility -->
             <div class="skill-item skill-item--a11y">
-              <div class="skill-item__visual">
+              <div class="skill-item__visual modal__visual">
                 <img src="./images/skill/web-access-icon.webp" alt="웹 접근성 아이콘" class="skill-item__icon" loading="lazy">
                 <h3 class="skill-item__title font-en">A11y</h3>
               </div>
               <div class="skill-item__detail modal__detail-panel">
                 <h4 class="modal__detail-title font-en">Accessibility</h4>
                 <div class="modal__keywords">
-                  <span class="modal__keyword">KWCAG 2.2</span>
                   <span class="modal__keyword">WAI-ARIA</span>
                   <span class="modal__keyword">Screen Reader</span>
                 </div>
@@ -393,16 +392,15 @@
 
             <!-- 7. Figma -->
             <div class="skill-item skill-item--figma">
-              <div class="skill-item__visual">
+              <div class="skill-item__visual modal__visual">
                 <img src="./images/skill/figma-icon.webp" alt="피그마 아이콘" class="skill-item__icon" loading="lazy">
                 <h3 class="skill-item__title font-en">Figma</h3>
               </div>
               <div class="skill-item__detail modal__detail-panel">
                 <h4 class="modal__detail-title font-en">Figma</h4>
                 <div class="modal__keywords">
-                  <span class="modal__keyword">Tokens</span>
+                  <span class="modal__keyword">Figma Tokens</span>
                   <span class="modal__keyword">Design System</span>
-                  <span class="modal__keyword">Prototyping</span>
                 </div>
                 <p class="modal__detail-desc">
                   <b class="font-en">Figma Tokens</b> 기반의 디자인 시스템을 <b class="font-en">CSS Variables</b>로 동기화하여 프로젝트 <span class="font-en">UI</span> 일관성을 유지합니다. <b class="font-en">AI</b> <b>도구</b>를 보조 수단으로 활용하여 개발 효율을 높이고, 확보한 시간은 <span class="font-en">UI/UX</span> 디테일에 투자합니다.
@@ -412,7 +410,7 @@
             
              <!-- 8. Responsive -->
              <div class="skill-item skill-item--rwd">
-              <div class="skill-item__visual">
+              <div class="skill-item__visual modal__visual">
                 <img src="./images/skill/responsive-icon.webp" alt="반응형 UI 아이콘" class="skill-item__icon" loading="lazy">
                 <h3 class="skill-item__title font-en">RWD</h3>
               </div>
