@@ -873,6 +873,7 @@
   display: none;
 }
 
+
 /* ----- modal--core Visual 영역 (좌측 40%) ----- */
 .modal--expanded.modal--core .core-card__icon {
   display: block;

@@ -706,15 +706,15 @@
   padding: var(--spacing-24);
 }
 .modal__nav-btn {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border: none;
   border-radius: 50%;
   padding: 0;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 18px 18px;
+  background-size: 20px 20px;
   transition: background-color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -759,7 +759,6 @@
   transform: scale(1.2);
 }
 .modal__nav-counter {
-  margin-bottom: 3px;
   display: none;
   font-size: var(--font-size-lg);
   font-weight: 700;
@@ -774,15 +773,18 @@
   top: 28px;
   right: 28px;
   z-index: 10;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   background-image: url(../../images/icon/skill-modal-close.svg);
-  background-size: 100% 100%;
+  background-size: 30px 30px;
+  background-position: center;
   cursor: pointer;
-  transition: background-image 0.3s;
+  transition: background-image 0.2s, background-color 0.2s, transform 0.2s;
 }
 .modal__close-btn:hover {
-  background-image: url(../../images/icon/skill-modal-close-hover.svg);
+  background-color: var(--border-color-light-gray);
+  transform: scale(1.08);
 }
 
 /* ----- modal__detail-title (모달 상세 제목) ----- */

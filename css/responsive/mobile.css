@@ -872,11 +872,6 @@
 
 
   /* ----- MODAL 네비게이션 ----- */
-  .modal__nav-btn {
-    width: 40px;
-    height: 40px;
-  }
-
   /* Dot → Counter */
   .modal__nav-dots {
     display: none;
@@ -960,6 +955,9 @@
   }
 
   /* CORE SECTION 모달 개별 UI */
+  .modal--expanded .modal__visual.core-card__visual {
+    gap: var(--spacing-12);
+  }
   .modal--expanded.modal--core .core-card__icon {
     width: 48px;
     height: 48px;
