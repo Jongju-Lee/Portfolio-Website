@@ -561,7 +561,7 @@
 
   /* CORE SECTION 모달 개별 UI */
   .modal--expanded .modal__visual.core-card__visual {
-    gap: var(--spacing-20);
+    gap: var(--spacing-16);
   }
   .modal--expanded.modal--core .core-card__icon {
     flex-shrink: 0;
