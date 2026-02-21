@@ -715,7 +715,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -727,10 +727,6 @@
 }
 .modal__nav-btn:hover {
   background-color: rgba(var(--color-primary-rgb), 0.2);
-  transform: scale(1.08);
-}
-.modal__nav-btn:active {
-  transform: scale(0.95);
 }
 .modal__nav-dots {
   display: flex;
@@ -780,11 +776,10 @@
   background-size: 30px 30px;
   background-position: center;
   cursor: pointer;
-  transition: background-image 0.2s, background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s;
 }
 .modal__close-btn:hover {
   background-color: var(--border-color-light-gray);
-  transform: scale(1.08);
 }
 
 /* ----- modal__detail-title (모달 상세 제목) ----- */
