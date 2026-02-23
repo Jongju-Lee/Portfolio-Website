@@ -871,8 +871,8 @@
 
   /* ========== SECTION - ABOUT ========== */
   #about {
-    gap: var(--spacing-36);
-    padding: var(--spacing-80) var(--spacing-48);
+    justify-content: space-between;
+    padding: var(--spacing-80) var(--spacing-40);
   }
   .about-content {
     gap: var(--spacing-40);

@@ -21,6 +21,7 @@
     justify-content: center;
     align-items: center;
     height: auto;
+    max-height: none;
     min-height: 100vh; /* Fallback */
     min-height: 100dvh;
     padding: var(--spacing-100) var(--spacing-40);
