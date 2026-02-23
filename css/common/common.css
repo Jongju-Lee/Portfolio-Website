@@ -215,10 +215,14 @@ img {
 [data-anim="fade-left"] {
   transform: translateX(50px);
 }
+/* zoom-out */
+[data-anim="zoom-out"] {
+  transform: scale(1.05); /* 시작할 때 살짝 커져 있게 */
+}
 
 /* 활성화 상태 */
 [data-anim].is-animated {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translate(0, 0) scale(1);
 }
 /* ########## END - Scroll Animation ########## */
