@@ -214,14 +214,17 @@ document.addEventListener("DOMContentLoaded", () => {
           const el = entry.target;
           
           // data-anim-duration 속성이 있다면 인라인 스타일에 덮어쓰기 적용
-          const duration = el.getAttribute('data-anim-duration');
-          if (duration) {
+          const durationAttr = el.getAttribute('data-anim-duration');
+          const delayAttr = el.getAttribute('data-anim-delay');
+          
+          const duration = parseInt(durationAttr) || 1000; // default 1000ms (1s) in CSS
+          const delay = parseInt(delayAttr) || 0;
+
+          if (durationAttr) {
             el.style.transitionDuration = duration + 'ms';
           }
 
-          // data-anim-delay 속성이 있다면 인라인 스타일에 딜레이 적용
-          const delay = el.getAttribute('data-anim-delay');
-          if (delay) {
+          if (delayAttr) {
             el.style.transitionDelay = delay + 'ms';
           }
 
@@ -230,6 +233,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // 1회 실행 후 관찰 종료
           observer.unobserve(el);
+
+          // 애니메이션 완료 후 인라인 스타일 초기화 (Hover/Click 등 인터랙션 시 CSS Transition 충돌 방지)
+          if (durationAttr || delayAttr) {
+            setTimeout(() => {
+              el.style.transitionDuration = '';
+              el.style.transitionDelay = '';
+            }, duration + delay);
+          }
         }
       });
     }, animOptions);

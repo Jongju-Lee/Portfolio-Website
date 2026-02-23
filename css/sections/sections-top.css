@@ -145,8 +145,12 @@
   box-shadow: var(--shadow-glass);
   line-height: 1;
   animation: float 6s ease-in-out infinite;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+}
+.about-tag[data-anim] {
+  /* 등장 애니메이션만 1s로 등장 */
+  transition-duration: 1s; 
 }
 .about-tag:hover {
   box-shadow: var(--shadow-glass-hover);
@@ -163,7 +167,7 @@
   font-weight: 500;
   white-space: nowrap;
   color: var(--text-color-title);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .about-tag--collapsed .about-tag__text {
   max-width: 0;
@@ -198,7 +202,7 @@
 .about-tag--2 {
   bottom: 13%;
   left: -27%;
-  animation-delay: 1.5s;
+  animation-delay: 3s;
 }
 .about-tag--2 .about-tag__icon::before {
   content: 'A';
@@ -208,7 +212,7 @@
 .about-tag--3 {
   bottom: 35%;
   right: -20%;
-  animation-delay: 3s;
+  animation-delay: 5s;
 }
 .about-tag--3 .about-tag__icon::before {
   content: 'C';

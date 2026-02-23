@@ -25,7 +25,7 @@ header {
   border-bottom: 1px solid rgba(var(--color-white-rgb), 0.6);
 }
 .header--reveal {
-  animation: headerReveal 1.5s 0.5s forwards;
+  animation: headerReveal 1.5s 0s forwards;
 }
 .header--hide {
   transform: translateY(-100%);

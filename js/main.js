@@ -54,6 +54,9 @@ const ScrollAnimation = {
           
           // data-anim-delay 속성이 있다면 트랜지션 딜레이 적용
           const delay = el.getAttribute('data-anim-delay');
+          const delayTime = delay ? parseInt(delay, 10) : 0;
+          const durationTime = 1500; // CSS 기본 transition duration (1.5s)
+
           if (delay) {
             el.style.transitionDelay = delay + 'ms';
           }
@@ -63,6 +66,13 @@ const ScrollAnimation = {
 
           // AOS의 once: true 옵션과 동일한 효과를 위해 관찰 종료
           observer.unobserve(el);
+
+          // 애니메이션 완료 후 인라인 스타일 초기화 (Hover/Click 등 인터랙션 시 CSS Transition 충돌 방지)
+          if (delay) {
+            setTimeout(function () {
+              el.style.transitionDelay = '';
+            }, durationTime + delayTime);
+          }
         }
       });
     }, options);
