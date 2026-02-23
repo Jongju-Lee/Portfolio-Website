@@ -195,3 +195,29 @@ img {
   top: 0;
 }
 /* ---------- END - SKIP 네비게이션 ---------- */
+
+
+/* ########## Scroll Animation ########## */
+[data-anim] {
+  opacity: 0;
+  transition: all 1.5s ease-out;
+}
+
+/* fade-up */
+[data-anim="fade-up"] {
+  transform: translateY(50px);
+}
+/* fade-right */
+[data-anim="fade-right"] {
+  transform: translateX(-50px);
+}
+/* fade-left */
+[data-anim="fade-left"] {
+  transform: translateX(50px);
+}
+
+/* 활성화 상태 */
+[data-anim].is-animated {
+  opacity: 1;
+  transform: translate(0, 0);
+}

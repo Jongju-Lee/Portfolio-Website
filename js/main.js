@@ -25,6 +25,57 @@ const UtilButtons = {
 };
 
 
+/* ############### 스크롤 애니메이션 제어 ############### */
+const ScrollAnimation = {
+  observer: null,
+
+  init: function () {
+    // 1. IntersectionObserver 지원 여부 확인 (구형 브라우저 방어 코드)
+    if (!('IntersectionObserver' in window)) {
+      const elements = document.querySelectorAll('[data-anim]');
+      elements.forEach(function (el) {
+        el.classList.add('is-animated');
+      });
+      return;
+    }
+
+    // 2. Observer 옵션 설정
+    const options = {
+      root: null, // 브라우저 뷰포트를 기준
+      rootMargin: '0px',
+      threshold: 0.1 // 요소가 10% 정도 뷰포트에 들어왔을 때 콜백 실행
+    };
+
+    // 3. Observer 인스턴스 생성
+    this.observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          
+          // data-anim-delay 속성이 있다면 트랜지션 딜레이 적용
+          const delay = el.getAttribute('data-anim-delay');
+          if (delay) {
+            el.style.transitionDelay = delay + 'ms';
+          }
+
+          // 애니메이션 활성화 클래스 추가
+          el.classList.add('is-animated');
+
+          // AOS의 once: true 옵션과 동일한 효과를 위해 관찰 종료
+          observer.unobserve(el);
+        }
+      });
+    }, options);
+
+    // 4. 감시할 대상 요소들 수집 및 관찰 시작
+    const targetElements = document.querySelectorAll('[data-anim]');
+    const self = this;
+    targetElements.forEach(function (el) {
+      self.observer.observe(el);
+    });
+  }
+};
+
 
 /* ############### 웰라이프 목업 Lightbox 동적 제어 ############### */
 const MockupLightbox = {
@@ -499,9 +550,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  /* ############### AOS.js ############### */
-  AOS.init({
-    duration: 1500,
-    once: true,
-  });
+  /* ############### 스크롤 애니메이션 (AOS 대체) 초기화 ############### */
+  ScrollAnimation.init();
 });
