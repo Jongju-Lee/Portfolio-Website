@@ -596,3 +596,39 @@ footer {
 .top-btn:hover {
   opacity: 0.5;
 }
+
+
+/* ########## Scroll Animation ########## */
+/* 
+  default duration: 1000ms (1s)
+  default easing: ease-out-cubic (cubic-bezier(0.215, 0.610, 0.355, 1.000))
+*/
+[data-anim] {
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+/* fade-up */
+[data-anim="fade-up"] {
+  transform: translateY(50px);
+}
+/* fade-down */
+[data-anim="fade-down"] {
+  transform: translateY(-50px);
+}
+/* fade-right */
+[data-anim="fade-right"] {
+  transform: translateX(-50px);
+}
+/* fade-left */
+[data-anim="fade-left"] {
+  transform: translateX(50px);
+}
+
+/* 활성화 상태 */
+[data-anim].is-animated {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+/* ########## END - Scroll Animation ########## */
+

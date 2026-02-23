@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ########## 상수 정의 ########## */
   const TOP_BTN_SHOW_THRESHOLD = 300; // Top 버튼 표시 스크롤 위치(px)
   const COUNT_UP_DURATION = 1500; // 카운트업 애니메이션 지속 시간(ms)
-  const HERO_STATS_AOS_DELAY = 1600; // Hero Stats AOS 완료 대기 시간 (delay 800ms + duration 800ms)
   const SWIPER_AUTOPLAY_DELAY = 4000; // Swiper 자동재생 딜레이(ms)
   const SWIPER_SPEED = 400; // Swiper 슬라이드 전환 속도(ms)
 
@@ -193,20 +192,55 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ########## END - Swiper.js ########## */
 
 
-  /* ########## AOS.js ########## */
-  if (typeof AOS !== 'undefined') {
-    AOS.init({
-      duration: 600,
-      once: true,
-      easing: 'ease-out-cubic'
+  /* ########## 스크롤 애니메이션 ########## */
+  // 1. IntersectionObserver 지원 여부 확인 (구형 브라우저 방어 코드)
+  if (!('IntersectionObserver' in window)) {
+    const animElements = document.querySelectorAll('[data-anim]');
+    animElements.forEach((el) => {
+      el.classList.add('is-animated');
     });
+  } else {
+    // 2. Observer 옵션 설정
+    const animOptions = {
+      root: null, // 브라우저 뷰포트를 기준
+      rootMargin: '0px',
+      threshold: 0.1 // 요소가 10% 정도 뷰포트에 들어왔을 때 콜백 실행
+    };
 
-    // 이미지 로드 완료 후 AOS 위치 재계산 (새로고침 타이밍 일관성 확보)
-    window.addEventListener('load', () => {
-      AOS.refresh();
+    // 3. Observer 인스턴스 생성
+    const animObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          
+          // data-anim-duration 속성이 있다면 인라인 스타일에 덮어쓰기 적용
+          const duration = el.getAttribute('data-anim-duration');
+          if (duration) {
+            el.style.transitionDuration = duration + 'ms';
+          }
+
+          // data-anim-delay 속성이 있다면 인라인 스타일에 딜레이 적용
+          const delay = el.getAttribute('data-anim-delay');
+          if (delay) {
+            el.style.transitionDelay = delay + 'ms';
+          }
+
+          // 애니메이션 활성화 클래스 추가
+          el.classList.add('is-animated');
+
+          // 1회 실행 후 관찰 종료
+          observer.unobserve(el);
+        }
+      });
+    }, animOptions);
+
+    // 4. 감시할 대상 요소들 수집 및 관찰 시작
+    const animElements = document.querySelectorAll('[data-anim]');
+    animElements.forEach((el) => {
+      animObserver.observe(el);
     });
   }
-  /* ########## END - AOS.js ########## */
+  /* ########## END - 스크롤 애니메이션 ########## */
 
 
   /* ########## Top Button ########## */
@@ -271,9 +305,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // hero-stats는 AOS 애니메이션 완료 후 시작
+          // hero-stats는 스크롤 애니메이션 완료 후 시작
           const isHeroStats = entry.target.closest('.hero-stats');
-          const delay = isHeroStats ? HERO_STATS_AOS_DELAY : 0;
+          let delay = 0;
+          
+          if (isHeroStats) {
+            const animDuration = parseInt(isHeroStats.getAttribute('data-anim-duration')) || 1000;
+            const animDelay = parseInt(isHeroStats.getAttribute('data-anim-delay')) || 0;
+            delay = animDuration + animDelay;
+          }
 
           setTimeout(() => {
             animateCountUp(entry.target);
