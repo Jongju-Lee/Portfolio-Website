@@ -1,20 +1,20 @@
 ﻿/* ========== SECTIONS-BOTTOM.CSS ==========
- * 하단 섹션 스타일 (Practical, Epilogue)
+ * 하단 섹션 스타일 (Prototype, Epilogue)
  * ========================================= */
 
 
-/* ########## PRACTICAL SECTION ########## */
-/* ----- practical-content ----- */
-.practical-content {
+/* ########## PROTOTYPE SECTION ########## */
+/* ----- prototype-content ----- */
+.prototype-content {
   margin-top: var(--spacing-100);
 }
 
-/* ----- practical-slider ----- */
-.practical-slider:not(:last-child) {
+/* ----- prototype-slider ----- */
+.prototype-slider:not(:last-child) {
   margin-bottom: var(--spacing-100);
 }
 
-.practical-slider__title {
+.prototype-slider__title {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -28,7 +28,7 @@
   color: var(--text-color-title);
 }
 
-.practical-slider__title::before {
+.prototype-slider__title::before {
   content: "";
   display: inline-block;
   width: 8px;
@@ -37,8 +37,8 @@
   flex-shrink: 0;
 }
 
-/* ----- practical-slider__item ----- */
-.practical-slider__item {
+/* ----- prototype-slider__item ----- */
+.prototype-slider__item {
   position: relative;
   display: block;
   width: 100%;
@@ -52,31 +52,31 @@
 }
 /* aspect-ratio 지원하는 브라우저에만 적용 */
 @supports (aspect-ratio: 16 / 9) {
-  .practical-slider__item {
+  .prototype-slider__item {
     height: auto;
     padding-bottom: 0;
     aspect-ratio: 16 / 9;
   }
 }
-.practical-slider__item:hover {
+.prototype-slider__item:hover {
   filter: brightness(0.8);
   transform: scale(1.02)
 }
-.practical-slider__item:active {
+.prototype-slider__item:active {
   transform: scale(0.95);
 }
 
 /* ---------- Custom Slider Padding ---------- */
 /* Box-shadow 잘림 방지를 위한 패딩 */
-.practical-slider__box {
+.prototype-slider__box {
   position: relative;
   overflow: hidden;
   padding: 0 var(--spacing-16);
 }
-.practical-slider__box .ui-slider__wrapper {
+.prototype-slider__box .ui-slider__wrapper {
   padding: var(--spacing-16) 0;
 }
-/* ########## END - PRACTICAL SECTION ########## */
+/* ########## END - PROTOTYPE SECTION ########## */
 
 
 /* ========== EPILOGUE SECTION ========== */

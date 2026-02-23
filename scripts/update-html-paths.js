@@ -4,9 +4,9 @@ const fs = require('fs');
 const htmlPath = './index.html';
 const content = fs.readFileSync(htmlPath, 'utf8');
 
-// images/practical/practical-*.png를 .webp로 변경
+// images/prototype/prototype-*.png를 .webp로 변경
 const updatedContent = content.replace(
-  /(images\/practical\/practical-[^"]+)\.png/g,
+  /(images\/prototype\/prototype-[^"]+)\.png/g,
   '$1.webp'
 );
 
@@ -14,4 +14,4 @@ const updatedContent = content.replace(
 fs.writeFileSync(htmlPath, updatedContent, 'utf8');
 
 console.log('✅ HTML 파일 업데이트 완료!');
-console.log('경로 변경: images/practical/practical-*.png → *.webp');
+console.log('경로 변경: images/prototype/prototype-*.png → *.webp');

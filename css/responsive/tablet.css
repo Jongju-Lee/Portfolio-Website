@@ -449,17 +449,17 @@
   /* ########## END - REACT ########## */
 
 
-  /* ########## SECTION - PRACTICAL ########## */
-  /* practical-slider */
-  .practical-slider__title {
+  /* ########## SECTION - PROTOTYPE ########## */
+  /* prototype-slider */
+  .prototype-slider__title {
     gap: var(--spacing-8);
     margin-bottom: var(--spacing-4);
   }
-  .practical-slider__box .slider-nav {
+  .prototype-slider__box .slider-nav {
     padding: var(--spacing-16);
   }
 
-  /* ########## END - PRACTICAL ########## */
+  /* ########## END - PROTOTYPE ########## */
 
 
   /* ========== EPILOGUE SECTION ========== */

@@ -5,8 +5,8 @@ const { promisify } = require('util');
 const execPromise = promisify(exec);
 
 async function convertPngToWebp() {
-  const inputDir = './images/practical';
-  const backupDir = './images/practical/_original_png_backup';
+  const inputDir = './images/prototype';
+  const backupDir = './images/prototype/_original_png_backup';
   
   try {
     // PNG 파일 목록 가져오기

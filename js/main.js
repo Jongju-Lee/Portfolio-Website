@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ############### 모바일 목업 스크롤바 제거 ############### */
   // 라이트박스 링크 클릭시 버튼 숨김
-  document.querySelectorAll('.practical-slider__item').forEach(function (item) {
+  document.querySelectorAll('.prototype-slider__item').forEach(function (item) {
     item.addEventListener('click', function () {
       setUtilButtonsVisible(false);
     });
