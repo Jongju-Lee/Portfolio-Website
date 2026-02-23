@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="register-card">
+        <h2 class="register-card__title">가입하기</h2>
+        <form class="register-card__form" action="">
+          <div class="register-card__row">
+            <div class="register-card__field">
+              <b class="register-card__label">이름</b>
+              <input class="register-card__input" type="text" placeholder="이름을 입력하세요" required />
+            </div>
+            <div class="register-card__field">
+              <b class="register-card__label">닉네임</b>
+              <input class="register-card__input" type="text" placeholder="닉네임을 입력하세요" required />
+            </div>
+          </div>
+          <div class="register-card__row">
+            <div class="register-card__field">
+              <b class="register-card__label register-card__label--optional">이메일</b>
+              <input class="register-card__input" type="email" placeholder="이메일을 입력하세요(선택)" />
+            </div>
+            <div class="register-card__field">
+              <b class="register-card__label">휴대전화</b>
+              <input
+                class="register-card__input"
+                type="text"
+                placeholder="'-' 를 빼고 입력하세요"
+                required
+              />
+            </div>
+          </div>
+          <div class="register-card__row">
+            <div class="register-card__field">
+              <b class="register-card__label">비밀번호</b>
+              <input
+                class="register-card__input"
+                type="password"
+                placeholder="비밀번호를 입력하세요"
+                required
+              />
+            </div>
+            <div class="register-card__field">
+              <b class="register-card__label">비밀번호 확인</b>
+              <input class="register-card__input" type="password" placeholder="비밀번호 확인" required />
+            </div>
+          </div>
+          <div class="register-card__radio-group">
+            <b class="register-card__label">성별</b>
+            <div class="register-card__radios">
+              <input class="register-card__radio-input" type="radio" name="gender" id="male" />
+              <label class="register-card__radio-label" for="male">남자</label>
+              <input class="register-card__radio-input" type="radio" name="gender" id="female" />
+              <label class="register-card__radio-label" for="female">여자</label>
+              <input class="register-card__radio-input" type="radio" name="gender" id="not" checked />
+              <label class="register-card__radio-label" for="not">선택안함</label>
+            </div>
+          </div>
+          <button class="register-card__btn">가입하기</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+/* ########## Gallery Accordion ########## */
+.container {
+  height: 100vh;
+}
+
+/* ----- gallery ----- */
+.gallery {
+  display: flex;
+  height: inherit;
+}
+.gallery__item {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  filter: grayscale(1);
+  transition: flex 0.5s, filter 0.5s;
+  transition-delay: 0.3s;
+}
+.gallery__item:hover {
+  flex: 2;
+  filter: grayscale(0);
+}
+.gallery__item:not(:last-child) {
+  border-right: 5px solid #000;
+}
+.gallery__photo {
+  width: 100%;
+  height: 100%;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery__desc {
+  position: absolute;
+  bottom: -470px;
+  z-index: 10;
+  min-height: 180px;
+  padding: 30px;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  transition: 0.5s;
+}
+.gallery__desc::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 31px;
+  background-color: #000;
+  transform: rotate(5deg) translateY(20px) scale(1.4);
+}
+.gallery__item:hover .gallery__desc {
+  bottom: 0px;
+  transition-delay: 0.5s;
+}
+.gallery__title {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+/* 반응형 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery__item:not(:last-child) {
+    border-right: none;
+    border-bottom: 2px solid #000;
+  }
+  .gallery__item:hover,
+  .gallery__item:active {
+    flex: 2;
+    filter: grayscale(0);
+  }
+  .gallery__desc {
+    padding: 15px;
+    min-height: auto;
+    bottom: -100%;
+  }
+  .gallery__desc::after {
+    height: 15px;
+    transform: rotate(2deg) translateY(10px) scale(1.2);
+  }
+  .gallery__item:hover .gallery__desc,
+  .gallery__item:active .gallery__desc {
+    bottom: 0px;
+  }
+  .gallery__title {
+    font-size: 18px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+  .gallery__text {
+    font-size: 14px;
+    margin: 0;
+    display: none;
+  }
+  .gallery__item:hover .gallery__text,
+  .gallery__item:active .gallery__text {
+    display: block;
+  }
+}

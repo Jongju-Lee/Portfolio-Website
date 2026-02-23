@@ -1,0 +1,246 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+}
+/* ##### Header Navigation ##### */
+.container {
+  min-height: inherit;
+}
+/* ##### Header Navigation ##### */
+.container {
+  min-height: inherit;
+}
+.dark-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 70px;
+  background-color: dodgerblue;
+  color: #fff;
+  transition: 0.5s;
+}
+.dark-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  height: inherit;
+  margin: auto;
+  padding: 0 20px;
+}
+.dark-nav__logo {
+  font-size: 30px;
+  font-weight: 500;
+}
+.dark-nav__menu {
+  display: flex;
+  gap: 30px;
+}
+.dark-nav__link {
+  position: relative;
+  font-size: 18px;
+}
+.dark-nav__link::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 0.35s;
+}
+.dark-nav__link:hover::after {
+  opacity: 1;
+}
+.dark-nav__actions {
+  position: relative;
+  top: 4px;
+  display: flex;
+  gap: 36px;
+}
+
+/* Glow Pulse Animation for Button Icons */
+@keyframes glowPulse {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+                 0 0 20px rgba(255, 255, 255, 0.7),
+                 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.3);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+                 0 0 40px rgba(255, 255, 255, 1),
+                 0 0 60px rgba(255, 255, 255, 0.9),
+                 0 0 80px rgba(255, 255, 255, 0.7);
+  }
+}
+
+.dark-nav__btn {
+  position: relative;
+}
+.dark-nav__btn::after {
+  font-family: "bootstrap-icons";
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+.dark-nav__btn:hover::after {
+  color: #ddd;
+  animation: none;
+}
+.dark-nav__btn--dark::after {
+  content: "\F1D2";
+}
+.dark-nav__btn--search::after {
+  content: "\F52A";
+  font-size: 22px;
+}
+.dark-nav__search-box {
+  position: absolute;
+  right: -20px;
+  bottom: -80px;
+  display: none;
+  border: 5px solid dodgerblue;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.dark-nav__search-box::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 20px;
+  z-index: -1;
+  width: 6px;
+  height: 6px;
+  background-color: dodgerblue;
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+.dark-nav__search-input {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #fff;
+  background-size: 18px;
+  transition: 0.35s;
+}
+.dark-nav__search-input::placeholder {
+  color: dodgerblue;
+  transition: 0.35s;
+}
+.dark-nav__search-input:focus::placeholder {
+  opacity: 0;
+}
+.dark-nav__search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  filter: brightness(0) saturate(100%) invert(47%) sepia(19%) saturate(4926%) hue-rotate(190deg) brightness(98%) contrast(108%);
+}
+
+.dark-section {
+  height: 100vh;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+/* ##### Header Navigation - Dark Mode ##### */
+.dark-header.active {
+  background-color: #333;
+  color: #999;
+}
+.dark-header.active .dark-nav__link::after {
+  background-color: #999;
+}
+.dark-section.active {
+  background-color: #000;
+}
+.dark-header.active .dark-nav__search-box {
+  border-color: #777;
+}
+.dark-header.active .dark-nav__search-box::after {
+  background-color: #777;
+}
+.dark-header.active .dark-nav__search-input {
+  background-color: #ddd;
+}
+.dark-header.active .dark-nav__search-input::placeholder {
+  color: #333;
+}
+.dark-header.active .dark-nav__search-icon {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(44%) saturate(18%) hue-rotate(12deg) brightness(101%) contrast(96%);
+}
+
+/* Dark Mode - Weaker Glow Animation */
+@keyframes glowPulseDark {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(153, 153, 153, 0.5),
+                 0 0 10px rgba(153, 153, 153, 0.3);
+  }
+  50% {
+    transform: scale(1.15);
+    text-shadow: 0 0 10px rgba(153, 153, 153, 0.7),
+                 0 0 20px rgba(153, 153, 153, 0.5),
+                 0 0 30px rgba(153, 153, 153, 0.3);
+  }
+}
+.dark-header.active .dark-nav__btn::after {
+  animation: glowPulseDark 2s ease-in-out infinite;
+}
+
+/* 모바일 호환성 (768px 이하) */
+@media (max-width: 768px) {
+  .dark-nav__menu {
+    display: none; /* simple responsive fallback */
+  }
+}
+

@@ -1,0 +1,158 @@
+﻿/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+}
+/* ########## Sign In ########## */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 20px 80px; /* bottom margin for mockups */
+  background: url(./images/background.jpg) no-repeat center center / cover;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* ----- sign-in ----- */
+.sign-in {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.sign-in__logo {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+.sign-in__title {
+  margin-top: 20px;
+  text-align: center;
+}
+.sign-in__form {
+  margin-top: 30px;
+}
+.sign-in__field {
+  margin-bottom: 20px;
+}
+.sign-in__input {
+  width: 100%;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+.sign-in__input::placeholder {
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: 0.35s;
+}
+.sign-in__input:focus::placeholder {
+  opacity: 0;
+}
+.sign-in__btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 20px;
+  background-color: #75b73c;
+  color: #fff;
+  transition: 0.35s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.sign-in__btn:hover {
+  background-color: #3c8a29;
+}
+.sign-in__status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.sign-in__checkbox {
+  display: none;
+}
+.sign-in__check-label {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.sign-in__check-label::before {
+  content: "\f096";
+  font-family: "fontawesome";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  font-size: 18px;
+  transform: translateY(1px);
+  transition: 0.35s;
+}
+.sign-in__checkbox:checked + .sign-in__check-label::before {
+  content: "\f14a";
+  color: #75b73c;
+}
+.sign-in__forgot:hover {
+  text-decoration: underline;
+}
+
+/* 모바일 호환성 (768px 이하) */
+@media (max-width: 768px) {
+  .sign-in {
+    padding: 25px 20px;
+  }
+  .sign-in__status {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  .sign-in__forgot {
+    text-align: center;
+  }
+}

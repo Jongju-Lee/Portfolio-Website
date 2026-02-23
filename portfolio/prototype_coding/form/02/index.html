@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In UI</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sign-in">
+        <img class="sign-in__logo" src="./images/icon.png" alt="회사 아이콘" />
+        <h1 class="sign-in__title">Sportify Login</h1>
+        <form class="sign-in__form" action="">
+          <div class="sign-in__field">
+            <input class="sign-in__input" type="email" placeholder="user email" />
+          </div>
+          <div class="sign-in__field">
+            <input class="sign-in__input" type="password" placeholder="password" />
+          </div>
+          <button class="sign-in__btn">SIGN IN</button>
+          <div class="sign-in__status">
+            <div class="sign-in__check-field">
+              <input class="sign-in__checkbox" type="checkbox" id="chk1" checked />
+              <label class="sign-in__check-label" for="chk1">Save your Email?</label>
+            </div>
+            <a class="sign-in__forgot" href="#none">Forgot Password?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

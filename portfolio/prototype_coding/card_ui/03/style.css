@@ -1,0 +1,134 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+}
+/* ########## Profile Card UI ########## */
+/* ########## Profile Card UI ########## */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px 80px; /* added bottom padding for mockup UI controls */
+  background-color: #f4f4f4;
+}
+.profile-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.profile-card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  border-radius: 7px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.profile-card:hover {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-20px);
+}
+.profile-card__photo {
+  width: 100%;
+  height: 100%;
+}
+.profile-card__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.profile-card:hover .profile-card__photo-img {
+  filter: grayscale(1);
+}
+.profile-card__desc {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.profile-card:nth-of-type(1) .profile-card__desc {
+  background: linear-gradient(0deg, #6ab04c, transparent);
+}
+.profile-card:nth-of-type(2) .profile-card__desc {
+  background: linear-gradient(0deg, crimson, transparent);
+}
+.profile-card:nth-of-type(3) .profile-card__desc {
+  background: linear-gradient(0deg, #686de0, transparent);
+}
+.profile-card:hover .profile-card__desc {
+  top: 0;
+}
+.profile-card__desc-inner {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.profile-card__name {
+  font-size: 20px;
+}
+.profile-card__role {
+  display: block;
+  margin-top: 5px;
+  color: gold;
+  font-size: 15px;
+}
+.profile-card__text {
+  margin-top: 15px;
+}
+.profile-card__sns {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.profile-card__sns-link {
+  margin: 0 3px;
+  font-size: 20px;
+  transition: 0.35s;
+}
+.profile-card__sns-link:hover {
+  color: #999;
+}
+
+/* 모바일 호환성 (768px 이하) */
+@media (max-width: 768px) {
+  .profile-list {
+    gap: 30px;
+  }
+}

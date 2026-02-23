@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naver Sign Up</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="naver-signup__logo">
+        <a href="#none">
+          <img class="naver-signup__logo-img" src="./images/logo-naver.png" alt="네이버 로고" />
+        </a>
+      </div>
+      <section class="naver-signup__section">
+        <form class="naver-signup__form" action="">
+          <div class="naver-signup__field naver-signup__field--id">
+            <b class="naver-signup__label">아이디</b>
+            <input class="naver-signup__input" type="text" placeholder="@naver.com" required />
+          </div>
+          <div class="naver-signup__field">
+            <b class="naver-signup__label">비밀번호</b>
+            <input
+              class="naver-signup__input"
+              type="password"
+              placeholder="비밀번호를 입력해주세요"
+              required
+            />
+          </div>
+          <div class="naver-signup__field">
+            <b class="naver-signup__label">비밀번호 재확인</b>
+            <input class="naver-signup__input" type="password" placeholder="비밀번호 확인" required />
+          </div>
+          <div class="naver-signup__field">
+            <b class="naver-signup__label">이름</b>
+            <input class="naver-signup__input" type="text" placeholder="이름을 입력해주세요" required />
+          </div>
+          <div class="naver-signup__field naver-signup__field--birth">
+            <b class="naver-signup__label">생년월일</b>
+            <div class="naver-signup__birth-wrapper">
+              <input class="naver-signup__input" type="text" placeholder="년(4자)" required />
+              <select class="naver-signup__select" required>
+                <option value="월">월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <input class="naver-signup__input" type="text" placeholder="일" required />
+            </div>
+          </div>
+          <div class="naver-signup__field naver-signup__field--gender">
+            <b class="naver-signup__label">성별</b>
+            <div class="naver-signup__radio-field">
+              <input class="naver-signup__radio-input" type="radio" name="gender" id="radio1" />
+              <input class="naver-signup__radio-input" type="radio" name="gender" id="radio2" />
+              <input class="naver-signup__radio-input" type="radio" name="gender" id="radio3" checked />
+              <label class="naver-signup__radio-label" for="radio1">남자</label>
+              <label class="naver-signup__radio-label" for="radio2">여자</label>
+              <label class="naver-signup__radio-label" for="radio3">선택안함</label>
+            </div>
+          </div>
+          <div class="naver-signup__field">
+            <b class="naver-signup__label">본인 확인 이메일<span class="naver-signup__label-sub">(선택)</span></b>
+            <input class="naver-signup__input" type="email" placeholder="선택입력" />
+          </div>
+          <div class="naver-signup__phone">
+            <div class="naver-signup__field">
+              <b class="naver-signup__label">휴대전화</b>
+              <input
+                class="naver-signup__input naver-signup__input--readonly"
+                type="text"
+                placeholder="대한민국 +82"
+                readonly
+              />
+            </div>
+            <div class="naver-signup__field naver-signup__field--tel">
+              <input class="naver-signup__input" type="text" placeholder="전화번호 입력" required />
+              <button class="naver-signup__btn-cord" type="button">인증번호 받기</button>
+            </div>
+            <div class="naver-signup__field">
+              <input class="naver-signup__input" type="text" placeholder="인증번호 입력하세요" required />
+            </div>
+            <button class="naver-signup__btn-submit" type="submit">가입하기</button>
+          </div>
+        </form>
+      </section>
+      <footer class="naver-signup__footer">
+        <div class="naver-signup__policy">
+          <div class="naver-signup__policy-links">
+            <a class="naver-signup__policy-link" href="#none">이용약관</a>
+            <a class="naver-signup__policy-link" href="#none">개인정보처리방침</a>
+            <a class="naver-signup__policy-link" href="#none">책임의 한계와 법적고지</a>
+            <a class="naver-signup__policy-link" href="#none">회원정보 고객센터</a>
+          </div>
+          <b class="naver-signup__copyright">ⓒNAVER Corp.</b>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const $btnCord = document
+        .querySelector(".naver-signup__btn-cord")
+        .addEventListener("click", function () {
+          alert("인증번호 6자리를 발송하였습니다.");
+        });
+    </script>
+  </body>
+</html>

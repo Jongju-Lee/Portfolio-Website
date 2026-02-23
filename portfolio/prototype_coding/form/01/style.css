@@ -1,0 +1,163 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Noonnu Korean Fonts */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Pretendard-Regular";
+}
+button {
+  cursor: pointer;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  min-height: 100vh;
+  margin: 0;
+}
+/* ##### Registration Form ##### */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px 80px; /* bottom padding 80px to accommodate mockup UI controls */
+  color: #555;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+/* ----- register-card ----- */
+.register-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+.register-card__title {
+  position: relative;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+.register-card__title::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.register-card__form {
+  margin-top: 35px;
+}
+.register-card__row {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.register-card__field {
+  flex: 1;
+}
+.register-card__label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.register-card__label:not(.register-card__label--optional)::after {
+  content: "*";
+  margin-left: 3px;
+  color: #ff8462;
+}
+.register-card__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #555;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.register-card__input::placeholder {
+  color: #bbb;
+  transition: 0.2s;
+}
+.register-card__input:focus::placeholder {
+  opacity: 0;
+}
+.register-card__radio-group {
+  margin-top: 20px;
+}
+.register-card__radio-input {
+  display: none;
+}
+.register-card__radio-label {
+  position: relative;
+  margin-right: 70px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.register-card__radio-label::before {
+  content: "\F287";
+  font-family: "bootstrap-icons";
+  display: inline-block;
+  margin-right: 5px;
+  color: #ddd;
+  transition: 0.35s;
+  transform: translateY(2px);
+}
+.register-card__radio-input:checked + .register-card__radio-label::before {
+  content: "\F26A";
+  color: #ff8462;
+}
+.register-card__btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fda085;
+  color: #fff;
+  transition: 0.35s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.register-card__btn:hover {
+  background-color: #ff8462;
+}
+
+/* 반응형 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .register-card {
+    padding: 30px 20px;
+  }
+  .register-card__row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .register-card__radio-label {
+    margin-right: 20px;
+  }
+}

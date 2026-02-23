@@ -574,7 +574,7 @@
 /* ----- Caption ----- */
 .lightbox__caption {
   position: fixed;
-  bottom: 110px;
+  bottom: 100px;
   left: 0;
   z-index: 3100;
   width: 100%;

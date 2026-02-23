@@ -1,0 +1,318 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* ##### Background Video ##### */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero__video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero__video-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-160deg, cornflowerblue, transparent);
+}
+.hero__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+/* ----- hero__logo ----- */
+.hero__logo {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  z-index: 10;
+  cursor: pointer;
+  animation: toRight 2s 1s linear both;
+}
+.hero__logo-img {
+  width: 45px;
+  height: 45px;
+  opacity: 0.5;
+}
+/* ----- hero__heading ----- */
+.hero__heading {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  z-index: 10;
+  width: 100%;
+  max-width: 700px;
+  font-size: 14px;
+  animation: toRight 2s 1s linear both;
+}
+.hero__title {
+  font-size: 30px;
+}
+.hero__title-sub {
+  display: block;
+  color: #70b4df;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+.hero__desc {
+  margin-bottom: 15px;
+  line-height: 1.5em;
+}
+.hero__buttons {
+  display: flex;
+  gap: 7px;
+}
+.hero__btn {
+  display: inline-block;
+  width: 140px;
+  padding: 10px 0;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.hero__btn:nth-child(1) {
+  border-color: transparent;
+  background-color: #fff;
+  color: #333;
+}
+.hero__btn:nth-child(1):hover {
+  background-color: #000;
+  color: #fff;
+}
+.hero__btn:nth-child(2):hover {
+  background-color: #fff;
+  color: #333;
+}
+/* ----- hero__anniversary ----- */
+.hero__anniversary {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  z-index: 10;
+  color: #fff;
+  animation: toLeft 2s 3.5s linear both;
+}
+.hero__anniversary-title {
+  display: block;
+  padding-bottom: 35px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.hero__anniversary-number {
+  font-family: inherit; /* fallback if Monoton not loaded properly */
+  font-size: 80px;
+  font-weight: normal;
+}
+
+/* ----- hero__trigger ----- */
+.hero__trigger {
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  z-index: 1000;
+  width: 30px;
+  height: 16px;
+  cursor: pointer;
+}
+.hero__trigger-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.hero__trigger-line:nth-child(1) {
+  top: 0;
+}
+.hero__trigger-line:nth-child(2) {
+  top: 50%;
+  width: 80%;
+}
+.hero__trigger-line:nth-child(3) {
+  top: 100%;
+}
+.hero__trigger.active .hero__trigger-line:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.hero__trigger.active .hero__trigger-line:nth-child(2) {
+  opacity: 0;
+}
+.hero__trigger.active .hero__trigger-line:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+/* ----- hero__modal ----- */
+.hero__modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+.hero__gnb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero__gnb-link {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  transition: 0.35s;
+  animation: gnb 0.35s linear both;
+  pointer-events: all;
+}
+.hero__gnb-link:nth-child(1) { animation-delay: 0.5s; }
+.hero__gnb-link:nth-child(2) { animation-delay: 0.6s; }
+.hero__gnb-link:nth-child(3) { animation-delay: 0.7s; }
+.hero__gnb-link:nth-child(4) { animation-delay: 0.8s; }
+.hero__gnb-link:nth-child(5) { animation-delay: 0.9s; }
+.hero__gnb-link:hover {
+  color: crimson;
+}
+
+/* ##### Reveal Animation ##### */
+@keyframes toRight {
+  0% {
+    opacity: 0;
+    margin-left: -80px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes toLeft {
+  0% {
+    opacity: 0;
+    margin-right: -80px;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+@keyframes gnb {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* 반응형 모바일 (768px 이하) */
+@media (max-width: 900px) {
+  .hero__heading {
+    left: 40px;
+    width: calc(100% - 80px);
+    max-width: none;
+  }
+  .hero__anniversary {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__logo {
+    top: 20px;
+    left: 20px;
+  }
+  .hero__logo-img {
+    width: 35px;
+    height: 35px;
+  }
+  .hero__heading {
+    bottom: 30px;
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+  .hero__title {
+    font-size: 24px;
+  }
+  .hero__title-sub {
+    font-size: 16px;
+  }
+  .hero__desc {
+    margin-bottom: 25px;
+    font-size: 13px;
+  }
+  .hero__desc-br {
+    display: none;
+  }
+  .hero__trigger {
+    top: 25px;
+    right: 20px;
+  }
+  .hero__gnb-link {
+    font-size: 28px;
+    text-align: center;
+  }
+}

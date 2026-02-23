@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game with JavaScript</title>
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="srp-game">
+      <h1 class="srp-game__heading">가위 바위 보 5점내기!!</h1>
+      <div class="srp-game__status">
+        <h2 class="srp-game__text" id="player_text">나 :</h2>
+        <h2 class="srp-game__text" id="com_text">COM :</h2>
+        <h2 class="srp-game__text srp-game__text--result" id="result_text">손가락 버튼을 눌러 시작하세요</h2>
+      </div>
+      <div class="srp-game__score">
+        <div class="srp-game__indicator">
+          <div class="srp-game__bar srp-game__bar--player" id="indicator_player"></div>
+          <div class="srp-game__bar srp-game__bar--com" id="indicator_com"></div>
+        </div>
+        <div class="srp-game__icons">
+          <span class="srp-game__icon player_icon">😐</span>
+          <span class="srp-game__icon">🏆</span>
+          <span class="srp-game__icon">💻</span>
+        </div>
+      </div>
+      <div class="srp-game__choices">
+        <div class="srp-game__btn" data-value="가위">
+          <img class="srp-game__img" src="./images/scissors.png" alt="가위" />
+        </div>
+        <div class="srp-game__btn" data-value="바위">
+          <img class="srp-game__img" src="./images/rock.png" alt="바위" />
+        </div>
+        <div class="srp-game__btn" data-value="보">
+          <img class="srp-game__img" src="./images/paper.png" alt="보" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

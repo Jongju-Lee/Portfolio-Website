@@ -1,0 +1,159 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  background-color: dodgerblue;
+}
+/* ##### Icon Hover Animation ##### */
+.hover-avatar-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap; /* Added for mobile */
+  gap: 10px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  min-height: 400px;
+}
+.hover-avatar {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.hover-avatar__icon-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  border: 3px solid dodgerblue;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+.hover-avatar__panel {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  z-index: 0;
+  width: 300px;
+  height: 350px;
+  border-radius: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition: left 0.5s, z-index 0s, transform 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s;
+}
+.hover-avatar:hover .hover-avatar__panel {
+  left: -200px;
+  z-index: 10;
+  transform: translateX(85px);
+  transition: left 0.5s, z-index 0s, transform 0.5s;
+  transition-delay: 0s, 0.5s, 0.5s;
+}
+.hover-avatar__panel::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  z-index: -1;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(45deg);
+}
+.hover-avatar__photo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #fff;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.hover-avatar__content {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 100%;
+  padding: 0 30px;
+  transform: translateX(-50%);
+}
+.hover-avatar__details {
+  position: relative;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+.hover-avatar:hover .hover-avatar__details {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 0.35s;
+  transition-delay: 1s;
+}
+.hover-avatar__details::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  z-index: -1;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(45deg);
+}
+.hover-avatar__name {
+  font-size: 20px;
+  font-weight: 500;
+}
+.hover-avatar__role {
+  display: block;
+  color: dodgerblue;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+}
+.hover-avatar--last .hover-avatar__panel,
+.hover-avatar--last:hover .hover-avatar__panel {
+  transition: none;
+}
+.hover-avatar--last:hover .hover-avatar__details {
+  transition-delay: 0s;
+}
+
+/* 모바일 호환성 (768px 이하) */
+@media (max-width: 480px) {
+  .hover-avatar-container {
+    width: 300px; /* limits to maybe 3 rows of 2 on very small */
+  }
+}
