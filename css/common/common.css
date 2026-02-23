@@ -120,6 +120,12 @@ img {
 .font-gmarket {
   font-family: var(--font-gmarket) !important;
 }
+.e-light {
+  font-weight: 200 !important;
+}
+.light {
+  font-weight: 300 !important;
+}
 .regular {
   font-weight: 400 !important;
 }

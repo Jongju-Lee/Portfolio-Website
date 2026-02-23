@@ -93,6 +93,13 @@
     font-weight: 400;
   }
   /* ========== END - CORE SECTION ========== */
+
+
+  /* ========== EPILOGUE SECTION ========== */
+  .epilogue-content__inner {
+    padding: 0 var(--spacing-100);
+  }
+  /* ========== END - EPILOGUE SECTION ========== */
 }
 
 
@@ -450,13 +457,16 @@
   /* ########## END - PRACTICAL ########## */
 
 
-  /* ########## SECTION - EPILOGUE ########## */
-  /* epilogue-heading */
-  .epilogue-job-strength__item-text {
-    font-size: var(--font-size-lg);
+  /* ========== EPILOGUE SECTION ========== */
+  .epilogue-content__inner {
+    padding: 0 var(--spacing-64);
   }
 
-  /* ########## END - EPILOGUE ########## */
+  /* .epilogue-ending */
+  .epilogue-ending {
+    padding: 0 var(--spacing-32);
+  }
+  /* ========== END - EPILOGUE SECTION ========== */
 
 
   /* ########## 유틸리티 버튼 ########## */

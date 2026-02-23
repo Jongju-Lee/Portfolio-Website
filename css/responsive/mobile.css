@@ -750,39 +750,25 @@
   /* ########## END - PRACTICAL ########## */
 
 
-  /* ########## SECTION - EPILOGUE ########## */
-  .epilogue-content {
-    padding: 0 var(--spacing-20);
-  }
+  /* ========== SECTION - EPILOGUE ========== */
   .epilogue-content__inner {
-    flex-direction: column;
-    row-gap: var(--spacing-60);
-  }
-  .epilogue-heading {
-    width: 100%;
-  }
-
-  /* epilogue-heading */
-  .epilogue-heading__title {
-    font-size: 24px;
+    padding: 0;
+    width: 80%;
+    min-width: 400px;
+    margin: 0 auto;
   }
 
-  /* epilogue-job-strength */
-  .epilogue-job-strength {
-    width: 100%;
-  }
-  .epilogue-job-strength__item-title {
-    font-size: 18px;
-  }
-  .epilogue-job-strength__item:not(:last-child) {
-    margin-bottom: var(--spacing-40);
-  }
-  .epilogue-job-strength__item-text {
+  /* ----- epilogue-introduce ----- */
+  .epilogue-introduce__item-text {
+    margin-top: var(--spacing-12);
     font-size: var(--font-size-xl);
-    margin-top: var(--spacing-12)
   }
 
-  /* ########## END - EPILOGUE ########## */
+  /* ----- epilogue-ending ----- */
+  .epilogue-ending__text {
+    margin-top: var(--spacing-12);
+  }
+  /* ========== END - EPILOGUE ========== */
 
 
   /* ########## FOOTER ########## */
@@ -1081,5 +1067,19 @@
     height: 5px;
   }
   /* ########## END - WEB SECTION ########## */
+
+
+ /* ========== SECTION - EPILOGUE ========== */
+  .epilogue-content__inner {
+    width: 95%;
+    min-width: 300px;
+    max-width: 400px;
+  }
+
+  /* ----- epilogue-ending ----- */
+  .epilogue-ending {
+    padding: 0;
+  }
+  /* ========== END - EPILOGUE ========== */
 }
 
