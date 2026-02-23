@@ -6,7 +6,7 @@
   position: relative;
   height: 100vh; /* Fallback */
   height: 100dvh;
-  max-height: 960px; /* 4K, QHD 등 대화면 대응: 960px 이상 무한정 늘어남 방지 */
+  max-height: 960px; /* 4K, QHD 등 대화면 대응: 960px 이상 늘어남 방지 */
   padding: var(--section-padding);
   padding-top: 220px;
   background-color: var(--color-bg-light-blue);
@@ -127,9 +127,9 @@
   position: relative;
   width: 100%;
   max-width: 420px;
-  /* 대화면 대응: 끝이 잘려 보이지 않도록 아래쪽 10%를 스르륵 투명하게 마스킹 (Fade-out) */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+  /* 대화면 대응: 사진의 끝이 잘려 보이지 않도록 하단 10% 마스킹 */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(var(--color-black-rgb), 1) 90%, rgba(var(--color-black-rgb), 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(var(--color-black-rgb), 1) 90%, rgba(var(--color-black-rgb), 0) 100%);
 }
 
 /* ----- 플로팅 태그 ----- */

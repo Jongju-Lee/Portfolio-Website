@@ -13,6 +13,7 @@ body {
   background-color: var(--color-bg-light-blue);
   font-family: var(--font-KR);
   font-weight: 300;
+  overflow: hidden; /* 목업 화면에서 브라우저 메인 스크롤 영구 제거 (이중 스크롤 방지) */
 }
 img {
   display: block;
