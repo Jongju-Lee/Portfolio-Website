@@ -296,7 +296,6 @@
   /* exp-content */
   .exp-content {
     padding-left: var(--spacing-48);
-    margin-top: var(--spacing-60);
   }
 
   /* exp-timeline */
@@ -370,6 +369,9 @@
   .resume-sub__header,
   .resume-sub__item {
     grid-template-columns: 50% 15% 17% 18%;
+  }
+  .resume-sub__header {
+    font-size: var(--font-size-sm);
   }
   /* ########## END - RESUME SECTION(경력 요약) ########## */
 
@@ -452,7 +454,9 @@
   .practical-slider__title {
     gap: var(--spacing-8);
     margin-bottom: var(--spacing-4);
-    padding-left: var(--spacing-8);
+  }
+  .practical-slider__box .slider-nav {
+    padding: var(--spacing-16);
   }
 
   /* ########## END - PRACTICAL ########## */

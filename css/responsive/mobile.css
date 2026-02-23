@@ -715,38 +715,30 @@
 
   /* ########## SECTION - PRACTICAL ########## */
   .practical-content {
-    margin-top: var(--spacing-80);
+    margin-top: var(--spacing-60);
   }
 
   /* practical-slider */
   .practical-slider:not(:last-child) {
-    margin-bottom: var(--spacing-100);
+    margin-bottom: var(--spacing-64);
   }
   .practical-slider__title {
     gap: 6px;
     font-size: var(--font-size-2xl);
+    margin-bottom: 0;
   }
   .practical-slider__title::before {
     width: 7px;
     height: 7px;
   }
-  .practical-slider__item:not(:last-child) {
-    margin-right: var(--spacing-16);
-  }
 
-  /* Swiper 모바일 스타일 */
-  .practical-slider__box .swiper-pagination {
-    margin-top: var(--spacing-12);
+  .practical-slider__box .slider-nav__dot {
+    width: 6px;
+    height: 6px;
   }
-  .practical-slider__box .swiper-pagination-bullet {
-    margin: 0 4px;
-  }
-
-  .practical-slider__box .swiper-button-prev,
-  .practical-slider__box .swiper-button-next {
+  .practical-slider__box .slider-nav__btn {
     display: none;
   }
-
   /* ########## END - PRACTICAL ########## */
 
 
@@ -1069,6 +1061,27 @@
   /* ########## END - WEB SECTION ########## */
 
 
+  /* ########## SECTION - PRACTICAL ########## */
+  .practical-slider__title {
+    padding-left: var(--spacing-4);
+  }
+  .practical-slider__box {
+    padding: 0;
+  }
+  .practical-slider__box .ui-slider__wrapper {
+    padding: var(--spacing-12) 0;
+  }
+  .practical-slider__item {
+    box-shadow: none;
+    border: 1px solid rgba(var(--color-black-rgb), 0.15);
+    border-radius: 6px;
+  }
+  .practical-slider__box .slider-nav {
+    padding: var(--spacing-12);
+  }
+  /* ########## END - PRACTICAL ########## */
+
+
  /* ========== SECTION - EPILOGUE ========== */
   .epilogue-content__inner {
     width: 95%;
@@ -1082,4 +1095,3 @@
   }
   /* ========== END - EPILOGUE ========== */
 }
-

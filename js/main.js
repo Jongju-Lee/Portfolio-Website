@@ -444,46 +444,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  /* ############### Swiper Slider 관련 함수 ############### */
-  // Practical Coding - 각 슬라이더에 Swiper 초기화
-  document.querySelectorAll('.practical-slider__box').forEach(function (el) {
-    new Swiper(el, {
-      slidesPerView: 4,
-      slidesPerGroup: 1,
-      spaceBetween: 24,
-      loop: true,
-      speed: 300,
-      pagination: {
-        el: el.querySelector('.swiper-pagination'),
-        clickable: true
-      },
-      navigation: {
-        nextEl: el.querySelector('.swiper-button-next'),
-        prevEl: el.querySelector('.swiper-button-prev')
-      },
-      breakpoints: {
-        // 모바일: 0~768px
-        0: {
-          slidesPerView: 2,
-          slidesPerGroup: 1,
-          spaceBetween: 16
-        },
-        // 태블릿: 769px~1024px
-        769: {
-          slidesPerView: 3,
-          slidesPerGroup: 1,
-          spaceBetween: 20
-        },
-        // PC: 1025px~
-        1025: {
-          slidesPerView: 4,
-          slidesPerGroup: 1,
-          spaceBetween: 24
-        }
-      }
-    });
-  });
-
   /* ############### About Tag Toggle ############### */
   const aboutTags = document.querySelectorAll('.about-tag');
   

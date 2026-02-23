@@ -693,11 +693,29 @@
   transition: opacity 0.2s ease;
 }
 
-/* ----- modal__nav (내비게이션 바 — detail-panel 하단) ----- */
-.modal__nav {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+/* ########## Custom Slider Component ########## */
+/* ----- ui-slider (커스텀 바닐라 슬라이더 래퍼) ----- */
+.ui-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.ui-slider__wrapper {
+  display: flex;
+  width: 100%;
+}
+.ui-slider__item {
+  flex-shrink: 0;
+}
+/* 슬라이더 요소가 바깥에 있을 때, 인접한 아이템 영역으로 그림자나 본체가 넘어오는 Iframe 렌더링 버그를 원천 차단하기 위한 투명화 처리 */
+.ui-slider__item.ui-slider__item--invisible {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ----- slider-nav (공통 내비게이션 바) ----- */
+.slider-nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -705,12 +723,12 @@
   width: 100%;
   padding: var(--spacing-24);
 }
-.modal__nav-btn {
+.slider-nav__btn {
   width: 32px;
   height: 32px;
+  padding: 0;
   border: none;
   border-radius: 50%;
-  padding: 0;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
@@ -719,48 +737,55 @@
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.modal__nav-btn--prev {
+.slider-nav__btn--prev {
   background-image: url(../../images/icon/modal-btn-prev.svg);
 }
-.modal__nav-btn--next {
+.slider-nav__btn--next {
   background-image: url(../../images/icon/modal-btn-next.svg);
 }
-.modal__nav-btn:hover {
+.slider-nav__btn:hover {
   background-color: rgba(var(--color-primary-rgb), 0.2);
 }
-.modal__nav-dots {
+.slider-nav__dots {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--spacing-12);
 }
-.modal__nav-dot {
+.slider-nav__dot {
   width: 10px;
   height: 10px;
+  padding: 0;
   border: none;
   border-radius: 50%;
-  padding: 0;
   background: rgba(var(--color-primary-rgb), 0.2);
   transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.modal__nav-dot--active {
+.slider-nav__dot--active {
   width: 24px;
   border-radius: 8px;
   background: var(--color-primary);
   pointer-events: none;
 }
-.modal__nav-dot:hover:not(.modal__nav-dot--active) {
+.slider-nav__dot:hover:not(.slider-nav__dot--active) {
   background: rgba(var(--color-primary-rgb), 0.4);
   transform: scale(1.2);
 }
-.modal__nav-counter {
+.slider-nav__counter {
   display: none;
+  color: var(--color-primary);
+  font-family: var(--font-EN);
   font-size: var(--font-size-lg);
   font-weight: 700;
-  font-family: var(--font-EN);
   letter-spacing: 2px;
-  color: var(--color-primary);
+}
+
+/* Modal 연동 스타일 */
+.modal__detail-panel .slider-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* ----- modal__close-btn ----- */
@@ -869,6 +894,7 @@
 .modal__detail-desc b {
   color: var(--text-color-body);
 }
+.modal__link-btn {}
 /* ########## END - Modal Component ########## */
 
 

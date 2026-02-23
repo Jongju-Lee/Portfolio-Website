@@ -43,19 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // 내비게이션 바 HTML 생성
   function createNavBar() {
     const nav = document.createElement('div');
-    nav.className = 'modal__nav';
+    nav.className = 'slider-nav';
     nav.innerHTML =
-      '<button class="modal__nav-btn modal__nav-btn--prev" type="button" aria-label="이전"></button>' +
-      '<div class="modal__nav-dots"></div>' +
-      '<span class="modal__nav-counter"></span>' +
-      '<button class="modal__nav-btn modal__nav-btn--next" type="button" aria-label="다음"></button>';
+      '<button class="slider-nav__btn slider-nav__btn--prev" type="button" aria-label="이전"></button>' +
+      '<div class="slider-nav__dots"></div>' +
+      '<span class="slider-nav__counter"></span>' +
+      '<button class="slider-nav__btn slider-nav__btn--next" type="button" aria-label="다음"></button>';
 
     // 이벤트 바인딩
-    nav.querySelector('.modal__nav-btn--prev').addEventListener('click', (e) => {
+    nav.querySelector('.slider-nav__btn--prev').addEventListener('click', (e) => {
       e.stopPropagation();
       navigateTo(currentIndex - 1);
     });
-    nav.querySelector('.modal__nav-btn--next').addEventListener('click', (e) => {
+    nav.querySelector('.slider-nav__btn--next').addEventListener('click', (e) => {
       e.stopPropagation();
       navigateTo(currentIndex + 1);
     });
@@ -79,11 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Dot 생성
   function renderDots(navEl, total, activeIndex) {
-    const dotsContainer = navEl.querySelector('.modal__nav-dots');
+    const dotsContainer = navEl.querySelector('.slider-nav__dots');
     dotsContainer.innerHTML = '';
     for (let i = 0; i < total; i++) {
       const dot = document.createElement('button');
-      dot.className = 'modal__nav-dot' + (i === activeIndex ? ' modal__nav-dot--active' : '');
+      dot.className = 'slider-nav__dot' + (i === activeIndex ? ' slider-nav__dot--active' : '');
       dot.type = 'button';
       dot.ariaLabel = `${i + 1}번째 항목`;
       dot.addEventListener('click', () => navigateTo(i));
@@ -93,15 +93,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Dot 갱신
   function updateDots(activeIndex) {
-    const dots = contentContainer.querySelectorAll('.modal__nav-dot');
+    const dots = contentContainer.querySelectorAll('.slider-nav__dot');
     dots.forEach((dot, i) => {
-      dot.classList.toggle('modal__nav-dot--active', i === activeIndex);
+      dot.classList.toggle('slider-nav__dot--active', i === activeIndex);
     });
   }
 
   // Counter 갱신
   function updateCounter(navEl, current, total) {
-    const counter = navEl.querySelector('.modal__nav-counter');
+    const counter = navEl.querySelector('.slider-nav__counter');
     if (counter) {
       counter.textContent = `${current + 1} / ${total}`;
     }
