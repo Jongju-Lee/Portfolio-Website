@@ -159,3 +159,66 @@ input[id="close"]:checked + .toast {
     transform: translateX(110%);
   }
 }
+
+/* 모바일 호환성 (480px 이하) */
+@media (max-width: 480px) {
+  .notice {
+    top: 40%;
+    width: 90%;
+  }
+  .notice h2 {
+    font-size: 20px;
+  }
+  .notice button {
+    font-size: 14px;
+    padding: 3px 14px;
+  }
+  .notice span {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  .toast_outer {
+    right: 50%; /* 중앙 정렬용 */
+    bottom: 150px; /* 백버튼과 겹치지 않게 많이 띄움 */
+    transform: translateX(50%); /* 우측 -> 중앙 이동 */
+    width: 90%;
+    max-width: 340px;
+  }
+  .toast {
+    padding: 12px;
+  }
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .desc b {
+    font-size: 16px;
+  }
+  .desc p {
+    font-size: 13px;
+  }
+  .desc a {
+    font-size: 16px;
+  }
+  .btn_close {
+    font-size: 28px;
+    top: 4px;
+  }
+
+  /* 모바일용 중앙 팝업 애니메이션 재정의 */
+  .toast {
+    animation: revealToastMobile 0.75s 0.5s ease backwards;
+  }
+  @keyframes revealToastMobile {
+    0% { transform: translateY(150%); opacity: 0; }
+    50% { transform: translateY(-10%); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  input[id="close"]:checked + .toast {
+    animation: closeToastMobile 0.5s ease both;
+  }
+  @keyframes closeToastMobile {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(150%); opacity: 0; }
+  }
+}

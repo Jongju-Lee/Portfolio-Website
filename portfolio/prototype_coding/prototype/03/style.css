@@ -115,3 +115,18 @@ input[id="active"]:checked + label[for="active"] a:nth-of-type(2) span {
 input[id="active"]:checked + label[for="active"] a:nth-of-type(3) span {
   top: -70px;
 }
+
+/* 모바일 호환성 (480px 이하) */
+@media (max-width: 480px) {
+  .container .text {
+    font-size: 24px;
+    width: 90%;
+  }
+  .container .text span {
+    font-size: 20px;
+  }
+  label[for="active"] {
+    bottom: 120px; /* 뒤로가기 버튼과 겹치지 않도록 위로 올림 */
+    right: 30px;
+  }
+}

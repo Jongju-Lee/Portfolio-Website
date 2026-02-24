@@ -85,3 +85,20 @@ input[id="hamburger"]:checked + label span:nth-child(3) {
     transform: translateX(-50%) translateY(0);
   }
 }
+
+/* 모바일 호환성 (480px 이하) */
+@media (max-width: 480px) {
+  .hamburger {
+    width: 200px;
+    height: 120px;
+    top: 40%; /* 45% -> 40% 로 올림 (하단에 몰리지 않게) */
+  }
+  .hamburger span {
+    height: 30px;
+    border-radius: 15px;
+  }
+  .click_me {
+    font-size: 24px;
+    transform: translate(-50%, 120px);
+  }
+}

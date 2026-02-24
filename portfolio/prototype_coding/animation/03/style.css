@@ -47,3 +47,16 @@ h1::after {
     width: 0;
   }
 }
+
+/* 모바일 호환성 (480px 이하) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 9vw;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    border-bottom-width: 8px; /* 보더 두께도 줄임 */
+  }
+  h1::after {
+    border-bottom-width: 8px;
+  }
+}
