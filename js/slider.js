@@ -35,9 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 슬라이더가 이동을 멈추고 제자리에 있을 때, 완전히 바깥에 나간 아이템들을 투명하게 처리 (Iframe GPU 렌더링 버그 방어)
     function applyVisibilityConstraints() {
-      const startItemIndex = currentGroupIndex * itemsPerView;
+      let translateIndex = currentGroupIndex * itemsPerView;
+      if (translateIndex + itemsPerView > items.length) {
+        translateIndex = Math.max(0, items.length - itemsPerView);
+      }
+      
       items.forEach(function (item, index) {
-        if (index < startItemIndex || index >= startItemIndex + itemsPerView) {
+        if (index < translateIndex || index >= translateIndex + itemsPerView) {
           // 화면에 보이지 않는 아이템 완전 투명화
           item.classList.add('ui-slider__item--invisible');
         } else {
@@ -197,7 +201,6 @@ document.addEventListener('DOMContentLoaded', function () {
       clearVisibilityConstraints();
       startPos = getPositionX(event);
       wrapper.style.transition = 'none';
-      wrapper.style.cursor = 'grabbing';
       
       const itemWidth = items[0].offsetWidth;
       let translateIndex = currentGroupIndex * itemsPerView;
@@ -224,7 +227,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function touchEnd() {
       if (!isDragging) return;
       isDragging = false;
-      wrapper.style.cursor = 'grab';
       
       const movedBy = currentTranslate - prevTranslate;
       
@@ -281,8 +283,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (isDragging) touchEnd();
     });
     wrapper.addEventListener('touchend', touchEnd);
-
-    wrapper.style.cursor = 'grab';
 
     // 화면 Resize 디바운스
     let resizeTimer;
