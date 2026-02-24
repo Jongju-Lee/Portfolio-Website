@@ -78,4 +78,15 @@ $main_color: yellowgreen;
       }
     }
   }
+
+  // 모바일 반응형
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $icon_width / 2.5;
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $icon_width / 3;
+  }
 }
+

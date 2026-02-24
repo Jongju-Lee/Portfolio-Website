@@ -37,9 +37,10 @@ body {
 .accordion_outer {
   min-height: 100vh; /* Fallback */
   min-height: 100dvh;
-  width: 50%;
+  width: 100%;
+  max-width: 700px;
   margin: auto;
-  padding: 100px 0;
+  padding: 100px 20px;
 }
 .accordion_outer h1 {
   text-align: center;
@@ -114,4 +115,26 @@ input[id="faq5"]:checked ~ .item_fifth,
 input[id="faq6"]:checked ~ .item_sixth,
 input[id="faq7"]:checked ~ .item_seventh {
   border: 2px solid #ee48778a;
+}
+
+/* 모바일 반응형 (480px 이하) */
+@media (max-width: 480px) {
+  .accordion_outer {
+    padding: 60px 20px;
+  }
+  .accordion_outer h1 {
+    font-size: 26px;
+  }
+  .title {
+    font-size: 16px;
+    padding: 15px;
+  }
+  .title::after {
+    font-size: 24px;
+  }
+  .desc p {
+    font-size: 14px;
+    margin: 15px;
+    margin-top: 0;
+  }
 }

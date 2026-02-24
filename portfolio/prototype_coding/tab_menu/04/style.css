@@ -53,7 +53,8 @@ section h1::after {
   background-color: crimson;
 }
 .vertical {
-  width: 50%;
+  width: 90%;
+  max-width: 600px;
   margin: auto;
   height: 400px;
   text-align: center;
@@ -132,4 +133,42 @@ input[id="tab2"]:checked ~ .btn_tab label[for="tab2"],
 input[id="tab3"]:checked ~ .btn_tab label[for="tab3"] {
   background-color: crimson;
   border-radius: 50%;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .vertical {
+    height: 450px;
+  }
+  .tabs_wrapper {
+    height: 430px;
+  }
+  .tab p {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .vertical {
+    height: 450px;
+  }
+  .tabs_wrapper {
+    height: 420px;
+  }
+  section h1 {
+    font-size: 32px;
+  }
+  .tab {
+    padding: 0 10px;
+  }
+  .tab p {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+  .tab h3 {
+    font-size: 16px;
+  }
+  .tab h3 span {
+    font-size: 14px;
+  }
 }

@@ -152,8 +152,24 @@ body {
 }
 
 /* 모바일 호환성 (768px 이하) */
+@media (max-width: 768px) {
+  .hover-avatar-container {
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+}
 @media (max-width: 480px) {
   .hover-avatar-container {
-    width: 300px; /* limits to maybe 3 rows of 2 on very small */
+    width: 600px; /* Expand base width so they fit in 1 row before scaling */
+    flex-wrap: nowrap;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.5); /* Scale to 50% to fit screen */
+  }
+  .hover-avatar:hover .hover-avatar__panel {
+    /* Slightly adjust pop-up position if needed, though scaling mostly handles it */
+    left: -150px;
+  }
+  /* Remove transition delay for last item to avoid clipping in tiny edge */
+  .hover-avatar--last:hover .hover-avatar__panel {
+    left: -200px; 
   }
 }

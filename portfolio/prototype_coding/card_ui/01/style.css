@@ -188,29 +188,52 @@ body {
   .card-ui {
     flex-direction: column-reverse;
     height: auto;
-    max-width: 400px;
+    max-width: 360px;
+    margin-top: 50px;
     padding-bottom: 30px;
   }
   .card-ui::after {
-    border-radius: 12px 12px 0 0;
-    clip-path: circle(70% at top center);
+    clip-path: none;
+    width: 260px;
+    height: 260px;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
   }
   .card-ui__visual {
-    padding: 20px;
+    padding: 0 20px 20px;
     text-align: center;
   }
   .card-ui__image-box {
-    bottom: 0px;
+    position: relative;
+    top: -20px;
     padding-right: 0;
     text-align: center;
   }
-  .card-ui__content {
-    padding: 20px;
-  }
   .card-ui__photo {
     margin: 0 auto;
+    width: 90%;
+  }
+  .card-ui__info {
+    margin-top: -30px; /* Pull text up since image is shifted */
+  }
+  .card-ui__content {
+    padding: 0 30px;
+  }
+  .card-ui__title {
+    font-size: 24px;
+  }
+  .card-ui__desc {
+    margin: 10px 0;
   }
   .card-ui__name {
     color: #fff;
+  }
+  .card-ui__shipping {
+    color: #ffd8d8;
+  }
+  .card-ui__login {
+    margin-top: 15px;
   }
 }

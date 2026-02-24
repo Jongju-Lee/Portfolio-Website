@@ -8,36 +8,52 @@ body {
 }
 
 /* Fullscreen Photo Slider with SCSS */
-.photo-slider {
+.frame {
   position: relative;
   height: inherit;
-  &__radio {
+  
+  input[type="radio"] {
     display: none;
   }
-  &__list {
+  
+  .items {
     position: relative;
-    .photo-slider__item {
+    .photo {
       position: absolute;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      .photo-slider__img {
+      img {
         display: block;
         width: inherit;
         height: inherit;
         object-fit: cover;
-        clip-path: circle(0% at 0% 100%);
+        clip-path: circle(0% at 50% 100%);
         transition: 1s;
       }
     }
   }
-  &__controls {
+  
+  .btn_tab {
     position: absolute;
-    bottom: 60px;
+    bottom: 140px;
     left: 50%;
     transform: translateX(-50%);
-    .photo-slider__dot {
+    
+    @media (max-width: 768px) {
+      bottom: 80px;
+    }
+    @media (max-width: 480px) {
+      bottom: 130px;
+      label {
+        width: 15px;
+        height: 15px;
+        border-width: 3px;
+      }
+    }
+    
+    label {
       display: inline-block;
       width: 20px;
       height: 20px;
@@ -48,95 +64,100 @@ body {
       cursor: pointer;
     }
   }
+
   /* Tab Button Radio Function */
-  &__radio {
-    &[id="slider1"]:checked ~ .photo-slider__controls .photo-slider__dot[for="slider1"],
-    &[id="slider2"]:checked ~ .photo-slider__controls .photo-slider__dot[for="slider2"],
-    &[id="slider3"]:checked ~ .photo-slider__controls .photo-slider__dot[for="slider3"],
-    &[id="slider4"]:checked ~ .photo-slider__controls .photo-slider__dot[for="slider4"],
-    &[id="slider5"]:checked ~ .photo-slider__controls .photo-slider__dot[for="slider5"] {
-      width: 50px;
-      margin: 0 5px;
-      border-radius: 13px;
+  input[id="slider1"]:checked ~ .btn_tab label[for="slider1"],
+  input[id="slider2"]:checked ~ .btn_tab label[for="slider2"],
+  input[id="slider3"]:checked ~ .btn_tab label[for="slider3"],
+  input[id="slider4"]:checked ~ .btn_tab label[for="slider4"],
+  input[id="slider5"]:checked ~ .btn_tab label[for="slider5"] {
+    width: 50px;
+    margin: 0 5px;
+    border-radius: 13px;
+    @media (max-width: 480px) {
+      width: 35px;
     }
-    &[id="slider1"]:checked {
-      ~ .photo-slider__controls .photo-slider__dot {
-        border-color: #d49921;
-        &[for="slider1"],
-        &:hover {
-          background-color: #d49921;
-        }
-      }
-      ~ .photo-slider__list {
-        .photo-slider__item--1 .photo-slider__img {
-          clip-path: circle(150% at 0% 100%);
-        }
+  }
+
+  input[id="slider1"]:checked {
+    ~ .btn_tab label {
+      border-color: #d49921;
+      &[for="slider1"],
+      &:hover {
+        background-color: #d49921;
       }
     }
-    &[id="slider2"]:checked {
-      ~ .photo-slider__controls .photo-slider__dot {
-        border-color: #c8c3b0;
-        &[for="slider2"],
-        &:hover {
-          background-color: #c8c3b0;
-        }
-      }
-      ~ .photo-slider__list {
-        .photo-slider__item--1 .photo-slider__img,
-        .photo-slider__item--2 .photo-slider__img {
-          clip-path: circle(150% at 0% 100%);
-        }
+    ~ .items .photo1 img {
+      clip-path: circle(150% at 50% 100%);
+    }
+  }
+
+  input[id="slider2"]:checked {
+    ~ .btn_tab label {
+      border-color: #c8c3b0;
+      &[for="slider2"],
+      &:hover {
+        background-color: #c8c3b0;
       }
     }
-    &[id="slider3"]:checked {
-      ~ .photo-slider__controls .photo-slider__dot {
-        border-color: #00ffd0;
-        &[for="slider3"],
-        &:hover {
-          background-color: #00ffd0;
-        }
-      }
-      ~ .photo-slider__list {
-        .photo-slider__item--1 .photo-slider__img,
-        .photo-slider__item--2 .photo-slider__img,
-        .photo-slider__item--3 .photo-slider__img {
-          clip-path: circle(150% at 0% 100%);
-        }
+    ~ .items {
+      .photo1 img,
+      .photo2 img {
+        clip-path: circle(150% at 50% 100%);
       }
     }
-    &[id="slider4"]:checked {
-      ~ .photo-slider__controls .photo-slider__dot {
-        border-color: #ffd9bb;
-        &[for="slider4"],
-        &:hover {
-          background-color: #ffd9bb;
-        }
-      }
-      ~ .photo-slider__list {
-        .photo-slider__item--1 .photo-slider__img,
-        .photo-slider__item--2 .photo-slider__img,
-        .photo-slider__item--3 .photo-slider__img,
-        .photo-slider__item--4 .photo-slider__img {
-          clip-path: circle(150% at 0% 100%);
-        }
+  }
+
+  input[id="slider3"]:checked {
+    ~ .btn_tab label {
+      border-color: #00ffd0;
+      &[for="slider3"],
+      &:hover {
+        background-color: #00ffd0;
       }
     }
-    &[id="slider5"]:checked {
-      ~ .photo-slider__controls .photo-slider__dot {
-        border-color: #64676c;
-        &[for="slider5"],
-        &:hover {
-          background-color: #64676c;
-        }
+    ~ .items {
+      .photo1 img,
+      .photo2 img,
+      .photo3 img {
+        clip-path: circle(150% at 50% 100%);
       }
-      ~ .photo-slider__list {
-        .photo-slider__item--1 .photo-slider__img,
-        .photo-slider__item--2 .photo-slider__img,
-        .photo-slider__item--3 .photo-slider__img,
-        .photo-slider__item--4 .photo-slider__img,
-        .photo-slider__item--5 .photo-slider__img {
-          clip-path: circle(150% at 0% 100%);
-        }
+    }
+  }
+
+  input[id="slider4"]:checked {
+    ~ .btn_tab label {
+      border-color: #ffd9bb;
+      &[for="slider4"],
+      &:hover {
+        background-color: #ffd9bb;
+      }
+    }
+    ~ .items {
+      .photo1 img,
+      .photo2 img,
+      .photo3 img,
+      .photo4 img {
+        clip-path: circle(150% at 50% 100%);
+      }
+    }
+  }
+
+  input[id="slider5"]:checked {
+    ~ .btn_tab label {
+      border-color: #64676c;
+      &[for="slider5"],
+      &:hover {
+        background-color: #64676c;
+      }
+    }
+    ~ .items {
+      .photo1 img,
+      .photo2 img,
+      .photo3 img,
+      .photo4 img,
+      .photo5 img {
+        clip-path: circle(150% at 50% 100%);
       }
     }
   }

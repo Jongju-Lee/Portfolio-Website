@@ -12,7 +12,6 @@ body {
 .frame {
   position: relative;
   height: inherit;
-  /* Tab Button Radio Function */
 }
 .frame input[type=radio] {
   display: none;
@@ -32,7 +31,7 @@ body {
   width: inherit;
   height: inherit;
   object-fit: cover;
-  clip-path: circle(0% at 0% 100%);
+  clip-path: circle(0% at 50% 100%);
   transition: 1s;
 }
 .frame .btn_tab {
@@ -40,6 +39,21 @@ body {
   bottom: 140px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .frame .btn_tab {
+    bottom: 80px;
+  }
+}
+@media (max-width: 480px) {
+  .frame .btn_tab {
+    bottom: 130px;
+  }
+  .frame .btn_tab label {
+    width: 15px;
+    height: 15px;
+    border-width: 3px;
+  }
 }
 .frame .btn_tab label {
   display: inline-block;
@@ -51,19 +65,35 @@ body {
   transition: 0.5s;
   cursor: pointer;
 }
-.frame input[id=slider1]:checked ~ .btn_tab label[for=slider1], .frame input[id=slider2]:checked ~ .btn_tab label[for=slider2], .frame input[id=slider3]:checked ~ .btn_tab label[for=slider3], .frame input[id=slider4]:checked ~ .btn_tab label[for=slider4], .frame input[id=slider5]:checked ~ .btn_tab label[for=slider5] {
+.frame {
+  /* Tab Button Radio Function */
+}
+.frame input[id=slider1]:checked ~ .btn_tab label[for=slider1],
+.frame input[id=slider2]:checked ~ .btn_tab label[for=slider2],
+.frame input[id=slider3]:checked ~ .btn_tab label[for=slider3],
+.frame input[id=slider4]:checked ~ .btn_tab label[for=slider4],
+.frame input[id=slider5]:checked ~ .btn_tab label[for=slider5] {
   width: 50px;
   margin: 0 5px;
   border-radius: 13px;
 }
+@media (max-width: 480px) {
+  .frame input[id=slider1]:checked ~ .btn_tab label[for=slider1],
+  .frame input[id=slider2]:checked ~ .btn_tab label[for=slider2],
+  .frame input[id=slider3]:checked ~ .btn_tab label[for=slider3],
+  .frame input[id=slider4]:checked ~ .btn_tab label[for=slider4],
+  .frame input[id=slider5]:checked ~ .btn_tab label[for=slider5] {
+    width: 35px;
+  }
+}
 .frame input[id=slider1]:checked ~ .btn_tab label {
-  border-color: #ff8516;
+  border-color: #d49921;
 }
 .frame input[id=slider1]:checked ~ .btn_tab label[for=slider1], .frame input[id=slider1]:checked ~ .btn_tab label:hover {
-  background-color: #ff8516;
+  background-color: #d49921;
 }
 .frame input[id=slider1]:checked ~ .items .photo1 img {
-  clip-path: circle(150% at 0% 100%);
+  clip-path: circle(150% at 50% 100%);
 }
 .frame input[id=slider2]:checked ~ .btn_tab label {
   border-color: #c8c3b0;
@@ -73,7 +103,7 @@ body {
 }
 .frame input[id=slider2]:checked ~ .items .photo1 img,
 .frame input[id=slider2]:checked ~ .items .photo2 img {
-  clip-path: circle(150% at 0% 100%);
+  clip-path: circle(150% at 50% 100%);
 }
 .frame input[id=slider3]:checked ~ .btn_tab label {
   border-color: #00ffd0;
@@ -84,7 +114,7 @@ body {
 .frame input[id=slider3]:checked ~ .items .photo1 img,
 .frame input[id=slider3]:checked ~ .items .photo2 img,
 .frame input[id=slider3]:checked ~ .items .photo3 img {
-  clip-path: circle(150% at 0% 100%);
+  clip-path: circle(150% at 50% 100%);
 }
 .frame input[id=slider4]:checked ~ .btn_tab label {
   border-color: #ffd9bb;
@@ -96,7 +126,7 @@ body {
 .frame input[id=slider4]:checked ~ .items .photo2 img,
 .frame input[id=slider4]:checked ~ .items .photo3 img,
 .frame input[id=slider4]:checked ~ .items .photo4 img {
-  clip-path: circle(150% at 0% 100%);
+  clip-path: circle(150% at 50% 100%);
 }
 .frame input[id=slider5]:checked ~ .btn_tab label {
   border-color: #64676c;
@@ -109,5 +139,7 @@ body {
 .frame input[id=slider5]:checked ~ .items .photo3 img,
 .frame input[id=slider5]:checked ~ .items .photo4 img,
 .frame input[id=slider5]:checked ~ .items .photo5 img {
-  clip-path: circle(150% at 0% 100%);
+  clip-path: circle(150% at 50% 100%);
 }
+
+/*# sourceMappingURL=style.css.map */

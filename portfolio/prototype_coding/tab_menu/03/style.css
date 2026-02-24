@@ -41,7 +41,8 @@ body {
   background: linear-gradient(to right, #00202b 50%, #ffffff 50%);
 }
 .banner {
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   height: 34px;
   margin: auto;
 }
@@ -63,7 +64,9 @@ body {
   background-color: #e2edf8;
 }
 .lnb {
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 20px;
   height: inherit;
   line-height: 100px;
   margin: auto;
@@ -108,7 +111,8 @@ body {
 }
 .gnb_outer nav {
   position: relative;
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   margin: auto;
   display: flex;
 }
@@ -284,4 +288,91 @@ section .heading p {
   font-weight: 500;
   width: 30%;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 900px) {
+  .banner_outer {
+    display: none;
+  }
+  .lnb_outer {
+    height: auto;
+    padding: 15px 0;
+  }
+  .lnb {
+    height: auto;
+    line-height: normal;
+    text-align: center;
+  }
+  .lnb .logo, .lnb_navi {
+    float: none;
+  }
+  .lnb_navi {
+    margin-top: 15px;
+  }
+  .lnb_navi a {
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  .gnb {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .gnb li {
+    flex: 0 0 33.33%;
+    height: 40px;
+    border-bottom: 1px solid #444;
+  }
+  .gnb li .drop_menu {
+    top: 40px;
+  }
+  .trigger {
+    display: none;
+  }
+  section .heading {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    gap: 20px;
+  }
+  section .heading h1 {
+    text-align: center;
+    font-size: 36px;
+  }
+  section .heading p {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  header {
+    flex-shrink: 0;
+  }
+  section {
+    flex: 1;
+    height: auto;
+  }
+  section .heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  .lnb_navi a {
+    font-size: 11px;
+  }
+  .gnb li {
+    flex: 0 0 50%;
+  }
 }

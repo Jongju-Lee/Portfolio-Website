@@ -192,12 +192,20 @@ body {
     display: none !important;
   }
   
+  .sidebar-toggle__label i {
+    display: inline-block;
+    transition: transform 0.4s ease;
+  }
+
   /* Toggle Action */
   .sidebar-toggle__input:checked ~ .sidebar {
     right: 0;
   }
   .sidebar-toggle__input:checked ~ .sidebar-toggle__label {
     background-color: rgba(255, 255, 255, 0.9);
+  }
+  .sidebar-toggle__input:checked ~ .sidebar-toggle__label i {
+    transform: rotate(180deg);
   }
   .sidebar-toggle__input:checked ~ .sidebar-toggle__label i::before {
     content: "\F62A";
