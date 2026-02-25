@@ -40,8 +40,6 @@
   --color-util-btn: #777777;
   --color-attention: #f97316;
   --color-attention-hover: #ea580c;
-  --color-card-white: var(--color-white);
-  --color-card-white-hover: #f9f8fc;
 
   /* --------- TEXT COLOR --------- */
   --text-color-body: var(--color-charcoal-500);

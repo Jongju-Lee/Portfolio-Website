@@ -781,7 +781,7 @@
   letter-spacing: 2px;
 }
 
-/* Modal 연동 스타일 */
+/* ==================== 공통 MODAL 컴포넌트 ==================== */
 .modal__detail-panel .slider-nav {
   position: absolute;
   bottom: 0;
@@ -865,7 +865,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-8);
+  gap: var(--spacing-16);
   padding: var(--spacing-36);
   animation: fadeInLeft 0.6s ease 0.15s both;
 }
@@ -879,6 +879,7 @@
   justify-content: flex-start;
   padding: var(--spacing-64) var(--spacing-48) 0;
   overflow-y: auto;
+  background-color: rgba(var(--color-black-rgb), 0.03);
   animation: slideInRight 0.6s ease 0.25s both;
 }
 
@@ -894,8 +895,7 @@
 .modal__detail-desc b {
   color: var(--text-color-body);
 }
-.modal__link-btn {}
-/* ########## END - Modal Component ########## */
+/* ==================== END - 공통 MODAL 컴포넌트 ==================== */
 
 
 /* ---------- Keyframes ---------- */

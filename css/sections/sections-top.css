@@ -826,22 +826,22 @@
   padding: var(--spacing-36);
   border: 1px solid rgba(var(--color-black-rgb), 0.05);
   border-radius: 16px;
-  background-color: var(--color-card-white);
+  background-color: var(--color-bg-white);
   box-shadow: var(--shadow-glass);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   -webkit-user-select: none;
   user-select: none;
   cursor: pointer;
 }
 .core-card:hover {
   transform: translateY(-8px);
-  background-color: var(--color-card-white-hover);
+  background-color: var(--color-bg-light-gray);
   box-shadow: var(--shadow-glass-hover);
 }
 .core-card__title {
   font-size: var(--font-size-2xl);
   color: var(--text-color-gray);
-  line-height: 1;
+  line-height: 1.3;
 }
 .core-card__title b {
   color: var(--text-color-title);
@@ -849,33 +849,45 @@
 .core-card__title .font-kr {
   letter-spacing: -0.5px;
 }
-.core-card__items {
+/* core-card__visual */
+.core-card__visual {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-16);
+  align-items: center;
+  gap: var(--spacing-24);
+  text-align: center;
+}
+
+/* core-card__tags */
+.core-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-12);
   margin-top: var(--spacing-24);
 }
-.core-card__item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-12);
+.core-card__tag {
+  padding: var(--spacing-8) var(--spacing-16);
+  border: 1px solid var(--border-color-light-gray);
+  border-radius: 20px;
+  background-color: var(--color-bg-light-gray);
   font-family: var(--font-EN);
-  font-size: var(--font-size-xl);
-  line-height: 1;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  line-height: 1.2;
   color: var(--text-color-gray);
+  transition: background-color 0.3s;
 }
-.core-card__dot {
-  flex-shrink: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: var(--color-primary);
+.core-card:hover .core-card__tag {
+  background-color: var(--color-bg-white);
+}
+
+/* ----- Core 카드 아이콘 ----- */
+.core-card__icon {
+  width: 64px;
 }
 
 /* ----- Core 모달 전용 (카드 내 숨김 영역) ----- */
-.core-card__icon {
-  display: none;
-}
 .core-card__detail {
   display: none;
 }
@@ -886,11 +898,10 @@
   display: block;
   width: 80px;
   height: 80px;
+  margin-bottom: 0;
 }
 .modal--expanded.modal--core .core-card__title {
   font-size: var(--font-size-3xl);
-  line-height: 1.3;
-  text-align: center;
 }
 .modal--expanded.modal--core .core-card__title b {
   color: var(--text-color-title);
@@ -910,14 +921,9 @@
   font-family: var(--font-EN);
 }
 
-/* ----- modal--core 카드 내 기존 items 숨김 ----- */
-.modal--expanded.modal--core .core-card__items {
+/* ----- modal--core 카드 내 tags 숨김 ----- */
+.modal--expanded.modal--core .core-card__tags {
   display: none;
-}
-
-/* ----- modal--core Detail 영역 (우측 60%) ----- */
-.modal--expanded.modal--core .modal__detail-panel {
-  background-color: var(--color-bg-light-blue);
 }
 
 /* ========== Key Frames ========== */

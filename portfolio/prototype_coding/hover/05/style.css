@@ -74,3 +74,14 @@ body {
 .welcome:hover::after {
   transform: rotate(-45deg);
 }
+
+/* 모바일 호환성 (480px 이하) */
+@media (max-width: 480px) {
+  .welcome {
+    width: 80%;
+    font-size: 14px;
+  }
+  .welcome:hover {
+    letter-spacing: 3px;
+  }
+}

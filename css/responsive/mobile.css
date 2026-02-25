@@ -555,8 +555,11 @@
   .core-card__title {
     font-size: var(--font-size-2xl);
   }
-  .core-card__item {
-    font-size: var(--font-size-lg);
+  .core-card__tags {
+    gap: var(--spacing-8);
+  }
+  .core-card__tag {
+    font-size: var(--font-size-xs);
   }
 
   /* CORE SECTION 모달 개별 UI */
@@ -922,20 +925,18 @@
     padding: var(--spacing-24);
     -webkit-tap-highlight-color: transparent;
   }
-  .core-card__items {
-    margin-top: var(--spacing-16);
+  .core-card__tags {
+    gap: var(--spacing-8);
+  }
+  .core-card__tag {
+    padding: var(--spacing-4) var(--spacing-12);
+    font-size: var(--font-size-xs);
   }
   .core-card__title {
     font-size: var(--font-size-xl);
   }
-  .core-card__item {
-    font-size: var(--font-size-md);
-  }
 
   /* CORE SECTION 모달 개별 UI */
-  .modal--expanded .modal__visual.core-card__visual {
-    gap: var(--spacing-12);
-  }
   .modal--expanded.modal--core .core-card__icon {
     width: 48px;
     height: 48px;

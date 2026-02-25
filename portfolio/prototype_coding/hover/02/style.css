@@ -107,3 +107,19 @@ body {
 .btn_sns a:nth-child(4):hover i {
   transform: translateX(2px) translateY(-1px) rotateY(360deg);
 }
+
+/* 모바일 호환성 (480px 이하) */
+@media (max-width: 480px) {
+  .btn_sns {
+    width: 90%;
+    padding: 15px 10px;
+    gap: 0;
+  }
+  .btn_sns a {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    font-size: 24px;
+    border-width: 4px;
+  }
+}

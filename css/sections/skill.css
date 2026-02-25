@@ -155,9 +155,6 @@
 }
 
 /* ----- modal--skill 내부 Detail 영역 (우측 60%) ----- */
-.modal--expanded.modal--skill .modal__detail-panel {
-  background-color: rgba(var(--color-black-rgb), 0.03);
-}
 .modal--expanded.modal--skill .skill-item__detail.scrolled-bottom::after {
   opacity: 0;
 }

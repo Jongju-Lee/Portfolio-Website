@@ -48,3 +48,10 @@ body {
 .mobile:hover img:nth-child(4) {
   transform: translate(120px, -120px);
 }
+
+/* 모바일 호환성 (480px 이하) */
+@media (max-width: 480px) {
+  .mobile {
+    transform: rotate(-30deg) skewX(20deg) scale(0.35); /* scale을 줄여 넘침 방지 */
+  }
+}
