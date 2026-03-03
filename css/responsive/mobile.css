@@ -28,7 +28,6 @@
 
     /* 주요 폰트 사이즈 */
     --font-size-section-title: 28px;
-    --font-size-slogan-title: 36px;
   }
 
   /* ########## END - 변수 재정의 ########## */
@@ -751,8 +750,10 @@
   }
 
   /* ----- epilogue-introduce ----- */
+  .epilogue-introduce__title {
+    margin-bottom: var(--spacing-48);
+  }
   .epilogue-introduce__item-text {
-    margin-top: var(--spacing-12);
     font-size: var(--font-size-xl);
   }
 
@@ -1082,6 +1083,15 @@
     width: 95%;
     min-width: 300px;
     max-width: 400px;
+  }
+
+  /* ----- epilogue-introduce ----- */
+  .epilogue-introduce__title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 6px;
+    row-gap: 0;
   }
 
   /* ----- epilogue-ending ----- */
