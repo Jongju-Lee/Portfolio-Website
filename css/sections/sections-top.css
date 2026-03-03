@@ -834,7 +834,7 @@
   cursor: pointer;
 }
 .core-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   background-color: var(--color-bg-light-gray);
   box-shadow: var(--shadow-glass-hover);
 }
@@ -870,15 +870,11 @@
   padding: var(--spacing-8) var(--spacing-16);
   border: 1px solid var(--border-color-light-gray);
   border-radius: 20px;
-  background-color: var(--color-bg-light-gray);
   font-family: var(--font-EN);
   font-size: var(--font-size-sm);
   font-weight: 500;
   line-height: 1.2;
   color: var(--text-color-gray);
-  transition: background-color 0.3s;
-}
-.core-card:hover .core-card__tag {
   background-color: var(--color-bg-white);
 }
 

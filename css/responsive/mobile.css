@@ -552,9 +552,6 @@
   .core-card {
     -webkit-tap-highlight-color: transparent;
   }
-  .core-card__title {
-    font-size: var(--font-size-2xl);
-  }
   .core-card__tags {
     gap: var(--spacing-8);
   }
@@ -931,9 +928,6 @@
   .core-card__tag {
     padding: var(--spacing-4) var(--spacing-12);
     font-size: var(--font-size-xs);
-  }
-  .core-card__title {
-    font-size: var(--font-size-xl);
   }
 
   /* CORE SECTION 모달 개별 UI */
