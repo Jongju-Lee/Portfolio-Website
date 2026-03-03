@@ -370,7 +370,7 @@
     padding: var(--spacing-24);
     border: 1px solid rgba(var(--color-black-rgb), 0.05);
     border-radius: 16px;
-    background-color: var(--color-card-white);
+    background-color: var(--color-bg-white);
     box-shadow: var(--shadow-glass);
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none;
@@ -379,7 +379,7 @@
   }
   .exp-timeline__item:hover {
     transform: translateY(-8px);
-    background-color: var(--color-card-white-hover);
+    background-color: var(--color-bg-light-gray);
     box-shadow: var(--shadow-glass-hover);
   }
 

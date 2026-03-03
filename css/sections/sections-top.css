@@ -468,7 +468,7 @@
   padding-right: var(--spacing-24);
   border: 1px solid rgba(var(--color-black-rgb), 0.08);
   border-radius: 16px;
-  background-color: var(--color-card-white);
+  background-color: var(--color-bg-white);
   box-shadow: var(--shadow-glass);
   font-weight: 400;
   color: var(--text-color-light-gray);
@@ -476,6 +476,7 @@
   visibility: hidden;
   transition: opacity 0.25s ease, visibility 0.25s ease;
   pointer-events: none;
+  z-index: 10;
 }
 .resume-exclamation__tool-tip--active {
   opacity: 1;
