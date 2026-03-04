@@ -33,11 +33,9 @@
   
   <!-- Sections CSS -->
   <link rel="stylesheet" href="./css/sections/layout.css" />
-  <link rel="stylesheet" href="./css/temp_about.css" />
   <link rel="stylesheet" href="./css/sections/sections-top.css" />
   <link rel="stylesheet" href="./css/sections/skill.css" />
-  <link rel="stylesheet" href="./css/sections/web.css" />
-  <link rel="stylesheet" href="./css/sections/react.css" />
+  <link rel="stylesheet" href="./css/sections/project.css" />
   <link rel="stylesheet" href="./css/sections/sections-bottom.css" />
   <link rel="stylesheet" href="./css/sections/components.css" />
 
@@ -50,6 +48,7 @@
   <script src="./js/lightbox.js" defer></script>
   <script src="./js/slider.js" defer></script>
   <script src="./js/main.js" defer></script>
+  <script src="./js/project-tab.js" defer></script>
   <script src="./js/modal.js" defer></script>
 </head>
 
@@ -69,7 +68,7 @@
           <a class="header-gnb__item" href="#core">Core</a>
           <a class="header-gnb__item" href="#skill">Skill</a>
           <a class="header-gnb__item" href="#exp">Experience</a>
-          <a class="header-gnb__item" href="#web">Project</a>
+          <a class="header-gnb__item" href="#project">Project</a>
           <a class="header-gnb__item" href="#prototype">Prototype</a>
           <a class="header-gnb__item" href="#epilogue">Epilogue</a>
         </nav>
@@ -727,12 +726,46 @@
         </div>
       </section>
 
-      <!-- ########## Section - Web ########## -->
-      <section id="web">
-        <div class="web-inner inner">
-          <h2 class="new" data-anim="fade-right">Web Project</h2>
-          <!-- ########## web-content - 웰라이프내과의원 ########## -->
-          <div class="web-content project-content">
+      <!-- ########## Section - Project ########## -->
+      <section id="project">
+        <div class="project-inner inner">
+
+          <!-- 섹션 타이틀 -->
+          <h2 data-anim="fade-right">Project</h2>
+
+          <!-- 탭 메뉴 -->
+          <div class="project-tab-scroll-wrap">
+            <div class="project-tab" role="tablist" aria-label="프로젝트 목록">
+              <button class="project-tab__btn project-tab__btn--active"
+                      role="tab"
+                      id="tab-welllife"
+                      aria-selected="true"
+                      aria-controls="panel-welllife">
+                <span class="project-tab__label">Vanilla</span>
+                <span class="project-tab__name">Well Life</span>
+              </button>
+              <button class="project-tab__btn"
+                      role="tab"
+                      id="tab-taskflow"
+                      aria-selected="false"
+                      aria-controls="panel-taskflow"
+                      tabindex="-1">
+                <span class="project-tab__label">React</span>
+                <span class="project-tab__name">TaskFlow</span>
+              </button>
+
+            </div>
+          </div>
+
+
+          <!-- 탭 패널: Well Life -->
+          <div class="project-tab__panel"
+               id="panel-welllife"
+               role="tabpanel"
+               aria-labelledby="tab-welllife">
+            <div class="web-inner">
+              <!-- ########## web-content - 웰라이프내과의원 ########## -->
+              <div class="web-content project-content">
             <!-- web-mockup__main -->
             <figure class="web-mockup__main" data-anim="fade-up">
               <div class="web-mockup__total">
@@ -946,15 +979,19 @@
                 </div>
               </div>
             </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+          <!-- ########## END - 탭 패널: Well Life ########## -->
 
-      <!-- ########## Section - React Web App ########## -->
-      <section id="react">
-        <div class="react-inner inner">
-          <h2 class="section-title new" data-anim="fade-right">React Project</h2>
-          <div class="react-content project-content">
+          <!-- 탭 패널: TaskFlow -->
+          <div class="project-tab__panel"
+               id="panel-taskflow"
+               role="tabpanel"
+               aria-labelledby="tab-taskflow"
+               hidden>
+            <div class="react-inner">
+              <div class="react-content project-content">
             <!-- ########## react-mockup__main ########## -->
             <figure class="react-mockup__main" data-anim="fade-up">
               <!-- react-mockup__main-total -->
@@ -1153,7 +1190,11 @@
                 </div>
               </div>
             </div>
+              </div>
+            </div>
           </div>
+          <!-- ########## END - 탭 패널: TaskFlow ########## -->
+
         </div>
       </section>
 
@@ -1537,7 +1578,7 @@
           <a class="sidebar-nav__item" href="#exp">
             <span>Experience</span>
           </a>
-          <a class="sidebar-nav__item" href="#web">
+          <a class="sidebar-nav__item" href="#project">
             <span>Project</span>
           </a>
           <a class="sidebar-nav__item" href="#prototype">

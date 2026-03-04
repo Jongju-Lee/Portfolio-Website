@@ -106,6 +106,8 @@
 .appointment-form__item-title {
   position: relative;
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-family: var(--font-KR-medium);
   font-size: var(--font-size-large);

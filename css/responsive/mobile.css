@@ -666,9 +666,6 @@
 
 
   /* ########## SECTION - REACT ########## */
-  main > section#react {
-    padding-top: var(--spacing-100);
-  }
   .react-content {
     margin-top: var(--spacing-60);
   }

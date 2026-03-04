@@ -1,0 +1,752 @@
+/* ========================================================================
+ * PROJECT.CSS
+ * Web 섹션(웰라이프내과의원) + React 섹션(TaskFlow) 통합 스타일
+ * 탭 UI 스타일 포함
+ * ======================================================================== */
+
+
+/* ========== 섹션 기반 스타일 ========== */
+/* JS에서 .panel-taskflow-active 클래스 토글로 전환 */
+#project {
+  background-color: var(--color-well-life-bg);
+  transition: background-color 0.5s ease;
+}
+
+#project.panel-taskflow-active {
+  background-color: var(--color-react-bg);
+}
+
+/* 탭 패널 자체는 배경색 없음 — section에서 위임 */
+#panel-taskflow {
+  color: var(--color-react-text);
+}
+
+
+/* ========== 탭 UI ========== */
+/* .project-inner */
+.project-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- project-tab-scroll-wrap ----- */
+.project-tab-scroll-wrap {
+  position: relative;
+  /* 탭 버튼들이 차지하는 너비만큼만 가져가고 가운데 정렬 */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: var(--spacing-48);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* overflow 감지 시 JS가 --overflow 클래스 추가 */
+.project-tab-scroll-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: calc(100% - 2px);
+  background: linear-gradient(to right, transparent, var(--color-well-life-bg));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.5s;
+}
+
+/* TaskFlow 활성 시 fade 색상 연동 */
+#project.panel-taskflow-active .project-tab-scroll-wrap::after {
+  background: linear-gradient(to right, transparent, var(--color-react-bg));
+}
+
+/* overflow 감지 시 fade 표시 */
+.project-tab-scroll-wrap--overflow::after {
+  opacity: 1;
+}
+
+/* ----- project-tab ----- */
+.project-tab {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; 
+  max-width: 100%;
+  gap: var(--spacing-4);
+  border-bottom: 2px solid var(--border-color-light-gray);
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.project-tab::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ----- project-tab__btn ----- */
+.project-tab__btn {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  gap: 6px;
+  padding: var(--spacing-12) var(--spacing-28);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-EN);
+  color: var(--text-color-light-gray);
+  white-space: nowrap;
+  transition: color 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 슬라이딩 언더라인 인디케이터 */
+.project-tab__btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor; /* 부모 버튼의 color 상속 — nth-child로 지정된 프로젝트별 색상 자동 적용 */
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+/* 활성 탭 — 코어 */
+.project-tab__btn--active::after {
+  transform: scaleX(1);
+}
+
+/* Well Life 전용 남색 */
+.project-tab__btn:nth-child(1).project-tab__btn--active {
+  color: var(--color-well-life-primary);
+}
+/* TaskFlow 전용 검정색 */
+.project-tab__btn:nth-child(2).project-tab__btn--active {
+  color: var(--color-react-text);
+}
+
+/* hover 상태 */
+.project-tab__btn:nth-child(1):not(.project-tab__btn--active):hover {
+  color: var(--color-well-life-primary);
+}
+.project-tab__btn:nth-child(2):not(.project-tab__btn--active):hover {
+  color: var(--color-react-text);
+}
+
+/* ----- 탭 버튼 내부 텍스트 ----- */
+.project-tab__label {
+  color: var(--text-color-light-gray);
+  opacity: 0.6;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: opacity 0.3s;
+}
+
+.project-tab__btn--active .project-tab__label {
+  opacity: 1;
+}
+
+.project-tab__name {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ----- project-tab__panel ----- */
+.project-tab__panel {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project-tab__panel--visible {
+  opacity: 1;
+}
+
+
+/* ==================== 공통 클래스 ==================== */
+/* 컬러, 타이포 서브타이틀 공통 스타일 */
+.web-row__info-subtitle {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-12);
+  padding-left: var(--spacing-16);
+}
+.web-row__info-subtitle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-well-life-primary);
+}
+
+/* 섹션 타이틀 공통 스타일 */
+.web-row__info-title {
+  margin-bottom: var(--spacing-40);
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* 색상 아이템 공통 스타일 */
+.web-row__circle-items {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-48);
+  margin-bottom: var(--spacing-32);
+}
+.web-row__circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8);
+  width: 66px;
+  font-size: var(--font-size-sm);
+}
+.web-theme__circle,
+.web-typo__circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-normal);
+}
+.web-row__circle-label {
+  font-weight: 400;
+  color: var(--text-color-gray);
+  text-align: center;
+  line-height: 1.3em;
+}
+.web-row__circle-code {
+  color: var(--text-color-light-gray);
+}
+
+/* 설명 텍스트 공통 스타일 */
+.web-row__info-desc {
+  font-size: var(--font-size-lg);
+  line-height: 1.8em;
+  text-align: left;
+  word-break: keep-all;
+}
+/* ==================== END - 공통 클래스 ==================== */
+
+
+/* ==================== WELL-LIFE 프로젝트 ==================== */
+/* ----- web-inner ----- */
+.web-inner {
+  padding: var(--section-padding);
+}
+
+/* ----- web-mockup__main(메인 목업 컨테이너) ----- */
+.web-mockup__main {
+  margin-bottom: var(--spacing-20);
+}
+.web-mockup__total {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* .web-mockup__total-item(개별 목업) */
+.web-mockup__total-item {
+  position: relative;
+  padding-bottom: var(--spacing-60);
+}
+/* 목업 hover시 filter 처리 */
+.web-mockup__total-item img {
+  filter: drop-shadow(var(--drop-shadow-mockup)) brightness(1);
+  transition: filter 0.5s;
+}
+.web-mockup__total-item:hover img {
+  filter: drop-shadow(var(--drop-shadow-mockup)) brightness(0.5);
+}
+.web-mockup__total--pc {
+  max-width: 70%;
+}
+.web-mockup__total--tablet {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 44%;
+}
+.web-mockup__total--mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32%;
+}
+
+/* web-mockup__total-item-label(목업 하단 라벨) */
+.web-mockup__total-item-label {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding: 6px var(--spacing-12);
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  text-align: center;
+  color: var(--color-well-life-primary);
+  border-radius: 4px;
+  transition: background-color 0.5s, color 0.5s;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 10;
+}
+.web-mockup__total-item:hover .web-mockup__total-item-label {
+  background-color: var(--color-well-life-primary);
+  color: var(--text-color-white);
+}
+/* 라벨 아이콘 (CSS 변수로 관리) */
+.web-mockup__total-item-label .view-icon {
+  --icon-default: url("../../images/icon/view-icon.webp");
+  --icon-hover: url("../../images/icon/view-icon-hover.webp");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: var(--icon-default);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.5s;
+}
+.web-mockup__total-item:hover .view-icon {
+  background-image: var(--icon-hover);
+}
+
+/* 툴팁 기본 스타일 */
+.web-mockup__total-item-label::after {
+  position: absolute;
+  bottom: calc(100% + var(--spacing-4));
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--spacing-4) var(--spacing-12);
+  background-color: var(--text-color-body);
+  color: var(--text-color-white);
+  font-size: var(--font-size-sm);
+  border-radius: 4px; /* variables에 없는 값: 4px, 소형 툴팁 전용 미세 radius */
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.web-mockup__total-item:hover .web-mockup__total-item-label::after {
+  opacity: 1;
+}
+
+/* ----- 비활성화 스타일 (JS에서 --disabled 클래스 토글) ----- */
+.web-mockup__total-item--disabled a {
+  pointer-events: none;
+}
+.web-mockup__total-item--disabled {
+  cursor: default;
+}
+.web-mockup__total-item--disabled .web-mockup__total-item-label {
+  color: var(--text-color-light-gray);
+  cursor: default;
+}
+/* 비활성화 라벨 hover 시 배경 변경 안 함 */
+.web-mockup__total-item--disabled:hover .web-mockup__total-item-label {
+  background-color: transparent;
+  color: var(--text-color-light-gray);
+}
+/* 비활성화 아이콘 */
+.web-mockup__total-item--disabled .view-icon {
+  --icon-default: url("../../images/icon/view-icon-disabled.webp");
+  --icon-hover: url("../../images/icon/view-icon-disabled.webp");
+}
+/* 비활성화 목업 이미지 hover 효과 제거 */
+.web-mockup__total-item--disabled:hover img {
+  filter: drop-shadow(var(--drop-shadow-mockup)) brightness(1);
+}
+/* 비활성화 툴팁 - 화면 키워서 확인 (기본) */
+.web-mockup__total-item--disabled .web-mockup__total-item-label::after {
+  content: "화면을 키워서 확인하세요";
+}
+/* 비활성화 툴팁 - 화면 줄여서 확인 (모바일용) */
+.web-mockup__total-item--disabled.web-mockup__total-item--shrink .web-mockup__total-item-label::after {
+  content: "화면을 줄여서 확인하세요";
+}
+.web-mockup__total-item--disabled:hover .web-mockup__total-item-label::after {
+  opacity: 1;
+}
+
+/* ---------- Row 1 - web-info ---------- */
+.web-info {
+  position: relative;
+  align-items: end;
+}
+
+/* web-info__design(디자인 보러가기 버튼) */
+.web-info__design {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.web-info__design-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  gap: calc(var(--spacing-8) + 2px); /* variables에 없는 값: +2px 미세 간격 조정 */
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: 100px; /* variables에 없는 값: 100px, pill 형태 완전 원형 */
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  white-space: nowrap;
+  line-height: 1;
+  transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color-body);
+}
+.web-info__design-link::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url("../../images/website_pub/figma-icon.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.web-info__design-link:hover {
+  background-color: var(--text-color-body);
+  color: var(--text-color-white);
+}
+
+.web-info__intro-subtitle::before {
+  background-color: var(--color-well-life-primary);
+}
+.web-info__intro-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+}
+
+/* web-info__accessibility(웹 접근성 점수) */
+.web-info__accessibility {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-24);
+}
+.web-info__accessibility-icon {
+  width: 100px;
+  filter: drop-shadow(var(--drop-shadow-light));
+}
+.web-info__accessibility-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+.web-info__accessibility-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: var(--font-size-xl);
+}
+.web-info__accessibility-list-item::before {
+  content: "";
+  flex-shrink: 0;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-positive);
+}
+
+/* web-info__overview */
+.web-info__overview-table thead th {
+  background-color: var(--color-well-life-primary);
+}
+.web-info__overview-table tbody tr:hover th,
+.web-info__overview-table tbody tr:hover td {
+  background-color: var(--color-well-life-hover);
+}
+
+/* web-content__achievement-list */
+.web-content__achievement-list li::before {
+  background-color: var(--color-well-life-primary);
+}
+
+/* ---------- Row 2 - web-theme ---------- */
+.web-theme {
+  align-items: center;
+}
+
+/* web-theme__circle-items */
+.web-theme__circle--primary {
+  background-color: var(--color-well-life-primary);
+}
+.web-theme__circle--secondary {
+  background-color: var(--color-well-life-secondary);
+}
+.web-theme__circle--bg {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--border-color-light-gray);
+}
+
+/* ---------- Row 3 - web-typo ---------- */
+.web-typo {
+  align-items: center;
+}
+
+/* web-typo__info-desc */
+.web-typo__info-desc {
+  padding-right: 10px; /* variables에 없는 값: 10px, 텍스트 우측 여백 — 4px 배수 아님 */
+}
+
+/* web-typo__circle-items */
+.web-content__typo-circle--primary {
+  background-color: var(--color-well-life-text-primary);
+}
+.web-content__typo-circle--secondary {
+  background-color: var(--color-well-life-text-secondary);
+}
+.web-content__typo-circle--tertiary {
+  background-color: var(--color-well-life-text-tertiary);
+}
+
+/* web-typo__mockup-items */
+.web-typo__mockup-items {
+  display: flex;
+  justify-content: space-around;
+}
+.web-typo__mockup-item {
+  width: 200px;
+}
+/* ==================== END - WELL-LIFE 프로젝트 ==================== */
+
+
+/* ==================== TASKFLOW 프로젝트 ==================== */
+
+/* ----- react-inner (.react-inner) ----- */
+.react-inner {
+  padding: var(--section-padding);
+}
+
+/* ----- react-mockup__main ----- */
+.react-mockup__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-32);
+  width: 100%;
+}
+
+/* react-content__links */
+.react-content__links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-24);
+  margin-top: var(--spacing-60);
+}
+.react-content__link {
+  display: inline-block;
+  width: 130px;
+  padding: var(--spacing-8) 0;
+  border-radius: var(--spacing-8);
+  background-color: var(--color-react-primary);
+  box-shadow: var(--shadow-color-box-light);
+  font-weight: 500;
+  text-align: center;
+  opacity: 1;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.react-content__link:hover {
+  opacity: 0.7;
+}
+.react-content__link .expect-pc {
+  display: none;
+}
+
+
+/* ----- Row 1: react-intro ----- */
+/* react-info */
+.react-info {
+  align-items: end;
+}
+
+/* react-info__intro-subtitle */
+.react-info__intro-subtitle::before {
+  background-color: var(--color-react-primary);
+}
+
+/* react-info__right */
+.react-info__right {
+  align-self: end;
+}
+
+
+/* react-info__function(App 주요 기능) */
+.react-info__function {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: var(--spacing-40);
+  margin-bottom: var(--spacing-16);
+}
+.react-info__function-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+}
+.react-info__function-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  margin-top: var(--spacing-12);
+}
+.react-info__function-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12);
+  font-size: var(--font-size-xl);
+}
+.react-info__function-list-item .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-image: url(../../images/react/dot.webp);
+  background-size: 100% 100%;
+}
+
+/* react-info__mockup-items */
+.react-info__mockup-items {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-32);
+}
+.react-info__mockup-item--mobile {
+  max-width: 160px;
+}
+.react-info__mockup-item--mobile:nth-child(2) {
+  margin-top: var(--spacing-60);
+}
+
+
+/* ----- Row 2: 개요 테이블 ----- */
+/* react-overview */
+.react-overview {
+  align-items: center;
+}
+
+/* react-table - 색상 */
+.react-overview__table thead th {
+  background-color: var(--color-react-primary);
+}
+.react-overview__table tbody tr:hover th,
+.react-overview__table tbody tr:hover td {
+  background-color: var(--color-react-bg);
+}
+.react-overview__table-list li::before {
+  background-color: var(--color-react-primary);
+}
+
+
+/* ----- Row 3: 컬러/타이포 ----- */
+.react-format__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-40);
+}
+
+/* 컬러 / 타이포 공통 */
+.react-format__color-box {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: var(--spacing-24) 0 var(--spacing-20);
+  border-radius: var(--spacing-4);
+  overflow: hidden;
+  box-shadow: var(--shadow-color-box);
+}
+.react-format__color-item {
+  width: 100px;
+  padding: var(--spacing-4) 0;
+  font-family: var(--font-EN);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.react-format__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+}
+
+.react-format__theme-item:nth-child(1) {
+  background-color: var(--color-react-primary);
+}
+.react-format__theme-item:nth-child(2) {
+  background-color: #FCFCFC; /* variables에 없는 값: #FCFCFC, TaskFlow 디자인 시스템의 Off-White 배경색 */
+}
+.react-format__theme-item:nth-child(3) {
+  background-color: #DFDFDF; /* variables에 없는 값: #DFDFDF, TaskFlow 디자인 시스템의 연회색 */
+}
+.react-format__theme-desc {
+  line-height: 1.6em;
+  text-align: left;
+  word-break: keep-all;
+}
+
+/* react-format__typo */
+.react-format__typo-item {
+  color: var(--text-color-white);
+}
+.react-format__typo-item:nth-child(1) {
+  background-color: #1E2723; /* variables에 없는 값: #1E2723, TaskFlow 타이포 팔레트 */
+}
+.react-format__typo-item:nth-child(2) {
+  background-color: #707070; /* variables에 없는 값: #707070, TaskFlow 타이포 팔레트 */
+}
+.react-format__typo-item:nth-child(3) {
+  background-color: #8F8FA4; /* variables에 없는 값: #8F8FA4, TaskFlow 타이포 팔레트 */
+}
+
+/* react-format__typo-desc */
+.react-format__typo-desc {
+  display: flex;
+  justify-content: space-between;
+  max-width: 340px;
+}
+.react-format__typo-list-title {
+  font-family: var(--font-EN);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+.react-format__typo-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  margin-top: var(--spacing-12);
+}
+.react-format__typo-list li {
+  position: relative;
+  padding-left: var(--spacing-12);
+}
+.react-format__typo-list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-react-primary);
+}
+/* ==================== END - TASKFLOW 프로젝트 ==================== */
