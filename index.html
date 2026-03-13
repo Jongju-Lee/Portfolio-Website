@@ -727,474 +727,777 @@
       </section>
 
       <!-- ########## Section - Project ########## -->
-      <section id="project">
+      <section id="project" class="project-area panel-soniczero-active">
         <div class="project-inner inner">
-
           <!-- 섹션 타이틀 -->
           <h2 data-anim="fade-right">Project</h2>
 
           <!-- 탭 메뉴 -->
           <div class="project-tab-scroll-wrap">
             <div class="project-tab" role="tablist" aria-label="프로젝트 목록">
-              <button class="project-tab__btn project-tab__btn--active"
-                      role="tab"
-                      id="tab-welllife"
-                      aria-selected="true"
-                      aria-controls="panel-welllife">
+              <button class="project-tab__btn project-tab__btn--active" role="tab" id="tab-soniczero" aria-selected="true" aria-controls="panel-soniczero">
+                <span class="project-tab__label">React</span>
+                <span class="project-tab__name">SonicZero</span>
+              </button>
+              <button class="project-tab__btn" role="tab" id="tab-welllife" aria-selected="false" aria-controls="panel-welllife" tabindex="-1">
                 <span class="project-tab__label">Vanilla</span>
                 <span class="project-tab__name">Well Life</span>
               </button>
-              <button class="project-tab__btn"
-                      role="tab"
-                      id="tab-taskflow"
-                      aria-selected="false"
-                      aria-controls="panel-taskflow"
-                      tabindex="-1">
+              <button class="project-tab__btn" role="tab" id="tab-taskflow" aria-selected="false" aria-controls="panel-taskflow" tabindex="-1">
                 <span class="project-tab__label">React</span>
                 <span class="project-tab__name">TaskFlow</span>
               </button>
-
             </div>
           </div>
 
+          <!-- 탭 패널: SonicZero -->
+          <div class="project-tab__panel project-tab__panel--visible" id="panel-soniczero" role="tabpanel" aria-labelledby="tab-soniczero">
+            <!-- ########## sonic-content - SonicZero ########## -->
+            <div class="sonic-inner project-tab__inner">
+              <div class="sonic-content project-content">
+                
+                <!-- soniczero-mockup (독립 Gird/Flex 레이아웃 적용) -->
+                <figure class="soniczero-mockup" data-anim="fade-up">
+                  <!-- PC 목업 -->
+                  <div class="soniczero-mockup--pc web-mockup__total-item">
+                    <a href="./portfolio/soniczero/index.html" data-type="iframe">
+                      <img src="./images/soniczero/soniczero-mockup-pc.webp" alt="SonicZero PC 화면" loading="lazy">
+                      <span class="web-mockup__total-item-label web-mockup__total-item-label--pc font-en">
+                        PC <span class="view-icon"></span>
+                      </span>
+                    </a>
+                  </div>
+                  <!-- Mobile + Tablet 목업 -->
+                  <div class="soniczero-mockup__bottom">
+                    <div class="soniczero-mockup--mobile web-mockup__total-item">
+                      <a href="./portfolio/soniczero/mockup/mobile.html">
+                        <img src="./images/soniczero/soniczero-mockup-mobile.webp" alt="SonicZero 모바일 화면" loading="lazy">
+                        <span class="web-mockup__total-item-label font-en">
+                          Mobile <span class="view-icon"></span>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="soniczero-mockup--tablet web-mockup__total-item">
+                      <a href="./portfolio/soniczero/mockup/tablet.html">
+                        <img src="./images/soniczero/soniczero-mockup-tablet.webp" alt="SonicZero 태블릿 화면" loading="lazy">
+                        <span class="web-mockup__total-item-label font-en">
+                          Tablet <span class="view-icon"></span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </figure>
+
+                <!-- ########## Row 1: sonic-overview (Bento Box) ########## -->
+                <div class="sonic-overview" data-anim="fade-up">
+                  <!-- 좌측: 프로젝트 개요 (40%) -->
+                  <div class="sonic-overview__item sonic-overview__item--main sonic-glass">
+                    <div class="sonic-overview__intro">
+                      <h3 class="sonic-overview__title project-title">SonicZero X1</h3>
+                      <h4 class="sonic-overview__subtitle">미니멀리즘과 하이엔드 오디오의 결합</h4>
+                      <p class="sonic-overview__desc">
+                        몰입감 높은 사용자 경험을 제공하는 프리미엄 오디오 랜딩 페이지입니다. 단순 화면 구현을 넘어, <b class="font-en">SASS Map</b>을 활용한 전역 디자인 토큰<span class="font-en">(Token)</span> 시스템을 구축해 스타일의 확장성과 유지보수성을 높였습니다. <span class="font-en">360px</span> 소형 모바일부터 와이드 디스플레이까지 유연하게 대응하는 <b><span class="font-en">Clamp</span> 가변 폰트 시스템</b>과, <b>웹 접근성<span class="font-en">(KWCAG 2.2)</span>을 준수</b>하는 시맨틱 마크업을 통해 실무 환경에서 요구되는 견고한 UI/UX 퍼블리싱 역량을 담았습니다.
+                      </p>
+                    </div>
+                    
+                    <div class="sonic-overview__actions" data-lightbox>
+                      <span class="sonic-overview__duration">
+                        작업시간: 약 60시간 소요
+                      </span>
+                      <a class="sonic-overview__btn" href="#" target="_blank">
+                        <!-- GitHub Icon -->
+                        <img src="./images/icon/project-github-icon.webp" alt="" class="sonic-overview__btn-icon"> 
+                        Source Code
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <!-- 우측: 카드 그룹 (60%) -->
+                  <div class="sonic-overview__group">
+                    <!-- 우측 상단: 기술 스택 -->
+                    <div class="sonic-overview__item sonic-overview__item--stack sonic-glass">
+                      <h5 class="sonic-overview__card-title">Tech Stack</h5>
+                      <div class="sonic-stack">
+                        <span class="sonic-stack__badge">
+                          <img src="./images/soniczero/soniczero-badge-react.png" alt="React" class="sonic-stack__badge-icon">
+                          React
+                        </span>
+                        <span class="sonic-stack__badge">
+                          <img src="./images/soniczero/soniczero-badge-vite.png" alt="Vite" class="sonic-stack__badge-icon">
+                          Vite
+                        </span>
+                        <span class="sonic-stack__badge">
+                          <img src="./images/soniczero/soniczero-badge-scss.png" alt="Sass" class="sonic-stack__badge-icon">
+                          Sass
+                        </span>
+                        <span class="sonic-stack__badge">
+                          <img src="./images/soniczero/soniczero-badge-gsap.png" alt="GSAP" class="sonic-stack__badge-icon">
+                          GSAP
+                        </span>
+                        <span class="sonic-stack__badge">
+                          <img src="./images/soniczero/soniczero-badge-vercel.png" alt="Vercel" class="sonic-stack__badge-icon">
+                          Vercel
+                        </span>
+                        <span class="sonic-stack__badge">
+                          <img src="./images/soniczero/soniczero-badge-figma.png" alt="Figma" class="sonic-stack__badge-icon">
+                          Figma
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <!-- 우측 하단: 주요 성과 / 퍼포먼스 메트릭 -->
+                    <div class="sonic-overview__item sonic-overview__item--metrics sonic-glass">
+                      <div class="sonic-metrics">
+                        <div class="sonic-metrics__score">
+                          <img src="./images/soniczero/soniczero-score.webp" alt="접근성 점수 100점">
+                        </div>
+                        <!-- 접근성 리스트 -->
+                        <div class="sonic-metrics__info">
+                          <h5 class="sonic-overview__card-title">Accessibility</h5>
+                          <ul class="sonic-metrics__list">
+                            <li class="sonic-metrics__list-item">
+                              <p>
+                                <b class="font-en">Lighthouse</b> 접근성 100점  
+                              </p>
+                            </li>
+                            <li class="sonic-metrics__list-item">
+                              <p>
+                                <b class="font-en">OpenWax</b> 오류 0개
+                              </p>
+                            </li>
+                            <li class="sonic-metrics__list-item">
+                              <p>
+                                <b class="font-en">KWCAG 2.2</b> 지침 준수 마크업
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ########## END - sonic-overview ########## -->
+                
+                <!-- ########## 하단 Feature 하이라이트 영역 시작 ########## -->
+                <div class="sonic-feature">
+                  
+                  <!-- 자유로운 거대 Glow 구름들 -->
+                  <div class="sonic-glow-cloud sonic-glow-cloud--top"></div>
+                  <div class="sonic-glow-cloud sonic-glow-cloud--mid"></div>
+                  <div class="sonic-glow-cloud sonic-glow-cloud--btm"></div>
+
+                  <!-- Row 1: Color Theme System (5:5) -->
+                  <section class="sonic-feature__row sonic-feature__row--color" data-anim="fade-up" aria-labelledby="sonic-color-title">
+                    <div class="sonic-feature__text">
+                      <h3 id="sonic-color-title" class="sonic-feature__title">Color Theme System</h3>
+                      <h4 class="sonic-feature__subtitle">다크 프리미엄과 하이엔드 아이덴티티</h4>
+                      <p class="sonic-feature__desc">
+                        프리미엄 오디오 브랜드의 무게감을 전달하기 위해 <b class="font-en">Deep Black(#050505)</b>을 배경으로 한 다크 테마를 기반으로 렌더링했습니다. 여기에 브랜드의 시그니처 컬러인 <b class="font-en">Neon Blue(#007AFF)</b>를 액션 포인트<span class="font-en">(Button, Hover, Active)</span>에만 제한적으로 사용하여 시각적 대비(Contrast)를 높이고 사용자 몰입감을 극대화했습니다.
+                      </p>
+                    </div>
+                    <div class="sonic-feature__visual sonic-feature__visual--colors sonic-glass">
+                      <div class="sonic-color-chip-group">
+                        <div class="sonic-color-knob" data-hex="#050505">
+                          <div class="sonic-color-chip sonic-color-chip--black" aria-label="Deep Black Color"></div>
+                          <span class="sonic-color-label">BASS</span>
+                        </div>
+                        <div class="sonic-color-knob" data-hex="#007AFF">
+                          <div class="sonic-color-chip sonic-color-chip--blue" aria-label="Neon Blue Color"></div>
+                          <span class="sonic-color-label">MIDDLE</span>
+                        </div>
+                        <div class="sonic-color-knob" data-hex="#FFFFFF">
+                          <div class="sonic-color-chip sonic-color-chip--white" aria-label="White Color"></div>
+                          <span class="sonic-color-label">TREBLE</span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  
+                  <!-- Row 2: SCSS Tokens (Z-Pattern 6:4 비율, flex-direction 반전) -->
+                  <section class="sonic-feature__row sonic-feature__row--tokens sonic-feature__row--reverse" data-anim="fade-up" aria-labelledby="sonic-token-title">
+                    <!-- 좌측: 시각적/코드 인터랙션 (60%) -->
+                    <div class="sonic-feature__visual sonic-feature__visual--interaction sonic-glass" tabindex="0">
+                      <!-- 스크린리더 안내: hover/포커스 시 전환 설명 -->
+                      <span class="sr-only">UI 화면과 SCSS 코드 화면이 겹쳐진 인터랙티브 영역입니다. 마우스를 올리거나 포커스하면 UI 화면이 사라지고 실제 코드가 표시됩니다.</span>
+                      <div class="sonic-token__img-wrapper">
+                        <!-- <div class="sonic-token__img sonic-token__img--code"> -->
+                          <img class="sonic-token__img sonic-token__img--code" src="./images/soniczero/sonic-architecture.webp" alt="SCSS 디자인 토큰 코드 화면" loading="lazy" width="1920" height="1080">
+                        <!-- </div> -->
+                        <!-- <div class="sonic-token__img sonic-token__img--ui" aria-hidden="true"> -->
+                          <img class="sonic-token__img sonic-token__img--ui" src="./images/soniczero/sonic-architecture-mask.webp" alt="" loading="lazy" width="1920" height="1080">
+                        <!-- </div> -->
+                      </div>
+                    </div>
+                    <!-- 우측: 텍스트 (40%) -->
+                    <div class="sonic-feature__text">
+                      <h3 id="sonic-token-title" class="sonic-feature__title">Design Token Architecture</h3>
+                      <h4 class="sonic-feature__subtitle">체계적인 UI 상태 관리</h4>
+                      <p class="sonic-feature__desc">
+                        단순 하드코딩을 지양하고, 좌측의 디자인 원소들을 <b class="font-en">SASS Map</b> 구조와 같이 통일된 <b class="font-en">Token</b> 체계로 완벽하게 추상화하여 전역 관리했습니다. (<span class="font-en">Hover</span>해서 확인하세요)
+                      </p>
+                    </div>
+                  </section>
+                  
+                  <!-- Row 3: Fluid Typography (Interactive Volume Slider) -->
+                  <section class="sonic-feature__row sonic-feature__row--typo" data-anim="fade-up" aria-labelledby="sonic-typo-title">
+                    <div class="sonic-feature__text sonic-feature__text--center">
+                      <h3 id="sonic-typo-title" class="sonic-feature__title">Fluid Typography</h3>
+                      <p class="sonic-feature__desc">화면 사이즈에 비례해 유연하게 반응하는 <b class="font-en">Clamp</b> 함수 적용으로 미디어 쿼리 의존도 감소</p>
+                    </div>
+
+                    <!-- Interactive Volume Slider Container -->
+                    <div class="sonic-feature__visual sonic-feature__visual--typo-slider sonic-glass" data-anim="fade-up">
+                      <!-- Sample Text & Font Size Display -->
+                      <div class="sonic-typo-slider__sample">
+                        <h4 class="sonic-typo-slider__sample-text">SonicZero</h4>
+                        <div class="sonic-typo-slider__sample-meta">
+                          <span class="sonic-typo-slider__sample-rem regular">
+                            <span class="sonic-typo-slider__rem-unit">1rem =</span> 
+                            <span class="sonic-typo-slider__rem-value">16</span>
+                          </span>
+                          <span class="sonic-typo-slider__sample-size">52.0px</span>
+                        </div>
+                      </div>
+
+                      <!-- Clamp Formula Display -->
+                      <div class="sonic-typo-slider__formula" aria-label="clamp 수식">
+                        font-size: clamp 
+                        <div class="sonic-typo-slider__formula-text" aria-hidden="true">
+                          (<span class="sonic-typo-slider__formula-min">0.75rem,</span><span class="sonic-typo-slider__formula-fluid">2.56vw + 0.20rem,</span><span class="sonic-typo-slider__formula-max">3.25rem</span>);
+                        </div>
+                      </div>
+
+                      <!-- Slider Wrapper (with data attributes) -->
+                      <div class="sonic-typo-slider__wrapper" data-min="360" data-max="1920" data-min-font="12" data-max-font="52" data-breakpoints='[480, 768, 1024, 1280, 1440]'>
+                        <!-- Tick Marks (above slider) -->
+                        <div class="sonic-typo-slider__marks" aria-hidden="true">
+                          <!-- Marks will be generated by JS -->
+                        </div>
+                        <!-- Slider Track -->
+                        <div class="sonic-typo-slider__track">
+                          <div class="sonic-typo-slider__fill"></div>
+                          <div class="sonic-typo-slider__handle" role="slider" aria-label="Responsive font size adjustment" aria-valuemin="360" aria-valuemax="1920" aria-valuenow="1920" tabindex="0"></div>
+                        </div>
+                        <!-- Tooltips (major marks) -->
+                        <div class="sonic-typo-slider__tooltips" aria-hidden="true">
+                          <div class="sonic-typo-slider__tooltip sonic-typo-slider__tooltip--480" data-breakpoint="480">480px</div>
+                          <div class="sonic-typo-slider__tooltip sonic-typo-slider__tooltip--768" data-breakpoint="768">768px</div>
+                          <div class="sonic-typo-slider__tooltip sonic-typo-slider__tooltip--1024" data-breakpoint="1024">1024px</div>
+                          <div class="sonic-typo-slider__tooltip sonic-typo-slider__tooltip--1280" data-breakpoint="1280">1280px</div>
+                          <div class="sonic-typo-slider__tooltip sonic-typo-slider__tooltip--1440" data-breakpoint="1440">1440px</div>
+                        </div>
+                        <!-- Min/Max Labels -->
+                        <div class="sonic-typo-slider__labels">
+                          <span class="sonic-typo-slider__label sonic-typo-slider__label--min">MOBILE</span>
+                          <span class="sonic-typo-slider__label sonic-typo-slider__label--max">DESKTOP</span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  
+                  <!-- Row 4: Accessibility (접근성 인터랙티브 시각화) -->
+                  <section class="sonic-feature__row sonic-feature__row--a11y" data-anim="fade-up" aria-labelledby="sonic-a11y-title">
+                    <div class="sonic-feature__text sonic-feature__text--center">
+                      <h3 id="sonic-a11y-title" class="sonic-feature__title">Accessibility<span>- KWCAG 2.2</span></h3>
+                      <p class="sonic-feature__desc"><b class="font-en">WAI-ARIA</b> 표준 패턴과 키보드 내비게이션을 적용한 접근성 설계</p>
+                    </div>
+                    <div class="sonic-feature__visual sonic-feature__visual--a11y" data-anim="fade-up">
+                      <div class="sonic-a11y">
+                        <!-- Card 1: Semantic Markup -->
+                        <div class="sonic-a11y__card sonic-glass">
+                          <div class="sonic-a11y__header">
+                            <span class="sonic-a11y__icon" aria-hidden="true">✓</span>
+                            <span class="sonic-a11y__name">Semantic Markup</span>
+                          </div>
+                          <p class="sonic-a11y__desc">의미론적 태그로 콘텐츠 역할과 계층 구조를 설계</p>
+                          <div class="sonic-a11y__tags">
+                            <span class="sonic-a11y__tag">&lt;h1&gt; ~ &lt;h3&gt;</span></span>
+                            <span class="sonic-a11y__tag">&lt;nav&gt;</span>
+                            <span class="sonic-a11y__tag">aria-labelledby</span>
+                          </div>
+                        </div>
+
+                        <!-- Card 2: Screen Reader -->
+                        <div class="sonic-a11y__card sonic-glass">
+                          <div class="sonic-a11y__header">
+                            <span class="sonic-a11y__icon" aria-hidden="true">✓</span>
+                            <span class="sonic-a11y__name">Screen Reader</span>
+                          </div>
+                          <p class="sonic-a11y__desc">스크린리더가 읽어야 할 정보와 건너뛸 요소를 명확하게 분리</p>
+                          <div class="sonic-a11y__tags">
+                            <span class="sonic-a11y__tag">.sr-only</span>
+                            <span class="sonic-a11y__tag">aria-hidden</span>
+                            <span class="sonic-a11y__tag">role="img"</span>
+                          </div>
+                        </div>
+
+                        <!-- Card 3: Accordion Pattern -->
+                        <div class="sonic-a11y__card sonic-glass">
+                          <div class="sonic-a11y__header">
+                            <span class="sonic-a11y__icon" aria-hidden="true">✓</span>
+                            <span class="sonic-a11y__name">Accordion Pattern</span>
+                          </div>
+                          <p class="sonic-a11y__desc">열림/닫힘 상태를 스크린리더에 실시간 전달</p>
+                          <div class="sonic-a11y__tags">
+                            <span class="sonic-a11y__tag">aria-expanded</span>
+                            <span class="sonic-a11y__tag">aria-controls</span>
+                            <span class="sonic-a11y__tag">disabled</span>
+                          </div>
+                        </div>
+
+                        <!-- Card 4: Keyboard & Focus -->
+                        <div class="sonic-a11y__card sonic-glass">
+                          <div class="sonic-a11y__header">
+                            <span class="sonic-a11y__icon" aria-hidden="true">✓</span>
+                            <span class="sonic-a11y__name">Keyboard &amp; Focus</span>
+                          </div>
+                          <p class="sonic-a11y__desc">마우스 없이도 모든 기능을 키보드만으로 조작 가능</p>
+                          <div class="sonic-a11y__tags">
+                            <span class="sonic-a11y__tag">&lt;button&gt;</span>
+                            <span class="sonic-a11y__tag">aria-label</span>
+                            <span class="sonic-a11y__tag">tabindex="0"</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                </div>
+                <!-- ########## END - sonic-feature ########## -->
+              </div>
+            </div>
+          </div>
+          <!-- ########## END - 탭 패널: SonicZero ########## -->
 
           <!-- 탭 패널: Well Life -->
-          <div class="project-tab__panel"
-               id="panel-welllife"
-               role="tabpanel"
-               aria-labelledby="tab-welllife">
-            <div class="web-inner">
-              <!-- ########## web-content - 웰라이프내과의원 ########## -->
+          <div class="project-tab__panel" id="panel-welllife" role="tabpanel" aria-labelledby="tab-welllife" hidden>
+            <!-- ########## web-content - 웰라이프내과의원 ########## -->
+            <div class="web-inner project-tab__inner">
               <div class="web-content project-content">
-            <!-- web-mockup__main -->
-            <figure class="web-mockup__main" data-anim="fade-up">
-              <div class="web-mockup__total">
-                <div class="web-mockup__total-item web-mockup__total--pc">
-                  <a href="./portfolio/well-life/index.html" data-type="iframe">
-                    <picture>
-                      <source media="(max-width: 768px)" srcset="./images/website_pub/web-mockup-main-pc-mobile.webp">
-                      <img src="./images/website_pub/web-mockup-main-pc.webp" alt="웰라이프 PC 화면" loading="lazy">
-                    </picture>
-                    <span class="web-mockup__total-item-label web-mockup__total-item-label--pc font-en">
-                      PC <span class="view-icon"></span>
-                    </span>
-                  </a>
-                </div>
-                <div class="web-mockup__total-item web-mockup__total--tablet">
-                  <a href="./portfolio/well-life/mockup/tablet.html">
-                    <picture>
-                      <source media="(max-width: 768px)" srcset="./images/website_pub/web-mockup-main-tablet-mobile.webp">
-                      <img src="./images/website_pub/web-mockup-main-tablet.webp" alt="웰라이프 태블릿 화면" loading="lazy">
-                    </picture>
-                    <span class="web-mockup__total-item-label font-en">
-                      Tablet <span class="view-icon"></span>
-                    </span>
-                  </a>
-                </div>
-                <div class="web-mockup__total-item web-mockup__total--mobile">
-                  <a href="./portfolio/well-life/mockup/mobile.html">
-                    <img src="./images/website_pub/web-mockup-main-mobile.webp" alt="웰라이프 모바일 화면" loading="lazy">
-                    <span class="web-mockup__total-item-label font-en">
-                      Mobile <span class="view-icon"></span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </figure>
+                <!-- web-mockup__main -->
+                <figure class="web-mockup__main" data-anim="fade-up">
+                  <div class="web-mockup__total">
+                    <div class="web-mockup__total-item web-mockup__total--pc">
+                      <a href="./portfolio/well-life/index.html" data-type="iframe">
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="./images/website_pub/web-mockup-main-pc-mobile.webp">
+                          <img src="./images/website_pub/web-mockup-main-pc.webp" alt="웰라이프 PC 화면" loading="lazy">
+                        </picture>
+                        <span class="web-mockup__total-item-label web-mockup__total-item-label--pc font-en">
+                          PC <span class="view-icon"></span>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="web-mockup__total-item web-mockup__total--tablet">
+                      <a href="./portfolio/well-life/mockup/tablet.html">
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="./images/website_pub/web-mockup-main-tablet-mobile.webp">
+                          <img src="./images/website_pub/web-mockup-main-tablet.webp" alt="웰라이프 태블릿 화면" loading="lazy">
+                        </picture>
+                        <span class="web-mockup__total-item-label font-en">
+                          Tablet <span class="view-icon"></span>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="web-mockup__total-item web-mockup__total--mobile">
+                      <a href="./portfolio/well-life/mockup/mobile.html">
+                        <img src="./images/website_pub/web-mockup-main-mobile.webp" alt="웰라이프 모바일 화면" loading="lazy">
+                        <span class="web-mockup__total-item-label font-en">
+                          Mobile <span class="view-icon"></span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </figure>
 
-            <!-- ########## Row 1 - web-info ########## -->
-            <div class="web-info project-row" data-anim="fade-up">
-              <!-- 디자인 보러 가기 버튼 -->
-              <div class="web-info__design" data-lightbox>
-                <a class="web-info__design-link font-en" href="https://embed.figma.com/design/HHYWT4zB4BDSX5qYcN1DzF/%EC%9B%B0%EB%9D%BC%EC%9D%B4%ED%94%84-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%97%85%EB%A1%9C%EB%93%9C%EC%9A%A9-?node-id=0-1&embed-host=share" data-type="iframe">Design View</a>
-              </div>
+                <!-- ########## Row 1 - web-info ########## -->
+                <div class="web-info project-row" data-anim="fade-up">
+                  <!-- 디자인 보러 가기 버튼 -->
+                  <div class="web-info__design" data-lightbox>
+                    <a class="web-info__design-link font-en" href="https://embed.figma.com/design/HHYWT4zB4BDSX5qYcN1DzF/%EC%9B%B0%EB%9D%BC%EC%9D%B4%ED%94%84-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%97%85%EB%A1%9C%EB%93%9C%EC%9A%A9-?node-id=0-1&embed-host=share" data-type="iframe">Design View</a>
+                  </div>
 
-              <!-- web-info__intro-wrapper -->
-              <div class="web-info__intro-wrapper project-row__left">
-                <h3 class="web-info__intro-title project-title font-kr">웰라이프내과의원</h3>
-                <div class="web-info__intro-inner">
-                  <div class="web-info__intro-desc">
-                    <h4 class="web-info__intro-subtitle project-subtitle"><span class="font-en">CSS</span> 변수 기반 디자인 시스템 설계</h4>
-                    <p class="project-desc">
-                      <b class="font-en">Figma Design Token</b>과 <b class="font-en">CSS 변수</b>를 연동한 <b class="font-kr">디자인 시스템</b>을 구축하여 다크모드/라이트모드 토글 기능을 구현하고, 디자인-개발 간 일관성을 확보했습니다. <b class="font-en">Semantic Markup</b> 기반의 <b class="font-kr">공통 컴포넌트</b>를 설계하였고, <b class="font-kr">폼 유효성 검사</b>와 <b class="font-kr">피드백 시스템</b>으로 완성도 높은 <span class="font-en">UI/UX</span>를 제공합니다.
+                  <!-- web-info__intro-wrapper -->
+                  <div class="web-info__intro-wrapper project-row__left">
+                    <h3 class="web-info__intro-title project-title font-kr">웰라이프내과의원</h3>
+                    <div class="web-info__intro-inner">
+                      <div class="web-info__intro-desc">
+                        <h4 class="web-info__intro-subtitle project-subtitle"><span class="font-en">CSS</span> 변수 기반 디자인 시스템 설계</h4>
+                        <p class="project-desc">
+                          <b class="font-en">Figma Design Token</b>과 <b class="font-en">CSS 변수</b>를 연동한 <b class="font-kr">디자인 시스템</b>을 구축하여 다크모드/라이트모드 토글 기능을 구현하고, 디자인-개발 간 일관성을 확보했습니다. <b class="font-en">Semantic Markup</b> 기반의 <b class="font-kr">공통 컴포넌트</b>를 설계하였고, <b class="font-kr">폼 유효성 검사</b>와 <b class="font-kr">피드백 시스템</b>으로 완성도 높은 <span class="font-en">UI/UX</span>를 제공합니다.
+                        </p>
+                      </div>
+
+                      <!-- web-info__accessibility(웹 접근성 점수) -->
+                      <div class="web-info__accessibility">
+                        <div class="web-info__accessibility-icon">
+                          <img src="./images/website_pub/web-info-accessibility.webp" alt="접근성 100점 아이콘" loading="lazy">
+                        </div>
+                        <ul class="web-info__accessibility-list">
+                          <li class="web-info__accessibility-list-item">
+                            <p>
+                              <span class="font-en">Lighthouse</span> <b class="font-kr">접근성 100점</b>
+                            </p>
+                          </li>
+                          <li class="web-info__accessibility-list-item">
+                            <p>
+                              <span class="font-en">OpenWAX(KWCAG)</span> <b class="font-kr">접근성 오류 0개</b>
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- web-info__overview -->
+                  <div class="web-info__overview project-row__right">
+                    <div class="web-info__overview-table-wrapper project-table__wrapper">
+                        <table class="web-info__overview-table project-table">
+                        <!-- caption -->
+                        <caption class="sr-only">웰라이프내과의원 프로젝트 개요 입니다.</caption>
+                        <!-- thead -->
+                        <thead>
+                          <tr>
+                            <th scope="col" id="welllife-th-label">항목</th>
+                            <th scope="col" id="welllife-th-content">내용</th>
+                          </tr>
+                        </thead>
+                        <!-- tbody -->
+                        <tbody>
+                          <tr>
+                            <th scope="row" id="welllife-th-period">작업 기간</th>
+                            <td headers="welllife-th-content welllife-th-period">
+                              <b class="font-kr">14 일</b>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" id="welllife-th-role">담당 역할</th>
+                            <td headers="welllife-th-content welllife-th-role">
+                              <span class="font-kr">기획 / 디자인 / 퍼블리싱</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" id="welllife-th-stack">기술 스택</th>
+                            <td class="font-en" headers="welllife-th-content welllife-th-stack">
+                              <b>HTML</b> + <b>CSS</b> + <b>JS</b>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" id="welllife-th-library">라이브러리</th>
+                            <td headers="welllife-th-content welllife-th-library">
+                              <span class="font-en">Swiper.js</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" id="welllife-th-result">주요 성과</th>
+                            <td headers="welllife-th-content welllife-th-result">
+                              <ul class="web-content__achievement-list project-achievement__list">
+                                <li>
+                                  <span class="font-en">W3C HTML / CSS Validate</span> <b class="font-kr">에러 0개 달성</b>
+                                </li>
+                                <li>
+                                  <b class="font-en">PC/Tablet/Mobile</b> 반응형
+                                </li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ########## Row 2 - web-theme ########## -->
+                <div class="web-theme project-row" data-anim="fade-up">
+                  <!-- web-theme__mockup(다크모드 목업) -->
+                  <div class="web-theme__mockup project-row__left">
+                    <div class="web-theme__mockup--pc project-mockup__item">
+                      <img src="./images/website_pub/web-mockup-dark-mode.webp" alt="PC 다크모드 목업" loading="lazy">
+                      <span class="web-theme__mockup-label project-mockup__label">
+                        <span class="font-en">Light / Dark Mode</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- web-theme__info -->
+                  <div class="web-theme__info project-row__right">
+                    <h4 class="web-theme__info-title web-row__info-title font-en">Color Theme</h4>
+                    <div class="web-theme__circle-items web-row__circle-items">
+                      <div class="web-theme__circle-item web-row__circle-item">
+                        <span class="web-theme__circle web-theme__circle--primary"></span>
+                        <span class="web-theme__circle-label web-row__circle-label font-en">theme<br>primary</span>
+                        <span class="web-theme__circle-code web-row__circle-code font-en">#19248C</span>
+                      </div>
+                      <div class="web-theme__circle-item web-row__circle-item">
+                        <span class="web-theme__circle web-theme__circle--secondary"></span>
+                        <span class="web-theme__circle-label web-row__circle-label font-en">theme<br>secondary</span>
+                        <span class="web-theme__circle-code web-row__circle-code font-en">#4CB9E7</span>
+                      </div>
+                      <div class="web-theme__circle-item web-row__circle-item">
+                        <span class="web-theme__circle web-theme__circle--bg"></span>
+                        <span class="web-theme__circle-label web-row__circle-label font-en">bg<br>primary</span>
+                        <span class="web-theme__circle-code web-row__circle-code font-en">#FFFFFF</span>
+                      </div>
+                    </div>
+                    <h5 class="web-theme__info-subtitle web-row__info-subtitle">신뢰<span class="font-en">(Trust)</span>와 치유<span
+                        class="font-en">(Healing)</span></h5>
+                    <p class="web-theme__info-desc web-row__info-desc">
+                      의료 기관의 전문성과 신뢰감을 주는 <b class="font-en">Deep Blue</b> 색상을 메인으로, 정보의 가독성을 위해 밝도 대비가 확실한 <b class="font-en">White</b> 색상을 베이스로 사용하였습니다.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ########## Row 3 - web-typo ########## -->
+                <div class="web-typo project-row wrap-reverse" data-anim="fade-up">
+                  <!-- web-typo__info -->
+                  <div class="web-typo__info project-row__left">
+                    <h4 class="web-typo__info-title web-row__info-title font-en">Typography</h4>
+                    <div class="web-typo__circle-items web-row__circle-items">
+                      <div class="web-typo__circle-item web-row__circle-item">
+                        <span class="web-typo__circle web-content__typo-circle--primary"></span>
+                        <span class="web-typo__circle-label web-row__circle-label font-en">text<br>primary</span>
+                        <span class="web-typo__circle-code web-row__circle-code font-en">#000000</span>
+                      </div>
+                      <div class="web-typo__circle-item web-row__circle-item">
+                        <span class="web-typo__circle web-content__typo-circle--secondary"></span>
+                        <span class="web-typo__circle-label web-row__circle-label font-en">text<br>secondary</span>
+                        <span class="web-typo__circle-code web-row__circle-code font-en">#6B6B6B</span>
+                      </div>
+                      <div class="web-typo__circle-item web-row__circle-item">
+                        <span class="web-typo__circle web-content__typo-circle--tertiary"></span>
+                        <span class="web-typo__circle-label web-row__circle-label font-en">text<br>tertiary</span>
+                        <span class="web-typo__circle-code web-row__circle-code font-en">#A6A6A6</span>
+                      </div>
+                    </div>
+                    <h5 class="web-typo__info-subtitle web-row__info-subtitle">명확한 정보 전달을 위한 타이포그래피</h5>
+                    <p class="web-typo__info-desc web-row__info-desc">
+                      의료 정보의 정확한 전달을 위해 가독성이 우수하고 현대적인 고딕 계열의 <b class="font-scdream">"에스코어드림"</b> 으로 선정했습니다. 영문 텍스트에는 시인성이 뛰어난 <b class="font-mont">"Montserrat"</b> 를 사용하였고, 숫자 영역에 <b class="font-gmarket">"Gmarket Sans"</b> 를 별도 적용하여 전화번호, 진료 시간 등 핵심 데이터의 텍스트를 쉽고 빠르게 인지할 수 있도록 정보의 위계를 설계했습니다.
                     </p>
                   </div>
 
-                  <!-- web-info__accessibility(웹 접근성 점수) -->
-                  <div class="web-info__accessibility">
-                    <div class="web-info__accessibility-icon">
-                      <img src="./images/website_pub/web-info-accessibility.webp" alt="접근성 100점 아이콘" loading="lazy">
+                  <!-- web-typo__mockup-items(유효성 검사, 날짜 선택 목업) -->
+                  <div class="web-typo__mockup-items project-row__right">
+                    <div class="web-typo__mockup-item project-mockup__item">
+                      <img src="./images/website_pub/web-mockup-validation.webp" alt="모바일 폼 유효성검사 목업" loading="lazy">
+                      <span class="web-typo__mockup-label project-mockup__label font-en">Form Validation</span>
                     </div>
-                    <ul class="web-info__accessibility-list">
-                      <li class="web-info__accessibility-list-item">
-                        <p>
-                          <span class="font-en">Lighthouse</span> <b class="font-kr">접근성 100점</b>
-                        </p>
-                      </li>
-                      <li class="web-info__accessibility-list-item">
-                        <p>
-                          <span class="font-en">OpenWAX(KWCAG)</span> <b class="font-kr">접근성 오류 0개</b>
-                        </p>
-                      </li>
-                    </ul>
+                    <div class="web-typo__mockup-item project-mockup__item">
+                      <img src="./images/website_pub/web-mockup-date-picker.webp" alt="모바일 날짜 선택 목업" loading="lazy">
+                      <span class="web-typo__mockup-label project-mockup__label font-en">Date Picker</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <!-- web-info__overview -->
-              <div class="web-info__overview project-row__right">
-                <div class="web-info__overview-table-wrapper project-table__wrapper">
-                    <table class="web-info__overview-table project-table">
-                    <!-- caption -->
-                    <caption class="sr-only">웰라이프내과의원 프로젝트 개요 입니다.</caption>
-                    <!-- thead -->
-                    <thead>
-                      <tr>
-                        <th scope="col" id="welllife-th-label">항목</th>
-                        <th scope="col" id="welllife-th-content">내용</th>
-                      </tr>
-                    </thead>
-                    <!-- tbody -->
-                    <tbody>
-                      <tr>
-                        <th scope="row" id="welllife-th-period">작업 기간</th>
-                        <td headers="welllife-th-content welllife-th-period">
-                          <b class="font-kr">14 일</b>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" id="welllife-th-role">담당 역할</th>
-                        <td headers="welllife-th-content welllife-th-role">
-                          <span class="font-kr">기획 / 디자인 / 퍼블리싱</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" id="welllife-th-stack">기술 스택</th>
-                        <td class="font-en" headers="welllife-th-content welllife-th-stack">
-                          <b>HTML</b> + <b>CSS</b> + <b>JS</b>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" id="welllife-th-library">라이브러리</th>
-                        <td headers="welllife-th-content welllife-th-library">
-                          <span class="font-en">Swiper.js</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" id="welllife-th-result">주요 성과</th>
-                        <td headers="welllife-th-content welllife-th-result">
-                          <ul class="web-content__achievement-list project-achievement__list">
-                            <li>
-                              <span class="font-en">W3C HTML / CSS Validate</span> <b class="font-kr">에러 0개 달성</b>
-                            </li>
-                            <li>
-                              <b class="font-en">PC/Tablet/Mobile</b> 반응형
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <!-- ########## Row 2 - web-theme ########## -->
-            <div class="web-theme project-row" data-anim="fade-up">
-              <!-- web-theme__mockup(다크모드 목업) -->
-              <div class="web-theme__mockup project-row__left">
-                <div class="web-theme__mockup--pc project-mockup__item">
-                  <img src="./images/website_pub/web-mockup-dark-mode.webp" alt="PC 다크모드 목업" loading="lazy">
-                  <span class="react-theme__mockup-label project-mockup__label">
-                    <span class="font-en">Light / Dark Mode</span>
-                  </span>
-                </div>
-              </div>
-
-              <!-- web-theme__info -->
-              <div class="web-theme__info project-row__right">
-                <h4 class="web-theme__info-title web-row__info-title font-en">Color Theme</h4>
-                <div class="web-theme__circle-items web-row__circle-items">
-                  <div class="web-theme__circle-item web-row__circle-item">
-                    <span class="web-theme__circle web-theme__circle--primary"></span>
-                    <span class="web-theme__circle-label web-row__circle-label font-en">theme<br>primary</span>
-                    <span class="web-theme__circle-code web-row__circle-code font-en">#19248C</span>
-                  </div>
-                  <div class="web-theme__circle-item web-row__circle-item">
-                    <span class="web-theme__circle web-theme__circle--secondary"></span>
-                    <span class="web-theme__circle-label web-row__circle-label font-en">theme<br>secondary</span>
-                    <span class="web-theme__circle-code web-row__circle-code font-en">#4CB9E7</span>
-                  </div>
-                  <div class="web-theme__circle-item web-row__circle-item">
-                    <span class="web-theme__circle web-theme__circle--bg"></span>
-                    <span class="web-theme__circle-label web-row__circle-label font-en">bg<br>primary</span>
-                    <span class="web-theme__circle-code web-row__circle-code font-en">#FFFFFF</span>
-                  </div>
-                </div>
-                <h5 class="web-theme__info-subtitle web-row__info-subtitle">신뢰<span class="font-en">(Trust)</span>와 치유<span
-                    class="font-en">(Healing)</span></h5>
-                <p class="web-theme__info-desc web-row__info-desc">
-                  의료 기관의 전문성과 신뢰감을 주는 <b class="font-en">Deep Blue</b> 색상을 메인으로, 정보의 가독성을 위해 밝도 대비가 확실한 <b class="font-en">White</b> 색상을 베이스로 사용하였습니다.
-                </p>
-              </div>
-            </div>
-
-            <!-- ########## Row 3 - web-typo ########## -->
-            <div class="web-typo project-row wrap-reverse" data-anim="fade-up">
-              <!-- web-typo__info -->
-              <div class="web-typo__info project-row__left">
-                <h4 class="web-typo__info-title web-row__info-title font-en">Typography</h4>
-                <div class="web-typo__circle-items web-row__circle-items">
-                  <div class="web-typo__circle-item web-row__circle-item">
-                    <span class="web-typo__circle web-content__typo-circle--primary"></span>
-                    <span class="web-typo__circle-label web-row__circle-label font-en">text<br>primary</span>
-                    <span class="web-typo__circle-code web-row__circle-code font-en">#000000</span>
-                  </div>
-                  <div class="web-typo__circle-item web-row__circle-item">
-                    <span class="web-typo__circle web-content__typo-circle--secondary"></span>
-                    <span class="web-typo__circle-label web-row__circle-label font-en">text<br>secondary</span>
-                    <span class="web-typo__circle-code web-row__circle-code font-en">#6B6B6B</span>
-                  </div>
-                  <div class="web-typo__circle-item web-row__circle-item">
-                    <span class="web-typo__circle web-content__typo-circle--tertiary"></span>
-                    <span class="web-typo__circle-label web-row__circle-label font-en">text<br>tertiary</span>
-                    <span class="web-typo__circle-code web-row__circle-code font-en">#A6A6A6</span>
-                  </div>
-                </div>
-                <h5 class="web-typo__info-subtitle web-row__info-subtitle">명확한 정보 전달을 위한 타이포그래피</h5>
-                <p class="web-typo__info-desc web-row__info-desc">
-                  의료 정보의 정확한 전달을 위해 가독성이 우수하고 현대적인 고딕 계열의 <b class="font-scdream">"에스코어드림"</b> 으로 선정했습니다. 영문 텍스트에는 시인성이 뛰어난 <b class="font-mont">"Montserrat"</b> 를 사용하였고, 숫자 영역에 <b class="font-gmarket">"Gmarket Sans"</b> 를 별도 적용하여 전화번호, 진료 시간 등 핵심 데이터의 텍스트를 쉽고 빠르게 인지할 수 있도록 정보의 위계를 설계했습니다.
-                </p>
-              </div>
-
-              <!-- web-typo__mockup-items(유효성 검사, 날짜 선택 목업) -->
-              <div class="web-typo__mockup-items project-row__right">
-                <div class="web-typo__mockup-item project-mockup__item">
-                  <img src="./images/website_pub/web-mockup-validation.webp" alt="모바일 폼 유효성검사 목업" loading="lazy">
-                  <span class="web-typo__mockup-label project-mockup__label font-en">Form Validation</span>
-                </div>
-                <div class="web-typo__mockup-item project-mockup__item">
-                  <img src="./images/website_pub/web-mockup-date-picker.webp" alt="모바일 날짜 선택 목업" loading="lazy">
-                  <span class="web-typo__mockup-label project-mockup__label font-en">Date Picker</span>
-                </div>
-              </div>
-            </div>
               </div>
             </div>
           </div>
           <!-- ########## END - 탭 패널: Well Life ########## -->
 
           <!-- 탭 패널: TaskFlow -->
-          <div class="project-tab__panel"
-               id="panel-taskflow"
-               role="tabpanel"
-               aria-labelledby="tab-taskflow"
-               hidden>
-            <div class="react-inner">
+          <div class="project-tab__panel" id="panel-taskflow" role="tabpanel" aria-labelledby="tab-taskflow" hidden>
+            <div class="react-inner project-tab__inner">
               <div class="react-content project-content">
-            <!-- ########## react-mockup__main ########## -->
-            <figure class="react-mockup__main" data-anim="fade-up">
-              <!-- react-mockup__main-total -->
-              <div class="react-mockup__main-total project-mockup__item project-mockup__total">
-                <img src="./images/react/mockup-total.webp" alt="TaskFlow 전체 프리뷰" loading="lazy">
-              </div>
-              <!-- react-mockup__main-items -->
-              <div class="react-mockup__main-items project-mockup__mobile-items">
-                <div class="project-mockup__item project-mockup__item--mobile">
-                  <img src="./images/react/mockup-main-1.webp" alt="TaskFlow 모바일 프리뷰 1" loading="lazy">
-                </div>
-                <div class="project-mockup__item project-mockup__item--tablet">
-                  <img src="./images/react/mockup-main-2.webp" alt="TaskFlow 모바일 프리뷰 2" loading="lazy">
-                </div>
-                <div class="project-mockup__item project-mockup__item--pc">
-                  <img src="./images/react/mockup-main-3.webp" alt="TaskFlow 모바일 프리뷰 3" loading="lazy">
-                </div>
-              </div>
-            </figure>
+                <!-- ########## react-mockup__main ########## -->
+                <figure class="react-mockup__main" data-anim="fade-up">
+                  <!-- react-mockup__main-total -->
+                  <div class="react-mockup__main-total project-mockup__item project-mockup__total">
+                    <img src="./images/react/mockup-total.webp" alt="TaskFlow 전체 프리뷰" loading="lazy">
+                  </div>
+                  <!-- react-mockup__main-items -->
+                  <div class="react-mockup__main-items project-mockup__mobile-items">
+                    <div class="project-mockup__item project-mockup__item--mobile">
+                      <img src="./images/react/mockup-main-1.webp" alt="TaskFlow 모바일 프리뷰 1" loading="lazy">
+                    </div>
+                    <div class="project-mockup__item project-mockup__item--tablet">
+                      <img src="./images/react/mockup-main-2.webp" alt="TaskFlow 모바일 프리뷰 2" loading="lazy">
+                    </div>
+                    <div class="project-mockup__item project-mockup__item--pc">
+                      <img src="./images/react/mockup-main-3.webp" alt="TaskFlow 모바일 프리뷰 3" loading="lazy">
+                    </div>
+                  </div>
+                </figure>
             
-            <!-- ########## react-content__links ########## -->
-            <div class="react-content__links" data-anim="fade-up">
-              <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/mobile.html" data-label-pc="Mobile"><span class="only-pc">Mobile</span></a>
-              <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/tablet.html" data-label-pc="Tablet"><span class="only-pc">Tablet</span></a>
-              <div data-lightbox>
-                <a class="react-content__link font-en" href="https://taskflow-jongju.vercel.app/" data-label-pc="PC" data-label-tablet="View-App" data-type="iframe">
-                  <span class="only-pc">PC</span>
-                  <span class="expect-pc">View App</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- ########## Row 1: react-info ########## -->
-            <div class="react-info project-row" data-anim="fade-up">
-              <!-- react-info__intro-wrapper -->
-              <div class="react-info__intro-wrapper project-row__left">
-                <div class="react-info__intro">
-                  <h3 class="react-info__intro-title project-title font-en">TaskFlow</h3>
-                  <h4 class="react-info__intro-subtitle project-subtitle">언제 어디서나, 어떤 기기에서도</h4>
-                  <p class="react-info__intro-desc project-desc">
-                    편리함과 접근성을 최우선으로 설계한 <b class="font-en">React</b> 기반의 <b class="font-en">Todo-List</b> <b class="font-kr">웹 앱</b> 입니다. <b class="font-en">React Calendar</b> 연동을 통해 날짜별 일정 관리 및 실시간 할 일 검색이 가능하고 <b class="font-kr">터치</b> <b class="font-en">Drag & Drop</b><span class="font-en">(dnd-kit)</span>으로 할 일의 순서를 직관적으로 변경이 가능합니다. 또한, 키보드 사용자 편의성을 위해 단축키로 <b class="font-kr">빠르고 편리한 조작</b>이 가능하도록 제작한 웹 앱 입니다.
-                  </p>
-                </div>
-                <!-- react-info__function(주요 기능) -->
-                <div class="react-info__function">
-                  <h4 class="react-info__function-title title">
-                    <span class="font-en">App</span> 주요 기능
-                  </h4>
-                  <ul class="react-info__function-list">
-                    <li class="react-info__function-list-item">
-                      <em class="dot"></em>
-                      <p><b class="font-kr">달력을 연동</b>하여 날짜별로 <span class="font-en">List</span> 관리</p>
-                    </li>
-                    <li class="react-info__function-list-item">
-                      <em class="dot"></em>
-                      <p>내 할 일 <b class="font-kr">검색 및 필터링</b></p>
-                    </li>
-                    <li class="react-info__function-list-item">
-                      <em class="dot"></em>
-                      <p>단축키를 통해 <b class="font-kr">키보드만으로도 사용 가능</b></p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- react-info__mockup(모바일 목업) -->
-              <div class="react-info__mockup project-row__right">
-                <div class="react-info__mockup-items">
-                  <div class="react-info__mockup-item--mobile project-mockup__item">
-                    <img src="./images/react/mockup-mobile-edit.webp" alt="할 일 수정 화면" loading="lazy">
-                    <span class="react-info__mockup-label project-mockup__label">할 일 수정</span>
-                  </div>
-                  <div class="react-info__mockup-item--mobile project-mockup__item">
-                    <img src="./images/react/mockup-mobile-delete.webp" alt="할 일 삭제 화면" loading="lazy">
-                    <span class="react-info__mockup-label project-mockup__label">할 일 삭제</span>
-                  </div>
-                  <div class="react-info__mockup-item--mobile project-mockup__item">
-                    <img src="./images/react/mockup-mobile-calendar.webp" alt="캘린더 연동 화면" loading="lazy">
-                    <span class="react-info__mockup-label project-mockup__label">캘린더 연동</span>
+                <!-- ########## react-content__links ########## -->
+                <div class="react-content__links" data-anim="fade-up">
+                  <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/mobile.html" data-label-pc="Mobile"><span class="only-pc">Mobile</span></a>
+                  <a class="react-content__link only-pc font-en" href="./portfolio/taskflow/mockup/tablet.html" data-label-pc="Tablet"><span class="only-pc">Tablet</span></a>
+                  <div data-lightbox>
+                    <a class="react-content__link font-en" href="https://taskflow-jongju.vercel.app/" data-label-pc="PC" data-label-tablet="View-App" data-type="iframe">
+                      <span class="only-pc">PC</span>
+                      <span class="expect-pc">View App</span>
+                    </a>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <!-- ########## Row 2: react-overview ########## -->
-            <div class="react-overview project-row wrap-reverse" data-anim="fade-up">
-              <!-- 태블릿 목업 -->
-              <div class="react-overview__mockup project-row__left">
-                <div class="react-overview__mockup--tablet project-mockup__item">
-                  <picture>
-                    <source media="(max-width: 768px)" srcset="./images/react/mockup-tablet-dnd-mobile.webp">
-                    <img src="./images/react/mockup-tablet-dnd.webp" alt="드래그 드롭 화면" loading="lazy">
-                  </picture>
-                  <span class="react-overview__mockup-label project-mockup__label">할 일 순서 변경</span>
-                </div>
-              </div>
-              
-              <!-- react-overview__table-container(테이블) -->
-              <div class="react-overview__table-container project-row__right">
-                <h4 class="react-overview__table-caption project-table__caption"><span class="font-en">TaskFlow</span> 프로젝트 개요</h4>
-                <div class="react-overview__table-wrapper project-table__wrapper">
-                  <table class="react-overview__table project-table">
-                    <caption class="sr-only">TaskFlow 프로젝트 개요 입니다.</caption>
-                    <thead>
-                      <tr>
-                        <th scope="col" id="taskflow-th-label">항목</th>
-                        <th scope="col" id="taskflow-th-content">내용</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row" id="taskflow-th-period">작업 기간</th>
-                        <td headers="taskflow-th-content taskflow-th-period"><b>10 일</b></td>
-                      </tr>
-                      <tr>
-                        <th scope="row" id="taskflow-th-role">담당 역할</th>
-                        <td headers="taskflow-th-content taskflow-th-role"><span class="font-kr">기획 / 디자인 / 개발</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row" id="taskflow-th-stack">기술 스택</th>
-                        <td headers="taskflow-th-content taskflow-th-stack"><b class="font-en">React</b> + <b class="font-en">Vite</b> + <b class="nowrap font-en">Styled-Components</b></td>
-                      </tr>
-                      <tr>
-                        <th scope="row" id="taskflow-th-library">라이브러리</th>
-                        <td headers="taskflow-th-content taskflow-th-library"><span class="font-en">React Calendar, dnd-kit</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row" id="taskflow-th-result">주요 성과</th>
-                        <td headers="taskflow-th-content taskflow-th-result">
-                          <ul class="react-overview__table-list project-achievement__list">
-                            <li><b class="font-en">Drag & Drop</b> <b class="font-kr">일정 관리 구현</b></li>
-                            <li><b class="font-en">PC/Tablet/Mobile</b> 반응형</li>
-                          </ul>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <!-- ########## Row 3: react-format ########## -->
-            <div class="react-format project-row" data-anim="fade-up">
-              <!-- 좌측: Color Theme + Typography -->
-              <div class="react-format__wrapper project-row__left">
-                <div class="react-format__inner">
-                  <!-- Color Theme -->
-                  <div class="react-format__theme">
-                    <h4 class="react-format__theme-title react-format__title font-en">Color Theme</h4>
-                    <div class="react-format__theme-color-items react-format__color-box">
-                      <span class="react-format__theme-item react-format__color-item">#72E3AD</span>
-                      <span class="react-format__theme-item react-format__color-item">#FCFCFC</span>
-                      <span class="react-format__theme-item react-format__color-item">#DFDFDF</span>
+                <!-- ########## Row 1: react-info ########## -->
+                <div class="react-info project-row" data-anim="fade-up">
+                  <!-- react-info__intro-wrapper -->
+                  <div class="react-info__intro-wrapper project-row__left">
+                    <div class="react-info__intro">
+                      <h3 class="react-info__intro-title project-title font-en">TaskFlow</h3>
+                      <h4 class="react-info__intro-subtitle project-subtitle">언제 어디서나, 어떤 기기에서도</h4>
+                      <p class="react-info__intro-desc project-desc">
+                        편리함과 접근성을 최우선으로 설계한 <b class="font-en">React</b> 기반의 <b class="font-en">Todo-List</b> <b class="font-kr">웹 앱</b> 입니다. <b class="font-en">React Calendar</b> 연동을 통해 날짜별 일정 관리 및 실시간 할 일 검색이 가능하고 <b class="font-kr">터치</b> <b class="font-en">Drag & Drop</b><span class="font-en">(dnd-kit)</span>으로 할 일의 순서를 직관적으로 변경이 가능합니다. 또한, 키보드 사용자 편의성을 위해 단축키로 <b class="font-kr">빠르고 편리한 조작</b>이 가능하도록 제작한 웹 앱 입니다.
+                      </p>
                     </div>
-                    <p class="react-format__theme-desc">
-                      생산성 앱의 경쾌하면서도 안정적인 사용 경험을 위해
-                      <b class="font-en">Mint Green</b>을 메인 컬러로 선정하고,
-                      눈의 피로도를 최소화하기 위해 밝은 <b class="font-en">Off-White</b> 배경을
-                      적용하여 한눈에 일정을 파악할 수 있는 인터페이스를 구현했습니다.
-                    </p>
-                  </div>
-                  <!-- Typography -->
-                  <div class="react-format__typo">
-                    <h4 class="react-format__typo-title react-format__title font-en">Typography</h4>
-                    <div class="react-format__typo-color-items react-format__color-box">
-                      <span class="react-format__typo-item react-format__color-item">#1E2723</span>
-                      <span class="react-format__typo-item react-format__color-item">#707070</span>
-                      <span class="react-format__typo-item react-format__color-item">#8F8FA4</span>
+                    <!-- react-info__function(주요 기능) -->
+                    <div class="react-info__function">
+                      <h4 class="react-info__function-title title">
+                        <span class="font-en">App</span> 주요 기능
+                      </h4>
+                      <ul class="react-info__function-list">
+                        <li class="react-info__function-list-item">
+                          <em class="dot"></em>
+                          <p><b class="font-kr">달력을 연동</b>하여 날짜별로 <span class="font-en">List</span> 관리</p>
+                        </li>
+                        <li class="react-info__function-list-item">
+                          <em class="dot"></em>
+                          <p>내 할 일 <b class="font-kr">검색 및 필터링</b></p>
+                        </li>
+                        <li class="react-info__function-list-item">
+                          <em class="dot"></em>
+                          <p>단축키를 통해 <b class="font-kr">키보드만으로도 사용 가능</b></p>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="react-format__typo-desc">
-                      <div class="react-format__typo-list-box">
-                        <h5 class="react-format__typo-list-title">Font-Size</h5>
-                        <ul class="react-format__typo-list">
-                          <li><span class="font-en">PC</span> - <b class="font-en">1.125rem</b></li>
-                          <li><span class="font-en">Tablet</span> - <b class="font-en">1rem</b></li>
-                          <li><span class="font-en">Mobile</span> - <b class="font-en">0.875rem</b></li>
-                        </ul>
+                  </div>
+
+                  <!-- react-info__mockup(모바일 목업) -->
+                  <div class="react-info__mockup project-row__right">
+                    <div class="react-info__mockup-items">
+                      <div class="react-info__mockup-item--mobile project-mockup__item">
+                        <img src="./images/react/mockup-mobile-edit.webp" alt="할 일 수정 화면" loading="lazy">
+                        <span class="react-info__mockup-label project-mockup__label">할 일 수정</span>
                       </div>
-                      <div class="react-format__typo-list-box">
-                        <h5 class="react-format__typo-list-title">Font-family</h5>
-                        <ul class="react-format__typo-list">
-                          <li>한글 - <b class="font-kr">프리텐다드</b></li>
-                          <li>영문 - <b class="font-en">Outfit</b></li>
-                        </ul>
+                      <div class="react-info__mockup-item--mobile project-mockup__item">
+                        <img src="./images/react/mockup-mobile-delete.webp" alt="할 일 삭제 화면" loading="lazy">
+                        <span class="react-info__mockup-label project-mockup__label">할 일 삭제</span>
+                      </div>
+                      <div class="react-info__mockup-item--mobile project-mockup__item">
+                        <img src="./images/react/mockup-mobile-calendar.webp" alt="캘린더 연동 화면" loading="lazy">
+                        <span class="react-info__mockup-label project-mockup__label">캘린더 연동</span>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- react-format__mockup(PC 목업) -->
-              <div class="react-format__mockup project-row__right">
-                <div class="react-format__mockup--pc project-mockup__item">
-                  <img src="./images/react/mockup-pc-shortcut.webp" alt="단축키 모달 화면" loading="lazy">
-                  <span class="react-format__mockup-label project-mockup__label">키보드 도움말</span>
+                <!-- ########## Row 2: react-overview ########## -->
+                <div class="react-overview project-row wrap-reverse" data-anim="fade-up">
+                  <!-- 태블릿 목업 -->
+                  <div class="react-overview__mockup project-row__left">
+                    <div class="react-overview__mockup--tablet project-mockup__item">
+                      <picture>
+                        <source media="(max-width: 768px)" srcset="./images/react/mockup-tablet-dnd-mobile.webp">
+                        <img src="./images/react/mockup-tablet-dnd.webp" alt="드래그 드롭 화면" loading="lazy">
+                      </picture>
+                      <span class="react-overview__mockup-label project-mockup__label">할 일 순서 변경</span>
+                    </div>
+                  </div>
+                  
+                  <!-- react-overview__table-container(테이블) -->
+                  <div class="react-overview__table-container project-row__right">
+                    <h4 class="react-overview__table-caption project-table__caption"><span class="font-en">TaskFlow</span> 프로젝트 개요</h4>
+                    <div class="react-overview__table-wrapper project-table__wrapper">
+                      <table class="react-overview__table project-table">
+                        <caption class="sr-only">TaskFlow 프로젝트 개요 입니다.</caption>
+                        <thead>
+                          <tr>
+                            <th scope="col" id="taskflow-th-label">항목</th>
+                            <th scope="col" id="taskflow-th-content">내용</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" id="taskflow-th-period">작업 기간</th>
+                            <td headers="taskflow-th-content taskflow-th-period"><b>10 일</b></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" id="taskflow-th-role">담당 역할</th>
+                            <td headers="taskflow-th-content taskflow-th-role"><span class="font-kr">기획 / 디자인 / 개발</span></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" id="taskflow-th-stack">기술 스택</th>
+                            <td headers="taskflow-th-content taskflow-th-stack"><b class="font-en">React</b> + <b class="font-en">Vite</b> + <b class="nowrap font-en">Styled-Components</b></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" id="taskflow-th-library">라이브러리</th>
+                            <td headers="taskflow-th-content taskflow-th-library"><span class="font-en">React Calendar, dnd-kit</span></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" id="taskflow-th-result">주요 성과</th>
+                            <td headers="taskflow-th-content taskflow-th-result">
+                              <ul class="react-overview__table-list project-achievement__list">
+                                <li><b class="font-en">Drag & Drop</b> <b class="font-kr">일정 관리 구현</b></li>
+                                <li><b class="font-en">PC/Tablet/Mobile</b> 반응형</li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+
+                <!-- ########## Row 3: react-format ########## -->
+                <div class="react-format project-row" data-anim="fade-up">
+                  <!-- 좌측: Color Theme + Typography -->
+                  <div class="react-format__wrapper project-row__left">
+                    <div class="react-format__inner">
+                      <!-- Color Theme -->
+                      <div class="react-format__theme">
+                        <h4 class="react-format__theme-title react-format__title font-en">Color Theme</h4>
+                        <div class="react-format__theme-color-items react-format__color-box">
+                          <span class="react-format__theme-item react-format__color-item">#72E3AD</span>
+                          <span class="react-format__theme-item react-format__color-item">#FCFCFC</span>
+                          <span class="react-format__theme-item react-format__color-item">#DFDFDF</span>
+                        </div>
+                        <p class="react-format__theme-desc">
+                          생산성 앱의 경쾌하면서도 안정적인 사용 경험을 위해
+                          <b class="font-en">Mint Green</b>을 메인 컬러로 선정하고,
+                          눈의 피로도를 최소화하기 위해 밝은 <b class="font-en">Off-White</b> 배경을
+                          적용하여 한눈에 일정을 파악할 수 있는 인터페이스를 구현했습니다.
+                        </p>
+                      </div>
+                      <!-- Typography -->
+                      <div class="react-format__typo">
+                        <h4 class="react-format__typo-title react-format__title font-en">Typography</h4>
+                        <div class="react-format__typo-color-items react-format__color-box">
+                          <span class="react-format__typo-item react-format__color-item">#1E2723</span>
+                          <span class="react-format__typo-item react-format__color-item">#707070</span>
+                          <span class="react-format__typo-item react-format__color-item">#8F8FA4</span>
+                        </div>
+                        <div class="react-format__typo-desc">
+                          <div class="react-format__typo-list-box">
+                            <h5 class="react-format__typo-list-title">Font-Size</h5>
+                            <ul class="react-format__typo-list">
+                              <li><span class="font-en">PC</span> - <b class="font-en">1.125rem</b></li>
+                              <li><span class="font-en">Tablet</span> - <b class="font-en">1rem</b></li>
+                              <li><span class="font-en">Mobile</span> - <b class="font-en">0.875rem</b></li>
+                            </ul>
+                          </div>
+                          <div class="react-format__typo-list-box">
+                            <h5 class="react-format__typo-list-title">Font-family</h5>
+                            <ul class="react-format__typo-list">
+                              <li>한글 - <b class="font-kr">프리텐다드</b></li>
+                              <li>영문 - <b class="font-en">Outfit</b></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- react-format__mockup(PC 목업) -->
+                  <div class="react-format__mockup project-row__right">
+                    <div class="react-format__mockup--pc project-mockup__item">
+                      <img src="./images/react/mockup-pc-shortcut.webp" alt="단축키 모달 화면" loading="lazy">
+                      <span class="react-format__mockup-label project-mockup__label">키보드 도움말</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!-- ########## END - 탭 패널: TaskFlow ########## -->
-
         </div>
       </section>
 

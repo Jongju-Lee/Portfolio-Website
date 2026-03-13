@@ -133,7 +133,12 @@
 
 
   /* ==================== COMPONENTS.CSS ==================== */
-  /* ########## Web, React 공통 ########## */
+  /* ########## Project 공통 ########## */
+  /* 각 탭별 wrapper */
+  .project-tab__inner {
+    margin-top: var(--spacing-100);
+  }
+
   /* project-row */
   .project-row__left,
   .project-row__right {

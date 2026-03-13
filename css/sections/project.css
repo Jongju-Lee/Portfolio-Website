@@ -6,10 +6,18 @@
 
 
 /* ========== 섹션 기반 스타일 ========== */
-/* JS에서 .panel-taskflow-active 클래스 토글로 전환 */
+/* JS에서 .panel-[Name]-active 클래스 토글로 전환 */
 #project {
-  background-color: var(--color-well-life-bg);
-  transition: background-color 0.5s ease;
+  /* 글로벌 배경색 제거하여 초기 스플래시 방지 및 하위 위임 */
+  transition: background-color 0.6s;
+  /* CSS Scope 스위칭 (타이틀 가시성 대비용 기본값) */
+  --section-title-color: var(--text-color-title);
+}
+
+#project.panel-soniczero-active {
+  background-color: var(--color-soniczero-bg);
+  /* 다크 테마 시 타이틀 텍스트 흰색으로 치환 (h2 color 제어) */
+  --section-title-color: var(--color-soniczero-text-main);
 }
 
 #project.panel-taskflow-active {
@@ -17,156 +25,11 @@
 }
 
 /* 탭 패널 자체는 배경색 없음 — section에서 위임 */
+#panel-soniczero {
+  color: var(--color-soniczero-text-main);
+}
 #panel-taskflow {
   color: var(--color-react-text);
-}
-
-
-/* ========== 탭 UI ========== */
-/* .project-inner */
-.project-inner {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ----- project-tab-scroll-wrap ----- */
-.project-tab-scroll-wrap {
-  position: relative;
-  /* 탭 버튼들이 차지하는 너비만큼만 가져가고 가운데 정렬 */
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 100%;
-  margin-top: var(--spacing-48);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* overflow 감지 시 JS가 --overflow 클래스 추가 */
-.project-tab-scroll-wrap::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 150px;
-  height: calc(100% - 2px);
-  background: linear-gradient(to right, transparent, var(--color-well-life-bg));
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s, background 0.5s;
-}
-
-/* TaskFlow 활성 시 fade 색상 연동 */
-#project.panel-taskflow-active .project-tab-scroll-wrap::after {
-  background: linear-gradient(to right, transparent, var(--color-react-bg));
-}
-
-/* overflow 감지 시 fade 표시 */
-.project-tab-scroll-wrap--overflow::after {
-  opacity: 1;
-}
-
-/* ----- project-tab ----- */
-.project-tab {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto; 
-  max-width: 100%;
-  gap: var(--spacing-4);
-  border-bottom: 2px solid var(--border-color-light-gray);
-  user-select: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.project-tab::-webkit-scrollbar {
-  display: none;
-}
-
-
-/* ----- project-tab__btn ----- */
-.project-tab__btn {
-  flex-shrink: 0;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-4);
-  gap: 6px;
-  padding: var(--spacing-12) var(--spacing-28);
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-family: var(--font-EN);
-  color: var(--text-color-light-gray);
-  white-space: nowrap;
-  transition: color 0.3s;
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* 슬라이딩 언더라인 인디케이터 */
-.project-tab__btn::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: currentColor; /* 부모 버튼의 color 상속 — nth-child로 지정된 프로젝트별 색상 자동 적용 */
-  transform: scaleX(0);
-  transition: transform 0.3s;
-}
-
-/* 활성 탭 — 코어 */
-.project-tab__btn--active::after {
-  transform: scaleX(1);
-}
-
-/* Well Life 전용 남색 */
-.project-tab__btn:nth-child(1).project-tab__btn--active {
-  color: var(--color-well-life-primary);
-}
-/* TaskFlow 전용 검정색 */
-.project-tab__btn:nth-child(2).project-tab__btn--active {
-  color: var(--color-react-text);
-}
-
-/* hover 상태 */
-.project-tab__btn:nth-child(1):not(.project-tab__btn--active):hover {
-  color: var(--color-well-life-primary);
-}
-.project-tab__btn:nth-child(2):not(.project-tab__btn--active):hover {
-  color: var(--color-react-text);
-}
-
-/* ----- 탭 버튼 내부 텍스트 ----- */
-.project-tab__label {
-  color: var(--text-color-light-gray);
-  opacity: 0.6;
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  line-height: 1;
-  transition: opacity 0.3s;
-}
-
-.project-tab__btn--active .project-tab__label {
-  opacity: 1;
-}
-
-.project-tab__name {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
-  line-height: 1;
-}
-
-/* ----- project-tab__panel ----- */
-.project-tab__panel {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.project-tab__panel--visible {
-  opacity: 1;
 }
 
 
@@ -240,12 +103,1176 @@
 /* ==================== END - 공통 클래스 ==================== */
 
 
-/* ==================== WELL-LIFE 프로젝트 ==================== */
-/* ----- web-inner ----- */
-.web-inner {
-  padding: var(--section-padding);
+/* ==================== SONICZERO 프로젝트 ==================== */
+.sonic-content {
+  gap: var(--spacing-100);
 }
 
+.soniczero-mockup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-80); /* 1줄과 2줄 간의 여유 있는 간격 */
+  width: 100%;
+}
+
+.soniczero-mockup--pc {
+  width: 60%;
+  max-width: 80vw;
+  min-width: 600px;
+  margin: 0 auto;
+}
+
+/* Mobile, Tablet이 동일한 높이를 가짐 (Flex + Aspect-Ratio) */
+.soniczero-mockup__bottom {
+  display: flex;
+  justify-content: center;
+  gap: 8%; /* 레이아웃 유동성에 맞춘 퍼센트 여백 */
+  width: 100%;
+  aspect-ratio: 16 / 7; /* 핵심: 부모 폭이 줄어들면 높이도 정확한 비율로 같이 줄어듦 */
+  max-height: 60vh; /* 화면을 너무 많이 차지하지 않도록 높이 캡(Cap) 적용 */
+}
+
+.soniczero-mockup--mobile,
+.soniczero-mockup--tablet {
+  height: 100%;
+}
+.soniczero-mockup__bottom .web-mockup__total-item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.soniczero-mockup__bottom .web-mockup__total-item > a {
+  height: 100%;
+}
+
+.soniczero-mockup__bottom img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.sonic-content .web-mockup__total-item img {
+  filter: drop-shadow(var(--drop-shadow-soniczero));
+}
+
+.sonic-content .web-mockup__total-item-label {
+  color: var(--color-soniczero-primary);
+  background-color: var(--color-soniczero-glass);
+  border: 1px solid var(--color-soniczero-border);
+}
+
+.sonic-content .web-mockup__total-item:hover .web-mockup__total-item-label {
+  background-color: var(--color-soniczero-primary);
+  color: var(--color-soniczero-bg);
+  border-color: var(--color-soniczero-primary);
+}
+
+/* SonicZero 전용 커스텀 뷰 아이콘 (.view-icon 변수 덮어쓰기) */
+.sonic-content .web-mockup__total-item .view-icon {
+  --icon-default: url("../../images/icon/view-icon-soniczero.webp");
+  --icon-hover: url("../../images/icon/view-icon-soniczero-hover.webp");
+}
+
+/* ===== Glass 유틸리티 ===== */
+/* sonic 내부에서 반복되는 Glass 디자인을 단일 클래스로 통합 */
+.sonic-glass {
+  background-color: var(--color-soniczero-glass);
+  border: 1px solid var(--color-soniczero-border);
+  backdrop-filter: var(--blur-glass-soniczero);
+  -webkit-backdrop-filter: var(--blur-glass-soniczero);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.sonic-glass:hover {
+  border-color: var(--color-soniczero-border-accent);
+  box-shadow: var(--shadow-soniczero-glass);
+}
+
+/* sonic-overview */
+.sonic-overview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-48);
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* sonic-overview 공통 */ 
+.sonic-overview__item {
+  position: relative;
+  border-radius: 24px;
+}
+
+/* 텍스트 스타일링 */
+.project-title.sonic-overview__title {
+  margin-bottom: var(--spacing-8);
+  font-family: var(--font-EN);
+
+}
+.sonic-overview__subtitle {
+  margin-bottom: var(--spacing-24);
+  font-weight: 400;
+  color: var(--color-soniczero-primary);
+}
+.sonic-overview__desc {
+  font-size: var(--font-size-lg);
+  text-align: left;
+  line-height: 1.7;
+  word-break: keep-all;
+  color: var(--color-soniczero-text-sub);
+}
+.sonic-overview__desc b {
+  color: var(--color-soniczero-text-main);
+}
+
+/* 좌측 메인 개요 */
+.sonic-overview__item--main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-32) var(--spacing-40);
+  gap: var(--spacing-32);
+}
+
+/* 우측 카드 그룹 */
+.sonic-overview__group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-48);
+}
+
+/* --- 카드 내부 요소 스타일링 --- */
+.sonic-overview__card-title {
+  margin-bottom: var(--spacing-20);
+  font-family: var(--font-EN);
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--color-soniczero-primary);
+}
+
+/* 액션 버튼 wrapper */
+.sonic-overview__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* 최하단으로 이동 */
+}
+
+/* 작업 기간 */
+.sonic-overview__duration {
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: 8px;
+  border: 1px solid var(--color-soniczero-border);
+  background-color: var(--color-soniczero-glass);
+  color: var(--color-soniczero-text-sub);
+}
+
+/* Github 버튼 */
+.sonic-overview__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: 100px;
+  font-family: var(--font-EN);
+  font-weight: 600;
+  line-height: 1.5;
+  background-color: var(--color-soniczero-text-main);
+  color: var(--color-soniczero-bg);
+  transition: background-color 0.3s, color 0.3s;
+}
+.sonic-overview__btn:hover {
+  background-color: var(--color-soniczero-text-sub);
+}
+.sonic-overview__btn-icon {
+  width: 24px;
+}
+
+.sonic-overview__item--stack,
+.sonic-overview__item--metrics {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-32) var(--spacing-36);
+}
+
+
+
+/* 기술 스택 뱃지 */
+.sonic-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-12);
+}
+.sonic-stack__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-8);
+  padding-right: var(--spacing-16);
+  border-radius: 100px;
+  border: 1px solid var(--color-soniczero-border-light);
+  font-family: var(--font-EN);
+  color: var(--color-soniczero-text-main);
+  background-color: var(--color-soniczero-glass);
+  box-shadow: var(--shadow-util-btn);
+}
+.sonic-stack__badge-icon {
+  width: 24px;
+}
+
+/* 접근성 카드 */
+.sonic-metrics {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-32);
+}
+.sonic-metrics__score {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(5, 223, 114, 0.35);
+}
+.sonic-metrics__number {
+  font-size: var(--font-size-4xl);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-soniczero-positive);
+}
+.sonic-metrics__unit {
+  font-size: var(--font-size-sm);
+  color: var(--color-soniczero-positive);
+}
+.sonic-metrics__info {
+  flex: 1;
+}
+/* title 스타일 오버라이드 */
+.sonic-overview__item--metrics .sonic-overview__card-title {
+  margin-bottom: var(--spacing-12);
+  font-size: var(--font-size-2xl);
+  color: var(--color-soniczero-text-main);
+}
+.sonic-metrics__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  color: var(--color-soniczero-text-sub);
+}
+.sonic-metrics__list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+.sonic-metrics__list-item p {
+  line-height: 1;
+}
+.sonic-metrics__list-item::before {
+  content: "";
+  flex-shrink: 0;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background-color: var(--color-soniczero-positive);
+}
+
+
+/* ==========================================
+   하단 Feature 하이라이트 영역 (sonic-feature)
+   ========================================== */
+.sonic-feature {
+  position: relative; /* Glow 위치 기준점 */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  overflow: visible;
+}
+
+/* 🌟 자유로운 거대 Glow 구름 (페이지 전체 배경 역할) */
+.sonic-glow-cloud {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(0, 122, 255, 0.2) 0%, rgba(0, 122, 255, 0.05) 40%, transparent 70%);
+  z-index: 0; /* 우주 바탕 위, Glass 이하 레벨 */
+}
+/* 각 구름의 자유로운 배치, 크기, 밝기 차별화 */
+.sonic-glow-cloud--top { 
+  top: -360px;
+  right: 50px;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0, 122, 255, 0.25) 0%, rgba(0, 122, 255, 0.08) 40%, transparent 70%);
+}
+.sonic-glow-cloud--mid { 
+  top: 360px;
+  left: -380px;
+  width: 1000px;
+  height: 1000px;
+}
+.sonic-glow-cloud--btm { 
+  bottom: 30px;
+  right: -450px;
+  width: 1000px;
+  height: 1000px;
+}
+
+/* 1. Sonic 공통 Row 레이아웃 */
+.sonic-feature__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-64);   /* 여유로운 간격으로 시원한 느낌 추가 */
+}
+
+/* 공통 텍스트 컨테이너 */
+.sonic-feature__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* 🌟 공통 비주얼 컨테이너 (Glass 박스 및 Glow 기반) */
+.sonic-feature__visual {
+  position: relative;
+  flex: 1;
+  border-radius: 24px;
+  box-shadow: var(--shadow-util-btn);
+}
+
+/* 2. 공통 Typography */
+.sonic-feature__title {
+  margin-bottom: var(--spacing-8);
+  font-family: var(--font-EN);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.sonic-feature__subtitle {
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  color: var(--color-soniczero-primary);
+  margin-bottom: var(--spacing-24);
+}
+.sonic-feature__desc {
+  font-size: var(--font-size-md);
+  color: var(--color-soniczero-text-sub);
+  text-align: left;
+  word-break: keep-all;
+}
+.sonic-feature__desc b {
+  color: var(--color-soniczero-text-main);
+}
+
+/* 중앙 정렬 텍스트 유틸리티 (Row 3, 4) */
+.sonic-feature__text--center {
+  text-align: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 3. Row 1: Color Theme System */
+.sonic-feature__visual--colors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 440px;
+  padding: var(--spacing-64) 0 var(--spacing-80);
+}
+.sonic-color-chip-group {
+  display: flex;
+  gap: var(--spacing-40);
+  position: relative;
+  z-index: 2;
+}
+.sonic-color-knob {
+  flex-shrink: 0;
+  position: relative;
+  width: 110px;
+  height: 110px;
+  background-image: url('../../images/soniczero/sonic-knob-base.webp');
+  background-size: 100% 100%;
+  background-position: center;
+  cursor: pointer;
+}
+.sonic-color-label {
+  opacity: 1;
+  position: absolute;
+  top: calc(100% + var(--spacing-12));
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-EN);
+  font-size: calc(var(--font-size-xs) - 1px);
+  font-weight: 500;
+  color: var(--color-soniczero-text-mute);
+  letter-spacing: 2.5px;
+  white-space: nowrap;
+  transition: opacity 0.6s linear;
+  pointer-events: none;
+}
+.sonic-color-knob:hover .sonic-color-label {
+  opacity: 0;
+}
+.sonic-color-chip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* 색상 이미지 레이어 (회전) */
+.sonic-color-chip::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: center;
+  transition: transform 0.6s;
+}
+/* 호버 시 색상 레이어만 회전 */
+.sonic-color-knob:hover .sonic-color-chip::after {
+  transform: rotate(90deg);
+}
+/* 각 색상별 이미지 */
+.sonic-color-chip--black::after { 
+  background-image: url('../../images/soniczero/sonic-knob-black.webp');
+}
+.sonic-color-chip--blue::after { 
+  background-image: url('../../images/soniczero/sonic-knob-blue.webp');
+}
+.sonic-color-chip--white::after { 
+  background-image: url('../../images/soniczero/sonic-knob-white.webp');
+}
+
+/* 각 컬러의 Hex 코드를 보여주는 툴팁 라벨 */
+.sonic-color-knob::after {
+  content: attr(data-hex);
+  pointer-events: none;
+  position: absolute;
+  top: calc(100% + var(--spacing-12));
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-EN);
+  font-size: var(--font-size-sm);
+  opacity: 0;
+  transition: opacity 0.6s linear;
+}
+.sonic-color-knob:hover::after {
+  opacity: 1;
+}
+
+/* 4. Row 2: SCSS Tokens (6:4 비율 및 교차 검증) */
+/* 텍스트 40% 고정 */
+.sonic-feature__row--tokens .sonic-feature__text {
+  flex: 1;
+}
+/* 인터랙션 뷰 60% 고정 */
+.sonic-feature__visual--interaction {
+  flex: 1;
+  padding: var(--spacing-36);
+  cursor: pointer;
+}
+/* 키보드 포커스 시 아웃라인 */
+.sonic-feature__visual--interaction:focus-visible {
+  outline: 2px solid var(--color-soniczero-primary);
+  outline-offset: 4px;
+}
+.sonic-token__img-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px; 
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+} 
+.sonic-token__img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.6s linear;
+}
+.sonic-token__img--code {
+  z-index: 1;
+}
+.sonic-token__img--ui {
+  z-index: 2;
+}
+
+/* 인터랙션 핵심: 호버 및 키보드 포커스 시 덮개 제거 */
+.sonic-feature__visual--interaction:hover .sonic-token__img--ui,
+.sonic-feature__visual--interaction:focus-visible .sonic-token__img--ui {
+  opacity: 0;
+}
+
+/* Fluid Typography */
+.sonic-feature__row--typo {
+  flex-direction: column;
+  gap: var(--spacing-48);
+}
+
+/* ===== Slider Container ===== */
+.sonic-feature__visual--typo-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--spacing-48) var(--spacing-32);
+  font-family: var(--font-EN);
+}
+
+/* ===== 1. Sample Text & Size Display ===== */
+.sonic-typo-slider__sample {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-16);
+  margin-bottom: var(--spacing-24);
+  font-family: var(--font-EN);
+  z-index: 10;
+}
+
+.sonic-typo-slider__sample-text {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  line-height: 68px;
+}
+
+.sonic-typo-slider__sample-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 190px;
+  font-size: var(--font-size-lg);
+}
+
+.sonic-typo-slider__rem-unit {
+  color: var(--color-soniczero-text-mute);
+}
+
+.sonic-typo-slider__sample-size {
+  font-weight: 700;
+  transition: color 0.6s; /* JS에서 clamp 구간에 따라 동적으로 색상 변경 */
+}
+
+/* ===== 2. Clamp Formula Display ===== */
+.sonic-typo-slider__formula {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: var(--spacing-4);
+  margin-bottom: var(--spacing-64);
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: var(--color-soniczero-text-mute);
+}
+
+.sonic-typo-slider__formula-min,
+.sonic-typo-slider__formula-fluid,
+.sonic-typo-slider__formula-max {
+  transition: opacity 0.6s;
+  margin-right: var(--spacing-4);
+}
+.sonic-typo-slider__formula-min { 
+  color: var(--color-soniczero-text-main);
+}
+.sonic-typo-slider__formula-fluid { 
+  color: var(--color-soniczero-primary); 
+}
+.sonic-typo-slider__formula-max { 
+  color: var(--color-soniczero-positive); 
+  margin-right: 0;
+}
+
+/* 활성 텍스트 보이게 */
+.sonic-typo-slider__formula-min--active,
+.sonic-typo-slider__formula-fluid--active,
+.sonic-typo-slider__formula-max--active {
+  opacity: 1;
+}
+
+/* 비활성 텍스트 흐리게 */
+.sonic-typo-slider__formula--has-active .sonic-typo-slider__formula-min:not(.sonic-typo-slider__formula-min--active),
+.sonic-typo-slider__formula--has-active .sonic-typo-slider__formula-fluid:not(.sonic-typo-slider__formula-fluid--active),
+.sonic-typo-slider__formula--has-active .sonic-typo-slider__formula-max:not(.sonic-typo-slider__formula-max--active) {
+  opacity: 0.3;
+}
+
+/* ===== 3. Slider Wrapper (Main Container) ===== */
+.sonic-typo-slider__wrapper {
+  position: relative;
+  transition: opacity 0.3s;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: var(--spacing-40);
+  z-index: 10;
+}
+
+/* ===== 3. Tick Marks (위쪽 눈금) ===== */
+.sonic-typo-slider__marks {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+
+.sonic-typo-slider__mark {
+  position: absolute;
+  width: 2px;
+  flex-shrink: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: var(--color-soniczero-primary);
+}
+
+/* ===== 4. Slider Track & Handle ===== */
+.sonic-typo-slider__track {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(to bottom, #5a5a60, #6a6a70);
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 
+    inset 0 4px 8px rgba(0, 0, 0, 0.75),
+    inset 0 -1px 3px rgba(255, 255, 255, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Fill bar (진행도 표시) */
+.sonic-typo-slider__fill {
+  position: absolute;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 122, 255, 0.9), var(--color-soniczero-primary));
+  border-radius: 6px;
+  pointer-events: none;
+  width: 0%;
+  box-shadow: 
+    inset 0 4px 8px rgba(0, 0, 0, 0.6),
+    inset 0 -1px 3px rgba(255, 255, 255, 0.2),
+    0 1px 3px rgba(0, 122, 255, 0.3);
+}
+
+/* 슬라이더 핸들(메탈릭 노브) */
+.sonic-typo-slider__handle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-image: url('../../images/soniczero/soniczero-slider-handle.webp');
+  background-size: 100% 100%;
+  background-position: center;
+  cursor: grab;
+  transition: border-color 0.3s;
+  animation: sliderHandlePulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 유저 상호작용 시 펄스 애니메이션 지우고 은은한 후광으로 변경 */
+.sonic-typo-slider__handle:hover,
+.sonic-typo-slider__handle:active,
+.sonic-typo-slider__wrapper.is-active .sonic-typo-slider__handle,
+.sonic-typo-slider__wrapper.is-interacted .sonic-typo-slider__handle {
+  animation: none;
+  border-color: var(--color-soniczero-border-accent);
+}
+
+/* 드래그 시 커서 변경 */
+.sonic-typo-slider__handle:active,
+.sonic-typo-slider__wrapper.is-active .sonic-typo-slider__handle {
+  cursor: grabbing;
+}
+
+/* :focus-visible (키보드 접근성) */
+.sonic-typo-slider__handle:focus-visible {
+  outline: 2px solid var(--color-soniczero-primary);
+  outline-offset: 4px;
+}
+
+/* 펄스 섀도우 키프레임 */
+@keyframes sliderHandlePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(0, 122, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0);
+  }
+}
+
+/* ===== 5. Tooltips (Breakpoint Display) ===== */
+.sonic-typo-slider__tooltips {
+  position: absolute;
+  width: 100%;
+  bottom: calc(100% + 8px);
+  left: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.sonic-typo-slider__tooltip {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(var(--tooltip-translate-x, -50%)) translateY(4px);
+  padding: var(--spacing-4);
+  border-radius: 4px;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-soniczero-text-sub);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Active state (hover/tap 시 표시) */
+.sonic-typo-slider__wrapper.is-active .sonic-typo-slider__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(var(--tooltip-translate-x, -50%)) translateY(0);
+}
+
+/* ===== 6. Min/Max Labels ===== */
+.sonic-typo-slider__labels {
+  pointer-events: none;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% + 36px);
+}
+
+.sonic-typo-slider__label {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-soniczero-text-mute);
+}
+
+
+/* ========== 6. Row 4: Accessibility Audit ========== */
+.sonic-feature__row--a11y {
+  flex-direction: column;
+  gap: var(--spacing-48);
+}
+
+/* 비주얼 컨테이너: Glass 제거 (카드 자체가 Glass 역할) */
+.sonic-feature__visual--a11y {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* 카드 그리드 */
+.sonic-a11y {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-32);
+  width: 100%;
+  margin: 0 auto;
+  font-family: var(--font-EN);
+}
+
+/* 개별 카드 (Glass 독립 스타일) */
+.sonic-a11y__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+  max-width: 900px;
+  padding: var(--spacing-28) var(--spacing-32);
+  border-radius: 20px;
+}
+
+/* 카드 헤더 (아이콘 + 이름) */
+.sonic-a11y__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12);
+}
+
+/* 체크 아이콘 */
+.sonic-a11y__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(5, 223, 114, 0.15);
+  color: var(--color-soniczero-positive);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* 컴포넌트 이름 */
+.sonic-a11y__name {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* 설명 텍스트 */
+.sonic-a11y__desc {
+  display: inline-block;
+  padding-left: var(--spacing-4);
+  font-family: var(--font-KR);
+  text-align: left;
+  word-break: keep-all;
+  color: var(--color-soniczero-text-sub);
+}
+
+/* ARIA 태그 그룹 */
+.sonic-a11y__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-8);
+}
+
+/* 개별 Pill 뱃지 */
+.sonic-a11y__tag {
+  display: inline-block;
+  padding: var(--spacing-4) var(--spacing-12);
+  border: 1px solid var(--color-soniczero-border-light);
+  border-radius: 100px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-soniczero-text-sub);
+  transition: color 0.3s, border-color 0.3s;
+}
+.sonic-a11y__card:hover .sonic-a11y__tag {
+  color: var(--color-soniczero-primary);
+  border-color: var(--color-soniczero-primary);
+}
+
+/* ==========================================================================
+  SONICZERO 반응형 (Responsive)
+  추후 mobile.css, tablet.css로 이동 예정
+  브레이크포인트: 1280(laptop), 1024px(tablet), 768px(mobile) 480px(small-mobile)
+========================================================================== */
+
+/* ========== SONICZERO - 1280px: laptop ========== */
+@media (max-width: 1280px) {
+  /* SONICZERO 오버뷰 */
+  .sonic-overview {
+    flex-direction: column;
+    gap: var(--spacing-32);
+    width: 75%;
+    min-width: 600px;
+  }
+  .sonic-overview__item--main {
+    gap: var(--spacing-24);
+  }
+  .sonic-overview__group {
+    gap: var(--spacing-32);
+  }
+  
+  /* Feature 공통 */
+  .sonic-feature__row {
+    flex-direction: column;
+    gap: var(--spacing-32);
+    width: 75%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+  .sonic-feature__row--reverse {
+    flex-direction: column-reverse;
+  }
+  .sonic-feature__title {
+    padding: 0 var(--spacing-24);
+  }
+  .sonic-feature__text {
+    text-align: center;
+  }
+  .sonic-feature__desc {
+    padding: 0 var(--spacing-24);
+  }
+
+  /* Color Theme System */
+  .sonic-feature__visual--colors {
+    justify-content: center;
+    width: 100%;
+    padding: var(--spacing-48) 0 var(--spacing-64);
+  }
+
+  /* Design Token Architecture */
+  .sonic-feature__visual--interaction {
+    width: 100%;
+  }
+
+  /* Fluid Typography */
+  .sonic-feature__visual--typo-slider {
+    padding: var(--spacing-40) var(--spacing-24);
+  }
+  .sonic-typo-slider__wrapper {
+    width: 85%;
+  }
+
+  /* Accessibility */
+  .sonic-a11y {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========== SONICZERO - 1024px: tablet ========== */
+@media (max-width: 1024px) {
+  .soniczero-mockup {
+    gap: var(--spacing-64);
+  }
+
+  .soniczero-mockup--pc.web-mockup__total-item,
+  .soniczero-mockup--tablet.web-mockup__total-item,
+  .soniczero-mockup--mobile.web-mockup__total-item {
+    padding-bottom: var(--spacing-64);
+  }
+
+  /* Fluid Typography */
+  .sonic-typo-slider__sample {
+    gap: var(--spacing-12);
+  }
+  .sonic-typo-slider__formula {
+    margin-bottom: var(--spacing-56);
+  }
+
+  .sonic-a11y__card {
+    gap: var(--spacing-16);
+  }
+  .sonic-a11y__icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* ========== SONICZERO - 768px: Mobile ========== */
+@media (max-width: 768px) {
+  .soniczero-mockup {
+    gap: var(--spacing-48);
+  }
+
+  /* Hero */
+  .soniczero-mockup__bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-48);
+    max-height: none;
+    aspect-ratio: auto; /* 비율 초기화 */
+  }
+  .web-mockup__total-item.soniczero-mockup--mobile {
+    width: 50%;
+  }
+  .web-mockup__total-item.soniczero-mockup--tablet {
+    width: 90%;
+  }
+
+  /* OVERVIEW */
+  .sonic-overview {
+    width: 100%;
+    max-width: 600px;
+    min-width: auto;
+    padding: 0 var(--spacing-12);
+  }
+  .sonic-overview__item {
+    padding: var(--spacing-28) var(--spacing-32);
+  }
+  .sonic-overview__subtitle {
+    text-align: center;
+    margin-bottom: var(--spacing-16);
+  }
+  .sonic-overview__btn-icon {
+    width: 22px;
+  }
+
+  /* 접근성 점수 */
+  .sonic-metrics__score {
+    width: 110px;
+  }
+
+  /* Feature 공통 */
+  .sonic-feature {
+    width: 100%;
+  }
+  .sonic-feature__row {
+    width: 100%;
+    max-width: 600px;
+    min-width: auto;
+    padding: 0 var(--spacing-12);
+  }
+  .sonic-feature__subtitle {
+    margin-bottom: var(--spacing-16);
+  }
+
+  /* Color Theme System */
+  .sonic-feature__visual--colors {
+    min-width: auto;
+  }
+  .sonic-color-chip-group {
+    gap: var(--spacing-32);
+  }
+  .sonic-color-knob {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Design Token Architecture */
+  .sonic-feature__visual--interaction {
+    padding: var(--spacing-28);
+  }
+
+  /* Fluid Typography */
+  .sonic-typo-slider__formula {
+    margin-bottom: var(--spacing-48);
+  }
+  .sonic-feature__visual--typo-slider {
+    /* padding: var(--spacing-40) var(--spacing-24); */
+    padding: var(--spacing-32) var(--spacing-16);
+  }
+  .sonic-typo-slider__mark:nth-child(even) {
+    display: none;
+  }
+  .sonic-typo-slider__tooltip:nth-child(odd) {
+    display: none;
+  }
+
+  /* Accessibility- KWCAG 2.2 */
+  .sonic-a11y__card {
+    padding: var(--spacing-24) var(--spacing-28);
+  }
+  .sonic-a11y__icon {
+    width: 22px;
+    height: 22px;
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* ========== SONICZERO - 480px: Small Mobile ========== */
+@media (max-width: 480px) {
+  .sonic-content {
+    gap: var(--spacing-80);
+  }
+
+  .soniczero-mockup {
+    gap: var(--spacing-36);
+  }
+  .soniczero-mockup--pc {
+    width: 100%;
+  }
+
+  /* Hero */
+  .soniczero-mockup__bottom {
+    gap: var(--spacing-36);
+  }
+  .web-mockup__total-item.soniczero-mockup--mobile {
+    width: 60%;
+    min-width: auto;
+  }
+
+  /* OVERVIEW */
+  .sonic-overview {
+    padding: 0;
+  }
+  .sonic-overview__item {
+    padding: var(--spacing-24) var(--spacing-28);
+  }
+  .sonic-overview__actions {
+    flex-direction: column-reverse;
+    gap: var(--spacing-16);
+  }
+  .sonic-overview__card-title {
+    text-align: center;
+  }
+  .sonic-stack {
+    justify-content: center;
+  }
+  .sonic-metrics {
+    flex-direction: column;
+    gap: var(--spacing-24);
+  }
+
+  /* Feature 공통 */
+  .sonic-feature {
+    gap: var(--spacing-80);
+  }
+  .sonic-feature__row {
+    padding: 0;
+  }
+  .sonic-feature__title {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--spacing-4);
+    justify-content: center;
+  }
+  .sonic-feature__desc {
+    padding: 0 var(--spacing-12);
+  }
+
+  /* Color Theme System */
+  .sonic-feature__visual--colors {
+    padding: var(--spacing-24) 0 var(--spacing-48);
+  }
+  .sonic-color-knob {
+    width: 64px;
+    height: 64px;
+  }
+  .sonic-color-label {
+    top: calc(100% + var(--spacing-8));
+    letter-spacing: 1.5px;
+  }
+
+  /* Design Token Architecture */
+  .sonic-feature__visual--interaction {
+    padding: var(--spacing-20);
+  }
+
+  /* Fluid Typography, Accessibility 설명글 중앙정렬 */
+  #sonic-typo-title + .sonic-feature__desc,
+  #sonic-a11y-title + .sonic-feature__desc {
+    text-align: center;
+  }
+  
+
+  /* Fluid Typography */
+  .sonic-feature__visual--typo-slider {
+    padding: var(--spacing-20) var(--spacing-12);
+  }
+  .sonic-typo-slider__formula {
+    font-size: calc(var(--font-size-md) - 1px);
+  }
+
+  /* Accessibility - KWCAG 2.2 */
+  .sonic-a11y__card {
+    padding: var(--spacing-20) var(--spacing-24);
+  }
+}
+/* ==================== END - SONICZERO 프로젝트 ==================== */
+
+
+/* ==================== WELL-LIFE 프로젝트 ==================== */
 /* ----- web-mockup__main(메인 목업 컨테이너) ----- */
 .web-mockup__main {
   margin-bottom: var(--spacing-20);
@@ -260,7 +1287,7 @@
 /* .web-mockup__total-item(개별 목업) */
 .web-mockup__total-item {
   position: relative;
-  padding-bottom: var(--spacing-60);
+  padding-bottom: var(--spacing-64);
 }
 /* 목업 hover시 filter 처리 */
 .web-mockup__total-item img {
@@ -531,12 +1558,6 @@
 
 
 /* ==================== TASKFLOW 프로젝트 ==================== */
-
-/* ----- react-inner (.react-inner) ----- */
-.react-inner {
-  padding: var(--section-padding);
-}
-
 /* ----- react-mockup__main ----- */
 .react-mockup__main {
   display: flex;

@@ -115,16 +115,171 @@
 
 
 /* ########## Web, React 공통 컴포넌트 ########## */
-/* ----- project-content(wrapper) ----- */
+.project-inner {
+  display: flex;
+  flex-direction: column;
+}
+
 .project-content {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin: var(--spacing-100) auto 0;
+  margin: 0 auto;
 }
+
+/* ========== 탭 UI ========== */
+/* ----- project-tab-scroll-wrap ----- */
+.project-tab-scroll-wrap {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  margin: var(--spacing-48) auto 0;
+}
+
+/* overflow 감지 시 JS가 --overflow 클래스 추가 */
+.project-tab-scroll-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: calc(100% - 2px);
+  background: linear-gradient(to right, transparent, var(--color-well-life-bg));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s, background 0.6s;
+}
+
+/* TaskFlow 또는 SonicZero 활성 시 fade 색상 연동 */
+#project.panel-soniczero-active .project-tab-scroll-wrap::after {
+  background: linear-gradient(to right, transparent, var(--color-soniczero-bg));
+}
+#project.panel-taskflow-active .project-tab-scroll-wrap::after {
+  background: linear-gradient(to right, transparent, var(--color-react-bg));
+}
+
+/* overflow 감지 시 fade 표시 */
+.project-tab-scroll-wrap--overflow::after {
+  opacity: 1;
+}
+
+/* ----- project-tab ----- */
+.project-tab {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; 
+  max-width: 100%;
+  gap: var(--spacing-4);
+  border-bottom: 2px solid var(--border-color-light-gray);
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+#project.panel-soniczero-active .project-tab {
+  border-bottom: 2px solid var(--color-soniczero-border);
+}
+.project-tab::-webkit-scrollbar {
+  display: none;
+}
+
+/* ----- project-tab__btn ----- */
+.project-tab__btn {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--spacing-12) var(--spacing-28) var(--spacing-16);
+  font-family: var(--font-EN);
+  color: var(--text-color-light-gray);
+  white-space: nowrap;
+  transition: color 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 슬라이딩 언더라인 인디케이터 */
+.project-tab__btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor; /* 부모 버튼의 color 상속 — nth-child로 지정된 프로젝트별 색상 자동 적용 */
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+/* 활성 탭 — 코어 */
+.project-tab__btn--active::after {
+  transform: scaleX(1);
+}
+
+/* SonicZero 전용 (첫번째) */
+.project-tab__btn:nth-child(1).project-tab__btn--active {
+  color: var(--color-soniczero-primary) !important;
+}
+/* Well Life 전용 남색 (두번째) */
+.project-tab__btn:nth-child(2).project-tab__btn--active {
+  color: var(--color-well-life-primary);
+}
+/* TaskFlow 전용 검정색 (세번째) */
+.project-tab__btn:nth-child(3).project-tab__btn--active {
+  color: var(--color-react-primary);
+}
+
+/* hover 상태 */
+.project-tab__btn:nth-child(1):not(.project-tab__btn--active):hover {
+  color: var(--color-soniczero-primary);
+}
+.project-tab__btn:nth-child(2):not(.project-tab__btn--active):hover {
+  color: var(--color-well-life-primary) !important;
+}
+.project-tab__btn:nth-child(3):not(.project-tab__btn--active):hover {
+  color: var(--color-react-primary) !important;
+}
+
+/* ----- 탭 버튼 내부 텍스트 ----- */
+.project-tab__label {
+  color: var(--text-color-light-gray);
+  opacity: 0.6;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: opacity 0.3s;
+}
+
+.project-tab__btn--active .project-tab__label {
+  opacity: 1;
+}
+
+.project-tab__name {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ----- project-tab__panel ----- */
+.project-tab__panel {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project-tab__panel--visible {
+  opacity: 1;
+}
+
+/* 각 탭별 wrapper */
+.project-tab__inner {
+  margin-top: var(--spacing-120);
+}
+
 
 /* ----- project-row ----- */
 .project-row {

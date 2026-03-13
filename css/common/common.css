@@ -101,7 +101,7 @@ img {
   font-size: var(--font-size-section-title);
   font-weight: 700;
   letter-spacing: -0.5px;
-  color: var(--text-color-title);
+  color: var(--section-title-color, var(--text-color-title));
 }
 
 /* Font */

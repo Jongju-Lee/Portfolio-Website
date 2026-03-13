@@ -54,7 +54,7 @@
 
 
   /* ==================== COMPONENTS.CSS ==================== */
-  /* ########## Web, React 공통 ########## */
+  /* ########## Project 공통 ########## */
   /* ----- project-row ----- */
   .project-row {
     margin: var(--spacing-60) auto 0;
@@ -602,10 +602,6 @@
   }
 
   /* ----- web-content ----- */
-  .web-content {
-    margin-top: var(--spacing-60);
-  }
-
   /* ----- web-mockup__main(메인 목업 컨테이너) ----- */
   .web-mockup__main {
     margin-bottom: var(--spacing-60);
@@ -666,10 +662,6 @@
 
 
   /* ########## SECTION - REACT ########## */
-  .react-content {
-    margin-top: var(--spacing-60);
-  }
-
   /* react-content__link */
   .react-content__link {
     width: 120px;
