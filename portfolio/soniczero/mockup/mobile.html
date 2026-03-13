@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SonicZero - Mobile Mockup</title>
+  <!-- Style -->
+  <link rel="stylesheet" href="/css/common/reset.css">
+  <link rel="stylesheet" href="/css/mockup/mockup-mobile.css">
+  <!-- JavaScript -->
+  <script src="/js/mockup-core.js"></script>
+  <script>
+    MockupCore.init({
+      mockupHeight: 923,
+      enableAutoScale: true,
+      enableDarkModeSync: false,
+      enableBackButtonHandler: false
+    });
+  </script>
+</head>
+
+<body>
+  <main class="container">
+    <!-- mockup -->
+    <figure class="mockup">
+      <div class="mockup-container" style="background-color: #050505;">
+        <div class="mockup-header">
+          <img src="/images/mockup/mobile-status-bar-text-white.webp" alt="상태 창">
+        </div>
+        <div class="mockup-iframe__wrap">
+          <iframe src="https://soniczero-x1.vercel.app/" title="모바일 앱 미리보기"></iframe>
+        </div>
+      </div>
+    </figure>
+    <!-- Scale Control -->
+    <div class="scale-control">
+      <div class="scale-control__display">
+        <span class="scale-control__text">Scale</span>
+        <!-- 스케일 값 wrapper -->
+        <div class="scale-control__slider-wrapper">
+          <div class="scale-control__value--adjacent scale-control__value--next"></div>
+          <!-- 스케일 확대 버튼 -->
+          <button class="scale-control__button scale-control__button--increase" title="확대 버튼">
+            <img src="/images/mockup/increase-btn.webp" alt="확대 버튼 아이콘">
+          </button>
+          <!-- 스케일 값 slider-box -->
+          <div class="scale-control__slider-box">
+            <div class="scale-control__slider-box-inner">
+              <div class="scale-control__slider-box-item">
+                <span>1</span><span>.</span><span>0</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>9</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>8</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>7</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>6</span>
+              </div>
+              <div class="scale-control__slider-box-item">
+                <span>0</span><span>.</span><span>5</span>
+              </div>
+            </div>
+          </div>
+          <!-- 스케일 축소 버튼 -->
+          <button class="scale-control__button scale-control__button--decrease" aria-label="축소 버튼">
+            <img src="/images/mockup/decrease-btn.webp" alt="축소 버튼 아이콘">
+          </button>
+          <div class="scale-control__value--adjacent scale-control__value--prev">0.9</div>
+        </div>
+        <span class="scale-control__text bold">x</span>
+      </div>
+    </div>
+
+    <!-- 이동 버튼 박스 -->
+    <div class="btn-box">
+      <a class="back-btn" href="/index.html#project">뒤로 가기</a>
+      <a class="move-btn" href="./tablet.html">태블릿 보러가기</a>
+    </div>
+  </main>
+</body>
+
+</html>
