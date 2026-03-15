@@ -1,5 +1,5 @@
 # Antigravity AI Agent workflows
-# .agent/
+.agents/
 
 # Node modules
 node_modules/
