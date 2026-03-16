@@ -294,7 +294,7 @@
 }
 
 .sonic-overview__item--stack,
-.sonic-overview__item--metrics {
+.sonic-overview__item--pages {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -327,57 +327,99 @@
   width: 24px;
 }
 
-/* 접근성 카드 */
-.sonic-metrics {
+
+/* ==========================================
+   sonic-pages-tab (페이지별 구현 목록 탭 메뉴)
+   ========================================== */
+
+/* 탭 버튼 그룹 래퍼 */
+.sonic-pages-tab {
   display: flex;
-  align-items: center;
-  gap: var(--spacing-32);
-}
-.sonic-metrics__score {
-  width: 120px;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(5, 223, 114, 0.35);
-}
-.sonic-metrics__number {
-  font-size: var(--font-size-4xl);
-  font-weight: 600;
-  line-height: 1;
-  color: var(--color-soniczero-positive);
-}
-.sonic-metrics__unit {
-  font-size: var(--font-size-sm);
-  color: var(--color-soniczero-positive);
-}
-.sonic-metrics__info {
-  flex: 1;
-}
-/* title 스타일 오버라이드 */
-.sonic-overview__item--metrics .sonic-overview__card-title {
-  margin-bottom: var(--spacing-12);
-  font-size: var(--font-size-2xl);
-  color: var(--color-soniczero-text-main);
-}
-.sonic-metrics__list {
-  display: flex;
-  flex-direction: column;
   gap: var(--spacing-12);
+  border-bottom: 1px solid var(--color-soniczero-border);
+}
+
+/* 탭 버튼 공통 */
+.sonic-pages-tab__btn {
+  padding: var(--spacing-8) var(--spacing-12);
+  border-bottom: 2px solid transparent;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-KR);
+  font-weight: 500;
+  color: var(--color-soniczero-text-mute);
+  transition: color 0.3s, border-bottom-color 0.3s;
+  white-space: nowrap;
+}
+
+/* 탭 버튼 hover */
+.sonic-pages-tab__btn:hover {
   color: var(--color-soniczero-text-sub);
 }
-.sonic-metrics__list-item {
+
+/* 탭 버튼 활성 */
+.sonic-pages-tab__btn--active {
+  color: var(--color-soniczero-text-main);
+  border-bottom-color: var(--color-soniczero-primary);
+}
+
+/* 탭 패널 기본 (숨김) */
+.sonic-pages-panel {
+  display: none;
+}
+
+/* 탭 패널 활성 (표시 + 전환 애니메이션) */
+.sonic-pages-panel--active {
+  display: flex;
+  animation: pagesPanelFadeIn 1s;
+}
+
+@keyframes pagesPanelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 페이지 경로 배지 */
+.sonic-pages-panel__route {
   display: flex;
   align-items: center;
+  padding-right: var(--spacing-20);
+  font-family: var(--font-EN);
+  font-weight: 400;
+  color: var(--color-soniczero-primary);
+}
+
+/* 구현 목록 */
+.sonic-pages-panel__list {
+  display: flex;
+  flex-direction: column;
   gap: var(--spacing-8);
+  padding: var(--spacing-16) var(--spacing-20) var(--spacing-8);
+  border-left: 1px solid var(--color-soniczero-border);
 }
-.sonic-metrics__list-item p {
-  line-height: 1;
+
+/* 리스트 아이템 */
+.sonic-pages-panel__item {
+  position: relative;
+  padding-left: var(--spacing-12);
+  font-size: var(--font-size-sm);
+  color: var(--color-soniczero-text-sub);
+  line-height: 1.5;
 }
-.sonic-metrics__list-item::before {
+
+/* 불릿 */
+.sonic-pages-panel__item::before {
   content: "";
-  flex-shrink: 0;
-  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 0;
   width: 5px;
   height: 5px;
-  margin-top: 3px;
   border-radius: 50%;
   background-color: var(--color-soniczero-positive);
 }
@@ -394,15 +436,14 @@
   overflow: visible;
 }
 
-/* 🌟 자유로운 거대 Glow 구름 (페이지 전체 배경 역할) */
+/* 페이지 배경 glow */
 .sonic-glow-cloud {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
   background: radial-gradient(circle, rgba(0, 122, 255, 0.2) 0%, rgba(0, 122, 255, 0.05) 40%, transparent 70%);
-  z-index: 0; /* 우주 바탕 위, Glass 이하 레벨 */
+  z-index: 0;
 }
-/* 각 구름의 자유로운 배치, 크기, 밝기 차별화 */
 .sonic-glow-cloud--top { 
   top: -360px;
   right: 50px;
@@ -427,7 +468,7 @@
 .sonic-feature__row {
   display: flex;
   align-items: center;
-  gap: var(--spacing-64);   /* 여유로운 간격으로 시원한 느낌 추가 */
+  gap: var(--spacing-64);
 }
 
 /* 공통 텍스트 컨테이너 */
@@ -439,7 +480,7 @@
   z-index: 2;
 }
 
-/* 🌟 공통 비주얼 컨테이너 (Glass 박스 및 Glow 기반) */
+/* 공통 비주얼 컨테이너 */
 .sonic-feature__visual {
   position: relative;
   flex: 1;
@@ -1108,11 +1149,6 @@
     width: 22px;
   }
 
-  /* 접근성 점수 */
-  .sonic-metrics__score {
-    width: 110px;
-  }
-
   /* Feature 공통 */
   .sonic-feature {
     width: 100%;
@@ -1209,9 +1245,14 @@
   .sonic-stack {
     justify-content: center;
   }
-  .sonic-metrics {
-    flex-direction: column;
-    gap: var(--spacing-24);
+  .sonic-pages-tab {
+    gap: var(--spacing-8);
+  }
+  .sonic-pages-tab__btn {
+    padding: var(--spacing-8);
+  }
+  .sonic-pages-panel__list {
+    padding-right: 0;
   }
 
   /* Feature 공통 */

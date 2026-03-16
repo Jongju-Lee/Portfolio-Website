@@ -651,6 +651,44 @@ const FluidTypographySlider = {
 };
 
 /* ==========================================================================
+ * PAGES TAB
+ * sonic-overview__item--pages 내부 탭 전환 로직
+ * - ProjectTab과 독립적으로 동작 (scope: .sonic-overview__item--pages)
+ * - 단순 click 이벤트 + --active 클래스 토글
+ * ========================================================================== */
+function initPagesTab() {
+  var container = document.querySelector('.sonic-overview__item--pages');
+  if (!container) return;
+
+  var btns = container.querySelectorAll('.sonic-pages-tab__btn');
+  var panels = container.querySelectorAll('.sonic-pages-panel');
+
+  btns.forEach(function(btn, i) {
+    btn.addEventListener('click', function() {
+      /* 이미 활성 버튼 클릭 시 무시 */
+      if (btn.classList.contains('sonic-pages-tab__btn--active')) return;
+
+      /* 모든 버튼 비활성화 */
+      btns.forEach(function(b) {
+        b.classList.remove('sonic-pages-tab__btn--active');
+      });
+
+      /* 모든 패널 숨김 */
+      panels.forEach(function(p) {
+        p.classList.remove('sonic-pages-panel--active');
+      });
+
+      /* 클릭한 버튼·패널 활성화 */
+      btn.classList.add('sonic-pages-tab__btn--active');
+      if (panels[i]) {
+        panels[i].classList.add('sonic-pages-panel--active');
+      }
+    });
+  });
+}
+
+
+/* ==========================================================================
  * INITIALIZATION ON DOM READY
  * ========================================================================== */
 document.addEventListener('DOMContentLoaded', function() {
@@ -659,4 +697,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // FluidTypographySlider 초기화
   FluidTypographySlider.init('.sonic-typo-slider__wrapper');
+
+  // PagesTab 초기화
+  initPagesTab();
 });
+

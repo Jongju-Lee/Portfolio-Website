@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 
 <head>
@@ -845,34 +845,66 @@
                       </div>
                     </div>
                     
-                    <!-- 우측 하단: 주요 성과 / 퍼포먼스 메트릭 -->
-                    <div class="sonic-overview__item sonic-overview__item--metrics sonic-glass">
-                      <div class="sonic-metrics">
-                        <div class="sonic-metrics__score">
-                          <img src="./images/soniczero/soniczero-score.webp" alt="접근성 점수 100점">
-                        </div>
-                        <!-- 접근성 리스트 -->
-                        <div class="sonic-metrics__info">
-                          <h5 class="sonic-overview__card-title">Accessibility</h5>
-                          <ul class="sonic-metrics__list">
-                            <li class="sonic-metrics__list-item">
-                              <p>
-                                <b class="font-en">Lighthouse</b> 접근성 100점  
-                              </p>
-                            </li>
-                            <li class="sonic-metrics__list-item">
-                              <p>
-                                <b class="font-en">OpenWax</b> 오류 0개
-                              </p>
-                            </li>
-                            <li class="sonic-metrics__list-item">
-                              <p>
-                                <b class="font-en">KWCAG 2.2</b> 지침 준수 마크업
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
+                    <!-- 우측 하단 - 페이지 구현 사항 -->
+                    <div class="sonic-overview__item sonic-overview__item--pages sonic-glass">
+
+                      <!-- 타이틀 -->
+                      <h5 class="sonic-overview__card-title">Pages &amp; Features</h5>
+
+                      <!-- sonic-pages-tab 탭 버튼 그룹 -->
+                      <div class="sonic-pages-tab">
+                        <button class="sonic-pages-tab__btn sonic-pages-tab__btn--active" type="button">홈</button>
+                        <button class="sonic-pages-tab__btn" type="button">기술 소개</button>
+                        <button class="sonic-pages-tab__btn" type="button">스펙</button>
+                        <button class="sonic-pages-tab__btn" type="button">고객 지원</button>
+                        <button class="sonic-pages-tab__btn" type="button">쇼핑</button>
                       </div>
+
+                      <!-- 탭 패널: 홈 / -->
+                      <div class="sonic-pages-panel sonic-pages-panel--active">
+                        <span class="sonic-pages-panel__route">/(Home)</span>
+                        <ul class="sonic-pages-panel__list">
+                          <li class="sonic-pages-panel__item"><span class="font-en">GSAP</span> 타임라인 애니메이션</li>
+                          <li class="sonic-pages-panel__item"><span class="font-en">CTA</span> 버튼 인터랙션</li>
+                        </ul>
+                      </div>
+
+                      <!-- 탭 패널: 기술 소개 /technology -->
+                      <div class="sonic-pages-panel">
+                        <span class="sonic-pages-panel__route">/technology</span>
+                        <ul class="sonic-pages-panel__list">
+                          <li class="sonic-pages-panel__item"><span class="font-en">SVG</span> 파형 애니메이션</li>
+                          <li class="sonic-pages-panel__item"><span class="font-en">ON/OFF</span> 토글</li>
+                        </ul>
+                      </div>
+
+                      <!-- 탭 패널: 스펙 /specs -->
+                      <div class="sonic-pages-panel">
+                        <span class="sonic-pages-panel__route">/specs</span>
+                        <ul class="sonic-pages-panel__list">
+                          <li class="sonic-pages-panel__item">시맨틱 <span class="font-en">&lt;table&gt;</span> 마크업</li>
+                          <li class="sonic-pages-panel__item"><span class="font-en">Bar Chart</span> 애니메이션</li>
+                        </ul>
+                      </div>
+
+                      <!-- 탭 패널: 고객 지원 /support -->
+                      <div class="sonic-pages-panel">
+                        <span class="sonic-pages-panel__route">/support</span>
+                        <ul class="sonic-pages-panel__list">
+                          <li class="sonic-pages-panel__item"><span class="font-en">Form</span> 유효성 검사</li>
+                          <li class="sonic-pages-panel__item"><span class="font-en">Accordion</span> 및 <span class="font-en">Toast</span> 알림</li>
+                        </ul>
+                      </div>
+
+                      <!-- 탭 패널: 쇼핑 /shop -->
+                      <div class="sonic-pages-panel">
+                        <span class="sonic-pages-panel__route">/shop</span>
+                        <ul class="sonic-pages-panel__list">
+                          <li class="sonic-pages-panel__item"><span class="font-en">Gallery</span> 슬라이더 + 제스처</li>
+                          <li class="sonic-pages-panel__item">색상 선택 &amp; 수량 상태관리</li>
+                        </ul>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -881,7 +913,7 @@
                 <!-- ########## 하단 Feature 하이라이트 영역 시작 ########## -->
                 <div class="sonic-feature">
                   
-                  <!-- 자유로운 거대 Glow 구름들 -->
+                  <!-- Glow -->
                   <div class="sonic-glow-cloud sonic-glow-cloud--top"></div>
                   <div class="sonic-glow-cloud sonic-glow-cloud--mid"></div>
                   <div class="sonic-glow-cloud sonic-glow-cloud--btm"></div>
@@ -913,22 +945,18 @@
                     </div>
                   </section>
                   
-                  <!-- Row 2: SCSS Tokens (Z-Pattern 6:4 비율, flex-direction 반전) -->
+                  <!-- Row 2: SCSS Tokens -->
                   <section class="sonic-feature__row sonic-feature__row--tokens sonic-feature__row--reverse" data-anim="fade-up" aria-labelledby="sonic-token-title">
-                    <!-- 좌측: 시각적/코드 인터랙션 (60%) -->
+                    <!-- 좌측 시각적 인터랙션 -->
                     <div class="sonic-feature__visual sonic-feature__visual--interaction sonic-glass" tabindex="0">
                       <!-- 스크린리더 안내: hover/포커스 시 전환 설명 -->
                       <span class="sr-only">UI 화면과 SCSS 코드 화면이 겹쳐진 인터랙티브 영역입니다. 마우스를 올리거나 포커스하면 UI 화면이 사라지고 실제 코드가 표시됩니다.</span>
                       <div class="sonic-token__img-wrapper">
-                        <!-- <div class="sonic-token__img sonic-token__img--code"> -->
                           <img class="sonic-token__img sonic-token__img--code" src="./images/soniczero/sonic-architecture.webp" alt="SCSS 디자인 토큰 코드 화면" loading="lazy" width="1920" height="1080">
-                        <!-- </div> -->
-                        <!-- <div class="sonic-token__img sonic-token__img--ui" aria-hidden="true"> -->
                           <img class="sonic-token__img sonic-token__img--ui" src="./images/soniczero/sonic-architecture-mask.webp" alt="" loading="lazy" width="1920" height="1080">
-                        <!-- </div> -->
                       </div>
                     </div>
-                    <!-- 우측: 텍스트 (40%) -->
+                    <!-- 우측 텍스트 -->
                     <div class="sonic-feature__text">
                       <h3 id="sonic-token-title" class="sonic-feature__title">Design Token Architecture</h3>
                       <h4 class="sonic-feature__subtitle">체계적인 UI 상태 관리</h4>
@@ -938,16 +966,16 @@
                     </div>
                   </section>
                   
-                  <!-- Row 3: Fluid Typography (Interactive Volume Slider) -->
+                  <!-- Row 3: Fluid Typography -->
                   <section class="sonic-feature__row sonic-feature__row--typo" data-anim="fade-up" aria-labelledby="sonic-typo-title">
                     <div class="sonic-feature__text sonic-feature__text--center">
                       <h3 id="sonic-typo-title" class="sonic-feature__title">Fluid Typography</h3>
                       <p class="sonic-feature__desc">화면 사이즈에 비례해 유연하게 반응하는 <b class="font-en">Clamp</b> 함수 적용으로 미디어 쿼리 의존도 감소</p>
                     </div>
 
-                    <!-- Interactive Volume Slider Container -->
+                    <!-- Typo Slider Container -->
                     <div class="sonic-feature__visual sonic-feature__visual--typo-slider sonic-glass" data-anim="fade-up">
-                      <!-- Sample Text & Font Size Display -->
+                      <!-- Sample Text & Font Size -->
                       <div class="sonic-typo-slider__sample">
                         <h4 class="sonic-typo-slider__sample-text">SonicZero</h4>
                         <div class="sonic-typo-slider__sample-meta">
@@ -959,7 +987,7 @@
                         </div>
                       </div>
 
-                      <!-- Clamp Formula Display -->
+                      <!-- Clamp Formula -->
                       <div class="sonic-typo-slider__formula" aria-label="clamp 수식">
                         font-size: clamp 
                         <div class="sonic-typo-slider__formula-text" aria-hidden="true">
@@ -967,9 +995,9 @@
                         </div>
                       </div>
 
-                      <!-- Slider Wrapper (with data attributes) -->
+                      <!-- Slider Wrapper -->
                       <div class="sonic-typo-slider__wrapper" data-min="360" data-max="1920" data-min-font="12" data-max-font="52" data-breakpoints='[480, 768, 1024, 1280, 1440]'>
-                        <!-- Tick Marks (above slider) -->
+                        <!-- Tick Marks -->
                         <div class="sonic-typo-slider__marks" aria-hidden="true">
                           <!-- Marks will be generated by JS -->
                         </div>
@@ -978,7 +1006,7 @@
                           <div class="sonic-typo-slider__fill"></div>
                           <div class="sonic-typo-slider__handle" role="slider" aria-label="Responsive font size adjustment" aria-valuemin="360" aria-valuemax="1920" aria-valuenow="1920" tabindex="0"></div>
                         </div>
-                        <!-- Tooltips (major marks) -->
+                        <!-- Tooltips -->
                         <div class="sonic-typo-slider__tooltips" aria-hidden="true">
                           <div class="sonic-typo-slider__tooltip sonic-typo-slider__tooltip--480" data-breakpoint="480">480px</div>
                           <div class="sonic-typo-slider__tooltip sonic-typo-slider__tooltip--768" data-breakpoint="768">768px</div>
@@ -995,7 +1023,7 @@
                     </div>
                   </section>
                   
-                  <!-- Row 4: Accessibility (접근성 인터랙티브 시각화) -->
+                  <!-- Row 4: Accessibility -->
                   <section class="sonic-feature__row sonic-feature__row--a11y" data-anim="fade-up" aria-labelledby="sonic-a11y-title">
                     <div class="sonic-feature__text sonic-feature__text--center">
                       <h3 id="sonic-a11y-title" class="sonic-feature__title">Accessibility<span>- KWCAG 2.2</span></h3>
