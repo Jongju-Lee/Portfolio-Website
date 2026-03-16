@@ -935,11 +935,13 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
+  margin: var(--spacing-4) auto 0;
   border-bottom: 1px dashed var(--color-soniczero-primary);
+  font-size: var(--font-size-lg);
+  font-weight: 400;
   line-height: 1;
   color: var(--color-soniczero-primary);
-  transition: color 0.3s border-color 0.3s;
+  transition: color 0.3s, border-color 0.3s;
 }
 .sonic-lighthouse__url:hover {
   color: var(--color-soniczero-text-main);
