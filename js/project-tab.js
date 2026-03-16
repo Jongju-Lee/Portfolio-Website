@@ -689,6 +689,92 @@ function initPagesTab() {
 
 
 /* ==========================================================================
+ * LIGHTHOUSE GAUGE ANIMATION
+ * SVG stroke-dashoffset 카운트업 + 숫자 카운트업
+ * - 둘레: 2π × r(46) ≈ 289.03
+ * - IntersectionObserver로 뷰포트 진입 시 1회 실행
+ * ==========================================================================*/
+var LighthouseGauge = {
+  CIRCUMFERENCE: 289.03, /* 2π × 46 */
+  DURATION: 1200,        /* ms */
+
+  /* easeOutCubic */
+  ease: function (t) {
+    return 1 - Math.pow(1 - t, 3);
+  },
+
+  /* 개별 게이지 애니메이션 실행 */
+  animateGauge: function (gauge) {
+    var ring = gauge.querySelector('.sonic-lighthouse__gauge-ring');
+    var scoreEl = gauge.querySelector('.sonic-lighthouse__gauge-score');
+    if (!ring || !scoreEl) return;
+
+    var score = parseInt(ring.getAttribute('data-score'), 10) || 0;
+    var targetOffset = this.CIRCUMFERENCE * (1 - score / 100);
+    var startTime = null;
+    var self = this;
+
+    /* prefers-reduced-motion: reduce 감지 시 애니메이션 즉시 종료 */
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      ring.style.strokeDashoffset = targetOffset;
+      scoreEl.textContent = score;
+      return;
+    }
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var elapsed = timestamp - startTime;
+      var progress = Math.min(elapsed / self.DURATION, 1);
+      var easedProgress = self.ease(progress);
+
+      /* stroke-dashoffset 애니메이션 */
+      ring.style.strokeDashoffset = self.CIRCUMFERENCE - (self.CIRCUMFERENCE - targetOffset) * easedProgress;
+
+      /* 숫자 카운트업 */
+      scoreEl.textContent = Math.round(score * easedProgress);
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        scoreEl.textContent = score;
+      }
+    }
+
+    requestAnimationFrame(step);
+  },
+
+  init: function () {
+    var gaugesContainer = document.querySelector('.sonic-lighthouse__gauges');
+    if (!gaugesContainer) return;
+
+    /* IntersectionObserver 미지원 브라우저: 즉시 실행 */
+    if (!('IntersectionObserver' in window)) {
+      var gauges = gaugesContainer.querySelectorAll('.sonic-lighthouse__gauge');
+      var self = this;
+      gauges.forEach(function (gauge) {
+        self.animateGauge(gauge);
+      });
+      return;
+    }
+
+    var self = this;
+    var observer = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var gauges = entry.target.querySelectorAll('.sonic-lighthouse__gauge');
+        gauges.forEach(function (gauge) {
+          self.animateGauge(gauge);
+        });
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(gaugesContainer);
+  }
+};
+
+
+/* ==========================================================================
  * INITIALIZATION ON DOM READY
  * ========================================================================== */
 document.addEventListener('DOMContentLoaded', function() {
@@ -700,5 +786,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // PagesTab 초기화
   initPagesTab();
+
+  // LighthouseGauge 초기화
+  LighthouseGauge.init();
 });
 

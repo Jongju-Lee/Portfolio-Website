@@ -1,6 +1,7 @@
 # Antigravity AI Agent workflows
 .agents/
 .vscode/
+.github/
 
 # Node modules
 node_modules/

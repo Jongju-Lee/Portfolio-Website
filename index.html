@@ -862,7 +862,7 @@
 
                       <!-- 탭 패널: 홈 / -->
                       <div class="sonic-pages-panel sonic-pages-panel--active">
-                        <span class="sonic-pages-panel__route">/(Home)</span>
+                        <span class="sonic-pages-panel__route">/ (Home)</span>
                         <ul class="sonic-pages-panel__list">
                           <li class="sonic-pages-panel__item"><span class="font-en">GSAP</span> 타임라인 애니메이션</li>
                           <li class="sonic-pages-panel__item"><span class="font-en">CTA</span> 버튼 인터랙션</li>
@@ -874,7 +874,7 @@
                         <span class="sonic-pages-panel__route">/technology</span>
                         <ul class="sonic-pages-panel__list">
                           <li class="sonic-pages-panel__item"><span class="font-en">SVG</span> 파형 애니메이션</li>
-                          <li class="sonic-pages-panel__item"><span class="font-en">ON/OFF</span> 토글</li>
+                          <li class="sonic-pages-panel__item"><span class="font-en">Grid</span> 레이아웃 <span class="font-en">Card UI</span></li>
                         </ul>
                       </div>
 
@@ -1023,69 +1023,132 @@
                     </div>
                   </section>
                   
-                  <!-- Row 4: Accessibility -->
-                  <section class="sonic-feature__row sonic-feature__row--a11y" data-anim="fade-up" aria-labelledby="sonic-a11y-title">
+                  <!-- Row 4: Lighthouse Performance Audit -->
+                  <section class="sonic-feature__row sonic-feature__row--lighthouse" data-anim="fade-up" aria-labelledby="sonic-lighthouse-title">
                     <div class="sonic-feature__text sonic-feature__text--center">
-                      <h3 id="sonic-a11y-title" class="sonic-feature__title">Accessibility<span>- KWCAG 2.2</span></h3>
-                      <p class="sonic-feature__desc"><b class="font-en">WAI-ARIA</b> 표준 패턴과 키보드 내비게이션을 적용한 접근성 설계</p>
+                      <h3 id="sonic-lighthouse-title" class="sonic-feature__title">Performance Audit</h3>
+                      <p class="sonic-feature__desc">
+                        <b class="font-en">Google Lighthouse</b> - <span class="font-en">Secret Tab</span> 기준 <span>(성능 변동 범위 1 ~ 5점)</span>
+                        <a class="sonic-lighthouse__url font-en" href="https://soniczero-x1.vercel.app/" target="_blank" rel="noopener noreferrer">soniczero-x1.vercel.app</a>
+                      </p>
                     </div>
-                    <div class="sonic-feature__visual sonic-feature__visual--a11y" data-anim="fade-up">
-                      <div class="sonic-a11y">
-                        <!-- Card 1: Semantic Markup -->
-                        <div class="sonic-a11y__card sonic-glass">
-                          <div class="sonic-a11y__header">
-                            <span class="sonic-a11y__icon" aria-hidden="true">✓</span>
-                            <span class="sonic-a11y__name">Semantic Markup</span>
+
+                    <div class="sonic-feature__visual sonic-feature__visual--lighthouse" data-anim="fade-up">
+
+                      <!-- 상단: SVG 게이지 4개 -->
+                      <div class="sonic-lighthouse__gauges" role="list" aria-label="Lighthouse 점수">
+
+                        <!-- Gauge 1: Performance 85 -->
+                        <div class="sonic-lighthouse__gauge sonic-lighthouse__gauge--perf" role="listitem">
+                          <svg class="sonic-lighthouse__gauge-svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                            <circle class="sonic-lighthouse__gauge-track" cx="60" cy="60" r="46"/>
+                            <circle class="sonic-lighthouse__gauge-ring sonic-lighthouse__gauge-ring--orange" cx="60" cy="60" r="46" data-score="85"/>
+                          </svg>
+                          <div class="sonic-lighthouse__gauge-inner" aria-hidden="true">
+                            <span class="sonic-lighthouse__gauge-score sonic-lighthouse__gauge-score--orange">0</span>
                           </div>
-                          <p class="sonic-a11y__desc">의미론적 태그로 콘텐츠 역할과 계층 구조를 설계</p>
-                          <div class="sonic-a11y__tags">
-                            <span class="sonic-a11y__tag">&lt;h1&gt; ~ &lt;h3&gt;</span></span>
-                            <span class="sonic-a11y__tag">&lt;nav&gt;</span>
-                            <span class="sonic-a11y__tag">aria-labelledby</span>
-                          </div>
+                          <span class="sonic-lighthouse__gauge-label">성능</span>
                         </div>
 
-                        <!-- Card 2: Screen Reader -->
-                        <div class="sonic-a11y__card sonic-glass">
-                          <div class="sonic-a11y__header">
-                            <span class="sonic-a11y__icon" aria-hidden="true">✓</span>
-                            <span class="sonic-a11y__name">Screen Reader</span>
+                        <!-- Gauge 2: Accessibility 100 -->
+                        <div class="sonic-lighthouse__gauge sonic-lighthouse__gauge--a11y" role="listitem">
+                          <svg class="sonic-lighthouse__gauge-svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                            <circle class="sonic-lighthouse__gauge-track" cx="60" cy="60" r="46"/>
+                            <circle class="sonic-lighthouse__gauge-ring sonic-lighthouse__gauge-ring--green" cx="60" cy="60" r="46" data-score="100"/>
+                          </svg>
+                          <div class="sonic-lighthouse__gauge-inner" aria-hidden="true">
+                            <span class="sonic-lighthouse__gauge-score sonic-lighthouse__gauge-score--green">0</span>
                           </div>
-                          <p class="sonic-a11y__desc">스크린리더가 읽어야 할 정보와 건너뛸 요소를 명확하게 분리</p>
-                          <div class="sonic-a11y__tags">
-                            <span class="sonic-a11y__tag">.sr-only</span>
-                            <span class="sonic-a11y__tag">aria-hidden</span>
-                            <span class="sonic-a11y__tag">role="img"</span>
-                          </div>
+                          <span class="sonic-lighthouse__gauge-label">접근성</span>
                         </div>
 
-                        <!-- Card 3: Accordion Pattern -->
-                        <div class="sonic-a11y__card sonic-glass">
-                          <div class="sonic-a11y__header">
-                            <span class="sonic-a11y__icon" aria-hidden="true">✓</span>
-                            <span class="sonic-a11y__name">Accordion Pattern</span>
+                        <!-- Gauge 3: Best Practices 100 -->
+                        <div class="sonic-lighthouse__gauge sonic-lighthouse__gauge--bp" role="listitem">
+                          <svg class="sonic-lighthouse__gauge-svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                            <circle class="sonic-lighthouse__gauge-track" cx="60" cy="60" r="46"/>
+                            <circle class="sonic-lighthouse__gauge-ring sonic-lighthouse__gauge-ring--green" cx="60" cy="60" r="46" data-score="100"/>
+                          </svg>
+                          <div class="sonic-lighthouse__gauge-inner" aria-hidden="true">
+                            <span class="sonic-lighthouse__gauge-score sonic-lighthouse__gauge-score--green">0</span>
                           </div>
-                          <p class="sonic-a11y__desc">열림/닫힘 상태를 스크린리더에 실시간 전달</p>
-                          <div class="sonic-a11y__tags">
-                            <span class="sonic-a11y__tag">aria-expanded</span>
-                            <span class="sonic-a11y__tag">aria-controls</span>
-                            <span class="sonic-a11y__tag">disabled</span>
-                          </div>
+                          <span class="sonic-lighthouse__gauge-label">권장사항</span>
                         </div>
 
-                        <!-- Card 4: Keyboard & Focus -->
-                        <div class="sonic-a11y__card sonic-glass">
-                          <div class="sonic-a11y__header">
-                            <span class="sonic-a11y__icon" aria-hidden="true">✓</span>
-                            <span class="sonic-a11y__name">Keyboard &amp; Focus</span>
+                        <!-- Gauge 4: SEO 100 -->
+                        <div class="sonic-lighthouse__gauge sonic-lighthouse__gauge--seo" role="listitem">
+                          <svg class="sonic-lighthouse__gauge-svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                            <circle class="sonic-lighthouse__gauge-track" cx="60" cy="60" r="46"/>
+                            <circle class="sonic-lighthouse__gauge-ring sonic-lighthouse__gauge-ring--green" cx="60" cy="60" r="46" data-score="100"/>
+                          </svg>
+                          <div class="sonic-lighthouse__gauge-inner" aria-hidden="true">
+                            <span class="sonic-lighthouse__gauge-score sonic-lighthouse__gauge-score--green">0</span>
                           </div>
-                          <p class="sonic-a11y__desc">마우스 없이도 모든 기능을 키보드만으로 조작 가능</p>
-                          <div class="sonic-a11y__tags">
-                            <span class="sonic-a11y__tag">&lt;button&gt;</span>
-                            <span class="sonic-a11y__tag">aria-label</span>
-                            <span class="sonic-a11y__tag">tabindex="0"</span>
-                          </div>
+                          <span class="sonic-lighthouse__gauge-label">검색엔진 최적화</span>
                         </div>
+
+                        <!-- 스크린리더 전용 텍스트 -->
+                        <p class="sr-only">Lighthouse 측정 결과: 성능 85점, 접근성 100점, 권장사항 100점, 검색엔진 최적화 100점</p>
+                      </div>
+
+                      <!-- 하단: 카테고리별 기법 카드 2×2 -->
+                      <div class="sonic-lighthouse__cards">
+
+                        <!-- Card 1: Performance -->
+                        <div class="sonic-lighthouse__card sonic-glass">
+                          <div class="sonic-lighthouse__card-header">
+                            <span class="sonic-lighthouse__card-badge sonic-lighthouse__card-badge--orange" aria-hidden="true">85</span>
+                            <span class="sonic-lighthouse__card-title">Performance</span>
+                          </div>
+                          <p class="sonic-lighthouse__card-desc">동적 로딩 · 이미지 최적화</p>
+                          <ul class="sonic-lighthouse__card-list">
+                            <li class="sonic-lighthouse__card-item">이미지 <span class="font-en">WebP</span> 변환 + <span class="font-en">loading="lazy"</span></li>
+                            <li class="sonic-lighthouse__card-item">5개 페이지 번들 분리(코드 스플리팅)</li>
+                            <li class="sonic-lighthouse__card-item"><span class="font-en">font-display: swap</span></li>
+                          </ul>
+                        </div>
+
+                        <!-- Card 2: Accessibility -->
+                        <div class="sonic-lighthouse__card sonic-glass">
+                          <div class="sonic-lighthouse__card-header">
+                            <span class="sonic-lighthouse__card-badge sonic-lighthouse__card-badge--green" aria-hidden="true">100</span>
+                            <span class="sonic-lighthouse__card-title">Accessibility</span>
+                          </div>
+                          <p class="sonic-lighthouse__card-desc"><span class="font-en">KWCAG 2.2</span> 기반 접근성 설계</p>
+                          <ul class="sonic-lighthouse__card-list">
+                            <li class="sonic-lighthouse__card-item"><span class="font-en">WAI-ARIA</span> 패턴 + 키보드 내비게이션</li>
+                            <li class="sonic-lighthouse__card-item">장식용 이미지에 <span class="font-en">&lt;aria-hidden="true"&gt;</span></li>
+                            <li class="sonic-lighthouse__card-item"><span class="font-en">FocusTrap</span> 커스텀 <span class="font-en">hook</span> 제작</li>
+                          </ul>
+                        </div>
+
+                        <!-- Card 3: Best Practices -->
+                        <div class="sonic-lighthouse__card sonic-glass">
+                          <div class="sonic-lighthouse__card-header">
+                            <span class="sonic-lighthouse__card-badge sonic-lighthouse__card-badge--green" aria-hidden="true">100</span>
+                            <span class="sonic-lighthouse__card-title">Best Practices</span>
+                          </div>
+                          <p class="sonic-lighthouse__card-desc">UI/UX 인터렉션 구현</p>
+                          <ul class="sonic-lighthouse__card-list">
+                            <li class="sonic-lighthouse__card-item"><span class="font-en">Form</span> 유효성 검사 및 시각적 <span class="font-en">Error</span> 처리</li>
+                            <li class="sonic-lighthouse__card-item"><span class="font-en">ESC</span> + 외부 클릭으로 모달, 드롭다운 닫기</li>
+                            <li class="sonic-lighthouse__card-item"><span class="font-en">Console Error</span> 0건</li>
+                          </ul>
+                        </div>
+
+                        <!-- Card 4: SEO -->
+                        <div class="sonic-lighthouse__card sonic-glass">
+                          <div class="sonic-lighthouse__card-header">
+                            <span class="sonic-lighthouse__card-badge sonic-lighthouse__card-badge--green" aria-hidden="true">100</span>
+                            <span class="sonic-lighthouse__card-title">SEO</span>
+                          </div>
+                          <p class="sonic-lighthouse__card-desc">검색엔진이 읽기 좋은 마크업 구조</p>
+                          <ul class="sonic-lighthouse__card-list">
+                            <li class="sonic-lighthouse__card-item"><span class="font-en">OpenGraph + Twitter Card</span></li>
+                            <li class="sonic-lighthouse__card-item">시맨틱 <span class="font-en">&lt;header&gt; · &lt;nav&gt; · &lt;main&gt;</span> 구조</li>
+                            <li class="sonic-lighthouse__card-item"><span class="font-en">heading</span> 계층 준수</li>
+                          </ul>
+                        </div>
+
                       </div>
                     </div>
                   </section>

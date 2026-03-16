@@ -503,10 +503,8 @@
   margin-bottom: var(--spacing-24);
 }
 .sonic-feature__desc {
-  font-size: var(--font-size-md);
   color: var(--color-soniczero-text-sub);
   text-align: left;
-  word-break: keep-all;
 }
 .sonic-feature__desc b {
   color: var(--color-soniczero-text-main);
@@ -911,104 +909,227 @@
 }
 
 
-/* ========== 6. Row 4: Accessibility Audit ========== */
-.sonic-feature__row--a11y {
+/* ========== Row 4: Lighthouse ========== */
+.sonic-feature__row--lighthouse {
   flex-direction: column;
-  gap: var(--spacing-48);
+  gap: var(--spacing-32);
 }
 
-/* 비주얼 컨테이너: Glass 제거 (카드 자체가 Glass 역할) */
-.sonic-feature__visual--a11y {
+/* 비주얼 컨테이너: Glass 제거 (게이지·카드 자체가 Glass 역할) */
+.sonic-feature__visual--lighthouse {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-40);
   background-color: transparent;
   border: none;
   box-shadow: none;
-  backdrop-filter: none;
   -webkit-backdrop-filter: none;
+  backdrop-filter: none;
   padding: 0;
   width: 100%;
 }
 
-/* 카드 그리드 */
-.sonic-a11y {
+/* URL 링크 (헤더 설명 내 인라인) */
+.sonic-lighthouse__url {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 1px dashed var(--color-soniczero-primary);
+  line-height: 1;
+  color: var(--color-soniczero-primary);
+  transition: color 0.3s border-color 0.3s;
+}
+.sonic-lighthouse__url:hover {
+  color: var(--color-soniczero-text-main);
+  border-color: var(--color-soniczero-text-main);
+}
+.sonic-lighthouse__url:focus-visible {
+  outline: 2px solid var(--color-soniczero-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---- 게이지 영역 ---- */
+.sonic-lighthouse__gauges {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-32);
+  width: 100%;
+  font-family: var(--font-EN);
+}
+
+/* 개별 게이지 래퍼 */
+.sonic-lighthouse__gauge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  width: 120px;
+}
+
+/* SVG: 12시 방향에서 시계방향으로 */
+.sonic-lighthouse__gauge-svg {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+/* 배경 링 */
+.sonic-lighthouse__gauge-track {
+  fill: none;
+  stroke: var(--color-soniczero-border);
+  stroke-width: 6;
+}
+
+/* 진행 링 — 초기 dashoffset: 289.03; JS에서 애니메이션 처리 */
+.sonic-lighthouse__gauge-ring {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  /* 둘레: 2π × r(46) ≈ 289.03 */
+  stroke-dasharray: 289.03;
+  stroke-dashoffset: 289.03;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sonic-lighthouse__gauge-ring--orange {
+  stroke: var(--color-soniczero-attention);
+}
+.sonic-lighthouse__gauge-ring--green  {
+  stroke: var(--color-soniczero-positive);
+}
+
+/* 애니메이션 축소 사용자 */
+@media (prefers-reduced-motion: reduce) {
+  .sonic-lighthouse__gauge-ring {
+    transition: none;
+  }
+}
+
+/* 점수 숫자 */
+.sonic-lighthouse__gauge-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sonic-lighthouse__gauge-score {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  line-height: 1;
+}
+.sonic-lighthouse__gauge-score--orange {
+  color: var(--color-soniczero-attention); 
+}
+.sonic-lighthouse__gauge-score--green  {
+  color: var(--color-soniczero-positive);
+}
+
+/* 카테고리 레이블 */
+.sonic-lighthouse__gauge-label {
+  font-family: var(--font-KR);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-soniczero-text-sub);
+  word-break: keep-all;
+}
+
+/* ---- 카드 영역 (2×2 Grid) ---- */
+.sonic-lighthouse__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-32);
   width: 100%;
-  margin: 0 auto;
   font-family: var(--font-EN);
 }
 
-/* 개별 카드 (Glass 독립 스타일) */
-.sonic-a11y__card {
+/* 개별 카드 */
+.sonic-lighthouse__card {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-20);
-  max-width: 900px;
+  gap: var(--spacing-16);
   padding: var(--spacing-28) var(--spacing-32);
-  border-radius: 20px;
+  border-radius: 24px;
 }
 
-/* 카드 헤더 (아이콘 + 이름) */
-.sonic-a11y__header {
+/* 카드 헤더 (점수 뱃지 + 타이틀) */
+.sonic-lighthouse__card-header {
   display: flex;
   align-items: center;
   gap: var(--spacing-12);
 }
 
-/* 체크 아이콘 */
-.sonic-a11y__icon {
+/* 점수 원형 뱃지 */
+.sonic-lighthouse__card-badge {
   flex-shrink: 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  font-size: var(--font-size-sm);
+  line-height: 1;
+  font-weight: 700;
+}
+.sonic-lighthouse__card-badge--orange {
+  background-color: rgba(244, 165, 67, 0.15);
+  color: var(--color-soniczero-attention);
+}
+.sonic-lighthouse__card-badge--green {
   background-color: rgba(5, 223, 114, 0.15);
   color: var(--color-soniczero-positive);
-  font-size: var(--font-size-sm);
-  font-weight: 700;
-  line-height: 1;
 }
 
-/* 컴포넌트 이름 */
-.sonic-a11y__name {
+/* 카드 타이틀 */
+.sonic-lighthouse__card-title {
   font-size: var(--font-size-xl);
   font-weight: 600;
-  letter-spacing: 0.02em;
+  color: var(--color-soniczero-text-main);
 }
 
-/* 설명 텍스트 */
-.sonic-a11y__desc {
-  display: inline-block;
-  padding-left: var(--spacing-4);
+/* 카드 설명 */
+.sonic-lighthouse__card-desc {
   font-family: var(--font-KR);
-  text-align: left;
+  color: var(--color-soniczero-text-sub);
   word-break: keep-all;
-  color: var(--color-soniczero-text-sub);
 }
 
-/* ARIA 태그 그룹 */
-.sonic-a11y__tags {
+/* 기법 리스트 */
+.sonic-lighthouse__card-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: var(--spacing-8);
+  padding-bottom: var(--spacing-4);
 }
 
-/* 개별 Pill 뱃지 */
-.sonic-a11y__tag {
-  display: inline-block;
-  padding: var(--spacing-4) var(--spacing-12);
-  border: 1px solid var(--color-soniczero-border-light);
-  border-radius: 100px;
+/* 개별 기법 아이템 */
+.sonic-lighthouse__card-item {
+  position: relative;
+  padding-left: var(--spacing-16);
+  font-family: var(--font-KR);
   font-size: var(--font-size-sm);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-soniczero-text-sub);
-  transition: color 0.3s, border-color 0.3s;
+  line-height: 1.5;
+  word-break: keep-all;
 }
-.sonic-a11y__card:hover .sonic-a11y__tag {
-  color: var(--color-soniczero-primary);
-  border-color: var(--color-soniczero-primary);
+.sonic-lighthouse__card-item::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-soniczero-positive);
 }
 
 /* ==========================================================================
@@ -1066,7 +1187,7 @@
     width: 100%;
   }
 
-  /* Fluid Typography */
+   /* Fluid Typography */
   .sonic-feature__visual--typo-slider {
     padding: var(--spacing-40) var(--spacing-24);
   }
@@ -1074,9 +1195,23 @@
     width: 85%;
   }
 
-  /* Accessibility */
-  .sonic-a11y {
-    grid-template-columns: 1fr;
+  /* Lighthouse */
+  .sonic-lighthouse__gauges {
+    gap: var(--spacing-24);
+  }
+  .sonic-lighthouse__gauge {
+    width: 108px;
+  }
+  .sonic-lighthouse__gauge-svg {
+    width: 108px;
+    height: 108px;
+  }
+  .sonic-lighthouse__gauge-inner {
+    width: 108px;
+    height: 108px;
+  }
+  .sonic-lighthouse__card {
+    padding: var(--spacing-24) var(--spacing-28);
   }
 }
 
@@ -1101,12 +1236,22 @@
     margin-bottom: var(--spacing-56);
   }
 
-  .sonic-a11y__card {
-    gap: var(--spacing-16);
+  /* Lighthouse (tablet) */
+  .sonic-lighthouse__gauge {
+    width: 100px;
   }
-  .sonic-a11y__icon {
-    width: 26px;
-    height: 26px;
+  .sonic-lighthouse__gauge-svg {
+    width: 100px;
+    height: 100px;
+  }
+  .sonic-lighthouse__gauge-inner {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* 카드: 태블릿 이하에서 1열 */
+  .sonic-lighthouse__cards {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1148,6 +1293,12 @@
   .sonic-overview__btn-icon {
     width: 22px;
   }
+  .sonic-pages-panel__item::before {
+    top: 7px;
+    width: 4px;
+    height: 4px;
+  }
+
 
   /* Feature 공통 */
   .sonic-feature {
@@ -1195,14 +1346,44 @@
     display: none;
   }
 
-  /* Accessibility- KWCAG 2.2 */
-  .sonic-a11y__card {
-    padding: var(--spacing-24) var(--spacing-28);
+  /* Lighthouse (mobile) */
+  .sonic-lighthouse__gauges {
+    gap: var(--spacing-16);
   }
-  .sonic-a11y__icon {
-    width: 22px;
-    height: 22px;
-    font-size: var(--font-size-xs);
+  .sonic-lighthouse__gauge {
+    width: 84px;
+  }
+  .sonic-lighthouse__gauge-svg {
+    width: 84px;
+    height: 84px;
+  }
+  .sonic-lighthouse__gauge-inner {
+    width: 84px;
+    height: 84px;
+  }
+  .sonic-lighthouse__gauge-score {
+    font-size: var(--font-size-xl);
+  }
+  .sonic-lighthouse__cards {
+    gap: var(--spacing-24);
+  }
+  .sonic-lighthouse__card-header {
+    gap: var(--spacing-8);
+  }
+  .sonic-lighthouse__card-badge {
+    width: 32px;
+    height: 32px;
+  }
+  .sonic-lighthouse__card {
+    padding: var(--spacing-20) var(--spacing-24);
+  }
+  .sonic-lighthouse__card-item {
+    padding-left: var(--spacing-12);
+  }
+  .sonic-lighthouse__card-item::before {
+    top: 7px;
+    width: 4px;
+    height: 4px;
   }
 }
 
@@ -1290,12 +1471,11 @@
     padding: var(--spacing-20);
   }
 
-  /* Fluid Typography, Accessibility 설명글 중앙정렬 */
+  /* Fluid Typography, Lighthouse 설명글 중앙정렬 */
   #sonic-typo-title + .sonic-feature__desc,
-  #sonic-a11y-title + .sonic-feature__desc {
+  #sonic-lighthouse-title + .sonic-feature__desc {
     text-align: center;
   }
-  
 
   /* Fluid Typography */
   .sonic-feature__visual--typo-slider {
@@ -1305,9 +1485,26 @@
     font-size: calc(var(--font-size-md) - 1px);
   }
 
-  /* Accessibility - KWCAG 2.2 */
-  .sonic-a11y__card {
-    padding: var(--spacing-20) var(--spacing-24);
+  /* Lighthouse (small-mobile) */
+  .sonic-lighthouse__gauges {
+    gap: var(--spacing-12);
+  }
+  .sonic-lighthouse__gauge {
+    width: 72px;
+  }
+  .sonic-lighthouse__gauge-svg {
+    width: 72px;
+    height: 72px;
+  }
+  .sonic-lighthouse__gauge-inner {
+    width: 72px;
+    height: 72px;
+  }
+  .sonic-lighthouse__gauge-score {
+    font-size: var(--font-size-lg);
+  }
+  .sonic-lighthouse__gauge-label {
+    font-size: var(--font-size-xs);
   }
 }
 /* ==================== END - SONICZERO 프로젝트 ==================== */

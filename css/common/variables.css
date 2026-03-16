@@ -77,6 +77,7 @@
   --color-soniczero-glass: rgba(255, 255, 255, 0.05);
   --color-soniczero-glass-active: rgba(255, 255, 255, 0.1);
   --color-soniczero-positive: #05DF72;
+  --color-soniczero-attention: #F4A543;
   --color-soniczero-text-main: #FFFFFF;
   --color-soniczero-text-sub: #A1A1A6;
   --color-soniczero-text-mute: #7D7D83;
@@ -84,7 +85,7 @@
   --color-soniczero-border-light: rgba(255, 255, 255, 0.2);
   --color-soniczero-border-accent: var(--color-soniczero-primary);
   --shadow-soniczero-glass: 0 0 24px rgba(0, 122, 255, 0.3);
-  --drop-shadow-soniczero: 0 0 12px rgba(0, 122, 255, 0.2);
+  --drop-shadow-soniczero: 0 0 24px rgba(0, 122, 255, 0.2);
   --blur-glass-soniczero: blur(20px);
   /* 추가 필요 색상이 있다면 여기에 추가 */
   
