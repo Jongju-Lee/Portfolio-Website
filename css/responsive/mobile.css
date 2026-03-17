@@ -54,7 +54,25 @@
 
 
   /* ==================== COMPONENTS.CSS ==================== */
+  /* ---------- 로딩 애니메이션 ---------- */
+  .loading__spinner {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    margin-bottom: 12px;
+  }
+  .loading__text {
+    font-size: 14px;
+  }
+
   /* ########## Project 공통 ########## */
+  /* ========== 탭 UI ========== */
+  .project-tab {
+    gap: 0;
+  }
+  .project-tab__btn {
+    padding: var(--spacing-12) var(--spacing-20) var(--spacing-16);
+  }
   /* ----- project-row ----- */
   .project-row {
     margin: var(--spacing-60) auto 0;
@@ -91,7 +109,7 @@
     top: 7px;
     transform: none;
   }
-  /* ########## END - Web, React 공통 ########## */
+  /* ########## END - Project 공통 ########## */
 
 
   /* ########## 모달 컴포넌트 ########## */
@@ -779,7 +797,12 @@
 /* ==================== 480px 반응형 ==================== */
 @media (max-width: 480px) {
   /* ==================== COMPONENTS.CSS ==================== */
-  /* ########## Web, React 공통 ########## */
+  /* ########## Project 섹션 공통 ########## */
+  /* ========== 탭 UI ========== */
+  .project-tab__btn {
+    padding: var(--spacing-12) var(--spacing-16) var(--spacing-16);
+  }
+
   /* project-row */
   .project-row__left,
   .project-row__right {
@@ -800,7 +823,7 @@
   .project-achievement__list li {
     padding-left: calc(var(--spacing-12) - 1px);
   }
-  /* ########## END - Web, React 공통 ########## */
+  /* ########## END - Project 섹션 공통 ########## */
 
 
   /* ########## 모달 컴포넌트 ########## */
