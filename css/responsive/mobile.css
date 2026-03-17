@@ -645,11 +645,8 @@
   /* ----- web-info ----- */
   /* 웰라이프 링크 버튼 모음 */
   .web-info__btn-box {
-    top: auto;
-    right: auto;
-    bottom: calc(100% + var(--spacing-44));
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    margin-top: calc(-1 * var(--spacing-160));
   }
   .web-info__link-btn {
     font-size: var(--font-size-2xl);
@@ -1051,6 +1048,9 @@
 
   /* ########## WEB SECTION ########## */
   /* ----- web-info ----- */
+  .web-info__btn-box {
+    flex-direction: column;
+  }
   .web-info__accessibility {
     justify-content: center;
   }

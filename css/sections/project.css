@@ -1737,6 +1737,8 @@
   position: absolute;
   top: 0;
   right: 0;
+  display: flex;
+  gap: var(--spacing-8);
 }
 .web-info__link-btn {
   display: inline-flex;
@@ -1762,7 +1764,7 @@
   background-position: center;
 }
 .web-info__link-btn--github::before {
-  background-image: url("../../images/website_pub/figma-icon.webp");
+  background-image: url("../../images/website_pub/github-icon.webp");
 }
 .web-info__link-btn--design::before {
   background-image: url("../../images/website_pub/figma-icon.webp");
