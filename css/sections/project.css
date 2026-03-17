@@ -717,6 +717,7 @@
 }
 .sonic-token__comment {
   color: #ff2600;
+  font-weight: 600;
 }
 .sonic-token__omitted {
   font-weight: 900;
