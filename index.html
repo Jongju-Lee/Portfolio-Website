@@ -918,7 +918,7 @@
                   <div class="sonic-glow-cloud sonic-glow-cloud--mid"></div>
                   <div class="sonic-glow-cloud sonic-glow-cloud--btm"></div>
 
-                  <!-- Row 1: Color Theme System (5:5) -->
+                  <!-- Row 1: Color Theme System -->
                   <section class="sonic-feature__row sonic-feature__row--color" data-anim="fade-up" aria-labelledby="sonic-color-title">
                     <div class="sonic-feature__text">
                       <h3 id="sonic-color-title" class="sonic-feature__title">Color Theme System</h3>
@@ -946,23 +946,115 @@
                   </section>
                   
                   <!-- Row 2: SCSS Tokens -->
-                  <section class="sonic-feature__row sonic-feature__row--tokens sonic-feature__row--reverse" data-anim="fade-up" aria-labelledby="sonic-token-title">
-                    <!-- 좌측 시각적 인터랙션 -->
-                    <div class="sonic-feature__visual sonic-feature__visual--interaction sonic-glass" tabindex="0">
-                      <!-- 스크린리더 안내: hover/포커스 시 전환 설명 -->
-                      <span class="sr-only">UI 화면과 SCSS 코드 화면이 겹쳐진 인터랙티브 영역입니다. 마우스를 올리거나 포커스하면 UI 화면이 사라지고 실제 코드가 표시됩니다.</span>
-                      <div class="sonic-token__img-wrapper">
-                          <img class="sonic-token__img sonic-token__img--code" src="./images/soniczero/sonic-architecture.webp" alt="SCSS 디자인 토큰 코드 화면" loading="lazy" width="1920" height="1080">
-                          <img class="sonic-token__img sonic-token__img--ui" src="./images/soniczero/sonic-architecture-mask.webp" alt="" loading="lazy" width="1920" height="1080">
-                      </div>
-                    </div>
-                    <!-- 우측 텍스트 -->
-                    <div class="sonic-feature__text">
+                  <section class="sonic-feature__row sonic-feature__row--tokens" data-anim="fade-up" aria-labelledby="sonic-token-title">
+                    <!-- 상단 타이틀 -->
+                    <div class="sonic-feature__text sonic-feature__text--center">
                       <h3 id="sonic-token-title" class="sonic-feature__title">Design Token Architecture</h3>
-                      <h4 class="sonic-feature__subtitle">체계적인 UI 상태 관리</h4>
+                      <!-- <h4 class="sonic-feature__subtitle">체계적인 UI 상태 관리</h4> -->
                       <p class="sonic-feature__desc">
-                        단순 하드코딩을 지양하고, 좌측의 디자인 원소들을 <b class="font-en">SASS Map</b> 구조와 같이 통일된 <b class="font-en">Token</b> 체계로 완벽하게 추상화하여 전역 관리했습니다. (<span class="font-en">Hover</span>해서 확인하세요)
+                        단순 하드코딩을 지양하고, 디자인 원소들을 <b class="font-en">SASS Map</b> 구조와 <b class="font-en">Mixin</b> 함수로 통일된 <b class="font-en">Token</b> 체계로 완벽하게 추상화하여 전역 관리했습니다.
                       </p>
+
+                      <a class="sonic-token__github-link" href="https://github.com/Jongju-Lee/soniczero-x1/blob/main/src/styles/abstracts/_variables.scss" target="_blank">View on GitHub</a>
+                    </div>
+
+                    <!-- 좌측 코드 카드 그룹 -->
+                    <div class="sonic-token__cards">
+                      <!-- Mixin Functions -->
+                      <div class="sonic-token__card sonic-token__card--mixin sonic-glass">
+                        <div class="sonic-token__card-header">
+                          <h4 class="sonic-token__card-title">Mixin Functions</h4>
+                          <p class="sonic-token__card-subtitle">/* @mixin text-style */</p>
+                        </div>
+                        <div class="sonic-token__code-lines">
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">291</span>
+                            <span class="sonic-token__line-content"><span class="sonic-token__keyword">@mixin</span> <span class="sonic-token__var">text-style</span><span class="sonic-token__yellow">(</span>$type<span class="sonic-token__yellow">)</span> <span class="sonic-token__yellow">{</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">292</span>
+                            <span class="sonic-token__line-content">  $style: map.<span class="sonic-token__var">get</span><span class="sonic-token__violet">(</span>$text-styles, $type<span class="sonic-token__violet">)</span>;</span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">293</span>
+                            <span class="sonic-token__line-content">  <span class="sonic-token__keyword">@if</span> map.has-key<span class="sonic-token__violet">(</span>$style, "<span class="sonic-token__light-green">family</span>"<span class="sonic-token__violet">)</span> <span class="sonic-token__violet">{</span> <span class="sonic-token__keyword">font-family</span>: map.<span class="sonic-token__var">get(</span>$style, "<span class="sonic-token__light-green">family</span>"<span class="sonic-token__var">)</span>; <span class="sonic-token__violet">}</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">294</span>
+                            <span class="sonic-token__line-content">  <span class="sonic-token__keyword">@if</span> map.has-key<span class="sonic-token__violet">(</span>$style, "<span class="sonic-token__light-green">size</span>"<span class="sonic-token__violet">)</span> <span class="sonic-token__violet">{</span> <span class="sonic-token__keyword">font-size</span>: map.<span class="sonic-token__var">get(</span>$style, "<span class="sonic-token__light-green">size</span>"<span class="sonic-token__var">)</span>; <span class="sonic-token__violet">}</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">295</span>
+                            <span class="sonic-token__line-content">  <span class="sonic-token__keyword">@if</span> map.has-key<span class="sonic-token__violet">(</span>$style, "<span class="sonic-token__light-green">weight</span>"<span class="sonic-token__violet">)</span> <span class="sonic-token__violet">{</span> <span class="sonic-token__keyword">font-weight</span>: map.<span class="sonic-token__var">get(</span>$style, "<span class="sonic-token__light-green">weight</span>"<span class="sonic-token__var">)</span>; <span class="sonic-token__violet">}</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">296</span>
+                            <span class="sonic-token__line-content">  <span class="sonic-token__keyword">@if</span> map.has-key<span class="sonic-token__violet">(</span>$style, "<span class="sonic-token__light-green">lh</span>"<span class="sonic-token__violet">)</span> <span class="sonic-token__violet">{</span> <span class="sonic-token__keyword">line-height</span>: map.<span class="sonic-token__var">get(</span>$style, "<span class="sonic-token__light-green">lh</span>"<span class="sonic-token__var">)</span>; <span class="sonic-token__violet">}</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">297</span>
+                            <span class="sonic-token__line-content">  <span class="sonic-token__keyword">@if</span> map.has-key<span class="sonic-token__violet">(</span>$style, "<span class="sonic-token__light-green">ls</span>"<span class="sonic-token__violet">)</span> <span class="sonic-token__violet">{</span> <span class="sonic-token__keyword">letter-spacing</span>: map.<span class="sonic-token__var">get(</span>$style, "<span class="sonic-token__light-green">ls</span>"<span class="sonic-token__var">)</span>; <span class="sonic-token__violet">}</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number"></span>
+                            <span class="sonic-token__line-content">  <span class="sonic-token__omitted">·····</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">300</span>
+                            <span class="sonic-token__line-content"><span class="sonic-token__yellow">}</span>;</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- SASS Map -->
+                      <div class="sonic-token__card sonic-token__card--map sonic-glass">
+                        <div class="sonic-token__card-header">
+                          <h4 class="sonic-token__card-title">SASS Map</h4>
+                          <p class="sonic-token__card-subtitle">/* Typography */</p>
+                        </div>
+                        <div class="sonic-token__code-lines">
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">198</span>
+                            <span class="sonic-token__line-content">$text-style: <span class="sonic-token__yellow">(</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">199</span>
+                            <span class="sonic-token__line-content"><span class="sonic-token__comment">/* ======== TITLE ======== */</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">200</span>
+                            <span class="sonic-token__line-content">  "<span class="sonic-token__light-green">display</span>": <span class="sonic-token__violet">(</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">201</span>
+                            <span class="sonic-token__line-content">    "<span class="sonic-token__light-green">size</span>": <span class="sonic-token__var">var(</span>--fz-display-xl<span class="sonic-token__var">)</span>,</span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">202</span>
+                            <span class="sonic-token__line-content">    "<span class="sonic-token__light-green">weight</span>": <span class="sonic-token__var">var(</span>--fw-black<span class="sonic-token__var">)</span>,</span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">203</span>
+                            <span class="sonic-token__line-content">    "<span class="sonic-token__light-green">lh</span>": <span class="sonic-token__orange">1.1</span>,</span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">204</span>
+                            <span class="sonic-token__line-content">    "<span class="sonic-token__light-green">ls</span>": <span class="sonic-token__var">var(</span>--ls-tight<span class="sonic-token__var">)</span>,</span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">205</span>
+                            <span class="sonic-token__line-content">  <span class="sonic-token__violet">)</span>,</span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number"></span>
+                            <span class="sonic-token__line-content">  <span class="sonic-token__omitted">·····</span></span>
+                          </div>
+                          <div class="sonic-token__code-line">
+                            <span class="sonic-token__line-number">288</span>
+                            <span class="sonic-token__line-content"><span class="sonic-token__yellow">)</span>;</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </section>
                   

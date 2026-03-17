@@ -510,12 +510,16 @@
   color: var(--color-soniczero-text-main);
 }
 
-/* 중앙 정렬 텍스트 유틸리티 (Row 3, 4) */
+/* Fluid Typography, Lighthouse 설명글 중앙정렬 */
 .sonic-feature__text--center {
   text-align: center;
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
+}
+.sonic-feature__text--center .sonic-feature__desc {
+  text-align: center;
+  word-break: keep-all;
 }
 
 /* 3. Row 1: Color Theme System */
@@ -607,56 +611,126 @@
   opacity: 1;
 }
 
-/* 4. Row 2: SCSS Tokens (6:4 비율 및 교차 검증) */
-/* 텍스트 40% 고정 */
-.sonic-feature__row--tokens .sonic-feature__text {
-  flex: 1;
-}
-/* 인터랙션 뷰 60% 고정 */
-.sonic-feature__visual--interaction {
-  flex: 1;
-  padding: var(--spacing-36);
-  cursor: pointer;
-}
-/* 키보드 포커스 시 아웃라인 */
-.sonic-feature__visual--interaction:focus-visible {
-  outline: 2px solid var(--color-soniczero-primary);
-  outline-offset: 4px;
-}
-.sonic-token__img-wrapper {
-  position: relative;
-  width: 100%;
-  border-radius: 12px; 
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-} 
-.sonic-token__img {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transition: opacity 0.6s linear;
-}
-.sonic-token__img--code {
-  z-index: 1;
-}
-.sonic-token__img--ui {
-  z-index: 2;
+/* ========== Design Token Architecture ========== */
+.sonic-feature__row--tokens {
+  flex-direction: column;
+  gap: var(--spacing-36);
 }
 
-/* 인터랙션 핵심: 호버 및 키보드 포커스 시 덮개 제거 */
-.sonic-feature__visual--interaction:hover .sonic-token__img--ui,
-.sonic-feature__visual--interaction:focus-visible .sonic-token__img--ui {
-  opacity: 0;
+/* 타이틀 GitHub 링크 */
+.sonic-token__github-link {
+  margin-top: var(--spacing-20);
+  padding: var(--spacing-12) var(--spacing-16);
+  border: 2px solid var(--color-soniczero-primary);
+  border-radius: 8px;
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-soniczero-primary);
+  background-color: var(--color-soniczero-glass);
+  transition: transform 0.3s, color 0.3s, border-color 0.3s;
+}
+.sonic-token__github-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-soniczero-text-main);
 }
 
-/* Fluid Typography */
+/* 코드 카드 그룹 */
+.sonic-token__cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--spacing-32);
+}
+
+/* 코드 카드 */
+.sonic-token__card {
+  padding: var(--spacing-28) var(--spacing-32);
+  border-radius: 24px;
+}
+
+/* 카드 헤더 */
+.sonic-token__card-header {
+  margin-bottom: var(--spacing-16);
+  padding-bottom: var(--spacing-12);
+  border-bottom: 1px solid var(--color-soniczero-border);
+}
+.sonic-token__card-title {
+  margin-bottom: var(--spacing-8);
+  font-family: var(--font-EN);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+}
+.sonic-token__card-subtitle {
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+  color: #ff2600;
+}
+
+/* 코드 라인 */
+.sonic-token__code-lines {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  font-family: "Courier New", monospace;
+  font-size: var(--font-size-sm);
+  line-height: 1.5em;
+}
+.sonic-token__code-line {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-12);
+}
+.sonic-token__line-number {
+  color: var(--color-soniczero-text-mute);
+  min-width: 20px;
+  user-select: none;
+}
+.sonic-token__line-content {
+  color: var(--color-soniczero-text-main);
+  flex: 1;
+  min-width: 0;
+  white-space: pre-wrap;
+  padding-left: var(--spacing-20);
+  text-indent: -1.2em;
+}
+
+/* 문법 강조 색상 */
+.sonic-token__keyword {
+  color: #89ddff;
+}
+.sonic-token__var {
+  color: #6caaff;
+}
+.sonic-token__yellow {
+  color: #ffd70a;
+}
+.sonic-token__violet {
+  color: #da70d6;
+}
+.sonic-token__orange {
+  color: #f77e48;
+}
+.sonic-token__light-green {
+  color: #c3e88d;
+}
+.sonic-token__comment {
+  color: #ff2600;
+}
+.sonic-token__omitted {
+  font-weight: 900;
+  color: var(--color-soniczero-text-sub);
+}
+
+
+/* ========== Fluid Typography ========== */
 .sonic-feature__row--typo {
   flex-direction: column;
   gap: var(--spacing-48);
 }
 
-/* ===== Slider Container ===== */
+/* Slider Container */
 .sonic-feature__visual--typo-slider {
   display: flex;
   flex-direction: column;
@@ -667,7 +741,7 @@
   font-family: var(--font-EN);
 }
 
-/* ===== 1. Sample Text & Size Display ===== */
+/* 1. Sample Text & Size Display */
 .sonic-typo-slider__sample {
   position: relative;
   display: flex;
@@ -703,7 +777,7 @@
   transition: color 0.6s; /* JS에서 clamp 구간에 따라 동적으로 색상 변경 */
 }
 
-/* ===== 2. Clamp Formula Display ===== */
+/* 2. Clamp Formula Display */
 .sonic-typo-slider__formula {
   display: flex;
   flex-wrap: wrap;
@@ -747,7 +821,7 @@
   opacity: 0.3;
 }
 
-/* ===== 3. Slider Wrapper (Main Container) ===== */
+/* Slider Wrapper (Main Container) */
 .sonic-typo-slider__wrapper {
   position: relative;
   transition: opacity 0.3s;
@@ -757,7 +831,7 @@
   z-index: 10;
 }
 
-/* ===== 3. Tick Marks (위쪽 눈금) ===== */
+/* Tick Marks (위쪽 눈금) */
 .sonic-typo-slider__marks {
   position: absolute;
   bottom: 100%;
@@ -775,7 +849,7 @@
   background-color: var(--color-soniczero-primary);
 }
 
-/* ===== 4. Slider Track & Handle ===== */
+/* Slider Track & Handle */
 .sonic-typo-slider__track {
   position: relative;
   width: 100%;
@@ -804,7 +878,7 @@
     0 1px 3px rgba(0, 122, 255, 0.3);
 }
 
-/* 슬라이더 핸들(메탈릭 노브) */
+/* 슬라이더 핸들 */
 .sonic-typo-slider__handle {
   position: absolute;
   top: 50%;
@@ -822,7 +896,7 @@
   animation: sliderHandlePulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* 유저 상호작용 시 펄스 애니메이션 지우고 은은한 후광으로 변경 */
+/* 유저 상호작용 시 펄스 애니메이션 제거 */
 .sonic-typo-slider__handle:hover,
 .sonic-typo-slider__handle:active,
 .sonic-typo-slider__wrapper.is-active .sonic-typo-slider__handle,
@@ -856,7 +930,7 @@
   }
 }
 
-/* ===== 5. Tooltips (Breakpoint Display) ===== */
+/* Tooltips */
 .sonic-typo-slider__tooltips {
   position: absolute;
   width: 100%;
@@ -890,7 +964,7 @@
   transform: translateX(var(--tooltip-translate-x, -50%)) translateY(0);
 }
 
-/* ===== 6. Min/Max Labels ===== */
+/* Min/Max Labels */
 .sonic-typo-slider__labels {
   pointer-events: none;
   position: absolute;
@@ -909,13 +983,13 @@
 }
 
 
-/* ========== Row 4: Lighthouse ========== */
+/* ========== Lighthouse ========== */
 .sonic-feature__row--lighthouse {
   flex-direction: column;
   gap: var(--spacing-32);
 }
 
-/* 비주얼 컨테이너: Glass 제거 (게이지·카드 자체가 Glass 역할) */
+/* 비주얼 컨테이너: Glass 제거 */
 .sonic-feature__visual--lighthouse {
   display: flex;
   flex-direction: column;
@@ -929,7 +1003,7 @@
   width: 100%;
 }
 
-/* URL 링크 (헤더 설명 내 인라인) */
+/* URL 링크 */
 .sonic-lighthouse__url {
   display: block;
   width: -webkit-fit-content;
@@ -953,7 +1027,7 @@
   border-radius: 2px;
 }
 
-/* ---- 게이지 영역 ---- */
+/* 게이지 영역 */
 .sonic-lighthouse__gauges {
   display: flex;
   justify-content: center;
@@ -1043,7 +1117,7 @@
   word-break: keep-all;
 }
 
-/* ---- 카드 영역 (2×2 Grid) ---- */
+/* 카드 영역 (2×2 Grid) */
 .sonic-lighthouse__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1164,9 +1238,6 @@
     min-width: 600px;
     margin: 0 auto;
   }
-  .sonic-feature__row--reverse {
-    flex-direction: column-reverse;
-  }
   .sonic-feature__title {
     padding: 0 var(--spacing-24);
   }
@@ -1184,12 +1255,7 @@
     padding: var(--spacing-48) 0 var(--spacing-64);
   }
 
-  /* Design Token Architecture */
-  .sonic-feature__visual--interaction {
-    width: 100%;
-  }
-
-   /* Fluid Typography */
+  /* Fluid Typography */
   .sonic-feature__visual--typo-slider {
     padding: var(--spacing-40) var(--spacing-24);
   }
@@ -1234,11 +1300,19 @@
   .sonic-typo-slider__sample {
     gap: var(--spacing-12);
   }
+  .sonic-typo-slider__sample-meta {
+    width: 170px;
+  }
   .sonic-typo-slider__formula {
     margin-bottom: var(--spacing-56);
   }
 
-  /* Lighthouse (tablet) */
+  /* Design Token Architecture */
+  .sonic-token__card {
+    padding: var(--spacing-24) var(--spacing-28);
+  }
+
+  /* Lighthouse */
   .sonic-lighthouse__gauge {
     width: 100px;
   }
@@ -1301,7 +1375,6 @@
     height: 4px;
   }
 
-
   /* Feature 공통 */
   .sonic-feature {
     width: 100%;
@@ -1329,11 +1402,17 @@
   }
 
   /* Design Token Architecture */
-  .sonic-feature__visual--interaction {
-    padding: var(--spacing-28);
+  .sonic-token__cards {
+    gap: var(--spacing-24);
+  }
+  .sonic-token__card {
+    padding: var(--spacing-20) var(--spacing-24);
   }
 
   /* Fluid Typography */
+  .sonic-typo-slider__sample-meta {
+    width: 150px;
+  }
   .sonic-typo-slider__formula {
     margin-bottom: var(--spacing-48);
   }
@@ -1428,6 +1507,9 @@
   .sonic-stack {
     justify-content: center;
   }
+  .sonic-overview__item--pages {
+    padding: var(--spacing-16) var(--spacing-20);
+  }
   .sonic-pages-tab {
     gap: var(--spacing-8);
   }
@@ -1469,15 +1551,6 @@
   }
 
   /* Design Token Architecture */
-  .sonic-feature__visual--interaction {
-    padding: var(--spacing-20);
-  }
-
-  /* Fluid Typography, Lighthouse 설명글 중앙정렬 */
-  #sonic-typo-title + .sonic-feature__desc,
-  #sonic-lighthouse-title + .sonic-feature__desc {
-    text-align: center;
-  }
 
   /* Fluid Typography */
   .sonic-feature__visual--typo-slider {
@@ -1485,11 +1558,12 @@
   }
   .sonic-typo-slider__formula {
     font-size: calc(var(--font-size-md) - 1px);
+    margin-bottom: var(--spacing-44);
   }
 
   /* Lighthouse (small-mobile) */
   .sonic-lighthouse__gauges {
-    gap: var(--spacing-12);
+    gap: var(--spacing-8);
   }
   .sonic-lighthouse__gauge {
     width: 72px;
