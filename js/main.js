@@ -220,7 +220,7 @@ const WelllifeMockupLightbox = createMockupLightbox({
     tablet: './portfolio/well-life/mockup/tablet.html',
     mobile: './portfolio/well-life/mockup/mobile.html'
   },
-  lightboxHref: './portfolio/well-life/index.html'
+  lightboxHref: 'https://well-life-clinic.vercel.app/'
 });
 
 /* SonicZero 목업 Lightbox 인스턴스 */

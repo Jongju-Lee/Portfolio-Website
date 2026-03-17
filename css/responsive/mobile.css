@@ -1060,6 +1060,12 @@
   }
   /* ########## END - WEB SECTION ########## */
 
+  /* ########## React SECTION ########## */
+  .react-content__links {
+    margin-top: var(--spacing-48);
+  }
+  /* ########## END - React SECTION ########## */
+
 
   /* ########## SECTION - PROTOTYPE ########## */
   .prototype-slider__title {
