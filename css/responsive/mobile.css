@@ -625,17 +625,18 @@
   }
 
   /* ----- web-info ----- */
-  .web-info__design {
+  /* 웰라이프 링크 버튼 모음 */
+  .web-info__btn-box {
     top: auto;
     right: auto;
     bottom: calc(100% + var(--spacing-44));
     left: 50%;
     transform: translateX(-50%);
   }
-  .web-info__design-link {
+  .web-info__link-btn {
     font-size: var(--font-size-2xl);
   }
-  .web-info__design-link::before {
+  .web-info__link-btn::before {
     width: 28px;
     height: 28px;
   }

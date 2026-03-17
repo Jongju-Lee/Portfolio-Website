@@ -1732,19 +1732,19 @@
   align-items: end;
 }
 
-/* web-info__design(디자인 보러가기 버튼) */
-.web-info__design {
+/* 웰라이프 링크 버튼 모음 */
+.web-info__btn-box {
   position: absolute;
   top: 0;
   right: 0;
 }
-.web-info__design-link {
+.web-info__link-btn {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-8);
-  gap: calc(var(--spacing-8) + 2px); /* variables에 없는 값: +2px 미세 간격 조정 */
+  gap: calc(var(--spacing-8) + 2px);
   padding: var(--spacing-8) var(--spacing-16);
-  border-radius: 100px; /* variables에 없는 값: 100px, pill 형태 완전 원형 */
+  border-radius: 100px;
+  font-family: var(--font-EN);
   font-size: var(--font-size-xl);
   font-weight: 500;
   white-space: nowrap;
@@ -1752,17 +1752,26 @@
   transition: background-color 0.3s, color 0.3s;
   color: var(--text-color-body);
 }
-.web-info__design-link::before {
+.web-info__link-btn::before {
   content: "";
   display: inline-block;
   width: 28px;
   height: 28px;
-  background-image: url("../../images/website_pub/figma-icon.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.web-info__design-link:hover {
+.web-info__link-btn--github::before {
+  background-image: url("../../images/website_pub/figma-icon.webp");
+}
+.web-info__link-btn--design::before {
+  background-image: url("../../images/website_pub/figma-icon.webp");
+}
+.web-info__link-btn--github:hover {
+  background-color: var(--text-color-body);
+  color: var(--text-color-white);
+}
+.web-info__link-btn--design:hover {
   background-color: var(--text-color-body);
   color: var(--text-color-white);
 }

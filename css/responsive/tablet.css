@@ -411,8 +411,8 @@
   }
 
   /* ----- web-info ----- */
-  /* web-info__design */
-  .web-info__design-link::before {
+  /* 웰라이프 링크 버튼 모음 */
+  .web-info__link-btn::before {
     width: 26px;
     height: 26px;
   }
