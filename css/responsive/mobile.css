@@ -534,22 +534,13 @@
   /* ########## CORE SECTION ########## */
   .core-content {
     margin-top: var(--spacing-60);
-    max-width: 460px;
+    width: 100%;
   }
   .core-content__title {
     padding-left: var(--spacing-16);
   }
   .core-content__title::before {
     top: 10px;
-  }
-
-  /* core-card__box */
-  .core-card__box {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-24);
-  }
-  .core-card {
-    -webkit-tap-highlight-color: transparent;
   }
   .core-card__tags {
     gap: var(--spacing-8);

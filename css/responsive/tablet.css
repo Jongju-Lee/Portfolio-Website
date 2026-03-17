@@ -74,7 +74,7 @@
 
   /* ========== CORE SECTION ========== */
   .core-card__box {
-    gap: var(--spacing-32);
+    gap: var(--spacing-28);
   }
 
   /* core-card */
@@ -233,12 +233,20 @@
 
 
   /* ########## CORE SECTION ########## */
+  .core-content {
+    width: 90%;
+    max-width: 600px;
+  }
   .core-content__title {
     margin-bottom: var(--spacing-20);
     padding-left: 18px;
   }
   .core-content__title::before {
     top: 11px;
+  }
+  .core-card__box {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-24);
   }
   /* ########## END - CORE SECTION ########## */
 

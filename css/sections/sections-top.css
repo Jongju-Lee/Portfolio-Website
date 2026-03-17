@@ -820,7 +820,7 @@
 .core-card__box {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 576px));
-  gap: var(--spacing-48);
+  gap: var(--spacing-36);
 }
 .core-card {
   padding: var(--spacing-36);
