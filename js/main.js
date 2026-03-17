@@ -87,125 +87,156 @@ const ScrollAnimation = {
 };
 
 
-/* ############### 웰라이프 목업 Lightbox 동적 제어 ############### */
-const MockupLightbox = {
-  // 기본 href 저장 (초기값)
+/* ############### 목업 Lightbox 동적 제어 (팩토리) ############### */
+function createMockupLightbox(config) {
+  return {
+    // 요소 선택
+    getElements: function () {
+      return {
+        pcMockup:     document.querySelector(config.selectors.pc),
+        tabletMockup: document.querySelector(config.selectors.tablet),
+        mobileMockup: document.querySelector(config.selectors.mobile)
+      };
+    },
+
+    // lightbox 속성 적용
+    applyLightbox: function (element) {
+      if (element && !element.hasAttribute('data-lightbox')) {
+        element.setAttribute('data-lightbox', '');
+        // href를 lightbox용으로 변경 (iframe)
+        const link = element.querySelector('a');
+        if (link) {
+          link.href = config.lightboxHref;
+          link.setAttribute('data-type', 'iframe');
+          // CustomLightbox 이벤트 리스너 추가
+          if (typeof CustomLightbox !== 'undefined') {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              CustomLightbox.open(this);
+            });
+          }
+        }
+      }
+    },
+
+    // lightbox 속성 제거 및 원래 href 복원
+    removeLightbox: function (element, type) {
+      if (element && element.hasAttribute('data-lightbox')) {
+        element.removeAttribute('data-lightbox');
+        // 원래 href 복원
+        const link = element.querySelector('a');
+        if (link) {
+          link.href = config.originalHrefs[type];
+          link.removeAttribute('data-type');
+        }
+      }
+    },
+
+    // 비활성화 클래스 적용 (접근성: tabindex, aria-disabled 함께 처리)
+    setDisabled: function (element, disabled, shrink = false) {
+      if (!element) return;
+      const link = element.querySelector('a');
+      if (disabled) {
+        element.classList.add('web-mockup__total-item--disabled');
+        if (shrink) {
+          element.classList.add('web-mockup__total-item--shrink');
+        } else {
+          element.classList.remove('web-mockup__total-item--shrink');
+        }
+        if (link) {
+          link.setAttribute('tabindex', '-1');
+          link.setAttribute('aria-disabled', 'true');
+        }
+      } else {
+        element.classList.remove('web-mockup__total-item--disabled');
+        element.classList.remove('web-mockup__total-item--shrink');
+        if (link) {
+          link.removeAttribute('tabindex');
+          link.removeAttribute('aria-disabled');
+        }
+      }
+    },
+
+    // 화면 크기에 따라 lightbox 동적 적용
+    update: function () {
+      const elements = this.getElements();
+      if (!elements.pcMockup) return; // 요소가 없으면 종료
+
+      const isMobile = window.innerWidth < 768;
+      const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+
+      if (isMobile) {
+        // 모바일: Mobile만 활성화
+        this.removeLightbox(elements.pcMockup, 'pc');
+        this.removeLightbox(elements.tabletMockup, 'tablet');
+        this.applyLightbox(elements.mobileMockup);
+        // 비활성화 클래스 관리
+        this.setDisabled(elements.pcMockup, true, false); // 화면 키워서
+        this.setDisabled(elements.tabletMockup, true, false); // 화면 키워서
+        this.setDisabled(elements.mobileMockup, false);
+      } else if (isTablet) {
+        // 태블릿: Tablet만 활성화
+        this.removeLightbox(elements.pcMockup, 'pc');
+        this.applyLightbox(elements.tabletMockup);
+        this.removeLightbox(elements.mobileMockup, 'mobile');
+        // 비활성화 클래스 관리
+        this.setDisabled(elements.pcMockup, true, false); // 화면 키워서
+        this.setDisabled(elements.tabletMockup, false);
+        this.setDisabled(elements.mobileMockup, true, true); // 화면 줄여서
+      } else {
+        // PC: 모두 활성화 (PC만 lightbox)
+        this.applyLightbox(elements.pcMockup);
+        this.removeLightbox(elements.tabletMockup, 'tablet');
+        this.removeLightbox(elements.mobileMockup, 'mobile');
+        // 비활성화 클래스 제거
+        this.setDisabled(elements.pcMockup, false);
+        this.setDisabled(elements.tabletMockup, false);
+        this.setDisabled(elements.mobileMockup, false);
+      }
+    },
+
+    // 초기화
+    init: function () {
+      this.update();
+      // 리사이즈 이벤트에 debounce 적용
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => this.update(), 100);
+      });
+    }
+  };
+}
+
+/* 웰라이프내과의원 목업 Lightbox 인스턴스 */
+const WelllifeMockupLightbox = createMockupLightbox({
+  selectors: {
+    pc:     '.web-mockup__total--pc',
+    tablet: '.web-mockup__total--tablet',
+    mobile: '.web-mockup__total--mobile'
+  },
   originalHrefs: {
-    pc: './portfolio/well-life/index.html',
+    pc:     './portfolio/well-life/index.html',
     tablet: './portfolio/well-life/mockup/tablet.html',
     mobile: './portfolio/well-life/mockup/mobile.html'
   },
+  lightboxHref: './portfolio/well-life/index.html'
+});
 
-  // PC 버전 lightbox용 href
-  lightboxHref: './portfolio/well-life/index.html',
-
-  // 요소 선택
-  getElements: function () {
-    return {
-      pcMockup: document.querySelector('.web-mockup__total--pc'),
-      tabletMockup: document.querySelector('.web-mockup__total--tablet'),
-      mobileMockup: document.querySelector('.web-mockup__total--mobile')
-    };
+/* SonicZero 목업 Lightbox 인스턴스 */
+const SonicZeroMockupLightbox = createMockupLightbox({
+  selectors: {
+    pc:     '.soniczero-mockup--pc',
+    tablet: '.soniczero-mockup--tablet',
+    mobile: '.soniczero-mockup--mobile'
   },
-
-  // lightbox 속성 적용
-  applyLightbox: function (element) {
-    if (element && !element.hasAttribute('data-lightbox')) {
-      element.setAttribute('data-lightbox', '');
-      // href를 PC 버전으로 변경 (iframe)
-      const link = element.querySelector('a');
-      if (link) {
-        link.href = this.lightboxHref;
-        link.setAttribute('data-type', 'iframe');
-        // CustomLightbox 이벤트 리스너 추가
-        if (typeof CustomLightbox !== 'undefined') {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-            CustomLightbox.open(this);
-          });
-        }
-      }
-    }
+  originalHrefs: {
+    pc:     'https://soniczero-x1.vercel.app/',
+    tablet: './portfolio/soniczero/mockup/tablet.html',
+    mobile: './portfolio/soniczero/mockup/mobile.html'
   },
-
-  // lightbox 속성 제거 및 원래 href 복원
-  removeLightbox: function (element, type) {
-    if (element && element.hasAttribute('data-lightbox')) {
-      element.removeAttribute('data-lightbox');
-      // 원래 href 복원
-      const link = element.querySelector('a');
-      if (link) {
-        link.href = this.originalHrefs[type];
-        link.removeAttribute('data-type');
-      }
-    }
-  },
-
-  // 비활성화 클래스 적용
-  setDisabled: function (element, disabled, shrink = false) {
-    if (!element) return;
-    if (disabled) {
-      element.classList.add('web-mockup__total-item--disabled');
-      if (shrink) {
-        element.classList.add('web-mockup__total-item--shrink');
-      } else {
-        element.classList.remove('web-mockup__total-item--shrink');
-      }
-    } else {
-      element.classList.remove('web-mockup__total-item--disabled');
-      element.classList.remove('web-mockup__total-item--shrink');
-    }
-  },
-
-  // 화면 크기에 따라 lightbox 동적 적용
-  update: function () {
-    const elements = this.getElements();
-    if (!elements.pcMockup) return; // 요소가 없으면 종료
-
-    const isMobile = window.innerWidth < 768;
-    const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
-
-    if (isMobile) {
-      // 모바일: Mobile만 활성화
-      this.removeLightbox(elements.pcMockup, 'pc');
-      this.removeLightbox(elements.tabletMockup, 'tablet');
-      this.applyLightbox(elements.mobileMockup);
-      // 비활성화 클래스 관리
-      this.setDisabled(elements.pcMockup, true, false); // 화면 키워서
-      this.setDisabled(elements.tabletMockup, true, false); // 화면 키워서
-      this.setDisabled(elements.mobileMockup, false);
-    } else if (isTablet) {
-      // 태블릿: Tablet만 활성화
-      this.removeLightbox(elements.pcMockup, 'pc');
-      this.applyLightbox(elements.tabletMockup);
-      this.removeLightbox(elements.mobileMockup, 'mobile');
-      // 비활성화 클래스 관리
-      this.setDisabled(elements.pcMockup, true, false); // 화면 키워서
-      this.setDisabled(elements.tabletMockup, false);
-      this.setDisabled(elements.mobileMockup, true, true); // 화면 줄여서
-    } else {
-      // PC: 모두 활성화 (PC만 lightbox)
-      this.applyLightbox(elements.pcMockup);
-      this.removeLightbox(elements.tabletMockup, 'tablet');
-      this.removeLightbox(elements.mobileMockup, 'mobile');
-      // 비활성화 클래스 제거
-      this.setDisabled(elements.pcMockup, false);
-      this.setDisabled(elements.tabletMockup, false);
-      this.setDisabled(elements.mobileMockup, false);
-    }
-  },
-
-  // 초기화
-  init: function () {
-    this.update();
-    // 리사이즈 이벤트에 debounce 적용
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => this.update(), 100);
-    });
-  }
-};
+  lightboxHref: 'https://soniczero-x1.vercel.app/'
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   /* ########## 공통 요소 캐싱 ########## */
@@ -245,8 +276,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ########## 웰라이프 목업 Lightbox 초기화 ########## */
-  MockupLightbox.init();
+  /* ########## 목업 Lightbox 초기화 ########## */
+  WelllifeMockupLightbox.init();
+  SonicZeroMockupLightbox.init();
 
   /* ########## ALT + N 단축키 사용시 GNB로 포커스 ########## */
   document.addEventListener('keydown', function (event) {
