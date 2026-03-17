@@ -89,6 +89,9 @@ const ScrollAnimation = {
 
 /* ############### 목업 Lightbox 동적 제어 (팩토리) ############### */
 function createMockupLightbox(config) {
+  // HTML에서 읽은 초기 href / data-type 캐시 (init 시 1회 저장)
+  const _originalStates = {};
+
   return {
     // 요소 선택
     getElements: function () {
@@ -99,14 +102,32 @@ function createMockupLightbox(config) {
       };
     },
 
-    // lightbox 속성 적용
+    // HTML의 초기 상태를 캐싱 (href, data-type)
+    _cacheOriginalStates: function () {
+      const elements = this.getElements();
+      const typeMap = { pc: elements.pcMockup, tablet: elements.tabletMockup, mobile: elements.mobileMockup };
+      for (const [type, el] of Object.entries(typeMap)) {
+        if (!el) continue;
+        const link = el.querySelector('a');
+        if (link) {
+          _originalStates[type] = {
+            href:     link.getAttribute('href'),
+            dataType: link.getAttribute('data-type') // null이면 원래 없던 속성
+          };
+        }
+      }
+    },
+
+    // lightbox 속성 적용 (PC href로 통일, data-lightbox + data-type 부착)
     applyLightbox: function (element) {
       if (element && !element.hasAttribute('data-lightbox')) {
         element.setAttribute('data-lightbox', '');
-        // href를 lightbox용으로 변경 (iframe)
         const link = element.querySelector('a');
         if (link) {
-          link.href = config.lightboxHref;
+          // 화면 크기 관계없이 항상 PC(Vercel) URL로 연결
+          if (_originalStates['pc']) {
+            link.setAttribute('href', _originalStates['pc'].href);
+          }
           link.setAttribute('data-type', 'iframe');
           // CustomLightbox 이벤트 리스너 추가
           if (typeof CustomLightbox !== 'undefined') {
@@ -119,15 +140,21 @@ function createMockupLightbox(config) {
       }
     },
 
-    // lightbox 속성 제거 및 원래 href 복원
+    // lightbox 속성 제거 및 캐싱된 원래 상태 복원
     removeLightbox: function (element, type) {
       if (element && element.hasAttribute('data-lightbox')) {
         element.removeAttribute('data-lightbox');
-        // 원래 href 복원
         const link = element.querySelector('a');
         if (link) {
-          link.href = config.originalHrefs[type];
-          link.removeAttribute('data-type');
+          const original = _originalStates[type];
+          if (original) {
+            link.setAttribute('href', original.href);
+            if (original.dataType) {
+              link.setAttribute('data-type', original.dataType);
+            } else {
+              link.removeAttribute('data-type');
+            }
+          }
         }
       }
     },
@@ -197,6 +224,7 @@ function createMockupLightbox(config) {
 
     // 초기화
     init: function () {
+      this._cacheOriginalStates(); // HTML 초기 상태 먼저 캐싱
       this.update();
       // 리사이즈 이벤트에 debounce 적용
       let resizeTimeout;
@@ -214,13 +242,7 @@ const WelllifeMockupLightbox = createMockupLightbox({
     pc:     '.web-mockup__total--pc',
     tablet: '.web-mockup__total--tablet',
     mobile: '.web-mockup__total--mobile'
-  },
-  originalHrefs: {
-    pc:     './portfolio/well-life/index.html',
-    tablet: './portfolio/well-life/mockup/tablet.html',
-    mobile: './portfolio/well-life/mockup/mobile.html'
-  },
-  lightboxHref: 'https://well-life-clinic.vercel.app/'
+  }
 });
 
 /* SonicZero 목업 Lightbox 인스턴스 */
@@ -229,13 +251,7 @@ const SonicZeroMockupLightbox = createMockupLightbox({
     pc:     '.soniczero-mockup--pc',
     tablet: '.soniczero-mockup--tablet',
     mobile: '.soniczero-mockup--mobile'
-  },
-  originalHrefs: {
-    pc:     'https://soniczero-x1.vercel.app/',
-    tablet: './portfolio/soniczero/mockup/tablet.html',
-    mobile: './portfolio/soniczero/mockup/mobile.html'
-  },
-  lightboxHref: 'https://soniczero-x1.vercel.app/'
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
