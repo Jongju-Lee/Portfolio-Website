@@ -73,6 +73,10 @@
   .project-tab__btn {
     padding: var(--spacing-12) var(--spacing-20) var(--spacing-16);
   }
+  .project-tab-nav__btn {
+    line-height: 1.2;
+  }
+
   /* ----- project-row ----- */
   .project-row {
     margin: var(--spacing-60) auto 0;

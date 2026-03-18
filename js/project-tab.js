@@ -18,6 +18,11 @@ const ProjectTab = {
   dragStartX: 0,
   dragScrollLeft: 0,
 
+  /* prev/next 탭 네비게이션 엘리먼트 */
+  navEl: null,
+  prevBtn: null,
+  nextBtn: null,
+
 
   /* ------
    * 탭 전환
@@ -86,6 +91,9 @@ const ProjectTab = {
 
     /* 7. 첫 활성화 시 내부 애니메이션 트리거 */
     ProjectTab.triggerPanelAnimation(targetPanel);
+
+    /* 8. prev/next 네비게이션 상태 업데이트 */
+    ProjectTab.updateTabNav();
   },
 
 
@@ -216,6 +224,109 @@ const ProjectTab = {
   },
 
 
+  /* ------------------------------------------
+   * prev/next 탭 네비게이션 초기화
+   * ------------------------------------------ */
+  initTabNav: function () {
+    const self = this;
+    const tabNav = document.querySelector('.project-tab-nav');
+    if (!tabNav) return;
+
+    this.navEl   = tabNav;
+    this.prevBtn = tabNav.querySelector('.project-tab-nav__btn--prev');
+    this.nextBtn = tabNav.querySelector('.project-tab-nav__btn--next');
+
+    /* 버튼 클릭 — switchTab() 직접 호웉 */
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener('click', function () {
+        const currentIndex = ProjectTab.tabBtns.findIndex(function (btn) {
+          return btn.getAttribute('aria-selected') === 'true';
+        });
+        if (currentIndex > 0) {
+          ProjectTab.switchTab(ProjectTab.tabBtns[currentIndex - 1]);
+        }
+      });
+    }
+
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener('click', function () {
+        const currentIndex = ProjectTab.tabBtns.findIndex(function (btn) {
+          return btn.getAttribute('aria-selected') === 'true';
+        });
+        if (currentIndex < ProjectTab.tabBtns.length - 1) {
+          ProjectTab.switchTab(ProjectTab.tabBtns[currentIndex + 1]);
+        }
+      });
+    }
+
+    /* 초기 버튼 상태 반영 */
+    this.updateTabNav();
+
+    /* IntersectionObserver: project 섹션 진입/이탈 시 표시/숨김 */
+    if (!('IntersectionObserver' in window)) {
+      /* 구형 브라우저 fallback: 항상 표시 */
+      tabNav.classList.add('project-tab-nav--visible');
+      return;
+    }
+
+    const projectSection = this.section; /* init()에서 이미 캐싱된 참조 */
+    if (!projectSection) return;
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          tabNav.classList.add('project-tab-nav--visible');
+        } else {
+          tabNav.classList.remove('project-tab-nav--visible');
+        }
+      });
+    }, { threshold: 0.05 });
+
+    observer.observe(projectSection);
+  },
+
+
+  /* ------------------------------------------
+   * prev/next 버튼 상태 업데이트
+   * (첫/마지막 탭일 때 해당 버튼 숨김 + 탭 이름 갱신)
+   * ------------------------------------------ */
+  updateTabNav: function () {
+    if (!this.navEl) return;
+
+    const currentIndex = this.tabBtns.findIndex(function (btn) {
+      return btn.getAttribute('aria-selected') === 'true';
+    });
+    if (currentIndex === -1) return;
+
+    /* prev 버튼 */
+    if (this.prevBtn) {
+      if (currentIndex <= 0) {
+        this.prevBtn.setAttribute('hidden', '');
+      } else {
+        this.prevBtn.removeAttribute('hidden');
+        const prevNameEl    = this.prevBtn.querySelector('.project-tab-nav__name');
+        const prevTabNameEl = this.tabBtns[currentIndex - 1].querySelector('.project-tab__name');
+        const prevTabName   = prevTabNameEl ? prevTabNameEl.textContent : '';
+        if (prevNameEl) prevNameEl.textContent = prevTabName;
+        this.prevBtn.setAttribute('aria-label', '이전 프로젝트: ' + prevTabName);
+      }
+    }
+
+    /* next 버튼 */
+    if (this.nextBtn) {
+      if (currentIndex >= this.tabBtns.length - 1) {
+        this.nextBtn.setAttribute('hidden', '');
+      } else {
+        this.nextBtn.removeAttribute('hidden');
+        const nextNameEl    = this.nextBtn.querySelector('.project-tab-nav__name');
+        const nextTabNameEl = this.tabBtns[currentIndex + 1].querySelector('.project-tab__name');
+        const nextTabName   = nextTabNameEl ? nextTabNameEl.textContent : '';
+        if (nextNameEl) nextNameEl.textContent = nextTabName;
+        this.nextBtn.setAttribute('aria-label', '다음 프로젝트: ' + nextTabName);
+      }
+    }
+  },
+
 
   /* ---- 초기화 ---- */
   init: function () {
@@ -273,6 +384,9 @@ const ProjectTab = {
 
     /* 마우스 드래그 스크롤 초기화 */
     this.initDragScroll(tablist);
+
+    /* prev/next 탭 네비게이션 초기화 */
+    this.initTabNav();
   }
 };
 
@@ -775,6 +889,169 @@ var LighthouseGauge = {
 
 
 /* ==========================================================================
+ * MOCKUP LIGHTBOX DYNAMIC CONTROL (Factory)
+ * 화면 크기에 따라 PC/Tablet/Mobile 목업 링크를 동적 전환
+ * (project 섹션 전용 기능 — main.js에서 이동)
+ * ==========================================================================*/
+function createMockupLightbox(config) {
+  // HTML에서 읽은 초기 href / data-type 캐시 (init 시 1회 저장)
+  const _originalStates = {};
+
+  return {
+    // 요소 선택
+    getElements: function () {
+      return {
+        pcMockup:     document.querySelector(config.selectors.pc),
+        tabletMockup: document.querySelector(config.selectors.tablet),
+        mobileMockup: document.querySelector(config.selectors.mobile)
+      };
+    },
+
+    // HTML의 초기 상태를 캐싱 (href, data-type)
+    _cacheOriginalStates: function () {
+      const elements = this.getElements();
+      const typeMap = { pc: elements.pcMockup, tablet: elements.tabletMockup, mobile: elements.mobileMockup };
+      for (const [type, el] of Object.entries(typeMap)) {
+        if (!el) continue;
+        const link = el.querySelector('a');
+        if (link) {
+          _originalStates[type] = {
+            href:     link.getAttribute('href'),
+            dataType: link.getAttribute('data-type')
+          };
+        }
+      }
+    },
+
+    // lightbox 속성 적용 (PC href로 통일, data-lightbox + data-type 부착)
+    applyLightbox: function (element) {
+      if (element && !element.hasAttribute('data-lightbox')) {
+        element.setAttribute('data-lightbox', '');
+        const link = element.querySelector('a');
+        if (link) {
+          if (_originalStates['pc']) {
+            link.setAttribute('href', _originalStates['pc'].href);
+          }
+          link.setAttribute('data-type', 'iframe');
+          if (typeof CustomLightbox !== 'undefined') {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              CustomLightbox.open(this);
+            });
+          }
+        }
+      }
+    },
+
+    // lightbox 속성 제거 및 캐싱된 원래 상태 복원
+    removeLightbox: function (element, type) {
+      if (element && element.hasAttribute('data-lightbox')) {
+        element.removeAttribute('data-lightbox');
+        const link = element.querySelector('a');
+        if (link) {
+          const original = _originalStates[type];
+          if (original) {
+            link.setAttribute('href', original.href);
+            if (original.dataType) {
+              link.setAttribute('data-type', original.dataType);
+            } else {
+              link.removeAttribute('data-type');
+            }
+          }
+        }
+      }
+    },
+
+    // 비활성화 클래스 적용 (접근성: tabindex, aria-disabled 함께 처리)
+    setDisabled: function (element, disabled, shrink = false) {
+      if (!element) return;
+      const link = element.querySelector('a');
+      if (disabled) {
+        element.classList.add('web-mockup__total-item--disabled');
+        if (shrink) {
+          element.classList.add('web-mockup__total-item--shrink');
+        } else {
+          element.classList.remove('web-mockup__total-item--shrink');
+        }
+        if (link) {
+          link.setAttribute('tabindex', '-1');
+          link.setAttribute('aria-disabled', 'true');
+        }
+      } else {
+        element.classList.remove('web-mockup__total-item--disabled');
+        element.classList.remove('web-mockup__total-item--shrink');
+        if (link) {
+          link.removeAttribute('tabindex');
+          link.removeAttribute('aria-disabled');
+        }
+      }
+    },
+
+    // 화면 크기에 따라 lightbox 동적 적용
+    update: function () {
+      const elements = this.getElements();
+      if (!elements.pcMockup) return;
+
+      const isMobile = window.innerWidth < 768;
+      const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+
+      if (isMobile) {
+        this.removeLightbox(elements.pcMockup, 'pc');
+        this.removeLightbox(elements.tabletMockup, 'tablet');
+        this.applyLightbox(elements.mobileMockup);
+        this.setDisabled(elements.pcMockup, true, false);
+        this.setDisabled(elements.tabletMockup, true, false);
+        this.setDisabled(elements.mobileMockup, false);
+      } else if (isTablet) {
+        this.removeLightbox(elements.pcMockup, 'pc');
+        this.applyLightbox(elements.tabletMockup);
+        this.removeLightbox(elements.mobileMockup, 'mobile');
+        this.setDisabled(elements.pcMockup, true, false);
+        this.setDisabled(elements.tabletMockup, false);
+        this.setDisabled(elements.mobileMockup, true, true);
+      } else {
+        this.applyLightbox(elements.pcMockup);
+        this.removeLightbox(elements.tabletMockup, 'tablet');
+        this.removeLightbox(elements.mobileMockup, 'mobile');
+        this.setDisabled(elements.pcMockup, false);
+        this.setDisabled(elements.tabletMockup, false);
+        this.setDisabled(elements.mobileMockup, false);
+      }
+    },
+
+    // 초기화
+    init: function () {
+      this._cacheOriginalStates();
+      this.update();
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => this.update(), 100);
+      });
+    }
+  };
+}
+
+/* 웰라이프내과의원 목업 Lightbox 인스턴스 */
+const WelllifeMockupLightbox = createMockupLightbox({
+  selectors: {
+    pc:     '.web-mockup__total--pc',
+    tablet: '.web-mockup__total--tablet',
+    mobile: '.web-mockup__total--mobile'
+  }
+});
+
+/* SonicZero 목업 Lightbox 인스턴스 */
+const SonicZeroMockupLightbox = createMockupLightbox({
+  selectors: {
+    pc:     '.soniczero-mockup--pc',
+    tablet: '.soniczero-mockup--tablet',
+    mobile: '.soniczero-mockup--mobile'
+  }
+});
+
+
+/* ==========================================================================
  * INITIALIZATION ON DOM READY
  * ========================================================================== */
 document.addEventListener('DOMContentLoaded', function() {
@@ -789,5 +1066,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // LighthouseGauge 초기화
   LighthouseGauge.init();
+
+  /* 목업 Lightbox 초기화 */
+  WelllifeMockupLightbox.init();
+  SonicZeroMockupLightbox.init();
 });
 
