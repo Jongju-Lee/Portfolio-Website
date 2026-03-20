@@ -1,17 +1,7 @@
 /* ==================== 1280px 반응형 ==================== */
 @media (max-width: 1280px) {
-  /* ========== Header ========== */
-  header {
-    padding: 0 var(--spacing-32);
-  }
-  /* header-gnb */
   .header-gnb {
-    display: none;
-  }
-
-  /* header-sidebar__btn */
-  .header-sidebar__btn {
-    display: block;
+    gap: var(--spacing-48);
   }
 
 
@@ -169,9 +159,17 @@
 
 
   /* ########## SECTION - HEADER ########## */
-  /* header-logo */
+  header {
+    padding: 0 var(--spacing-36);
+  }
   .header-logo {
     width: 32px;
+  }
+  .header-gnb {
+    display: none;
+  }
+  .header-sidebar__btn {
+    display: block;
   }
   /* ########## END - HEADER ########## */
 

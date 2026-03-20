@@ -53,10 +53,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  -moz-column-gap: var(--spacing-64);
-  column-gap: var(--spacing-64);
-  row-gap: 0;
+  gap: var(--spacing-64);
 }
 .header-gnb:focus {
   outline: 2px solid var(--color-primary);
@@ -92,6 +89,14 @@ header {
 .header-gnb__item:hover::after {
   opacity: 1;
   top: 4px;
+}
+/* 깃허브 방문 버튼 */
+.header-gnb__item--github {
+  width: 30px;
+  transition: opacity 0.3s;
+}
+.header-gnb__item--github:hover {
+  opacity: 0.7;
 }
 
 /* ----- header-sidebar__btn ----- */
@@ -163,13 +168,13 @@ body.sidebar--on {
   top: 0;
   right: 0;
   transform: translateX(100%);
-  width: 65%;
-  height: 100vh; /* Fallback */
-  height: 100dvh;
-  max-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  width: 65%;
+  height: 100vh; /* Fallback */
+  height: 100dvh;
+  max-width: 300px;
   background-color: rgba(var(--color-white-rgb), 0.85);
   box-shadow: -4px 0 24px rgba(var(--color-black-rgb), 0.1);
   border-left: 1px solid var(--color-white);
@@ -180,16 +185,6 @@ body.sidebar--on {
   transform: translateX(0);
 }
 
-/* ----- sidebar-nav__links ----- */
-.sidebar-nav__links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  padding: var(--spacing-80) var(--spacing-48) 0;
-  overflow-y: auto;
-}
-
 /* ----- sidebar-nav__close-btn ----- */
 .sidebar-nav__close-btn {
   position: absolute;
@@ -197,10 +192,6 @@ body.sidebar--on {
   right: 36px;
   width: 24px;
   height: 24px;
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
 }
 .sidebar-nav__close-btn span {
   position: absolute;
@@ -222,6 +213,16 @@ body.sidebar--on {
   opacity: 0.7;
   background-color: var(--color-primary);
 }
+
+/* ----- sidebar-nav__links ----- */
+.sidebar-nav__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-80) var(--spacing-32) 0;
+  overflow-y: auto;
+}
+
 .sidebar-nav__item {
   width: 100%;
   padding: var(--spacing-16);
@@ -242,6 +243,21 @@ body.sidebar--on {
 }
 .sidebar-nav__item:hover span {
   transform: translateX(4px);
+}
+.sidebar-nav__footer {
+  margin-top: auto;
+  padding: var(--spacing-16) var(--spacing-32);
+}
+.sidebar-nav__item--github {
+  display: block;
+}
+.sidebar-nav__item--github img {
+  width: 30px;
+}
+.sidebar-nav__item--github span {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12);
 }
 
 /* ========== KEY FRAMES ========== */

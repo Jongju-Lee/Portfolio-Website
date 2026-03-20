@@ -71,6 +71,9 @@
           <a class="header-gnb__item" href="#project">Project</a>
           <a class="header-gnb__item" href="#prototype">Prototype</a>
           <a class="header-gnb__item" href="#epilogue">Epilogue</a>
+          <a class="header-gnb__item--github" href="https://github.com/Jongju-Lee" target="_blank" rel="noopener noreferrer" aria-label="GitHub 방문하기(새 창)">
+            <img src="./images/icon/github-icon.webp" alt="" aria-hidden="true">
+          </a>
         </nav>
         <!-- ########## header-sidebar__btn (tablet/mobile only) ########## -->
         <button class="header-sidebar__btn" type="button" aria-label="사이드 바 열기"></button>
@@ -790,7 +793,7 @@
 
                 <!-- ########## Row 1: sonic-overview (Bento Box) ########## -->
                 <div class="sonic-overview" data-anim="fade-up">
-                  <!-- 좌측: 프로젝트 개요 (40%) -->
+                  <!-- 프로젝트 개요 -->
                   <div class="sonic-overview__item sonic-overview__item--main sonic-glass">
                     <div class="sonic-overview__intro">
                       <h3 class="sonic-overview__title project-title">SonicZero X1</h3>
@@ -806,15 +809,15 @@
                       </span>
                       <a class="sonic-overview__btn" href="https://github.com/Jongju-Lee/soniczero-x1" target="_blank" rel="noopener noreferrer">
                         <!-- GitHub Icon -->
-                        <img src="./images/icon/project-github-icon.webp" alt="" class="sonic-overview__btn-icon"> 
+                        <img src="./images/icon/github-icon.webp" alt="" class="sonic-overview__btn-icon"> 
                         Source Code
                       </a>
                     </div>
                   </div>
                   
-                  <!-- 우측: 카드 그룹 (60%) -->
+                  <!-- 카드 그룹 -->
                   <div class="sonic-overview__group">
-                    <!-- 우측 상단: 기술 스택 -->
+                    <!-- 기술 스택 -->
                     <div class="sonic-overview__item sonic-overview__item--stack sonic-glass">
                       <h5 class="sonic-overview__card-title">Tech Stack</h5>
                       <div class="sonic-stack">
@@ -845,13 +848,13 @@
                       </div>
                     </div>
                     
-                    <!-- 우측 하단 - 페이지 구현 사항 -->
+                    <!-- 페이지 구현 사항 -->
                     <div class="sonic-overview__item sonic-overview__item--pages sonic-glass">
 
                       <!-- 타이틀 -->
                       <h5 class="sonic-overview__card-title">Pages &amp; Features</h5>
 
-                      <!-- sonic-pages-tab 탭 버튼 그룹 -->
+                      <!-- 페이지 별 탭 버튼 그룹 -->
                       <div class="sonic-pages-tab">
                         <button class="sonic-pages-tab__btn sonic-pages-tab__btn--active" type="button">홈</button>
                         <button class="sonic-pages-tab__btn" type="button">기술 소개</button>
@@ -860,7 +863,7 @@
                         <button class="sonic-pages-tab__btn" type="button">쇼핑</button>
                       </div>
 
-                      <!-- 탭 패널: 홈 / -->
+                      <!-- 홈(메인 페이지) / -->
                       <div class="sonic-pages-panel sonic-pages-panel--active">
                         <span class="sonic-pages-panel__route">/ (Home)</span>
                         <ul class="sonic-pages-panel__list">
@@ -869,7 +872,7 @@
                         </ul>
                       </div>
 
-                      <!-- 탭 패널: 기술 소개 /technology -->
+                      <!-- 기술 소개 /technology -->
                       <div class="sonic-pages-panel">
                         <span class="sonic-pages-panel__route">/technology</span>
                         <ul class="sonic-pages-panel__list">
@@ -878,7 +881,7 @@
                         </ul>
                       </div>
 
-                      <!-- 탭 패널: 스펙 /specs -->
+                      <!-- 스펙 /specs -->
                       <div class="sonic-pages-panel">
                         <span class="sonic-pages-panel__route">/specs</span>
                         <ul class="sonic-pages-panel__list">
@@ -887,7 +890,7 @@
                         </ul>
                       </div>
 
-                      <!-- 탭 패널: 고객 지원 /support -->
+                      <!-- 고객 지원 /support -->
                       <div class="sonic-pages-panel">
                         <span class="sonic-pages-panel__route">/support</span>
                         <ul class="sonic-pages-panel__list">
@@ -896,7 +899,7 @@
                         </ul>
                       </div>
 
-                      <!-- 탭 패널: 쇼핑 /shop -->
+                      <!-- 쇼핑 /shop -->
                       <div class="sonic-pages-panel">
                         <span class="sonic-pages-panel__route">/shop</span>
                         <ul class="sonic-pages-panel__list">
@@ -2088,6 +2091,16 @@
           </a>
           <a class="sidebar-nav__item" href="#epilogue">
             <span>Epilogue</span>
+          </a>
+        </div>
+
+        <!-- 깃허브 링크 -->
+        <div class="sidebar-nav__footer">
+          <a class="sidebar-nav__item sidebar-nav__item--github" href="https://github.com/Jongju-Lee" target="_blank" rel="noopener noreferrer" aria-label="GitHub 방문하기(새 창)">
+            <span>
+              <img src="./images/icon/github-icon.webp" alt="" aria-hidden="true">
+              GitHub
+            </span>
           </a>
         </div>
       </nav>
